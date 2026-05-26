@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment and secrets
+.env
+.env.*
+*.token
+
+# Model/cache artifacts
+.cache/
+models/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Generated outputs
+outputs/*.csv
+outputs/*_predictions.csv
+outputs/*_smoke.csv
+outputs/*_metrics.json
+outputs/metrics.json
+outputs/sample_metrics.json
+!outputs/.gitkeep
+!outputs/sample_predictions.csv
