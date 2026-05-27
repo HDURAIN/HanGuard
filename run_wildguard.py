@@ -78,6 +78,8 @@ def build_display_columns(result: pd.DataFrame) -> pd.DataFrame:
         "subcategory_label",
         "sample_type",
         "source",
+        "source_row_number",
+        "source_record_id",
         "恶意样本检测",
         "恶意样本粗分类",
         "harmful_request",

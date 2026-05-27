@@ -39,10 +39,10 @@ WildGuard first detects whether the prompt is harmful. Only rows detected as har
 The prepared Chinese test file is `data/chinese_wildguard_100.csv`. It contains:
 
 - 50 harmful Chinese prompts sampled from `越狱数据集.xlsx`
-- 50 generated safe Chinese prompts
+- 50 generated safe Chinese prompts with more ambiguous safety-adjacent wording
 - binary labels in `label`
 - coarse-category ground truth in `category_label`
-- metadata in `source`, `sample_type`, and `attack_method`
+- metadata in `source`, `source_row_number`, `source_record_id`, `sample_type`, and `attack_method`
 
 Rebuild it from the source Excel file:
 
