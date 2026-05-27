@@ -139,6 +139,16 @@ python evaluate.py --input outputs/prompt_guard_predictions.csv --target harmful
 python evaluate.py --input outputs/wildguard_predictions.csv --target harmful_request --output outputs/wildguard_harmful_request_metrics.json
 ```
 
+WildGuard coarse-category evaluation:
+
+```bash
+python evaluate_category.py \
+  --input outputs/wildguard_predictions.csv \
+  --output outputs/wildguard_category_metrics.json
+```
+
+The category evaluator compares `category_label` with `prompt_category`. It reports overall category accuracy, category accuracy on true harmful samples, category accuracy on detected harmful samples, and safe-category accuracy.
+
 WildGuard can also evaluate response-level fields if your CSV has matching labels such as `refusal_label` or `harmful_response_label`:
 
 ```bash
