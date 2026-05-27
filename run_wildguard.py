@@ -14,6 +14,7 @@ DEFAULT_CATEGORY_MODEL_ID = "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli"
 TEXT_COLUMN = "prompt"
 RESPONSE_COLUMN = "response"
 UNKNOWN = "unknown"
+SAFE_CATEGORY = "安全"
 DTYPE_CHOICES = ("auto", "bfloat16", "float16", "float32")
 CATEGORY_DEVICE_CHOICES = ("auto", "cpu", "cuda")
 PROMPT_CATEGORY_LABELS = [
@@ -57,6 +58,42 @@ def parse_prediction(text: str) -> dict[str, str]:
     }
 
 
+def is_harmful_request(value: str) -> bool:
+    return str(value).strip().lower() in {"yes", "harmful", "malicious", "unsafe", "1"}
+
+
+def build_display_columns(result: pd.DataFrame) -> pd.DataFrame:
+    display = result.copy()
+    display["恶意样本检测"] = display["harmful_request"].map(
+        lambda value: "恶意" if is_harmful_request(value) else "安全"
+    )
+    display["恶意样本粗分类"] = display["prompt_category"]
+
+    priority_columns = [
+        "id",
+        TEXT_COLUMN,
+        RESPONSE_COLUMN,
+        "label",
+        "category_label",
+        "subcategory_label",
+        "sample_type",
+        "source",
+        "恶意样本检测",
+        "恶意样本粗分类",
+        "harmful_request",
+        "refusal",
+        "harmful_response",
+        "prompt_category",
+        "attack_method",
+        "raw_output",
+        "model",
+        "category_model",
+    ]
+    ordered_columns = [column for column in priority_columns if column in display.columns]
+    ordered_columns.extend(column for column in display.columns if column not in ordered_columns)
+    return display[ordered_columns]
+
+
 def resolve_dtype(dtype: str) -> torch.dtype | str:
     if dtype == "auto":
         return "auto"
@@ -82,6 +119,9 @@ def classify_prompt_categories(
     category_device: str,
     token: str | None,
 ) -> list[str]:
+    if not prompts:
+        return []
+
     try:
         classifier = pipeline(
             "zero-shot-classification",
@@ -138,13 +178,6 @@ def run(
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     prompt_texts = data[TEXT_COLUMN].fillna("").astype(str).tolist()
-    prompt_categories = classify_prompt_categories(
-        prompt_texts,
-        category_model_id,
-        category_batch_size,
-        category_device,
-        token,
-    )
 
     try:
         tokenizer = AutoTokenizer.from_pretrained(model_id, token=token, trust_remote_code=True)
@@ -210,10 +243,41 @@ def run(
     result["harmful_response"] = [prediction["harmful_response"] for prediction in parsed_predictions]
     result["raw_output"] = raw_outputs
     result["model"] = model_id
+
+    harmful_indexes = [
+        index
+        for index, prediction in enumerate(parsed_predictions)
+        if is_harmful_request(prediction["harmful_request"])
+    ]
+    prompt_categories = [SAFE_CATEGORY] * len(result)
+    if harmful_indexes:
+        harmful_prompts = [prompt_texts[index] for index in harmful_indexes]
+        harmful_categories = classify_prompt_categories(
+            harmful_prompts,
+            category_model_id,
+            category_batch_size,
+            category_device,
+            token,
+        )
+        for index, category in zip(harmful_indexes, harmful_categories):
+            prompt_categories[index] = category
+
     result["prompt_category"] = prompt_categories
+    result["category_model"] = category_model_id
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    result = build_display_columns(result)
     result.to_csv(output_path, index=False, encoding="utf-8")
+
+    total = len(result)
+    harmful_total = len(harmful_indexes)
+    safe_total = total - harmful_total
+    print(f"Saved predictions to {output_path}")
+    print(f"Samples: {total} | harmful: {harmful_total} | safe: {safe_total}")
+    if harmful_total:
+        print("Harmful coarse categories:")
+        for category, count in result.loc[result["prompt_category"] != SAFE_CATEGORY, "prompt_category"].value_counts().items():
+            print(f"- {category}: {count}")
 
 
 def parse_args() -> argparse.Namespace:

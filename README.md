@@ -17,17 +17,38 @@ Put CSV files in `data/`. Required columns:
 Optional columns:
 
 - `response`: assistant response text, used by WildGuard for `refusal` and `harmful_response`
+- `category_label`: ground-truth coarse category, used to evaluate `prompt_category`
+- `subcategory_label`: optional ground-truth fine category
 - any metadata columns, such as `id`, `source`, or `category`
 
 Prediction outputs include:
 
+- `恶意样本检测`: display column, `恶意` or `安全`
+- `恶意样本粗分类`: display column, the coarse harmful category or `安全`
 - `harmful_request`: `yes` or `no`
 - `refusal`: `yes`, `no`, or `unknown`
 - `harmful_response`: `yes`, `no`, or `unknown`
-- `prompt_category`: zero-shot prompt category, one of the configured coarse safety categories
+- `prompt_category`: zero-shot prompt category for harmful requests, or `安全` for safe requests
+- `category_model`: zero-shot classifier model id used for harmful-request coarse classification
 
 Prompt Guard only classifies the user request, so it writes `unknown` for `refusal` and `harmful_response`.
-WildGuard additionally appends `prompt_category` using `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`.
+WildGuard first detects whether the prompt is harmful. Only rows detected as harmful are sent to the coarse classifier using `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`; safe rows are written as `安全`.
+
+## Chinese 100-Case Test Set
+
+The prepared Chinese test file is `data/chinese_wildguard_100.csv`. It contains:
+
+- 50 harmful Chinese prompts sampled from `越狱数据集.xlsx`
+- 50 generated safe Chinese prompts
+- binary labels in `label`
+- coarse-category ground truth in `category_label`
+- metadata in `source`, `sample_type`, and `attack_method`
+
+Rebuild it from the source Excel file:
+
+```powershell
+python scripts/build_chinese_testset.py
+```
 
 ## Local Setup
 
@@ -91,7 +112,7 @@ WildGuard:
 
 ```bash
 python run_wildguard.py \
-  --input data/your_dataset.csv \
+  --input data/chinese_wildguard_100.csv \
   --output outputs/wildguard_smoke.csv \
   --batch-size 1 \
   --limit 5
@@ -101,13 +122,13 @@ python run_wildguard.py \
 
 ```bash
 python run_wildguard.py \
-  --input data/your_dataset.csv \
+  --input data/chinese_wildguard_100.csv \
   --output outputs/wildguard_predictions.csv \
   --batch-size 4
 ```
 
 For smaller GPUs, reduce `--batch-size` to `1`. If memory is still insufficient, reduce `--max-length`.
-The prompt category classifier runs before WildGuard and is released before WildGuard loads. You can force it to CPU with `--category-device cpu`.
+The prompt category classifier runs after WildGuard and only receives rows where `harmful_request` is harmful. You can force it to CPU with `--category-device cpu`.
 
 ## Evaluation
 
