@@ -6,4 +6,4 @@ scikit-learn
 tqdm
 sentencepiece
 protobuf
-openpyxl
+huggingface_hub
