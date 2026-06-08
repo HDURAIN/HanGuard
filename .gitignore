@@ -40,4 +40,5 @@ legacy/
 outputs/eval_v5/
 outputs/*.csv
 outputs/*.log
+outputs/*.pid
 !outputs/.gitkeep
