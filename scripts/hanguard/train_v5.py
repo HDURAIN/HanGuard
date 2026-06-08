@@ -23,6 +23,8 @@ import json
 import os
 from pathlib import Path
 
+import torch.distributed as dist
+
 import pandas as pd
 import torch
 import torch.nn.functional as F
@@ -249,12 +251,20 @@ def main():
     model.print_trainable_parameters()
     print()
 
-    # ── 数据集预 tokenize ───────────────────────────────────────────
-    print("预处理训练集...")
+    # ── 数据集预 tokenize（只在 rank 0 打印，所有 rank 都执行）──────
+    is_main = local_rank == 0
+    if is_main:
+        print("预处理训练集...")
     train_data = build_hf_dataset(train_df, tokenizer, MAX_LENGTH, class_weights)
-    print("预处理验证集...")
-    val_data   = build_hf_dataset(val_df,   tokenizer, MAX_LENGTH, None)  # val 不加权
-    print()
+    if is_main:
+        print("预处理验证集...")
+    val_data = build_hf_dataset(val_df, tokenizer, MAX_LENGTH, None)  # val 不加权
+
+    # 等所有 rank 完成预处理再继续
+    if dist.is_available() and dist.is_initialized():
+        dist.barrier()
+    if is_main:
+        print()
 
     # ── Collator：只对 assistant 部分计算 loss ──────────────────────
     base_collator = DataCollatorForCompletionOnlyLM(
