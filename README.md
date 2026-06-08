@@ -132,17 +132,54 @@ CUDA_VISIBLE_DEVICES=0,1,3,4,5,7 torchrun \
 
 ---
 
-## 安装
+## 部署
+
+### 环境要求
+
+- Python 3.10+，CUDA 11.8+
+- 显存 ≥ 24GB（4-bit 量化推理）
+
+### 安装依赖
 
 ```bash
-# 推理依赖
 pip install -r requirements.txt
-
-# 训练额外依赖
-pip install -r requirements-train.txt
 ```
 
-**环境要求**：Python 3.10+，CUDA 11.8+，显存 ≥ 24GB（推理 4-bit 量化）
+### 获取模型权重
+
+HanGuard v5 由两部分组成：
+
+| 组件 | 大小 | 获取方式 |
+|------|------|---------|
+| 基座模型 Qwen2.5-7B-Instruct | ~15GB | HuggingFace / ModelScope |
+| HanGuard LoRA adapter | ~80MB | HuggingFace Hub |
+
+**下载基座模型**（国内推荐 ModelScope）：
+
+```bash
+pip install modelscope
+modelscope download --model Qwen/Qwen2.5-7B-Instruct \
+    --local_dir /your/path/Qwen2.5-7B-Instruct
+```
+
+或从 HuggingFace：
+
+```bash
+huggingface-cli download Qwen/Qwen2.5-7B-Instruct \
+    --local_dir /your/path/Qwen2.5-7B-Instruct
+```
+
+**下载 HanGuard adapter**：
+
+```bash
+huggingface-cli download HDURAIN/hanguard-v5 \
+    --local_dir outputs/hanguard_v5
+```
+
+> 如果 HuggingFace 访问受限，可设置镜像：
+> ```bash
+> export HF_ENDPOINT=https://hf-mirror.com
+> ```
 
 ---
 
@@ -156,6 +193,9 @@ CUDA_VISIBLE_DEVICES=0 python infer_v5.py \
 ```
 
 输入 CSV/Parquet 需含 `prompt` 列，输出新增 `harmful_pred`、`category_pred`、`category_pred_label` 三列。
+
+> `infer_v5.py` 会从 adapter 目录下的 `adapter_config.json` 自动读取基座模型路径，
+> 也可手动指定：`--model outputs/hanguard_v5 --base_model /your/path/Qwen2.5-7B-Instruct`（需在脚本中添加该参数）。
 
 ---
 
