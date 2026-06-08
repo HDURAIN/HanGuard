@@ -1,164 +1,189 @@
-# Prompt Safety Evaluation
+# HanGuard v5 — 中文 AI 内容安全分类器
 
-Evaluation scaffold for two safety classifiers:
+基于 Qwen2.5-7B-Instruct + QLoRA 微调的统一模型，单次推理同时输出：
 
-- `meta-llama/Llama-Prompt-Guard-2-22M`: small request classifier, suitable for local or cloud CPU/GPU smoke tests.
-- `allenai/wildguard`: larger generative safety classifier, intended for a cloud GPU server.
+- **二分类**：有害（harmful）/ 无害（unharmful）
+- **六分类**：0-5 有害内容细类（依据 GB/T 45654-2025）
+- **防注入**：抵御针对分类器输出的提示注入攻击
 
-Both runners write the same output fields so the same `evaluate.py` script can be reused.
+---
 
-## Data Format
+## 六类有害内容（GB/T 45654-2025）
 
-Put CSV files in `data/`. Required columns:
+| ID | 类别 | 说明 |
+|----|------|------|
+| 0  | 安全 | 无害内容 |
+| 1  | 违反社会主义核心价值观的内容 | 危害国家安全、恐怖主义、暴力色情等 |
+| 2  | 歧视性内容 | 基于民族、性别、宗教等的侮辱或仇恨 |
+| 3  | 商业违法违规 | 虚假宣传、欺诈、不正当竞争等 |
+| 4  | 侵犯他人合法权益 | 隐私泄露、名誉侵权、财产侵害等 |
+| 5  | 无法满足特定服务类型的安全需求 | 医疗、法律、金融等专业场景风险 |
 
-- `prompt`: user request text
-- `label`: ground-truth harmful-request label, one of `yes`, `no`, `malicious`, `benign`, `1`, or `0`
+---
 
-Optional columns:
+## 目录结构
 
-- `response`: assistant response text, used by WildGuard for `refusal` and `harmful_response`
-- `category_label`: ground-truth coarse category, used to evaluate `prompt_category`
-- `subcategory_label`: optional ground-truth fine category
-- any metadata columns, such as `id`, `source`, or `category`
-
-Prediction outputs include:
-
-- `恶意样本检测`: display column, `恶意` or `安全`
-- `恶意样本粗分类`: display column, the coarse harmful category or `安全`
-- `harmful_request`: `yes` or `no`
-- `refusal`: `yes`, `no`, or `unknown`
-- `harmful_response`: `yes`, `no`, or `unknown`
-- `prompt_category`: zero-shot prompt category for harmful requests, or `安全` for safe requests
-- `category_model`: zero-shot classifier model id used for harmful-request coarse classification
-
-Prompt Guard only classifies the user request, so it writes `unknown` for `refusal` and `harmful_response`.
-WildGuard first detects whether the prompt is harmful. Only rows detected as harmful are sent to the coarse classifier using `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`; safe rows are written as `安全`.
-
-## Chinese 100-Case Test Set
-
-The prepared Chinese test file is `data/chinese_wildguard_150.csv`. It contains:
-
-- 100 harmful Chinese prompts sampled from `越狱数据集.xlsx`, balanced as 20 samples for each coarse category
-- 50 generated safe Chinese prompts with more ambiguous safety-adjacent wording
-- binary labels in `label`
-- coarse-category ground truth in `category_label`
-- metadata in `source`, `source_row_number`, `source_record_id`, `sample_type`, and `attack_method`
-
-Rebuild it from the source Excel file:
-
-```powershell
-python scripts/build_chinese_testset.py
+```
+hanguard/
+├── data/
+│   ├── final_train.parquet       # 训练集（130,029条）
+│   ├── final_val.parquet         # 验证集（12,091条）
+│   ├── final_test.parquet        # 测试集（12,092条）
+│   ├── class_weights.json        # 六分类训练权重
+│   ├── 越狱意图分类定义.docx      # 分类标准定义文档
+│   └── sources/                  # 原始来源数据（只读）
+│       ├── train_wildguard_zh.parquet         # WildGuard 中文译版
+│       ├── train_hanguard_v3_labeled.parquet  # 自研中文数据集（已标注）
+│       ├── wildguard_injection_retrans_labeled.parquet  # 对抗样本精译集
+│       └── wildguard_en/         # 英文原版 WildGuardMix
+├── outputs/
+│   └── hanguard_v5/              # 训练输出（训练后生成）
+├── scripts/hanguard/
+│   ├── train_v5.py               # 训练入口
+│   ├── prepare_final_dataset.py  # 数据整合与分割
+│   ├── generate_injection_defense.py   # 注入防御数据生成
+│   ├── retranslate_injection_samples.py # 对抗样本重译
+│   ├── translate_wildguard.py    # WildGuard 中文翻译
+│   ├── download_training_data.py # 下载 WildGuardMix
+│   ├── annotate_system_prompt.py # 六分类标注提示词
+│   ├── annotate_v3_zh.py         # v3 数据集六分类标注
+│   ├── annotate_retrans.py       # 重译集六分类标注
+│   └── annotate_others.py        # 其他数据集标注
+├── infer_v5.py                   # 推理脚本
+├── evaluate_v5.py                # 评估脚本
+├── requirements.txt              # 推理依赖
+├── requirements-train.txt        # 训练额外依赖
+└── legacy/                       # 历史版本归档（两阶段架构）
 ```
 
-## Local Setup
+---
 
-```powershell
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
+## 数据来源与处理方法
+
+### 数据来源
+
+| 数据集 | 条数 | 说明 |
+|--------|------|------|
+| WildGuardMix（中文译版） | 86,759 | `allenai/wildguardmix` 英文数据机器翻译，含二分类标签和六分类标签 |
+| 自研中文数据集 v3 | 29,065 | 人工构造中文有害/无害 prompt，Claude API 标注六分类 |
+| WildGuard 对抗样本精译集 | 5,037 | WildGuardMix 中对抗性样本（多任务混淆、输出注入等）用 Claude API 重译，保留攻击结构 |
+| v3 前缀格式修复集 | 10,637 | 针对 v3 "请以……开始回答" 格式偏置的数据增强（去前缀 + 添加无害前缀样本） |
+| 注入防御数据集 | 18,230 | 有害样本 × 20 种注入模板 + 无害难负样本，训练分类器抵御提示注入 |
+
+**最终数据集**（`prepare_final_dataset.py` 输出）：
+
+- 自然数据（WildGuard + v3 + 精译集）按 **80/10/10** 分层切分（按 category_id），保证六类分布一致
+- 增强数据（前缀修复 + 注入防御）**100% 进训练集**，不出现在 val/test
+- 类别 5 欠采样严重（3,516条），训练集过采样至 8,000 条
+- 类别权重：sqrt 阻尼逆频率，最小权重归一化为 1
+
+| 类别 | 训练集 | 验证集 | 测试集 | 权重 |
+|------|--------|--------|--------|------|
+| 0 安全 | 58,645 | 6,350 | 6,350 | 1.00 |
+| 1 违反核心价值观 | 30,671 | 2,581 | 2,582 | 1.38 |
+| 2 歧视性 | 8,396 | 842 | 842 | 2.64 |
+| 3 商业违法 | 8,460 | 778 | 778 | 2.63 |
+| 4 侵犯权益 | 15,857 | 1,269 | 1,269 | 1.92 |
+| 5 专业安全 | 8,000 | 271 | 271 | 2.71 |
+| **合计** | **130,029** | **12,091** | **12,092** | |
+
+### 标注方法
+
+六分类标签由 Claude API（`claude-sonnet-4-6`）标注，系统提示明确六类定义和互斥规则。标注并发数 15-30，支持断点续传。
+
+---
+
+## 训练方法
+
+**模型**：Qwen2.5-7B-Instruct + 4-bit QLoRA（r=16, alpha=32）
+
+**输入格式**（ChatML）：
+```
+<|im_start|>system
+You are a content safety classifier...
+<|im_start|>user
+Human user:
+{prompt}
+
+---
+
+Answers:
+<|im_start|>assistant
+Harmful request: harmful
+Harm category: 违反社会主义核心价值观的内容
+```
+
+**Loss**：`DataCollatorForCompletionOnlyLM` 只对 assistant 回复部分计算 loss，并乘以 per-sample category weight（WeightedTrainer）。
+
+**超参**：3 epochs, lr=2e-4, cosine decay, warmup 5%, batch 4/GPU × grad_accum 8。
+
+**单卡启动**：
+```bash
+CUDA_VISIBLE_DEVICES=0 python scripts/hanguard/train_v5.py
+```
+
+**多卡 DDP 启动（推荐，6 卡约 23 小时）**：
+```bash
+CUDA_VISIBLE_DEVICES=0,1,3,4,5,7 torchrun \
+    --nproc_per_node=6 \
+    scripts/hanguard/train_v5.py \
+    --output_dir outputs/hanguard_v5
+```
+
+---
+
+## 安装
+
+```bash
+# 推理依赖
 pip install -r requirements.txt
-hf auth login
+
+# 训练额外依赖
+pip install -r requirements-train.txt
 ```
 
-## Prompt Guard
+**环境要求**：Python 3.10+，CUDA 11.8+，显存 ≥ 24GB（推理 4-bit 量化）
 
-Smoke test:
+---
 
-```powershell
-python run_prompt_guard.py --input data/prompt_guard_demo.csv --output outputs/prompt_guard_demo_predictions.csv --batch-size 2
-python evaluate.py --input outputs/prompt_guard_demo_predictions.csv --output outputs/prompt_guard_demo_metrics.json
-```
-
-Full dataset:
-
-```powershell
-python run_prompt_guard.py --input data/your_dataset.csv --output outputs/prompt_guard_predictions.csv --batch-size 16
-python evaluate.py --input outputs/prompt_guard_predictions.csv --output outputs/prompt_guard_metrics.json
-```
-
-## Cloud Server Setup
-
-Clone and install:
+## 推理
 
 ```bash
-git clone git@github.com:HDURAIN/Prompt-Guard.git
-cd Prompt-Guard
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements-cloud.txt
-hf auth login
+CUDA_VISIBLE_DEVICES=0 python infer_v5.py \
+    --input  data/my_data.csv \
+    --model  outputs/hanguard_v5 \
+    --output outputs/my_results.csv
 ```
 
-If SSH is not configured on the server, clone with HTTPS instead:
+输入 CSV/Parquet 需含 `prompt` 列，输出新增 `harmful_pred`、`category_pred`、`category_pred_label` 三列。
+
+---
+
+## 评估
 
 ```bash
-git clone https://github.com/HDURAIN/Prompt-Guard.git
+CUDA_VISIBLE_DEVICES=0 python evaluate_v5.py \
+    --model  outputs/hanguard_v5 \
+    --test   data/final_test.parquet \
+    --output outputs/eval_v5/report.txt
 ```
 
-## Cloud Smoke Tests
+报告包含：二分类 Accuracy/Precision/Recall/F1，六分类各类别及 macro F1，以及注入鲁棒性指标。
 
-Prompt Guard:
+---
 
-```bash
-python run_prompt_guard.py \
-  --input data/prompt_guard_demo.csv \
-  --output outputs/prompt_guard_cloud_smoke.csv \
-  --batch-size 2 \
-  --limit 5
-```
+## 实验结果
 
-WildGuard:
+> 训练完成后填入
 
-```bash
-python run_wildguard.py \
-  --input data/chinese_wildguard_150.csv \
-  --output outputs/wildguard_smoke.csv \
-  --batch-size 1 \
-  --limit 5
-```
+| 指标 | 值 |
+|------|----|
+| 二分类 F1 | — |
+| 六分类 macro F1 | — |
+| 六分类 accuracy | — |
 
-## WildGuard Full Run
+---
 
-```bash
-python run_wildguard.py \
-  --input data/chinese_wildguard_150.csv \
-  --output outputs/wildguard_predictions.csv \
-  --batch-size 4
-```
+## 历史版本
 
-For smaller GPUs, reduce `--batch-size` to `1`. If memory is still insufficient, reduce `--max-length`.
-The prompt category classifier runs after WildGuard and only receives rows where `harmful_request` is harmful. It uses category definitions as zero-shot labels, maps predictions back to the short category names, and records the extracted classification text in `category_input`. You can force it to CPU with `--category-device cpu`.
-
-## Evaluation
-
-Prompt Guard and WildGuard harmful-request evaluation:
-
-```bash
-python evaluate.py --input outputs/prompt_guard_predictions.csv --target harmful_request --output outputs/prompt_guard_metrics.json
-python evaluate.py --input outputs/wildguard_predictions.csv --target harmful_request --output outputs/wildguard_harmful_request_metrics.json
-```
-
-WildGuard coarse-category evaluation:
-
-```bash
-python evaluate_category.py \
-  --input outputs/wildguard_predictions.csv \
-  --output outputs/wildguard_category_metrics.json
-```
-
-The category evaluator compares `category_label` with `prompt_category`. It reports overall category accuracy, category accuracy on true harmful samples, category accuracy on detected harmful samples, and safe-category accuracy.
-
-WildGuard can also evaluate response-level fields if your CSV has matching labels such as `refusal_label` or `harmful_response_label`:
-
-```bash
-python evaluate.py --input outputs/wildguard_predictions.csv --target refusal --output outputs/wildguard_refusal_metrics.json
-python evaluate.py --input outputs/wildguard_predictions.csv --target harmful_response --output outputs/wildguard_harmful_response_metrics.json
-```
-
-## Notes
-
-- Both model repositories require Hugging Face login and access/terms acceptance.
-- Generated prediction and metric files are ignored by Git.
-- Keep large datasets, model weights, and tokens out of the repository.
-- Server deployment and smoke-test steps are in `SERVER_DEPLOY.md`.
+旧版两阶段架构（Mistral-7B 越狱检测 + MacBERT 六分类）和相关代码已归档至 `legacy/`，不再维护。
