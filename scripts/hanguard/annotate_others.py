@@ -1,3 +1,4 @@
+import os
 """
 对 WildGuard 数据集做六分类标注（并发版）。
 
@@ -38,7 +39,7 @@ OUTPUT    = Path("data/train_wildguard_labeled.parquet")
 CKPT_FILE = Path("data/train_wildguard_labeled_ckpt.parquet")
 
 # ── API 配置 ──────────────────────────────────────────────────────────
-API_KEY      = "sk-dtbqRykhzrJAkif8RDX77CTmdjFWaeNdjMIvB98s2gUQDWIX"
+API_KEY     = os.environ.get("ANTHROPIC_API_KEY", "")
 BASE_URL     = "https://vip.aipro.love"
 MODEL        = "claude-sonnet-4-6"
 RETRY        = 3

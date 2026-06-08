@@ -1,3 +1,4 @@
+import os
 """
 对 WildGuard 中对抗性攻击样本做高质量中文重译。
 
@@ -35,7 +36,7 @@ INPUT_ZH   = Path("data/train_wildguard_zh.parquet")
 OUTPUT     = Path("data/wildguard_injection_retrans.parquet")
 CKPT       = Path("data/wildguard_injection_retrans_ckpt.parquet")
 
-API_KEY    = "sk-dtbqRykhzrJAkif8RDX77CTmdjFWaeNdjMIvB98s2gUQDWIX"
+API_KEY     = os.environ.get("ANTHROPIC_API_KEY", "")
 BASE_URL   = "https://vip.aipro.love"
 MODEL      = "claude-sonnet-4-6"
 RETRY      = 3
