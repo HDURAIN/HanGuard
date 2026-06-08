@@ -5,6 +5,9 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
+# Local scripts
+start_claude.sh
+
 # Local environment and secrets
 .env
 .env.*
@@ -19,12 +22,22 @@ checkpoints/
 *.pt
 *.pth
 
-# Generated outputs
+# Large source/training data（不入库，按需本地生成）
+data/sources/
+data/*.parquet
+data/*.csv
+!data/.gitkeep
+
+# 模型权重（通过 HuggingFace 或本地路径分发，不入库）
+outputs/hanguard_v5/
+outputs/hanguard_v5_*/
+legacy/models/
+
+# 历史版本归档（本地保留，不入库）
+legacy/
+
+# 推理/评估输出
+outputs/eval_v5/
 outputs/*.csv
-outputs/*_predictions.csv
-outputs/*_smoke.csv
-outputs/*_metrics.json
-outputs/metrics.json
-outputs/sample_metrics.json
+outputs/*.log
 !outputs/.gitkeep
-!outputs/sample_predictions.csv
