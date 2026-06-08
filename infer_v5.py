@@ -80,7 +80,7 @@ def parse_output(text: str) -> tuple[str, str]:
     return harm, cat
 
 
-def load_model(model_dir: str):
+def load_model(model_dir: str, base_model: str | None = None):
     bnb = BitsAndBytesConfig(
         load_in_4bit=True,
         bnb_4bit_quant_type="nf4",
@@ -95,10 +95,11 @@ def load_model(model_dir: str):
 
     if adapter_cfg.exists():
         import json
-        base_model = json.loads(adapter_cfg.read_text())["base_model_name_or_path"]
-        print(f"加载基座模型: {base_model}")
+        # 优先用 --base_model 参数，否则从 adapter_config.json 读取
+        resolved_base = base_model or json.loads(adapter_cfg.read_text())["base_model_name_or_path"]
+        print(f"加载基座模型: {resolved_base}")
         model = AutoModelForCausalLM.from_pretrained(
-            base_model,
+            resolved_base,
             quantization_config=bnb,
             device_map="auto",
             trust_remote_code=True,
@@ -162,7 +163,9 @@ def load_input(path: str) -> pd.DataFrame:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input",      type=str, required=True, help="CSV 或 Parquet，需含 prompt 列")
-    parser.add_argument("--model",      type=str, default="outputs/hanguard_v5")
+    parser.add_argument("--model",      type=str, default="outputs/hanguard_v5", help="adapter 目录或完整模型目录")
+    parser.add_argument("--base_model", type=str, default=None,
+                        help="基座模型路径或 HF model ID（覆盖 adapter_config.json 中的路径）")
     parser.add_argument("--output",     type=str, default=None, help="输出 CSV 路径（默认同目录）")
     parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--limit",      type=int, default=None, help="只处理前 N 条")
@@ -177,7 +180,7 @@ def main():
     print(f"输入: {args.input}  ({len(df):,} 条)")
 
     prompts_built = [build_prompt(str(p)) for p in df["prompt"]]
-    tokenizer, model = load_model(args.model)
+    tokenizer, model = load_model(args.model, args.base_model)
 
     preds = infer_batch(prompts_built, tokenizer, model, args.batch_size)
     harm_preds, cat_preds = zip(*preds)
