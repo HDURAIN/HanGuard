@@ -1,3 +1,4 @@
+import os
 """
 对 train_hanguard_v3.parquet 中的中文样本补标 category_label。
 
@@ -33,7 +34,7 @@ OUTPUT  = Path("data/train_hanguard_v3_labeled.parquet")
 CKPT    = Path("data/train_hanguard_v3_labeled_ckpt.parquet")
 
 # ── API 配置 ──────────────────────────────────────────────────────────
-API_KEY     = "sk-dtbqRykhzrJAkif8RDX77CTmdjFWaeNdjMIvB98s2gUQDWIX"
+API_KEY     = os.environ.get("ANTHROPIC_API_KEY", "")
 BASE_URL    = "https://vip.aipro.love"
 MODEL       = "claude-sonnet-4-6"
 RETRY       = 3
