@@ -7,17 +7,20 @@ HanGuard v5：二分类 + 六分类 + 防越狱，基于 Qwen2.5-7B-Instruct QLo
   - 支持 sqrt 阻尼逆频率类别权重（class_weights.json），真正作用于 loss
   - DataCollatorForCompletionOnlyLM 只对 assistant 回复部分计算 loss
   - eval_dataset 训练中评估验证集 loss
+  - 支持 torchrun 多卡 DDP（通过 LOCAL_RANK 自动检测）
 
 使用方法：
+  # 单卡
   CUDA_VISIBLE_DEVICES=0 python scripts/hanguard/train_v5.py
-  CUDA_VISIBLE_DEVICES=0 python scripts/hanguard/train_v5.py \\
-      --train data/final_train.parquet \\
-      --val   data/final_val.parquet \\
-      --output_dir outputs/hanguard_v5
+
+  # 多卡 DDP（例：6 卡）
+  CUDA_VISIBLE_DEVICES=0,1,3,4,5,7 torchrun --nproc_per_node=6 \\
+      scripts/hanguard/train_v5.py --output_dir outputs/hanguard_v5
 """
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -231,11 +234,14 @@ def main():
     tokenizer.padding_side = "right"
 
     # ── 模型 ────────────────────────────────────────────────────────
+    # DDP：每个进程只使用自己的 GPU
+    local_rank = int(os.environ.get("LOCAL_RANK", 0))
+
     print("加载基座模型（4-bit QLoRA）...")
     model = AutoModelForCausalLM.from_pretrained(
         args.model,
         quantization_config=BNBCONFIG,
-        device_map="auto",
+        device_map={"": local_rank},
         trust_remote_code=True,
     )
     model = prepare_model_for_kbit_training(model)
@@ -275,6 +281,8 @@ def main():
         warmup_ratio=0.05,
         fp16=False,
         bf16=True,
+        gradient_checkpointing=True,
+        gradient_checkpointing_kwargs={"use_reentrant": False},
         logging_steps=50,
         eval_strategy="steps",
         eval_steps=500,
@@ -285,6 +293,7 @@ def main():
         metric_for_best_model="eval_loss",
         report_to="none",
         dataloader_num_workers=4,
+        ddp_find_unused_parameters=False,
         remove_unused_columns=False,   # 保留 weight 列直到 collator 消费它
     )
 
