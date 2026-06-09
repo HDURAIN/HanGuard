@@ -142,7 +142,7 @@ def main():
 
     # ── Step 1：修复 injection_defense 的 category_id ─────────────────
     print("Step 1: 修复 injection_defense category_id...")
-    v3 = pd.read_parquet("data/train_hanguard_v3_labeled.parquet")
+    v3 = pd.read_parquet("data/sources/train_hanguard_v3_labeled.parquet")
     v3_map = dict(zip(v3["prompt"], v3["category_id"]))
 
     inj = pd.read_parquet("data/injection_defense_samples.parquet")
@@ -156,13 +156,9 @@ def main():
     print("\nStep 2: 加载所有数据集...")
 
     natural_datasets = {
-        "wildguard_zh": "data/train_wildguard_zh.parquet",
-        "v3_labeled":   "data/train_hanguard_v3_labeled.parquet",
-        "retrans":      "data/wildguard_injection_retrans_labeled.parquet",
-    }
-    augment_datasets = {
-        "v3_prefix_fix":     "data/v3_prefix_fix.parquet",
-        "injection_defense": None,  # 已加载
+        "wildguard_zh": "data/sources/train_wildguard_zh.parquet",
+        "v3_labeled":   "data/sources/train_hanguard_v3_labeled.parquet",
+        "retrans":      "data/sources/wildguard_injection_retrans_labeled.parquet",
     }
 
     natural_dfs = {}
@@ -172,9 +168,16 @@ def main():
         natural_dfs[name] = df
         print(f"  {name}: {len(df):,}")
 
-    prefix_fix = load_and_tag("data/v3_prefix_fix.parquet", "v3_prefix_fix")
-    prefix_fix["category_label"] = prefix_fix["category_id"].map(LABEL_MAP)
-    print(f"  v3_prefix_fix: {len(prefix_fix):,}")
+    # v3_prefix_fix 是历史遗留增强文件，没有对应生成脚本；存在则加载，否则跳过
+    prefix_fix_path = Path("data/v3_prefix_fix.parquet")
+    if prefix_fix_path.exists():
+        prefix_fix = load_and_tag(str(prefix_fix_path), "v3_prefix_fix")
+        prefix_fix["category_label"] = prefix_fix["category_id"].map(LABEL_MAP)
+        print(f"  v3_prefix_fix: {len(prefix_fix):,}")
+    else:
+        prefix_fix = None
+        print("  v3_prefix_fix: 文件不存在，跳过（如需包含请手动放置 data/v3_prefix_fix.parquet）")
+
     inj_clean = inj[OUTPUT_COLS + ["source"]].copy()
     print(f"  injection_defense: {len(inj_clean):,}")
 
@@ -192,7 +195,8 @@ def main():
         print(f"  {name}: train={len(tr):,}  val={len(va):,}  test={len(te):,}")
 
     # 增强数据全进 train
-    train_parts.append(prefix_fix)
+    if prefix_fix is not None:
+        train_parts.append(prefix_fix)
     train_parts.append(inj_clean)
 
     train_df = pd.concat(train_parts, ignore_index=True)
