@@ -24,7 +24,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from annotate_system_prompt import LABEL_MAP
 
-INPUT = Path("data/train_hanguard_v3_labeled_ckpt.parquet")
+INPUT = Path("data/sources/train_hanguard_v3_labeled.parquet")
 OUTPUT = Path("data/injection_defense_samples.parquet")
 
 # ── 注入模板（20种，覆盖不同语言、位置、格式）────────────────────────────
