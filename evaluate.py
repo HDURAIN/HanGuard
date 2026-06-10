@@ -7,11 +7,11 @@ HanGuard v5 评估脚本。
   - 注入鲁棒性：单独统计含注入模板样本的表现
 
 用法：
-  CUDA_VISIBLE_DEVICES=0 python evaluate_v5.py \
+  CUDA_VISIBLE_DEVICES=0 python evaluate.py \
       --model outputs/hanguard_v5 \
       --test  data/final_test.parquet
 
-  CUDA_VISIBLE_DEVICES=0 python evaluate_v5.py \
+  CUDA_VISIBLE_DEVICES=0 python evaluate.py \
       --model outputs/hanguard_v5 \
       --test  data/final_test.parquet \
       --output outputs/eval_v5/report.txt
@@ -29,7 +29,7 @@ from sklearn.metrics import (
 )
 
 # 导入推理函数
-from infer_v5 import build_prompt, infer_batch, load_model
+from infer import build_prompt, infer_batch, load_model
 
 CATEGORY_LABELS = {
     "0": "安全",
@@ -149,10 +149,10 @@ def format_report(
     if n_inj == 0:
         lines.append("  测试集中未检测到注入样本（注入样本在训练集中，未进入测试集）")
     else:
-        inj_df = df[inj_mask]
+        inj_pos = [i for i, m in enumerate(inj_mask) if m]
+        inj_df = df[inj_mask].reset_index(drop=True)
         inj_harm_true = [1 if v == "harmful" else 0 for v in inj_df["prompt_harm_label"]]
-        inj_harm_pred = [1 if harm_preds[i] == "harmful" else 0
-                         for i in inj_df.index]
+        inj_harm_pred = [1 if harm_preds[i] == "harmful" else 0 for i in inj_pos]
         mi = binary_metrics(inj_harm_true, inj_harm_pred)
         lines.append(f"  注入样本数 : {n_inj:,}")
         lines.append(f"  Accuracy   : {mi['accuracy']:.4f}")
@@ -172,36 +172,44 @@ def main():
     parser.add_argument("--output",     type=str, default=None)
     parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--limit",      type=int, default=None)
+    parser.add_argument("--preds",      type=str, default=None,
+                        help="预计算的预测 CSV（含 harmful_pred / category_pred 列），跳过推理直接算指标")
     args = parser.parse_args()
 
-    df = pd.read_parquet(args.test)
-    if args.limit:
-        df = df.head(args.limit).copy()
-    df = df.reset_index(drop=True)
-
-    print(f"测试集: {args.test}  ({len(df):,} 条)")
-
-    prompts_built = [build_prompt(str(p)) for p in df["prompt"]]
-    tokenizer, model = load_model(args.model)
-    preds = infer_batch(prompts_built, tokenizer, model, args.batch_size)
-    harm_preds, cat_preds = zip(*preds)
-
-    report = format_report(df, list(harm_preds), list(cat_preds))
-    print("\n" + report)
-
-    # 保存预测结果
     out_dir = Path(args.output).parent if args.output else Path("outputs/eval_v5")
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    if args.preds:
+        # 直接读取已有预测，跳过推理
+        df = pd.read_csv(args.preds)
+        print(f"读取预测文件: {args.preds}  ({len(df):,} 条)")
+        harm_preds = df["harmful_pred"].tolist()
+        cat_preds  = df["category_pred"].astype(str).tolist()
+    else:
+        df = pd.read_parquet(args.test)
+        if args.limit:
+            df = df.head(args.limit).copy()
+        df = df.reset_index(drop=True)
+        print(f"测试集: {args.test}  ({len(df):,} 条)")
+
+        prompts_built = [build_prompt(str(p)) for p in df["prompt"]]
+        tokenizer, model = load_model(args.model)
+        preds = infer_batch(prompts_built, tokenizer, model, args.batch_size)
+        harm_preds, cat_preds = zip(*preds)
+        harm_preds, cat_preds = list(harm_preds), list(cat_preds)
+
+        df["harmful_pred"]  = harm_preds
+        df["category_pred"] = cat_preds
+        pred_path = str(out_dir / "predictions.csv")
+        df.to_csv(pred_path, index=False, encoding="utf-8")
+        print(f"预测结果已保存至: {pred_path}")
+
+    report = format_report(df, harm_preds, cat_preds)
+    print("\n" + report)
 
     report_path = args.output or str(out_dir / "report.txt")
     Path(report_path).write_text(report, encoding="utf-8")
     print(f"\n报告已保存至: {report_path}")
-
-    df["harmful_pred"] = harm_preds
-    df["category_pred"] = cat_preds
-    pred_path = str(out_dir / "predictions.csv")
-    df.to_csv(pred_path, index=False, encoding="utf-8")
-    print(f"预测结果已保存至: {pred_path}")
 
 
 if __name__ == "__main__":
