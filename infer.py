@@ -5,11 +5,11 @@ HanGuard v5 推理脚本。
 输出 harmful_pred（harmful/unharmful）和 category_pred（0-5 类别 ID）。
 
 用法：
-  CUDA_VISIBLE_DEVICES=0 python infer_v5.py \
+  CUDA_VISIBLE_DEVICES=0 python infer.py \
       --input  data/final_test.parquet \
       --model  outputs/hanguard_v5
 
-  CUDA_VISIBLE_DEVICES=0 python infer_v5.py \
+  CUDA_VISIBLE_DEVICES=0 python infer.py \
       --input  my_data.csv \
       --model  outputs/hanguard_v5 \
       --output outputs/my_results.csv \
@@ -51,6 +51,24 @@ CATEGORY_LABELS = {
     "5": "无法满足特定服务类型的安全需求",
 }
 
+# 训练输出使用中文标签，按匹配长度降序排列避免前缀误匹配
+_LABEL_TO_ID: list[tuple[str, str]] = sorted(
+    [(label, cid) for cid, label in CATEGORY_LABELS.items()],
+    key=lambda x: len(x[0]),
+    reverse=True,
+)
+
+
+def _label_to_cat(raw: str) -> str | None:
+    """将中文类别标签文本映射到 ID（0-5）；也兼容直接数字。"""
+    for label, cid in _LABEL_TO_ID:
+        if label in raw:
+            return cid
+    digit = re.search(r"[0-5]", raw)
+    if digit:
+        return digit.group(0)
+    return None
+
 
 def build_prompt(prompt: str) -> str:
     return PROMPT_TEMPLATE.format(system=SYSTEM_MSG, prompt=prompt)
@@ -65,17 +83,22 @@ def parse_output(text: str) -> tuple[str, str]:
     if m:
         harm = m.group(1).lower()
 
-    m = re.search(r"harm category\s*:\s*([^\n<]+)", text, re.I)
-    if m:
+    # 模型可能输出多行 "Harm category: X"；对 harmful 样本跳过"安全"取首个非安全类别
+    for m in re.finditer(r"harm category\s*:\s*([^\n<]+)", text, re.I):
         raw = m.group(1).strip()
-        # 提取第一个数字
-        digit = re.search(r"[0-5]", raw)
-        if digit:
-            cat = digit.group(0)
+        cid = _label_to_cat(raw)
+        if cid is None:
+            continue
+        if harm == "harmful" and cid == "0":
+            continue  # harmful 样本不应为安全类，继续找下一行
+        cat = cid
+        break
 
-    # 一致性校验：unharmful 应为类别 0
+    # 一致性校验
     if harm == "unharmful":
         cat = "0"
+    elif harm == "harmful" and cat == "0":
+        cat = "1"  # harmful 不可为安全类，兜底取最多类别
 
     return harm, cat
 
@@ -124,7 +147,7 @@ def infer_batch(
     model,
     batch_size: int,
     max_input_len: int = 480,
-    max_new_tokens: int = 32,
+    max_new_tokens: int = 48,
 ) -> list[tuple[str, str]]:
     results = []
     for start in tqdm(range(0, len(prompts), batch_size), desc="推理"):
@@ -169,11 +192,14 @@ def main():
     parser.add_argument("--output",     type=str, default=None, help="输出 CSV 路径（默认同目录）")
     parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--limit",      type=int, default=None, help="只处理前 N 条")
+    parser.add_argument("--skip",       type=int, default=0,    help="跳过前 N 条（用于多卡分片）")
     args = parser.parse_args()
 
     df = load_input(args.input)
     if "prompt" not in df.columns:
         raise ValueError("输入文件必须含 'prompt' 列")
+    if args.skip:
+        df = df.iloc[args.skip:].reset_index(drop=True)
     if args.limit:
         df = df.head(args.limit).copy()
 

@@ -11,18 +11,26 @@ HanGuard v5：二分类 + 六分类 + 防越狱，基于 Qwen2.5-7B-Instruct QLo
 
 使用方法：
   # 单卡
-  CUDA_VISIBLE_DEVICES=0 python scripts/hanguard/train_v5.py
+  CUDA_VISIBLE_DEVICES=0 python scripts/hanguard/train.py
 
-  # 多卡 DDP（例：6 卡）
-  CUDA_VISIBLE_DEVICES=0,1,3,4,5,7 torchrun --nproc_per_node=6 \\
-      scripts/hanguard/train_v5.py --output_dir outputs/hanguard_v5
+  # 多卡 DDP（例：6 卡，PCIe 无 NVLink 机器）
+  CUDA_VISIBLE_DEVICES=0,1,3,4,5,7 torchrun --nproc_per_node=6 --master_port=29501 \\
+      scripts/hanguard/train.py --output_dir outputs/hanguard_v5
 """
 
 import argparse
 import json
 import os
+import re
 from pathlib import Path
 
+# PCIe 直连无 NVLink 时，NCCL 默认会尝试 GPU P2P / InfiniBand，
+# 在该拓扑下会导致 DDP 初始化 ALLGATHER 卡死（30 min 超时）。
+# setdefault 不会覆盖用户在外部显式设置的值。
+os.environ.setdefault("NCCL_P2P_DISABLE", "1")
+os.environ.setdefault("NCCL_IB_DISABLE", "1")
+
+import numpy as np
 import torch.distributed as dist
 
 import pandas as pd
@@ -30,6 +38,7 @@ import torch
 import torch.nn.functional as F
 from datasets import Dataset
 from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
+from sklearn.metrics import accuracy_score, f1_score
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
@@ -45,6 +54,8 @@ DEFAULT_VAL   = "data/final_val.parquet"
 DEFAULT_OUT   = "outputs/hanguard_v5"
 DEFAULT_WEIGHTS = "data/class_weights.json"
 MAX_LENGTH    = 512
+# 固定部分（系统提示+模板框架+response）占 ~128 token，留 370 给 prompt（含少量余量）
+MAX_PROMPT_TOKENS = 370
 
 # ── 系统提示：明确要求输出双标签 ────────────────────────────────────
 SYSTEM_MSG = (
@@ -62,7 +73,7 @@ PROMPT_ONLY_TEMPLATE = (
     "Human user:\n{prompt}\n\n---\n\nAnswers:<|im_end|>\n"
     "<|im_start|>assistant\n"
     "Harmful request: {prompt_harm_label}\n"
-    "Harm category: {category_label}<|im_end|>"
+    "Harm category: {category_id} {category_label}<|im_end|>"
 )
 
 # DataCollatorForCompletionOnlyLM 用此字符串定位 assistant 回复起点
@@ -86,11 +97,67 @@ BNBCONFIG = BitsAndBytesConfig(
 )
 
 
-def format_sample(sample: dict) -> str:
+def preprocess_logits_for_metrics(logits, labels):
+    return logits.argmax(dim=-1)
+
+
+def make_compute_metrics(tokenizer):
+    def compute_metrics(eval_pred):
+        preds, labels = eval_pred
+        harm_preds, harm_refs = [], []
+        cat_preds, cat_refs = [], []
+
+        for pred_ids, label_ids in zip(preds, labels):
+            resp_idx = np.where(label_ids != -100)[0]
+            if len(resp_idx) == 0 or resp_idx[0] == 0:
+                continue
+            rs = int(resp_idx[0])
+            re_ = int(resp_idx[-1]) + 1
+
+            pred_text = tokenizer.decode(pred_ids[rs - 1 : re_ - 1].tolist(), skip_special_tokens=True)
+            ref_text  = tokenizer.decode(label_ids[rs : re_].tolist(),         skip_special_tokens=True)
+
+            mh = re.search(r"harmful request\s*:\s*(harmful|unharmful)", ref_text, re.I)
+            mc = re.search(r"harm category\s*:\s*([0-5])", ref_text, re.I)
+            if not mh or not mc:
+                continue  # ref 解析失败则跳过，避免污染指标
+            rh = mh.group(1).lower() == "harmful"
+            rc = int(mc.group(1))
+
+            mh = re.search(r"harmful request\s*:\s*(harmful|unharmful)", pred_text, re.I)
+            mc = re.search(r"harm category\s*:\s*([0-5])", pred_text, re.I)
+            ph = (mh.group(1).lower() == "harmful") if mh else False
+            pc = int(mc.group(1)) if mc else 0  # 预测失败时算 cat=0（错误），ref 已确保非零时会被计为错
+
+            harm_preds.append(int(ph))
+            harm_refs.append(int(rh))
+            cat_preds.append(pc)
+            cat_refs.append(rc)
+
+        if not harm_refs:
+            return {}
+
+        return {
+            "harm_acc":     round(float(accuracy_score(harm_refs, harm_preds)), 4),
+            "harm_f1":      round(float(f1_score(harm_refs, harm_preds, average="binary", zero_division=0)), 4),
+            "cat_acc":      round(float(accuracy_score(cat_refs, cat_preds)), 4),
+            "cat_f1_macro": round(float(f1_score(cat_refs, cat_preds, average="macro", zero_division=0)), 4),
+        }
+
+    return compute_metrics
+
+
+def format_sample(sample: dict, tokenizer=None) -> str:
+    prompt = sample["prompt"]
+    if tokenizer is not None:
+        ids = tokenizer.encode(prompt, add_special_tokens=False)
+        if len(ids) > MAX_PROMPT_TOKENS:
+            prompt = tokenizer.decode(ids[:MAX_PROMPT_TOKENS], skip_special_tokens=True)
     return PROMPT_ONLY_TEMPLATE.format(
         system=SYSTEM_MSG,
-        prompt=sample["prompt"],
+        prompt=prompt,
         prompt_harm_label=sample["prompt_harm_label"],
+        category_id=sample["category_id"],
         category_label=sample["category_label"],
     )
 
@@ -114,7 +181,7 @@ def build_hf_dataset(
 ) -> Dataset:
     """格式化 → tokenize → 打包成 HF Dataset（含 weight 列）。"""
     records = df.to_dict("records")
-    texts = [format_sample(r) for r in records]
+    texts = [format_sample(r, tokenizer) for r in records]
 
     encodings = tokenizer(
         texts,
@@ -295,12 +362,13 @@ def main():
         gradient_checkpointing_kwargs={"use_reentrant": False},
         logging_steps=50,
         eval_strategy="steps",
-        eval_steps=500,
+        eval_steps=400,
         save_strategy="steps",
-        save_steps=500,
+        save_steps=400,
         save_total_limit=2,
         load_best_model_at_end=True,
-        metric_for_best_model="eval_loss",
+        metric_for_best_model="eval_cat_f1_macro",
+        greater_is_better=True,
         report_to="none",
         dataloader_num_workers=4,
         ddp_find_unused_parameters=False,
@@ -314,6 +382,8 @@ def main():
         eval_dataset=val_data,
         data_collator=data_collator,
         tokenizer=tokenizer,
+        compute_metrics=make_compute_metrics(tokenizer),
+        preprocess_logits_for_metrics=preprocess_logits_for_metrics,
     )
 
     print("开始训练...")
