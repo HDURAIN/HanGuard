@@ -26,31 +26,30 @@
 ```
 hanguard/
 ├── data/
-│   ├── final_train.parquet       # 训练集（130,029条）
-│   ├── final_val.parquet         # 验证集（12,091条）
-│   ├── final_test.parquet        # 测试集（12,092条）
+│   ├── final_train.parquet       # 训练集（92,873条）
+│   ├── final_val.parquet         # 验证集（9,342条）
+│   ├── final_test.parquet        # 测试集（9,343条）
 │   ├── class_weights.json        # 六分类训练权重
 │   ├── 越狱意图分类定义.docx      # 分类标准定义文档
 │   └── sources/                  # 原始来源数据（只读）
-│       ├── train_wildguard_zh.parquet         # WildGuard 中文译版
-│       ├── train_hanguard_v3_labeled.parquet  # 自研中文数据集（已标注）
-│       ├── wildguard_injection_retrans_labeled.parquet  # 对抗样本精译集
-│       └── wildguard_en/         # 英文原版 WildGuardMix
+│       ├── wildguard_zh.parquet           # WildGuard 中文译版
+│       ├── hanguard_v3.parquet            # 自研中文数据集（已标注）
+│       ├── wildguard_retrans.parquet      # 对抗样本精译集
+│       ├── cat5_generated.parquet         # 类别5补充生成样本
+│       ├── injection_defense.parquet      # 注入防御数据集
+│       └── jailbench/                     # JailBench 越狱攻击数据集
 ├── outputs/
-│   └── hanguard_v5/              # 训练输出（训练后生成）
+│   └── hanguard_v5/              # 训练输出（LoRA adapter）
 ├── scripts/hanguard/
-│   ├── train_v5.py               # 训练入口
+│   ├── train.py                  # 训练入口
 │   ├── prepare_final_dataset.py  # 数据整合与分割
 │   ├── generate_injection_defense.py   # 注入防御数据生成
-│   ├── retranslate_injection_samples.py # 对抗样本重译
-│   ├── translate_wildguard.py    # WildGuard 中文翻译
-│   ├── download_training_data.py # 下载 WildGuardMix
-│   ├── annotate_system_prompt.py # 六分类标注提示词
-│   ├── annotate_v3_zh.py         # v3 数据集六分类标注
-│   ├── annotate_retrans.py       # 重译集六分类标注
-│   └── annotate_others.py        # 其他数据集标注
-├── infer_v5.py                   # 推理脚本
-├── evaluate_v5.py                # 评估脚本
+│   ├── generate_cat5_samples.py  # 类别5补充样本生成
+│   └── annotate_system_prompt.py # 六分类标注提示词
+├── scripts/
+│   └── eval_parallel.sh          # 多卡并行评估脚本
+├── infer.py                      # 推理脚本
+├── evaluate.py                   # 评估脚本
 ├── requirements.txt              # 推理依赖
 ├── requirements-train.txt        # 训练额外依赖
 └── legacy/                       # 历史版本归档（两阶段架构）
@@ -62,30 +61,32 @@ hanguard/
 
 ### 数据来源
 
-| 数据集 | 条数 | 说明 |
-|--------|------|------|
-| WildGuardMix（中文译版） | 86,759 | `allenai/wildguardmix` 英文数据机器翻译，含二分类标签和六分类标签 |
-| 自研中文数据集 v3 | 29,065 | 人工构造中文有害/无害 prompt，Claude API 标注六分类 |
-| WildGuard 对抗样本精译集 | 5,037 | WildGuardMix 中对抗性样本（多任务混淆、输出注入等）用 Claude API 重译，保留攻击结构 |
-| v3 前缀格式修复集 | 10,637 | 针对 v3 "请以……开始回答" 格式偏置的数据增强（去前缀 + 添加无害前缀样本） |
-| 注入防御数据集 | 18,230 | 有害样本 × 20 种注入模板 + 无害难负样本，训练分类器抵御提示注入 |
+| 数据集 | 来源文件 | 说明 |
+|--------|----------|------|
+| WildGuardMix（中文译版） | `wildguard_zh.parquet` | `allenai/wildguardmix` 英文数据机器翻译，含二分类和六分类标签 |
+| 自研中文数据集 v3 | `hanguard_v3.parquet` | 人工构造中文有害/无害 prompt，Claude API 标注六分类 |
+| WildGuard 对抗样本精译集 | `wildguard_retrans.parquet` | WildGuardMix 中对抗性样本（多任务混淆、输出注入等）用 Claude API 重译，保留攻击结构 |
+| JailBench | `jailbench/` | 高质量中文越狱攻击数据集，涵盖六分类各细类 |
+| 类别 5 补充样本 | `cat5_generated.parquet` | 针对专业安全场景（医疗、法律、金融等）生成的有害样本，缓解类别 5 欠采样 |
+| 注入防御数据集 | `injection_defense.parquet` | 有害样本 × 20 种注入模板 + 无害难负样本，训练分类器抵御提示注入 |
 
 **最终数据集**（`prepare_final_dataset.py` 输出）：
 
-- 自然数据（WildGuard + v3 + 精译集）按 **80/10/10** 分层切分（按 category_id），保证六类分布一致
-- 增强数据（前缀修复 + 注入防御）**100% 进训练集**，不出现在 val/test
-- 类别 5 欠采样严重（3,516条），训练集过采样至 8,000 条
+- 自然数据（WildGuard + v3 + 精译集 + JailBench + cat5）按 **80/10/10** 分层切分（按 category_id × source），保证六类分布一致
+- 增强数据（注入防御）**100% 进训练集**，不出现在 val/test
+- 跨数据源 prompt 去重；同 prompt 多标签冲突时取多数票，票数相等则丢弃
+- 类别 5 过采样至 4,000 条（约 2.7×），避免过度重复
 - 类别权重：sqrt 阻尼逆频率，最小权重归一化为 1
 
 | 类别 | 训练集 | 验证集 | 测试集 | 权重 |
 |------|--------|--------|--------|------|
-| 0 安全 | 58,645 | 6,350 | 6,350 | 1.00 |
-| 1 违反核心价值观 | 30,671 | 2,581 | 2,582 | 1.38 |
-| 2 歧视性 | 8,396 | 842 | 842 | 2.64 |
-| 3 商业违法 | 8,460 | 778 | 778 | 2.63 |
-| 4 侵犯权益 | 15,857 | 1,269 | 1,269 | 1.92 |
-| 5 专业安全 | 8,000 | 271 | 271 | 2.71 |
-| **合计** | **130,029** | **12,091** | **12,092** | |
+| 0 安全 | 33,703 | 3,836 | 3,836 | 1.00 |
+| 1 违反核心价值观 | 21,443 | 1,967 | 1,967 | 1.25 |
+| 2 歧视性 | 9,371 | 943 | 944 | 1.90 |
+| 3 商业违法 | 6,903 | 620 | 620 | 2.21 |
+| 4 侵犯权益 | 14,252 | 1,286 | 1,286 | 1.54 |
+| 5 专业安全 | 7,201 | 690 | 690 | 2.16 |
+| **合计** | **92,873** | **9,342** | **9,343** | |
 
 ### 标注方法
 
@@ -118,7 +119,7 @@ Harmful request: harmful
 Harm category: 1 违反社会主义核心价值观的内容<|im_end|>
 ```
 
-推理时在 `<|im_start|>assistant\n` 处截断，让模型续写后面的两行标签。`DataCollatorForCompletionOnlyLM` 确保 loss 只作用在 assistant 部分（即上面的最后两行）。
+推理时在 `<|im_start|>assistant\n` 处截断，让模型续写后面的两行标签。`DataCollatorForCompletionOnlyLM` 确保 loss 只作用在 assistant 部分。
 
 **Loss**：`DataCollatorForCompletionOnlyLM` 只对 assistant 回复部分计算 loss，并乘以 per-sample category weight（WeightedTrainer）。
 
@@ -126,16 +127,18 @@ Harm category: 1 违反社会主义核心价值观的内容<|im_end|>
 
 **单卡启动**：
 ```bash
-CUDA_VISIBLE_DEVICES=0 python scripts/hanguard/train_v5.py
+CUDA_VISIBLE_DEVICES=0 python scripts/hanguard/train.py
 ```
 
-**多卡 DDP 启动（推荐，6 卡约 23 小时）**：
+**多卡 DDP 启动（推荐，6 卡 RTX A6000 约 5.5 小时）**：
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,3,4,5,7 torchrun \
-    --nproc_per_node=6 \
-    scripts/hanguard/train_v5.py \
+    --nproc_per_node=6 --master_port=29501 \
+    scripts/hanguard/train.py \
     --output_dir outputs/hanguard_v5
 ```
+
+> PCIe 直连无 NVLink 机器需禁用 NCCL P2P/IB，`train.py` 已自动设置 `NCCL_P2P_DISABLE=1` 和 `NCCL_IB_DISABLE=1`。
 
 ---
 
@@ -193,7 +196,7 @@ huggingface-cli download HDURAIN/hanguard-v5 \
 ## 推理
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python infer_v5.py \
+CUDA_VISIBLE_DEVICES=0 python infer.py \
     --input  data/my_data.csv \
     --model  outputs/hanguard_v5 \
     --output outputs/my_results.csv
@@ -201,18 +204,31 @@ CUDA_VISIBLE_DEVICES=0 python infer_v5.py \
 
 输入 CSV/Parquet 需含 `prompt` 列，输出新增 `harmful_pred`、`category_pred`、`category_pred_label` 三列。
 
-> `infer_v5.py` 会从 adapter 目录下的 `adapter_config.json` 自动读取基座模型路径，
-> 也可手动指定：`--model outputs/hanguard_v5 --base_model /your/path/Qwen2.5-7B-Instruct`（需在脚本中添加该参数）。
+`infer.py` 会从 adapter 目录下的 `adapter_config.json` 自动读取基座模型路径，也可手动指定：
+
+```bash
+python infer.py --model outputs/hanguard_v5 \
+    --base_model /your/path/Qwen2.5-7B-Instruct \
+    --input data/my_data.csv
+```
 
 ---
 
 ## 评估
 
+**单卡**：
+
 ```bash
-CUDA_VISIBLE_DEVICES=0 python evaluate_v5.py \
+CUDA_VISIBLE_DEVICES=0 python evaluate.py \
     --model  outputs/hanguard_v5 \
     --test   data/final_test.parquet \
     --output outputs/eval_v5/report.txt
+```
+
+**多卡并行推理 + 合并评估**（推荐，约 25 分钟）：
+
+```bash
+bash scripts/eval_parallel.sh 32
 ```
 
 报告包含：二分类 Accuracy/Precision/Recall/F1，六分类各类别及 macro F1，以及注入鲁棒性指标。
@@ -233,79 +249,56 @@ CUDA_VISIBLE_DEVICES=0 python evaluate_v5.py \
 | 指标 | 公式 | 物理意义 | 方向 |
 |------|------|----------|:----:|
 | Accuracy（准确率） | (TP+TN) / N | 所有样本中预测正确的比例 | ↑ 越高越好 |
-| Precision（精确率） | TP / (TP+FP) | 判为有害的样本中真正有害的比例，体现**误报控制**能力；Precision 低 → 频繁误伤无害内容 | ↑ 越高越好 |
-| Recall（召回率） | TP / (TP+FN) | 真正有害样本中被成功检出的比例，体现**漏报控制**能力；Recall 低 → 有害内容频繁绕过 | ↑ 越高越好 |
-| F1 | 2 × P × R / (P+R) | Precision 与 Recall 的调和平均，惩罚两者差距，综合衡量准确与覆盖的权衡 | ↑ 越高越好 |
-| FPR（误报率） | FP / (FP+TN) | 无害内容被误判为有害的概率，直接影响正常用户体验 | ↓ 越低越好 |
-| FNR（漏报率） | FN / (FN+TP) | 有害内容逃过检测的概率，直接影响安全风险敞口 | ↓ 越低越好 |
-
-> Precision ↔ Recall 存在天然权衡：提高 Recall（减少漏报）往往会降低 Precision（增加误报），F1 是两者的平衡点。
+| Precision（精确率） | TP / (TP+FP) | 判为有害的样本中真正有害的比例，体现**误报控制**能力 | ↑ 越高越好 |
+| Recall（召回率） | TP / (TP+FN) | 真正有害样本中被成功检出的比例，体现**漏报控制**能力 | ↑ 越高越好 |
+| F1 | 2 × P × R / (P+R) | Precision 与 Recall 的调和平均 | ↑ 越高越好 |
+| FPR（误报率） | FP / (FP+TN) | 无害内容被误判为有害的概率 | ↓ 越低越好 |
+| FNR（漏报率） | FN / (FN+TP) | 有害内容逃过检测的概率 | ↓ 越低越好 |
 
 ### 六分类指标
 
 | 指标 | 公式 | 物理意义 | 方向 |
 |------|------|----------|:----:|
-| Macro F1 | (1/K) Σ F1_k | 各类别 F1 的算术平均，**对每个类别一视同仁**，对少数类（如类别 5）敏感，适合评估长尾性能 | ↑ 越高越好 |
-| Weighted F1 | Σ (n_k × F1_k) / N | 按各类别样本量加权的 F1 均值，反映**整体加权性能**，受多数类主导 | ↑ 越高越好 |
+| Macro F1 | (1/K) Σ F1_k | 各类别 F1 的算术平均，对少数类敏感 | ↑ 越高越好 |
+| Weighted F1 | Σ (n_k × F1_k) / N | 按样本量加权的 F1 均值，反映整体加权性能 | ↑ 越高越好 |
 
 ---
 
 ## 实验结果
 
-测试集：`data/final_test.parquet`（12,092 条，中文），4 卡并行推理。
+测试集：`data/final_test.parquet`（9,343 条，中文），4 卡并行推理。
 
-### 二分类基线对比（有害 / 无害）
+### 二分类（有害 / 无害）
 
-| 模型 | 架构 | 测试集 | Accuracy | Precision | Recall | F1 | FPR | FNR |
-|------|------|--------|:--------:|:---------:|:------:|:--:|:---:|:---:|
-| WildGuard | Mistral-7B 微调（英文）| WildGuardTest（英文，参考）| — | — | — | 82.7% | — | — |
-| WildGuard | Mistral-7B 微调（英文）| 本项目中文测试集 | TBD | TBD | TBD | TBD | TBD | TBD |
-| GPT-4o | 通用大模型（zero-shot）| 本项目中文测试集 | TBD | TBD | TBD | TBD | TBD | TBD |
-| HanGuard v4（旧）| Mistral-7B + MacBERT 两阶段 | 本项目中文测试集 | TBD | TBD | TBD | TBD | TBD | TBD |
-| **HanGuard v5（本文）** | Qwen2.5-7B QLoRA 单模型 | 本项目中文测试集 | **96.87%** | **98.57%** | **95.55%** | **97.04%** | **1.61%** | **4.45%** |
+| 模型 | 架构 | Accuracy | Precision | Recall | F1 | FPR | FNR |
+|------|------|:--------:|:---------:|:------:|:--:|:---:|:---:|
+| WildGuard | Mistral-7B 微调（英文，参考）| — | — | — | 82.7% | — | — |
+| **HanGuard v5** | Qwen2.5-7B QLoRA | **93.64%** | **98.04%** | **91.03%** | **94.41%** | **2.61%** | **8.97%** |
 
-> WildGuard 的 82.7% F1 来自原论文 WildGuardTest（英文），与本项目中文测试集不可直接比较，仅作量级参考。  
-> TBD 项待在统一测试集上运行评估脚本后填入。
+混淆矩阵：TP=5,013 / TN=3,736 / FP=100（误报）/ FN=494（漏报）
 
-混淆矩阵（HanGuard v5）：TP=6,212 / TN=5,501 / FP=90（误报）/ FN=289（漏报）
+> WildGuard 的 82.7% F1 来自原论文 WildGuardTest（英文），不可与本项目中文测试集直接比较，仅作量级参考。
 
-### 六分类（类别 0–5，HanGuard v5）
+### 六分类（类别 0–5）
+
+| 类别 | Precision | Recall | F1 | 支持数 |
+|------|:---------:|:------:|:--:|:------:|
+| 安全 | 88.32% | 97.39% | 92.64% | 3,836 |
+| 违反社会主义核心价值观 | 88.94% | 82.61% | 85.66% | 1,967 |
+| 歧视性内容 | 93.43% | 82.84% | 87.82% | 944 |
+| 商业违法违规 | 86.18% | 76.45% | 81.03% | 620 |
+| 侵犯他人合法权益 | 85.60% | 78.15% | 81.71% | 1,286 |
+| 专业安全需求 | 73.10% | 76.81% | 74.91% | 690 |
 
 | 指标 | 值 |
 |------|----|
-| Macro F1 | 0.11 |
-| Weighted F1 | 0.36 |
-| Accuracy | 52.51% |
-
-> **六分类结果无效，存在训练 bug。** 详见下方分析。六分类对比表待修复后重新训练补充。
+| Accuracy | 87.25% |
+| Macro F1 | **83.96%** |
+| Weighted F1 | **87.10%** |
 
 ### 注入鲁棒性
 
-测试集中未包含注入样本（注入样本 100% 进入训练集），无法在本轮评估。
-
----
-
-## 已知问题与修复计划
-
-### 六分类崩溃根因
-
-`train_v5.py` 的 gold output 模板使用纯中文类别标签：
-
-```
-Harm category: {category_label}   # 例：违反社会主义核心价值观的内容
-```
-
-导致模型在生成时未能学会"从 6 个类别中选一个"的离散决策，而是将 system prompt 中描述的所有类别标签依次列出。`parse_output` 的正则取第一行"Harm category:"的内容，第一行始终是"安全"（无数字），最终所有预测退化为 category=0，macro F1 = 0.11。
-
-**修复方案（已提交）**：将训练模板改为：
-
-```
-Harm category: {category_id} {category_label}
-```
-
-使输出包含数字 ID，模型可学习精确类别选择。同步修复 `parse_output` 支持中文标签→ID 映射（兼容旧模型）。
-
-**待完成**：使用修复后的模板重新训练，预期六分类 macro F1 显著提升。
+测试集中未包含注入样本（注入防御样本 100% 进入训练集，不出现在 val/test）。
 
 ---
 

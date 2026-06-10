@@ -6,7 +6,7 @@
   2. 无害样本 + 注入相关词 → unharmful（防止模型把注入关键词当 harmful 信号）
 
 输入：data/train_hanguard_v3_labeled_ckpt.parquet
-输出：data/injection_defense_samples.parquet
+输出：data/sources/injection_defense.parquet
 
 用法：
   python scripts/hanguard/generate_injection_defense.py
@@ -24,8 +24,8 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from annotate_system_prompt import LABEL_MAP
 
-INPUT = Path("data/sources/train_hanguard_v3_labeled.parquet")
-OUTPUT = Path("data/injection_defense_samples.parquet")
+INPUT = Path("data/sources/hanguard_v3.parquet")
+OUTPUT = Path("data/sources/injection_defense.parquet")
 
 # ── 注入模板（20种，覆盖不同语言、位置、格式）────────────────────────────
 # 每个元素：(position, template)
@@ -176,7 +176,7 @@ def main():
 
     # 2b. 从真实 unharmful 样本里随机取 500 条，各加一个注入后缀
     #     让模型看到「无害内容 + 注入格式 → 仍然无害」
-    sample_unharmful = unharmful.sample(min(500, len(unharmful)), random_state=args.seed)
+    sample_unharmful = unharmful.sample(min(3000, len(unharmful)), random_state=args.seed)
     for _, row in sample_unharmful.iterrows():
         pos, tmpl = random.choice(ALL_TEMPLATES)
         new_prompt = apply_template(row["prompt"], pos, tmpl)
