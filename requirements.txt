@@ -7,3 +7,5 @@ tqdm
 sentencepiece
 protobuf
 huggingface_hub
+fastapi
+uvicorn[standard]

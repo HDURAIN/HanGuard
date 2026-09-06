@@ -148,9 +148,14 @@ def infer_batch(
     batch_size: int,
     max_input_len: int = 480,
     max_new_tokens: int = 48,
+    show_progress: bool = True,
 ) -> list[tuple[str, str]]:
     results = []
-    for start in tqdm(range(0, len(prompts), batch_size), desc="推理"):
+    for start in tqdm(
+        range(0, len(prompts), batch_size),
+        desc="推理",
+        disable=not show_progress,
+    ):
         batch_texts = prompts[start : start + batch_size]
         inputs = tokenizer(
             batch_texts,
