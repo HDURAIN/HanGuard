@@ -12,7 +12,7 @@
 
 ## 保留的来源与质量记录
 
-- `data/sources/`：原始输入资料，不直接作为默认训练入口。`hanguard_v3.parquet` 等历史文件名保留用于来源追溯，不代表产品名称或活动版本。
+- `data/sources/`：原始输入资料，用于来源追溯，不直接作为默认训练入口。
 - `data/sources/reference/`：原有中文语料表格和类别定义文档，原字节保留，仅从 `data/` 根目录移入来源资料目录。
 - 修复数据的 `manifest.json`、`audit.json`、`release_qa.json`：冻结的发布、检查和最终 QA 记录。
 - `full_repaired_archive.parquet`：全部 80,709 条历史范围记录及原文、新旧译文、修订依据。
