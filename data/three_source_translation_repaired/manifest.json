@@ -1,0 +1,538 @@
+{
+  "protocol": "three_source_uniform_wildguard_retranslation",
+  "release_status": "candidate_pending_root_qa",
+  "source_selection": "wildguard_zh",
+  "translation_selection_uses_predictions_or_labels": false,
+  "quarantine_checks_label_conflicts": true,
+  "max_prompt_tokens": null,
+  "legacy_prompt_limit": 370,
+  "length_policy": "annotation_only_no_cap",
+  "length_statistics": {
+    "archive": {
+      "rows": 80709,
+      "min_tokens": 1,
+      "max_tokens": 8278,
+      "mean_tokens": 67.91100125140939,
+      "p50_tokens": 32.0,
+      "p95_tokens": 230.0,
+      "p99_tokens": 349.0,
+      "over_legacy_limit": 582,
+      "bins": {
+        "0-128": 68179,
+        "129-256": 9541,
+        "257-370": 2407,
+        "371-512": 389,
+        "513-1024": 152,
+        "1025-2048": 25,
+        "2049-4096": 14,
+        ">4096": 2
+      }
+    },
+    "candidate": {
+      "rows": 77686,
+      "min_tokens": 1,
+      "max_tokens": 3202,
+      "mean_tokens": 64.06070591869835,
+      "p50_tokens": 31.0,
+      "p95_tokens": 221.0,
+      "p99_tokens": 346.0,
+      "over_legacy_limit": 407,
+      "bins": {
+        "0-128": 66572,
+        "129-256": 8496,
+        "257-370": 2211,
+        "371-512": 328,
+        "513-1024": 73,
+        "1025-2048": 5,
+        "2049-4096": 1,
+        ">4096": 0
+      }
+    },
+    "quarantine": {
+      "rows": 3023,
+      "min_tokens": 1,
+      "max_tokens": 8278,
+      "mean_tokens": 166.85709560039695,
+      "p50_tokens": 122.0,
+      "p95_tokens": 404.8000000000002,
+      "p99_tokens": 1162.4200000000078,
+      "over_legacy_limit": 175,
+      "bins": {
+        "0-128": 1607,
+        "129-256": 1045,
+        "257-370": 196,
+        "371-512": 61,
+        "513-1024": 79,
+        "1025-2048": 20,
+        "2049-4096": 13,
+        ">4096": 2
+      }
+    },
+    "by_split": {
+      "train": {
+        "archive": {
+          "rows": 64568,
+          "min_tokens": 1,
+          "max_tokens": 8278,
+          "mean_tokens": 67.76892578366993,
+          "p50_tokens": 32.0,
+          "p95_tokens": 228.0,
+          "p99_tokens": 349.0,
+          "over_legacy_limit": 445,
+          "bins": {
+            "0-128": 54562,
+            "129-256": 7653,
+            "257-370": 1908,
+            "371-512": 292,
+            "513-1024": 120,
+            "1025-2048": 22,
+            "2049-4096": 9,
+            ">4096": 2
+          }
+        },
+        "candidate": {
+          "rows": 62155,
+          "min_tokens": 1,
+          "max_tokens": 3202,
+          "mean_tokens": 63.93911994208028,
+          "p50_tokens": 31.0,
+          "p95_tokens": 220.0,
+          "p99_tokens": 345.0,
+          "over_legacy_limit": 312,
+          "bins": {
+            "0-128": 53279,
+            "129-256": 6818,
+            "257-370": 1746,
+            "371-512": 247,
+            "513-1024": 59,
+            "1025-2048": 5,
+            "2049-4096": 1,
+            ">4096": 0
+          }
+        },
+        "quarantine": {
+          "rows": 2413,
+          "min_tokens": 1,
+          "max_tokens": 8278,
+          "mean_tokens": 166.4185661002901,
+          "p50_tokens": 122.0,
+          "p95_tokens": 388.4000000000001,
+          "p99_tokens": 1125.6400000000058,
+          "over_legacy_limit": 133,
+          "bins": {
+            "0-128": 1283,
+            "129-256": 835,
+            "257-370": 162,
+            "371-512": 45,
+            "513-1024": 61,
+            "1025-2048": 17,
+            "2049-4096": 8,
+            ">4096": 2
+          }
+        }
+      },
+      "validation": {
+        "archive": {
+          "rows": 8070,
+          "min_tokens": 1,
+          "max_tokens": 3950,
+          "mean_tokens": 68.31251548946716,
+          "p50_tokens": 32.0,
+          "p95_tokens": 232.0,
+          "p99_tokens": 355.9299999999985,
+          "over_legacy_limit": 69,
+          "bins": {
+            "0-128": 6841,
+            "129-256": 909,
+            "257-370": 251,
+            "371-512": 48,
+            "513-1024": 17,
+            "1025-2048": 1,
+            "2049-4096": 3,
+            ">4096": 0
+          }
+        },
+        "candidate": {
+          "rows": 7753,
+          "min_tokens": 1,
+          "max_tokens": 903,
+          "mean_tokens": 63.99638849477621,
+          "p50_tokens": 31.0,
+          "p95_tokens": 222.39999999999964,
+          "p99_tokens": 347.47999999999956,
+          "over_legacy_limit": 47,
+          "bins": {
+            "0-128": 6671,
+            "129-256": 806,
+            "257-370": 229,
+            "371-512": 39,
+            "513-1024": 8,
+            "1025-2048": 0,
+            "2049-4096": 0,
+            ">4096": 0
+          }
+        },
+        "quarantine": {
+          "rows": 317,
+          "min_tokens": 3,
+          "max_tokens": 3950,
+          "mean_tokens": 173.87381703470032,
+          "p50_tokens": 113.0,
+          "p95_tokens": 443.4,
+          "p99_tokens": 1045.1599999999987,
+          "over_legacy_limit": 22,
+          "bins": {
+            "0-128": 170,
+            "129-256": 103,
+            "257-370": 22,
+            "371-512": 9,
+            "513-1024": 9,
+            "1025-2048": 1,
+            "2049-4096": 3,
+            ">4096": 0
+          }
+        }
+      },
+      "test": {
+        "archive": {
+          "rows": 8071,
+          "min_tokens": 1,
+          "max_tokens": 2402,
+          "mean_tokens": 68.64614050303555,
+          "p50_tokens": 32.0,
+          "p95_tokens": 238.0,
+          "p99_tokens": 357.0,
+          "over_legacy_limit": 68,
+          "bins": {
+            "0-128": 6776,
+            "129-256": 979,
+            "257-370": 248,
+            "371-512": 49,
+            "513-1024": 15,
+            "1025-2048": 2,
+            "2049-4096": 2,
+            ">4096": 0
+          }
+        },
+        "candidate": {
+          "rows": 7778,
+          "min_tokens": 1,
+          "max_tokens": 900,
+          "mean_tokens": 65.09642581640524,
+          "p50_tokens": 31.0,
+          "p95_tokens": 231.0,
+          "p99_tokens": 348.0,
+          "over_legacy_limit": 48,
+          "bins": {
+            "0-128": 6622,
+            "129-256": 872,
+            "257-370": 236,
+            "371-512": 42,
+            "513-1024": 6,
+            "1025-2048": 0,
+            "2049-4096": 0,
+            ">4096": 0
+          }
+        },
+        "quarantine": {
+          "rows": 293,
+          "min_tokens": 2,
+          "max_tokens": 2402,
+          "mean_tokens": 162.87713310580205,
+          "p50_tokens": 122.0,
+          "p95_tokens": 455.79999999999893,
+          "p99_tokens": 1352.0399999999981,
+          "over_legacy_limit": 20,
+          "bins": {
+            "0-128": 154,
+            "129-256": 107,
+            "257-370": 12,
+            "371-512": 7,
+            "513-1024": 9,
+            "1025-2048": 2,
+            "2049-4096": 2,
+            ">4096": 0
+          }
+        }
+      }
+    },
+    "by_source": {
+      "chinese_curated": {
+        "archive": {
+          "rows": 26919,
+          "min_tokens": 2,
+          "max_tokens": 342,
+          "mean_tokens": 23.67357628440878,
+          "p50_tokens": 21.0,
+          "p95_tokens": 47.0,
+          "p99_tokens": 75.0,
+          "over_legacy_limit": 0,
+          "bins": {
+            "0-128": 26871,
+            "129-256": 47,
+            "257-370": 1,
+            "371-512": 0,
+            "513-1024": 0,
+            "1025-2048": 0,
+            "2049-4096": 0,
+            ">4096": 0
+          }
+        },
+        "candidate": {
+          "rows": 26918,
+          "min_tokens": 2,
+          "max_tokens": 342,
+          "mean_tokens": 23.674307155063527,
+          "p50_tokens": 21.0,
+          "p95_tokens": 47.0,
+          "p99_tokens": 75.0,
+          "over_legacy_limit": 0,
+          "bins": {
+            "0-128": 26870,
+            "129-256": 47,
+            "257-370": 1,
+            "371-512": 0,
+            "513-1024": 0,
+            "1025-2048": 0,
+            "2049-4096": 0,
+            ">4096": 0
+          }
+        },
+        "quarantine": {
+          "rows": 1,
+          "min_tokens": 4,
+          "max_tokens": 4,
+          "mean_tokens": 4.0,
+          "p50_tokens": 4.0,
+          "p95_tokens": 4.0,
+          "p99_tokens": 4.0,
+          "over_legacy_limit": 0,
+          "bins": {
+            "0-128": 1,
+            "129-256": 0,
+            "257-370": 0,
+            "371-512": 0,
+            "513-1024": 0,
+            "1025-2048": 0,
+            "2049-4096": 0,
+            ">4096": 0
+          }
+        }
+      },
+      "jailbench": {
+        "archive": {
+          "rows": 7603,
+          "min_tokens": 39,
+          "max_tokens": 361,
+          "mean_tokens": 100.3300013152703,
+          "p50_tokens": 88.0,
+          "p95_tokens": 342.0,
+          "p99_tokens": 349.0,
+          "over_legacy_limit": 0,
+          "bins": {
+            "0-128": 7100,
+            "129-256": 1,
+            "257-370": 502,
+            "371-512": 0,
+            "513-1024": 0,
+            "1025-2048": 0,
+            "2049-4096": 0,
+            ">4096": 0
+          }
+        },
+        "candidate": {
+          "rows": 7603,
+          "min_tokens": 39,
+          "max_tokens": 361,
+          "mean_tokens": 100.3300013152703,
+          "p50_tokens": 88.0,
+          "p95_tokens": 342.0,
+          "p99_tokens": 349.0,
+          "over_legacy_limit": 0,
+          "bins": {
+            "0-128": 7100,
+            "129-256": 1,
+            "257-370": 502,
+            "371-512": 0,
+            "513-1024": 0,
+            "1025-2048": 0,
+            "2049-4096": 0,
+            ">4096": 0
+          }
+        },
+        "quarantine": {
+          "rows": 0,
+          "min_tokens": null,
+          "max_tokens": null,
+          "mean_tokens": null,
+          "p50_tokens": null,
+          "p95_tokens": null,
+          "p99_tokens": null,
+          "over_legacy_limit": 0,
+          "bins": {
+            "0-128": 0,
+            "129-256": 0,
+            "257-370": 0,
+            "371-512": 0,
+            "513-1024": 0,
+            "1025-2048": 0,
+            "2049-4096": 0,
+            ">4096": 0
+          }
+        }
+      },
+      "wildguard_zh": {
+        "archive": {
+          "rows": 46187,
+          "min_tokens": 1,
+          "max_tokens": 8278,
+          "mean_tokens": 88.35713512460217,
+          "p50_tokens": 61.0,
+          "p95_tokens": 262.0,
+          "p99_tokens": 391.1399999999994,
+          "over_legacy_limit": 582,
+          "bins": {
+            "0-128": 34208,
+            "129-256": 9493,
+            "257-370": 1904,
+            "371-512": 389,
+            "513-1024": 152,
+            "1025-2048": 25,
+            "2049-4096": 14,
+            ">4096": 2
+          }
+        },
+        "candidate": {
+          "rows": 43165,
+          "min_tokens": 1,
+          "max_tokens": 3202,
+          "mean_tokens": 82.85754662342175,
+          "p50_tokens": 45.0,
+          "p95_tokens": 255.0,
+          "p99_tokens": 366.0,
+          "over_legacy_limit": 407,
+          "bins": {
+            "0-128": 32602,
+            "129-256": 8448,
+            "257-370": 1708,
+            "371-512": 328,
+            "513-1024": 73,
+            "1025-2048": 5,
+            "2049-4096": 1,
+            ">4096": 0
+          }
+        },
+        "quarantine": {
+          "rows": 3022,
+          "min_tokens": 1,
+          "max_tokens": 8278,
+          "mean_tokens": 166.91098610191926,
+          "p50_tokens": 122.0,
+          "p95_tokens": 404.89999999999964,
+          "p99_tokens": 1162.8099999999986,
+          "over_legacy_limit": 175,
+          "bins": {
+            "0-128": 1606,
+            "129-256": 1045,
+            "257-370": 196,
+            "371-512": 61,
+            "513-1024": 79,
+            "1025-2048": 20,
+            "2049-4096": 13,
+            ">4096": 2
+          }
+        }
+      }
+    }
+  },
+  "input_rows": 80709,
+  "archived_rows": 80709,
+  "translated_rows": 46187,
+  "expected_translation_rows": 46187,
+  "candidate_rows": 77686,
+  "quarantined_rows": 3023,
+  "quarantine_reason_counts": {
+    "conflicting_labels_for_same_normalized_english": 46,
+    "conflicting_labels_for_same_normalized_text": 52,
+    "cross_split_normalized_duplicate": 479,
+    "cross_split_normalized_english_lineage": 427,
+    "translation_generation_length_limit": 40,
+    "translation_status_error": 45,
+    "translation_status_review": 1769,
+    "within_split_normalized_duplicate": 802
+  },
+  "translation_status_counts": {
+    "ok": 44373,
+    "unchanged_source": 34522,
+    "review": 1769,
+    "error": 45
+  },
+  "translation_source_counts": {
+    "model": 46154,
+    "unchanged_source": 34522,
+    "recorded_bilingual_correction": 33
+  },
+  "recorded_bilingual_correction_rows": 33,
+  "collision_policy": "quarantine every member; preserve original split and labels",
+  "english_cross_split_rows": 427,
+  "english_lineage_quarantine_rows": 455,
+  "english_binary_label_conflict_groups": 0,
+  "english_category_label_conflict_groups": 23,
+  "chinese_collision_quarantine_rows": 1281,
+  "english_and_chinese_quarantine_overlap": 453,
+  "english_lineage_additional_rows": 2,
+  "normalization": "NFKC, casefold, drop Unicode Cf, remove whitespace",
+  "sample_id_formula": "SHA256(base_id + ':' + full repaired prompt)",
+  "stable_identity_note": "base_id/group_id retain old lineage; not hashes of repaired text",
+  "provenance": {
+    "input_sha256": {
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_original/train.parquet": "00af4a74b6048309ecc4797774a90225f93ff4aec637da367a6b2c775dd3cf34",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_original/validation.parquet": "ed3d5b58f4a0c778b4e7ccc1ddc02af29fb7ef1fffd8e350dce8774ef3c9f28f",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_original/test.parquet": "34941427b3a6b0518e16188b620aa3daf8708201af5c87b59c3c3a22d70a2178",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/source_mapping.parquet": "c09de904dc1a97666e6ddaf6e1dcf407a096efe0e736ed2b97bee2766b10d02f",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/merged_qwen35/translation_results.jsonl": "86451cf0b328328092f75e232761d861c2cc4d20ee1d7cb1cbfdc5b4e8318c62"
+    },
+    "tokenizer": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B",
+    "tokenizer_sha256": {
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8"
+    }
+  },
+  "builder_sha256": "69605b6b617d9fc202799f6830c5445eef69e4c0ff5c5dad5817209cb4255477",
+  "limitations": [
+    "Candidate requires independent translation/semantic QA before use.",
+    "Exact deduplication is not semantic-near-duplicate isolation.",
+    "Recovered normalized English cross-split/conflicting-label identities are quarantined.",
+    "Source labels are preserved, not certified by retranslation."
+  ],
+  "splits": {
+    "train": {
+      "original": 64568,
+      "retained": 62155,
+      "quarantined": 2413
+    },
+    "validation": {
+      "original": 8070,
+      "retained": 7753,
+      "quarantined": 317
+    },
+    "test": {
+      "original": 8071,
+      "retained": 7778,
+      "quarantined": 293
+    }
+  },
+  "artifact_sha256": {
+    "class_weights.json": "bb9b1d403cb4628040a817f30e756c02178767b519b9c1d3be8b6b5040f0e084",
+    "collision_groups.json": "6d6e63b8c2f865c6cb11b7c795a79dd62032178360bdd035c1d3ad6a413f5144",
+    "english_collision_groups.json": "2a5dca1d191a35b68735fe30a07a6db4b557c0132d60764e310fd3a2badd7bdd",
+    "english_cross_split_review.csv": "b1b6faf443d681c3bb3d4ef8c0e5d8a30f833a9cf05e78c1461160f3d201efc8",
+    "full_repaired_archive.parquet": "d35f93d25bc6c3e67df28059d43a2aa2a6ce7e3b11bdaaaf4eb5bdfe09a075a5",
+    "quarantine.csv": "560f00cef4394fb1063c3d774cfc08c8426dd5a61c175f8caa6b2dd777519d04",
+    "quarantine.parquet": "dfc0b61c7acc83e63a1f7a99c4362ecafda7700da3ccd484090141d8acc4b6f8",
+    "revision_log.csv": "7061ea3e424ec7cb4be4721f2beea799b6e27740c14cbefadb832508e2a7ca02",
+    "test.parquet": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09",
+    "train.parquet": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "validation.parquet": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114"
+  }
+}

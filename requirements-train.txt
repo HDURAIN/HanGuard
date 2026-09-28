@@ -1,5 +1,7 @@
 -r requirements.txt
-peft
-trl
-bitsandbytes
-datasets
+flash-linear-attention==0.3.2
+fla-core==0.3.2
+triton==3.2.0
+pytest==9.1.1
+# Optional CUDA accelerator, installed separately after torch:
+# python -m pip install causal-conv1d==1.5.3.post1 --no-build-isolation

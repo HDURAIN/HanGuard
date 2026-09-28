@@ -1,0 +1,7 @@
+{
+  "created_at": "2026-09-28T13:03:18.591890+00:00",
+  "purpose": "Pre-cleanup source and documentation snapshot, no model weights or datasets",
+  "archive": "repository_before_cleanup_20260928.tar.gz",
+  "sha256": "6c464abf1dd0f82230be58bb27cf44f7ff93e3ec8a14e40177343c83726adba7",
+  "files": 167
+}

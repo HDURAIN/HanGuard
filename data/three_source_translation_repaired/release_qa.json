@@ -1,0 +1,54 @@
+{
+  "release_status": "qa_complete_with_documented_limitations",
+  "decided_at": "2026-09-28T02:32:25.574035+00:00",
+  "decision_by": "Codex root agent",
+  "reason": "Full-source retranslation and uniform rule screening completed; all 72 fixed random examples have recorded assistant bilingual reviews, with 33 corrections across 111 reviewed sources. Independent full readback passed. Unresolved quality and duplicate/conflict records remain quarantined. The main dataset retains every eligible full-length text; 370 tokens is annotation only. This is not full-corpus semantic certification or human expert gold annotation.",
+  "reviewer_type": "codex_assistant",
+  "expert_human_annotation": false,
+  "immutable_build_status_preserved": true,
+  "dataset_manifest_sha256": "d14bbd6f38f2b165004005bd733a5b6eeb9df8cec71674d282fbfcc4cb9c7b12",
+  "independent_verification": {
+    "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/independent_verification/verification.json",
+    "sha256": "12ff53dee16aa50e32d9df287cf25c905f68ef4acffdf28c90ea518ff799758f"
+  },
+  "sample_plan": {
+    "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/qa_sample_plan.jsonl",
+    "sha256": "42f442e10ee6fa22f159a2ac054f8b079a3af16c2fd376c7106fe2e39d43c2e7",
+    "seed": 20260928,
+    "rows": 72,
+    "per_split": {
+      "train": 24,
+      "test": 24,
+      "validation": 24
+    },
+    "decisions": {
+      "approve": 49,
+      "correct": 22,
+      "hold": 1
+    }
+  },
+  "qa_evidence_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/assembled_reviews/summary.json": "f0f4cfaa8cdae5ab4774139dcc42ec8f063d24bf88a7d37ce7535dddc06dd42d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/assembled_reviews/qa_comparison.jsonl": "c4fea553fcdddff30690cfdc5ec5435fe3560a750f3358e6c5281dac09b6d60d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/assembled_reviews/review_overrides.jsonl": "d821bbb765abc18caf47262e8ac6276dcb8ff18f90735c407000823f84973dad",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/qa_interaction_review.jsonl": "e5331562a7316eb4ef13711baa221df466c4f52b695ec25c3724c815f2dcd122",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/qa_bilora_review.jsonl": "f1071e2e95a1d02a519eaa2d15a4615236a4a7a15b11702c171c1d1f74f86630",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/qa_root_stream_review.jsonl": "53b2ca5b2ddd369687d9417bf7d5a2bf5cf7984aa3a02cda5410e358398edafd",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/translator_model_manifest.json": "44f8c80e87c9f5ffb998d4d86e871bb276fd0034691f12a89278efcf14f870bd",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/generation_completion.json": "53212123b15bdece761a684b10dc24dfdd3d2b508316f8c98f188e41a7439888",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/generation_source_snapshot.json": "0cea40aa671cc1d7e635ac0b6cfd0517bbda1b5c51e39e5ca6057aa719bb2ee4",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/tests_final.json": "b3c99a0fb46c438c0dbff12e61c50bf1cf95b0ea5b6c673ab07b5ca2cd19c71d"
+  },
+  "passed_scope": [
+    "structural and source-lineage readback",
+    "full-corpus uniform rule screening",
+    "fixed random assistant bilingual review sample",
+    "recorded correction provenance and quarantine"
+  ],
+  "limitations": [
+    "No claim of full-corpus semantic certification or expert human gold labels.",
+    "Rule-flag probes are separate from the fixed random sample and cannot estimate population error rates.",
+    "Use the new data explicitly; rebuild caches and register a new training/evaluation protocol.",
+    "Do not interpret score differences from the historical dataset as algorithmic gains."
+  ]
+}

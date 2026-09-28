@@ -1,0 +1,67 @@
+{
+  "dataset_name": "hanguard_two_source_primary",
+  "purpose": "Full two-source inherited primary-category training; retain safe rows for binary/end-to-end evaluation",
+  "source_directory": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired",
+  "output_directory": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/hanguard_two_source_primary_20260928",
+  "selected_sources": [
+    "chinese_curated",
+    "jailbench"
+  ],
+  "excluded_sources": [
+    "wildguard_zh"
+  ],
+  "selection_rule": "source in {chinese_curated,jailbench}; no other row filter",
+  "input_sha256": {
+    "train": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "validation": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "test": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+  },
+  "output_sha256": {
+    "train": "9d9abd18aef162f8c24030ad564a9b6e4d4c8d4dd5dace4761b792c9ddd47ec7",
+    "validation": "8fbe5cb41b88826d10e4ce0ea8c0ffefa90233a030bf91e4a2f14dc4962c9ab7",
+    "test": "4d92a6e61445c92b5cd6df9942e2a4d0744fecd12f4b9babe55567769ccb7e7a"
+  },
+  "input_rows": {
+    "train": 62155,
+    "validation": 7753,
+    "test": 7778
+  },
+  "split_counts": {
+    "train": {
+      "rows": 27618,
+      "harmful_rows": 15578,
+      "unharmful_rows": 12040
+    },
+    "validation": {
+      "rows": 3451,
+      "harmful_rows": 1875,
+      "unharmful_rows": 1576
+    },
+    "test": {
+      "rows": 3452,
+      "harmful_rows": 1828,
+      "unharmful_rows": 1624
+    }
+  },
+  "audit_sha256": "32bbfa79b3ecabbfc405bff74c9f5528f073557c23a2122911d1b3a2d4af2cf5",
+  "descriptions_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/hanguard_two_source_primary_20260928/descriptions.json",
+  "descriptions_sha256": "ee797066ad76c8c3dc6d864f66e16e446225473831c95e172e8721f9b96540ae",
+  "prepare_script": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/prepare_two_source_primary.py",
+  "prepare_script_sha256": "3c16eb8a819273d63dcd9cfc1500eeebfbc68f36203ae1cb912352be44a11c9c",
+  "source_manifest_sha256": "d14bbd6f38f2b165004005bd733a5b6eeb9df8cec71674d282fbfcc4cb9c7b12",
+  "original_split_preserved": true,
+  "no_resplitting": true,
+  "no_augmentation": true,
+  "no_new_annotations": true,
+  "no_label_changes": true,
+  "no_text_changes": true,
+  "no_length_filter": true,
+  "no_truncation": true,
+  "label_origin": "original_source_retained",
+  "type_training": "Only existing harmful rows with category_id 1..5; five-way cross entropy; softmax argmax",
+  "safe_rows": "Preserved with category0; excluded only from five-way type loss",
+  "descriptions_frozen_before_training": true,
+  "descriptions_used_test_text_or_predictions": false,
+  "training_started": false,
+  "completed": true
+}

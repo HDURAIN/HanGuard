@@ -1,44 +1,41 @@
-.venv/
+# Local environments, credentials and tooling caches
+.venv*/
+.env
+.env.*
+*.token
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-
-# Local scripts
+.cache/
 start_claude.sh
 
-# Local environment and secrets
-.env
-.env.*
-*.token
-
-# Model/cache artifacts
-.cache/
+# Model weights and reproducible training outputs stay local.
 models/
 checkpoints/
+outputs/*
+!outputs/.gitkeep
 *.safetensors
 *.bin
 *.pt
 *.pth
 
-# Large source/training data（不入库，按需本地生成）
-data/sources/
-data/*.parquet
-data/*.csv
-!data/.gitkeep
+# Keep current dataset cards, manifests and audits in Git, not text corpora.
+data/sources/*
+!data/sources/reference/
+data/**/*.parquet
+data/**/*.csv
+data/**/*.jsonl
+data/**/*.txt
+data/**/*.npy
+data/**/*.npz
+data/**/*.xlsx
+data/**/*.docx
+!data/sources/reference/*.xlsx
+!data/sources/reference/*.docx
 
-# 模型权重（通过 HuggingFace 或本地路径分发，不入库）
-outputs/hanguard_v5/
-outputs/hanguard_v5_*/
-legacy/models/
-
-# 历史版本归档（本地保留，不入库）
+# Historical source/metadata archives remain local; the archive index is tracked.
+archive/*.tar.gz
+archive/source_provenance/
 legacy/
-
-# 推理/评估输出
-outputs/eval_v5/
-outputs/*.csv
-outputs/*.log
-outputs/*.pid
-!outputs/.gitkeep
