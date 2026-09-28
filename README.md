@@ -1,150 +1,193 @@
 # hanguard
 
-hanguard 是基于 Qwen3.5-4B 的中文输入安全分类器。一次骨干前向计算完成两项判断：**有害／无害**，以及有害文本的**一个主要风险类别**。输入是待审核的原始文本，输出由分类头产生，脚本负责组织展示格式。
+**面向大语言模型应用的中文输入安全分类器。**
 
-当前实现：
+hanguard 对输入文本进行有害／无害判断，并为有害文本识别一个主要风险类别。它基于 Qwen3.5-4B，结合 LoRA、多层特征融合与类别查询聚合，提供命令行推理、批量处理和 HTTP 接口，可用于应用输入审核与安全分类研究。
 
-- **有害判断**：Qwen3.5-4B + LoRA，融合第 8、16、24、32 层的特征，通过 MLP 输出有害概率。
-- **主要类别**：冻结上述骨干和 LoRA，用五个可学习类别查询聚合最后一层的各 token 特征，再由一个共享 MLP 输出五类分数。
-- **最终输出**：二分类判为无害时显示“无害｜安全”；判为有害时显示“有害｜得分最高的主要类别”。
-- **完整输入**：直接编码正文，不套聊天提示词，不生成答案；当前上限为 4,096 token，超过上限明确报错，不静默截断。
+[快速开始](#快速开始) · [使用方式](#使用方式) · [模型方法](#模型方法) · [数据集](#数据集) · [实验结果](#实验结果) · [训练与评估](#训练与评估)
 
-```mermaid
-flowchart LR
-    A[待审核中文文本] --> B[Qwen3.5-4B + LoRA]
-    B --> C[多层特征融合 + MLP]
-    B --> D[末层 token 特征]
-    D --> E[五个类别查询聚合 + 共享 MLP]
-    C --> F[有害判别门控]
-    E --> F
-    F --> G[有害或无害 + 一个主要类别]
-```
+## 功能
 
-## 快速演示
+- **有害识别与风险分类**：输出有害判断、主要类别及对应概率，支持五类风险标签。
+- **共享模型计算**：两个分类头共用一次骨干前向计算，直接从文本特征产生预测。
+- **多种接入方式**：支持单条文本、交互式输入、批量文件和常驻 HTTP 服务。
+- **完整文本处理**：支持最多 4,096 token 的输入；超长文本明确报错，不自动截断。
 
-在项目根目录中使用已验证的本地环境：
+## 快速开始
+
+### 安装
+
+运行环境为 Python 3.10、支持 BF16 的 CUDA GPU。依赖包括 PyTorch 2.6.0 和 Transformers 5.3.0，完整版本见 [requirements.txt](requirements.txt)。
 
 ```bash
+git clone https://github.com/HDURAIN/HanGuard.git
+cd HanGuard
+python3.10 -m venv .venv-hanguard
 source .venv-hanguard/bin/activate
+python -m pip install -r requirements.txt
+```
+
+### 准备模型
+
+推理需要 [Qwen3.5-4B 基座](https://huggingface.co/Qwen/Qwen3.5-4B)和 hanguard 推理包，按以下结构放置：
+
+```text
+models/
+├── Qwen3.5-4B/          # 完整基座权重、配置和 tokenizer
+└── hanguard/
+    ├── model.json      # 模型配置、分类阈值与文件校验信息
+    ├── binary_adapter.pt
+    ├── binary_head.pt
+    └── category_head.pt
+```
+
+Git 仓库包含代码、数据元信息和文档，未提供 hanguard 推理包与正式语料的下载入口。运行前需另行取得模型文件，或在备齐数据后通过[训练与导出流程](#训练与评估)生成推理包。加载器读取本地文件，并校验模型配置与权重是否匹配。
+
+### 运行
+
+```bash
+python infer.py --text '请介绍如何识别网络诈骗，并保护自己的个人信息。'
+```
+
+输出示例：
+
+```text
+无害
+安全
+```
+
+运行内置演示：
+
+```bash
 python demo_infer.py
-python infer.py --text '请介绍如何识别网络诈骗，并保护个人信息。'
-python infer.py --text '请介绍如何识别网络诈骗，并保护个人信息。' --json
+```
+
+## 使用方式
+
+### 命令行与批量推理
+
+```bash
+# 输出 JSON，包含标签和概率
+python infer.py --text '请根据公司公开年报，总结它的主要业务。' --json
+
+# 交互式输入，输入 /quit 退出
 python infer.py --interactive
+
+# 批量文件，每条记录包含 prompt 字段
+python infer.py --input examples/prompts.jsonl \
+  --output outputs/predictions.jsonl --batch-size 8
 ```
 
-默认读取 `models/hanguard/model.json`。它绑定基座、LoRA、两个分类头、二分类阈值和文件 SHA256；不会退回加载未经训练的基座来冒充 hanguard。演示显示实时模型预测，没有预设答案。
+批量输入和输出支持 CSV、Parquet、JSON、JSONL。使用 `--model /path/to/model.json` 指定推理包，使用 `--device cuda:0` 指定设备。更多输入示例见 [examples](examples/README.md)。
 
-选择 GPU 时可以设置 `CUDA_VISIBLE_DEVICES`，例如：
-
-```bash
-CUDA_VISIBLE_DEVICES=6 python demo_infer.py --json
-```
-
-批量输入支持 CSV、Parquet、JSON、JSONL；文本字段使用 `prompt`：
-
-```bash
-python infer.py --input examples/prompts.jsonl --output outputs/demo_predictions.jsonl --batch-size 8
-```
-
-原有电网场景示例保留在 [examples](examples/README.md)，仅作为演示输入，不属于新的训练增强数据。
-
-## HTTP 服务
+### HTTP 服务
 
 ```bash
 python server.py --host 127.0.0.1 --port 8000
 ```
 
-另一个终端中运行：
+发送请求：
 
 ```bash
-python demo_infer.py --url http://127.0.0.1:8000
 curl -s http://127.0.0.1:8000/classify \
   -H 'Content-Type: application/json' \
   -d '{"prompt":"请介绍个人信息保护的基本原则。"}'
 ```
 
-- `POST /classify`：`{"prompt":"待审核文本"}`。
-- `POST /classify/batch`：`{"prompts":["文本一","文本二"]}`。
-- `GET /health`：服务存活检查；`GET /ready`：模型就绪检查。
-
-结果包括中文判断、类别 ID／名称、有害概率及五类概率。五类概率表示类别头的分布；是否有害由独立的二分类阈值决定。服务启动后加载一次模型，并串行调度 GPU 推理。
-
-## 当前数据
-
-活动训练目录只保留两份经过审计的数据发布，原始来源保留在 `data/sources/`。
-
-| 数据 | 训练 | 验证 | 测试 | 用途 |
-|---|---:|---:|---:|---|
-| `data/three_source_translation_repaired/` | 62,155 | 7,753 | 7,778 | 三来源有害／无害判断 |
-| `data/hanguard_two_source_primary_20260928/` 全部记录 | 27,618 | 3,451 | 3,452 | 两来源数据与端到端评估 |
-| 上述两来源中的有害样本 | 15,578 | 1,875 | 1,828 | 五类主要类别训练与评估 |
-
-三来源为 **WildGuard 中文修复文本、中文整理语料、JailBench**。五分类只使用后两个来源的有害样本，继承原主要类别标签；无害文本不参加五分类损失。两任务目前分阶段训练。
-
-WildGuard 当前范围内的 46,187 条记录经过统一全文重译，保留代码、角色控制串及来源记录；最终主数据为 77,686 条，另有 3,023 条质量疑点／重复冲突记录隔离保存。修复档案和隔离文件仅用于追溯，训练入口只读取三份正式 split 文件。
-
-三集保留既有归属；规范化文本、身份和已知种子组跨集交叉为零。未新增注入增强，来源已有的攻击包装保留。本次修复发布不按旧 370-token 上限删文本；这不代表更早的原始数据整理没有长度筛选。
-
-详见 [数据与来源说明](docs/data.md)、[翻译处理记录](docs/translation_repair.md)、[类别标准核查](docs/primary_category_standard_review.md)。
-
-## 类别含义
-
-| ID | 输出名称 |
+| 接口 | 用途 |
 |---|---|
-| 0 | 安全，仅用于最终无害输出 |
+| `POST /classify` | 单条分类，请求体为 `{"prompt":"文本"}` |
+| `POST /classify/batch` | 批量分类，请求体为 `{"prompts":["文本一","文本二"]}` |
+| `GET /health` | 服务存活检查 |
+| `GET /ready` | 模型就绪检查 |
+
+单条 JSON 结果包含 `safety_label`、`category_id`、`category_label`、`harmful_probability` 和 `category_probabilities` 等字段。五类概率表示类型头的预测分布；最终是否有害由二分类概率与阈值决定。
+
+### 风险类别
+
+| ID | 类别 |
+|---|---|
+| 0 | 安全 |
 | 1 | 违反社会主义核心价值观的内容 |
 | 2 | 歧视性内容 |
 | 3 | 商业违法违规 |
 | 4 | 侵犯他人合法权益 |
 | 5 | 无法满足特定服务类型的安全需求 |
 
-类型头本身预测 1–5 五个类别。类别名参考相关安全标准体系，标签沿用数据来源的既有定义；JailBench 的细分体系与正式国标条目并非逐项相同。一般医疗、法律或金融问题不能仅因领域名称就视为有害。现有标签包含机器标注，本项目没有将其宣称为全量独立人工金标。
+类型头预测 1–5 中的一个主要类别；当二分类判为无害时，最终类别为 0。类别定义沿用数据来源标签，标准框架及边界说明见[类别标准](docs/primary_category_standard_review.md)。
 
-## 已完成实验
+## 模型方法
 
-二分类使用完整三来源测试集 **7,778 条**，E04_s42 在验证集选择的阈值下：准确率 **97.04%**，有害类 F1 **97.16%**。这是一个骨干训练种子的结果。[原始结果](outputs/hanguard_repaired_core_20260928/runs/E04_s42/test_results.json)
+hanguard 采用共享骨干、两个分类头的结构：
 
-五分类使用同一两来源有害测试集 **1,828 条**。下表为三个类型头训练种子的均值 ± 样本标准差，三个头约 70.6 万参数，冻结骨干相同：
-
-| 类型头 | 准确率 | Macro-F1 |
-|---|---:|---:|
-| 末 token MLP | 79.45% ± 0.81 | 79.02% ± 0.96 |
-| 可学习类别查询聚合 | 82.57% ± 2.18 | 81.63% ± 1.95 |
-| 类别描述查询聚合 | 81.95% ± 2.37 | 81.02% ± 1.85 |
-
-可学习查询相对 MLP 的准确率平均高 3.12 个百分点，三个种子提升方向一致；类别描述没有稳定的额外收益。默认演示使用可学习查询的 **seed 43**，它在三个候选中的验证交叉熵最低；该单个模型的五分类测试准确率为 **81.02%**，不能将三种子均值当作这个检查点的实测成绩。
-
-完整 [类别实验报告](outputs/hanguard_two_source_primary_20260928/report.md) 与 [结果解读](outputs/hanguard_two_source_primary_20260928/interpretation.md) 保留逐来源、逐类别、逐种子指标。旧测试身份已参与探索，这些结果不是新盲测；当前实验没有独立证明每一种提示注入形式都能被抵御。注意力权重可以用于分析聚合位置，不等同于经验证的因果解释。
-
-## 后续训练与评估
-
-统一入口为 `scripts/hanguard/train.py`，用新的输出目录注册新实验。完整参数、资源与断点规则见 [训练说明](docs/training.md)。先做 CPU 规划检查：
-
-```bash
-python scripts/hanguard/train.py binary dry-run --output outputs/binary_next
-python scripts/hanguard/train.py category dry-run --output outputs/category_next
+```mermaid
+flowchart LR
+    A[输入文本] --> B[Qwen3.5-4B + LoRA]
+    B --> C[多层特征融合 + MLP]
+    B --> D[末层 token 特征]
+    D --> E[类别查询聚合 + 共享 MLP]
+    C --> F[有害或无害]
+    E --> G[五类分数]
+    F --> H[最终判断与主要类别]
+    G --> H
 ```
 
-正式实验：
+**有害识别**提取第 8、16、24、32 层末 token 的特征，通过可学习权重融合，并与末层表示做残差组合，再由 MLP 输出有害概率。LoRA 与二分类头联合训练，使骨干特征适配安全判别任务。
+
+**主要类别识别**为五个类别学习查询表示，分别聚合最后一层中相关 token 的特征，再通过共享 MLP 输出五类分数。该阶段冻结骨干和二分类 LoRA，只训练类型头；推理时取最高分作为主要类别。
+
+## 数据集
+
+数据由 **WildGuard 中文翻译语料、中文整理语料和 JailBench** 组成。WildGuard 文本经过全文翻译修复与质量筛查；三集保留来源身份和已知种子组关系，并检查跨集重复。
+
+| 任务 | 来源 | 训练集 | 验证集 | 测试集 |
+|---|---|---:|---:|---:|
+| 有害／无害识别 | 三个来源 | 62,155 | 7,753 | 7,778 |
+| 五类主要风险识别 | 中文整理语料与 JailBench 的有害样本 | 15,578 | 1,875 | 1,828 |
+
+两任务采用不同的监督范围：二分类使用全部来源，类型分类使用两来源的既有主要类别标签。数据字段、文件准备与质量说明见[数据文档](docs/data.md)，翻译方法见[翻译处理说明](docs/translation_repair.md)。
+
+## 实验结果
+
+参考模型的项目测试集成绩如下，检查点及二分类阈值均通过验证集选择：
+
+| 任务 | 测试范围 | 准确率 | F1 |
+|---|---|---:|---:|
+| 有害／无害识别 | 三来源，7,778 条 | **97.04%** | **97.16%**（有害类） |
+| 五类主要风险识别 | 两来源有害样本，1,828 条 | **81.02%** | **80.50%**（Macro） |
+
+类型头对照实验中，类别查询聚合在三个随机种子上的平均准确率为 **82.57 ± 2.18%**，比末 token MLP 平均高 **3.12 个百分点**。该均值与上表单个验证集选定模型的成绩采用不同统计口径。
+
+评测基于继承来源标签的项目数据，测试集曾用于方法探索。完整设置、逐种子对照、模型选择和适用范围见[实验报告](docs/benchmarks.md)。
+
+## 训练与评估
+
+准备好[正式三集文件](docs/data.md)与本地基座后，安装训练依赖：
 
 ```bash
-python scripts/hanguard/train.py binary run --output outputs/binary_next
-python scripts/hanguard/train.py category run --output outputs/category_next
+python -m pip install -r requirements-train.txt
 ```
 
-类别训练默认使用已完成的 E04_s42 作为冻结父模型。若希望连接新训练的二分类模型，须按训练说明显式指定 `--parent-run`；不要把旧特征缓存复用于不同的骨干或文本。训练入口负责注册数据／代码身份、验证集选点、全部检查点锁定后的测试与报告。执行 `run` 会实际启动训练；本次仓库整理没有重新训练模型。
-
-导出推理文件时，类别种子只按验证交叉熵选取：
+以下命令依次训练融合二分类模型、训练类型头并导出推理包：
 
 ```bash
+python scripts/hanguard/train.py binary run \
+  --output outputs/binary --binary-arms E04 --seeds 42 --gpus 0
+
+python scripts/hanguard/train.py category run \
+  --output outputs/category \
+  --parent-run outputs/binary/runs/E04_s42 --gpus 0
+
 python scripts/hanguard/export_model.py \
-  --binary-run outputs/hanguard_repaired_core_20260928/runs/E04_s42 \
-  --category-study outputs/hanguard_two_source_primary_20260928 \
-  --output models/hanguard_export
-python infer.py --model models/hanguard_export/model.json --text '你好'
+  --binary-run outputs/binary/runs/E04_s42 \
+  --category-study outputs/category --output models/hanguard
 ```
 
-评估当前推理模型：
+`E04` 是多层融合二分类方法的实验标识。类别阶段默认比较三个类型头、各运行三个随机种子；导出器在可学习查询头中按验证交叉熵选择模型。实验和导出均使用新目录。
+
+二分类命令可将 `run` 改为 `dry-run`，先进行 CPU 配置检查；类别阶段的检查仍需已训练好的二分类父模型。完整参数、可选 CUDA 加速、对照设置及断点恢复见[训练指南](docs/training.md)。
+
+评估推理包：
 
 ```bash
 python evaluate.py \
@@ -152,43 +195,16 @@ python evaluate.py \
   --output outputs/evaluation/report.json
 ```
 
-二分类可在完整三来源测试集上评估；五分类正式结论限两来源有害子集。不要将不同测试来源上的分数直接比较为方法增益。
+该命令报告两来源上的二分类、类型分类及门控后的端到端指标。评估完整三来源二分类时，将 `--test` 替换为 `data/three_source_translation_repaired/test.parquet`；类型指标仍限定在两来源有效标签上。
 
-## 环境与模型文件
+## 文档与开发
 
-本机已验证 Python 3.10、PyTorch 2.6.0、Transformers 5.3.0、PEFT 0.18.1、CUDA BF16。运行与训练均使用本地模型文件。新建环境时：
+- [训练指南](docs/training.md)：参数、实验注册、检查点选择与恢复。
+- [数据文档](docs/data.md)：数据组成、监督范围与复现所需文件。
+- [实验报告](docs/benchmarks.md)：评测协议、对照结果与局限。
+- [类别标准](docs/primary_category_standard_review.md)：五个主类的定义与来源差异。
 
-```bash
-python3.10 -m venv .venv-hanguard
-source .venv-hanguard/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements-train.txt
-python -m pip install causal-conv1d==1.5.3.post1 --no-build-isolation
-```
-
-`causal-conv1d` 为可选 CUDA 加速扩展，需要与 PyTorch、CUDA 工具链匹配；训练速度以实际内核可用情况为准。仅推理可先安装 `requirements.txt`。不要覆盖已有可用环境。
-
-本地保留：`models/Qwen3.5-4B/`、`models/hanguard/`、对照模型 `models/Qwen3Guard-Gen-4B/`。权重、语料和大型输出不进入 Git；新检出代码后需另行放置这些文件，或使用数据与训练文档中的流程生成检查点。
-
-## 仓库结构
-
-```text
-hanguard/
-├── README.md
-├── hanguard_model.py            # 两个分类头共用骨干的运行时
-├── infer.py / demo_infer.py     # 命令行推理与实时演示
-├── server.py / evaluate.py      # HTTP 服务与评估
-├── examples/                   # 通用中文及原有电网演示输入
-├── scripts/hanguard/            # 当前训练、导出、数据审计入口
-├── tests/                      # 当前运行时、训练与数据约束测试
-├── docs/                       # 数据、训练、标准与清理说明
-├── data/                       # 原始来源与两份正式数据发布
-├── models/                     # 基座、部署分类头与对照模型，本地文件
-├── outputs/                    # 当前实验、翻译证据及清理记录
-└── archive/                    # 历史代码和必要数据谱系压缩归档
-```
-
-旧生成式训练、旧增强数据、过时研究入口及其大型权重／缓存已退出活动目录。保留的部分共用模块沿用历史文件名，例如 `multilabel_heads.py`；当前公开入口训练的是单主类五分类。清理范围严格限定本项目，详见 [清理记录](docs/repository_cleanup.md)。
+安装训练依赖后，可在 CPU 上运行测试：
 
 ```bash
 CUDA_VISIBLE_DEVICES='' python -m pytest -q tests
