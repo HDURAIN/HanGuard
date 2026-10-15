@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "source": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012",
+  "source_protocol_sha256": "799d7b1dc20b58cc4a851f6c2f9da353af1ec64238f26db9a752bf92c0f2dce2",
+  "source_adapter_sha256": "5283c5c6b210f33539a06a0583135875a27d86b6914127d17ffba5658691ae25",
+  "source_data_sha256": {
+    "train": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "validation": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "test": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+  },
+  "source_feature_artifacts": {
+    "train_manifest": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/features/train.manifest.json",
+      "sha256": "930a9d3d8572c3e54ce9beab10432712a9a2a3d06dcb6a1a75fc9413dc12c866"
+    },
+    "train_metadata": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/features/train.metadata.parquet",
+      "sha256": "18f4777e60127cf4598c3aa48f59456600bb9e9a4e0bac790206fed38a4fcd14"
+    },
+    "validation_manifest": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/features/validation.manifest.json",
+      "sha256": "26cdad2a1ab8fc7783d48806c3784a40fe1ea3a62849eadc0399188c0bec9f13"
+    },
+    "validation_metadata": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/features/validation.metadata.parquet",
+      "sha256": "aac796de6ef9518d8c2d562b549fabac2b46cdf7b369795f55232bc05b70b30f"
+    }
+  },
+  "train_metadata": {
+    "rows": 62155,
+    "sha256": "18f4777e60127cf4598c3aa48f59456600bb9e9a4e0bac790206fed38a4fcd14",
+    "ordered_base_id_sha256": "87c5cfa9d9d47f1a34936b00066cee84abfdc686491ad6b8f5ca9531ad1618a9",
+    "groups": 56416,
+    "positive_rows": 32620
+  },
+  "validation_metadata": {
+    "rows": 7753,
+    "sha256": "aac796de6ef9518d8c2d562b549fabac2b46cdf7b369795f55232bc05b70b30f",
+    "ordered_base_id_sha256": "3486bdee804c9262f1d8e182aca8cabf01cd589bb9314ef04b010292d7e76bb2",
+    "groups": 7037,
+    "positive_rows": 4064
+  },
+  "hidden_size": 2560,
+  "candidate_layers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "fixed_layers": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "learned_layer_count": 4,
+  "learned_layer_anchor": 32,
+  "folds": {
+    "count": 5,
+    "inner_count": 4,
+    "seed": 20261012,
+    "method": "outer StratifiedGroupKFold; within each outer-train, the other global folds are inner folds; pair-excluded probes are shared across the two valid nested directions"
+  },
+  "probes": {
+    "seed": 42,
+    "epochs": 20,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "checkpoint": "fixed final epoch",
+    "objective": "group-equal weighted BCE independently summed across branches",
+    "slot_assignment": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "17": 2,
+      "18": 2,
+      "19": 2,
+      "20": 2,
+      "21": 2,
+      "22": 2,
+      "23": 2,
+      "24": 2,
+      "25": 3,
+      "26": 3,
+      "27": 3,
+      "28": 3,
+      "29": 3,
+      "30": 3,
+      "31": 3,
+      "32": 3
+    },
+    "initialization": "four distinct seed-derived slots; every candidate layer in an eight-layer depth band matches the corresponding repeat-L32 slot",
+    "matched_l32_convention": "pool L32 is the canonical nuisance estimator; repeat slot 3 parameters and AdamW state are synchronized after every update, and stored repeat slot-3 logits are copied from the canonical pool L32 score while raw GPU forward discrepancy is recorded"
+  },
+  "stack": {
+    "c_grid": [
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3
+    ],
+    "penalty": "L2",
+    "solver": "lbfgs",
+    "selection": "minimum strict nested train outer-group-OOF calibrated BCE",
+    "calibration_candidates": [
+      "identity",
+      "temperature",
+      "platt"
+    ],
+    "calibration_selection": "one shared family selected on repeat32 strict nested train outer-group-OOF by group-equal BCE; within tolerance prefer fewer parameters",
+    "calibration_tie_tolerance": 1e-06,
+    "threshold": 0.5
+  },
+  "validation_gate": {
+    "minimum_bce_gain": 0.0,
+    "accuracy_tolerance": 0.001,
+    "auroc_tolerance": 0.0005
+  },
+  "comparisons": {
+    "matched_arms": [
+      "repeat32",
+      "fixed4",
+      "selected4"
+    ],
+    "topology": "four separately parameterized D+1 probe branches per arm, one 4+1 stack, and one shared-family calibrator with 0/1/2 active parameters; the registered pool-L32/repeat-slot-3 nuisance estimator is common to both matched arms",
+    "repeat_control": "four separately parameterized branches all consume layer 32; slot 3 shares the exact canonical L32 nuisance estimate across arms",
+    "selected_constraint": "one layer from each registered eight-layer comparison slot",
+    "search_pool": "all candidate probes are trained in one vectorized tensor with separable losses and no gradient clipping; unused search branches are excluded from each arm's parameter count"
+  },
+  "bootstrap": {
+    "repetitions": 5000,
+    "seed": 42
+  },
+  "external_oof": null,
+  "code_sha256": {
+    "oof_probe_logit_stack.py": "7bea1bb10eac53e212bd617e953243f09df597fa3718bb1357756164135e58c2",
+    "frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f"
+  },
+  "limitations": [
+    "The frozen E03 representation and existing split identities were already explored; this remains diagnostic.",
+    "Cross-fitting isolates group_id during base-probe prediction, but it does not provide an independent LoRA seed.",
+    "Layer and hyperparameter choice adapts to nested train outer-fold metrics, so the selected train OOF number is descriptive; the independent validation gate controls promotion.",
+    "Validation applies only the registered pass/fallback gate; the calibrated decision threshold is fixed at 0.5.",
+    "Secondary test comparisons are exploratory and unadjusted for multiplicity."
+  ]
+}

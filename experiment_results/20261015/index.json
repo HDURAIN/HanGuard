@@ -1,0 +1,377 @@
+{
+  "snapshot_at": "2026-10-15T13:51:35.226625+00:00",
+  "source_repository_head": "e08bd1f602bf60f38f0d2d9d16ab6a6347210d6c",
+  "source_repository": "https://github.com/HDURAIN/HanGuard",
+  "scope": "Existing aggregate experiment results and data QA; unfinished work remains explicitly labeled.",
+  "studies": [
+    {
+      "id": "repaired_core",
+      "title": "历史数据联合 LoRA 主实验",
+      "status": "completed",
+      "evaluation_scope": "historical test, n=7778, seed=42",
+      "notes": "旧版三来源数据77686条；各arm独立适配，非同一冻结LoRA容量匹配实验；非新盲测。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_repaired_core_20260928/arms.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/protocol.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/references/R02/test_metrics.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/references/R02/validation_metrics.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/report.md",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E03_s42/selection.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E03_s42/test_results.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E04_s42/selection.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E04_s42/test_results.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E13_s42/selection.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E13_s42/test_results.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E14_s42/selection.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E14_s42/test_results.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E15_s42/selection.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E15_s42/test_results.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E16_s42/selection.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/runs/E16_s42/test_results.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/summary.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/test_barrier.json",
+        "artifacts/outputs/hanguard_repaired_core_20260928/verification.json"
+      ]
+    },
+    {
+      "id": "two_source_primary",
+      "title": "两来源多分类 query 读出",
+      "status": "completed",
+      "evaluation_scope": "5-class harmful n=1828; gated 6-class n=3452; 3 head seeds",
+      "notes": "冻结旧E04适配器；不含WildGuard；单层token query，不能归为多层融合。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_two_source_primary_20260928/data_audit.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/interpretation.md",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/protocol.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/report.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/report.md",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s42/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s42/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s43/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s43/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s44/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s44/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s42/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s42/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s43/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s43/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s44/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s44/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s42/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s42/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s43/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s43/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s44/selection.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s44/test_results.json",
+        "artifacts/outputs/hanguard_two_source_primary_20260928/test_barrier.json"
+      ]
+    },
+    {
+      "id": "frozen_lora",
+      "title": "同一冻结 LoRA 层探针和融合诊断",
+      "status": "completed",
+      "evaluation_scope": "historical test n=7778; 3 head seeds; one fixed adapter",
+      "notes": "head种子不是独立LoRA种子；analysis内posthoc阈值与logit stack为事后探索，不是strict nested OOF完成结果。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/cache_online_consistency.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/diagnosis.md",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/error_source_diagnostics.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/head_slice_metrics.csv",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer32_pair_summary.csv",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer_complementarity_test.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer_complementarity_validation.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/posthoc_threshold_diagnostics.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/probe_logit_stacking.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/trained_fusion_weights.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/selection.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/selection.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/selection.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/probes/selection.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/protocol.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/report.md",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/results.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/selected_layers.json",
+        "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/test_barrier.json"
+      ]
+    },
+    {
+      "id": "dynamic_gate",
+      "title": "动态层门控诊断",
+      "status": "completed",
+      "evaluation_scope": "historical test n=7778; 5 head seeds; primary threshold=0.5",
+      "notes": "主要动态匹配对照5个head seeds；次要静态对照仅共同3个seeds。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/evaluation_amendment.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/evaluation_primary_reproducibility.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_42/selection.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_43/selection.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_44/selection.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_45/selection.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_46/selection.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/protocol.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/report.md",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/results.json",
+        "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/test_barrier.json"
+      ]
+    },
+    {
+      "id": "ab_diagnostics",
+      "title": "整改数据 A B 五折诊断",
+      "status": "completed_components",
+      "evaluation_scope": "B group-OOF n=20048; formal validation/test unopened",
+      "notes": "base_last无LoRA，adapted视图在A训练LoRA后冻结；best_single是linear probe选层再训MLP，不是32个MLP的最优者；base报告模板中的A-only LoRA描述不适用base表示。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/continuation_gap_single_5/diagnostic_summary.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/error_analysis/layer_curve.csv",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/error_analysis/results.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/figures/inner_dev_probe_metrics.csv",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/results.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/source_length/results.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/independent_cpu_joint_selected_vs_fusion_anchor_20261013/results.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/partition/manifest.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/probe_rescue_audit_adapted_last/results.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/report.md",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/results.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/protocol.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/analysis/report.md",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/analysis/results.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_0/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_0/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_1/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_1/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_2/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_2/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_3/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_3/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_4/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_4/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/protocol.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/analysis/report.md",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/analysis/results.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_0/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_0/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_1/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_1/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_2/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_2/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_3/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_3/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_4/heads/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_4/probes/selection.json",
+        "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/protocol.json"
+      ]
+    },
+    {
+      "id": "targeted_label_audit",
+      "title": "早期定向错误和标签审计",
+      "status": "completed_diagnostic",
+      "evaluation_scope": "targeted error-selected rows, not population prevalence",
+      "notes": "其翻译结论仅适用当时定向样本；后续全量审计与整改提供更新证据。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_targeted_error_label_audit_20261012/feasibility_inventory.json",
+        "artifacts/outputs/hanguard_targeted_error_label_audit_20261012/report.md",
+        "artifacts/outputs/hanguard_targeted_error_label_audit_20261012/slice_model_metrics.csv",
+        "artifacts/outputs/hanguard_targeted_error_label_audit_20261012/summary.json"
+      ]
+    },
+    {
+      "id": "translation_79",
+      "title": "79条分歧样本翻译与批布局诊断",
+      "status": "completed_diagnostic",
+      "evaluation_scope": "selected 79 disagreement cases; no population estimate",
+      "notes": "分歧样本选择有偏；翻译/布局对照不是全数据准确率提升；逐案例结果从聚合投影中移除。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/comparison_protocol.json",
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/controlled_comparison_protocol.json",
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/controlled_results.json",
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_protocol.json",
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/paired_results.json",
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/report.md",
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/report_manifest.json",
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/summary.aggregate.json",
+        "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_results.aggregate.json"
+      ]
+    },
+    {
+      "id": "full_data_audit",
+      "title": "整改前全量独立数据审计",
+      "status": "completed_audit",
+      "evaluation_scope": "old release structural/translation/semantic audit",
+      "notes": "发现结构与成族翻译问题；不能用早期定向审计替代本次全量结果。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_full_data_audit_20261012/audit_completion.json",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/audit_summary.json",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/category_only_recovery_manifest.json",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/independent_full_audit_review.json",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/jailbench_wrapper_split_counts.csv",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/repair_plan.json",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/report.md",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/structure_results.json",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/text_artifact_label_contingencies.json",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/text_family_results.json",
+        "artifacts/outputs/hanguard_full_data_audit_20261012/translation_scan_results.json"
+      ]
+    },
+    {
+      "id": "remediation",
+      "title": "数据整改与最终验收",
+      "status": "completed_qa",
+      "evaluation_scope": "remediated release QA; three-source rows=83502",
+      "notes": "旧版77686与新版83502数据上的分数不能直接相减。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_data_remediation_20261012/activation_verification.json",
+        "artifacts/outputs/hanguard_data_remediation_20261012/contract_changes.md",
+        "artifacts/outputs/hanguard_data_remediation_20261012/contract_verification.json",
+        "artifacts/outputs/hanguard_data_remediation_20261012/independent_release_qa.json",
+        "artifacts/outputs/hanguard_data_remediation_20261012/independent_release_source_audit.json",
+        "artifacts/outputs/hanguard_data_remediation_20261012/independent_release_views_qa.json",
+        "artifacts/outputs/hanguard_data_remediation_20261012/recovery_source_acceptance.json",
+        "artifacts/outputs/hanguard_data_remediation_20261012/report.md",
+        "artifacts/outputs/hanguard_data_remediation_20261012/template_evaluation_scope.md",
+        "artifacts/outputs/hanguard_data_remediation_20261012/translation_corrections_summary.json"
+      ]
+    },
+    {
+      "id": "three_source_remediated_20261012",
+      "title": "最终数据发布身份与QA three_source_remediated_20261012",
+      "status": "completed_qa",
+      "evaluation_scope": "dataset manifests only; no raw corpus",
+      "notes": "",
+      "artifacts": [
+        "artifacts/data/three_source_remediated_20261012/README.md",
+        "artifacts/data/three_source_remediated_20261012/manifest.json",
+        "artifacts/data/three_source_remediated_20261012/release_qa.json"
+      ]
+    },
+    {
+      "id": "hanguard_two_source_remediated_20261012",
+      "title": "最终数据发布身份与QA hanguard_two_source_remediated_20261012",
+      "status": "completed_qa",
+      "evaluation_scope": "dataset manifests only; no raw corpus",
+      "notes": "",
+      "artifacts": [
+        "artifacts/data/hanguard_two_source_remediated_20261012/README.md",
+        "artifacts/data/hanguard_two_source_remediated_20261012/manifest.json",
+        "artifacts/data/hanguard_two_source_remediated_20261012/release_qa.json"
+      ]
+    },
+    {
+      "id": "historical_translation_repair",
+      "title": "历史翻译修复验收",
+      "status": "completed_historical_qa",
+      "evaluation_scope": "20260928 release, superseded by later full audit/remediation",
+      "notes": "本批QA后仍发现新问题；最新数据验收以20261012整改为准。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_translation_repair_20260928/diagnostics.json",
+        "artifacts/outputs/hanguard_translation_repair_20260928/generation_completion.json",
+        "artifacts/outputs/hanguard_translation_repair_20260928/independent_verification/report.md",
+        "artifacts/outputs/hanguard_translation_repair_20260928/independent_verification/verification.json",
+        "artifacts/outputs/hanguard_translation_repair_20260928/report.md",
+        "artifacts/outputs/hanguard_translation_repair_20260928/tests_final.json"
+      ]
+    },
+    {
+      "id": "task_fit",
+      "title": "JailBench信号比例任务结构统计",
+      "status": "completed_exploratory",
+      "evaluation_scope": "task-structure statistics; not classifier accuracy",
+      "notes": "",
+      "artifacts": [
+        "artifacts/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/environment_verification.json",
+        "artifacts/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.json"
+      ]
+    },
+    {
+      "id": "sparse_token",
+      "title": "全文条件query和稀疏token部分实验",
+      "status": "partial_user_stopped",
+      "evaluation_scope": "2 of 5 folds; n=8022 of planned 20048",
+      "notes": "查看中途表现后由用户停止；不能作为完整OOF或确认性结果。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/fold_0/selection.json",
+        "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/fold_1/selection.json",
+        "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/protocol.json",
+        "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/results.json",
+        "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/wildguard_similarity_diagnostic/results.json",
+        "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/user_stop_request.json"
+      ]
+    },
+    {
+      "id": "fresh_no_lora",
+      "title": "当前全量冻结基座无LoRA实验",
+      "status": "in_progress_no_final_metrics",
+      "evaluation_scope": "train=66802, dev=8350, test=8350; formal test unopened at snapshot",
+      "notes": "attempt2仅2轮损失历史且无权重，已归档；attempt3同seed42重新排队；新策略空卡入场、运行后foreign仅记录、每轮保存完整续训。没有最终accuracy。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/train.manifest.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/validation.manifest.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/001/archive_manifest.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/002/archive_manifest.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/002/heads/budget_12/layer_history.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/parallel_execution/queue_state.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/parallel_resource_protocol.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol_registration.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/control_protocol.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/control_registration.json",
+        "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/state.json"
+      ]
+    },
+    {
+      "id": "independent_lora_seeds",
+      "title": "独立LoRA多种子未完成实验",
+      "status": "incomplete_no_test_results",
+      "evaluation_scope": "no completed selections/test results",
+      "notes": "status中的training为历史遗留值，不代表快照时仍有训练进程。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/arms.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/finalization/E03_s44_training_launch_receipt.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/protocol.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/registration.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s42/status.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s42/validation_history.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s43/status.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s43/validation_history.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s44/status.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s44/validation_history.json",
+        "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/training_code_provenance_amendment.json"
+      ]
+    },
+    {
+      "id": "strict_oof_stack",
+      "title": "严格OOF logit stack未完成实验",
+      "status": "incomplete_no_final_results",
+      "evaluation_scope": "only four probe-fold histories; no final OOF/selection/test",
+      "notes": "不得与旧冻结LoRA分析内posthoc stack混同。",
+      "artifacts": [
+        "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_0_history.json",
+        "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_1_history.json",
+        "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_2_history.json",
+        "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_3_history.json",
+        "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/protocol.json",
+        "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012_failed_precanonical/failure_record.json"
+      ]
+    },
+    {
+      "id": "external_holdouts",
+      "title": "外部留出集准备记录",
+      "status": "prepared_not_evaluated",
+      "evaluation_scope": "prepared identities only; no completed external evaluation",
+      "notes": "",
+      "artifacts": [
+        "artifacts/outputs/hanguard_external_holdouts_20261012/lock.json",
+        "artifacts/outputs/hanguard_external_holdouts_20261012/manifest.json"
+      ]
+    }
+  ]
+}

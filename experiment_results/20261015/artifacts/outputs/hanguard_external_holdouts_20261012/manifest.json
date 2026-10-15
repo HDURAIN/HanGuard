@@ -1,0 +1,93 @@
+{
+  "schema": "hanguard_external_holdout_registry_v1",
+  "created_at": "2026-10-12T10:12:21.646589+00:00",
+  "prediction_status": "none; no model was run by this registration step",
+  "normalization": {
+    "rule": "Unicode NFKC, casefold, remove Unicode Cf characters, remove all whitespace; no semantic matching",
+    "normalized_prompt_sha256": "SHA256(normalized UTF-8 prompt)",
+    "group_id": "SHA256('normalized_prompt\\0' + normalized_prompt_sha256)",
+    "base_id": "SHA256(source + '\\0' + decimal source_row + '\\0' + exact prompt_sha256)",
+    "implementation": "outputs/hanguard_external_holdouts_20261012/build_holdout_manifest.py",
+    "implementation_sha256": "48b7fec82b3c17ce7808ef3577495b82d2d7890843209562e93ff6c9be0db146"
+  },
+  "wildguard_en_official_test": {
+    "role": "primary external binary holdout candidate",
+    "source_file": "data/sources/wildguard_en/test.parquet",
+    "source_sha256": "3d9d7bcd0c3d4db14cd6c34313840fbf64c180f8d42db0f857d2e9539685daaf",
+    "source_bytes": 2227149,
+    "source_rows": 1725,
+    "selection": "prompt_harm_label in {harmful, unharmful} AND normalized prompt hash absent from every WildGuard English parent in full_repaired_archive",
+    "selected_rows": 1698,
+    "selected_normalized_groups": 1698,
+    "exclusions": {
+      "missing_prompt_harm_label": 26,
+      "normalized_overlap_with_current_archive": 1,
+      "union_excluded": 27
+    },
+    "label_counts": {
+      "unharmful": 944,
+      "harmful": 754
+    },
+    "index_file": "outputs/hanguard_external_holdouts_20261012/wildguard_en_test_index.parquet",
+    "index_sha256": "8d63a002ac7b6444caf0888f91d01fa8b7e3339324cf56c6809709eece12e36e",
+    "index_bytes": 470875,
+    "ordered_base_id_sha256": "00f5bf849fbd9ffd0569a4f8ee8f7d6ea2c8824d3f60a701de3be958a91d50dd",
+    "archive_file": "data/three_source_translation_repaired/full_repaired_archive.parquet",
+    "archive_sha256": "d35f93d25bc6c3e67df28059d43a2aa2a6ce7e3b11bdaaaf4eb5bdfe09a075a5",
+    "archive_wildguard_rows": 46187,
+    "archive_wildguard_normalized_groups": 45609,
+    "limitations": [
+      "Prompts are English while the current evaluation set is Chinese; a direct score mixes architecture quality with language/domain shift.",
+      "The inherited binary labels are visible in the repository and in this index, so this is an untouched external holdout, not a strictly hidden blind test.",
+      "Twenty-six source rows lack a prompt-harm label and are excluded; one labeled source prompt overlaps the current archive and is excluded.",
+      "There is no independently adjudicated category_id; original subcategory metadata is not a gold mapping to the five Chinese primary categories.",
+      "Model/threshold selection must be frozen before evaluation, and this set should be evaluated once."
+    ]
+  },
+  "injection_defense": {
+    "role": "secondary adversarial stress set; never a primary blind accuracy set",
+    "source_file": "data/sources/injection_defense.parquet",
+    "source_sha256": "3a974c074e471f557e0c9af5209aaf7e4e18869ae7f96e4e444c8623a857644b",
+    "source_bytes": 2742710,
+    "source_rows": 18230,
+    "normalized_groups": 18175,
+    "duplicate_rows_beyond_first": 55,
+    "conflicting_label_groups": 0,
+    "full_prompt_normalized_overlap_with_current_splits": 0,
+    "label_counts": {
+      "harmful": 15205,
+      "unharmful": 3025
+    },
+    "category_counts": {
+      "0": 3025,
+      "1": 5719,
+      "2": 1836,
+      "3": 1968,
+      "4": 3976,
+      "5": 1706
+    },
+    "index_file": "outputs/hanguard_external_holdouts_20261012/injection_defense_index.parquet",
+    "index_sha256": "220b32bae4529f17fcbb5da733f5fd688fecb81872e36a368712f2189aea9f60",
+    "index_bytes": 4941408,
+    "ordered_base_id_sha256": "8d3a6851a2670489a1a2ff7ade0d6e6713dd5966c436d5d21e33464ab0d447c4",
+    "recommended_metric_unit": "normalized group_id; report group-equal accuracy and paired group bootstrap/permutation for comparisons",
+    "limitations": [
+      "The prompts are synthetic transformations of earlier HanGuard examples and hard-negative templates, so semantic independence from prior data is not established even though full normalized prompt overlap is zero.",
+      "Labels and category IDs are generated or inherited, not independent human gold.",
+      "The artifact existed in the repository before registration and may have informed earlier development decisions.",
+      "Duplicate normalized groups must remain in one resampling unit and must not be split across folds."
+    ]
+  },
+  "evaluation_gate": {
+    "required_before_predictions": [
+      "Freeze adapters, heads, layer choice, thresholds, and all hyperparameters with hashes.",
+      "Choose English-direct evaluation or preregister a label-blind Chinese translation pipeline; do not select between them from holdout scores.",
+      "Keep official WildGuard test results separate from synthetic injection stress results.",
+      "After first access to predictions, mark both indexes consumed and never use them for tuning."
+    ],
+    "prohibited": [
+      "No layer, threshold, seed, checkpoint, translation method, or model selection from either holdout's predictions.",
+      "No claim that repository-visible labels constitute a strictly hidden blind test."
+    ]
+  }
+}

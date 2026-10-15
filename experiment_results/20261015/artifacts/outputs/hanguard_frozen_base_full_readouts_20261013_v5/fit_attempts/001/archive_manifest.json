@@ -1,0 +1,35 @@
+{
+  "archived_unix": 1791979277.8724246,
+  "attempt": 1,
+  "completed_epochs": 0,
+  "empty_directories": [
+    "heads/budget_12"
+  ],
+  "files": {
+    "heads/fit_started.json": "6da3ad46b2190562892f0dd53ac641c9fab51dceb19d64dcd1b2fb3a8ee378c6"
+  },
+  "new_attempt": 2,
+  "partial_checkpoint_reuse": false,
+  "reason": "confirmed_foreign_gpu_interruption_during_fit",
+  "scientific_protocol_sha256": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+  "source_worker_id": "fit_0037_gpu4",
+  "source_worker_identity": {
+    "argv": [
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_base_parallel_study.py",
+      "head-worker",
+      "--study",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5",
+      "--worker-id",
+      "fit_0037_gpu4",
+      "--phase",
+      "fit"
+    ],
+    "command_sha256": "36d16e16340c4542271e37182dd8810842a07879e8c6d02b90f6f87306b39d1b",
+    "cwd": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard",
+    "pid": 2150251,
+    "start_ticks": 90332519,
+    "start_time_ticks": 90332519,
+    "uid": 1036
+  }
+}

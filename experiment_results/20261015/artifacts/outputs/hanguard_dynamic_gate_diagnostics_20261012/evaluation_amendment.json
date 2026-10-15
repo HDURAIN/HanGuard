@@ -1,0 +1,477 @@
+{
+  "schema": "hanguard_dynamic_gate_evaluation_amendment_v1",
+  "state": "locked_before_amended_evaluation",
+  "created_at": "2026-10-12T10:41:52Z",
+  "protocol_sha256": "1e32c97a398ad7c122293582973dc05546361f8c83dbb1336706cf09d5aac748",
+  "original_test_barrier_sha256": "176dd4867f332938f395b3da8075104712661179bf123306c1b9422dfeba378c",
+  "locked_evaluation_code_sha256": "580130cad2c9527c2dd7a19b9031e0ece9be331c4e57d74a32431dc1ed4f356c",
+  "intersection_patch_code_sha256": "50dc9f4ecd4e51b2df21655d72495cdd4749d155e22a1854d1fcdee1c3b75057",
+  "amended_evaluation_code_sha256": "a30b7abc15a34f84daa418a32c3ab4da4b8d01c3938e617fa5463b68c6d03796",
+  "reason": {
+    "failure": "The locked evaluator assumed a source static test prediction for every dynamic head seed. Only source static seeds 42/43/44 existed, so evaluation stopped at seed 45 after its dynamic prediction parquet was written and before results.json/report.md were created.",
+    "evidence_basis": "locked control flow plus filesystem artifact state after the failed run",
+    "failed_secondary_operation": "load source static seed-45 test_predictions.parquet",
+    "primary_model_or_threshold_change": false
+  },
+  "partial_test_access": {
+    "dynamic_forward_completed_seeds": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "dynamic_forward_not_started_seeds": [
+      46
+    ],
+    "predictions": {
+      "42": {
+        "artifact": {
+          "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_42/test_predictions.parquet",
+          "bytes": 1728892,
+          "sha256": "b285cb3d590e06a237a3a8a56912949306ca7fb85ee048b8b1d176d4dc82d814"
+        },
+        "rows": 7778,
+        "columns": [
+          "base_id",
+          "group_id",
+          "source",
+          "category_id",
+          "text_form",
+          "prompt_tokens",
+          "label",
+          "probability_dynamic_repeat_last",
+          "prediction_dynamic_repeat_last",
+          "gate_dynamic_repeat_last_slot_1",
+          "gate_dynamic_repeat_last_slot_2",
+          "gate_dynamic_repeat_last_slot_3",
+          "gate_dynamic_repeat_last_slot_4",
+          "probability_dynamic_fixed",
+          "prediction_dynamic_fixed",
+          "gate_dynamic_fixed_slot_1",
+          "gate_dynamic_fixed_slot_2",
+          "gate_dynamic_fixed_slot_3",
+          "gate_dynamic_fixed_slot_4",
+          "probability_dynamic_selected",
+          "prediction_dynamic_selected",
+          "gate_dynamic_selected_slot_1",
+          "gate_dynamic_selected_slot_2",
+          "gate_dynamic_selected_slot_3",
+          "gate_dynamic_selected_slot_4"
+        ],
+        "dtypes": [
+          "object",
+          "object",
+          "object",
+          "object",
+          "object",
+          "int64",
+          "int8",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32"
+        ],
+        "ordered_base_id_sha256": "b73abd7efac222092c54981a3f2f8e23fa2ec1aec045bc99f654758bafae6904",
+        "ordered_group_id_sha256": "aa7e79351458fa85e354b2c847f48f7c37547d282f0db93aaa50862048ece80f",
+        "label_sha256": "06a2ed6b2f1eeedf34510bad5263a0cb9ec524583c72ad7dfa88e8bd6cfacfed"
+      },
+      "43": {
+        "artifact": {
+          "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_43/test_predictions.parquet",
+          "bytes": 1729045,
+          "sha256": "e67a8866863a6214eacf00df356df95292e73b014933e9515d6370887ca6cdfa"
+        },
+        "rows": 7778,
+        "columns": [
+          "base_id",
+          "group_id",
+          "source",
+          "category_id",
+          "text_form",
+          "prompt_tokens",
+          "label",
+          "probability_dynamic_repeat_last",
+          "prediction_dynamic_repeat_last",
+          "gate_dynamic_repeat_last_slot_1",
+          "gate_dynamic_repeat_last_slot_2",
+          "gate_dynamic_repeat_last_slot_3",
+          "gate_dynamic_repeat_last_slot_4",
+          "probability_dynamic_fixed",
+          "prediction_dynamic_fixed",
+          "gate_dynamic_fixed_slot_1",
+          "gate_dynamic_fixed_slot_2",
+          "gate_dynamic_fixed_slot_3",
+          "gate_dynamic_fixed_slot_4",
+          "probability_dynamic_selected",
+          "prediction_dynamic_selected",
+          "gate_dynamic_selected_slot_1",
+          "gate_dynamic_selected_slot_2",
+          "gate_dynamic_selected_slot_3",
+          "gate_dynamic_selected_slot_4"
+        ],
+        "dtypes": [
+          "object",
+          "object",
+          "object",
+          "object",
+          "object",
+          "int64",
+          "int8",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32"
+        ],
+        "ordered_base_id_sha256": "b73abd7efac222092c54981a3f2f8e23fa2ec1aec045bc99f654758bafae6904",
+        "ordered_group_id_sha256": "aa7e79351458fa85e354b2c847f48f7c37547d282f0db93aaa50862048ece80f",
+        "label_sha256": "06a2ed6b2f1eeedf34510bad5263a0cb9ec524583c72ad7dfa88e8bd6cfacfed"
+      },
+      "44": {
+        "artifact": {
+          "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_44/test_predictions.parquet",
+          "bytes": 1729132,
+          "sha256": "cb1db59d74ebbd0a1a6fe5a247f02a5cf1ed6b39925930ba883defd07f6c99ea"
+        },
+        "rows": 7778,
+        "columns": [
+          "base_id",
+          "group_id",
+          "source",
+          "category_id",
+          "text_form",
+          "prompt_tokens",
+          "label",
+          "probability_dynamic_repeat_last",
+          "prediction_dynamic_repeat_last",
+          "gate_dynamic_repeat_last_slot_1",
+          "gate_dynamic_repeat_last_slot_2",
+          "gate_dynamic_repeat_last_slot_3",
+          "gate_dynamic_repeat_last_slot_4",
+          "probability_dynamic_fixed",
+          "prediction_dynamic_fixed",
+          "gate_dynamic_fixed_slot_1",
+          "gate_dynamic_fixed_slot_2",
+          "gate_dynamic_fixed_slot_3",
+          "gate_dynamic_fixed_slot_4",
+          "probability_dynamic_selected",
+          "prediction_dynamic_selected",
+          "gate_dynamic_selected_slot_1",
+          "gate_dynamic_selected_slot_2",
+          "gate_dynamic_selected_slot_3",
+          "gate_dynamic_selected_slot_4"
+        ],
+        "dtypes": [
+          "object",
+          "object",
+          "object",
+          "object",
+          "object",
+          "int64",
+          "int8",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32"
+        ],
+        "ordered_base_id_sha256": "b73abd7efac222092c54981a3f2f8e23fa2ec1aec045bc99f654758bafae6904",
+        "ordered_group_id_sha256": "aa7e79351458fa85e354b2c847f48f7c37547d282f0db93aaa50862048ece80f",
+        "label_sha256": "06a2ed6b2f1eeedf34510bad5263a0cb9ec524583c72ad7dfa88e8bd6cfacfed"
+      },
+      "45": {
+        "artifact": {
+          "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_45/test_predictions.parquet",
+          "bytes": 1729551,
+          "sha256": "b6c035a9a4619ae9f521cc0edfe64f7c68213f1d97846aeba30c4158b043b8b8"
+        },
+        "rows": 7778,
+        "columns": [
+          "base_id",
+          "group_id",
+          "source",
+          "category_id",
+          "text_form",
+          "prompt_tokens",
+          "label",
+          "probability_dynamic_repeat_last",
+          "prediction_dynamic_repeat_last",
+          "gate_dynamic_repeat_last_slot_1",
+          "gate_dynamic_repeat_last_slot_2",
+          "gate_dynamic_repeat_last_slot_3",
+          "gate_dynamic_repeat_last_slot_4",
+          "probability_dynamic_fixed",
+          "prediction_dynamic_fixed",
+          "gate_dynamic_fixed_slot_1",
+          "gate_dynamic_fixed_slot_2",
+          "gate_dynamic_fixed_slot_3",
+          "gate_dynamic_fixed_slot_4",
+          "probability_dynamic_selected",
+          "prediction_dynamic_selected",
+          "gate_dynamic_selected_slot_1",
+          "gate_dynamic_selected_slot_2",
+          "gate_dynamic_selected_slot_3",
+          "gate_dynamic_selected_slot_4"
+        ],
+        "dtypes": [
+          "object",
+          "object",
+          "object",
+          "object",
+          "object",
+          "int64",
+          "int8",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32",
+          "float64",
+          "int8",
+          "float32",
+          "float32",
+          "float32",
+          "float32"
+        ],
+        "ordered_base_id_sha256": "b73abd7efac222092c54981a3f2f8e23fa2ec1aec045bc99f654758bafae6904",
+        "ordered_group_id_sha256": "aa7e79351458fa85e354b2c847f48f7c37547d282f0db93aaa50862048ece80f",
+        "label_sha256": "06a2ed6b2f1eeedf34510bad5263a0cb9ec524583c72ad7dfa88e8bd6cfacfed"
+      }
+    },
+    "results_json_existed": false,
+    "report_md_existed": false
+  },
+  "repair_scope": {
+    "primary_matched_comparison_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "secondary_static_seed_policy": "exact locked intersection only",
+    "secondary_static_seed_scope": {
+      "policy": "intersection_only; missing static seeds are neither copied nor synthesized",
+      "dynamic_available_seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "source_static_available_seeds": [
+        42,
+        43,
+        44
+      ],
+      "common_seeds": [
+        42,
+        43,
+        44
+      ],
+      "n_common_seeds": 3,
+      "excluded_dynamic_seeds": [
+        45,
+        46
+      ],
+      "missing_source_artifacts": {
+        "45": [
+          "test_predictions.parquet",
+          "selection.json"
+        ],
+        "46": [
+          "test_predictions.parquet",
+          "selection.json"
+        ]
+      },
+      "source_artifact_sha256": {
+        "42": {
+          "test_predictions_sha256": "a2fb42415a8ac42d037d55a683f6e94c0a0da4efd3c0b8310ae080321239fb3d",
+          "selection_sha256": "366d312bf5fab1bf0a88c655cfb76d9ae3672aabf9170d69127b527f0e7c4b1c"
+        },
+        "43": {
+          "test_predictions_sha256": "63f23636c119f18a475fa24224d3b9265c2a56e8383114009bee07f6f7a1614e",
+          "selection_sha256": "7c1c315fb2920fe3a2eec1bdc6e3c2d796d5d163645be9c1a1106249aa7a88fa"
+        },
+        "44": {
+          "test_predictions_sha256": "5c09bd1730462ed0baba73c95ad76feda957ae5f085d5a1289767e6722a41c2c",
+          "selection_sha256": "5997dfb469376fb4543f9f6988af680f4b7add2090d5bebd155bf6488dda9327"
+        }
+      }
+    },
+    "training_checkpoints_thresholds_and_original_barrier_unchanged": true
+  },
+  "primary_invariance_code_evidence": {
+    "exact_definition_hash_match": true,
+    "definitions": [
+      "DynamicLayerGateHead",
+      "select_arm_features",
+      "build_matched_heads",
+      "gate_diagnostics",
+      "validation_thresholds",
+      "predict",
+      "_gate_columns",
+      "_load_head",
+      "_comparison"
+    ],
+    "sha256": {
+      "DynamicLayerGateHead": "4181f9fec430223baa67b6b74d630239147bc0fd4fe5340b2eab8ed77edaf6e9",
+      "select_arm_features": "a404288dd248ca6fa3f9055706e88258c0e476433e6b5099fba7cd20081e73df",
+      "build_matched_heads": "a7c9df937f895382e93b0581fb565e90ac2ef283e10a80a2b416d4ff68749a96",
+      "gate_diagnostics": "bdf347c1af8e8dfffdc1daa983cb2ee94b4b4116a0b2e9fb37e921373db9e0c9",
+      "validation_thresholds": "c50778c8a9b4b88ae9b40b72e7b7b50acbeeffdfe61ef62b6365f5806a6937f4",
+      "predict": "6097a8f88d1960f6efb9287f44961539d7fd65bc3fbe0de820529cbd7f03a962",
+      "_gate_columns": "bfc56487a1ec04f1d3381908c412e00159fdef73ff027a70a4c06530f6e1f01f",
+      "_load_head": "6897761d0954ee21e3d4e18b665cc5d0698edf142d731857d5f4513a8198294a",
+      "_comparison": "6b22b31dc870f56b59892bf3ad1b4ea6c92d588dbc7b171b0716407ab2ef0226"
+    },
+    "locked_to_intersection_patch_sha256": "05ee6cc1afbdf97f4771321dc5e0caed77174c4595b9b552463c70df80416902",
+    "intersection_to_amendment_gate_patch_sha256": "83ea0b3451789ddc49dc256ef19f16f02f54e4c8c1aaa98123aa986dd2335ef0"
+  },
+  "required_primary_reproducibility_audit": {
+    "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/evaluation_primary_reproducibility.json",
+    "seeds": [
+      42,
+      43,
+      44,
+      45
+    ],
+    "comparison": "exact row/schema/dtype/probability/decision/gate equality in memory",
+    "must_complete_before_formal_evaluate": true
+  },
+  "artifacts": {
+    "protocol": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/protocol.json",
+      "bytes": 3352,
+      "sha256": "1e32c97a398ad7c122293582973dc05546361f8c83dbb1336706cf09d5aac748"
+    },
+    "test_barrier": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/test_barrier.json",
+      "bytes": 4969,
+      "sha256": "176dd4867f332938f395b3da8075104712661179bf123306c1b9422dfeba378c"
+    },
+    "amended_evaluator": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/dynamic_gate_diagnostics.py",
+      "bytes": 84541,
+      "sha256": "a30b7abc15a34f84daa418a32c3ab4da4b8d01c3938e617fa5463b68c6d03796"
+    },
+    "provenance/locked_source_snapshot": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/provenance/dynamic_gate_diagnostics.locked_580130.py",
+      "bytes": 45146,
+      "sha256": "580130cad2c9527c2dd7a19b9031e0ece9be331c4e57d74a32431dc1ed4f356c"
+    },
+    "provenance/intersection_source_snapshot": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/provenance/dynamic_gate_diagnostics.intersection_50dc9f.py",
+      "bytes": 49970,
+      "sha256": "50dc9f4ecd4e51b2df21655d72495cdd4749d155e22a1854d1fcdee1c3b75057"
+    },
+    "provenance/locked_to_intersection_patch": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/provenance/locked_to_intersection.patch",
+      "bytes": 12585,
+      "sha256": "05ee6cc1afbdf97f4771321dc5e0caed77174c4595b9b552463c70df80416902"
+    },
+    "provenance/intersection_to_amendment_gate_patch": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/provenance/intersection_to_amendment_gate.patch",
+      "bytes": 42499,
+      "sha256": "83ea0b3451789ddc49dc256ef19f16f02f54e4c8c1aaa98123aa986dd2335ef0"
+    },
+    "partial_dynamic_prediction/42": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_42/test_predictions.parquet",
+      "bytes": 1728892,
+      "sha256": "b285cb3d590e06a237a3a8a56912949306ca7fb85ee048b8b1d176d4dc82d814"
+    },
+    "partial_dynamic_prediction/43": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_43/test_predictions.parquet",
+      "bytes": 1729045,
+      "sha256": "e67a8866863a6214eacf00df356df95292e73b014933e9515d6370887ca6cdfa"
+    },
+    "partial_dynamic_prediction/44": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_44/test_predictions.parquet",
+      "bytes": 1729132,
+      "sha256": "cb1db59d74ebbd0a1a6fe5a247f02a5cf1ed6b39925930ba883defd07f6c99ea"
+    },
+    "partial_dynamic_prediction/45": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_45/test_predictions.parquet",
+      "bytes": 1729551,
+      "sha256": "b6c035a9a4619ae9f521cc0edfe64f7c68213f1d97846aeba30c4158b043b8b8"
+    },
+    "source_static_prediction/42": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/test_predictions.parquet",
+      "bytes": 1271304,
+      "sha256": "a2fb42415a8ac42d037d55a683f6e94c0a0da4efd3c0b8310ae080321239fb3d"
+    },
+    "source_static_selection/42": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/selection.json",
+      "bytes": 4081,
+      "sha256": "366d312bf5fab1bf0a88c655cfb76d9ae3672aabf9170d69127b527f0e7c4b1c"
+    },
+    "source_static_prediction/43": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/test_predictions.parquet",
+      "bytes": 1270748,
+      "sha256": "63f23636c119f18a475fa24224d3b9265c2a56e8383114009bee07f6f7a1614e"
+    },
+    "source_static_selection/43": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/selection.json",
+      "bytes": 4074,
+      "sha256": "7c1c315fb2920fe3a2eec1bdc6e3c2d796d5d163645be9c1a1106249aa7a88fa"
+    },
+    "source_static_prediction/44": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/test_predictions.parquet",
+      "bytes": 1270669,
+      "sha256": "5c09bd1730462ed0baba73c95ad76feda957ae5f085d5a1289767e6722a41c2c"
+    },
+    "source_static_selection/44": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/selection.json",
+      "bytes": 4079,
+      "sha256": "5997dfb469376fb4543f9f6988af680f4b7add2090d5bebd155bf6488dda9327"
+    }
+  },
+  "rule": "This append-only amendment does not replace or relock the original test barrier. Formal evaluation must verify this file and an exact 42-45 primary reproducibility audit."
+}

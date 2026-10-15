@@ -1,0 +1,29 @@
+{
+  "unique_source_records": 45615,
+  "production_exit_codes": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0
+  },
+  "finish_reasons": {
+    "stop": 45576,
+    "length": 39
+  },
+  "literal_failure_unique_sources": 5,
+  "all_input_untruncated": true,
+  "unicode_separator_records": 1,
+  "all_complete": true,
+  "raw_sha256": {
+    "outputs/hanguard_translation_repair_20260928/production_qwen35/raw_0.jsonl": "0cdc932adfb8445b1af28ec64facb266a2247ec9473acd500e967f54836349ec",
+    "outputs/hanguard_translation_repair_20260928/production_qwen35/raw_1.jsonl": "996a868189e3e9c6424ac2d7605481077fe3f8ef2eec3ccbae2b20d9706e155b",
+    "outputs/hanguard_translation_repair_20260928/production_qwen35/raw_2.jsonl": "0baad2f36f9c2010a9b175641b552d1fc6c83c30a45e20fc5523570c16d90e69",
+    "outputs/hanguard_translation_repair_20260928/production_qwen35/raw_3.jsonl": "4764d750bff95e011278bc7c1f2362f14798297207b289d67afbc2eb352da1fc",
+    "outputs/hanguard_translation_repair_20260928/production_qwen35/raw_4.jsonl": "f7f7d73decd85e79ef37ac1fa620604ac0465c6768238f600860d3afb2fee9d6",
+    "outputs/hanguard_translation_repair_20260928/production_qwen35/raw_5.jsonl": "dc50250d2933b9d38e837d58f142ba5bde4cffd732c5af0f2f16358017d8261b",
+    "outputs/hanguard_translation_repair_20260928/production_qwen35/raw_6.jsonl": "6da29e887e27c5b9ede79177266efcc53e6793a023f139564714f4d2c2a9c15a"
+  }
+}

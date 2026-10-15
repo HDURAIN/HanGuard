@@ -1,0 +1,13 @@
+{
+  "attempt": 2,
+  "completed_layer_epochs": 2,
+  "files": {
+    "heads/budget_12/layer_history.json": "0970bbcc07d23cb76c3f150f590810275bb825e74f87b48812b8773c08654ac1",
+    "heads/fit_started.json": "6da3ad46b2190562892f0dd53ac641c9fab51dceb19d64dcd1b2fb3a8ee378c6"
+  },
+  "fusion_started": false,
+  "next_attempt": 3,
+  "partial_checkpoint_reuse": false,
+  "reason": "user_authorized_resource_policy_amendment",
+  "restart_seed": 42
+}

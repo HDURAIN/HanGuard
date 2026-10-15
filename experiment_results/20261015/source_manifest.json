@@ -1,0 +1,2093 @@
+{
+  "schema": "hanguard_result_archive_sources_v1",
+  "files": [
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/arms.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/arms.json",
+      "source_sha256": "87d780b33f28c96c70ca6a2cc1df149d0f66cf86c0d8774e687447f8e945077f",
+      "archived_sha256": "87d780b33f28c96c70ca6a2cc1df149d0f66cf86c0d8774e687447f8e945077f",
+      "bytes": 614,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.202497+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/protocol.json",
+      "source_sha256": "70826c18f855301ddb6a306f6eea16933a6b0aeca7a1438d60d356674bd36f64",
+      "archived_sha256": "70826c18f855301ddb6a306f6eea16933a6b0aeca7a1438d60d356674bd36f64",
+      "bytes": 5657,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.202641+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/references/R02/test_metrics.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/references/R02/test_metrics.json",
+      "source_sha256": "5af046d2c79632c71e82b6a11beb673491193440653489fe9e29f9be55fcc2d2",
+      "archived_sha256": "5af046d2c79632c71e82b6a11beb673491193440653489fe9e29f9be55fcc2d2",
+      "bytes": 6669,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.208679+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/references/R02/validation_metrics.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/references/R02/validation_metrics.json",
+      "source_sha256": "6a4539e72f4ae8b7fa11eb6938e38d17faf4750fd6fd50523de4cd0c80575522",
+      "archived_sha256": "6a4539e72f4ae8b7fa11eb6938e38d17faf4750fd6fd50523de4cd0c80575522",
+      "bytes": 6716,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.214481+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/report.md",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/report.md",
+      "source_sha256": "ea29d88ae7ffd2416a051d8b0dfa3944a13dca165e60bf7e2272be8571a70b60",
+      "archived_sha256": "ea29d88ae7ffd2416a051d8b0dfa3944a13dca165e60bf7e2272be8571a70b60",
+      "bytes": 1482,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.214626+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E03_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E03_s42/selection.json",
+      "source_sha256": "56e7a7d72a7f988cd91e680c87581b95229e33920db48a3fc8ef800e40dbf595",
+      "archived_sha256": "56e7a7d72a7f988cd91e680c87581b95229e33920db48a3fc8ef800e40dbf595",
+      "bytes": 4102,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.221347+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E03_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E03_s42/test_results.json",
+      "source_sha256": "d6f2cf02df060834415bd81a40b11db97e58b14631bd483386d454340be36840",
+      "archived_sha256": "d6f2cf02df060834415bd81a40b11db97e58b14631bd483386d454340be36840",
+      "bytes": 3737,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.224466+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E04_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E04_s42/selection.json",
+      "source_sha256": "90fae0b8e5838d0ad42719eca3dcc2354f7ec76518a2ef89cd7038c400f8ad40",
+      "archived_sha256": "90fae0b8e5838d0ad42719eca3dcc2354f7ec76518a2ef89cd7038c400f8ad40",
+      "bytes": 4103,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.224876+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E04_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E04_s42/test_results.json",
+      "source_sha256": "c0b4009eb8aa474263e602ce804b344a572b9e2dc7116d7764675ecf94507a46",
+      "archived_sha256": "c0b4009eb8aa474263e602ce804b344a572b9e2dc7116d7764675ecf94507a46",
+      "bytes": 3726,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.228374+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E13_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E13_s42/selection.json",
+      "source_sha256": "b5032ecbe3321a1c07fcd753ba9fb6e031d36f78d4e41fe0602586648b8cd39b",
+      "archived_sha256": "b5032ecbe3321a1c07fcd753ba9fb6e031d36f78d4e41fe0602586648b8cd39b",
+      "bytes": 4542,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.240654+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E13_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E13_s42/test_results.json",
+      "source_sha256": "2d06fa0637ad042c8990c30a655fb5bc9f7c6cc1fd7ca1a6da2a4c42538a9598",
+      "archived_sha256": "2d06fa0637ad042c8990c30a655fb5bc9f7c6cc1fd7ca1a6da2a4c42538a9598",
+      "bytes": 3670,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.241124+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E14_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E14_s42/selection.json",
+      "source_sha256": "4ea93a80f62f60fb7e66623c17e1afb16c851252afdfb5a0be043cb598ee1153",
+      "archived_sha256": "4ea93a80f62f60fb7e66623c17e1afb16c851252afdfb5a0be043cb598ee1153",
+      "bytes": 4635,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.248257+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E14_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E14_s42/test_results.json",
+      "source_sha256": "2cd596da3c29f9c3e64e3a487adb918fab35c7a6a3d1a3932d04f86cb7dcfa0d",
+      "archived_sha256": "2cd596da3c29f9c3e64e3a487adb918fab35c7a6a3d1a3932d04f86cb7dcfa0d",
+      "bytes": 3689,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.252540+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E15_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E15_s42/selection.json",
+      "source_sha256": "d434e96c243b40bce40810f41c08b4459382b18425b99a6bb754b5e0ba186227",
+      "archived_sha256": "d434e96c243b40bce40810f41c08b4459382b18425b99a6bb754b5e0ba186227",
+      "bytes": 5254,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.258038+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E15_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E15_s42/test_results.json",
+      "source_sha256": "f194199382ecc13defac6261176593ac602833d44265050f1d8505413a120b64",
+      "archived_sha256": "f194199382ecc13defac6261176593ac602833d44265050f1d8505413a120b64",
+      "bytes": 3691,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.258434+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E16_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E16_s42/selection.json",
+      "source_sha256": "c551a68207172eb40664a7543aa257a379ad3c837f6a6b3eeee819de5b8d7aa9",
+      "archived_sha256": "c551a68207172eb40664a7543aa257a379ad3c837f6a6b3eeee819de5b8d7aa9",
+      "bytes": 5540,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.259021+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/runs/E16_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/runs/E16_s42/test_results.json",
+      "source_sha256": "f6ae221a12f9cb42dbbe8e53f445c181f87664cc6569efb6751e91f0e16198e7",
+      "archived_sha256": "f6ae221a12f9cb42dbbe8e53f445c181f87664cc6569efb6751e91f0e16198e7",
+      "bytes": 3742,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.259271+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/summary.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/summary.json",
+      "source_sha256": "6998d1651a0daea6e012cff48806bf3df5cd03507a5ed54d0a901889ed4be2e1",
+      "archived_sha256": "6998d1651a0daea6e012cff48806bf3df5cd03507a5ed54d0a901889ed4be2e1",
+      "bytes": 122295,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.259889+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/test_barrier.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/test_barrier.json",
+      "source_sha256": "a2f5351b91e6ee0711d9ec348e9800fd066a45ae040327937d4b4b3f18704391",
+      "archived_sha256": "a2f5351b91e6ee0711d9ec348e9800fd066a45ae040327937d4b4b3f18704391",
+      "bytes": 911,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.260250+00:00"
+    },
+    {
+      "source": "outputs/hanguard_repaired_core_20260928/verification.json",
+      "archived_path": "artifacts/outputs/hanguard_repaired_core_20260928/verification.json",
+      "source_sha256": "32f572a5d3803f8efb74c7cea0cad4321d2cd8519adaa5e4deaf75e9a9472289",
+      "archived_sha256": "32f572a5d3803f8efb74c7cea0cad4321d2cd8519adaa5e4deaf75e9a9472289",
+      "bytes": 331,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.271232+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/data_audit.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/data_audit.json",
+      "source_sha256": "32bbfa79b3ecabbfc405bff74c9f5528f073557c23a2122911d1b3a2d4af2cf5",
+      "archived_sha256": "32bbfa79b3ecabbfc405bff74c9f5528f073557c23a2122911d1b3a2d4af2cf5",
+      "bytes": 9125,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.294719+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/interpretation.md",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/interpretation.md",
+      "source_sha256": "a9dc0f4824deb502715c9d14f581d83ae058a20f6e9867469b59bf2161fb07a8",
+      "archived_sha256": "a9dc0f4824deb502715c9d14f581d83ae058a20f6e9867469b59bf2161fb07a8",
+      "bytes": 4040,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.294947+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/protocol.json",
+      "source_sha256": "c10fb65df35adcef046e2e30c9c09809c1bcad3501f37ad405731b146158aa64",
+      "archived_sha256": "c10fb65df35adcef046e2e30c9c09809c1bcad3501f37ad405731b146158aa64",
+      "bytes": 4611,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.295078+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/report.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/report.json",
+      "source_sha256": "ebeb65d27331a636d7c79cfc83559802f43d4e9ea78eb30cd68ed8843d78124b",
+      "archived_sha256": "ebeb65d27331a636d7c79cfc83559802f43d4e9ea78eb30cd68ed8843d78124b",
+      "bytes": 231575,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.296207+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/report.md",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/report.md",
+      "source_sha256": "976916693fac0f7f8f0e69b7f4aabbd3a4ef94fe22af26f73faf5557440203ce",
+      "archived_sha256": "976916693fac0f7f8f0e69b7f4aabbd3a4ef94fe22af26f73faf5557440203ce",
+      "bytes": 8247,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.296466+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s42/selection.json",
+      "source_sha256": "e2332ccb8358558244aa8b068010ec53f70421d31b549814a29185c081479de7",
+      "archived_sha256": "e2332ccb8358558244aa8b068010ec53f70421d31b549814a29185c081479de7",
+      "bytes": 68893,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.300073+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s42/test_results.json",
+      "source_sha256": "a17f9383abe2fc51bfc7e56ddc199c28e5673ae80d67f7be06b62897e366f57f",
+      "archived_sha256": "a17f9383abe2fc51bfc7e56ddc199c28e5673ae80d67f7be06b62897e366f57f",
+      "bytes": 17876,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.316357+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s43/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s43/selection.json",
+      "source_sha256": "4ac574ca0ca7b305babf08d1e9e12f057119cbf43829328f00e45bed59ac48f6",
+      "archived_sha256": "4ac574ca0ca7b305babf08d1e9e12f057119cbf43829328f00e45bed59ac48f6",
+      "bytes": 75199,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.328049+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s43/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s43/test_results.json",
+      "source_sha256": "4ff9d2ef3d155d94029275b833622b30e8ead6ef96f18f0f11de71ab38701811",
+      "archived_sha256": "4ff9d2ef3d155d94029275b833622b30e8ead6ef96f18f0f11de71ab38701811",
+      "bytes": 17941,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.328427+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s44/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s44/selection.json",
+      "source_sha256": "e00d25fa4829556309fafa9181b5aeac12619c1ef6b85e0ff9a581002329b0c2",
+      "archived_sha256": "e00d25fa4829556309fafa9181b5aeac12619c1ef6b85e0ff9a581002329b0c2",
+      "bytes": 75137,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.334349+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s44/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/description_queries_s44/test_results.json",
+      "source_sha256": "5324738fb4d25d7db06f345f73709fffa743e3e93f5ee7d9b750dc4d803689ff",
+      "archived_sha256": "5324738fb4d25d7db06f345f73709fffa743e3e93f5ee7d9b750dc4d803689ff",
+      "bytes": 17947,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.334964+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s42/selection.json",
+      "source_sha256": "48748c8e3b89b2dc05f7f5f372b418fd4eea339d75c981ed1680c3a36fe9055e",
+      "archived_sha256": "48748c8e3b89b2dc05f7f5f372b418fd4eea339d75c981ed1680c3a36fe9055e",
+      "bytes": 224179,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.344552+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s42/test_results.json",
+      "source_sha256": "8ce460a937111d4281c7ca928c90da17abc598afec2e35157234a8c64acb5706",
+      "archived_sha256": "8ce460a937111d4281c7ca928c90da17abc598afec2e35157234a8c64acb5706",
+      "bytes": 18118,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.359983+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s43/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s43/selection.json",
+      "source_sha256": "4ee89635e1d33f1dd8e9f5b40b14d8fa4d3d7f85b1051601a764379d5f7a994e",
+      "archived_sha256": "4ee89635e1d33f1dd8e9f5b40b14d8fa4d3d7f85b1051601a764379d5f7a994e",
+      "bytes": 124967,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.361296+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s43/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s43/test_results.json",
+      "source_sha256": "cfca474840db3b13112c4ac8067866ac0484e67ceebf17c019517081898e6da2",
+      "archived_sha256": "cfca474840db3b13112c4ac8067866ac0484e67ceebf17c019517081898e6da2",
+      "bytes": 18076,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.365255+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s44/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s44/selection.json",
+      "source_sha256": "f81beb2a04219d41abe7c8c270dd34d8822cffe99326d4b67a454a825a79716d",
+      "archived_sha256": "f81beb2a04219d41abe7c8c270dd34d8822cffe99326d4b67a454a825a79716d",
+      "bytes": 106250,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.381118+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s44/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s44/test_results.json",
+      "source_sha256": "bd4936503564cab46ea316ab7be89a7d4d9a4ce19c57eb14dd717e7d203ff43e",
+      "archived_sha256": "bd4936503564cab46ea316ab7be89a7d4d9a4ce19c57eb14dd717e7d203ff43e",
+      "bytes": 18090,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.391495+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s42/selection.json",
+      "source_sha256": "2469b64699f8c2b26bbdce5f869d172bd2a2a7a76dd338fec14d2ef2246c0ff4",
+      "archived_sha256": "2469b64699f8c2b26bbdce5f869d172bd2a2a7a76dd338fec14d2ef2246c0ff4",
+      "bytes": 68937,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.407681+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s42/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s42/test_results.json",
+      "source_sha256": "45160bb95be59ef75d3fe811eee178e9c60ffaa486268f9f69a708b3628a23be",
+      "archived_sha256": "45160bb95be59ef75d3fe811eee178e9c60ffaa486268f9f69a708b3628a23be",
+      "bytes": 18046,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.418635+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s43/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s43/selection.json",
+      "source_sha256": "64a801445a0776addc99ea68556996fdc5bc3e9cc3fa6069ac8457b32513f17a",
+      "archived_sha256": "64a801445a0776addc99ea68556996fdc5bc3e9cc3fa6069ac8457b32513f17a",
+      "bytes": 68929,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.435470+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s43/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s43/test_results.json",
+      "source_sha256": "e39d76769abf6dcd5dd4fe2109aec9d5abc85fe330ebd7b5404b5e0529215b28",
+      "archived_sha256": "e39d76769abf6dcd5dd4fe2109aec9d5abc85fe330ebd7b5404b5e0529215b28",
+      "bytes": 18047,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.448942+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s44/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s44/selection.json",
+      "source_sha256": "cf6ef6f4934efa6f438ed85afc1359834c3aca4b21739571b539ae317c7a4b24",
+      "archived_sha256": "cf6ef6f4934efa6f438ed85afc1359834c3aca4b21739571b539ae317c7a4b24",
+      "bytes": 75018,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.474230+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s44/test_results.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s44/test_results.json",
+      "source_sha256": "1f216422bd92b1f4656738e89abef822b4709a7fc25bf534269ff51a3e7988d2",
+      "archived_sha256": "1f216422bd92b1f4656738e89abef822b4709a7fc25bf534269ff51a3e7988d2",
+      "bytes": 18080,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.490304+00:00"
+    },
+    {
+      "source": "outputs/hanguard_two_source_primary_20260928/test_barrier.json",
+      "archived_path": "artifacts/outputs/hanguard_two_source_primary_20260928/test_barrier.json",
+      "source_sha256": "5a86cf56c91261fda879792bd992976c74973c8ed9b6ce2557f444c359063e76",
+      "archived_sha256": "5a86cf56c91261fda879792bd992976c74973c8ed9b6ce2557f444c359063e76",
+      "bytes": 1308,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.501330+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/cache_online_consistency.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/cache_online_consistency.json",
+      "source_sha256": "0aa93bebcd8e7092922f595858b56e480614580446582b342392398a2ff701ed",
+      "archived_sha256": "0aa93bebcd8e7092922f595858b56e480614580446582b342392398a2ff701ed",
+      "bytes": 734,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.511657+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/diagnosis.md",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/diagnosis.md",
+      "source_sha256": "7df2df2722c0969386a20ac8c2d58d2f17963d12745729f795bf54a5f5d90d70",
+      "archived_sha256": "7df2df2722c0969386a20ac8c2d58d2f17963d12745729f795bf54a5f5d90d70",
+      "bytes": 7589,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.511795+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/error_source_diagnostics.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/error_source_diagnostics.json",
+      "source_sha256": "314e17cceaa29f836c53a817c138a79e6f9844cf87500f5b82a65eb201e10ca2",
+      "archived_sha256": "314e17cceaa29f836c53a817c138a79e6f9844cf87500f5b82a65eb201e10ca2",
+      "bytes": 8867,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.511895+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/head_slice_metrics.csv",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/head_slice_metrics.csv",
+      "source_sha256": "16f16bb86fd6c9fc2e6702de3056e86b41db4120f84e7cdb8982f159bfeefae1",
+      "archived_sha256": "16f16bb86fd6c9fc2e6702de3056e86b41db4120f84e7cdb8982f159bfeefae1",
+      "bytes": 6413,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.512162+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer32_pair_summary.csv",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer32_pair_summary.csv",
+      "source_sha256": "f973e2bd19a308fbccae0d070a3cbfcf5109e9f18ebbcd11b1bdb435f90a9218",
+      "archived_sha256": "f973e2bd19a308fbccae0d070a3cbfcf5109e9f18ebbcd11b1bdb435f90a9218",
+      "bytes": 4520,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.512361+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer_complementarity_test.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer_complementarity_test.json",
+      "source_sha256": "07c152a80f98c57a5e37c2c5f4dab9db2d7ec08604e4a02a6298beaa3ffc663b",
+      "archived_sha256": "07c152a80f98c57a5e37c2c5f4dab9db2d7ec08604e4a02a6298beaa3ffc663b",
+      "bytes": 169972,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.527785+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer_complementarity_validation.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/layer_complementarity_validation.json",
+      "source_sha256": "caff9a1fa195bcf9510e10f8f77466fab12b577d33f0d8477b25e0b66d8a7b47",
+      "archived_sha256": "caff9a1fa195bcf9510e10f8f77466fab12b577d33f0d8477b25e0b66d8a7b47",
+      "bytes": 170305,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.533239+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/posthoc_threshold_diagnostics.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/posthoc_threshold_diagnostics.json",
+      "source_sha256": "8ceaadb88847835f430b3dbaa5688bc6d00e3088bee7ddb21e9a75686e2dbad3",
+      "archived_sha256": "8ceaadb88847835f430b3dbaa5688bc6d00e3088bee7ddb21e9a75686e2dbad3",
+      "bytes": 8633,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.533370+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/probe_logit_stacking.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/probe_logit_stacking.json",
+      "source_sha256": "56c227122a086e0704d89b1489a70dc0622fd91e26c651105d94fa6d4c83e747",
+      "archived_sha256": "56c227122a086e0704d89b1489a70dc0622fd91e26c651105d94fa6d4c83e747",
+      "bytes": 9608,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.533476+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/trained_fusion_weights.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/analysis/trained_fusion_weights.json",
+      "source_sha256": "58e0e1410b7b941518e0ddcbb0ca9b6006298316238d6f2f5d3eada2fd06ee68",
+      "archived_sha256": "58e0e1410b7b941518e0ddcbb0ca9b6006298316238d6f2f5d3eada2fd06ee68",
+      "bytes": 6062,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.550998+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/selection.json",
+      "source_sha256": "366d312bf5fab1bf0a88c655cfb76d9ae3672aabf9170d69127b527f0e7c4b1c",
+      "archived_sha256": "366d312bf5fab1bf0a88c655cfb76d9ae3672aabf9170d69127b527f0e7c4b1c",
+      "bytes": 4081,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.558077+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/selection.json",
+      "source_sha256": "7c1c315fb2920fe3a2eec1bdc6e3c2d796d5d163645be9c1a1106249aa7a88fa",
+      "archived_sha256": "7c1c315fb2920fe3a2eec1bdc6e3c2d796d5d163645be9c1a1106249aa7a88fa",
+      "bytes": 4074,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.562749+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/selection.json",
+      "source_sha256": "5997dfb469376fb4543f9f6988af680f4b7add2090d5bebd155bf6488dda9327",
+      "archived_sha256": "5997dfb469376fb4543f9f6988af680f4b7add2090d5bebd155bf6488dda9327",
+      "bytes": 4079,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.564177+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/probes/selection.json",
+      "source_sha256": "b35620a6f3795a513bb57e15a37e3debe7610ccfef2dac64d32e5d68f8f64cb4",
+      "archived_sha256": "b35620a6f3795a513bb57e15a37e3debe7610ccfef2dac64d32e5d68f8f64cb4",
+      "bytes": 63398,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.579961+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/protocol.json",
+      "source_sha256": "799d7b1dc20b58cc4a851f6c2f9da353af1ec64238f26db9a752bf92c0f2dce2",
+      "archived_sha256": "799d7b1dc20b58cc4a851f6c2f9da353af1ec64238f26db9a752bf92c0f2dce2",
+      "bytes": 3780,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.580191+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/report.md",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/report.md",
+      "source_sha256": "3dfaa041c145b0e938d57dcaaa90368f37f23a837f4bbb9b53dedb852d891fde",
+      "archived_sha256": "3dfaa041c145b0e938d57dcaaa90368f37f23a837f4bbb9b53dedb852d891fde",
+      "bytes": 9195,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.580357+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/results.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/results.json",
+      "source_sha256": "09ccb27569301657ec36bdea9e6e22afdc0b8f54ffe61f6ce2525b01d7953867",
+      "archived_sha256": "09ccb27569301657ec36bdea9e6e22afdc0b8f54ffe61f6ce2525b01d7953867",
+      "bytes": 191943,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.581234+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/selected_layers.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/selected_layers.json",
+      "source_sha256": "601e3925f559740c66814d149226b44a29533560d267c2f5ab9ea74548c82e35",
+      "archived_sha256": "601e3925f559740c66814d149226b44a29533560d267c2f5ab9ea74548c82e35",
+      "bytes": 1902,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.581609+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/test_barrier.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/test_barrier.json",
+      "source_sha256": "b8395c627f29ff9c2475b282309c1bbb2b4b3640f7606a4f031aa4837138fb11",
+      "archived_sha256": "b8395c627f29ff9c2475b282309c1bbb2b4b3640f7606a4f031aa4837138fb11",
+      "bytes": 3476,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.581872+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/evaluation_amendment.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/evaluation_amendment.json",
+      "source_sha256": "01382c9b37b57988d0141fad4972f0d069b09d50a3f10128be70cdc30a45d0ff",
+      "archived_sha256": "01382c9b37b57988d0141fad4972f0d069b09d50a3f10128be70cdc30a45d0ff",
+      "bytes": 19044,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.594190+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/evaluation_primary_reproducibility.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/evaluation_primary_reproducibility.json",
+      "source_sha256": "f6c52ccee56c0f499af942d8fe5c7d7ff830faea8943285058c82e4e5ab88c2b",
+      "archived_sha256": "f6c52ccee56c0f499af942d8fe5c7d7ff830faea8943285058c82e4e5ab88c2b",
+      "bytes": 33454,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.601284+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_42/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_42/selection.json",
+      "source_sha256": "77fe50c5d66718e8e3dd2028fbf6944e3a04f8df89f93260f882ba74d2dbe16c",
+      "archived_sha256": "77fe50c5d66718e8e3dd2028fbf6944e3a04f8df89f93260f882ba74d2dbe16c",
+      "bytes": 10502,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.603543+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_43/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_43/selection.json",
+      "source_sha256": "7e5b91a8acef8d880d3715dd35629748d3824f84d63fc6df00b75235d30c2bca",
+      "archived_sha256": "7e5b91a8acef8d880d3715dd35629748d3824f84d63fc6df00b75235d30c2bca",
+      "bytes": 10460,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.605565+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_44/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_44/selection.json",
+      "source_sha256": "393953ecaf8d6d65c042991ac22c1971d84b5cec6c212f931ee29e6eacab6d28",
+      "archived_sha256": "393953ecaf8d6d65c042991ac22c1971d84b5cec6c212f931ee29e6eacab6d28",
+      "bytes": 10476,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.615163+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_45/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_45/selection.json",
+      "source_sha256": "eefd43e0868f103c8da8709515d96e90da063eca6296d5531f75f78dea0b2554",
+      "archived_sha256": "eefd43e0868f103c8da8709515d96e90da063eca6296d5531f75f78dea0b2554",
+      "bytes": 10487,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.621265+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_46/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/heads/seed_46/selection.json",
+      "source_sha256": "be023ee9d58ee249a508fd54917abe3e4821f8bea7135c4f3150c9d5b7c03f5b",
+      "archived_sha256": "be023ee9d58ee249a508fd54917abe3e4821f8bea7135c4f3150c9d5b7c03f5b",
+      "bytes": 10476,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.624034+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/protocol.json",
+      "source_sha256": "1e32c97a398ad7c122293582973dc05546361f8c83dbb1336706cf09d5aac748",
+      "archived_sha256": "1e32c97a398ad7c122293582973dc05546361f8c83dbb1336706cf09d5aac748",
+      "bytes": 3352,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.624268+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/report.md",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/report.md",
+      "source_sha256": "f2f0918a9d1a432287bbdc54928b8a07c29bfa74870494166abbb2e0bc4a94af",
+      "archived_sha256": "f2f0918a9d1a432287bbdc54928b8a07c29bfa74870494166abbb2e0bc4a94af",
+      "bytes": 4080,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.624436+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/results.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/results.json",
+      "source_sha256": "b2d790fa675e2e2ff344198c68a2b56d2e59101a9757deff8ba6bea32a1cdde8",
+      "archived_sha256": "b2d790fa675e2e2ff344198c68a2b56d2e59101a9757deff8ba6bea32a1cdde8",
+      "bytes": 163492,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.625238+00:00"
+    },
+    {
+      "source": "outputs/hanguard_dynamic_gate_diagnostics_20261012/test_barrier.json",
+      "archived_path": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/test_barrier.json",
+      "source_sha256": "176dd4867f332938f395b3da8075104712661179bf123306c1b9422dfeba378c",
+      "archived_sha256": "176dd4867f332938f395b3da8075104712661179bf123306c1b9422dfeba378c",
+      "bytes": 4969,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.625720+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/continuation_gap_single_5/diagnostic_summary.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/continuation_gap_single_5/diagnostic_summary.json",
+      "source_sha256": "4c0c949afd9219c85ba8a36a9d9bb4cf5a011e615e447a757afe993e39bdf496",
+      "archived_sha256": "4c0c949afd9219c85ba8a36a9d9bb4cf5a011e615e447a757afe993e39bdf496",
+      "bytes": 503941,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.646825+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/error_analysis/layer_curve.csv",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/error_analysis/layer_curve.csv",
+      "source_sha256": "f1f6dbc3beefaeb67064cd5af059886360e827a9a96838f1b549dac1eae892c0",
+      "archived_sha256": "f1f6dbc3beefaeb67064cd5af059886360e827a9a96838f1b549dac1eae892c0",
+      "bytes": 12386,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.657709+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/error_analysis/results.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/error_analysis/results.json",
+      "source_sha256": "b09bc947c6945e0c62a7b092eae2482fa1f4036c9ec78803b03ced30c010296d",
+      "archived_sha256": "b09bc947c6945e0c62a7b092eae2482fa1f4036c9ec78803b03ced30c010296d",
+      "bytes": 2022107,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.667017+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/figures/inner_dev_probe_metrics.csv",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/figures/inner_dev_probe_metrics.csv",
+      "source_sha256": "6422ad99067a0b5926045ab9f107ef9d067e7fd2b1f1bf19a6818f43f4e9990c",
+      "archived_sha256": "6422ad99067a0b5926045ab9f107ef9d067e7fd2b1f1bf19a6818f43f4e9990c",
+      "bytes": 46236,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.669513+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/results.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/results.json",
+      "source_sha256": "9f58c981875fc0cbcc247f23fbeea25e1548f339fd43acc73f9fda637ba005bf",
+      "archived_sha256": "9f58c981875fc0cbcc247f23fbeea25e1548f339fd43acc73f9fda637ba005bf",
+      "bytes": 979401,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.674330+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/source_length/results.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/independent_cpu_all_views_threshold_sensitivity_20261013/source_length/results.json",
+      "source_sha256": "81bfd7ee806f1037ff86157f7175bde58d2908e2e7a22d78dc1a66c9faf3c9fd",
+      "archived_sha256": "81bfd7ee806f1037ff86157f7175bde58d2908e2e7a22d78dc1a66c9faf3c9fd",
+      "bytes": 160417,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.689938+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/independent_cpu_joint_selected_vs_fusion_anchor_20261013/results.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/independent_cpu_joint_selected_vs_fusion_anchor_20261013/results.json",
+      "source_sha256": "57a8962db875d0f8784c889f7d4f23fe34bc878639f775346a0baff1dfc27c09",
+      "archived_sha256": "57a8962db875d0f8784c889f7d4f23fe34bc878639f775346a0baff1dfc27c09",
+      "bytes": 165437,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.690574+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/partition/manifest.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/partition/manifest.json",
+      "source_sha256": "8d2e3e47353b4df8086a5a24eb5bb04a45ce368be6df44c5667f593b5a77a789",
+      "archived_sha256": "8d2e3e47353b4df8086a5a24eb5bb04a45ce368be6df44c5667f593b5a77a789",
+      "bytes": 43157,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.690830+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/probe_rescue_audit_adapted_last/results.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/probe_rescue_audit_adapted_last/results.json",
+      "source_sha256": "f3c54aa23e46424055a20d585c13e597ccf20add5b521301e437dcfeaa50d5a5",
+      "archived_sha256": "f3c54aa23e46424055a20d585c13e597ccf20add5b521301e437dcfeaa50d5a5",
+      "bytes": 28827,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.691018+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/report.md",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/report.md",
+      "source_sha256": "4ca6d6121eae33d4cf3fa9ae0fe8c0a77721432f4c7fa3e3a0cc52afb0fe8f7f",
+      "archived_sha256": "4ca6d6121eae33d4cf3fa9ae0fe8c0a77721432f4c7fa3e3a0cc52afb0fe8f7f",
+      "bytes": 2548,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.691220+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/results.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/results.json",
+      "source_sha256": "3167323240401a450d0e571b3390c0ca90a59bde281b92e74de3e6c8d42e4f58",
+      "archived_sha256": "3167323240401a450d0e571b3390c0ca90a59bde281b92e74de3e6c8d42e4f58",
+      "bytes": 279896,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.692133+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/selection.json",
+      "source_sha256": "bdd8341bad0a2580fa55bf4d9241f0e414681941150161f011595e09e394d9fc",
+      "archived_sha256": "bdd8341bad0a2580fa55bf4d9241f0e414681941150161f011595e09e394d9fc",
+      "bytes": 5162,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.704465+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/probes/selection.json",
+      "source_sha256": "b62766c68d51ecc14f19218b6dfd1d3c4be7861c93c70175b5eb29ddc6b74a1d",
+      "archived_sha256": "b62766c68d51ecc14f19218b6dfd1d3c4be7861c93c70175b5eb29ddc6b74a1d",
+      "bytes": 16811,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.725519+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/selection.json",
+      "source_sha256": "8a22b1155e2922e18e8691911d95c1d636c16bc14bee49a948eb935ae0fd2695",
+      "archived_sha256": "8a22b1155e2922e18e8691911d95c1d636c16bc14bee49a948eb935ae0fd2695",
+      "bytes": 5154,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.731684+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/probes/selection.json",
+      "source_sha256": "30a6d8237f1798bd24a0491219b1fc016a7c72e82fd46aa7f18899fb62e681f7",
+      "archived_sha256": "30a6d8237f1798bd24a0491219b1fc016a7c72e82fd46aa7f18899fb62e681f7",
+      "bytes": 16838,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.732615+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/selection.json",
+      "source_sha256": "2f12cb10d28c3f9f5541f4fb1ddd991f811ebce1f745c4e6f01a56e651d43701",
+      "archived_sha256": "2f12cb10d28c3f9f5541f4fb1ddd991f811ebce1f745c4e6f01a56e651d43701",
+      "bytes": 5161,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.747364+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/probes/selection.json",
+      "source_sha256": "517810b6900ce47070ea73b99fcbca99f8495c873e992cc61988737846831de5",
+      "archived_sha256": "517810b6900ce47070ea73b99fcbca99f8495c873e992cc61988737846831de5",
+      "bytes": 16894,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.756489+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/selection.json",
+      "source_sha256": "ee0ef65129d586675bf5b53adc590ed1f019dd804f3c503a9a3c8593f63cca96",
+      "archived_sha256": "ee0ef65129d586675bf5b53adc590ed1f019dd804f3c503a9a3c8593f63cca96",
+      "bytes": 5161,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.762798+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/probes/selection.json",
+      "source_sha256": "eb8a9218406c01b863ebddcafa7b40b9a1421153a6fa87cc3199ae67c925f657",
+      "archived_sha256": "eb8a9218406c01b863ebddcafa7b40b9a1421153a6fa87cc3199ae67c925f657",
+      "bytes": 16866,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.763357+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/selection.json",
+      "source_sha256": "2d37dfea1055cf04666a67edc764eaf25446e9fce0a930547af5f7c5dfbe41ae",
+      "archived_sha256": "2d37dfea1055cf04666a67edc764eaf25446e9fce0a930547af5f7c5dfbe41ae",
+      "bytes": 5160,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.763806+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/probes/selection.json",
+      "source_sha256": "843c79d6628b7ba493d70c7a2fddc521efbad33323b17681bcf31004916ebe05",
+      "archived_sha256": "843c79d6628b7ba493d70c7a2fddc521efbad33323b17681bcf31004916ebe05",
+      "bytes": 16870,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.768640+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/protocol.json",
+      "source_sha256": "942a18435967bfc20eee262b7ac5700c90179a44cf808c98f29f33245a941617",
+      "archived_sha256": "942a18435967bfc20eee262b7ac5700c90179a44cf808c98f29f33245a941617",
+      "bytes": 2715,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.768842+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/analysis/report.md",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/analysis/report.md",
+      "source_sha256": "fcb66aa4adb7066081e6b07bbe334f346f8967d1694d8bfb496558a153a8fe30",
+      "archived_sha256": "fcb66aa4adb7066081e6b07bbe334f346f8967d1694d8bfb496558a153a8fe30",
+      "bytes": 2546,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.769068+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/analysis/results.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/analysis/results.json",
+      "source_sha256": "8ad648dcbeb165d235dc5a050b521c6fa7d0659c1dff58a796df6bb1f16fe7b0",
+      "archived_sha256": "8ad648dcbeb165d235dc5a050b521c6fa7d0659c1dff58a796df6bb1f16fe7b0",
+      "bytes": 279284,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.770126+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_0/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_0/heads/selection.json",
+      "source_sha256": "ed4d455d42cc72dca55e2c1b7508529f28fc0b6ed41d4ace729595e79e3d7332",
+      "archived_sha256": "ed4d455d42cc72dca55e2c1b7508529f28fc0b6ed41d4ace729595e79e3d7332",
+      "bytes": 5164,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.786764+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_0/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_0/probes/selection.json",
+      "source_sha256": "335fee85776d5013229887e3e0b010de4dcf7854da364c1a499394e8169d4102",
+      "archived_sha256": "335fee85776d5013229887e3e0b010de4dcf7854da364c1a499394e8169d4102",
+      "bytes": 16846,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.790083+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_1/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_1/heads/selection.json",
+      "source_sha256": "adcfa2f37d1f01800b416534038718cba07234e2ba41bee7241255e0105de37a",
+      "archived_sha256": "adcfa2f37d1f01800b416534038718cba07234e2ba41bee7241255e0105de37a",
+      "bytes": 5158,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.798903+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_1/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_1/probes/selection.json",
+      "source_sha256": "4631a054d878f7bbbc3dee1d34609f4ac3fa103441d0f0f689399f8cda6050c9",
+      "archived_sha256": "4631a054d878f7bbbc3dee1d34609f4ac3fa103441d0f0f689399f8cda6050c9",
+      "bytes": 16865,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.808063+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_2/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_2/heads/selection.json",
+      "source_sha256": "bd846ba900b7cb1c4912a391af1190bbee893cfbb018e70b6931ae2cedb6666c",
+      "archived_sha256": "bd846ba900b7cb1c4912a391af1190bbee893cfbb018e70b6931ae2cedb6666c",
+      "bytes": 5167,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.808618+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_2/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_2/probes/selection.json",
+      "source_sha256": "b6e11caa9924af0f282d941340d1f1fe79bcdef251e8708e5b37bf761d8d5750",
+      "archived_sha256": "b6e11caa9924af0f282d941340d1f1fe79bcdef251e8708e5b37bf761d8d5750",
+      "bytes": 16874,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.817497+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_3/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_3/heads/selection.json",
+      "source_sha256": "f0d281c26f0d785f0b2de320d6584caba6e09b2eeab7ea31265966e1cf5f2014",
+      "archived_sha256": "f0d281c26f0d785f0b2de320d6584caba6e09b2eeab7ea31265966e1cf5f2014",
+      "bytes": 5162,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.830577+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_3/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_3/probes/selection.json",
+      "source_sha256": "3f83c96d5836890b31e67db9c8964b1c2586555aa3e5248fda25873296942876",
+      "archived_sha256": "3f83c96d5836890b31e67db9c8964b1c2586555aa3e5248fda25873296942876",
+      "bytes": 16864,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.844179+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_4/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_4/heads/selection.json",
+      "source_sha256": "d5e85c849cb665448641faeb89cad9c9f99b9d6ed815fcdad6e566f197d4d4f7",
+      "archived_sha256": "d5e85c849cb665448641faeb89cad9c9f99b9d6ed815fcdad6e566f197d4d4f7",
+      "bytes": 5162,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.853494+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_4/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/fold_4/probes/selection.json",
+      "source_sha256": "3481e463ecac3b19cc0330ed0e5cd2a26c64e405f2d9b687412e9846c09a2a49",
+      "archived_sha256": "3481e463ecac3b19cc0330ed0e5cd2a26c64e405f2d9b687412e9846c09a2a49",
+      "bytes": 16854,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.864099+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/protocol.json",
+      "source_sha256": "4a79e94c26c6cf7be801a261f285a2df9c78cb21d394b39f672466a26918baf6",
+      "archived_sha256": "4a79e94c26c6cf7be801a261f285a2df9c78cb21d394b39f672466a26918baf6",
+      "bytes": 2715,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.864256+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/analysis/report.md",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/analysis/report.md",
+      "source_sha256": "dcfbf65ecc32a27b05dcfc59615e56185cfd8ec5029a3246aee593effd23468e",
+      "archived_sha256": "dcfbf65ecc32a27b05dcfc59615e56185cfd8ec5029a3246aee593effd23468e",
+      "bytes": 2542,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.864427+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/analysis/results.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/analysis/results.json",
+      "source_sha256": "95f4531b42bc9feb79fb4e35d447ada7897cfa51b1090aae787a6236e2451b06",
+      "archived_sha256": "95f4531b42bc9feb79fb4e35d447ada7897cfa51b1090aae787a6236e2451b06",
+      "bytes": 280437,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.865935+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_0/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_0/heads/selection.json",
+      "source_sha256": "33d7950c32d2de5a1114f26bf5daffe2f4a029e559fa8346fb723b76f171759d",
+      "archived_sha256": "33d7950c32d2de5a1114f26bf5daffe2f4a029e559fa8346fb723b76f171759d",
+      "bytes": 5163,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.881893+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_0/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_0/probes/selection.json",
+      "source_sha256": "91302624842f9bd098aa9f7acf7deb589fbe581a1ef4f700f18c38d7e211d9c8",
+      "archived_sha256": "91302624842f9bd098aa9f7acf7deb589fbe581a1ef4f700f18c38d7e211d9c8",
+      "bytes": 16884,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.882331+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_1/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_1/heads/selection.json",
+      "source_sha256": "85b65f55e0815e6a180361494502a3f2d0d75d8b4bf35097480839ee118db5fa",
+      "archived_sha256": "85b65f55e0815e6a180361494502a3f2d0d75d8b4bf35097480839ee118db5fa",
+      "bytes": 5154,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.882634+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_1/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_1/probes/selection.json",
+      "source_sha256": "b597b38d72d788b34959b929040bf3898b8779414b446adb2e48437fec5be7f4",
+      "archived_sha256": "b597b38d72d788b34959b929040bf3898b8779414b446adb2e48437fec5be7f4",
+      "bytes": 16793,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.882910+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_2/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_2/heads/selection.json",
+      "source_sha256": "315dfbaee4065302cbcb2c290726be2d86e254d5de186c9566de5d2f151ca32c",
+      "archived_sha256": "315dfbaee4065302cbcb2c290726be2d86e254d5de186c9566de5d2f151ca32c",
+      "bytes": 5170,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.883154+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_2/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_2/probes/selection.json",
+      "source_sha256": "eaf344c9cfa8e1c813dcce8f8d51e9d7b22b5fb108444ac7c5b90fd44bc061cf",
+      "archived_sha256": "eaf344c9cfa8e1c813dcce8f8d51e9d7b22b5fb108444ac7c5b90fd44bc061cf",
+      "bytes": 16779,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.888189+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_3/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_3/heads/selection.json",
+      "source_sha256": "a7f0cf4275828e6df89f5d971ddb55d34867b6523b37016667ac6702eca8a003",
+      "archived_sha256": "a7f0cf4275828e6df89f5d971ddb55d34867b6523b37016667ac6702eca8a003",
+      "bytes": 5168,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.903020+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_3/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_3/probes/selection.json",
+      "source_sha256": "6c6219da2fef416f444d0ad12654270c45dc329d2e930ce27f57080f80df935f",
+      "archived_sha256": "6c6219da2fef416f444d0ad12654270c45dc329d2e930ce27f57080f80df935f",
+      "bytes": 16831,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.903585+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_4/heads/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_4/heads/selection.json",
+      "source_sha256": "a3f9ce384d9ac458272950c62023007cb7b695a95ee7d399d96cdbafd0c55800",
+      "archived_sha256": "a3f9ce384d9ac458272950c62023007cb7b695a95ee7d399d96cdbafd0c55800",
+      "bytes": 5165,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.907169+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_4/probes/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/fold_4/probes/selection.json",
+      "source_sha256": "bb806e02410bebee45ef80715dba2a01e8a41677c698a31d9d309367c0a030c5",
+      "archived_sha256": "bb806e02410bebee45ef80715dba2a01e8a41677c698a31d9d309367c0a030c5",
+      "bytes": 16803,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.914506+00:00"
+    },
+    {
+      "source": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/protocol.json",
+      "source_sha256": "3a8b4fc4fc908c6d0a9b4d4508a22ec340561ed250e6f711ca195d4aad3990fe",
+      "archived_sha256": "3a8b4fc4fc908c6d0a9b4d4508a22ec340561ed250e6f711ca195d4aad3990fe",
+      "bytes": 2644,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.914726+00:00"
+    },
+    {
+      "source": "outputs/hanguard_targeted_error_label_audit_20261012/feasibility_inventory.json",
+      "archived_path": "artifacts/outputs/hanguard_targeted_error_label_audit_20261012/feasibility_inventory.json",
+      "source_sha256": "a1ed6b8706ee3f3c4258429e48dedce3bd4eac6be15dfb8c5f6e6f6a5c136e3e",
+      "archived_sha256": "a1ed6b8706ee3f3c4258429e48dedce3bd4eac6be15dfb8c5f6e6f6a5c136e3e",
+      "bytes": 19417,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.915300+00:00"
+    },
+    {
+      "source": "outputs/hanguard_targeted_error_label_audit_20261012/report.md",
+      "archived_path": "artifacts/outputs/hanguard_targeted_error_label_audit_20261012/report.md",
+      "source_sha256": "4414a0aa4e25a7d1a2d85f2d84db2cdf7486761adbbfa4069811667fea0d107d",
+      "archived_sha256": "4414a0aa4e25a7d1a2d85f2d84db2cdf7486761adbbfa4069811667fea0d107d",
+      "bytes": 10092,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.915483+00:00"
+    },
+    {
+      "source": "outputs/hanguard_targeted_error_label_audit_20261012/slice_model_metrics.csv",
+      "archived_path": "artifacts/outputs/hanguard_targeted_error_label_audit_20261012/slice_model_metrics.csv",
+      "source_sha256": "8c9084fc2df01dd9b9cacd384e6ee8bc78f41728dd71b2c9146fd72070aca732",
+      "archived_sha256": "8c9084fc2df01dd9b9cacd384e6ee8bc78f41728dd71b2c9146fd72070aca732",
+      "bytes": 5056,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.918499+00:00"
+    },
+    {
+      "source": "outputs/hanguard_targeted_error_label_audit_20261012/summary.json",
+      "archived_path": "artifacts/outputs/hanguard_targeted_error_label_audit_20261012/summary.json",
+      "source_sha256": "e255a0f19844b5d3d6f816b1c66f31aed2c58a4d3e17f028c05da773c1d79feb",
+      "archived_sha256": "e255a0f19844b5d3d6f816b1c66f31aed2c58a4d3e17f028c05da773c1d79feb",
+      "bytes": 4584,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.918662+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/comparison_protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/comparison_protocol.json",
+      "source_sha256": "54b30034be783f02ccb8f768273e08cdbd30a5a7675e2f745467d7e5a30b43b0",
+      "archived_sha256": "54b30034be783f02ccb8f768273e08cdbd30a5a7675e2f745467d7e5a30b43b0",
+      "bytes": 60773,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.919474+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/controlled_comparison_protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/controlled_comparison_protocol.json",
+      "source_sha256": "b5b465340fda27fad24845efbe9eb275853d9acd1fcdb65659f6a8fa990d8495",
+      "archived_sha256": "b5b465340fda27fad24845efbe9eb275853d9acd1fcdb65659f6a8fa990d8495",
+      "bytes": 99578,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.931844+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/controlled_results.json",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/controlled_results.json",
+      "source_sha256": "ea6f9286d619b1c70349320873b7cfb4514e152eca7f433d0b38bcb03c06b0a9",
+      "archived_sha256": "ea6f9286d619b1c70349320873b7cfb4514e152eca7f433d0b38bcb03c06b0a9",
+      "bytes": 7337,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.932055+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_protocol.json",
+      "source_sha256": "b24a4a5599a54f0d37df468c51ad13f646455ee76a3fecda076ecb4a6caad9ea",
+      "archived_sha256": "b24a4a5599a54f0d37df468c51ad13f646455ee76a3fecda076ecb4a6caad9ea",
+      "bytes": 19642,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.949858+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/paired_results.json",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/paired_results.json",
+      "source_sha256": "1454bf0cd5dc221104115a5a0b6fb7cbccf464736f07091716c64c44f5b427ea",
+      "archived_sha256": "1454bf0cd5dc221104115a5a0b6fb7cbccf464736f07091716c64c44f5b427ea",
+      "bytes": 5446,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.950007+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/report.md",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/report.md",
+      "source_sha256": "e516f929036f916ac5f7e73bb646492d16375f01cb02b07ec2288aa7e68479d0",
+      "archived_sha256": "e516f929036f916ac5f7e73bb646492d16375f01cb02b07ec2288aa7e68479d0",
+      "bytes": 17005,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.950154+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/report_manifest.json",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/report_manifest.json",
+      "source_sha256": "7e609877286cf22bc14a864bdc13553012c47a917690b57437f2ba1298ce0e50",
+      "archived_sha256": "7e609877286cf22bc14a864bdc13553012c47a917690b57437f2ba1298ce0e50",
+      "bytes": 699,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.950430+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/summary.json",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/summary.aggregate.json",
+      "source_sha256": "3e80536aaaf21ad8a3605aec1749effc8380d7e8d18d89137f28e684508f3bb0",
+      "archived_sha256": "9031bd1b3745325e61b695254a99a0aca89366edfc68905407db53331c5eb3fc",
+      "bytes": 89324,
+      "transformation": "drop_json_pointers",
+      "omitted_json_pointers": [
+        "/per_case_arm",
+        "/stable_rescues",
+        "/stable_harms",
+        "/sensitive_case_arms",
+        "/second_layout_minimal_fix_replication/per_case_arm",
+        "/second_layout_minimal_fix_replication/stable_rescues",
+        "/second_layout_minimal_fix_replication/stable_harms",
+        "/second_layout_minimal_fix_replication/sensitive_case_arms"
+      ],
+      "captured_at": "2026-10-15T13:51:34.956613+00:00"
+    },
+    {
+      "source": "outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_results.json",
+      "archived_path": "artifacts/outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_results.aggregate.json",
+      "source_sha256": "dd9937ff9a340a9f0420700594b0bc2151d8f4198e4f0eca9cb89ab9578dc725",
+      "archived_sha256": "1309f612ee6391476009b7bf1360e008ae55e15048345626b8c4666c7b514c2c",
+      "bytes": 4719,
+      "transformation": "drop_json_pointers",
+      "omitted_json_pointers": [
+        "/per_case_arm",
+        "/stable_rescues",
+        "/stable_harms",
+        "/sensitive_case_arms",
+        "/second_layout_minimal_fix_replication/per_case_arm",
+        "/second_layout_minimal_fix_replication/stable_rescues",
+        "/second_layout_minimal_fix_replication/stable_harms",
+        "/second_layout_minimal_fix_replication/sensitive_case_arms"
+      ],
+      "captured_at": "2026-10-15T13:51:34.957336+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/audit_completion.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/audit_completion.json",
+      "source_sha256": "a32a88e64063fabad1acd643721889631b3e462a3c545cad304b859f76258d07",
+      "archived_sha256": "a32a88e64063fabad1acd643721889631b3e462a3c545cad304b859f76258d07",
+      "bytes": 2432,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.958541+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/audit_summary.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/audit_summary.json",
+      "source_sha256": "7494e518707c5c7031dbf986bb3aa112aee680e5780e48a7837cd91b6ca55385",
+      "archived_sha256": "7494e518707c5c7031dbf986bb3aa112aee680e5780e48a7837cd91b6ca55385",
+      "bytes": 27693,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.958701+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/category_only_recovery_manifest.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/category_only_recovery_manifest.json",
+      "source_sha256": "a13bc5b046c6238fd5fd9e27a7c644e7d17f3758aa3ebd28e0ef9652b32355c7",
+      "archived_sha256": "a13bc5b046c6238fd5fd9e27a7c644e7d17f3758aa3ebd28e0ef9652b32355c7",
+      "bytes": 7785,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.967476+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/independent_full_audit_review.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/independent_full_audit_review.json",
+      "source_sha256": "6673a9036b1bdbfb9ca596c20a7e6a7f0ce9b574ba90e6e0456095a3a20f2c46",
+      "archived_sha256": "6673a9036b1bdbfb9ca596c20a7e6a7f0ce9b574ba90e6e0456095a3a20f2c46",
+      "bytes": 24469,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.977783+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/jailbench_wrapper_split_counts.csv",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/jailbench_wrapper_split_counts.csv",
+      "source_sha256": "c73042a7976aa74c19fcb0608e6b4afb18610a5f9d1d9ecfc12320eb37656dd5",
+      "archived_sha256": "c73042a7976aa74c19fcb0608e6b4afb18610a5f9d1d9ecfc12320eb37656dd5",
+      "bytes": 243,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.980498+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/repair_plan.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/repair_plan.json",
+      "source_sha256": "a81174568444e32b92c4b10be26e0bcf0ac9e83033272aac741c1840077e3c0e",
+      "archived_sha256": "a81174568444e32b92c4b10be26e0bcf0ac9e83033272aac741c1840077e3c0e",
+      "bytes": 3180,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.980953+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/report.md",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/report.md",
+      "source_sha256": "861e659db3060766cb4f2be5b3ca6b7a4704fadac39b89dd358997ed33643c51",
+      "archived_sha256": "861e659db3060766cb4f2be5b3ca6b7a4704fadac39b89dd358997ed33643c51",
+      "bytes": 10432,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.981233+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/structure_results.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/structure_results.json",
+      "source_sha256": "d4ecf4d1c951181ff3b55f1b98ff1a2393ccca2bbedf8c4ff3aa23d8f4003fe1",
+      "archived_sha256": "d4ecf4d1c951181ff3b55f1b98ff1a2393ccca2bbedf8c4ff3aa23d8f4003fe1",
+      "bytes": 50706,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.981875+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/text_artifact_label_contingencies.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/text_artifact_label_contingencies.json",
+      "source_sha256": "1c415ebce4997bd360e4afc78c04bd1cb69bf36af3598b58e4462c1c4860061b",
+      "archived_sha256": "1c415ebce4997bd360e4afc78c04bd1cb69bf36af3598b58e4462c1c4860061b",
+      "bytes": 5298,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.985295+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/text_family_results.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/text_family_results.json",
+      "source_sha256": "5f6a638bca2b263f1e67934307db75a27ce9e1c4fae6f2662ae294cf73f84a0e",
+      "archived_sha256": "5f6a638bca2b263f1e67934307db75a27ce9e1c4fae6f2662ae294cf73f84a0e",
+      "bytes": 20639,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.988129+00:00"
+    },
+    {
+      "source": "outputs/hanguard_full_data_audit_20261012/translation_scan_results.json",
+      "archived_path": "artifacts/outputs/hanguard_full_data_audit_20261012/translation_scan_results.json",
+      "source_sha256": "eaea7355214aab1cb18c9307fdf6f16e635b514a26435fa8090f032a5d9ab732",
+      "archived_sha256": "eaea7355214aab1cb18c9307fdf6f16e635b514a26435fa8090f032a5d9ab732",
+      "bytes": 20563,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.996612+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/activation_verification.json",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/activation_verification.json",
+      "source_sha256": "bb0e8bf56372731e7e1efcffb760e495a126bef11172d3e16e5bbbb18b1e3ea4",
+      "archived_sha256": "bb0e8bf56372731e7e1efcffb760e495a126bef11172d3e16e5bbbb18b1e3ea4",
+      "bytes": 1423,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.996913+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/contract_changes.md",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/contract_changes.md",
+      "source_sha256": "ee870c12f9cb499451f7052631acf83d4078bda2e8ccab0a9402c3ead917415c",
+      "archived_sha256": "ee870c12f9cb499451f7052631acf83d4078bda2e8ccab0a9402c3ead917415c",
+      "bytes": 3579,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.997005+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/contract_verification.json",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/contract_verification.json",
+      "source_sha256": "60ff1dd8ee3b9cc522b718dcc26f631ec413ec98e7c39075db5f7332f46ae65b",
+      "archived_sha256": "60ff1dd8ee3b9cc522b718dcc26f631ec413ec98e7c39075db5f7332f46ae65b",
+      "bytes": 758,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.997080+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/independent_release_qa.json",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/independent_release_qa.json",
+      "source_sha256": "caec5eda36e8538a1c4c1d6b679a8c0c7208316590c76c92f7aad2d8e5fb1d56",
+      "archived_sha256": "caec5eda36e8538a1c4c1d6b679a8c0c7208316590c76c92f7aad2d8e5fb1d56",
+      "bytes": 157538,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.997636+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/independent_release_source_audit.json",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/independent_release_source_audit.json",
+      "source_sha256": "353081b7f441c61f8f83f8be570737de904e744227b00abe5e0c31fa63255bc1",
+      "archived_sha256": "353081b7f441c61f8f83f8be570737de904e744227b00abe5e0c31fa63255bc1",
+      "bytes": 7870,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.997736+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/independent_release_views_qa.json",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/independent_release_views_qa.json",
+      "source_sha256": "f5ad3091cb8af279e347ba97c4350e829f53c173adfb72b61148d5ed244d5395",
+      "archived_sha256": "f5ad3091cb8af279e347ba97c4350e829f53c173adfb72b61148d5ed244d5395",
+      "bytes": 4633,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.997819+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/recovery_source_acceptance.json",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/recovery_source_acceptance.json",
+      "source_sha256": "d766e684f43239fae7eb6279baf15aa3435436fa26f034efef907a4812e182fc",
+      "archived_sha256": "d766e684f43239fae7eb6279baf15aa3435436fa26f034efef907a4812e182fc",
+      "bytes": 2931,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.997897+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/report.md",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/report.md",
+      "source_sha256": "5c9a629022ea47f1f48f75caf75b6c131a293d8cdf014c71e71b60430750fb92",
+      "archived_sha256": "5c9a629022ea47f1f48f75caf75b6c131a293d8cdf014c71e71b60430750fb92",
+      "bytes": 3805,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.997981+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/template_evaluation_scope.md",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/template_evaluation_scope.md",
+      "source_sha256": "82285c6c71915414cbaadfed638db6f20487839e4450cbb05e9d4db943e581ae",
+      "archived_sha256": "82285c6c71915414cbaadfed638db6f20487839e4450cbb05e9d4db943e581ae",
+      "bytes": 4215,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.998065+00:00"
+    },
+    {
+      "source": "outputs/hanguard_data_remediation_20261012/translation_corrections_summary.json",
+      "archived_path": "artifacts/outputs/hanguard_data_remediation_20261012/translation_corrections_summary.json",
+      "source_sha256": "da0d2e130bd390f1bacaa5874699423d599d60ddcef6f6342f8f4b368d3e36fb",
+      "archived_sha256": "da0d2e130bd390f1bacaa5874699423d599d60ddcef6f6342f8f4b368d3e36fb",
+      "bytes": 698,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:34.998144+00:00"
+    },
+    {
+      "source": "data/three_source_remediated_20261012/README.md",
+      "archived_path": "artifacts/data/three_source_remediated_20261012/README.md",
+      "source_sha256": "d3676953ff9b93650c5a4c57f03e84ea66cd9257b0132e2ecc10b405eb95ed93",
+      "archived_sha256": "d3676953ff9b93650c5a4c57f03e84ea66cd9257b0132e2ecc10b405eb95ed93",
+      "bytes": 3824,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.004990+00:00"
+    },
+    {
+      "source": "data/three_source_remediated_20261012/manifest.json",
+      "archived_path": "artifacts/data/three_source_remediated_20261012/manifest.json",
+      "source_sha256": "a108e631d7978f680feebc6e9276d5c470cc44e2037fd56a940f82fdf33f1a80",
+      "archived_sha256": "a108e631d7978f680feebc6e9276d5c470cc44e2037fd56a940f82fdf33f1a80",
+      "bytes": 13471,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.007648+00:00"
+    },
+    {
+      "source": "data/three_source_remediated_20261012/release_qa.json",
+      "archived_path": "artifacts/data/three_source_remediated_20261012/release_qa.json",
+      "source_sha256": "1b1acc12f01a1113fbbb0b91f2d80f7f932017fb5836efc3400f24ae6fc96660",
+      "archived_sha256": "1b1acc12f01a1113fbbb0b91f2d80f7f932017fb5836efc3400f24ae6fc96660",
+      "bytes": 2479,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.007768+00:00"
+    },
+    {
+      "source": "data/hanguard_two_source_remediated_20261012/README.md",
+      "archived_path": "artifacts/data/hanguard_two_source_remediated_20261012/README.md",
+      "source_sha256": "b9c96bb10bd68382764bda601b7d17134e744f2a29a69c49d0846ecc3b23e800",
+      "archived_sha256": "b9c96bb10bd68382764bda601b7d17134e744f2a29a69c49d0846ecc3b23e800",
+      "bytes": 719,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.008164+00:00"
+    },
+    {
+      "source": "data/hanguard_two_source_remediated_20261012/manifest.json",
+      "archived_path": "artifacts/data/hanguard_two_source_remediated_20261012/manifest.json",
+      "source_sha256": "7590e84cab13362ce1e0b75b441ffb2e745b43e39a27034a7f3a12d38d46cc47",
+      "archived_sha256": "7590e84cab13362ce1e0b75b441ffb2e745b43e39a27034a7f3a12d38d46cc47",
+      "bytes": 4030,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.008442+00:00"
+    },
+    {
+      "source": "data/hanguard_two_source_remediated_20261012/release_qa.json",
+      "archived_path": "artifacts/data/hanguard_two_source_remediated_20261012/release_qa.json",
+      "source_sha256": "3aced89b96e14571a4a1c0471382c6f6fd41d5ce0724c7a8fe05fb393518c37e",
+      "archived_sha256": "3aced89b96e14571a4a1c0471382c6f6fd41d5ce0724c7a8fe05fb393518c37e",
+      "bytes": 2486,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.008575+00:00"
+    },
+    {
+      "source": "outputs/hanguard_translation_repair_20260928/diagnostics.json",
+      "archived_path": "artifacts/outputs/hanguard_translation_repair_20260928/diagnostics.json",
+      "source_sha256": "8be5cabc2436b925beb32ea4cf201339293d65538da04a856fb375887b3d0369",
+      "archived_sha256": "8be5cabc2436b925beb32ea4cf201339293d65538da04a856fb375887b3d0369",
+      "bytes": 9318,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.023774+00:00"
+    },
+    {
+      "source": "outputs/hanguard_translation_repair_20260928/generation_completion.json",
+      "archived_path": "artifacts/outputs/hanguard_translation_repair_20260928/generation_completion.json",
+      "source_sha256": "53212123b15bdece761a684b10dc24dfdd3d2b508316f8c98f188e41a7439888",
+      "archived_sha256": "53212123b15bdece761a684b10dc24dfdd3d2b508316f8c98f188e41a7439888",
+      "bytes": 1419,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.041741+00:00"
+    },
+    {
+      "source": "outputs/hanguard_translation_repair_20260928/independent_verification/report.md",
+      "archived_path": "artifacts/outputs/hanguard_translation_repair_20260928/independent_verification/report.md",
+      "source_sha256": "7878fc718c2035a58d2c1c340fd33dd5e19aa06bdb906e8bd82c3b4e54c33916",
+      "archived_sha256": "7878fc718c2035a58d2c1c340fd33dd5e19aa06bdb906e8bd82c3b4e54c33916",
+      "bytes": 998,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.042079+00:00"
+    },
+    {
+      "source": "outputs/hanguard_translation_repair_20260928/independent_verification/verification.json",
+      "archived_path": "artifacts/outputs/hanguard_translation_repair_20260928/independent_verification/verification.json",
+      "source_sha256": "12ff53dee16aa50e32d9df287cf25c905f68ef4acffdf28c90ea518ff799758f",
+      "archived_sha256": "12ff53dee16aa50e32d9df287cf25c905f68ef4acffdf28c90ea518ff799758f",
+      "bytes": 9673,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.042196+00:00"
+    },
+    {
+      "source": "outputs/hanguard_translation_repair_20260928/report.md",
+      "archived_path": "artifacts/outputs/hanguard_translation_repair_20260928/report.md",
+      "source_sha256": "7c1ed109fcf0ba69618a55078254c7fd42f72ae3d2d95bb7d86c8baf97afa056",
+      "archived_sha256": "7c1ed109fcf0ba69618a55078254c7fd42f72ae3d2d95bb7d86c8baf97afa056",
+      "bytes": 6328,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.042316+00:00"
+    },
+    {
+      "source": "outputs/hanguard_translation_repair_20260928/tests_final.json",
+      "archived_path": "artifacts/outputs/hanguard_translation_repair_20260928/tests_final.json",
+      "source_sha256": "b3c99a0fb46c438c0dbff12e61c50bf1cf95b0ea5b6c673ab07b5ca2cd19c71d",
+      "archived_sha256": "b3c99a0fb46c438c0dbff12e61c50bf1cf95b0ea5b6c673ab07b5ca2cd19c71d",
+      "bytes": 1409,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.058665+00:00"
+    },
+    {
+      "source": "outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/environment_verification.json",
+      "archived_path": "artifacts/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/environment_verification.json",
+      "source_sha256": "ed8b1a20dd1c227615633f4fbc58dbdf139667ad735ffb7f3392b453b00975c5",
+      "archived_sha256": "ed8b1a20dd1c227615633f4fbc58dbdf139667ad735ffb7f3392b453b00975c5",
+      "bytes": 3589,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.068261+00:00"
+    },
+    {
+      "source": "outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.json",
+      "archived_path": "artifacts/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.json",
+      "source_sha256": "52364005be6cd7a14d36faa1ea34f7aa963fc180e078b0ce9dafc2c29f58fdab",
+      "archived_sha256": "52364005be6cd7a14d36faa1ea34f7aa963fc180e078b0ce9dafc2c29f58fdab",
+      "bytes": 46823,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.068507+00:00"
+    },
+    {
+      "source": "outputs/hanguard_sparse_token_readout_20261013_v3/fold_0/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/fold_0/selection.json",
+      "source_sha256": "3e61d92a241f9101e7c2d94ca435f026eefb6f0f5bd0df4969b06c0bc281346b",
+      "archived_sha256": "3e61d92a241f9101e7c2d94ca435f026eefb6f0f5bd0df4969b06c0bc281346b",
+      "bytes": 1481,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.081170+00:00"
+    },
+    {
+      "source": "outputs/hanguard_sparse_token_readout_20261013_v3/fold_1/selection.json",
+      "archived_path": "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/fold_1/selection.json",
+      "source_sha256": "ef7f6aeb48e947b3778c34e289f3fdd51d1daec3b1b8632d2b2cc548b231c06c",
+      "archived_sha256": "ef7f6aeb48e947b3778c34e289f3fdd51d1daec3b1b8632d2b2cc548b231c06c",
+      "bytes": 1487,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.084230+00:00"
+    },
+    {
+      "source": "outputs/hanguard_sparse_token_readout_20261013_v3/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/protocol.json",
+      "source_sha256": "972a059977b5d937e29186a0d0c92703fa53b1e6d186907c678fb0656b00dc99",
+      "archived_sha256": "972a059977b5d937e29186a0d0c92703fa53b1e6d186907c678fb0656b00dc99",
+      "bytes": 10638,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.084397+00:00"
+    },
+    {
+      "source": "outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/results.json",
+      "archived_path": "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/results.json",
+      "source_sha256": "7c9d343e83e151dd82d2734ff25022a7ce24ad0b9dbc336ac6ae5434120fb2a0",
+      "archived_sha256": "7c9d343e83e151dd82d2734ff25022a7ce24ad0b9dbc336ac6ae5434120fb2a0",
+      "bytes": 53793,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.084668+00:00"
+    },
+    {
+      "source": "outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/wildguard_similarity_diagnostic/results.json",
+      "archived_path": "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/wildguard_similarity_diagnostic/results.json",
+      "source_sha256": "70fa30364dec6548b2c184c2452cc8cfdc8f37bf6f1c5867564f252a5daf989c",
+      "archived_sha256": "70fa30364dec6548b2c184c2452cc8cfdc8f37bf6f1c5867564f252a5daf989c",
+      "bytes": 12923,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.084808+00:00"
+    },
+    {
+      "source": "outputs/hanguard_sparse_token_readout_20261013_v3/user_stop_request.json",
+      "archived_path": "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/user_stop_request.json",
+      "source_sha256": "ac2b5971ef899368aaa0391082e0e1f4463f062ec5e6a9cecd1949fbec5f91a3",
+      "archived_sha256": "ac2b5971ef899368aaa0391082e0e1f4463f062ec5e6a9cecd1949fbec5f91a3",
+      "bytes": 346,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.095799+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/train.manifest.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/train.manifest.json",
+      "source_sha256": "8ec5fe0a8d175a9356294f45c83154ea62116599589b0e94b6bc551e4f94f74d",
+      "archived_sha256": "8ec5fe0a8d175a9356294f45c83154ea62116599589b0e94b6bc551e4f94f74d",
+      "bytes": 2040,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.096236+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/validation.manifest.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/validation.manifest.json",
+      "source_sha256": "d4363bf86325cbc040af5d2523e4a5574788f64601b70434f684d08cdd8d53cd",
+      "archived_sha256": "d4363bf86325cbc040af5d2523e4a5574788f64601b70434f684d08cdd8d53cd",
+      "bytes": 2060,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.096357+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/001/archive_manifest.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/001/archive_manifest.json",
+      "source_sha256": "e328549199048d1352eaa9d2eea6f3d122f04aa5015cd28b1afe685e6b7f29db",
+      "archived_sha256": "e328549199048d1352eaa9d2eea6f3d122f04aa5015cd28b1afe685e6b7f29db",
+      "bytes": 1260,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.096527+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/002/archive_manifest.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/002/archive_manifest.json",
+      "source_sha256": "d47de32c3d4de1064ec0a2873b2e18d87d4a4308889d7db5ee1c1f8f3a7f5059",
+      "archived_sha256": "d47de32c3d4de1064ec0a2873b2e18d87d4a4308889d7db5ee1c1f8f3a7f5059",
+      "bytes": 439,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.096685+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/002/heads/budget_12/layer_history.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/fit_attempts/002/heads/budget_12/layer_history.json",
+      "source_sha256": "0970bbcc07d23cb76c3f150f590810275bb825e74f87b48812b8773c08654ac1",
+      "archived_sha256": "0970bbcc07d23cb76c3f150f590810275bb825e74f87b48812b8773c08654ac1",
+      "bytes": 3549,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.096873+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/parallel_execution/queue_state.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/parallel_execution/queue_state.json",
+      "source_sha256": "59b0e1d3c31262f07c449387ba7f2f566c918b99dcca96488a5640eaaf2612e3",
+      "archived_sha256": "59b0e1d3c31262f07c449387ba7f2f566c918b99dcca96488a5640eaaf2612e3",
+      "bytes": 13430,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.097045+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/parallel_resource_protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/parallel_resource_protocol.json",
+      "source_sha256": "8cad95d333cb246750cbd35e188d989c75a1a62bb04575ab4a3c05654ccdc135",
+      "archived_sha256": "8cad95d333cb246750cbd35e188d989c75a1a62bb04575ab4a3c05654ccdc135",
+      "bytes": 10336,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.097186+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol.json",
+      "source_sha256": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+      "archived_sha256": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+      "bytes": 13234,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.097323+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol_registration.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol_registration.json",
+      "source_sha256": "2958b2bdaade7aa5d9b0c82d88d3a92c4e206d4156615e15ae4c5293b59863b9",
+      "archived_sha256": "2958b2bdaade7aa5d9b0c82d88d3a92c4e206d4156615e15ae4c5293b59863b9",
+      "bytes": 2316,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.097421+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/control_protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/control_protocol.json",
+      "source_sha256": "92aae7dcf841d543d65d210f91de0098e3fe477a7884eb8b10b9e383dd692172",
+      "archived_sha256": "92aae7dcf841d543d65d210f91de0098e3fe477a7884eb8b10b9e383dd692172",
+      "bytes": 29164,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.097619+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/control_registration.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/control_registration.json",
+      "source_sha256": "7ae0ffcbdbb03510575f4a23ca2a825aeecbc9ff0ad1617899271edb302b3525",
+      "archived_sha256": "7ae0ffcbdbb03510575f4a23ca2a825aeecbc9ff0ad1617899271edb302b3525",
+      "bytes": 92,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.097703+00:00"
+    },
+    {
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/state.json",
+      "archived_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/state.json",
+      "source_sha256": "ce3ebfda1a11828c7187a8f25f962369fe0de4df719cfa71bf8157bd52fe3d93",
+      "archived_sha256": "ce3ebfda1a11828c7187a8f25f962369fe0de4df719cfa71bf8157bd52fe3d93",
+      "bytes": 500,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.097784+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/arms.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/arms.json",
+      "source_sha256": "9298227d03ca68ed7acf0f968d63fc7c7cdf477a560241b98d31d21a78212765",
+      "archived_sha256": "9298227d03ca68ed7acf0f968d63fc7c7cdf477a560241b98d31d21a78212765",
+      "bytes": 102,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.098576+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/finalization/E03_s44_training_launch_receipt.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/finalization/E03_s44_training_launch_receipt.json",
+      "source_sha256": "e1f59a044fb9783a72c04a91ba0df4e54eac658e08c2ae533547622eb347975d",
+      "archived_sha256": "e1f59a044fb9783a72c04a91ba0df4e54eac658e08c2ae533547622eb347975d",
+      "bytes": 846,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.114104+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/protocol.json",
+      "source_sha256": "5b4953da8abe2d09d6ddc42b2ecea848edf92b6c90b5caedba5c55634798e24f",
+      "archived_sha256": "5b4953da8abe2d09d6ddc42b2ecea848edf92b6c90b5caedba5c55634798e24f",
+      "bytes": 5010,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.114250+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/registration.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/registration.json",
+      "source_sha256": "77ecff409ff7f6bc19a6eab33816193c85afeb250631842725f4647fe75730c8",
+      "archived_sha256": "77ecff409ff7f6bc19a6eab33816193c85afeb250631842725f4647fe75730c8",
+      "bytes": 527,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.114526+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s42/status.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s42/status.json",
+      "source_sha256": "94b04e146c7ef2131ff86705e0019c0c2081a6b9ce95b36cddb62fae55acc9c7",
+      "archived_sha256": "94b04e146c7ef2131ff86705e0019c0c2081a6b9ce95b36cddb62fae55acc9c7",
+      "bytes": 1470,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.114686+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s42/validation_history.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s42/validation_history.json",
+      "source_sha256": "f49106d1631f583eaab4b13351e032253a7ad6b56e325999cb33101daf5c26f7",
+      "archived_sha256": "f49106d1631f583eaab4b13351e032253a7ad6b56e325999cb33101daf5c26f7",
+      "bytes": 590,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.136255+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s43/status.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s43/status.json",
+      "source_sha256": "6614e91ebc7d852b5cf5546e788349c0d677e085bcebfa4872fcad99eb1ca2e4",
+      "archived_sha256": "6614e91ebc7d852b5cf5546e788349c0d677e085bcebfa4872fcad99eb1ca2e4",
+      "bytes": 1470,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.136520+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s43/validation_history.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s43/validation_history.json",
+      "source_sha256": "c537934b8f8c72973ab2c4b04b09331b9c31486a560cd499e8a10d230da9e826",
+      "archived_sha256": "c537934b8f8c72973ab2c4b04b09331b9c31486a560cd499e8a10d230da9e826",
+      "bytes": 444,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.153145+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s44/status.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s44/status.json",
+      "source_sha256": "ec3bf24be7c39d3a5ec348f5ca253cbc13b186a5cd305f7235273639a652a90f",
+      "archived_sha256": "ec3bf24be7c39d3a5ec348f5ca253cbc13b186a5cd305f7235273639a652a90f",
+      "bytes": 1468,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.153410+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s44/validation_history.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s44/validation_history.json",
+      "source_sha256": "caacd0de35b871f549d23e987d3412598fac7d65a9ee60284dc3f89c58b27052",
+      "archived_sha256": "caacd0de35b871f549d23e987d3412598fac7d65a9ee60284dc3f89c58b27052",
+      "bytes": 153,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.160923+00:00"
+    },
+    {
+      "source": "outputs/hanguard_e03_lora_multiseed_20261012/training_code_provenance_amendment.json",
+      "archived_path": "artifacts/outputs/hanguard_e03_lora_multiseed_20261012/training_code_provenance_amendment.json",
+      "source_sha256": "f728ba5c67326dad387de22ea88e786f28e0d3b641ee6b37f6d241e7a5f924e5",
+      "archived_sha256": "f728ba5c67326dad387de22ea88e786f28e0d3b641ee6b37f6d241e7a5f924e5",
+      "bytes": 5658,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.169084+00:00"
+    },
+    {
+      "source": "outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_0_history.json",
+      "archived_path": "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_0_history.json",
+      "source_sha256": "314f5c476b1db344465e4e0dd7286fe4fb32b5198ea958b8f7ac007a2b308889",
+      "archived_sha256": "314f5c476b1db344465e4e0dd7286fe4fb32b5198ea958b8f7ac007a2b308889",
+      "bytes": 6309,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.180935+00:00"
+    },
+    {
+      "source": "outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_1_history.json",
+      "archived_path": "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_1_history.json",
+      "source_sha256": "bf33af5127c3646033c2a6a611fa51238337a77075200fda37248fe79e79ab9f",
+      "archived_sha256": "bf33af5127c3646033c2a6a611fa51238337a77075200fda37248fe79e79ab9f",
+      "bytes": 6596,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.181282+00:00"
+    },
+    {
+      "source": "outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_2_history.json",
+      "archived_path": "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_2_history.json",
+      "source_sha256": "3b48752c181af809ece7cdcd7f1a37447c7738f9b95dd85b434ac5ca118c3544",
+      "archived_sha256": "3b48752c181af809ece7cdcd7f1a37447c7738f9b95dd85b434ac5ca118c3544",
+      "bytes": 6324,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.181493+00:00"
+    },
+    {
+      "source": "outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_3_history.json",
+      "archived_path": "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/base_probes/fold_3_history.json",
+      "source_sha256": "12a796ad6edeb3852cf4647f39df59a8e91fba3b006afb9c413d0748984ff99a",
+      "archived_sha256": "12a796ad6edeb3852cf4647f39df59a8e91fba3b006afb9c413d0748984ff99a",
+      "bytes": 6600,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.198776+00:00"
+    },
+    {
+      "source": "outputs/hanguard_oof_probe_logit_stack_20261012/protocol.json",
+      "archived_path": "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012/protocol.json",
+      "source_sha256": "8eea3e5c0f15664fad89f7b2703ac8919c7d3c9641540e1d2d7c9b515271febb",
+      "archived_sha256": "8eea3e5c0f15664fad89f7b2703ac8919c7d3c9641540e1d2d7c9b515271febb",
+      "bytes": 6567,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.198916+00:00"
+    },
+    {
+      "source": "outputs/hanguard_oof_probe_logit_stack_20261012_failed_precanonical/failure_record.json",
+      "archived_path": "artifacts/outputs/hanguard_oof_probe_logit_stack_20261012_failed_precanonical/failure_record.json",
+      "source_sha256": "689dd0393cd4a9377e51378b3d65558adea62b851efc1b90a7d89fad76c617e4",
+      "archived_sha256": "689dd0393cd4a9377e51378b3d65558adea62b851efc1b90a7d89fad76c617e4",
+      "bytes": 1272,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.202983+00:00"
+    },
+    {
+      "source": "outputs/hanguard_external_holdouts_20261012/lock.json",
+      "archived_path": "artifacts/outputs/hanguard_external_holdouts_20261012/lock.json",
+      "source_sha256": "e453615027687fddc1b98f17283e80ffc65b67c88054f70b9aad6cb0242e1b21",
+      "archived_sha256": "e453615027687fddc1b98f17283e80ffc65b67c88054f70b9aad6cb0242e1b21",
+      "bytes": 676,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.218306+00:00"
+    },
+    {
+      "source": "outputs/hanguard_external_holdouts_20261012/manifest.json",
+      "archived_path": "artifacts/outputs/hanguard_external_holdouts_20261012/manifest.json",
+      "source_sha256": "30a97d8d4d769dfa9c7e47c57bbee136592f1300ae647457ca20c7eff524586c",
+      "archived_sha256": "30a97d8d4d769dfa9c7e47c57bbee136592f1300ae647457ca20c7eff524586c",
+      "bytes": 5271,
+      "transformation": "verbatim",
+      "omitted_json_pointers": [],
+      "captured_at": "2026-10-15T13:51:35.226589+00:00"
+    }
+  ]
+}

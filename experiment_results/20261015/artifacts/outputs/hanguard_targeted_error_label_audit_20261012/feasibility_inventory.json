@@ -1,0 +1,503 @@
+{
+  "observed_at": "2026-10-12T10:14:33.130902+00:00",
+  "base_model": {
+    "path": "models/Qwen3.5-4B",
+    "index_sha256": "cf3f798ee02ba45f9622aa8892a47369ab667d0afbf154ee7c2212de42e6302d",
+    "shard_bytes": {
+      "model.safetensors-00001-of-00002.safetensors": 5329398688,
+      "model.safetensors-00002-of-00002.safetensors": 3990429408
+    }
+  },
+  "binary_lora_checkpoints": {
+    "count": 6,
+    "independent_training_seeds": [
+      42
+    ],
+    "runs": [
+      {
+        "run": "E03_s42",
+        "arm": "E03",
+        "seed": 42,
+        "configuration": {
+          "lora": true,
+          "mode": "last",
+          "readout": "mlp",
+          "objective": "bce"
+        },
+        "state": "complete",
+        "adapter": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E03_s42/adapter.pt",
+          "bytes": 28864366,
+          "sha256": "5283c5c6b210f33539a06a0583135875a27d86b6914127d17ffba5658691ae25"
+        },
+        "head": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E03_s42/head.pt",
+          "bytes": 1313552,
+          "sha256": "5b8ddad996e766e93fe13dd67a4ddae081f4d0e20e893c185d2382efab75c8ae"
+        },
+        "selection_seconds": 8631.350740681984,
+        "training_seconds": 8074.693461265939,
+        "test_accuracy": 0.9682437644638725
+      },
+      {
+        "run": "E04_s42",
+        "arm": "E04",
+        "seed": 42,
+        "configuration": {
+          "lora": true,
+          "mode": "fusion",
+          "readout": "mlp",
+          "objective": "bce"
+        },
+        "state": "complete",
+        "adapter": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E04_s42/adapter.pt",
+          "bytes": 28864366,
+          "sha256": "92a35dfae00bdd409f82766613bad7a9b853d3c4bc7c69c88af1a0adcca3ae43"
+        },
+        "head": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E04_s42/head.pt",
+          "bytes": 6633489,
+          "sha256": "ba799055bc62a57655999faabd9cfa886e2179de2ab77c4fa562d20c406a6086"
+        },
+        "selection_seconds": 8631.939487845986,
+        "training_seconds": 8071.417172897549,
+        "test_accuracy": 0.9704294163023913
+      },
+      {
+        "run": "E13_s42",
+        "arm": "E13",
+        "seed": 42,
+        "configuration": {
+          "lora": true,
+          "mode": "last",
+          "readout": "mlp",
+          "objective": "fixed"
+        },
+        "state": "complete",
+        "adapter": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E13_s42/adapter.pt",
+          "bytes": 28864366,
+          "sha256": "789d68e2494bbcbe97661e09a20dd213214f0c5b0a557236cb3edbc0c69434ab"
+        },
+        "head": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E13_s42/head.pt",
+          "bytes": 1313552,
+          "sha256": "979264f60580beb48417fec5f09b7932d3115b5f4ba8c060654a7405a7556b78"
+        },
+        "selection_seconds": 8721.119220910012,
+        "training_seconds": 8078.845176807838,
+        "test_accuracy": 0.9694008742607354
+      },
+      {
+        "run": "E14_s42",
+        "arm": "E14",
+        "seed": 42,
+        "configuration": {
+          "lora": true,
+          "mode": "last",
+          "readout": "mlp",
+          "objective": "dynamic"
+        },
+        "state": "complete",
+        "adapter": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E14_s42/adapter.pt",
+          "bytes": 28864366,
+          "sha256": "1bad93bb95391fae8e5efc7bd77f487e60b40b6cca0399f40ce71d524168f13c"
+        },
+        "head": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E14_s42/head.pt",
+          "bytes": 1313552,
+          "sha256": "2f16edaffccf03422dd4d17efc85354e0d2e0a5f86bb83909a34f20fb2949c25"
+        },
+        "selection_seconds": 8757.324094908021,
+        "training_seconds": 8146.799488823861,
+        "test_accuracy": 0.9692723065055284
+      },
+      {
+        "run": "E15_s42",
+        "arm": "E15",
+        "seed": 42,
+        "configuration": {
+          "lora": true,
+          "mode": "fusion",
+          "readout": "mlp",
+          "objective": "fixed"
+        },
+        "state": "complete",
+        "adapter": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E15_s42/adapter.pt",
+          "bytes": 28864366,
+          "sha256": "4a08b135da8db91b5971e793c1d2d2528aabfdeb2945175258fa8ebbdcf037e2"
+        },
+        "head": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E15_s42/head.pt",
+          "bytes": 6633489,
+          "sha256": "a320f52c9b7ef1780d2f12a17fedcb3acd426e05da272ae7da2f2d98d478c2ae"
+        },
+        "selection_seconds": 8995.773157352989,
+        "training_seconds": 8166.216048252187,
+        "test_accuracy": 0.9704294163023913
+      },
+      {
+        "run": "E16_s42",
+        "arm": "E16",
+        "seed": 42,
+        "configuration": {
+          "lora": true,
+          "mode": "fusion",
+          "readout": "mlp",
+          "objective": "dynamic"
+        },
+        "state": "complete",
+        "adapter": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E16_s42/adapter.pt",
+          "bytes": 28864366,
+          "sha256": "9e5c856969cd26f4d688df49c52594e9aa844c3b1aee06c088176cdefbccb544"
+        },
+        "head": {
+          "path": "outputs/hanguard_repaired_core_20260928/runs/E16_s42/head.pt",
+          "bytes": 6633489,
+          "sha256": "0e5ad7ae7fcd2c0ab4b4392fa3f90019b7295383c69b3c23d544d82c0506f4f5"
+        },
+        "selection_seconds": 9382.389769832022,
+        "training_seconds": 8523.591816285858,
+        "test_accuracy": 0.9694008742607354
+      }
+    ],
+    "interpretation": "Six different arm/objective adapters at seed 42; these are not six matched LoRA seed replicates."
+  },
+  "deployed_binary": {
+    "configuration": {
+      "mode": "fusion",
+      "readout": "mlp",
+      "width": 128,
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "threshold": 0.5133533670253186,
+      "lora": {
+        "rank": 8,
+        "alpha": 16,
+        "dropout": 0.05,
+        "target_modules": "model\\.language_model\\.layers\\.\\d+\\.(?:self_attn|linear_attn)\\.(?:q_proj|k_proj|v_proj|o_proj|in_proj_qkv|in_proj_z|in_proj_b|in_proj_a|out_proj)"
+      },
+      "adapter": {
+        "path": "binary_adapter.pt",
+        "sha256": "92a35dfae00bdd409f82766613bad7a9b853d3c4bc7c69c88af1a0adcca3ae43"
+      },
+      "head": {
+        "path": "binary_head.pt",
+        "sha256": "ba799055bc62a57655999faabd9cfa886e2179de2ab77c4fa562d20c406a6086"
+      }
+    },
+    "adapter": {
+      "path": "models/hanguard/binary_adapter.pt",
+      "bytes": 28864366,
+      "sha256": "92a35dfae00bdd409f82766613bad7a9b853d3c4bc7c69c88af1a0adcca3ae43"
+    },
+    "head": {
+      "path": "models/hanguard/binary_head.pt",
+      "bytes": 6633489,
+      "sha256": "ba799055bc62a57655999faabd9cfa886e2179de2ab77c4fa562d20c406a6086"
+    },
+    "identity": "Byte-identical to core E04_s42 adapter/head."
+  },
+  "frozen_e03_diagnostic": {
+    "adapter_source_arm": "E03_s42",
+    "adapter_sha256": "5283c5c6b210f33539a06a0583135875a27d86b6914127d17ffba5658691ae25",
+    "head_seeds": [
+      42,
+      43,
+      44
+    ],
+    "head_checkpoints": [
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/fusion_fixed.pt",
+        "bytes": 6634409,
+        "sha256": "5f1e948c9898dd95d5c4a063f5f7dd5fabbf6e80816b4cc3e327789daff0a429",
+        "head_seed": 42
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/fusion_selected.pt",
+        "bytes": 6634490,
+        "sha256": "e1d60357f35d21124e9e803709e940c85af7458452313c7df10caec1ab93ce50",
+        "head_seed": 42
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/last.pt",
+        "bytes": 1313808,
+        "sha256": "7843235dd97fe48e9500a1953bba52a3687ee5ba5944eed09e2176155361f306",
+        "head_seed": 42
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_42/repeat_last.pt",
+        "bytes": 6634318,
+        "sha256": "c88bf6b596e4b3b37cb249a78ee8ef34d84d9c17781b771c89b175f122a9a03e",
+        "head_seed": 42
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/fusion_fixed.pt",
+        "bytes": 6634409,
+        "sha256": "5a684b0840bdcb87730776dff31a601e7c4282be4f09f388fff21570f59bf15d",
+        "head_seed": 43
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/fusion_selected.pt",
+        "bytes": 6634490,
+        "sha256": "f9e6078732ffdd246b83c3997a55255bad8f38cbe373cc4713f3e87c7cd3a5dc",
+        "head_seed": 43
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/last.pt",
+        "bytes": 1313808,
+        "sha256": "1f4932799857444a94e1865d7222551c6d00955e834dc32675ff300cf037daaf",
+        "head_seed": 43
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_43/repeat_last.pt",
+        "bytes": 6634318,
+        "sha256": "a5b8904035e0b41619731dcbaaf7ff263bb7ae31b6efaf8dc3389d870cd47460",
+        "head_seed": 43
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/fusion_fixed.pt",
+        "bytes": 6634409,
+        "sha256": "a8110f7dc1403acb2bc497c8d37086287a2c61ab178fe8c6704c741bcf22f66d",
+        "head_seed": 44
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/fusion_selected.pt",
+        "bytes": 6634490,
+        "sha256": "2b48fe539ec7ff1155b5b0ff0ac3c0d5053cab795f8565f86a30de5fbaf8890c",
+        "head_seed": 44
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/last.pt",
+        "bytes": 1313808,
+        "sha256": "39e6d0d5eca4df51f147c3c62a43d7b052f1e6b640cb01800159ae8d06bb7f32",
+        "head_seed": 44
+      },
+      {
+        "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/heads/seed_44/repeat_last.pt",
+        "bytes": 6634318,
+        "sha256": "4b6a5258a2335e321975b8dc573507d109e763a63f7bee59805602afdcf83ab7",
+        "head_seed": 44
+      }
+    ],
+    "probe_checkpoint": {
+      "path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/probes/probe.pt",
+      "bytes": 329886,
+      "sha256": "281e7b6d9989e8007875dfe780d1f8a5459815b4984f9a9db60f0d0e6565cf54"
+    },
+    "feature_cache_bytes": 12728074624,
+    "interpretation": "Three head seeds share one E03_s42 frozen adapter and are not LoRA seed replicates."
+  },
+  "primary_category_heads": {
+    "count": 9,
+    "checkpoints": [
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s42/head.pt",
+        "bytes": 2880044,
+        "sha256": "319797076eb7188cb975620c967aa6728b0f58427d68db9a81e207eb4b576b98",
+        "method": "description_queries",
+        "head_seed": 42
+      },
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s43/head.pt",
+        "bytes": 2880044,
+        "sha256": "b09427a2d7bcedb0393e2c94476e18dc3e30d6b4edd182f360ce80a74bfe9ce0",
+        "method": "description_queries",
+        "head_seed": 43
+      },
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/description_queries_s44/head.pt",
+        "bytes": 2880044,
+        "sha256": "a34b1324eeff56fdc05fbfe47b0d921560d5c63b7b96877b3a6e740e9e882f94",
+        "method": "description_queries",
+        "head_seed": 44
+      },
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s42/head.pt",
+        "bytes": 2824464,
+        "sha256": "0d15c70d286f0eee3cfbf2fa7f46641ee30e2f61d8920ad52c9c323795c1dc78",
+        "method": "last_mlp",
+        "head_seed": 42
+      },
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s43/head.pt",
+        "bytes": 2824464,
+        "sha256": "7b2f1327705836e2e22506f7feea81ad0d8e81461b0c0dc36193053cd324d6fa",
+        "method": "last_mlp",
+        "head_seed": 43
+      },
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/last_mlp_s44/head.pt",
+        "bytes": 2824464,
+        "sha256": "fd3fb78110d0267bb02173e42d710e2a0eb94451042b757764d445e7095fd4fb",
+        "method": "last_mlp",
+        "head_seed": 44
+      },
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s42/head.pt",
+        "bytes": 2880044,
+        "sha256": "2f0d992597899337e5c08476bff818987fdb35bfb94f8b6fa0bdb1687bdf6778",
+        "method": "learned_queries",
+        "head_seed": 42
+      },
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s43/head.pt",
+        "bytes": 2880044,
+        "sha256": "4625442ebff4d52d6ea28817f2c9b2491efa95cd6ac504df9898f955d71f0d47",
+        "method": "learned_queries",
+        "head_seed": 43
+      },
+      {
+        "path": "outputs/hanguard_two_source_primary_20260928/runs/learned_queries_s44/head.pt",
+        "bytes": 2880044,
+        "sha256": "34b4411fcb2d913e65816d42efbe6e4360a62d4a20a7e85df4b345d57a4c76ac",
+        "method": "learned_queries",
+        "head_seed": 44
+      }
+    ],
+    "interpretation": "Head-only seeds on cached two-source features; WildGuard was intentionally excluded from category training/evaluation."
+  },
+  "fresh_e03_multiseed_study": {
+    "exists": true,
+    "path": "outputs/hanguard_e03_lora_multiseed_20261012",
+    "protocol_sha256": "5b4953da8abe2d09d6ddc42b2ecea848edf92b6c90b5caedba5c55634798e24f",
+    "registration": {
+      "state": "locked_for_training",
+      "protocol_sha256": "5b4953da8abe2d09d6ddc42b2ecea848edf92b6c90b5caedba5c55634798e24f",
+      "arms_sha256": "9298227d03ca68ed7acf0f968d63fc7c7cdf477a560241b98d31d21a78212765",
+      "source_protocol_sha256": "70826c18f855301ddb6a306f6eea16933a6b0aeca7a1438d60d356674bd36f64",
+      "source_arms_sha256": "87d780b33f28c96c70ca6a2cc1df149d0f66cf86c0d8774e687447f8e945077f",
+      "fresh_training": true,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "arm": "E03",
+      "test_access_before_all_selection": false
+    },
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "arms": [
+      "E03"
+    ],
+    "run_statuses": {
+      "E03_s42": {
+        "state": "head_warmup",
+        "arm": "E03",
+        "seed": 42,
+        "protocol_sha256": "5b4953da8abe2d09d6ddc42b2ecea848edf92b6c90b5caedba5c55634798e24f",
+        "arms_sha256": "9298227d03ca68ed7acf0f968d63fc7c7cdf477a560241b98d31d21a78212765",
+        "train_sha256": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+        "validation_sha256": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+        "phase": 0,
+        "epoch": 1,
+        "step": 171,
+        "total_steps": 1944,
+        "phase_step": 171,
+        "phase_steps": 486,
+        "rows": 21888,
+        "total_rows": 248620,
+        "elapsed_seconds": 368.9346224500332,
+        "training_seconds": 342.95404144655913,
+        "rows_per_second": 63.82196258040219,
+        "last_step": {
+          "phase": 0,
+          "phase_name": "head_warmup",
+          "epoch": 1,
+          "step": 171,
+          "main_step": 0,
+          "seconds": 2.509003888000734,
+          "bce": 0.38294482231140137,
+          "position_loss": 0.0,
+          "prototype_regularizer": 0.0,
+          "scl_loss": 0.0,
+          "rows": 128,
+          "tokens": 17874,
+          "padded_tokens": 22528,
+          "microbatches": 2,
+          "micro_sizes": [
+            64,
+            64
+          ],
+          "grad_norm": 0.5813397765159607,
+          "adapter_gradient_audited": false,
+          "adapter_active_tensors": null,
+          "adapter_attention_grad": false,
+          "adapter_linear_attention_grad": false,
+          "rows_per_second": 51.01626211587702,
+          "valid_tokens_per_second": 7123.942727024889,
+          "padded_tokens_per_second": 8978.862132394355
+        },
+        "pid": 2461084,
+        "updated": 1791800071.7506328
+      }
+    }
+  },
+  "measured_cost_evidence": {
+    "core_run_total_seconds": {
+      "E03_s42": 8631.350740681984,
+      "E04_s42": 8631.939487845986,
+      "E13_s42": 8721.119220910012,
+      "E14_s42": 8757.324094908021,
+      "E15_s42": 8995.773157352989,
+      "E16_s42": 9382.389769832022
+    },
+    "core_run_training_seconds": {
+      "E03_s42": 8074.693461265939,
+      "E04_s42": 8071.417172897549,
+      "E13_s42": 8078.845176807838,
+      "E14_s42": 8146.799488823861,
+      "E15_s42": 8166.216048252187,
+      "E16_s42": 8523.591816285858
+    },
+    "median_total_hours_per_run": 2.4275615716413936,
+    "one_adapter_full_32_layer_cache_bytes": 12728074624,
+    "observed_cache_extraction_approximation": {
+      "train_seconds_from_protocol_to_manifest_mtime": 1440.3062422275543,
+      "validation_seconds_from_train_to_validation_manifest_mtime": 257.9807827472687,
+      "test_seconds_from_barrier_to_manifest_mtime": 160.88407063484192,
+      "caution": "mtime deltas include setup/scheduling and are approximate, not instrumented timers."
+    }
+  },
+  "storage": {
+    "filesystem_total_bytes": 15873633447936,
+    "filesystem_used_bytes": 14222390038528,
+    "filesystem_free_bytes": 851181600768,
+    "current_diagnostic_directory_bytes": 12826107541
+  },
+  "external_holdouts": {
+    "registry": "outputs/hanguard_external_holdouts_20261012",
+    "registry_manifest_sha256": "30a97d8d4d769dfa9c7e47c57bbee136592f1300ae647457ca20c7eff524586c",
+    "state": "registered_unconsumed",
+    "prediction_artifacts": [],
+    "wildguard_selected_rows": 1698,
+    "wildguard_selected_groups": 1698,
+    "injection_rows": 18230,
+    "injection_groups": 18175
+  },
+  "feasibility_conclusion": {
+    "multi_lora_seed": "Executable now. A fresh immutable E03 seeds 42/43/44 study is registered and has begun; old E04/E13-E16 adapters cannot substitute for matched seeds.",
+    "new_external_holdout": "Executable once checkpoints and evaluation policy are frozen. Official WildGuard English test is the strongest local candidate; injection_defense is a secondary synthetic stress set only.",
+    "strict_hidden_blind_test": "Not available locally because labels and source files are repository-visible. A custodian-held or newly collected dual-adjudicated set is still required for a strict blind claim."
+  },
+  "material_risks": [
+    "The internal three-source test has already been explored and cannot support a new blind claim.",
+    "The official external candidate is English, so direct evaluation introduces language/domain shift; translating it introduces a translation pipeline that must be preregistered without score-based choice.",
+    "Official WildGuard labels are inherited and visible; 26 unlabeled rows and one normalized-overlap row are excluded.",
+    "Injection-defense prompts are synthetic transformations of earlier HanGuard content; zero full-prompt overlap does not imply semantic independence.",
+    "WildGuard primary category IDs lack a complete row-level provenance/adjudication trail and should not be treated as category gold.",
+    "The filesystem is highly utilized; each additional full all-layer adapter cache costs about 12.7 GB, though current free space is sufficient for a small number of seeds."
+  ]
+}

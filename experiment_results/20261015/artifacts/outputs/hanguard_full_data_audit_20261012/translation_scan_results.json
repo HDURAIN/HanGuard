@@ -1,0 +1,596 @@
+{
+  "scope": {
+    "all_retained_rows": 77686,
+    "retained_wildguard_rows": 43165,
+    "archive_wildguard_rows": 46187,
+    "splits": {
+      "test": 7778,
+      "train": 62155,
+      "validation": 7753
+    },
+    "no_predictions_or_model_error_sets_used": true,
+    "no_data_or_labels_changed": true,
+    "official_source": "WildGuardTrain",
+    "original_official_test_consumed": false
+  },
+  "provenance": {
+    "input_sha256": {
+      "data/three_source_translation_repaired/train.parquet": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+      "data/three_source_translation_repaired/validation.parquet": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+      "data/three_source_translation_repaired/test.parquet": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09",
+      "data/three_source_translation_repaired/full_repaired_archive.parquet": "d35f93d25bc6c3e67df28059d43a2aa2a6ce7e3b11bdaaaf4eb5bdfe09a075a5",
+      "outputs/hanguard_translation_repair_20260928/source_mapping.parquet": "c09de904dc1a97666e6ddaf6e1dcf407a096efe0e736ed2b97bee2766b10d02f",
+      "outputs/hanguard_translation_repair_20260928/source_diagnostics.parquet": "395c630cc58e1a63477a40f14c87ae92c21956861b21e4b20e1a87cbe910ed0a",
+      "data/sources/wildguard_en/train.parquet": "9844a24e5734be9c32cf9fa21340b919f2c5746cb2f81b220894e03d35ee7a92",
+      "models/Qwen3.5-4B/tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+    },
+    "script_sha256": "1f53d92c7140fcf80f35675ba482adc8e1bd0e891153adad7abefc631460a96f",
+    "prior_qa_sha256": "7d1fa4abb34fb97a5237cca88d60bb659de379b62f209b597742115486632e08",
+    "source_prompt_mismatch_count": 0,
+    "source_prompt_mismatch_base_ids": [],
+    "current_generation_model": "Qwen3.5-4B",
+    "old_generation": {
+      "input_limit": 512,
+      "max_new_tokens": 256
+    },
+    "current_generation": {
+      "input_truncation": false,
+      "max_model_len": 16384,
+      "output_budget": "adaptive source-length budget; exact stop reason recorded"
+    }
+  },
+  "established_pipeline_defect_counts_in_retained": {},
+  "historical_high_risk_rows_with_identical_current_old_text": 0,
+  "historical_high_risk_identical_base_ids": [],
+  "current_generation_metadata": {
+    "finish_reason": {
+      "stop": 43165
+    },
+    "input_truncated": {
+      "false": 43165
+    },
+    "eos_reached": {
+      "true": 43165
+    },
+    "translation_status": {
+      "ok": 43165
+    },
+    "translation_source": {
+      "model": 43132,
+      "recorded_bilingual_correction": 33
+    },
+    "translation_changed": {
+      "true": 43088,
+      "false": 77
+    }
+  },
+  "current_literal_protection": {
+    "rows_with_literal_spans": 100,
+    "total_spans": 145,
+    "replay_mismatch_rows": 0
+  },
+  "current_rules": {
+    "rows": 43165,
+    "candidate_rows": 7786,
+    "candidate_fraction": 0.1803776207575582,
+    "rule_counts": {
+      "added_refusal_candidate": 1,
+      "answer_instead_of_translation_candidate": 1,
+      "compound_negation_scope_review": 1,
+      "condition_anchor_missing_candidate": 623,
+      "large_untranslated_english_candidate": 1,
+      "lexical_pattern_gold_digger": 1,
+      "lexical_pattern_hanukkah_new_year": 1,
+      "lexical_pattern_pitch_fit": 1,
+      "lexical_pattern_prosthetic_exoskeleton": 1,
+      "lexical_pattern_red_herring_literal": 3,
+      "lexical_pattern_stop_sign_parking": 2,
+      "lexical_pattern_you_are_asked_role": 1,
+      "low_prose_coverage_ratio_candidate": 13,
+      "negation_anchor_missing": 2,
+      "non_english_source_candidate": 209,
+      "non_refusal_polarity_reversal_candidate": 1,
+      "numeric_anchor_added_or_changed": 3,
+      "numeric_anchor_missing_or_changed": 7,
+      "proper_name_spelling_policy_candidate": 7052,
+      "you_answer_i_ask_role_reversal_candidate": 3
+    }
+  },
+  "by_split": {
+    "test": {
+      "rows": 4326,
+      "candidate_rows": 783,
+      "candidate_fraction": 0.180998613037448,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 63,
+        "lexical_pattern_gold_digger": 1,
+        "lexical_pattern_hanukkah_new_year": 1,
+        "lexical_pattern_pitch_fit": 1,
+        "lexical_pattern_prosthetic_exoskeleton": 1,
+        "lexical_pattern_stop_sign_parking": 1,
+        "lexical_pattern_you_are_asked_role": 1,
+        "non_english_source_candidate": 25,
+        "non_refusal_polarity_reversal_candidate": 1,
+        "proper_name_spelling_policy_candidate": 706,
+        "you_answer_i_ask_role_reversal_candidate": 1
+      }
+    },
+    "train": {
+      "rows": 34537,
+      "candidate_rows": 6259,
+      "candidate_fraction": 0.18122593160957814,
+      "rule_counts": {
+        "added_refusal_candidate": 1,
+        "compound_negation_scope_review": 1,
+        "condition_anchor_missing_candidate": 494,
+        "large_untranslated_english_candidate": 1,
+        "lexical_pattern_red_herring_literal": 3,
+        "lexical_pattern_stop_sign_parking": 1,
+        "low_prose_coverage_ratio_candidate": 11,
+        "negation_anchor_missing": 2,
+        "non_english_source_candidate": 163,
+        "numeric_anchor_added_or_changed": 3,
+        "numeric_anchor_missing_or_changed": 6,
+        "proper_name_spelling_policy_candidate": 5683,
+        "you_answer_i_ask_role_reversal_candidate": 2
+      }
+    },
+    "validation": {
+      "rows": 4302,
+      "candidate_rows": 744,
+      "candidate_fraction": 0.17294281729428174,
+      "rule_counts": {
+        "answer_instead_of_translation_candidate": 1,
+        "condition_anchor_missing_candidate": 66,
+        "low_prose_coverage_ratio_candidate": 2,
+        "non_english_source_candidate": 21,
+        "numeric_anchor_missing_or_changed": 1,
+        "proper_name_spelling_policy_candidate": 663
+      }
+    }
+  },
+  "by_source_length": {
+    "1-32": {
+      "rows": 19902,
+      "candidate_rows": 2523,
+      "candidate_fraction": 0.1267711787760024,
+      "rule_counts": {
+        "added_refusal_candidate": 1,
+        "answer_instead_of_translation_candidate": 1,
+        "condition_anchor_missing_candidate": 106,
+        "lexical_pattern_gold_digger": 1,
+        "lexical_pattern_pitch_fit": 1,
+        "lexical_pattern_red_herring_literal": 1,
+        "lexical_pattern_stop_sign_parking": 2,
+        "negation_anchor_missing": 2,
+        "non_english_source_candidate": 111,
+        "numeric_anchor_added_or_changed": 3,
+        "numeric_anchor_missing_or_changed": 7,
+        "proper_name_spelling_policy_candidate": 2306
+      }
+    },
+    "1025-2048": {
+      "rows": 5,
+      "candidate_rows": 5,
+      "candidate_fraction": 1.0,
+      "rule_counts": {
+        "non_english_source_candidate": 3,
+        "proper_name_spelling_policy_candidate": 4
+      }
+    },
+    "129-256": {
+      "rows": 10774,
+      "candidate_rows": 2270,
+      "candidate_fraction": 0.2106924076480416,
+      "rule_counts": {
+        "compound_negation_scope_review": 1,
+        "condition_anchor_missing_candidate": 288,
+        "lexical_pattern_prosthetic_exoskeleton": 1,
+        "low_prose_coverage_ratio_candidate": 5,
+        "non_english_source_candidate": 30,
+        "proper_name_spelling_policy_candidate": 1997,
+        "you_answer_i_ask_role_reversal_candidate": 3
+      }
+    },
+    "2049-4096": {
+      "rows": 1,
+      "candidate_rows": 1,
+      "candidate_fraction": 1.0,
+      "rule_counts": {
+        "large_untranslated_english_candidate": 1,
+        "non_english_source_candidate": 1
+      }
+    },
+    "257-512": {
+      "rows": 3334,
+      "candidate_rows": 1078,
+      "candidate_fraction": 0.3233353329334133,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 48,
+        "lexical_pattern_red_herring_literal": 1,
+        "low_prose_coverage_ratio_candidate": 4,
+        "non_english_source_candidate": 16,
+        "non_refusal_polarity_reversal_candidate": 1,
+        "proper_name_spelling_policy_candidate": 1032
+      }
+    },
+    "33-128": {
+      "rows": 8973,
+      "candidate_rows": 1822,
+      "candidate_fraction": 0.20305360526022512,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 181,
+        "lexical_pattern_hanukkah_new_year": 1,
+        "lexical_pattern_red_herring_literal": 1,
+        "lexical_pattern_you_are_asked_role": 1,
+        "low_prose_coverage_ratio_candidate": 4,
+        "non_english_source_candidate": 42,
+        "proper_name_spelling_policy_candidate": 1630
+      }
+    },
+    "513-1024": {
+      "rows": 176,
+      "candidate_rows": 87,
+      "candidate_fraction": 0.4943181818181818,
+      "rule_counts": {
+        "non_english_source_candidate": 6,
+        "proper_name_spelling_policy_candidate": 83
+      }
+    }
+  },
+  "by_target_length": {
+    "1-128": {
+      "rows": 32602,
+      "candidate_rows": 5066,
+      "candidate_fraction": 0.15538923992393106,
+      "rule_counts": {
+        "added_refusal_candidate": 1,
+        "answer_instead_of_translation_candidate": 1,
+        "compound_negation_scope_review": 1,
+        "condition_anchor_missing_candidate": 429,
+        "lexical_pattern_gold_digger": 1,
+        "lexical_pattern_hanukkah_new_year": 1,
+        "lexical_pattern_pitch_fit": 1,
+        "lexical_pattern_red_herring_literal": 2,
+        "lexical_pattern_stop_sign_parking": 2,
+        "lexical_pattern_you_are_asked_role": 1,
+        "low_prose_coverage_ratio_candidate": 11,
+        "negation_anchor_missing": 2,
+        "non_english_source_candidate": 166,
+        "numeric_anchor_added_or_changed": 3,
+        "numeric_anchor_missing_or_changed": 7,
+        "proper_name_spelling_policy_candidate": 4522
+      }
+    },
+    "1025-2048": {
+      "rows": 5,
+      "candidate_rows": 5,
+      "candidate_fraction": 1.0,
+      "rule_counts": {
+        "non_english_source_candidate": 2,
+        "proper_name_spelling_policy_candidate": 4
+      }
+    },
+    "129-256": {
+      "rows": 8448,
+      "candidate_rows": 1918,
+      "candidate_fraction": 0.22703598484848486,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 167,
+        "lexical_pattern_prosthetic_exoskeleton": 1,
+        "low_prose_coverage_ratio_candidate": 2,
+        "non_english_source_candidate": 21,
+        "proper_name_spelling_policy_candidate": 1757,
+        "you_answer_i_ask_role_reversal_candidate": 3
+      }
+    },
+    "2049-4096": {
+      "rows": 1,
+      "candidate_rows": 1,
+      "candidate_fraction": 1.0,
+      "rule_counts": {
+        "large_untranslated_english_candidate": 1,
+        "non_english_source_candidate": 1
+      }
+    },
+    "257-370": {
+      "rows": 1708,
+      "candidate_rows": 594,
+      "candidate_fraction": 0.3477751756440281,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 26,
+        "lexical_pattern_red_herring_literal": 1,
+        "non_english_source_candidate": 10,
+        "proper_name_spelling_policy_candidate": 573
+      }
+    },
+    "371-512": {
+      "rows": 328,
+      "candidate_rows": 163,
+      "candidate_fraction": 0.4969512195121951,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 1,
+        "non_english_source_candidate": 5,
+        "non_refusal_polarity_reversal_candidate": 1,
+        "proper_name_spelling_policy_candidate": 158
+      }
+    },
+    "513-1024": {
+      "rows": 73,
+      "candidate_rows": 39,
+      "candidate_fraction": 0.5342465753424658,
+      "rule_counts": {
+        "non_english_source_candidate": 4,
+        "proper_name_spelling_policy_candidate": 38
+      }
+    }
+  },
+  "by_text_shape": {
+    "code_or_code_like": {
+      "rows": 69,
+      "candidate_rows": 7,
+      "candidate_fraction": 0.10144927536231885,
+      "rule_counts": {
+        "proper_name_spelling_policy_candidate": 7
+      }
+    },
+    "dialogue_roles": {
+      "rows": 45,
+      "candidate_rows": 7,
+      "candidate_fraction": 0.15555555555555556,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 1,
+        "proper_name_spelling_policy_candidate": 6
+      }
+    },
+    "list": {
+      "rows": 1797,
+      "candidate_rows": 574,
+      "candidate_fraction": 0.31942125765164164,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 24,
+        "lexical_pattern_red_herring_literal": 1,
+        "non_english_source_candidate": 10,
+        "proper_name_spelling_policy_candidate": 548
+      }
+    },
+    "multiple_lines": {
+      "rows": 3587,
+      "candidate_rows": 958,
+      "candidate_fraction": 0.2670755505993867,
+      "rule_counts": {
+        "condition_anchor_missing_candidate": 55,
+        "large_untranslated_english_candidate": 1,
+        "low_prose_coverage_ratio_candidate": 7,
+        "non_english_source_candidate": 24,
+        "non_refusal_polarity_reversal_candidate": 1,
+        "proper_name_spelling_policy_candidate": 902
+      }
+    },
+    "prose": {
+      "rows": 37667,
+      "candidate_rows": 6240,
+      "candidate_fraction": 0.16566225077654181,
+      "rule_counts": {
+        "added_refusal_candidate": 1,
+        "answer_instead_of_translation_candidate": 1,
+        "compound_negation_scope_review": 1,
+        "condition_anchor_missing_candidate": 543,
+        "lexical_pattern_gold_digger": 1,
+        "lexical_pattern_hanukkah_new_year": 1,
+        "lexical_pattern_pitch_fit": 1,
+        "lexical_pattern_prosthetic_exoskeleton": 1,
+        "lexical_pattern_red_herring_literal": 2,
+        "lexical_pattern_stop_sign_parking": 2,
+        "lexical_pattern_you_are_asked_role": 1,
+        "low_prose_coverage_ratio_candidate": 6,
+        "negation_anchor_missing": 2,
+        "non_english_source_candidate": 175,
+        "numeric_anchor_added_or_changed": 3,
+        "numeric_anchor_missing_or_changed": 7,
+        "proper_name_spelling_policy_candidate": 5589,
+        "you_answer_i_ask_role_reversal_candidate": 3
+      }
+    }
+  },
+  "by_translation_status": {
+    "ok": {
+      "rows": 43165,
+      "candidate_rows": 7786,
+      "candidate_fraction": 0.1803776207575582,
+      "rule_counts": {
+        "added_refusal_candidate": 1,
+        "answer_instead_of_translation_candidate": 1,
+        "compound_negation_scope_review": 1,
+        "condition_anchor_missing_candidate": 623,
+        "large_untranslated_english_candidate": 1,
+        "lexical_pattern_gold_digger": 1,
+        "lexical_pattern_hanukkah_new_year": 1,
+        "lexical_pattern_pitch_fit": 1,
+        "lexical_pattern_prosthetic_exoskeleton": 1,
+        "lexical_pattern_red_herring_literal": 3,
+        "lexical_pattern_stop_sign_parking": 2,
+        "lexical_pattern_you_are_asked_role": 1,
+        "low_prose_coverage_ratio_candidate": 13,
+        "negation_anchor_missing": 2,
+        "non_english_source_candidate": 209,
+        "non_refusal_polarity_reversal_candidate": 1,
+        "numeric_anchor_added_or_changed": 3,
+        "numeric_anchor_missing_or_changed": 7,
+        "proper_name_spelling_policy_candidate": 7052,
+        "you_answer_i_ask_role_reversal_candidate": 3
+      }
+    }
+  },
+  "by_translation_changed": {
+    "False": {
+      "rows": 77,
+      "candidate_rows": 9,
+      "candidate_fraction": 0.11688311688311688,
+      "rule_counts": {
+        "non_english_source_candidate": 6,
+        "proper_name_spelling_policy_candidate": 3
+      }
+    },
+    "True": {
+      "rows": 43088,
+      "candidate_rows": 7777,
+      "candidate_fraction": 0.18049108800594132,
+      "rule_counts": {
+        "added_refusal_candidate": 1,
+        "answer_instead_of_translation_candidate": 1,
+        "compound_negation_scope_review": 1,
+        "condition_anchor_missing_candidate": 623,
+        "large_untranslated_english_candidate": 1,
+        "lexical_pattern_gold_digger": 1,
+        "lexical_pattern_hanukkah_new_year": 1,
+        "lexical_pattern_pitch_fit": 1,
+        "lexical_pattern_prosthetic_exoskeleton": 1,
+        "lexical_pattern_red_herring_literal": 3,
+        "lexical_pattern_stop_sign_parking": 2,
+        "lexical_pattern_you_are_asked_role": 1,
+        "low_prose_coverage_ratio_candidate": 13,
+        "negation_anchor_missing": 2,
+        "non_english_source_candidate": 203,
+        "non_refusal_polarity_reversal_candidate": 1,
+        "numeric_anchor_added_or_changed": 3,
+        "numeric_anchor_missing_or_changed": 7,
+        "proper_name_spelling_policy_candidate": 7049,
+        "you_answer_i_ask_role_reversal_candidate": 3
+      }
+    }
+  },
+  "by_translation_source": {
+    "model": {
+      "rows": 43132,
+      "candidate_rows": 7779,
+      "candidate_fraction": 0.18035333395159048,
+      "rule_counts": {
+        "added_refusal_candidate": 1,
+        "answer_instead_of_translation_candidate": 1,
+        "condition_anchor_missing_candidate": 623,
+        "large_untranslated_english_candidate": 1,
+        "lexical_pattern_gold_digger": 1,
+        "lexical_pattern_hanukkah_new_year": 1,
+        "lexical_pattern_pitch_fit": 1,
+        "lexical_pattern_prosthetic_exoskeleton": 1,
+        "lexical_pattern_red_herring_literal": 3,
+        "lexical_pattern_stop_sign_parking": 2,
+        "lexical_pattern_you_are_asked_role": 1,
+        "low_prose_coverage_ratio_candidate": 13,
+        "negation_anchor_missing": 2,
+        "non_english_source_candidate": 209,
+        "non_refusal_polarity_reversal_candidate": 1,
+        "numeric_anchor_added_or_changed": 3,
+        "numeric_anchor_missing_or_changed": 6,
+        "proper_name_spelling_policy_candidate": 7047,
+        "you_answer_i_ask_role_reversal_candidate": 3
+      }
+    },
+    "recorded_bilingual_correction": {
+      "rows": 33,
+      "candidate_rows": 7,
+      "candidate_fraction": 0.21212121212121213,
+      "rule_counts": {
+        "compound_negation_scope_review": 1,
+        "numeric_anchor_missing_or_changed": 1,
+        "proper_name_spelling_policy_candidate": 5
+      }
+    }
+  },
+  "source_language_candidate_counts": {
+    "no_non_en_trigger": 42956,
+    "zh_or_ja_han_script_candidate": 75,
+    "ru_or_cyrillic_script_candidate": 61,
+    "es_lexical_candidate": 20,
+    "fr_lexical_candidate": 19,
+    "ar_script_candidate": 11,
+    "pt_lexical_candidate": 8,
+    "de_lexical_candidate": 5,
+    "el_script_candidate": 4,
+    "ja_kana_script_candidate": 3,
+    "he_script_candidate": 1,
+    "ko_script_candidate": 1,
+    "it_lexical_candidate": 1
+  },
+  "target_source_token_ratio_quantiles": {
+    "0": 0.2,
+    "0.01": 0.5555555555555556,
+    "0.05": 0.6666666666666666,
+    "0.5": 0.8515625,
+    "0.95": 1.0909090909090908,
+    "0.99": 1.2857142857142858,
+    "1": 2.5
+  },
+  "old_limit_risk_disposition": {
+    "source_over_512": {
+      "archive": 549,
+      "retained": 400,
+      "quarantined": 149
+    },
+    "old_target_near_256": {
+      "archive": 2700,
+      "retained": 2317,
+      "quarantined": 383
+    },
+    "generation_length_limit": {
+      "archive": 40,
+      "retained": 0,
+      "quarantined": 40
+    },
+    "input_truncated": {
+      "archive": 0,
+      "retained": 0,
+      "quarantined": 0
+    },
+    "generation_issues": {
+      "archive": 0,
+      "retained": 0,
+      "quarantined": 0
+    },
+    "literal_issues": {
+      "archive": 5,
+      "retained": 0,
+      "quarantined": 5
+    },
+    "unprotected_code_issues": {
+      "archive": 6,
+      "retained": 0,
+      "quarantined": 6
+    }
+  },
+  "all_source_format_counts": {
+    "chinese_curated": {
+      "empty_prompt": 0,
+      "contains_replacement_character": 1,
+      "contains_nul": 0,
+      "new_replacement_character": 0,
+      "unrestored_literal": 0
+    },
+    "jailbench": {
+      "empty_prompt": 0,
+      "contains_replacement_character": 0,
+      "contains_nul": 0,
+      "new_replacement_character": 0,
+      "unrestored_literal": 0
+    },
+    "wildguard_zh": {
+      "empty_prompt": 0,
+      "contains_replacement_character": 4,
+      "contains_nul": 0,
+      "new_replacement_character": 0,
+      "unrestored_literal": 0
+    }
+  },
+  "limitations": [
+    "Rule flags are review candidates; all-clear does not certify semantic equivalence.",
+    "No full-corpus human or assistant semantic review has been conducted.",
+    "Source-language dictionaries only detect strong script/lexical candidates and do not identify all languages.",
+    "Chinese transliteration can be semantically correct even when the requested literal name policy is not obeyed.",
+    "Conditional, number, tail, ratio and lexical rules have false positives and false negatives.",
+    "Historical NLLB target re-encoding near 256 cannot prove a generation cap was hit.",
+    "The selected strong-signal sample is not a prevalence estimate and contains no model-derived selections."
+  ],
+  "strong_signal_sample_rows": 26,
+  "inputs_unchanged_at_end": true
+}

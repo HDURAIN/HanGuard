@@ -1,0 +1,26 @@
+{
+  "state": "failed_pre_artifact_protocol_run",
+  "recorded_at": "2026-10-12T10:49:57.332782+00:00",
+  "failure": "AssertionError: Pool L32 and matched repeat-L32 training diverged",
+  "failure_stage": "outer fold 0 after training and before any fold prediction/checkpoint was persisted",
+  "registered_protocol_sha256": "28a06fa2f52260653eacc199d24a4923210186dc88f525dbce789929478f7750",
+  "registered_code_sha256": "065eaf9445e159439d8a337dbebb783eb8753b7f89c0cd4e3485f4655768b05f",
+  "persisted_files_before_failure": [
+    "protocol.json",
+    "base_probes/folds.parquet"
+  ],
+  "fold_checkpoint_or_prediction_artifacts": false,
+  "test_barrier_or_test_access": false,
+  "exact_reproduction": {
+    "fold": 0,
+    "epochs": 20,
+    "training_rows": 49818,
+    "heldout_rows": 12337,
+    "weight_max_absolute_difference": 8.940696716308594e-08,
+    "bias_max_absolute_difference": 3.725290298461914e-09,
+    "logit_max_absolute_difference": 3.814697265625e-06,
+    "parameters_byte_equal": false,
+    "cause": "mathematically identical slot computed in K=32 and K=4 GPU kernels accumulated floating-point reduction differences"
+  },
+  "disposition": "archive this pre-result run intact; restart from a new protocol after canonical matched-L32 implementation review"
+}

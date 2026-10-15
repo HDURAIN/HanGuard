@@ -1,0 +1,348 @@
+{
+  "validation": {
+    "fixed": {
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "anchor_errors": 204,
+      "oracle_errors": 86,
+      "oracle_accuracy": 0.9889075196698053,
+      "rescued_rows": 118,
+      "rescued_unique_groups": 118,
+      "rescue_rate": 0.5784313725490197,
+      "by_source": {
+        "chinese_curated": {
+          "rows": 2692,
+          "anchor_errors": 9,
+          "rescued_rows": 5,
+          "oracle_errors": 4,
+          "rescued_unique_groups": 5
+        },
+        "jailbench": {
+          "rows": 759,
+          "anchor_errors": 0,
+          "rescued_rows": 0,
+          "oracle_errors": 0,
+          "rescued_unique_groups": 0
+        },
+        "wildguard_zh": {
+          "rows": 4302,
+          "anchor_errors": 195,
+          "rescued_rows": 113,
+          "oracle_errors": 82,
+          "rescued_unique_groups": 113
+        }
+      }
+    },
+    "selected": {
+      "layers": [
+        17,
+        18,
+        28,
+        32
+      ],
+      "anchor_errors": 204,
+      "oracle_errors": 107,
+      "oracle_accuracy": 0.986198890751967,
+      "rescued_rows": 97,
+      "rescued_unique_groups": 97,
+      "rescue_rate": 0.47549019607843135,
+      "by_source": {
+        "chinese_curated": {
+          "rows": 2692,
+          "anchor_errors": 9,
+          "rescued_rows": 7,
+          "oracle_errors": 2,
+          "rescued_unique_groups": 7
+        },
+        "jailbench": {
+          "rows": 759,
+          "anchor_errors": 0,
+          "rescued_rows": 0,
+          "oracle_errors": 0,
+          "rescued_unique_groups": 0
+        },
+        "wildguard_zh": {
+          "rows": 4302,
+          "anchor_errors": 195,
+          "rescued_rows": 90,
+          "oracle_errors": 105,
+          "rescued_unique_groups": 90
+        }
+      }
+    }
+  },
+  "test": {
+    "fixed": {
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "anchor_errors": 257,
+      "oracle_errors": 107,
+      "oracle_accuracy": 0.9862432501928516,
+      "rescued_rows": 150,
+      "rescued_unique_groups": 146,
+      "rescue_rate": 0.5836575875486382,
+      "by_source": {
+        "chinese_curated": {
+          "rows": 2691,
+          "anchor_errors": 12,
+          "rescued_rows": 7,
+          "oracle_errors": 5,
+          "rescued_unique_groups": 7
+        },
+        "jailbench": {
+          "rows": 761,
+          "anchor_errors": 7,
+          "rescued_rows": 5,
+          "oracle_errors": 2,
+          "rescued_unique_groups": 1
+        },
+        "wildguard_zh": {
+          "rows": 4326,
+          "anchor_errors": 238,
+          "rescued_rows": 138,
+          "oracle_errors": 100,
+          "rescued_unique_groups": 138
+        }
+      }
+    },
+    "selected": {
+      "layers": [
+        17,
+        18,
+        28,
+        32
+      ],
+      "anchor_errors": 257,
+      "oracle_errors": 151,
+      "oracle_accuracy": 0.9805862689637439,
+      "rescued_rows": 106,
+      "rescued_unique_groups": 103,
+      "rescue_rate": 0.41245136186770426,
+      "by_source": {
+        "chinese_curated": {
+          "rows": 2691,
+          "anchor_errors": 12,
+          "rescued_rows": 4,
+          "oracle_errors": 8,
+          "rescued_unique_groups": 4
+        },
+        "jailbench": {
+          "rows": 761,
+          "anchor_errors": 7,
+          "rescued_rows": 4,
+          "oracle_errors": 3,
+          "rescued_unique_groups": 1
+        },
+        "wildguard_zh": {
+          "rows": 4326,
+          "anchor_errors": 238,
+          "rescued_rows": 98,
+          "oracle_errors": 140,
+          "rescued_unique_groups": 98
+        }
+      }
+    }
+  },
+  "head_group_source": {
+    "42": {
+      "fusion_fixed": {
+        "row_delta": 0.0003857032656209823,
+        "group_equal_delta": 0.0005570504649955153,
+        "fix_rows": 51,
+        "harm_rows": 48,
+        "fix_groups": 51,
+        "harm_groups": 48,
+        "by_source": {
+          "chinese_curated": {
+            "delta": -0.0003716090672612412,
+            "fix_rows": 2,
+            "harm_rows": 3,
+            "fix_groups": 2,
+            "harm_groups": 3
+          },
+          "jailbench": {
+            "delta": -0.001314060446780552,
+            "fix_rows": 0,
+            "harm_rows": 1,
+            "fix_groups": 0,
+            "harm_groups": 1
+          },
+          "wildguard_zh": {
+            "delta": 0.001155802126675913,
+            "fix_rows": 49,
+            "harm_rows": 44,
+            "fix_groups": 49,
+            "harm_groups": 44
+          }
+        }
+      },
+      "fusion_selected": {
+        "row_delta": 0.001414245307276935,
+        "group_equal_delta": 0.0016900344615965633,
+        "fix_rows": 45,
+        "harm_rows": 34,
+        "fix_groups": 45,
+        "harm_groups": 34,
+        "by_source": {
+          "chinese_curated": {
+            "delta": -0.0003716090672612412,
+            "fix_rows": 2,
+            "harm_rows": 3,
+            "fix_groups": 2,
+            "harm_groups": 3
+          },
+          "jailbench": {
+            "delta": -0.001314060446780552,
+            "fix_rows": 0,
+            "harm_rows": 1,
+            "fix_groups": 0,
+            "harm_groups": 1
+          },
+          "wildguard_zh": {
+            "delta": 0.003005085529357374,
+            "fix_rows": 43,
+            "harm_rows": 30,
+            "fix_groups": 43,
+            "harm_groups": 30
+          }
+        }
+      }
+    },
+    "43": {
+      "fusion_fixed": {
+        "row_delta": 0.0024427873489328874,
+        "group_equal_delta": 0.002690836991927489,
+        "fix_rows": 61,
+        "harm_rows": 42,
+        "fix_groups": 61,
+        "harm_groups": 42,
+        "by_source": {
+          "chinese_curated": {
+            "delta": 0.0011148272017837235,
+            "fix_rows": 4,
+            "harm_rows": 1,
+            "fix_groups": 4,
+            "harm_groups": 1
+          },
+          "jailbench": {
+            "delta": 0.0,
+            "fix_rows": 1,
+            "harm_rows": 1,
+            "fix_groups": 1,
+            "harm_groups": 1
+          },
+          "wildguard_zh": {
+            "delta": 0.0036985668053629217,
+            "fix_rows": 56,
+            "harm_rows": 40,
+            "fix_groups": 56,
+            "harm_groups": 40
+          }
+        }
+      },
+      "fusion_selected": {
+        "row_delta": 0.002957058369760864,
+        "group_equal_delta": 0.0031251475239578905,
+        "fix_rows": 76,
+        "harm_rows": 53,
+        "fix_groups": 76,
+        "harm_groups": 53,
+        "by_source": {
+          "chinese_curated": {
+            "delta": 0.0003716090672612412,
+            "fix_rows": 3,
+            "harm_rows": 2,
+            "fix_groups": 3,
+            "harm_groups": 2
+          },
+          "jailbench": {
+            "delta": 0.001314060446780552,
+            "fix_rows": 1,
+            "harm_rows": 0,
+            "fix_groups": 1,
+            "harm_groups": 0
+          },
+          "wildguard_zh": {
+            "delta": 0.0048543689320388345,
+            "fix_rows": 72,
+            "harm_rows": 51,
+            "fix_groups": 72,
+            "harm_groups": 51
+          }
+        }
+      }
+    },
+    "44": {
+      "fusion_fixed": {
+        "row_delta": -0.0020570840833119054,
+        "group_equal_delta": -0.0021337865269319737,
+        "fix_rows": 45,
+        "harm_rows": 61,
+        "fix_groups": 45,
+        "harm_groups": 61,
+        "by_source": {
+          "chinese_curated": {
+            "delta": 0.0003716090672612412,
+            "fix_rows": 3,
+            "harm_rows": 2,
+            "fix_groups": 3,
+            "harm_groups": 2
+          },
+          "jailbench": {
+            "delta": -0.001314060446780552,
+            "fix_rows": 0,
+            "harm_rows": 1,
+            "fix_groups": 0,
+            "harm_groups": 1
+          },
+          "wildguard_zh": {
+            "delta": -0.0036985668053629217,
+            "fix_rows": 42,
+            "harm_rows": 58,
+            "fix_groups": 42,
+            "harm_groups": 58
+          }
+        }
+      },
+      "fusion_selected": {
+        "row_delta": -0.004114168166623811,
+        "group_equal_delta": -0.00439975452013407,
+        "fix_rows": 42,
+        "harm_rows": 74,
+        "fix_groups": 42,
+        "harm_groups": 74,
+        "by_source": {
+          "chinese_curated": {
+            "delta": -0.0007432181345224824,
+            "fix_rows": 2,
+            "harm_rows": 4,
+            "fix_groups": 2,
+            "harm_groups": 4
+          },
+          "jailbench": {
+            "delta": -0.001314060446780552,
+            "fix_rows": 0,
+            "harm_rows": 1,
+            "fix_groups": 0,
+            "harm_groups": 1
+          },
+          "wildguard_zh": {
+            "delta": -0.006703652334720296,
+            "fix_rows": 40,
+            "harm_rows": 69,
+            "fix_groups": 40,
+            "harm_groups": 69
+          }
+        }
+      }
+    }
+  }
+}

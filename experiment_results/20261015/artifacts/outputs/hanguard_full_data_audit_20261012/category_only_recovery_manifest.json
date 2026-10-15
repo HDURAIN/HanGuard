@@ -1,0 +1,138 @@
+{
+  "audit": "category_only_old_exclusion_binary_recovery_candidate_manifest",
+  "uses_model_predictions": false,
+  "changes_active_data": false,
+  "changes_labels": false,
+  "changes_splits": false,
+  "old_conflict_member_rows": 7317,
+  "category_only_chinese_groups": 2638,
+  "category_only_member_rows": 7229,
+  "unit_definition": {
+    "wildguard_original": "NFKC/casefold/drop Cf/remove whitespace of complete official prompt + unchanged official binary label; source response rows collapse to prompt identity.",
+    "native_chinese": "Same normalization of complete original Chinese + unchanged project/source binary label, pooled across curated and JailBench.",
+    "language_identity_scope": "English and native Chinese are separate exact identity domains; cross-language semantic equivalence is not assumed.",
+    "normalization_limitation": "Recorded strict identity rule removes whitespace; different code whitespace or normalized formatting can require review."
+  },
+  "counts": {
+    "candidate_units": 2668,
+    "source_member_rows": 7229,
+    "overlap_current_units": 33,
+    "overlap_current_member_rows": 33,
+    "net_new_units": 2635,
+    "all_original_source_units_within_4096": 2668,
+    "net_new_original_source_units_within_4096": 2635,
+    "all_old_chinese_units_within_4096": 2668,
+    "raw_original_binary_conflict_units": 0,
+    "old_chinese_many_to_one_candidate_units": 39,
+    "split_constraint_conflict_units": 0,
+    "split_assignment_unknown_units": 1952
+  },
+  "by_identity_kind": {
+    "native_chinese": {
+      "candidate_units": 683,
+      "source_member_rows": 1366,
+      "overlap_current_units": 0,
+      "overlap_current_member_rows": 0,
+      "net_new_units": 683,
+      "all_original_source_units_within_4096": 683,
+      "net_new_original_source_units_within_4096": 683,
+      "all_old_chinese_units_within_4096": 683,
+      "raw_original_binary_conflict_units": 0,
+      "old_chinese_many_to_one_candidate_units": 0,
+      "split_constraint_conflict_units": 0,
+      "split_assignment_unknown_units": 0
+    },
+    "wildguard_original": {
+      "candidate_units": 1985,
+      "source_member_rows": 5863,
+      "overlap_current_units": 33,
+      "overlap_current_member_rows": 33,
+      "net_new_units": 1952,
+      "all_original_source_units_within_4096": 1985,
+      "net_new_original_source_units_within_4096": 1952,
+      "all_old_chinese_units_within_4096": 1985,
+      "raw_original_binary_conflict_units": 0,
+      "old_chinese_many_to_one_candidate_units": 39,
+      "split_constraint_conflict_units": 0,
+      "split_assignment_unknown_units": 1952
+    }
+  },
+  "candidate_member_sources": {
+    "wildguard_zh": 5863,
+    "jailbench": 683,
+    "chinese_curated": 683
+  },
+  "candidate_units_sources": [
+    {
+      "sources_json": "[\"chinese_curated\", \"jailbench\"]",
+      "candidate_units": 683,
+      "source_member_rows": 1366,
+      "overlap_current_units": 0,
+      "overlap_current_member_rows": 0,
+      "net_new_units": 683,
+      "all_original_source_units_within_4096": 683,
+      "net_new_original_source_units_within_4096": 683,
+      "all_old_chinese_units_within_4096": 683,
+      "raw_original_binary_conflict_units": 0,
+      "old_chinese_many_to_one_candidate_units": 0,
+      "split_constraint_conflict_units": 0,
+      "split_assignment_unknown_units": 0
+    },
+    {
+      "sources_json": "[\"wildguard_zh\"]",
+      "candidate_units": 1985,
+      "source_member_rows": 5863,
+      "overlap_current_units": 33,
+      "overlap_current_member_rows": 33,
+      "net_new_units": 1952,
+      "all_original_source_units_within_4096": 1985,
+      "net_new_original_source_units_within_4096": 1952,
+      "all_old_chinese_units_within_4096": 1985,
+      "raw_original_binary_conflict_units": 0,
+      "old_chinese_many_to_one_candidate_units": 39,
+      "split_constraint_conflict_units": 0,
+      "split_assignment_unknown_units": 1952
+    }
+  ],
+  "token_protocol": {
+    "tokenizer": "models/Qwen3.5-4B",
+    "add_special_tokens": false,
+    "truncation": false,
+    "max_tokens": 4096,
+    "wildcard_translation_note": "WG length counts apply to complete official original and archived old Chinese separately. Missing regenerated Chinese cannot be length-certified before retranslation."
+  },
+  "split_protocol": "Exact old union-find is reconstructed from all raw source_unit/base_id links; only existing group assignments provide historical split anchors. Unknown assignments are not filled.",
+  "proposed_recovery_scope": "Review candidates only: translate excluded WG originals independently, examine identity/many-to-one flags and binary conflicts, then register a new dataset version. No corpus restored here.",
+  "input_hashes_before": {
+    "data/sources/wildguard_en/train.parquet": "9844a24e5734be9c32cf9fa21340b919f2c5746cb2f81b220894e03d35ee7a92",
+    "data/sources/wildguard_zh.parquet": "20eb3d6792af4aa087a6b13116e07064d044dc7cc355b7d359b5579074c19d18",
+    "data/sources/hanguard_v3.parquet": "5a8c1334b7a62294aff9aeffc56b18f95f8b58d760fd43dabd72b53c3754b933",
+    "data/sources/jailbench/JailBench.csv": "f84e0b119fb9d87fb8873af3491f34151a0250dc3267c11bdce7cb90d18ec493",
+    "data/sources/jailbench/JailBench-seed.csv": "6d7025379c10b39ed33d33bf1446d41106c57a9bd349c8c8d6c802948c551de8",
+    "outputs/hanguard_full_data_audit_20261012/structure_flags.csv": "e7192e2d90a1a4cb1a66d3913ef27fd01f53c3ff201ce16d2f1656e52cb6a966",
+    "outputs/hanguard_full_data_audit_20261012/structure_results.json": "d4ecf4d1c951181ff3b55f1b98ff1a2393ccca2bbedf8c4ff3aa23d8f4003fe1",
+    "data/three_source_translation_repaired/train.parquet": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "data/three_source_translation_repaired/validation.parquet": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "data/three_source_translation_repaired/test.parquet": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+  },
+  "input_hashes_after": {
+    "data/sources/wildguard_en/train.parquet": "9844a24e5734be9c32cf9fa21340b919f2c5746cb2f81b220894e03d35ee7a92",
+    "data/sources/wildguard_zh.parquet": "20eb3d6792af4aa087a6b13116e07064d044dc7cc355b7d359b5579074c19d18",
+    "data/sources/hanguard_v3.parquet": "5a8c1334b7a62294aff9aeffc56b18f95f8b58d760fd43dabd72b53c3754b933",
+    "data/sources/jailbench/JailBench.csv": "f84e0b119fb9d87fb8873af3491f34151a0250dc3267c11bdce7cb90d18ec493",
+    "data/sources/jailbench/JailBench-seed.csv": "6d7025379c10b39ed33d33bf1446d41106c57a9bd349c8c8d6c802948c551de8",
+    "outputs/hanguard_full_data_audit_20261012/structure_flags.csv": "e7192e2d90a1a4cb1a66d3913ef27fd01f53c3ff201ce16d2f1656e52cb6a966",
+    "outputs/hanguard_full_data_audit_20261012/structure_results.json": "d4ecf4d1c951181ff3b55f1b98ff1a2393ccca2bbedf8c4ff3aa23d8f4003fe1",
+    "data/three_source_translation_repaired/train.parquet": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "data/three_source_translation_repaired/validation.parquet": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "data/three_source_translation_repaired/test.parquet": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+  },
+  "code_sha256": "218adf8a17df6a327fb3eb82b43aa6198b67c224219a45663ec35539aecac222",
+  "inputs_unchanged": true,
+  "output_sha256": {
+    "category_only_recovery_members.parquet": "331dc5027c12e9a9c5e650f572c2a3ead66bad67ceee4a0a6d3a966cc0f11ff0",
+    "category_only_recovery_members.csv": "a9683d7de92f8be952a21a0c233938f74e3cd3f911d2cd09983476b8e4ceb30e",
+    "category_only_recovery_units.parquet": "75fac8c146223be038381ab3423256f0be2921c82b0246c470753e52a17721fc",
+    "category_only_recovery_units.csv": "a26165a6038705d06744209d5ed6419f3a8913a861baa6691a19ad95b49a7dec"
+  }
+}

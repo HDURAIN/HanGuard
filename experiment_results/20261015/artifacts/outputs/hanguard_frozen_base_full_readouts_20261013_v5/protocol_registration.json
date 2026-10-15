@@ -1,0 +1,21 @@
+{
+  "protocol_sha256": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+  "source_snapshot_sha256": {
+    "source_snapshot/scripts__hanguard__frozen_base_readout_admission_v2.py": "856d93dd4a7c44907d4a248aeac37193652bbf9f3f3743b4d9f84cb8de4b8574",
+    "source_snapshot/scripts__hanguard__frozen_base_readout_heads.py": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1",
+    "source_snapshot/scripts__hanguard__ab_frozen_readout_diagnostics.py": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+    "source_snapshot/scripts__hanguard__frozen_base_readout_queue.py": "c824554b6d3157029abe34773e915e03ebd88559db805ec43a86ccaf52059e06",
+    "source_snapshot/scripts__hanguard__repaired_heads.py": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+    "source_snapshot/scripts__hanguard__repaired_study.py": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+    "source_snapshot/scripts__hanguard__ab_readout_parallel_queue.py": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70",
+    "source_snapshot/scripts__hanguard__frozen_base_parallel_queue.py": "d46725329a3b9421c24bc1fb7de47e815212a5665ed1c788529f39b58885724f",
+    "source_snapshot/hanguard_model.py": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58",
+    "source_snapshot/scripts__hanguard__sparse_token_readout_queue.py": "bff67bcd07d78e77d7fd3bb723cfd9b1728e421ff10e89ce873625dd798636eb",
+    "source_snapshot/scripts__hanguard__ab_diagnostic_queue.py": "c86d8a9a8e85ec830b0e983b29af9ab8b80fd2f17ab8f2e5f9bfc9c06eb3f04d",
+    "source_snapshot/scripts__hanguard__frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+    "source_snapshot/scripts__hanguard__frozen_base_parallel_features.py": "145bfa24813a4dc52ab53df1dadbe314f6216f7d1942360f73ef85c5e9b95573",
+    "source_snapshot/scripts__hanguard__frozen_base_parallel_study.py": "5e829867c39aa53c2c12088b7df8bb04fcf5fcb542431fd8bab76b55e7ac07d3",
+    "source_snapshot/scripts__hanguard__remediated_dataset_contract.py": "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6",
+    "source_snapshot/scripts__hanguard__frozen_base_readout_study.py": "b500fbcabdd3b94dd35293d8805983bbe1895667cb435357245f2b4b3e9d85b4"
+  }
+}

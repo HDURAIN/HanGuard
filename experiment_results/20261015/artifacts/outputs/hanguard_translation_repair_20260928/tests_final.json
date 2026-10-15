@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_translation_repaired_dataset.py",
+    "tests/test_merge_translation_repair.py",
+    "tests/test_translation_scope_audit.py",
+    "tests/test_assemble_translation_reviews.py",
+    "tests/test_audit_translation_repair_outputs.py",
+    "tests/test_translation_generator_jsonl.py"
+  ],
+  "exit_code": 0,
+  "output": ".........................................................................                               [100%]\n73 passed, 113 subtests passed in 8.31s\n",
+  "test_file_sha256": {
+    "tests/test_translation_repaired_dataset.py": "c5bb8ff2ebf6ed21b38d7bbcb6f54546088618f9f494253071f2810b2888dfca",
+    "tests/test_merge_translation_repair.py": "9595e0a866bbe875962f815ebe82d03ec50359c060f8919dcc17f89942fed5d8",
+    "tests/test_translation_scope_audit.py": "c92637d9065b2b23d0b10c3399e8c9c97eda8d34e746bb362d401da18087b046",
+    "tests/test_assemble_translation_reviews.py": "3463a75562e3f3bacf79134ace02eb2800971778a0f08504e9861f315ef2bd76",
+    "tests/test_audit_translation_repair_outputs.py": "38b152f9a59e8d6bf392a472c16cc95f9f9a4b550c61062365e8bc47e3749139",
+    "tests/test_translation_generator_jsonl.py": "c4e1a97ad698714f689fd828052b22aeeab17723916279ae9c949c1f2a58ea8a"
+  },
+  "checked_at": "2026-09-28T02:26:11.960523+00:00"
+}

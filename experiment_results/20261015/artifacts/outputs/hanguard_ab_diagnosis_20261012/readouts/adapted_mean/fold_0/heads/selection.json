@@ -1,0 +1,245 @@
+{
+  "best_single_layer": 18,
+  "selected_layers": [
+    2,
+    8,
+    17,
+    18
+  ],
+  "specs": {
+    "last": {
+      "mode": "last",
+      "branch_layers": [
+        32
+      ],
+      "direct_anchor": 32,
+      "cached_inputs": [
+        32
+      ]
+    },
+    "best_single": {
+      "mode": "last",
+      "branch_layers": [
+        18
+      ],
+      "direct_anchor": 18,
+      "cached_inputs": [
+        18
+      ]
+    },
+    "repeat_best": {
+      "mode": "repeat_last",
+      "branch_layers": [
+        18
+      ],
+      "direct_anchor": 18,
+      "cached_inputs": [
+        18
+      ]
+    },
+    "fusion_fixed": {
+      "mode": "fusion",
+      "branch_layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "direct_anchor": 32,
+      "cached_inputs": [
+        8,
+        16,
+        24,
+        32
+      ]
+    },
+    "fusion_selected": {
+      "mode": "fusion",
+      "branch_layers": [
+        2,
+        8,
+        17,
+        18
+      ],
+      "direct_anchor": 18,
+      "cached_inputs": [
+        2,
+        8,
+        17,
+        18
+      ]
+    },
+    "fusion_fixed_best_anchor": {
+      "mode": "fusion_best_anchor",
+      "branch_layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "direct_anchor": 18,
+      "cached_inputs": [
+        8,
+        16,
+        24,
+        32,
+        18
+      ]
+    },
+    "fusion_selected_best_anchor": {
+      "mode": "fusion_best_anchor",
+      "branch_layers": [
+        2,
+        8,
+        17,
+        18
+      ],
+      "direct_anchor": 18,
+      "cached_inputs": [
+        2,
+        8,
+        17,
+        18,
+        18
+      ]
+    },
+    "joint_repeat_best": {
+      "mode": "joint",
+      "branch_layers": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "direct_anchor": 18,
+      "cached_inputs": [
+        18,
+        18,
+        18,
+        18
+      ]
+    },
+    "joint_fixed": {
+      "mode": "joint",
+      "branch_layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "direct_anchor": 32,
+      "cached_inputs": [
+        8,
+        16,
+        24,
+        32
+      ]
+    },
+    "joint_selected": {
+      "mode": "joint",
+      "branch_layers": [
+        2,
+        8,
+        17,
+        18
+      ],
+      "direct_anchor": 18,
+      "cached_inputs": [
+        2,
+        8,
+        17,
+        18
+      ]
+    }
+  },
+  "best_epoch": {
+    "last": 7,
+    "best_single": 7,
+    "repeat_best": 6,
+    "fusion_fixed": 3,
+    "fusion_selected": 4,
+    "fusion_fixed_best_anchor": 4,
+    "fusion_selected_best_anchor": 4,
+    "joint_repeat_best": 8,
+    "joint_fixed": 7,
+    "joint_selected": 8
+  },
+  "thresholds": {
+    "last": 0.7398094450656699,
+    "best_single": 0.43305729748505695,
+    "repeat_best": 0.32044959389089994,
+    "fusion_fixed": 0.3167439286990499,
+    "fusion_selected": 0.24079216033350534,
+    "fusion_fixed_best_anchor": 0.5459420299409635,
+    "fusion_selected_best_anchor": 0.24079216033350534,
+    "joint_repeat_best": 0.41079004417717324,
+    "joint_fixed": 0.3797795072926269,
+    "joint_selected": 0.5124473599230842
+  },
+  "dev_bce": {
+    "last": 0.1271962685919448,
+    "best_single": 0.09662347208982058,
+    "repeat_best": 0.09464193325792762,
+    "fusion_fixed": 0.11852065800536132,
+    "fusion_selected": 0.10314522766986917,
+    "fusion_fixed_best_anchor": 0.1006109799357943,
+    "fusion_selected_best_anchor": 0.10314522766986917,
+    "joint_repeat_best": 0.10556347858689931,
+    "joint_fixed": 0.11230611919207813,
+    "joint_selected": 0.10843455949420103
+  },
+  "matched_initialization": {
+    "fusion": {
+      "arms": [
+        "repeat_best",
+        "fusion_fixed",
+        "fusion_selected",
+        "fusion_fixed_best_anchor",
+        "fusion_selected_best_anchor"
+      ],
+      "parameters": 1656709,
+      "initialization_sha256": "c7c378e28d7d63506f935c4edb331867c93f3e127bf3009809044246e89035e0"
+    },
+    "single": {
+      "arms": [
+        "last",
+        "best_single"
+      ],
+      "parameters": 327937,
+      "initialization_sha256": "3067ae33d91daa2a06c3cecc4f7ffca0bb06d307ec8ea402dbad580289794330"
+    },
+    "joint": {
+      "arms": [
+        "joint_repeat_best",
+        "joint_fixed",
+        "joint_selected"
+      ],
+      "parameters": 10241,
+      "initialization_sha256": "397357f326c6c719fb5a3a2bc5f4a4948bd4a2e756e6e7148b6bfd5708991b2a"
+    }
+  },
+  "provenance": {
+    "protocol_sha256": "4a79e94c26c6cf7be801a261f285a2df9c78cb21d394b39f672466a26918baf6",
+    "outer_fold": 0,
+    "stage": "heads",
+    "seed": 42,
+    "row_identity": {
+      "fit": {
+        "rows": 14441,
+        "groups": 12599,
+        "ordered_base_id_sha256": "804ebeab07358f0eaa13465e0c05b45acb8a689b943c54e950cbba381eb70f0a"
+      },
+      "dev": {
+        "rows": 1596,
+        "groups": 1400,
+        "ordered_base_id_sha256": "50a10b72c4ffe6605080f31e931ffacb6d046b739f4c1c5de0a2db99ebb4bcd6"
+      },
+      "held": {
+        "rows": 4011,
+        "groups": 3493,
+        "ordered_base_id_sha256": "bbe6b963e43c379c25cbcc9f292a506b90a6c970bf63a394f48ab972a4506ac9"
+      }
+    },
+    "probe_stage_sha256": "67fcf06338fcf99d67b92c92a8e587c0f5a1764c8c6325ef1a635fb000290d9f"
+  }
+}

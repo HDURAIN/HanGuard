@@ -1,0 +1,198 @@
+{
+  "identity": {
+    "fold": 2,
+    "heldout_rows": 12553,
+    "training_rows": 49602,
+    "heldout_base_id_sha256": "04a01e20009912d9132c7a0a750c9a931f1ab5bc908ea664c3276a9d75dea4c3",
+    "protocol_sha256": "8eea3e5c0f15664fad89f7b2703ac8919c7d3c9641540e1d2d7c9b515271febb"
+  },
+  "initial": {
+    "slot_initialization_sha256": [
+      "38c1100ffc4835ab8fd97ce933d3e3288d9e699e1ecf87d70130c4b7448f047b",
+      "30ea70839a2c96e1d451be513ed8b739cec5024f7012e2ce6898d1b115dff211",
+      "2d66e4e0ee0966e014015163774a15b8bab7bd5e04b59b86849af904bf27f87f",
+      "e225e1941743c349fcaecdc2fc9b193922791675b9366af617eccd31c07dc989"
+    ],
+    "pool_slot_ids": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "pool_weighted_bce_sum": 6.868994346448844,
+      "repeat_weighted_bce_sum": 0.4703693736907402,
+      "raw_l32_parameter_max_absolute_difference": 1.862645149230957e-09,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 2,
+      "pool_weighted_bce_sum": 5.2251962279942745,
+      "repeat_weighted_bce_sum": 0.3178949268622425,
+      "raw_l32_parameter_max_absolute_difference": 1.862645149230957e-09,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 3,
+      "pool_weighted_bce_sum": 4.8567776003026575,
+      "repeat_weighted_bce_sum": 0.2934006428172774,
+      "raw_l32_parameter_max_absolute_difference": 1.862645149230957e-09,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 4,
+      "pool_weighted_bce_sum": 4.667439868952842,
+      "repeat_weighted_bce_sum": 0.28257136209230455,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 5,
+      "pool_weighted_bce_sum": 4.5453109842342485,
+      "repeat_weighted_bce_sum": 0.2769109846822129,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 6,
+      "pool_weighted_bce_sum": 4.442645375129989,
+      "repeat_weighted_bce_sum": 0.26522329608632994,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 7,
+      "pool_weighted_bce_sum": 4.360325124906795,
+      "repeat_weighted_bce_sum": 0.2586770826294789,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 8,
+      "pool_weighted_bce_sum": 4.2918524496795945,
+      "repeat_weighted_bce_sum": 0.25483742998346276,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 9,
+      "pool_weighted_bce_sum": 4.23309278788093,
+      "repeat_weighted_bce_sum": 0.25306938017230807,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 10,
+      "pool_weighted_bce_sum": 4.176221034328888,
+      "repeat_weighted_bce_sum": 0.2445822695424819,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 11,
+      "pool_weighted_bce_sum": 4.140082716677469,
+      "repeat_weighted_bce_sum": 0.24433877474501953,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 12,
+      "pool_weighted_bce_sum": 4.111282956844847,
+      "repeat_weighted_bce_sum": 0.24708255615646688,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 13,
+      "pool_weighted_bce_sum": 4.07252207127681,
+      "repeat_weighted_bce_sum": 0.2399975276994088,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 14,
+      "pool_weighted_bce_sum": 4.030519524734206,
+      "repeat_weighted_bce_sum": 0.2383377780461666,
+      "raw_l32_parameter_max_absolute_difference": 3.725290298461914e-09,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 15,
+      "pool_weighted_bce_sum": 4.017066614929983,
+      "repeat_weighted_bce_sum": 0.23779255130118812,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 16,
+      "pool_weighted_bce_sum": 3.9946218227350943,
+      "repeat_weighted_bce_sum": 0.23723351071233792,
+      "raw_l32_parameter_max_absolute_difference": 3.725290298461914e-09,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 17,
+      "pool_weighted_bce_sum": 3.9628169026414617,
+      "repeat_weighted_bce_sum": 0.2288528759143491,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 18,
+      "pool_weighted_bce_sum": 3.944026995049355,
+      "repeat_weighted_bce_sum": 0.23239398853879106,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 19,
+      "pool_weighted_bce_sum": 3.936161999356184,
+      "repeat_weighted_bce_sum": 0.23124429752682876,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    },
+    {
+      "epoch": 20,
+      "pool_weighted_bce_sum": 3.9180246179303135,
+      "repeat_weighted_bce_sum": 0.2339949004184161,
+      "raw_l32_parameter_max_absolute_difference": 0.0,
+      "canonical_l32_parameter_max_absolute_difference": 0.0
+    }
+  ],
+  "prediction_diagnostic": {
+    "raw_gpu_l32_logit_max_absolute_difference": 0.0,
+    "canonical_l32_logit_max_absolute_difference": 0.0,
+    "convention": "repeat slot 3 is the canonical pool L32 estimator"
+  }
+}

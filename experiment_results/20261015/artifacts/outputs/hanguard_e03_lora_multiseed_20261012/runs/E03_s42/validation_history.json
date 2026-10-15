@@ -1,0 +1,30 @@
+[
+  {
+    "phase": 0,
+    "phase_name": "head_warmup",
+    "epoch": 0,
+    "validation_bce": 0.3155830204486847,
+    "seconds": 73.57215846003965
+  },
+  {
+    "phase": 1,
+    "phase_name": "joint",
+    "epoch": 0.5,
+    "validation_bce": 0.11019100993871689,
+    "seconds": 70.33307570393663
+  },
+  {
+    "phase": 1,
+    "phase_name": "joint",
+    "epoch": 1.0,
+    "validation_bce": 0.08989155292510986,
+    "seconds": 69.78036404401064
+  },
+  {
+    "phase": 2,
+    "phase_name": "joint",
+    "epoch": 1.5,
+    "validation_bce": 0.08157861977815628,
+    "seconds": 70.26138113404159
+  }
+]

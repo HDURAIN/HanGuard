@@ -1,0 +1,11 @@
+{
+  "report_sha256": "e516f929036f916ac5f7e73bb646492d16375f01cb02b07ec2288aa7e68479d0",
+  "inputs": {
+    "summary.json": "3e80536aaaf21ad8a3605aec1749effc8380d7e8d18d89137f28e684508f3bb0",
+    "case_analysis.parquet": "054cfa70b0b6e3e3513ecfb6582233d1cce5fb5c4d95a7fff3863cad10dee8ac",
+    "controlled_results.json": "ea6f9286d619b1c70349320873b7cfb4514e152eca7f433d0b38bcb03c06b0a9",
+    "fix_layout_replication_results.json": "dd9937ff9a340a9f0420700594b0bc2151d8f4198e4f0eca9cb89ab9578dc725",
+    "second_semantic_review.json": "52790537a984bb32578496c6b873019ad2539d5c718ed2ca7f8b966bc37191d5"
+  },
+  "report_script_sha256": "8aa9e4d63ce6436c3d971cf3b39d2f97f8d52257b0096735bfd9c6b3f593d633"
+}

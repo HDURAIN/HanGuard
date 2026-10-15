@@ -1,0 +1,161 @@
+{
+  "minimal_chinese_fix": {
+    "dynamic_repeat_last": {
+      "rows": 7,
+      "before_correct": 3,
+      "after_correct": 5,
+      "rescued": 2,
+      "harmed": 0,
+      "unchanged": 5,
+      "rescued_case_ids": [
+        "D025",
+        "D071"
+      ],
+      "harmed_case_ids": [],
+      "mean_absolute_probability_shift": 0.13941937062082757
+    },
+    "dynamic_fixed": {
+      "rows": 7,
+      "before_correct": 4,
+      "after_correct": 4,
+      "rescued": 0,
+      "harmed": 0,
+      "unchanged": 7,
+      "rescued_case_ids": [],
+      "harmed_case_ids": [],
+      "mean_absolute_probability_shift": 0.1363291388020748
+    },
+    "dynamic_selected": {
+      "rows": 7,
+      "before_correct": 5,
+      "after_correct": 4,
+      "rescued": 1,
+      "harmed": 2,
+      "unchanged": 4,
+      "rescued_case_ids": [
+        "D033"
+      ],
+      "harmed_case_ids": [
+        "D053",
+        "D078"
+      ],
+      "mean_absolute_probability_shift": 0.14727460399096962
+    }
+  },
+  "probability_and_decision_changes_from_controlled_layout": {
+    "dynamic_repeat_last": {
+      "zh": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.008757062628876568,
+        "max_absolute_probability_difference": 0.028286287849803637,
+        "decision_changes": 1,
+        "changed_case_ids": [
+          "D078"
+        ]
+      },
+      "original": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.005179788425897661,
+        "max_absolute_probability_difference": 0.020405197657834884,
+        "decision_changes": 0,
+        "changed_case_ids": []
+      },
+      "zh_minimal_fix": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.007384452470368071,
+        "max_absolute_probability_difference": 0.025066629007382213,
+        "decision_changes": 0,
+        "changed_case_ids": []
+      }
+    },
+    "dynamic_fixed": {
+      "zh": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.009663261857814123,
+        "max_absolute_probability_difference": 0.029621982337290187,
+        "decision_changes": 0,
+        "changed_case_ids": []
+      },
+      "original": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.001855512799952476,
+        "max_absolute_probability_difference": 0.007062424836327935,
+        "decision_changes": 0,
+        "changed_case_ids": []
+      },
+      "zh_minimal_fix": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.006668281954335387,
+        "max_absolute_probability_difference": 0.01990231996630354,
+        "decision_changes": 0,
+        "changed_case_ids": []
+      }
+    },
+    "dynamic_selected": {
+      "zh": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.009777725328383438,
+        "max_absolute_probability_difference": 0.029041705635291737,
+        "decision_changes": 0,
+        "changed_case_ids": []
+      },
+      "original": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.0025419069392198135,
+        "max_absolute_probability_difference": 0.010226051595990965,
+        "decision_changes": 0,
+        "changed_case_ids": []
+      },
+      "zh_minimal_fix": {
+        "rows": 7,
+        "mean_absolute_probability_difference": 0.00695588250112538,
+        "max_absolute_probability_difference": 0.017100254655431302,
+        "decision_changes": 1,
+        "changed_case_ids": [
+          "D053"
+        ]
+      }
+    }
+  },
+  "all_three_arms_effect_stable_case_ids": [
+    "D022",
+    "D025",
+    "D033",
+    "D040",
+    "D071"
+  ],
+  "any_arm_layout_sensitive_case_ids": [
+    "D053",
+    "D078"
+  ],
+  "near_threshold_case_ids": [
+    "D022",
+    "D025",
+    "D033",
+    "D040",
+    "D053",
+    "D071",
+    "D078"
+  ],
+  "scope": "Read-only second-layout replication of seven pre-existing Chinese minimal translation counterfactuals",
+  "fixed_threshold": 0.5,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "protocol_sha256": "b24a4a5599a54f0d37df468c51ad13f646455ee76a3fecda076ecb4a6caad9ea",
+  "predictions_sha256": "2050c72c69c65e3d738ef9b32b79fc3ebd7c74da38044a59b81d8b200cd0f722",
+  "feature_manifest_sha256": "db719ee5e18c47ecff81873d6cd465200d5d755a4100610b2d0fffc3b5a5e4e4",
+  "input_texts_labels_and_protected_artifacts_unchanged": true,
+  "no_training": true,
+  "no_production_data_edits": true,
+  "no_external_holdout_consumption": true,
+  "limitations": [
+    "Seven text-only-selected errors from a post-hoc disagreement cohort, not a population accuracy estimate.",
+    "Two batch layouts do not exhaust numerical/runtime sensitivity.",
+    "Original-versus-Chinese difference includes language sensitivity; Chinese minimal edit is the local translation counterfactual."
+  ]
+}

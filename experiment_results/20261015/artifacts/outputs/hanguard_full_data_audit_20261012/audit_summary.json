@@ -1,0 +1,545 @@
+{
+  "status": "independent_data_audit_complete; data_repair_and_dataset_revalidation_required_before_model_experiments",
+  "scope": {
+    "active_rows": 77686,
+    "wildguard_rows": 43165,
+    "archive_rows": 80709,
+    "raw_source_rows": 126624,
+    "official_wildguard_binary_lineage_rows": 86759,
+    "all_model_probabilities_excluded": true,
+    "classifier_or_backbone_inference_performed": false,
+    "models_trained": false
+  },
+  "structural_mechanical_checks": {
+    "checks": 67,
+    "failed": 0
+  },
+  "category_only_old_exclusions": {
+    "member_rows": 7229,
+    "normalized_recovery_units": 2668,
+    "overlap_current_units": 33,
+    "net_new_units": 2635,
+    "new_wildguard_units": 1952,
+    "new_native_units": 683
+  },
+  "missing_long_jailbench_wrappers": {
+    "original_families": 20,
+    "missing_families": 5,
+    "source_rows": 2700,
+    "minimum_tokens": 504,
+    "maximum_tokens": 739,
+    "within_current_4096_budget": true,
+    "overlap_with_category_recovery_not_additive": true
+  },
+  "uniform_semantic_review": {
+    "sample_n": 200,
+    "unique_population_rows": 43165,
+    "counts": {
+      "minor": 46,
+      "none": 143,
+      "uncertain": 6,
+      "major": 5
+    },
+    "rates": {
+      "major": {
+        "sample_n": 5,
+        "denominator_n": 200,
+        "rate": 0.025,
+        "wilson95": [
+          0.010724719651761264,
+          0.05717834040664198
+        ]
+      },
+      "minor": {
+        "sample_n": 46,
+        "denominator_n": 200,
+        "rate": 0.23,
+        "wilson95": [
+          0.17709343259068805,
+          0.2930830436530359
+        ]
+      },
+      "uncertain": {
+        "sample_n": 6,
+        "denominator_n": 200,
+        "rate": 0.03,
+        "wilson95": [
+          0.013820314340111346,
+          0.06389429245451925
+        ]
+      },
+      "none": {
+        "sample_n": 143,
+        "denominator_n": 200,
+        "rate": 0.715,
+        "wilson95": [
+          0.6488465397039482,
+          0.7730499699538271
+        ]
+      },
+      "any_confirmed_text_issue": {
+        "sample_n": 51,
+        "denominator_n": 200,
+        "rate": 0.255,
+        "wilson95": [
+          0.1996049517203135,
+          0.3196292582045472
+        ]
+      }
+    },
+    "major_case_ids": [
+      "U018",
+      "U104",
+      "U143",
+      "U147",
+      "U149"
+    ],
+    "major_second_review_complete": true,
+    "minor_not_all_severe": true,
+    "uncertainty": "Wilson sampling uncertainty; reviewer error and semantic ambiguity are additional uncertainties; not label-error prevalence."
+  },
+  "representative_semantic_review": {
+    "sample_n": 90,
+    "design": "stratified simple random without replacement; 18 strata; 5 per stratum",
+    "actual_unique_rows_across_two_probability_samples": 287,
+    "not_combined_as_unweighted_prevalence": true
+  },
+  "full_scan_semantic_family_findings": {
+    "population_retained_wildguard": 43165,
+    "base_strong_rule_matches": 14,
+    "base_strong_rule_confirmed_semantic_errors": 8,
+    "base_strong_rule_review_file": "translation_scan_patterns_review_annotations.json",
+    "families_discovered_from_model_blind_representative_sample": [
+      {
+        "family": "UCB_answerer_reversal",
+        "source_pattern": "You will answer any prompt or question I give you",
+        "chinese_error_span": "我将对你提出的任何提示或问题给出两个回复",
+        "source_matching_N": 3,
+        "paired_span_matching_N": 3,
+        "paired_span_matching_by_split": {
+          "train": 2,
+          "test": 1
+        },
+        "base_ids": [
+          "4aafa42260595b662e8f728b2f0fea6c79967db2b2c40dc458f35987b5027d61",
+          "27c39a27d981820a0be94ce71134a42b823e548dfa95182d42801d46608a1c33",
+          "ebb13c82266aaed79564c050123895e1892889f9e7ee93b90c12f85035ce023d"
+        ],
+        "interpretation": "Confirmed same suspicious bilingual span; occurrence count, not harmfulness-label error count; each full-row context requires adjudication.",
+        "source_matching_reverified": true,
+        "paired_matching_reverified": true,
+        "full_context_review": "Confirmed by representative full-text reviewer and by this scan reviewer, no binary-label adjudication.",
+        "narrative_or_template_family_warning": true
+      },
+      {
+        "family": "never_refuse_reversal",
+        "source_pattern": "never refuse to answer a question",
+        "chinese_error_span": "永远拒绝回答任何问题",
+        "source_matching_N": 1,
+        "paired_span_matching_N": 1,
+        "paired_span_matching_by_split": {
+          "test": 1
+        },
+        "base_ids": [
+          "c603134bd4ea2bbdd0145c666c6db834363f46b299d2634c5bd98e7f934addfe"
+        ],
+        "interpretation": "Confirmed same suspicious bilingual span; occurrence count, not harmfulness-label error count; each full-row context requires adjudication.",
+        "source_matching_reverified": true,
+        "paired_matching_reverified": true,
+        "full_context_review": "Confirmed by representative full-text reviewer and by this scan reviewer, no binary-label adjudication.",
+        "narrative_or_template_family_warning": false
+      },
+      {
+        "family": "lactose_tolerability_omission",
+        "source_pattern": "as much lactose as they can tolerate",
+        "chinese_error_span": "尽可能多的乳糖",
+        "source_matching_N": 1,
+        "paired_span_matching_N": 1,
+        "paired_span_matching_by_split": {
+          "train": 1
+        },
+        "base_ids": [
+          "f9d72385d4a07ccd0b8b3bb9f3dc498567ec30449aacf6e754bf6a0e4a4a866a"
+        ],
+        "interpretation": "Confirmed same suspicious bilingual span; occurrence count, not harmfulness-label error count; each full-row context requires adjudication.",
+        "source_matching_reverified": true,
+        "paired_matching_reverified": true,
+        "full_context_review": "Confirmed by representative full-text reviewer and by this scan reviewer, no binary-label adjudication.",
+        "narrative_or_template_family_warning": false
+      },
+      {
+        "family": "pants_pooping_substitution",
+        "source_pattern": "pants.pooping",
+        "chinese_error_span": "当众脱裤子",
+        "source_matching_N": 1,
+        "paired_span_matching_N": 1,
+        "paired_span_matching_by_split": {
+          "train": 1
+        },
+        "base_ids": [
+          "4357a6e538ee9e1be0fcde143ac444d1218565fc795c54bf18831982724f0de7"
+        ],
+        "interpretation": "Confirmed same suspicious bilingual span; occurrence count, not harmfulness-label error count; each full-row context requires adjudication.",
+        "source_matching_reverified": true,
+        "paired_matching_reverified": true,
+        "full_context_review": "Confirmed by representative full-text reviewer and by this scan reviewer, no binary-label adjudication.",
+        "narrative_or_template_family_warning": false
+      },
+      {
+        "family": "narrowly_lost_reversal",
+        "source_pattern": "narrowly lost",
+        "chinese_error_span": "险胜",
+        "source_matching_N": 5,
+        "paired_span_matching_N": 5,
+        "paired_span_matching_by_split": {
+          "train": 4,
+          "test": 1
+        },
+        "base_ids": [
+          "228fcc9d72ba5b01270fedad6d38ee27910e33913db1034d9fe4c8731e945723",
+          "2b61e5bd349fc575f42e4ca3bf57cf24602ef00b7cae7f8e06e91b401199347f",
+          "27c9c153c3a0bdc249a9820ed3fe8251e075b2912085e87e1998703f5c9f41b7",
+          "fcc83ca53dccbcf655abf8ba3bbe98537aea4bc6934296f389b3a72997759e53",
+          "940feabffba6ea5c8ebcfe1df46b22d4e655d7c495ebcb40dedc896191aa0c54"
+        ],
+        "interpretation": "Confirmed same suspicious bilingual span; occurrence count, not harmfulness-label error count; each full-row context requires adjudication.",
+        "source_matching_reverified": true,
+        "paired_matching_reverified": true,
+        "full_context_review": "Confirmed by representative full-text reviewer and by this scan reviewer, no binary-label adjudication.",
+        "narrative_or_template_family_warning": true
+      }
+    ],
+    "family_unique_base_ids": 11,
+    "overlap_with_base_strong_rule_confirmed": 4,
+    "confirmed_union_unique_base_ids": 15,
+    "confirmed_union_by_split": {
+      "train": 8,
+      "test": 7
+    },
+    "confirmed_union_base_ids": [
+      "228fcc9d72ba5b01270fedad6d38ee27910e33913db1034d9fe4c8731e945723",
+      "27c39a27d981820a0be94ce71134a42b823e548dfa95182d42801d46608a1c33",
+      "27c9c153c3a0bdc249a9820ed3fe8251e075b2912085e87e1998703f5c9f41b7",
+      "2b61e5bd349fc575f42e4ca3bf57cf24602ef00b7cae7f8e06e91b401199347f",
+      "40ed04d8cad93b06cd055ad4ae223c05cfeca6b723e3d40acdf9c16b8ed70688",
+      "4357a6e538ee9e1be0fcde143ac444d1218565fc795c54bf18831982724f0de7",
+      "4646d03dcad87ce35bbb992af8cf668a07b12e03864752ffafeb6dc78ad39930",
+      "4aafa42260595b662e8f728b2f0fea6c79967db2b2c40dc458f35987b5027d61",
+      "940feabffba6ea5c8ebcfe1df46b22d4e655d7c495ebcb40dedc896191aa0c54",
+      "c603134bd4ea2bbdd0145c666c6db834363f46b299d2634c5bd98e7f934addfe",
+      "d4f97033950215f62fa8a983b53657a9217f9da37112ca1c1e09dc40c7d404a8",
+      "ebb13c82266aaed79564c050123895e1892889f9e7ee93b90c12f85035ce023d",
+      "f90961432c0176d2b3ec1c7d7002d5fd5858d6bbe59bf2e703d087d075b59220",
+      "f9d72385d4a07ccd0b8b3bb9f3dc498567ec30449aacf6e754bf6a0e4a4a866a",
+      "fcc83ca53dccbcf655abf8ba3bbe98537aea4bc6934296f389b3a72997759e53"
+    ],
+    "changes_data_or_labels": false,
+    "model_scores_used": false,
+    "limitations": [
+      "This is a discovered-error lower bound with unknown rule recall, not a population error-rate estimator.",
+      "Repeated UCB or cheerleader-story variants are family occurrences, not independent error mechanisms.",
+      "Public original factual correctness and harmfulness labels are not reassessed here."
+    ]
+  },
+  "full_scan_confirmed_translation_findings": {
+    "group_unique_ids": {
+      "prior_strong_and_90sample_families": [
+        "228fcc9d72ba5b01270fedad6d38ee27910e33913db1034d9fe4c8731e945723",
+        "27c39a27d981820a0be94ce71134a42b823e548dfa95182d42801d46608a1c33",
+        "27c9c153c3a0bdc249a9820ed3fe8251e075b2912085e87e1998703f5c9f41b7",
+        "2b61e5bd349fc575f42e4ca3bf57cf24602ef00b7cae7f8e06e91b401199347f",
+        "40ed04d8cad93b06cd055ad4ae223c05cfeca6b723e3d40acdf9c16b8ed70688",
+        "4357a6e538ee9e1be0fcde143ac444d1218565fc795c54bf18831982724f0de7",
+        "4646d03dcad87ce35bbb992af8cf668a07b12e03864752ffafeb6dc78ad39930",
+        "4aafa42260595b662e8f728b2f0fea6c79967db2b2c40dc458f35987b5027d61",
+        "940feabffba6ea5c8ebcfe1df46b22d4e655d7c495ebcb40dedc896191aa0c54",
+        "c603134bd4ea2bbdd0145c666c6db834363f46b299d2634c5bd98e7f934addfe",
+        "d4f97033950215f62fa8a983b53657a9217f9da37112ca1c1e09dc40c7d404a8",
+        "ebb13c82266aaed79564c050123895e1892889f9e7ee93b90c12f85035ce023d",
+        "f90961432c0176d2b3ec1c7d7002d5fd5858d6bbe59bf2e703d087d075b59220",
+        "f9d72385d4a07ccd0b8b3bb9f3dc498567ec30449aacf6e754bf6a0e4a4a866a",
+        "fcc83ca53dccbcf655abf8ba3bbe98537aea4bc6934296f389b3a72997759e53"
+      ],
+      "diagnostic_major5": [
+        "362a001bfe2afa2398e4f7bbe4316e5f30c6ddcea051a012d703aba91ce5ba25",
+        "46704365a4781941c186c07f16cbe28e34b9cc2b4ba6ec857a341e4c7d11df2a",
+        "4697ac57f3b4d42d20130f2820db47fdc0b438fc5f9f72de0cb3294acced6ff9",
+        "87da4bd94e86a30800b17d6639af62d16d29e5dde023e01a3d4a552bec8f9121",
+        "fd4b5c017e27612eea3c7f62de50016560ba95f82c2124730236b23d9f71b350"
+      ],
+      "additional_confirmed_semantic": [
+        "057ae9354cdf384842d45948ab487309a137d5c45be40ae01a32d35cdba48a0c",
+        "2ea4cfad3bb4c7803a2fb240e6ec200f3780e226898541a9cc1d1217a1337771",
+        "46704365a4781941c186c07f16cbe28e34b9cc2b4ba6ec857a341e4c7d11df2a",
+        "4697ac57f3b4d42d20130f2820db47fdc0b438fc5f9f72de0cb3294acced6ff9",
+        "582e9bf1f367e4047bc8dfed7a1f6b5f710b7d539f033576da439b0af9dec3f5",
+        "8017bc0348419c679be839716783c5d42ea882ffe9c76f4aa5de7a07cd73bd0e",
+        "8c8065bf4f9be853b39084a61735753be638fb2bea8030001cc387f463ce4a2c",
+        "8f1a8d9fa52f9d1f793c463325123a560bf7a42b25243f248ef293cba4ae9c2a",
+        "95812e7383b4728475bf342d17bc09c8b79934eea893ebb72ca5eb3eccb2fe16",
+        "a12c3abc88fb0757ff627e685a8905f141a0f0d7af179710c03004d5f4d4e256",
+        "b56fae950a3c52ac689615858c73fccd089e107d1f8e51afba835ea97daa03f1",
+        "b9e7dcbaf7111730191fa872aa3575103cd32471be7aaf454d9c45ce7ed57e54",
+        "c094055bfff6d924778913092f2276cd81138af6e7ad3516efe0c7f2ba13387d",
+        "c0b08678e465d6ccf6043dccd67a5c6f05e670daae109507d704975e277337c0",
+        "c93079c86e63ded48287f4b9fd0f1077115f1b904b0b82df0e43c0fc5cf47fe7",
+        "cf32610b5624cc481b41e66f186b19389cb05fe0ed89c803fee3ce0b56c7d640",
+        "dae0d163edd2c36e34a4673eb7b790c0da3fe5d808feeabaad9fd0fa7590d23a",
+        "f0e61d11a5273136f8d13ae297f509f5167c8820c3b9bc572b6ff1844e8251b8",
+        "fd4b5c017e27612eea3c7f62de50016560ba95f82c2124730236b23d9f71b350"
+      ],
+      "additional_generated_glossary_artifact": [
+        "79e05bd1fed355ceae8744d4e247089eba6983da7691bd51eb77a1dd8b9c6ddf"
+      ],
+      "coverage_main_intent_preserved7": [
+        "03b317dfa170f2eaf62297c9ef4e909f594b027939305a1ae80fbf56b1df877f",
+        "430b2fa8e0e71c0af4580e3d6e6bd53c45b9e90d8af42dd118107a9891b497c5",
+        "621a4c938c37f92f34d0586953a39519162f129a9422a56e1a5d041dd4f541c8",
+        "723386c3c5c59faba088baaa5809d4121199a01b92a89c1f0e4092d5394fd414",
+        "9d28cf20a9b9df172b6537d3e0062b7787eb1bedc90d00f951ab373ce58ac407",
+        "f2009e5b5da5f3881d192b4127c3930e3689b351fefcf50a0b5c963b5b19f637",
+        "f3d1da441a80800dd38248c932ad92736c29796674afbb8adab222ce9d77c931"
+      ]
+    },
+    "group_counts": {
+      "prior_strong_and_90sample_families": 15,
+      "diagnostic_major5": 5,
+      "additional_confirmed_semantic": 19,
+      "additional_generated_glossary_artifact": 1,
+      "coverage_main_intent_preserved7": 7
+    },
+    "meaning_error_union_unique_N": 36,
+    "meaning_error_union_base_ids": [
+      "057ae9354cdf384842d45948ab487309a137d5c45be40ae01a32d35cdba48a0c",
+      "228fcc9d72ba5b01270fedad6d38ee27910e33913db1034d9fe4c8731e945723",
+      "27c39a27d981820a0be94ce71134a42b823e548dfa95182d42801d46608a1c33",
+      "27c9c153c3a0bdc249a9820ed3fe8251e075b2912085e87e1998703f5c9f41b7",
+      "2b61e5bd349fc575f42e4ca3bf57cf24602ef00b7cae7f8e06e91b401199347f",
+      "2ea4cfad3bb4c7803a2fb240e6ec200f3780e226898541a9cc1d1217a1337771",
+      "362a001bfe2afa2398e4f7bbe4316e5f30c6ddcea051a012d703aba91ce5ba25",
+      "40ed04d8cad93b06cd055ad4ae223c05cfeca6b723e3d40acdf9c16b8ed70688",
+      "4357a6e538ee9e1be0fcde143ac444d1218565fc795c54bf18831982724f0de7",
+      "4646d03dcad87ce35bbb992af8cf668a07b12e03864752ffafeb6dc78ad39930",
+      "46704365a4781941c186c07f16cbe28e34b9cc2b4ba6ec857a341e4c7d11df2a",
+      "4697ac57f3b4d42d20130f2820db47fdc0b438fc5f9f72de0cb3294acced6ff9",
+      "4aafa42260595b662e8f728b2f0fea6c79967db2b2c40dc458f35987b5027d61",
+      "582e9bf1f367e4047bc8dfed7a1f6b5f710b7d539f033576da439b0af9dec3f5",
+      "8017bc0348419c679be839716783c5d42ea882ffe9c76f4aa5de7a07cd73bd0e",
+      "87da4bd94e86a30800b17d6639af62d16d29e5dde023e01a3d4a552bec8f9121",
+      "8c8065bf4f9be853b39084a61735753be638fb2bea8030001cc387f463ce4a2c",
+      "8f1a8d9fa52f9d1f793c463325123a560bf7a42b25243f248ef293cba4ae9c2a",
+      "940feabffba6ea5c8ebcfe1df46b22d4e655d7c495ebcb40dedc896191aa0c54",
+      "95812e7383b4728475bf342d17bc09c8b79934eea893ebb72ca5eb3eccb2fe16",
+      "a12c3abc88fb0757ff627e685a8905f141a0f0d7af179710c03004d5f4d4e256",
+      "b56fae950a3c52ac689615858c73fccd089e107d1f8e51afba835ea97daa03f1",
+      "b9e7dcbaf7111730191fa872aa3575103cd32471be7aaf454d9c45ce7ed57e54",
+      "c094055bfff6d924778913092f2276cd81138af6e7ad3516efe0c7f2ba13387d",
+      "c0b08678e465d6ccf6043dccd67a5c6f05e670daae109507d704975e277337c0",
+      "c603134bd4ea2bbdd0145c666c6db834363f46b299d2634c5bd98e7f934addfe",
+      "c93079c86e63ded48287f4b9fd0f1077115f1b904b0b82df0e43c0fc5cf47fe7",
+      "cf32610b5624cc481b41e66f186b19389cb05fe0ed89c803fee3ce0b56c7d640",
+      "d4f97033950215f62fa8a983b53657a9217f9da37112ca1c1e09dc40c7d404a8",
+      "dae0d163edd2c36e34a4673eb7b790c0da3fe5d808feeabaad9fd0fa7590d23a",
+      "ebb13c82266aaed79564c050123895e1892889f9e7ee93b90c12f85035ce023d",
+      "f0e61d11a5273136f8d13ae297f509f5167c8820c3b9bc572b6ff1844e8251b8",
+      "f90961432c0176d2b3ec1c7d7002d5fd5858d6bbe59bf2e703d087d075b59220",
+      "f9d72385d4a07ccd0b8b3bb9f3dc498567ec30449aacf6e754bf6a0e4a4a866a",
+      "fcc83ca53dccbcf655abf8ba3bbe98537aea4bc6934296f389b3a72997759e53",
+      "fd4b5c017e27612eea3c7f62de50016560ba95f82c2124730236b23d9f71b350"
+    ],
+    "meaning_plus_added_commentary_union_N": 37,
+    "meaning_plus_added_commentary_base_ids": [
+      "057ae9354cdf384842d45948ab487309a137d5c45be40ae01a32d35cdba48a0c",
+      "228fcc9d72ba5b01270fedad6d38ee27910e33913db1034d9fe4c8731e945723",
+      "27c39a27d981820a0be94ce71134a42b823e548dfa95182d42801d46608a1c33",
+      "27c9c153c3a0bdc249a9820ed3fe8251e075b2912085e87e1998703f5c9f41b7",
+      "2b61e5bd349fc575f42e4ca3bf57cf24602ef00b7cae7f8e06e91b401199347f",
+      "2ea4cfad3bb4c7803a2fb240e6ec200f3780e226898541a9cc1d1217a1337771",
+      "362a001bfe2afa2398e4f7bbe4316e5f30c6ddcea051a012d703aba91ce5ba25",
+      "40ed04d8cad93b06cd055ad4ae223c05cfeca6b723e3d40acdf9c16b8ed70688",
+      "4357a6e538ee9e1be0fcde143ac444d1218565fc795c54bf18831982724f0de7",
+      "4646d03dcad87ce35bbb992af8cf668a07b12e03864752ffafeb6dc78ad39930",
+      "46704365a4781941c186c07f16cbe28e34b9cc2b4ba6ec857a341e4c7d11df2a",
+      "4697ac57f3b4d42d20130f2820db47fdc0b438fc5f9f72de0cb3294acced6ff9",
+      "4aafa42260595b662e8f728b2f0fea6c79967db2b2c40dc458f35987b5027d61",
+      "582e9bf1f367e4047bc8dfed7a1f6b5f710b7d539f033576da439b0af9dec3f5",
+      "79e05bd1fed355ceae8744d4e247089eba6983da7691bd51eb77a1dd8b9c6ddf",
+      "8017bc0348419c679be839716783c5d42ea882ffe9c76f4aa5de7a07cd73bd0e",
+      "87da4bd94e86a30800b17d6639af62d16d29e5dde023e01a3d4a552bec8f9121",
+      "8c8065bf4f9be853b39084a61735753be638fb2bea8030001cc387f463ce4a2c",
+      "8f1a8d9fa52f9d1f793c463325123a560bf7a42b25243f248ef293cba4ae9c2a",
+      "940feabffba6ea5c8ebcfe1df46b22d4e655d7c495ebcb40dedc896191aa0c54",
+      "95812e7383b4728475bf342d17bc09c8b79934eea893ebb72ca5eb3eccb2fe16",
+      "a12c3abc88fb0757ff627e685a8905f141a0f0d7af179710c03004d5f4d4e256",
+      "b56fae950a3c52ac689615858c73fccd089e107d1f8e51afba835ea97daa03f1",
+      "b9e7dcbaf7111730191fa872aa3575103cd32471be7aaf454d9c45ce7ed57e54",
+      "c094055bfff6d924778913092f2276cd81138af6e7ad3516efe0c7f2ba13387d",
+      "c0b08678e465d6ccf6043dccd67a5c6f05e670daae109507d704975e277337c0",
+      "c603134bd4ea2bbdd0145c666c6db834363f46b299d2634c5bd98e7f934addfe",
+      "c93079c86e63ded48287f4b9fd0f1077115f1b904b0b82df0e43c0fc5cf47fe7",
+      "cf32610b5624cc481b41e66f186b19389cb05fe0ed89c803fee3ce0b56c7d640",
+      "d4f97033950215f62fa8a983b53657a9217f9da37112ca1c1e09dc40c7d404a8",
+      "dae0d163edd2c36e34a4673eb7b790c0da3fe5d808feeabaad9fd0fa7590d23a",
+      "ebb13c82266aaed79564c050123895e1892889f9e7ee93b90c12f85035ce023d",
+      "f0e61d11a5273136f8d13ae297f509f5167c8820c3b9bc572b6ff1844e8251b8",
+      "f90961432c0176d2b3ec1c7d7002d5fd5858d6bbe59bf2e703d087d075b59220",
+      "f9d72385d4a07ccd0b8b3bb9f3dc498567ec30449aacf6e754bf6a0e4a4a866a",
+      "fcc83ca53dccbcf655abf8ba3bbe98537aea4bc6934296f389b3a72997759e53",
+      "fd4b5c017e27612eea3c7f62de50016560ba95f82c2124730236b23d9f71b350"
+    ],
+    "coverage_separate_N": 7,
+    "coverage_separate_base_ids": [
+      "03b317dfa170f2eaf62297c9ef4e909f594b027939305a1ae80fbf56b1df877f",
+      "430b2fa8e0e71c0af4580e3d6e6bd53c45b9e90d8af42dd118107a9891b497c5",
+      "621a4c938c37f92f34d0586953a39519162f129a9422a56e1a5d041dd4f541c8",
+      "723386c3c5c59faba088baaa5809d4121199a01b92a89c1f0e4092d5394fd414",
+      "9d28cf20a9b9df172b6537d3e0062b7787eb1bedc90d00f951ab373ce58ac407",
+      "f2009e5b5da5f3881d192b4127c3930e3689b351fefcf50a0b5c963b5b19f637",
+      "f3d1da441a80800dd38248c932ad92736c29796674afbb8adab222ce9d77c931"
+    ],
+    "meaning_or_commentary_and_coverage_overlap_N": 0,
+    "all_confirmed_translation_issue_union_N": 44,
+    "all_confirmed_translation_issue_union_base_ids": [
+      "03b317dfa170f2eaf62297c9ef4e909f594b027939305a1ae80fbf56b1df877f",
+      "057ae9354cdf384842d45948ab487309a137d5c45be40ae01a32d35cdba48a0c",
+      "228fcc9d72ba5b01270fedad6d38ee27910e33913db1034d9fe4c8731e945723",
+      "27c39a27d981820a0be94ce71134a42b823e548dfa95182d42801d46608a1c33",
+      "27c9c153c3a0bdc249a9820ed3fe8251e075b2912085e87e1998703f5c9f41b7",
+      "2b61e5bd349fc575f42e4ca3bf57cf24602ef00b7cae7f8e06e91b401199347f",
+      "2ea4cfad3bb4c7803a2fb240e6ec200f3780e226898541a9cc1d1217a1337771",
+      "362a001bfe2afa2398e4f7bbe4316e5f30c6ddcea051a012d703aba91ce5ba25",
+      "40ed04d8cad93b06cd055ad4ae223c05cfeca6b723e3d40acdf9c16b8ed70688",
+      "430b2fa8e0e71c0af4580e3d6e6bd53c45b9e90d8af42dd118107a9891b497c5",
+      "4357a6e538ee9e1be0fcde143ac444d1218565fc795c54bf18831982724f0de7",
+      "4646d03dcad87ce35bbb992af8cf668a07b12e03864752ffafeb6dc78ad39930",
+      "46704365a4781941c186c07f16cbe28e34b9cc2b4ba6ec857a341e4c7d11df2a",
+      "4697ac57f3b4d42d20130f2820db47fdc0b438fc5f9f72de0cb3294acced6ff9",
+      "4aafa42260595b662e8f728b2f0fea6c79967db2b2c40dc458f35987b5027d61",
+      "582e9bf1f367e4047bc8dfed7a1f6b5f710b7d539f033576da439b0af9dec3f5",
+      "621a4c938c37f92f34d0586953a39519162f129a9422a56e1a5d041dd4f541c8",
+      "723386c3c5c59faba088baaa5809d4121199a01b92a89c1f0e4092d5394fd414",
+      "79e05bd1fed355ceae8744d4e247089eba6983da7691bd51eb77a1dd8b9c6ddf",
+      "8017bc0348419c679be839716783c5d42ea882ffe9c76f4aa5de7a07cd73bd0e",
+      "87da4bd94e86a30800b17d6639af62d16d29e5dde023e01a3d4a552bec8f9121",
+      "8c8065bf4f9be853b39084a61735753be638fb2bea8030001cc387f463ce4a2c",
+      "8f1a8d9fa52f9d1f793c463325123a560bf7a42b25243f248ef293cba4ae9c2a",
+      "940feabffba6ea5c8ebcfe1df46b22d4e655d7c495ebcb40dedc896191aa0c54",
+      "95812e7383b4728475bf342d17bc09c8b79934eea893ebb72ca5eb3eccb2fe16",
+      "9d28cf20a9b9df172b6537d3e0062b7787eb1bedc90d00f951ab373ce58ac407",
+      "a12c3abc88fb0757ff627e685a8905f141a0f0d7af179710c03004d5f4d4e256",
+      "b56fae950a3c52ac689615858c73fccd089e107d1f8e51afba835ea97daa03f1",
+      "b9e7dcbaf7111730191fa872aa3575103cd32471be7aaf454d9c45ce7ed57e54",
+      "c094055bfff6d924778913092f2276cd81138af6e7ad3516efe0c7f2ba13387d",
+      "c0b08678e465d6ccf6043dccd67a5c6f05e670daae109507d704975e277337c0",
+      "c603134bd4ea2bbdd0145c666c6db834363f46b299d2634c5bd98e7f934addfe",
+      "c93079c86e63ded48287f4b9fd0f1077115f1b904b0b82df0e43c0fc5cf47fe7",
+      "cf32610b5624cc481b41e66f186b19389cb05fe0ed89c803fee3ce0b56c7d640",
+      "d4f97033950215f62fa8a983b53657a9217f9da37112ca1c1e09dc40c7d404a8",
+      "dae0d163edd2c36e34a4673eb7b790c0da3fe5d808feeabaad9fd0fa7590d23a",
+      "ebb13c82266aaed79564c050123895e1892889f9e7ee93b90c12f85035ce023d",
+      "f0e61d11a5273136f8d13ae297f509f5167c8820c3b9bc572b6ff1844e8251b8",
+      "f2009e5b5da5f3881d192b4127c3930e3689b351fefcf50a0b5c963b5b19f637",
+      "f3d1da441a80800dd38248c932ad92736c29796674afbb8adab222ce9d77c931",
+      "f90961432c0176d2b3ec1c7d7002d5fd5858d6bbe59bf2e703d087d075b59220",
+      "f9d72385d4a07ccd0b8b3bb9f3dc498567ec30449aacf6e754bf6a0e4a4a866a",
+      "fcc83ca53dccbcf655abf8ba3bbe98537aea4bc6934296f389b3a72997759e53",
+      "fd4b5c017e27612eea3c7f62de50016560ba95f82c2124730236b23d9f71b350"
+    ],
+    "all_confirmed_translation_issue_union_by_split": {
+      "train": 29,
+      "test": 9,
+      "validation": 6
+    },
+    "additional_patterns_overlap_with_diagnostic5_N": 3,
+    "U150_final_severity": "minor local heading, body stance retained",
+    "major_minor_not_collapsed_into_one_severity": true,
+    "meaning_count_is_not_binary_label_error_count": true,
+    "not_a_prevalence_estimate": true,
+    "model_scores_used": false,
+    "data_or_binary_labels_changed": false
+  },
+  "targeted_diagnostic_review": {
+    "scope": "All 26 unique current-WildGuard rows triggering declared low-coverage, numeric, negation, added-refusal or answer-prefix rules; no model selection.",
+    "unique_candidates_n": 26,
+    "verdict_counts": {
+      "confirmed_partial_coverage": 7,
+      "false_positive_no_material_error": 14,
+      "confirmed_major_semantic_error": 5
+    },
+    "numeric_anchor_rule_occurrences": 10,
+    "numeric_unique_rows": 9,
+    "numeric_confirmed_meaning_error_n": 0,
+    "negation_candidate_rows": 2,
+    "negation_confirmed_scope_error_n": 0,
+    "added_refusal_and_answer_prefix_candidate_rows": 2,
+    "prefix_rules_confirmed_semantic_error_n": 0,
+    "other_cases_show_quoted_refusal_blindspot": true,
+    "source_truncation_confirmed_n": 0,
+    "generation_stop_and_eos_do_not_certify_full_translation": true,
+    "curated_replacement_character_root_cause": {
+      "base_id": "01e950885ae833b23bac004b72b10a423e3ca1875b47d730feaf3b4538ccc730",
+      "earliest_available_source_file": "data/sources/hanguard_v3.parquet",
+      "source_row_zero_based": 3955,
+      "source_contains_leading_U_FFFD": true,
+      "source_archive_and_current_prompt_bytes_identical": true,
+      "introduced_during_translation_release": false,
+      "source_file_sha256": "5a8c1334b7a62294aff9aeffc56b18f95f8b58d760fd43dabd72b53c3754b933",
+      "limitation": "No earlier upstream raw download is available; cannot identify which upstream step created U+FFFD."
+    },
+    "reviewer_type": "Single Codex assistant bilingual full-text review, not independently adjudicated human gold.",
+    "no_data_or_labels_changed": true
+  },
+  "format_and_family_structure": {
+    "forced_answer_marker_rows": 8644,
+    "all_marker_rows_harmful": true,
+    "retained_jailbench_wrappers": 15,
+    "all_15_wrappers_present_in_all_splits": true,
+    "known_seed_cross_split_rows": 0,
+    "style_duplicate_cross_split_groups": 9,
+    "style_duplicate_cross_split_member_rows": 23,
+    "original_lexical_near_match_pairs": 228,
+    "original_lexical_near_match_rows": 160,
+    "lexical_near_match_not_semantic_equivalence": true
+  },
+  "source_label_joint_split_drift": [
+    {
+      "source": "chinese_curated",
+      "split_harmful_fractions": {
+        "test": 0.3965068747677443,
+        "train": 0.4409101462735082,
+        "validation": 0.4145616641901932
+      },
+      "train_to_test_harmful_fraction_difference_pp": -4.4403271505763895
+    },
+    {
+      "source": "jailbench",
+      "split_harmful_fractions": {
+        "test": 1.0,
+        "train": 1.0,
+        "validation": 1.0
+      },
+      "train_to_test_harmful_fraction_difference_pp": 0.0
+    },
+    {
+      "source": "wildguard_zh",
+      "split_harmful_fractions": {
+        "test": 0.5198797965788257,
+        "train": 0.4934418160233952,
+        "validation": 0.5088331008833101
+      },
+      "train_to_test_harmful_fraction_difference_pp": 2.643798055543045
+    }
+  ],
+  "reviewed_translation_issue_queue": {
+    "rows": 106,
+    "important_issue_reviewed_rows": 17,
+    "warning": "Combines targeted and probability-sample findings; queue fraction is not a prevalence estimate."
+  },
+  "input_data_unchanged": true,
+  "original_public_binary_labels_unchanged": true,
+  "limitations": [
+    "Full-corpus structure and rule scan, probability semantic samples and targeted complete reviews; not semantic certification of every translation.",
+    "Rule candidate counts are not translation error prevalence.",
+    "Data issues are demonstrated independently of model results; their contribution to fusion gains has not been measured."
+  ]
+}

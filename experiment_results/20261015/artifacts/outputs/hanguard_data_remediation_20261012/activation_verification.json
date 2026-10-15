@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "default_binary_release": {
+    "dataset_contract": "hanguard_binary_type_decoupled_v1",
+    "dataset_version": "three_source_remediated_20261012"
+  },
+  "default_category_release": {
+    "dataset_contract": "hanguard_binary_type_decoupled_v1",
+    "dataset_version": "hanguard_two_source_remediated_20261012"
+  },
+  "unique_cpu_tests_passed": 124,
+  "maintained_binary_dry_run_passed": true,
+  "old_parent_with_new_category_release_rejected": true,
+  "experiment_directories_created": false,
+  "classifier_training_started": false,
+  "GPU_inference_started": false,
+  "protected_historical_trainer_sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+  "code_sha256": {
+    "scripts/hanguard/current_training.py": "1b18846b02aac8fa2a3f4fbb71a024bcc2a9fcd0683f1fc8d8a5a3654cbab984",
+    "scripts/hanguard/remediated_dataset_contract.py": "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6",
+    "scripts/hanguard/remediated_binary_study.py": "dfd13ad93bbd2ac9d4c9a1450c63ab288ad53869199608ef82b17e554b4e10cb",
+    "evaluate.py": "127a08e21e0a15e4c251edd636a46406e213c3bb98e8000b84376c35fcbeb472"
+  },
+  "published_manifest_sha256": {
+    "three_source_remediated_20261012": "a108e631d7978f680feebc6e9276d5c470cc44e2037fd56a940f82fdf33f1a80",
+    "hanguard_two_source_remediated_20261012": "7590e84cab13362ce1e0b75b441ffb2e745b43e39a27034a7f3a12d38d46cc47"
+  }
+}

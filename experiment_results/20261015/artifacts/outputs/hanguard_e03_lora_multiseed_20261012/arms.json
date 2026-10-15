@@ -1,0 +1,8 @@
+{
+  "E03": {
+    "lora": true,
+    "mode": "last",
+    "readout": "mlp",
+    "objective": "bce"
+  }
+}

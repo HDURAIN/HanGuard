@@ -1,0 +1,7 @@
+{
+  "requested_utc": "2026-10-13T02:30:56.316310+00:00",
+  "reason": "User explicitly requested: 不再继续训练，看起来方向不对. Stop all remaining training and queue stages; preserve completed folds and partial work.",
+  "remaining_training_authorized": false,
+  "completed_folds_preserved": true,
+  "partial_fold_preserved": true
+}

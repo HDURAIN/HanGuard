@@ -1,0 +1,49 @@
+{
+  "fold": 0,
+  "layer": 21,
+  "protocol_sha256": "972a059977b5d937e29186a0d0c92703fa53b1e6d186907c678fb0656b00dc99",
+  "best_epoch": {
+    "last_mlp": 2,
+    "repeat_last": 3,
+    "static_query_softmax": 1,
+    "global_query_softmax": 1,
+    "global_query_entmax15": 1,
+    "gated_attention_softmax": 1
+  },
+  "dev_bce": {
+    "last_mlp": 0.10654604711707025,
+    "repeat_last": 0.10461780670716023,
+    "static_query_softmax": 0.10284530115611634,
+    "global_query_softmax": 0.10295404125234446,
+    "global_query_entmax15": 0.1091639649943263,
+    "gated_attention_softmax": 0.1038732412906466
+  },
+  "thresholds": {
+    "last_mlp": 0.6737432538499628,
+    "repeat_last": 0.1902251187185,
+    "static_query_softmax": 0.5264158548121209,
+    "global_query_softmax": 0.4525352096352231,
+    "global_query_entmax15": 0.5657303413167194,
+    "gated_attention_softmax": 0.5210144426325826
+  },
+  "capacity": {
+    "arms": [
+      "repeat_last",
+      "static_query_softmax",
+      "global_query_softmax",
+      "global_query_entmax15",
+      "gated_attention_softmax"
+    ],
+    "parameters": 705665,
+    "initialization_sha256": "3e09b5b99a2c83902543a91c1cf99d617682b0e6c15ee3105c27ba6896e47ff1",
+    "effective_capacity_caveat": "static query projection and repeat query route are intentionally inactive",
+    "global_initialization_shared": true,
+    "single_parameters": 327937
+  },
+  "budgets": {
+    "initial": 12,
+    "actual": 12,
+    "cap": 40,
+    "extensions": []
+  }
+}

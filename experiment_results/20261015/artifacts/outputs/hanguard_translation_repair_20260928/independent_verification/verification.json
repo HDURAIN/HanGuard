@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "raw": {
+    "unique_english": 45615,
+    "expanded_mapping_rows": 46187,
+    "literal_restoration_byte_exact": true,
+    "literal_issue_lists_exact": true,
+    "unprotected_code_issue_lists_exact": true,
+    "source_manifest_and_hash_verified": true,
+    "raw_hard_fail_unique_english": 44,
+    "literal_hard_fail_unique_english": 5,
+    "raw_issue_occurrences": {
+      "literal_issues:missing_literal_placeholder": 6,
+      "literal_issues:malformed_literal_placeholder": 2,
+      "literal_issues:unknown_literal_placeholder": 1,
+      "unprotected_code_issues:unprotected_code_may_have_changed": 6
+    },
+    "audit_version": "label_blind_translation_checks_20260928_semantic_scope"
+  },
+  "merged": {
+    "merged_rows": 46187,
+    "recorded_correction_unique_english": 33,
+    "recorded_correction_rows": 33,
+    "same_english_review_decisions_consistent": true,
+    "original_model_and_effective_text_hashes_verified": true
+  },
+  "dataset": {
+    "original_rows": 80709,
+    "full_archive_rows": 80709,
+    "candidate_rows": 77686,
+    "quarantine_rows": 3023,
+    "full_population_partition_verified": true,
+    "quarantine_matches_independent_rules": true,
+    "max_prompt_tokens": null,
+    "legacy_prompt_limit": 370,
+    "archive_over_legacy_limit": 582,
+    "candidate_over_legacy_limit": 407,
+    "quarantine_over_legacy_limit": 175,
+    "legacy_length_is_annotation_only": true,
+    "stable_fields_verified": [
+      "split",
+      "group_id",
+      "source",
+      "source_row",
+      "prompt_harm_label",
+      "category_id",
+      "source_file",
+      "source_unit",
+      "base_normalized",
+      "category_label",
+      "text_form",
+      "template_id"
+    ],
+    "full_untruncated_token_counts_verified": true,
+    "chinese_duplicate_groups_wholly_quarantined": true,
+    "english_cross_split_conflict_groups_wholly_quarantined": true,
+    "splits": {
+      "train": 62155,
+      "validation": 7753,
+      "test": 7778
+    }
+  },
+  "paths": {
+    "mapping": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/source_mapping.parquet",
+    "merged": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/merged_qwen35/translation_results.jsonl",
+    "dataset": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired",
+    "source": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_original",
+    "production": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35"
+  },
+  "input_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/source_mapping.parquet": "c09de904dc1a97666e6ddaf6e1dcf407a096efe0e736ed2b97bee2766b10d02f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/merged_qwen35/translation_results.jsonl": "86451cf0b328328092f75e232761d861c2cc4d20ee1d7cb1cbfdc5b4e8318c62",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/raw_0.jsonl": "0cdc932adfb8445b1af28ec64facb266a2247ec9473acd500e967f54836349ec",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/raw_1.jsonl": "996a868189e3e9c6424ac2d7605481077fe3f8ef2eec3ccbae2b20d9706e155b",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/raw_2.jsonl": "0baad2f36f9c2010a9b175641b552d1fc6c83c30a45e20fc5523570c16d90e69",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/raw_3.jsonl": "4764d750bff95e011278bc7c1f2362f14798297207b289d67afbc2eb352da1fc",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/raw_4.jsonl": "f7f7d73decd85e79ef37ac1fa620604ac0465c6768238f600860d3afb2fee9d6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/raw_5.jsonl": "dc50250d2933b9d38e837d58f142ba5bde4cffd732c5af0f2f16358017d8261b",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/raw_6.jsonl": "6da29e887e27c5b9ede79177266efcc53e6793a023f139564714f4d2c2a9c15a",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_original/train.parquet": "00af4a74b6048309ecc4797774a90225f93ff4aec637da367a6b2c775dd3cf34",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_original/validation.parquet": "ed3d5b58f4a0c778b4e7ccc1ddc02af29fb7ef1fffd8e350dce8774ef3c9f28f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_original/test.parquet": "34941427b3a6b0518e16188b620aa3daf8708201af5c87b59c3c3a22d70a2178",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired/train.parquet": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired/validation.parquet": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired/test.parquet": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired/full_repaired_archive.parquet": "d35f93d25bc6c3e67df28059d43a2aa2a6ce7e3b11bdaaaf4eb5bdfe09a075a5",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired/quarantine.parquet": "dfc0b61c7acc83e63a1f7a99c4362ecafda7700da3ccd484090141d8acc4b6f8",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired/manifest.json": "d14bbd6f38f2b165004005bd733a5b6eeb9df8cec71674d282fbfcc4cb9c7b12",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/protocol_0.json": "58c0b7009a1c1c9712bd378f91849aaaba07d2299f41351ed505ca1326b5a9ec",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/status_0.json": "24a6e9b44c390f96730348b850bb2db0f3db3b8cc7ed644e4b86f77a73006870",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/protocol_1.json": "73b92d4b2b4931e51b4d995d451479b74da459f724e721ca7f205281b71a6789",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/status_1.json": "be036481fb4214f04d3dd9b6a51b9d3841d052f3f5fdeb4cab3212843030fe6e",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/protocol_2.json": "1188b9ff693c4675380c599d78df4b9a0418d50c5744ce87b7671ab4bff66615",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/status_2.json": "9af9d88b90151e1fcbfb6e77601827ae7309ae68b465ed84cda478f230c802fc",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/protocol_3.json": "802a59108b3d76102257b406665f7b0e50d16c59bfdd355772923ab32c9642f0",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/status_3.json": "e520235ca8385b3ae8237469118e64e548641bdfa18aea00b710cfe13371001c",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/protocol_4.json": "4b25c31cd83466488ed384ab97cfdc1aef80608066f95563824ab8cc973f6a14",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/status_4.json": "67d69a4efcce0810eba578cdbdcdf4702af30052efc5c9ecf76c945bfcd00531",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/protocol_5.json": "3e76c7b009eaadf679e33b26b96e71a0fe71079c0778293c3c7f94a3a228a31a",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/status_5.json": "10ab1fdf268c83f1844eafb59fac9a954d9cf6ae2d1aabb2d144be1ddcf7852f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/protocol_6.json": "7c6731641bd62d6c81000445dd277b4c9109ae117c0d05b639d2448fcc71d096",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_translation_repair_20260928/production_qwen35/status_6.json": "3117989cb768c9d6663e74d243453892e71ca3906faa44f4a103a63d4b9a3531"
+  },
+  "frozen_guard_sha256": "b073f4c1e7786774296f9db36c65e6b9e807f5231a2df8467a5fad4e7fc906c8",
+  "audit_script_sha256": "0949f593a842c20960d81f6aff4072f4df10ade6e36b56d5d804b715fa3eb07d",
+  "limitations": [
+    "This validates text lineage, restoration, recorded review provenance and dataset partition; it does not certify semantic equivalence.",
+    "Recorded Codex bilingual reviews are not human expert gold labels.",
+    "No training ran; revised-data scores must not be subtracted from historical scores as algorithmic gains."
+  ]
+}

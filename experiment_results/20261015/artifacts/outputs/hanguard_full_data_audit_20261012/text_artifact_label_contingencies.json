@@ -1,0 +1,220 @@
+{
+  "scope": "Full corpus descriptive text-shape/label contingencies; no model fitting",
+  "rows_scanned": 77686,
+  "features": {
+    "forced_answer_template_marker": {
+      "rows": 8644,
+      "pattern": "请以「",
+      "by_source_label": [
+        {
+          "source": "chinese_curated",
+          "prompt_harm_label": "harmful",
+          "rows": 8644
+        }
+      ],
+      "by_split_label": [
+        {
+          "split": "test",
+          "prompt_harm_label": "harmful",
+          "rows": 796
+        },
+        {
+          "split": "train",
+          "prompt_harm_label": "harmful",
+          "rows": 7007
+        },
+        {
+          "split": "validation",
+          "prompt_harm_label": "harmful",
+          "rows": 841
+        }
+      ]
+    },
+    "forced_answer_begin_instruction": {
+      "rows": 8695,
+      "pattern": "请以[\\s\\S]{0,180}(?:开始回答|开头)",
+      "by_source_label": [
+        {
+          "source": "chinese_curated",
+          "prompt_harm_label": "harmful",
+          "rows": 8640
+        },
+        {
+          "source": "wildguard_zh",
+          "prompt_harm_label": "harmful",
+          "rows": 29
+        },
+        {
+          "source": "wildguard_zh",
+          "prompt_harm_label": "unharmful",
+          "rows": 26
+        }
+      ],
+      "by_split_label": [
+        {
+          "split": "test",
+          "prompt_harm_label": "harmful",
+          "rows": 800
+        },
+        {
+          "split": "test",
+          "prompt_harm_label": "unharmful",
+          "rows": 2
+        },
+        {
+          "split": "train",
+          "prompt_harm_label": "harmful",
+          "rows": 7027
+        },
+        {
+          "split": "train",
+          "prompt_harm_label": "unharmful",
+          "rows": 21
+        },
+        {
+          "split": "validation",
+          "prompt_harm_label": "harmful",
+          "rows": 842
+        },
+        {
+          "split": "validation",
+          "prompt_harm_label": "unharmful",
+          "rows": 3
+        }
+      ]
+    },
+    "refusal_text_in_prompt": {
+      "rows": 41,
+      "pattern": "(?:I(?:[’\\x27]m| am) sorry[^\\n]{0,80}(?:cannot|can\\x27t)|很抱歉[^\\n]{0,40}(?:不能|无法)|抱歉[^\\n]{0,40}(?:不能|无法))",
+      "by_source_label": [
+        {
+          "source": "wildguard_zh",
+          "prompt_harm_label": "harmful",
+          "rows": 29
+        },
+        {
+          "source": "wildguard_zh",
+          "prompt_harm_label": "unharmful",
+          "rows": 12
+        }
+      ],
+      "by_split_label": [
+        {
+          "split": "test",
+          "prompt_harm_label": "harmful",
+          "rows": 4
+        },
+        {
+          "split": "test",
+          "prompt_harm_label": "unharmful",
+          "rows": 1
+        },
+        {
+          "split": "train",
+          "prompt_harm_label": "harmful",
+          "rows": 24
+        },
+        {
+          "split": "train",
+          "prompt_harm_label": "unharmful",
+          "rows": 10
+        },
+        {
+          "split": "validation",
+          "prompt_harm_label": "harmful",
+          "rows": 1
+        },
+        {
+          "split": "validation",
+          "prompt_harm_label": "unharmful",
+          "rows": 1
+        }
+      ]
+    },
+    "code_fence": {
+      "rows": 71,
+      "pattern": "```",
+      "by_source_label": [
+        {
+          "source": "chinese_curated",
+          "prompt_harm_label": "unharmful",
+          "rows": 2
+        },
+        {
+          "source": "wildguard_zh",
+          "prompt_harm_label": "harmful",
+          "rows": 41
+        },
+        {
+          "source": "wildguard_zh",
+          "prompt_harm_label": "unharmful",
+          "rows": 28
+        }
+      ],
+      "by_split_label": [
+        {
+          "split": "test",
+          "prompt_harm_label": "harmful",
+          "rows": 4
+        },
+        {
+          "split": "test",
+          "prompt_harm_label": "unharmful",
+          "rows": 4
+        },
+        {
+          "split": "train",
+          "prompt_harm_label": "harmful",
+          "rows": 33
+        },
+        {
+          "split": "train",
+          "prompt_harm_label": "unharmful",
+          "rows": 23
+        },
+        {
+          "split": "validation",
+          "prompt_harm_label": "harmful",
+          "rows": 4
+        },
+        {
+          "split": "validation",
+          "prompt_harm_label": "unharmful",
+          "rows": 3
+        }
+      ]
+    },
+    "chat_role_delimiter": {
+      "rows": 3,
+      "pattern": "(?:<\\|(?:assistant|user|system|im_start)\\|>|\\[(?:assistant|user|system)\\])",
+      "by_source_label": [
+        {
+          "source": "wildguard_zh",
+          "prompt_harm_label": "harmful",
+          "rows": 2
+        },
+        {
+          "source": "wildguard_zh",
+          "prompt_harm_label": "unharmful",
+          "rows": 1
+        }
+      ],
+      "by_split_label": [
+        {
+          "split": "train",
+          "prompt_harm_label": "harmful",
+          "rows": 2
+        },
+        {
+          "split": "train",
+          "prompt_harm_label": "unharmful",
+          "rows": 1
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Format-label association does not demonstrate that a learned model relies on it.",
+    "Refusal strings may be quoted or task-relevant, not automatically contamination."
+  ]
+}

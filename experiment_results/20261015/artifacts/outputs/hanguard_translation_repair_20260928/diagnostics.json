@@ -1,0 +1,193 @@
+{
+  "protocol": "uniform_text_only_translation_candidate_screen",
+  "mapped_rows": 46187,
+  "rules": {
+    "source_over_512": "Current local NLLB tokenization with special tokens exceeds historical input max_length=512.",
+    "target_reencoded_content_ge_254": "Current target content re-encodes to >=254 tokens, near historical max_new_tokens=256; generation IDs/stopping reason unavailable.",
+    "replacement_or_nul": "Old Chinese text contains U+FFFD or U+0000; may reflect an intentional source character.",
+    "unexpected_unicode_control": "Old text contains Cc controls other than tab/newline/carriage return, or Cf characters; may be intentional injection text.",
+    "no_cjk_despite_latin_source": "Source has >=20 ASCII letters and old target has no CJK; code, names and deliberate English output can be valid.",
+    "low_target_token_ratio": "Source content >=40 tokens and target/source content token ratio <0.35; not a language-independent quality test.",
+    "high_target_token_ratio": "Source content >=16 tokens and target/source content token ratio >3.0; possible expansion or repetition, not proof.",
+    "long_identical_character_run": "At least 12 identical non-whitespace characters in a row; may faithfully reproduce attack formatting.",
+    "missing_concept_lexicon_candidate": "An explicit English concept matches the declared lexicon but no listed Chinese/English equivalent occurs; incomplete synonyms create false positives.",
+    "missing_numeric_literal_candidate": "At least one source Arabic numeric literal is absent from target; Chinese numeral conversion and renumbering can be valid.",
+    "missing_url_literal_candidate": "At least one source HTTP(S) URL is absent literally from target; punctuation/normalization can explain differences."
+  },
+  "missing_concept_lexicon": {
+    "child_or_minor": {
+      "english_regex": "\\b(?:child(?:ren)?|kids?|minors?|underage)\\b",
+      "target_equivalent_regex": "儿童|孩子|小孩|小朋友|未成年|幼童|婴儿|少年|青少年"
+    },
+    "pregnancy": {
+      "english_regex": "\\b(?:pregnan\\w*|fetus|foetus)\\b",
+      "target_equivalent_regex": "孕|胎|妊娠"
+    },
+    "password": {
+      "english_regex": "\\b(?:passwords?|passcodes?|credentials)\\b",
+      "target_equivalent_regex": "密码|口令|凭证|凭据|证书|password|passcode|credential"
+    },
+    "private_information": {
+      "english_regex": "\\b(?:personal|private|sensitive)\\s+(?:information|data)\\b",
+      "target_equivalent_regex": "个人|私人|私密|隐私|敏感|personal|private|sensitive"
+    },
+    "without_permission": {
+      "english_regex": "\\b(?:without\\s+(?:their\\s+)?(?:permission|consent)|unauthori[sz]ed)\\b",
+      "target_equivalent_regex": "未经|未获|无权|未授权|未经授权|不经|没有.*(?:许可|允许|同意)|unauthori[sz]ed|without"
+    },
+    "slur": {
+      "english_regex": "\\bslurs?\\b",
+      "target_equivalent_regex": "侮辱|辱骂|蔑称|贬称|贬损|贬义|歧视性.*(?:词|语言)|冒犯性.*(?:词|语言)|slur"
+    },
+    "alcohol": {
+      "english_regex": "\\b(?:alcohol|alcoholic|liquor|vodka|whisk(?:e)?y)\\b",
+      "target_equivalent_regex": "酒|乙醇|伏特加|威士忌|alcohol|liquor|vodka|whisk"
+    },
+    "weapon": {
+      "english_regex": "\\b(?:weapons?|firearms?|guns?|rifles?)\\b",
+      "target_equivalent_regex": "武器|枪|火器|兵器|weapon|firearm|gun|rifle"
+    },
+    "explosive": {
+      "english_regex": "\\b(?:explosives?|bombs?|detonators?)\\b",
+      "target_equivalent_regex": "爆|炸|雷管|explosive|bomb|detonator"
+    },
+    "self_harm": {
+      "english_regex": "\\b(?:suicid\\w*|self[- ]harm)\\b",
+      "target_equivalent_regex": "自杀|自残|自伤|轻生|伤害自己|suicid|self[- ]harm"
+    }
+  },
+  "candidate_counts": {
+    "source_over_512": 549,
+    "target_reencoded_content_ge_254": 2700,
+    "replacement_or_nul": 0,
+    "unexpected_unicode_control": 0,
+    "no_cjk_despite_latin_source": 0,
+    "low_target_token_ratio": 317,
+    "high_target_token_ratio": 8,
+    "long_identical_character_run": 38,
+    "missing_concept_lexicon_candidate": 666,
+    "missing_numeric_literal_candidate": 5848,
+    "missing_url_literal_candidate": 13
+  },
+  "any_candidate_rows": 8010,
+  "candidate_counts_by_split": {
+    "test": {
+      "source_over_512": 68,
+      "target_reencoded_content_ge_254": 281,
+      "replacement_or_nul": 0,
+      "unexpected_unicode_control": 0,
+      "no_cjk_despite_latin_source": 0,
+      "low_target_token_ratio": 25,
+      "high_target_token_ratio": 0,
+      "long_identical_character_run": 5,
+      "missing_concept_lexicon_candidate": 73,
+      "missing_numeric_literal_candidate": 588,
+      "missing_url_literal_candidate": 1
+    },
+    "train": {
+      "source_over_512": 414,
+      "target_reencoded_content_ge_254": 2149,
+      "replacement_or_nul": 0,
+      "unexpected_unicode_control": 0,
+      "no_cjk_despite_latin_source": 0,
+      "low_target_token_ratio": 263,
+      "high_target_token_ratio": 7,
+      "long_identical_character_run": 27,
+      "missing_concept_lexicon_candidate": 528,
+      "missing_numeric_literal_candidate": 4654,
+      "missing_url_literal_candidate": 10
+    },
+    "validation": {
+      "source_over_512": 67,
+      "target_reencoded_content_ge_254": 270,
+      "replacement_or_nul": 0,
+      "unexpected_unicode_control": 0,
+      "no_cjk_despite_latin_source": 0,
+      "low_target_token_ratio": 29,
+      "high_target_token_ratio": 1,
+      "long_identical_character_run": 6,
+      "missing_concept_lexicon_candidate": 65,
+      "missing_numeric_literal_candidate": 606,
+      "missing_url_literal_candidate": 2
+    }
+  },
+  "english_identity": {
+    "exact": {
+      "unique_groups": 45615,
+      "duplicate_extra_rows": 572,
+      "duplicate_groups": 564,
+      "rows_in_duplicate_groups": 1136,
+      "same_split_only_duplicate_groups": 356,
+      "same_split_only_duplicate_rows": 713,
+      "cross_split_groups": 208,
+      "cross_split_rows": 423,
+      "binary_conflict_groups": 0,
+      "binary_conflict_rows": 0
+    },
+    "normalized": {
+      "unique_groups": 45609,
+      "duplicate_extra_rows": 578,
+      "duplicate_groups": 570,
+      "rows_in_duplicate_groups": 1148,
+      "same_split_only_duplicate_groups": 360,
+      "same_split_only_duplicate_rows": 721,
+      "cross_split_groups": 210,
+      "cross_split_rows": 427,
+      "binary_conflict_groups": 0,
+      "binary_conflict_rows": 0
+    }
+  },
+  "curated_source_review": {
+    "current_curated_rows": 26919,
+    "exact_known_translation_text_matches": 1,
+    "identity_only_matches": 1,
+    "nonidentity_correspondence_candidates": 0,
+    "unmatched_rows": 26918,
+    "checked_pairs": [
+      "verified wildguard_zh shuffle42 lineage",
+      "legacy/data/wildguard_injection_retrans_ckpt.parquet"
+    ],
+    "limitations": [
+      "The current curated source does not retain bilingual pairs or upstream per-row dataset IDs.",
+      "Exact shared Chinese text alone does not prove the curated record was produced by translation.",
+      "Unmatched records were not assigned English parents using semantic similarity or model judgments."
+    ]
+  },
+  "tokenizer": {
+    "path": "/mnt/data1/zhouhanyu/models/nllb-200-3.3B",
+    "file_sha256": {
+      "tokenizer_config.json": "d1aa8c3697d3e35674f97b5b7e9c99d22b010f528e80140257d97316be90d044",
+      "special_tokens_map.json": "992bd4ed610d644d6823081937bcc91bb8878dd556cea4ae5327f2480361330e",
+      "sentencepiece.bpe.model": "14bb8dfb35c0ffdea7bc01e56cea38b9e3d5efcdcb9c251d6b40538e1aab555a",
+      "tokenizer.json": "e316b82de11d0f951f370943b3c438311629547285129b0b81dadabd01bca665"
+    },
+    "class": "TokenizersBackend",
+    "transformers_version": "5.3.0",
+    "source_language": "eng_Latn",
+    "truncation": false,
+    "historical_tokenizer_hash_available": false
+  },
+  "historical_generation": {
+    "input_limit": 512,
+    "max_new_tokens_at_call": 256,
+    "source": "legacy/scripts/translate_wildguard.py:91-105",
+    "generation_ids_or_stopping_reasons_available": false
+  },
+  "code_sha256": "2d635477073c72598e8b0fbc3a77154ea1be3492b264ed5b88dba5dc0f83f7d5",
+  "mapping_sha256": "c09de904dc1a97666e6ddaf6e1dcf407a096efe0e736ed2b97bee2766b10d02f",
+  "no_predictions_or_model_error_sets_used": true,
+  "no_data_or_labels_changed": true,
+  "limitations": [
+    "All flags are candidates; no automatic deletion, label change, or semantic-error adjudication.",
+    "Historical tokenizer byte versions and generation traces are unavailable.",
+    "Re-encoding a decoded target cannot prove the historical generation limit was hit.",
+    "Concept/number/URL rules have false positives and false negatives; missing synonyms are not proof of missing meaning.",
+    "English normalization only uses NFKC, casefold, whitespace and Cf removal; no semantic family expansion.",
+    "Repairing translations can expose cross-split exact duplicates; the builder must handle these before release."
+  ],
+  "artifact_sha256": {
+    "source_diagnostics.parquet": "395c630cc58e1a63477a40f14c87ae92c21956861b21e4b20e1a87cbe910ed0a",
+    "english_identity_groups.parquet": "8d3ab73647614a65f6624fd6ec6c91a3d69fb1f6fd0e58286221b7b407fd95ec",
+    "curated_translation_matches.parquet": "d1faadf108e4a4213bf5e56fdd337454a46fc74327259f87297cc937c7714874"
+  }
+}

@@ -1,0 +1,1769 @@
+{
+  "a_train_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/lora_data/train.parquet",
+  "a_validation_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/lora_data/validation.parquet",
+  "allocations": {
+    "A_B": {
+      "fractions": [
+        0.7,
+        0.3
+      ],
+      "groups": [
+        40806,
+        17492
+      ],
+      "max_absolute_stratum_count_deviation": 8,
+      "max_group_rows": 41,
+      "namespace": "A_B",
+      "rows": [
+        46754,
+        20048
+      ],
+      "source_binary_strata": [
+        {
+          "actual": [
+            6543,
+            2804
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            0,
+            0
+          ],
+          "source": "chinese_curated",
+          "targets": [
+            6543,
+            2804
+          ]
+        },
+        {
+          "actual": [
+            8536,
+            3658
+          ],
+          "binary_label": "unharmful",
+          "deviations": [
+            0,
+            0
+          ],
+          "source": "chinese_curated",
+          "targets": [
+            8536,
+            3658
+          ]
+        },
+        {
+          "actual": [
+            6040,
+            2600
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            -8,
+            8
+          ],
+          "source": "jailbench",
+          "targets": [
+            6048,
+            2592
+          ]
+        },
+        {
+          "actual": [
+            13293,
+            5697
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            0,
+            0
+          ],
+          "source": "wildguard_zh",
+          "targets": [
+            13293,
+            5697
+          ]
+        },
+        {
+          "actual": [
+            12342,
+            5289
+          ],
+          "binary_label": "unharmful",
+          "deviations": [
+            0,
+            0
+          ],
+          "source": "wildguard_zh",
+          "targets": [
+            12342,
+            5289
+          ]
+        }
+      ],
+      "target_rows": [
+        46761,
+        20041
+      ],
+      "whole_group_refinement_moves": 0
+    },
+    "A_train_validation": {
+      "fractions": [
+        0.9,
+        0.1
+      ],
+      "groups": [
+        36725,
+        4081
+      ],
+      "max_absolute_stratum_count_deviation": 4,
+      "max_group_rows": 41,
+      "namespace": "A_train_validation",
+      "rows": [
+        42083,
+        4671
+      ],
+      "source_binary_strata": [
+        {
+          "actual": [
+            5889,
+            654
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            0,
+            0
+          ],
+          "source": "chinese_curated",
+          "targets": [
+            5889,
+            654
+          ]
+        },
+        {
+          "actual": [
+            7682,
+            854
+          ],
+          "binary_label": "unharmful",
+          "deviations": [
+            0,
+            0
+          ],
+          "source": "chinese_curated",
+          "targets": [
+            7682,
+            854
+          ]
+        },
+        {
+          "actual": [
+            5440,
+            600
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            4,
+            -4
+          ],
+          "source": "jailbench",
+          "targets": [
+            5436,
+            604
+          ]
+        },
+        {
+          "actual": [
+            11964,
+            1329
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            0,
+            0
+          ],
+          "source": "wildguard_zh",
+          "targets": [
+            11964,
+            1329
+          ]
+        },
+        {
+          "actual": [
+            11108,
+            1234
+          ],
+          "binary_label": "unharmful",
+          "deviations": [
+            0,
+            0
+          ],
+          "source": "wildguard_zh",
+          "targets": [
+            11108,
+            1234
+          ]
+        }
+      ],
+      "target_rows": [
+        42079,
+        4675
+      ],
+      "whole_group_refinement_moves": 0
+    },
+    "B_outer_folds": {
+      "fractions": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "groups": [
+        3493,
+        3502,
+        3501,
+        3499,
+        3497
+      ],
+      "max_absolute_stratum_count_deviation": 0,
+      "max_group_rows": 21,
+      "namespace": "B_outer_folds",
+      "rows": [
+        4011,
+        4011,
+        4010,
+        4009,
+        4007
+      ],
+      "source_binary_strata": [
+        {
+          "actual": [
+            561,
+            561,
+            561,
+            561,
+            560
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source": "chinese_curated",
+          "targets": [
+            561,
+            561,
+            561,
+            561,
+            560
+          ]
+        },
+        {
+          "actual": [
+            732,
+            732,
+            732,
+            731,
+            731
+          ],
+          "binary_label": "unharmful",
+          "deviations": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source": "chinese_curated",
+          "targets": [
+            732,
+            732,
+            732,
+            731,
+            731
+          ]
+        },
+        {
+          "actual": [
+            520,
+            520,
+            520,
+            520,
+            520
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source": "jailbench",
+          "targets": [
+            520,
+            520,
+            520,
+            520,
+            520
+          ]
+        },
+        {
+          "actual": [
+            1140,
+            1140,
+            1139,
+            1139,
+            1139
+          ],
+          "binary_label": "harmful",
+          "deviations": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source": "wildguard_zh",
+          "targets": [
+            1140,
+            1140,
+            1139,
+            1139,
+            1139
+          ]
+        },
+        {
+          "actual": [
+            1058,
+            1058,
+            1058,
+            1058,
+            1057
+          ],
+          "binary_label": "unharmful",
+          "deviations": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "source": "wildguard_zh",
+          "targets": [
+            1058,
+            1058,
+            1058,
+            1058,
+            1057
+          ]
+        }
+      ],
+      "target_rows": [
+        4010,
+        4010,
+        4010,
+        4009,
+        4009
+      ],
+      "whole_group_refinement_moves": 0
+    }
+  },
+  "artifact_sha256": {
+    "B.parquet": "168b395c834a455e52929147d0bfee8161d52a1728094f39775c40a5b4b3a8e9",
+    "folds/fold_0_assignments.parquet": "fbc889ecd2998c248cbfcb3c04990b7fead88d577970e192eea400b3997281aa",
+    "folds/fold_1_assignments.parquet": "937be5aa5e444f86d68643285a8fc9ba2534402feb5bf8fee918860ee321ebae",
+    "folds/fold_2_assignments.parquet": "74275b92ad0f15cb7cc7803b3a65d5e3f726c13a7d601cda483ebfccb63397e0",
+    "folds/fold_3_assignments.parquet": "f5b05fe2aadd3a8a0b9f11dcb633d6f37a23692823f07d22fa7fff94f9d855a3",
+    "folds/fold_4_assignments.parquet": "e7b52e6e74f0c8db10f43bcf499be3fd7ca822618ad2ee298f98382a2fe16f46",
+    "lora_data/train.parquet": "83e9fbd8b673f856969a1c5430c0012e23826e2e90cd0667b59e37e7d75c4edc",
+    "lora_data/validation.parquet": "8f610cef0df8bb48d53ceb5624470add0d6463eb2da3f8c55a710ce06d98e7d6"
+  },
+  "b_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/B.parquet",
+  "builder_sha256": "4fc8049de1a03db527eb7e838ac07d8825ccda53bcf7759602770ce72b0119ad",
+  "derived_identity_intersections": {
+    "A_train/A_validation": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "A_train/B": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "A_train/test": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "A_train/validation": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "A_validation/B": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "A_validation/test": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "A_validation/validation": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "B/test": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "B/validation": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "validation/test": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    }
+  },
+  "folds": [
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_0_assignments.parquet",
+      "fold": 0
+    },
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_1_assignments.parquet",
+      "fold": 1
+    },
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_2_assignments.parquet",
+      "fold": 2
+    },
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_3_assignments.parquet",
+      "fold": 3
+    },
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_4_assignments.parquet",
+      "fold": 4
+    }
+  ],
+  "invariants": {
+    "all_original_fields_preserved": true,
+    "all_original_training_rows_conserved": true,
+    "classifier_scores_used": false,
+    "final_test_enabled": false,
+    "formal_holdout_labels_used": false,
+    "formal_holdout_payloads_copied": false,
+    "lora_can_access_B": false,
+    "whole_groups_preserved": true
+  },
+  "limitations": [
+    "A/B is a temporary diagnostic allocation within the existing training split.",
+    "A labels may fit and select LoRA; B labels may only fit/select frozen-representation readouts.",
+    "B outer validation labels must not choose layers, head settings or thresholds for their own fold.",
+    "The A-trained LoRA checkpoint must be frozen before any B analysis.",
+    "Groups constrain exact row/stratum quotas; recorded deviations are expected.",
+    "Formal release holdouts remain untouched and have no diagnostic training role.",
+    "No test.parquet is created; the legacy three-split registration is intentionally unsupported."
+  ],
+  "lora_data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/lora_data",
+  "original_columns": [
+    "prompt",
+    "category_id",
+    "prompt_harm_label",
+    "source",
+    "source_file",
+    "source_row",
+    "source_unit",
+    "base_normalized",
+    "base_id",
+    "exclusion_reason",
+    "group_id",
+    "prompt_tokens",
+    "category_label",
+    "text_form",
+    "template_id",
+    "normalized_prompt",
+    "sample_id",
+    "split",
+    "old_prompt",
+    "old_sample_id",
+    "old_normalized_prompt",
+    "original_english",
+    "original_english_sha256",
+    "translation_status",
+    "revision_reason",
+    "translation_metadata_json",
+    "model_translation",
+    "model_translation_sha256",
+    "translation_source",
+    "correction_source",
+    "reviewer",
+    "translation_changed",
+    "prompt_over_legacy_limit",
+    "quarantine_reason",
+    "repair_eligible",
+    "legacy_base_id",
+    "legacy_group_id",
+    "legacy_split",
+    "legacy_category_id",
+    "pre_remediation_prompt",
+    "intake",
+    "identity_kind",
+    "unit_id",
+    "binary_label_provenance",
+    "recovery_id",
+    "canonical_normalized_sha256",
+    "source_sources_json",
+    "source_member_rows",
+    "source_members_json",
+    "recovery_reasons_json",
+    "original_prompt",
+    "original_prompt_sha256",
+    "original_source_tokens",
+    "type_label_mask",
+    "type_label_conflict",
+    "original_category_candidates_json",
+    "legacy_chinese_category_candidates_json",
+    "official_source_file",
+    "official_source_row",
+    "official_source_id",
+    "official_source_rows_json",
+    "official_source_text_variants_json",
+    "old_chinese_many_to_one_candidate",
+    "old_chinese_base_ids_json",
+    "old_chinese_texts_json",
+    "known_legacy_group_id",
+    "known_legacy_group_ids_json",
+    "known_legacy_split",
+    "known_legacy_splits_json",
+    "split_anchor_source",
+    "split_constraint_conflict",
+    "legacy_group_identity_merge",
+    "split_assignment_unknown",
+    "currently_retained_identity",
+    "original_seed_rows_json",
+    "jailbench_wrapper_ids_json",
+    "recovery_eligibility",
+    "correction_metadata_json",
+    "archived_quarantine_members_json",
+    "archived_quarantine_member_rows",
+    "recovered_legacy_base_ids_json",
+    "previous_quarantine_reasons_json",
+    "existing_identity_rows_json",
+    "current_soft_qa_flags_json",
+    "generation_eos_verified",
+    "protected_literals_verified",
+    "category_ambiguity_reason",
+    "merged_release_base_ids_json",
+    "prompt_sha256",
+    "binary_label_unchanged",
+    "input_truncated",
+    "canonical_original_identity",
+    "split_policy_id",
+    "split_family_legacy_group_ids_json"
+  ],
+  "partitions": {
+    "A_train": {
+      "groups": 36725,
+      "max_group_rows": 41,
+      "rows": 42083,
+      "source_binary": [
+        {
+          "binary_label": "harmful",
+          "rows": 5889,
+          "source": "chinese_curated"
+        },
+        {
+          "binary_label": "unharmful",
+          "rows": 7682,
+          "source": "chinese_curated"
+        },
+        {
+          "binary_label": "harmful",
+          "rows": 5440,
+          "source": "jailbench"
+        },
+        {
+          "binary_label": "harmful",
+          "rows": 11964,
+          "source": "wildguard_zh"
+        },
+        {
+          "binary_label": "unharmful",
+          "rows": 11108,
+          "source": "wildguard_zh"
+        }
+      ]
+    },
+    "A_validation": {
+      "groups": 4081,
+      "max_group_rows": 21,
+      "rows": 4671,
+      "source_binary": [
+        {
+          "binary_label": "harmful",
+          "rows": 654,
+          "source": "chinese_curated"
+        },
+        {
+          "binary_label": "unharmful",
+          "rows": 854,
+          "source": "chinese_curated"
+        },
+        {
+          "binary_label": "harmful",
+          "rows": 600,
+          "source": "jailbench"
+        },
+        {
+          "binary_label": "harmful",
+          "rows": 1329,
+          "source": "wildguard_zh"
+        },
+        {
+          "binary_label": "unharmful",
+          "rows": 1234,
+          "source": "wildguard_zh"
+        }
+      ]
+    },
+    "B": {
+      "groups": 17492,
+      "max_group_rows": 21,
+      "rows": 20048,
+      "source_binary": [
+        {
+          "binary_label": "harmful",
+          "rows": 2804,
+          "source": "chinese_curated"
+        },
+        {
+          "binary_label": "unharmful",
+          "rows": 3658,
+          "source": "chinese_curated"
+        },
+        {
+          "binary_label": "harmful",
+          "rows": 2600,
+          "source": "jailbench"
+        },
+        {
+          "binary_label": "harmful",
+          "rows": 5697,
+          "source": "wildguard_zh"
+        },
+        {
+          "binary_label": "unharmful",
+          "rows": 5289,
+          "source": "wildguard_zh"
+        }
+      ]
+    }
+  },
+  "policy_id": "hanguard_train_internal_ab_grouped_v1",
+  "readout_folds": [
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_0_assignments.parquet",
+      "fold": 0,
+      "inner_allocation": {
+        "fractions": [
+          0.9,
+          0.1
+        ],
+        "groups": [
+          12599,
+          1400
+        ],
+        "max_absolute_stratum_count_deviation": 8,
+        "max_group_rows": 21,
+        "namespace": "B_fold_0_inner",
+        "rows": [
+          14441,
+          1596
+        ],
+        "source_binary_strata": [
+          {
+            "actual": [
+              2019,
+              224
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2019,
+              224
+            ]
+          },
+          {
+            "actual": [
+              2633,
+              293
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2633,
+              293
+            ]
+          },
+          {
+            "actual": [
+              1880,
+              200
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              8,
+              -8
+            ],
+            "source": "jailbench",
+            "targets": [
+              1872,
+              208
+            ]
+          },
+          {
+            "actual": [
+              4101,
+              456
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              4101,
+              456
+            ]
+          },
+          {
+            "actual": [
+              3808,
+              423
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              3808,
+              423
+            ]
+          }
+        ],
+        "target_rows": [
+          14433,
+          1604
+        ],
+        "whole_group_refinement_moves": 0
+      },
+      "roles": {
+        "inner_train": {
+          "groups": 12599,
+          "max_group_rows": 21,
+          "rows": 14441,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 2019,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 2633,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1880,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 4101,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 3808,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "inner_validation": {
+          "groups": 1400,
+          "max_group_rows": 21,
+          "rows": 1596,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 224,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 293,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 200,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 456,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 423,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "outer_validation": {
+          "groups": 3493,
+          "max_group_rows": 21,
+          "rows": 4011,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 561,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 732,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 520,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1140,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 1058,
+              "source": "wildguard_zh"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_1_assignments.parquet",
+      "fold": 1,
+      "inner_allocation": {
+        "fractions": [
+          0.9,
+          0.1
+        ],
+        "groups": [
+          12592,
+          1398
+        ],
+        "max_absolute_stratum_count_deviation": 8,
+        "max_group_rows": 21,
+        "namespace": "B_fold_1_inner",
+        "rows": [
+          14441,
+          1596
+        ],
+        "source_binary_strata": [
+          {
+            "actual": [
+              2019,
+              224
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2019,
+              224
+            ]
+          },
+          {
+            "actual": [
+              2633,
+              293
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2633,
+              293
+            ]
+          },
+          {
+            "actual": [
+              1880,
+              200
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              8,
+              -8
+            ],
+            "source": "jailbench",
+            "targets": [
+              1872,
+              208
+            ]
+          },
+          {
+            "actual": [
+              4101,
+              456
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              4101,
+              456
+            ]
+          },
+          {
+            "actual": [
+              3808,
+              423
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              3808,
+              423
+            ]
+          }
+        ],
+        "target_rows": [
+          14433,
+          1604
+        ],
+        "whole_group_refinement_moves": 0
+      },
+      "roles": {
+        "inner_train": {
+          "groups": 12592,
+          "max_group_rows": 21,
+          "rows": 14441,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 2019,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 2633,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1880,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 4101,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 3808,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "inner_validation": {
+          "groups": 1398,
+          "max_group_rows": 21,
+          "rows": 1596,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 224,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 293,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 200,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 456,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 423,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "outer_validation": {
+          "groups": 3502,
+          "max_group_rows": 21,
+          "rows": 4011,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 561,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 732,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 520,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1140,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 1058,
+              "source": "wildguard_zh"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_2_assignments.parquet",
+      "fold": 2,
+      "inner_allocation": {
+        "fractions": [
+          0.9,
+          0.1
+        ],
+        "groups": [
+          12593,
+          1398
+        ],
+        "max_absolute_stratum_count_deviation": 8,
+        "max_group_rows": 21,
+        "namespace": "B_fold_2_inner",
+        "rows": [
+          14442,
+          1596
+        ],
+        "source_binary_strata": [
+          {
+            "actual": [
+              2019,
+              224
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2019,
+              224
+            ]
+          },
+          {
+            "actual": [
+              2633,
+              293
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2633,
+              293
+            ]
+          },
+          {
+            "actual": [
+              1880,
+              200
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              8,
+              -8
+            ],
+            "source": "jailbench",
+            "targets": [
+              1872,
+              208
+            ]
+          },
+          {
+            "actual": [
+              4102,
+              456
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              4102,
+              456
+            ]
+          },
+          {
+            "actual": [
+              3808,
+              423
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              3808,
+              423
+            ]
+          }
+        ],
+        "target_rows": [
+          14434,
+          1604
+        ],
+        "whole_group_refinement_moves": 0
+      },
+      "roles": {
+        "inner_train": {
+          "groups": 12593,
+          "max_group_rows": 21,
+          "rows": 14442,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 2019,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 2633,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1880,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 4102,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 3808,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "inner_validation": {
+          "groups": 1398,
+          "max_group_rows": 21,
+          "rows": 1596,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 224,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 293,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 200,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 456,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 423,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "outer_validation": {
+          "groups": 3501,
+          "max_group_rows": 21,
+          "rows": 4010,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 561,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 732,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 520,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1139,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 1058,
+              "source": "wildguard_zh"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_3_assignments.parquet",
+      "fold": 3,
+      "inner_allocation": {
+        "fractions": [
+          0.9,
+          0.1
+        ],
+        "groups": [
+          12595,
+          1398
+        ],
+        "max_absolute_stratum_count_deviation": 8,
+        "max_group_rows": 21,
+        "namespace": "B_fold_3_inner",
+        "rows": [
+          14443,
+          1596
+        ],
+        "source_binary_strata": [
+          {
+            "actual": [
+              2019,
+              224
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2019,
+              224
+            ]
+          },
+          {
+            "actual": [
+              2634,
+              293
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2634,
+              293
+            ]
+          },
+          {
+            "actual": [
+              1880,
+              200
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              8,
+              -8
+            ],
+            "source": "jailbench",
+            "targets": [
+              1872,
+              208
+            ]
+          },
+          {
+            "actual": [
+              4102,
+              456
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              4102,
+              456
+            ]
+          },
+          {
+            "actual": [
+              3808,
+              423
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              3808,
+              423
+            ]
+          }
+        ],
+        "target_rows": [
+          14435,
+          1604
+        ],
+        "whole_group_refinement_moves": 0
+      },
+      "roles": {
+        "inner_train": {
+          "groups": 12595,
+          "max_group_rows": 21,
+          "rows": 14443,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 2019,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 2634,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1880,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 4102,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 3808,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "inner_validation": {
+          "groups": 1398,
+          "max_group_rows": 21,
+          "rows": 1596,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 224,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 293,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 200,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 456,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 423,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "outer_validation": {
+          "groups": 3499,
+          "max_group_rows": 21,
+          "rows": 4009,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 561,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 731,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 520,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1139,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 1058,
+              "source": "wildguard_zh"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assignments_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_4_assignments.parquet",
+      "fold": 4,
+      "inner_allocation": {
+        "fractions": [
+          0.9,
+          0.1
+        ],
+        "groups": [
+          12596,
+          1399
+        ],
+        "max_absolute_stratum_count_deviation": 8,
+        "max_group_rows": 21,
+        "namespace": "B_fold_4_inner",
+        "rows": [
+          14445,
+          1596
+        ],
+        "source_binary_strata": [
+          {
+            "actual": [
+              2020,
+              224
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2020,
+              224
+            ]
+          },
+          {
+            "actual": [
+              2634,
+              293
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "chinese_curated",
+            "targets": [
+              2634,
+              293
+            ]
+          },
+          {
+            "actual": [
+              1880,
+              200
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              8,
+              -8
+            ],
+            "source": "jailbench",
+            "targets": [
+              1872,
+              208
+            ]
+          },
+          {
+            "actual": [
+              4102,
+              456
+            ],
+            "binary_label": "harmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              4102,
+              456
+            ]
+          },
+          {
+            "actual": [
+              3809,
+              423
+            ],
+            "binary_label": "unharmful",
+            "deviations": [
+              0,
+              0
+            ],
+            "source": "wildguard_zh",
+            "targets": [
+              3809,
+              423
+            ]
+          }
+        ],
+        "target_rows": [
+          14437,
+          1604
+        ],
+        "whole_group_refinement_moves": 0
+      },
+      "roles": {
+        "inner_train": {
+          "groups": 12596,
+          "max_group_rows": 21,
+          "rows": 14445,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 2020,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 2634,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1880,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 4102,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 3809,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "inner_validation": {
+          "groups": 1399,
+          "max_group_rows": 21,
+          "rows": 1596,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 224,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 293,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 200,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 456,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 423,
+              "source": "wildguard_zh"
+            }
+          ]
+        },
+        "outer_validation": {
+          "groups": 3497,
+          "max_group_rows": 21,
+          "rows": 4007,
+          "source_binary": [
+            {
+              "binary_label": "harmful",
+              "rows": 560,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 731,
+              "source": "chinese_curated"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 520,
+              "source": "jailbench"
+            },
+            {
+              "binary_label": "harmful",
+              "rows": 1139,
+              "source": "wildguard_zh"
+            },
+            {
+              "binary_label": "unharmful",
+              "rows": 1057,
+              "source": "wildguard_zh"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "seed": 20261012,
+  "source_data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012",
+  "source_release": {
+    "dataset_contract": "hanguard_binary_type_decoupled_v1",
+    "dataset_version": "three_source_remediated_20261012"
+  },
+  "source_release_identity_intersections": {
+    "train/test": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "train/validation": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    },
+    "validation/test": {
+      "base_id": 0,
+      "canonical_original_identity": 0,
+      "group_id": 0,
+      "normalized_prompt": 0,
+      "punctuation_style_prompt": 0
+    }
+  },
+  "source_rows": 66802,
+  "source_sha256": {
+    "manifest.json": "a108e631d7978f680feebc6e9276d5c470cc44e2037fd56a940f82fdf33f1a80",
+    "release_qa.json": "1b1acc12f01a1113fbbb0b91f2d80f7f932017fb5836efc3400f24ae6fc96660",
+    "test.parquet": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6",
+    "train.parquet": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "validation.parquet": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca"
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  }
+}

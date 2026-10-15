@@ -1,0 +1,193 @@
+{
+  "language_metrics": {
+    "zh": {
+      "dynamic_repeat_last": {
+        "n": 75,
+        "accuracy": 0.49333333333333335,
+        "f1": 0.5476190476190477,
+        "recall": 0.5476190476190477,
+        "precision": 0.5476190476190477,
+        "fpr": 0.5757575757575758,
+        "bce": 0.7429948801136453,
+        "brier": 0.26037579726623133,
+        "tp": 23,
+        "tn": 14,
+        "fp": 19,
+        "fn": 19,
+        "threshold": 0.5,
+        "auroc": 0.523088023088023,
+        "auprc": 0.6449077150710344
+      },
+      "dynamic_fixed": {
+        "n": 75,
+        "accuracy": 0.5733333333333334,
+        "f1": 0.5555555555555556,
+        "recall": 0.47619047619047616,
+        "precision": 0.6666666666666666,
+        "fpr": 0.30303030303030304,
+        "bce": 0.6926797172101741,
+        "brier": 0.2488235611492639,
+        "tp": 20,
+        "tn": 23,
+        "fp": 10,
+        "fn": 22,
+        "threshold": 0.5,
+        "auroc": 0.6161616161616161,
+        "auprc": 0.6588992593568556
+      },
+      "dynamic_selected": {
+        "n": 75,
+        "accuracy": 0.7333333333333333,
+        "f1": 0.7619047619047619,
+        "recall": 0.7619047619047619,
+        "precision": 0.7619047619047619,
+        "fpr": 0.30303030303030304,
+        "bce": 0.6167721995259905,
+        "brier": 0.21391408087912755,
+        "tp": 32,
+        "tn": 23,
+        "fp": 10,
+        "fn": 10,
+        "threshold": 0.5,
+        "auroc": 0.7402597402597403,
+        "auprc": 0.7586962880004385
+      }
+    },
+    "original": {
+      "dynamic_repeat_last": {
+        "n": 75,
+        "accuracy": 0.6133333333333333,
+        "f1": 0.6506024096385542,
+        "recall": 0.6428571428571429,
+        "precision": 0.6585365853658537,
+        "fpr": 0.42424242424242425,
+        "bce": 0.8396049412346105,
+        "brier": 0.2619912148180318,
+        "tp": 27,
+        "tn": 19,
+        "fp": 14,
+        "fn": 15,
+        "threshold": 0.5,
+        "auroc": 0.6904761904761905,
+        "auprc": 0.7608252758479909
+      },
+      "dynamic_fixed": {
+        "n": 75,
+        "accuracy": 0.6533333333333333,
+        "f1": 0.6829268292682927,
+        "recall": 0.6666666666666666,
+        "precision": 0.7,
+        "fpr": 0.36363636363636365,
+        "bce": 0.8500017213125024,
+        "brier": 0.25806107532490663,
+        "tp": 28,
+        "tn": 21,
+        "fp": 12,
+        "fn": 14,
+        "threshold": 0.5,
+        "auroc": 0.6897546897546898,
+        "auprc": 0.7593400690214009
+      },
+      "dynamic_selected": {
+        "n": 75,
+        "accuracy": 0.6533333333333333,
+        "f1": 0.7045454545454546,
+        "recall": 0.7380952380952381,
+        "precision": 0.6739130434782609,
+        "fpr": 0.45454545454545453,
+        "bce": 0.7509297058773137,
+        "brier": 0.2349935770882373,
+        "tp": 31,
+        "tn": 18,
+        "fp": 15,
+        "fn": 11,
+        "threshold": 0.5,
+        "auroc": 0.7200577200577201,
+        "auprc": 0.7869848008111721
+      }
+    }
+  },
+  "paired_transitions": {
+    "dynamic_repeat_last": {
+      "rows": 75,
+      "groups": 75,
+      "original_rescues_chinese": 22,
+      "original_harms_chinese": 13,
+      "both_correct": 24,
+      "both_wrong": 16,
+      "decision_flips": 35,
+      "mean_probability_shift": 0.033308249952857125
+    },
+    "dynamic_fixed": {
+      "rows": 75,
+      "groups": 75,
+      "original_rescues_chinese": 16,
+      "original_harms_chinese": 10,
+      "both_correct": 33,
+      "both_wrong": 16,
+      "decision_flips": 26,
+      "mean_probability_shift": 0.062473584820072134
+    },
+    "dynamic_selected": {
+      "rows": 75,
+      "groups": 75,
+      "original_rescues_chinese": 7,
+      "original_harms_chinese": 13,
+      "both_correct": 42,
+      "both_wrong": 13,
+      "decision_flips": 20,
+      "mean_probability_shift": 0.054524998223468915
+    }
+  },
+  "scope": "Paired language diagnostic on 75 official-WildGuardTrain original-text parents of 79 internal Chinese disagreement cases",
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "subset_selection_warning": "Cases are selected for Chinese model disagreement; subset scores are not population language accuracy; original_english is a legacy field name and some original prompts may be non-English.",
+  "chinese_reextraction_consistency": {
+    "dynamic_repeat_last": {
+      "rows": 79,
+      "mean_absolute_probability_difference": 0.00886081806468622,
+      "max_absolute_probability_difference": 0.03321463158743698,
+      "decision_changes": 7,
+      "changed_case_ids": [
+        "D021",
+        "D023",
+        "D051",
+        "D066",
+        "D067",
+        "D072",
+        "D073"
+      ]
+    },
+    "dynamic_fixed": {
+      "rows": 79,
+      "mean_absolute_probability_difference": 0.007893953117298291,
+      "max_absolute_probability_difference": 0.03202932996505248,
+      "decision_changes": 4,
+      "changed_case_ids": [
+        "D014",
+        "D034",
+        "D054",
+        "D069"
+      ]
+    },
+    "dynamic_selected": {
+      "rows": 79,
+      "mean_absolute_probability_difference": 0.008472796200233912,
+      "max_absolute_probability_difference": 0.03417850054864846,
+      "decision_changes": 2,
+      "changed_case_ids": [
+        "D006",
+        "D020"
+      ]
+    }
+  },
+  "protocol_sha256": "54b30034be783f02ccb8f768273e08cdbd30a5a7675e2f745467d7e5a30b43b0",
+  "predictions_sha256": "a168a999645c184bcdc9453c8cf710c17b1644f188ec7e3cc74d71e00a71ec65"
+}

@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "reviewer": "/root/repair_dataset_contract",
+  "audit_script_sha256": "6d01da5cf5418c37a35c915c200b027c94ddc1643c27645ab97de8f4c1f635b3",
+  "bound_dataset_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/manifest.json": "adb734bee80163325fd3cf6780882b4e9ba8c87c330069e7d0a66bd9b5f37a4e",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/benign_format_control_view.parquet": "d08bc2c9eebc6a0297863533cf2f151808f79f541c96a4573344923fffce8dcc",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/benign_format_control_protocol.json": "afae89c1fdbf4ff4d8cc8df2bfe6594024fa357fef0185cb8df281dab94dfddb",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/jailbench_template_holdout_view.parquet": "90f5d2ffc96d5e383a0a51a55566b8f8df88d6ec9c590317f5608028ee7eda6e",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/jailbench_template_holdout_protocol.json": "8ce9821b7a21d8046dd76b6c9beaff8c92e75de3f5cad9d3c0570f325a07e9fb",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/group_split_members.parquet": "fe0d673fd9273e4e6e056813f281b2f03912d9d1f75931e39e64588027987335",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/split_policy.json": "29b2a2455b8db080078260344d9ba937135f053c872efbcb220f348cf0ca73c9",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/train.parquet": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/validation.parquet": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/test.parquet": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6"
+  },
+  "checks": {
+    "control_protocol_excludes_training_and_gold_claim": {
+      "passed": true,
+      "detail": null
+    },
+    "control_rows_unique_and_outside_main": {
+      "passed": true,
+      "detail": null
+    },
+    "controls_are_documented_three_forms": {
+      "passed": true,
+      "detail": null
+    },
+    "controls_exact_parent_or_neutral_marker_only": {
+      "passed": true,
+      "detail": null
+    },
+    "control_source_parent_inherited": {
+      "passed": true,
+      "detail": null
+    },
+    "control_split_parent_inherited": {
+      "passed": true,
+      "detail": null
+    },
+    "control_group_id_parent_inherited": {
+      "passed": true,
+      "detail": null
+    },
+    "control_prompt_harm_label_parent_inherited": {
+      "passed": true,
+      "detail": null
+    },
+    "control_category_id_parent_inherited": {
+      "passed": true,
+      "detail": null
+    },
+    "control_type_label_mask_parent_inherited": {
+      "passed": true,
+      "detail": null
+    },
+    "safe_controls_exactly_one_paired_form_each": {
+      "passed": true,
+      "detail": null
+    },
+    "harmful_references_are_unchanged_originals": {
+      "passed": true,
+      "detail": null
+    },
+    "paired_counts_equal_reference_by_split": {
+      "passed": true,
+      "detail": null
+    },
+    "all_control_actual_tokens_match_stored": {
+      "passed": true,
+      "detail": null
+    },
+    "all_control_complete_inputs_within_budget": {
+      "passed": true,
+      "detail": {
+        "retokenized_rows": 25932,
+        "minimum_tokens": 2,
+        "maximum_tokens": 1013
+      }
+    },
+    "wrapper_all_full_raw_queries_exact": {
+      "passed": true,
+      "detail": []
+    },
+    "wrapper_identity_and_seed_pointer_exact": {
+      "passed": true,
+      "detail": []
+    },
+    "wrapper_partition_12_4_4": {
+      "passed": true,
+      "detail": {
+        "test": 4,
+        "train": 12,
+        "validation": 4
+      }
+    },
+    "primary_each_split_has_all20_wrappers": {
+      "passed": true,
+      "detail": null
+    },
+    "secondary_seeds_explicitly_seen": {
+      "passed": true,
+      "detail": null
+    },
+    "complete_group_mapping_unique_and_exact": {
+      "passed": true,
+      "detail": null
+    },
+    "audit_input_snapshot_stable": {
+      "passed": true,
+      "detail": null
+    }
+  },
+  "failures": [],
+  "control_rows_retokenized": 25932,
+  "wrapper_full_raw_rows_verified": 10800,
+  "writes_release_qa_or_activation": false,
+  "training_started": false
+}

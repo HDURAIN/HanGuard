@@ -1,0 +1,3560 @@
+{
+  "scope": "固定历史中文模型分歧 79 条的事后翻译诊断；全部计数仅描述此集合，不能外推总体准确率。",
+  "selection": "union of dynamic_fixed/repeat and dynamic_selected/repeat decision differences at threshold 0.5 after arithmetic mean of seed42..46 probabilities",
+  "rows": 79,
+  "groups": 78,
+  "source_counts": {
+    "wildguard_zh": 75,
+    "chinese_curated": 2,
+    "jailbench": 2
+  },
+  "label_counts": {
+    "1": 44,
+    "0": 35
+  },
+  "public_original_lineage": {
+    "verified_rows": 75,
+    "public_source": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/sources/wildguard_en/train.parquet",
+    "public_source_sha256": "9844a24e5734be9c32cf9fa21340b919f2c5746cb2f81b220894e03d35ee7a92",
+    "binary_labels_unchanged": true,
+    "prompts_exact": true
+  },
+  "official_parent_split": "WildGuardTrain; no official WildGuardTest model evaluation",
+  "final_translation_category_counts": {
+    "definite_meaning_error": 6,
+    "minor_wording": 21,
+    "source_ambiguity": 3,
+    "faithful_or_style": 45,
+    "no_original": 4
+  },
+  "final_translation_category_case_ids": {
+    "definite_meaning_error": [
+      "D022",
+      "D025",
+      "D040",
+      "D053",
+      "D071",
+      "D078"
+    ],
+    "minor_wording": [
+      "D001",
+      "D014",
+      "D015",
+      "D020",
+      "D023",
+      "D033",
+      "D036",
+      "D039",
+      "D041",
+      "D042",
+      "D046",
+      "D048",
+      "D051",
+      "D054",
+      "D055",
+      "D058",
+      "D060",
+      "D067",
+      "D068",
+      "D069",
+      "D073"
+    ],
+    "source_ambiguity": [
+      "D007",
+      "D043",
+      "D075"
+    ],
+    "faithful_or_style": [
+      "D002",
+      "D003",
+      "D005",
+      "D006",
+      "D008",
+      "D009",
+      "D010",
+      "D011",
+      "D012",
+      "D013",
+      "D017",
+      "D018",
+      "D019",
+      "D021",
+      "D024",
+      "D026",
+      "D027",
+      "D028",
+      "D029",
+      "D030",
+      "D031",
+      "D032",
+      "D034",
+      "D035",
+      "D037",
+      "D038",
+      "D044",
+      "D045",
+      "D047",
+      "D049",
+      "D050",
+      "D052",
+      "D056",
+      "D057",
+      "D059",
+      "D061",
+      "D062",
+      "D063",
+      "D064",
+      "D065",
+      "D066",
+      "D070",
+      "D074",
+      "D076",
+      "D077"
+    ],
+    "no_original": [
+      "D004",
+      "D016",
+      "D072",
+      "D079"
+    ]
+  },
+  "first_review_counts_retained": {
+    "faithful": 44,
+    "minor_wording": 18,
+    "material_semantic_change": 9,
+    "no_english_original": 4,
+    "uncertain": 4
+  },
+  "historical_fusion_effects_by_translation_group": {
+    "all79": {
+      "dynamic_fixed": {
+        "rows": 79,
+        "disagreement_rows": 64,
+        "baseline_correct": 41,
+        "candidate_correct": 41,
+        "rescued": 32,
+        "harmed": 32,
+        "net_correct_change": 0,
+        "rescued_case_ids": [
+          "D003",
+          "D004",
+          "D005",
+          "D007",
+          "D009",
+          "D013",
+          "D016",
+          "D025",
+          "D027",
+          "D031",
+          "D035",
+          "D038",
+          "D041",
+          "D043",
+          "D046",
+          "D047",
+          "D049",
+          "D050",
+          "D051",
+          "D052",
+          "D053",
+          "D055",
+          "D057",
+          "D059",
+          "D062",
+          "D063",
+          "D064",
+          "D066",
+          "D070",
+          "D071",
+          "D075",
+          "D076"
+        ],
+        "harmed_case_ids": [
+          "D001",
+          "D006",
+          "D011",
+          "D012",
+          "D014",
+          "D015",
+          "D019",
+          "D021",
+          "D023",
+          "D024",
+          "D026",
+          "D028",
+          "D032",
+          "D033",
+          "D034",
+          "D039",
+          "D040",
+          "D044",
+          "D048",
+          "D054",
+          "D056",
+          "D058",
+          "D060",
+          "D061",
+          "D065",
+          "D067",
+          "D069",
+          "D072",
+          "D073",
+          "D074",
+          "D078",
+          "D079"
+        ]
+      },
+      "dynamic_selected": {
+        "rows": 79,
+        "disagreement_rows": 53,
+        "baseline_correct": 41,
+        "candidate_correct": 56,
+        "rescued": 34,
+        "harmed": 19,
+        "net_correct_change": 15,
+        "rescued_case_ids": [
+          "D002",
+          "D003",
+          "D005",
+          "D009",
+          "D013",
+          "D016",
+          "D017",
+          "D025",
+          "D027",
+          "D030",
+          "D035",
+          "D036",
+          "D037",
+          "D038",
+          "D041",
+          "D045",
+          "D046",
+          "D047",
+          "D049",
+          "D050",
+          "D051",
+          "D052",
+          "D053",
+          "D055",
+          "D057",
+          "D059",
+          "D062",
+          "D063",
+          "D064",
+          "D066",
+          "D070",
+          "D071",
+          "D075",
+          "D076"
+        ],
+        "harmed_case_ids": [
+          "D006",
+          "D008",
+          "D010",
+          "D018",
+          "D019",
+          "D020",
+          "D022",
+          "D023",
+          "D024",
+          "D029",
+          "D033",
+          "D034",
+          "D042",
+          "D061",
+          "D067",
+          "D068",
+          "D073",
+          "D074",
+          "D077"
+        ]
+      }
+    },
+    "all75_public_originals": {
+      "dynamic_fixed": {
+        "rows": 75,
+        "disagreement_rows": 60,
+        "baseline_correct": 39,
+        "candidate_correct": 39,
+        "rescued": 30,
+        "harmed": 30,
+        "net_correct_change": 0,
+        "rescued_case_ids": [
+          "D003",
+          "D005",
+          "D007",
+          "D009",
+          "D013",
+          "D025",
+          "D027",
+          "D031",
+          "D035",
+          "D038",
+          "D041",
+          "D043",
+          "D046",
+          "D047",
+          "D049",
+          "D050",
+          "D051",
+          "D052",
+          "D053",
+          "D055",
+          "D057",
+          "D059",
+          "D062",
+          "D063",
+          "D064",
+          "D066",
+          "D070",
+          "D071",
+          "D075",
+          "D076"
+        ],
+        "harmed_case_ids": [
+          "D001",
+          "D006",
+          "D011",
+          "D012",
+          "D014",
+          "D015",
+          "D019",
+          "D021",
+          "D023",
+          "D024",
+          "D026",
+          "D028",
+          "D032",
+          "D033",
+          "D034",
+          "D039",
+          "D040",
+          "D044",
+          "D048",
+          "D054",
+          "D056",
+          "D058",
+          "D060",
+          "D061",
+          "D065",
+          "D067",
+          "D069",
+          "D073",
+          "D074",
+          "D078"
+        ]
+      },
+      "dynamic_selected": {
+        "rows": 75,
+        "disagreement_rows": 52,
+        "baseline_correct": 39,
+        "candidate_correct": 53,
+        "rescued": 33,
+        "harmed": 19,
+        "net_correct_change": 14,
+        "rescued_case_ids": [
+          "D002",
+          "D003",
+          "D005",
+          "D009",
+          "D013",
+          "D017",
+          "D025",
+          "D027",
+          "D030",
+          "D035",
+          "D036",
+          "D037",
+          "D038",
+          "D041",
+          "D045",
+          "D046",
+          "D047",
+          "D049",
+          "D050",
+          "D051",
+          "D052",
+          "D053",
+          "D055",
+          "D057",
+          "D059",
+          "D062",
+          "D063",
+          "D064",
+          "D066",
+          "D070",
+          "D071",
+          "D075",
+          "D076"
+        ],
+        "harmed_case_ids": [
+          "D006",
+          "D008",
+          "D010",
+          "D018",
+          "D019",
+          "D020",
+          "D022",
+          "D023",
+          "D024",
+          "D029",
+          "D033",
+          "D034",
+          "D042",
+          "D061",
+          "D067",
+          "D068",
+          "D073",
+          "D074",
+          "D077"
+        ]
+      }
+    },
+    "definite_meaning_error": {
+      "dynamic_fixed": {
+        "rows": 6,
+        "disagreement_rows": 5,
+        "baseline_correct": 3,
+        "candidate_correct": 4,
+        "rescued": 3,
+        "harmed": 2,
+        "net_correct_change": 1,
+        "rescued_case_ids": [
+          "D025",
+          "D053",
+          "D071"
+        ],
+        "harmed_case_ids": [
+          "D040",
+          "D078"
+        ]
+      },
+      "dynamic_selected": {
+        "rows": 6,
+        "disagreement_rows": 4,
+        "baseline_correct": 3,
+        "candidate_correct": 5,
+        "rescued": 3,
+        "harmed": 1,
+        "net_correct_change": 2,
+        "rescued_case_ids": [
+          "D025",
+          "D053",
+          "D071"
+        ],
+        "harmed_case_ids": [
+          "D022"
+        ]
+      }
+    },
+    "minor_wording": {
+      "dynamic_fixed": {
+        "rows": 21,
+        "disagreement_rows": 17,
+        "baseline_correct": 16,
+        "candidate_correct": 7,
+        "rescued": 4,
+        "harmed": 13,
+        "net_correct_change": -9,
+        "rescued_case_ids": [
+          "D041",
+          "D046",
+          "D051",
+          "D055"
+        ],
+        "harmed_case_ids": [
+          "D001",
+          "D014",
+          "D015",
+          "D023",
+          "D033",
+          "D039",
+          "D048",
+          "D054",
+          "D058",
+          "D060",
+          "D067",
+          "D069",
+          "D073"
+        ]
+      },
+      "dynamic_selected": {
+        "rows": 21,
+        "disagreement_rows": 12,
+        "baseline_correct": 16,
+        "candidate_correct": 14,
+        "rescued": 5,
+        "harmed": 7,
+        "net_correct_change": -2,
+        "rescued_case_ids": [
+          "D036",
+          "D041",
+          "D046",
+          "D051",
+          "D055"
+        ],
+        "harmed_case_ids": [
+          "D020",
+          "D023",
+          "D033",
+          "D042",
+          "D067",
+          "D068",
+          "D073"
+        ]
+      }
+    },
+    "source_ambiguity": {
+      "dynamic_fixed": {
+        "rows": 3,
+        "disagreement_rows": 3,
+        "baseline_correct": 0,
+        "candidate_correct": 3,
+        "rescued": 3,
+        "harmed": 0,
+        "net_correct_change": 3,
+        "rescued_case_ids": [
+          "D007",
+          "D043",
+          "D075"
+        ],
+        "harmed_case_ids": []
+      },
+      "dynamic_selected": {
+        "rows": 3,
+        "disagreement_rows": 1,
+        "baseline_correct": 0,
+        "candidate_correct": 1,
+        "rescued": 1,
+        "harmed": 0,
+        "net_correct_change": 1,
+        "rescued_case_ids": [
+          "D075"
+        ],
+        "harmed_case_ids": []
+      }
+    },
+    "faithful_or_style": {
+      "dynamic_fixed": {
+        "rows": 45,
+        "disagreement_rows": 35,
+        "baseline_correct": 20,
+        "candidate_correct": 25,
+        "rescued": 20,
+        "harmed": 15,
+        "net_correct_change": 5,
+        "rescued_case_ids": [
+          "D003",
+          "D005",
+          "D009",
+          "D013",
+          "D027",
+          "D031",
+          "D035",
+          "D038",
+          "D047",
+          "D049",
+          "D050",
+          "D052",
+          "D057",
+          "D059",
+          "D062",
+          "D063",
+          "D064",
+          "D066",
+          "D070",
+          "D076"
+        ],
+        "harmed_case_ids": [
+          "D006",
+          "D011",
+          "D012",
+          "D019",
+          "D021",
+          "D024",
+          "D026",
+          "D028",
+          "D032",
+          "D034",
+          "D044",
+          "D056",
+          "D061",
+          "D065",
+          "D074"
+        ]
+      },
+      "dynamic_selected": {
+        "rows": 45,
+        "disagreement_rows": 35,
+        "baseline_correct": 20,
+        "candidate_correct": 33,
+        "rescued": 24,
+        "harmed": 11,
+        "net_correct_change": 13,
+        "rescued_case_ids": [
+          "D002",
+          "D003",
+          "D005",
+          "D009",
+          "D013",
+          "D017",
+          "D027",
+          "D030",
+          "D035",
+          "D037",
+          "D038",
+          "D045",
+          "D047",
+          "D049",
+          "D050",
+          "D052",
+          "D057",
+          "D059",
+          "D062",
+          "D063",
+          "D064",
+          "D066",
+          "D070",
+          "D076"
+        ],
+        "harmed_case_ids": [
+          "D006",
+          "D008",
+          "D010",
+          "D018",
+          "D019",
+          "D024",
+          "D029",
+          "D034",
+          "D061",
+          "D074",
+          "D077"
+        ]
+      }
+    },
+    "no_original": {
+      "dynamic_fixed": {
+        "rows": 4,
+        "disagreement_rows": 4,
+        "baseline_correct": 2,
+        "candidate_correct": 2,
+        "rescued": 2,
+        "harmed": 2,
+        "net_correct_change": 0,
+        "rescued_case_ids": [
+          "D004",
+          "D016"
+        ],
+        "harmed_case_ids": [
+          "D072",
+          "D079"
+        ]
+      },
+      "dynamic_selected": {
+        "rows": 4,
+        "disagreement_rows": 1,
+        "baseline_correct": 2,
+        "candidate_correct": 3,
+        "rescued": 1,
+        "harmed": 0,
+        "net_correct_change": 1,
+        "rescued_case_ids": [
+          "D016"
+        ],
+        "harmed_case_ids": []
+      }
+    }
+  },
+  "initial_mixed_batch_original_vs_chinese_by_translation_group": {
+    "all79": {
+      "dynamic_repeat_last": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 37,
+        "after_correct": 46,
+        "rescued": 22,
+        "harmed": 13,
+        "net_correct_change": 9,
+        "both_correct": 24,
+        "both_wrong": 16,
+        "unchanged_decisions": 40,
+        "decision_changes": 35,
+        "rescued_case_ids": [
+          "D002",
+          "D009",
+          "D013",
+          "D017",
+          "D021",
+          "D025",
+          "D027",
+          "D031",
+          "D037",
+          "D038",
+          "D041",
+          "D043",
+          "D046",
+          "D049",
+          "D050",
+          "D052",
+          "D055",
+          "D062",
+          "D063",
+          "D064",
+          "D071",
+          "D075"
+        ],
+        "harmed_case_ids": [
+          "D008",
+          "D011",
+          "D018",
+          "D020",
+          "D022",
+          "D024",
+          "D028",
+          "D033",
+          "D058",
+          "D066",
+          "D068",
+          "D074",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.3086588679301957,
+        "mean_signed_probability_shift": 0.033308249952857125
+      },
+      "dynamic_fixed": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 43,
+        "after_correct": 49,
+        "rescued": 16,
+        "harmed": 10,
+        "net_correct_change": 6,
+        "both_correct": 33,
+        "both_wrong": 16,
+        "unchanged_decisions": 49,
+        "decision_changes": 26,
+        "rescued_case_ids": [
+          "D002",
+          "D006",
+          "D012",
+          "D015",
+          "D017",
+          "D021",
+          "D032",
+          "D037",
+          "D039",
+          "D040",
+          "D044",
+          "D048",
+          "D056",
+          "D060",
+          "D061",
+          "D065"
+        ],
+        "harmed_case_ids": [
+          "D007",
+          "D008",
+          "D018",
+          "D022",
+          "D034",
+          "D053",
+          "D059",
+          "D066",
+          "D068",
+          "D075"
+        ],
+        "mean_absolute_probability_shift": 0.26187357265872374,
+        "mean_signed_probability_shift": 0.062473584820072134
+      },
+      "dynamic_selected": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 55,
+        "after_correct": 49,
+        "rescued": 7,
+        "harmed": 13,
+        "net_correct_change": -6,
+        "both_correct": 42,
+        "both_wrong": 13,
+        "unchanged_decisions": 55,
+        "decision_changes": 20,
+        "rescued_case_ids": [
+          "D010",
+          "D019",
+          "D029",
+          "D031",
+          "D042",
+          "D043",
+          "D077"
+        ],
+        "harmed_case_ids": [
+          "D020",
+          "D026",
+          "D028",
+          "D030",
+          "D035",
+          "D036",
+          "D038",
+          "D045",
+          "D053",
+          "D058",
+          "D059",
+          "D066",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.258415708520803,
+        "mean_signed_probability_shift": 0.054524998223468915
+      }
+    },
+    "all75_public_originals": {
+      "dynamic_repeat_last": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 37,
+        "after_correct": 46,
+        "rescued": 22,
+        "harmed": 13,
+        "net_correct_change": 9,
+        "both_correct": 24,
+        "both_wrong": 16,
+        "unchanged_decisions": 40,
+        "decision_changes": 35,
+        "rescued_case_ids": [
+          "D002",
+          "D009",
+          "D013",
+          "D017",
+          "D021",
+          "D025",
+          "D027",
+          "D031",
+          "D037",
+          "D038",
+          "D041",
+          "D043",
+          "D046",
+          "D049",
+          "D050",
+          "D052",
+          "D055",
+          "D062",
+          "D063",
+          "D064",
+          "D071",
+          "D075"
+        ],
+        "harmed_case_ids": [
+          "D008",
+          "D011",
+          "D018",
+          "D020",
+          "D022",
+          "D024",
+          "D028",
+          "D033",
+          "D058",
+          "D066",
+          "D068",
+          "D074",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.3086588679301957,
+        "mean_signed_probability_shift": 0.033308249952857125
+      },
+      "dynamic_fixed": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 43,
+        "after_correct": 49,
+        "rescued": 16,
+        "harmed": 10,
+        "net_correct_change": 6,
+        "both_correct": 33,
+        "both_wrong": 16,
+        "unchanged_decisions": 49,
+        "decision_changes": 26,
+        "rescued_case_ids": [
+          "D002",
+          "D006",
+          "D012",
+          "D015",
+          "D017",
+          "D021",
+          "D032",
+          "D037",
+          "D039",
+          "D040",
+          "D044",
+          "D048",
+          "D056",
+          "D060",
+          "D061",
+          "D065"
+        ],
+        "harmed_case_ids": [
+          "D007",
+          "D008",
+          "D018",
+          "D022",
+          "D034",
+          "D053",
+          "D059",
+          "D066",
+          "D068",
+          "D075"
+        ],
+        "mean_absolute_probability_shift": 0.26187357265872374,
+        "mean_signed_probability_shift": 0.062473584820072134
+      },
+      "dynamic_selected": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 55,
+        "after_correct": 49,
+        "rescued": 7,
+        "harmed": 13,
+        "net_correct_change": -6,
+        "both_correct": 42,
+        "both_wrong": 13,
+        "unchanged_decisions": 55,
+        "decision_changes": 20,
+        "rescued_case_ids": [
+          "D010",
+          "D019",
+          "D029",
+          "D031",
+          "D042",
+          "D043",
+          "D077"
+        ],
+        "harmed_case_ids": [
+          "D020",
+          "D026",
+          "D028",
+          "D030",
+          "D035",
+          "D036",
+          "D038",
+          "D045",
+          "D053",
+          "D058",
+          "D059",
+          "D066",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.258415708520803,
+        "mean_signed_probability_shift": 0.054524998223468915
+      }
+    },
+    "definite_meaning_error": {
+      "dynamic_repeat_last": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 3,
+        "after_correct": 3,
+        "rescued": 2,
+        "harmed": 2,
+        "net_correct_change": 0,
+        "both_correct": 1,
+        "both_wrong": 1,
+        "unchanged_decisions": 2,
+        "decision_changes": 4,
+        "rescued_case_ids": [
+          "D025",
+          "D071"
+        ],
+        "harmed_case_ids": [
+          "D022",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.35204157796531793,
+        "mean_signed_probability_shift": 0.06164739799015501
+      },
+      "dynamic_fixed": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 4,
+        "after_correct": 3,
+        "rescued": 1,
+        "harmed": 2,
+        "net_correct_change": -1,
+        "both_correct": 2,
+        "both_wrong": 1,
+        "unchanged_decisions": 3,
+        "decision_changes": 3,
+        "rescued_case_ids": [
+          "D040"
+        ],
+        "harmed_case_ids": [
+          "D022",
+          "D053"
+        ],
+        "mean_absolute_probability_shift": 0.3613109170482145,
+        "mean_signed_probability_shift": 0.07966071412014956
+      },
+      "dynamic_selected": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 5,
+        "after_correct": 3,
+        "rescued": 0,
+        "harmed": 2,
+        "net_correct_change": -2,
+        "both_correct": 3,
+        "both_wrong": 1,
+        "unchanged_decisions": 4,
+        "decision_changes": 2,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [
+          "D053",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.31751103470266323,
+        "mean_signed_probability_shift": 0.10789774457173262
+      }
+    },
+    "minor_wording": {
+      "dynamic_repeat_last": {
+        "rows": 21,
+        "groups": 21,
+        "before_correct": 14,
+        "after_correct": 13,
+        "rescued": 3,
+        "harmed": 4,
+        "net_correct_change": -1,
+        "both_correct": 10,
+        "both_wrong": 4,
+        "unchanged_decisions": 14,
+        "decision_changes": 7,
+        "rescued_case_ids": [
+          "D041",
+          "D046",
+          "D055"
+        ],
+        "harmed_case_ids": [
+          "D020",
+          "D033",
+          "D058",
+          "D068"
+        ],
+        "mean_absolute_probability_shift": 0.29645474483909123,
+        "mean_signed_probability_shift": 0.1325658476374912
+      },
+      "dynamic_fixed": {
+        "rows": 21,
+        "groups": 21,
+        "before_correct": 10,
+        "after_correct": 13,
+        "rescued": 4,
+        "harmed": 1,
+        "net_correct_change": 3,
+        "both_correct": 9,
+        "both_wrong": 7,
+        "unchanged_decisions": 16,
+        "decision_changes": 5,
+        "rescued_case_ids": [
+          "D015",
+          "D039",
+          "D048",
+          "D060"
+        ],
+        "harmed_case_ids": [
+          "D068"
+        ],
+        "mean_absolute_probability_shift": 0.24529331739793037,
+        "mean_signed_probability_shift": 0.19897834496476915
+      },
+      "dynamic_selected": {
+        "rows": 21,
+        "groups": 21,
+        "before_correct": 15,
+        "after_correct": 13,
+        "rescued": 1,
+        "harmed": 3,
+        "net_correct_change": -2,
+        "both_correct": 12,
+        "both_wrong": 5,
+        "unchanged_decisions": 17,
+        "decision_changes": 4,
+        "rescued_case_ids": [
+          "D042"
+        ],
+        "harmed_case_ids": [
+          "D020",
+          "D036",
+          "D058"
+        ],
+        "mean_absolute_probability_shift": 0.26956431430550515,
+        "mean_signed_probability_shift": 0.14683275025649647
+      }
+    },
+    "source_ambiguity": {
+      "dynamic_repeat_last": {
+        "rows": 3,
+        "groups": 3,
+        "before_correct": 0,
+        "after_correct": 2,
+        "rescued": 2,
+        "harmed": 0,
+        "net_correct_change": 2,
+        "both_correct": 0,
+        "both_wrong": 1,
+        "unchanged_decisions": 1,
+        "decision_changes": 2,
+        "rescued_case_ids": [
+          "D043",
+          "D075"
+        ],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.2928779518783727,
+        "mean_signed_probability_shift": 0.2162641526719387
+      },
+      "dynamic_fixed": {
+        "rows": 3,
+        "groups": 3,
+        "before_correct": 3,
+        "after_correct": 1,
+        "rescued": 0,
+        "harmed": 2,
+        "net_correct_change": -2,
+        "both_correct": 1,
+        "both_wrong": 0,
+        "unchanged_decisions": 1,
+        "decision_changes": 2,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [
+          "D007",
+          "D075"
+        ],
+        "mean_absolute_probability_shift": 0.4303534012002744,
+        "mean_signed_probability_shift": -0.13149317282145986
+      },
+      "dynamic_selected": {
+        "rows": 3,
+        "groups": 3,
+        "before_correct": 1,
+        "after_correct": 2,
+        "rescued": 1,
+        "harmed": 0,
+        "net_correct_change": 1,
+        "both_correct": 1,
+        "both_wrong": 1,
+        "unchanged_decisions": 2,
+        "decision_changes": 1,
+        "rescued_case_ids": [
+          "D043"
+        ],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.24711272750490812,
+        "mean_signed_probability_shift": 0.08929675352426737
+      }
+    },
+    "faithful_or_style": {
+      "dynamic_repeat_last": {
+        "rows": 45,
+        "groups": 45,
+        "before_correct": 20,
+        "after_correct": 28,
+        "rescued": 15,
+        "harmed": 7,
+        "net_correct_change": 8,
+        "both_correct": 13,
+        "both_wrong": 10,
+        "unchanged_decisions": 23,
+        "decision_changes": 22,
+        "rescued_case_ids": [
+          "D002",
+          "D009",
+          "D013",
+          "D017",
+          "D021",
+          "D027",
+          "D031",
+          "D037",
+          "D038",
+          "D049",
+          "D050",
+          "D052",
+          "D062",
+          "D063",
+          "D064"
+        ],
+        "harmed_case_ids": [
+          "D008",
+          "D011",
+          "D018",
+          "D024",
+          "D028",
+          "D066",
+          "D074"
+        ],
+        "mean_absolute_probability_shift": 0.3096218251048165,
+        "mean_signed_probability_shift": -0.028987575552883938
+      },
+      "dynamic_fixed": {
+        "rows": 45,
+        "groups": 45,
+        "before_correct": 26,
+        "after_correct": 32,
+        "rescued": 11,
+        "harmed": 5,
+        "net_correct_change": 6,
+        "both_correct": 21,
+        "both_wrong": 8,
+        "unchanged_decisions": 29,
+        "decision_changes": 16,
+        "rescued_case_ids": [
+          "D002",
+          "D006",
+          "D012",
+          "D017",
+          "D021",
+          "D032",
+          "D037",
+          "D044",
+          "D056",
+          "D061",
+          "D065"
+        ],
+        "harmed_case_ids": [
+          "D008",
+          "D018",
+          "D034",
+          "D059",
+          "D066"
+        ],
+        "mean_absolute_probability_shift": 0.24512072395905854,
+        "mean_signed_probability_shift": 0.009410863355305351
+      },
+      "dynamic_selected": {
+        "rows": 45,
+        "groups": 45,
+        "before_correct": 34,
+        "after_correct": 31,
+        "rescued": 5,
+        "harmed": 8,
+        "net_correct_change": -3,
+        "both_correct": 26,
+        "both_wrong": 6,
+        "unchanged_decisions": 32,
+        "decision_changes": 13,
+        "rescued_case_ids": [
+          "D010",
+          "D019",
+          "D029",
+          "D031",
+          "D077"
+        ],
+        "harmed_case_ids": [
+          "D026",
+          "D028",
+          "D030",
+          "D035",
+          "D038",
+          "D045",
+          "D059",
+          "D066"
+        ],
+        "mean_absolute_probability_shift": 0.24608718106475375,
+        "mean_signed_probability_shift": 0.0020135640749010014
+      }
+    },
+    "no_original": {
+      "dynamic_repeat_last": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_fixed": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_selected": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      }
+    }
+  },
+  "controlled_same_batch_original_vs_chinese_by_translation_group": {
+    "all79": {
+      "dynamic_repeat_last": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 37,
+        "after_correct": 46,
+        "rescued": 23,
+        "harmed": 14,
+        "net_correct_change": 9,
+        "both_correct": 23,
+        "both_wrong": 15,
+        "unchanged_decisions": 38,
+        "decision_changes": 37,
+        "rescued_case_ids": [
+          "D002",
+          "D009",
+          "D013",
+          "D017",
+          "D021",
+          "D025",
+          "D027",
+          "D031",
+          "D032",
+          "D037",
+          "D038",
+          "D041",
+          "D043",
+          "D049",
+          "D050",
+          "D051",
+          "D052",
+          "D055",
+          "D062",
+          "D063",
+          "D064",
+          "D071",
+          "D075"
+        ],
+        "harmed_case_ids": [
+          "D008",
+          "D011",
+          "D018",
+          "D020",
+          "D022",
+          "D024",
+          "D028",
+          "D030",
+          "D033",
+          "D058",
+          "D066",
+          "D068",
+          "D074",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.3089128860234211,
+        "mean_signed_probability_shift": 0.035568591801947054
+      },
+      "dynamic_fixed": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 42,
+        "after_correct": 48,
+        "rescued": 17,
+        "harmed": 11,
+        "net_correct_change": 6,
+        "both_correct": 31,
+        "both_wrong": 16,
+        "unchanged_decisions": 47,
+        "decision_changes": 28,
+        "rescued_case_ids": [
+          "D002",
+          "D006",
+          "D012",
+          "D015",
+          "D017",
+          "D021",
+          "D032",
+          "D037",
+          "D039",
+          "D040",
+          "D044",
+          "D048",
+          "D054",
+          "D056",
+          "D060",
+          "D061",
+          "D065"
+        ],
+        "harmed_case_ids": [
+          "D003",
+          "D007",
+          "D008",
+          "D018",
+          "D022",
+          "D034",
+          "D053",
+          "D059",
+          "D066",
+          "D068",
+          "D075"
+        ],
+        "mean_absolute_probability_shift": 0.2630614512990018,
+        "mean_signed_probability_shift": 0.06379482141554563
+      },
+      "dynamic_selected": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 53,
+        "after_correct": 51,
+        "rescued": 9,
+        "harmed": 11,
+        "net_correct_change": -2,
+        "both_correct": 42,
+        "both_wrong": 13,
+        "unchanged_decisions": 55,
+        "decision_changes": 20,
+        "rescued_case_ids": [
+          "D006",
+          "D010",
+          "D019",
+          "D029",
+          "D031",
+          "D042",
+          "D043",
+          "D061",
+          "D077"
+        ],
+        "harmed_case_ids": [
+          "D026",
+          "D028",
+          "D030",
+          "D035",
+          "D038",
+          "D045",
+          "D053",
+          "D058",
+          "D059",
+          "D066",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.26063771923803897,
+        "mean_signed_probability_shift": 0.05633912361528273
+      }
+    },
+    "all75_public_originals": {
+      "dynamic_repeat_last": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 37,
+        "after_correct": 46,
+        "rescued": 23,
+        "harmed": 14,
+        "net_correct_change": 9,
+        "both_correct": 23,
+        "both_wrong": 15,
+        "unchanged_decisions": 38,
+        "decision_changes": 37,
+        "rescued_case_ids": [
+          "D002",
+          "D009",
+          "D013",
+          "D017",
+          "D021",
+          "D025",
+          "D027",
+          "D031",
+          "D032",
+          "D037",
+          "D038",
+          "D041",
+          "D043",
+          "D049",
+          "D050",
+          "D051",
+          "D052",
+          "D055",
+          "D062",
+          "D063",
+          "D064",
+          "D071",
+          "D075"
+        ],
+        "harmed_case_ids": [
+          "D008",
+          "D011",
+          "D018",
+          "D020",
+          "D022",
+          "D024",
+          "D028",
+          "D030",
+          "D033",
+          "D058",
+          "D066",
+          "D068",
+          "D074",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.3089128860234211,
+        "mean_signed_probability_shift": 0.035568591801947054
+      },
+      "dynamic_fixed": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 42,
+        "after_correct": 48,
+        "rescued": 17,
+        "harmed": 11,
+        "net_correct_change": 6,
+        "both_correct": 31,
+        "both_wrong": 16,
+        "unchanged_decisions": 47,
+        "decision_changes": 28,
+        "rescued_case_ids": [
+          "D002",
+          "D006",
+          "D012",
+          "D015",
+          "D017",
+          "D021",
+          "D032",
+          "D037",
+          "D039",
+          "D040",
+          "D044",
+          "D048",
+          "D054",
+          "D056",
+          "D060",
+          "D061",
+          "D065"
+        ],
+        "harmed_case_ids": [
+          "D003",
+          "D007",
+          "D008",
+          "D018",
+          "D022",
+          "D034",
+          "D053",
+          "D059",
+          "D066",
+          "D068",
+          "D075"
+        ],
+        "mean_absolute_probability_shift": 0.2630614512990018,
+        "mean_signed_probability_shift": 0.06379482141554563
+      },
+      "dynamic_selected": {
+        "rows": 75,
+        "groups": 75,
+        "before_correct": 53,
+        "after_correct": 51,
+        "rescued": 9,
+        "harmed": 11,
+        "net_correct_change": -2,
+        "both_correct": 42,
+        "both_wrong": 13,
+        "unchanged_decisions": 55,
+        "decision_changes": 20,
+        "rescued_case_ids": [
+          "D006",
+          "D010",
+          "D019",
+          "D029",
+          "D031",
+          "D042",
+          "D043",
+          "D061",
+          "D077"
+        ],
+        "harmed_case_ids": [
+          "D026",
+          "D028",
+          "D030",
+          "D035",
+          "D038",
+          "D045",
+          "D053",
+          "D058",
+          "D059",
+          "D066",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.26063771923803897,
+        "mean_signed_probability_shift": 0.05633912361528273
+      }
+    },
+    "definite_meaning_error": {
+      "dynamic_repeat_last": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 3,
+        "after_correct": 3,
+        "rescued": 2,
+        "harmed": 2,
+        "net_correct_change": 0,
+        "both_correct": 1,
+        "both_wrong": 1,
+        "unchanged_decisions": 2,
+        "decision_changes": 4,
+        "rescued_case_ids": [
+          "D025",
+          "D071"
+        ],
+        "harmed_case_ids": [
+          "D022",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.35321650402872545,
+        "mean_signed_probability_shift": 0.05724107060574677
+      },
+      "dynamic_fixed": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 4,
+        "after_correct": 3,
+        "rescued": 1,
+        "harmed": 2,
+        "net_correct_change": -1,
+        "both_correct": 2,
+        "both_wrong": 1,
+        "unchanged_decisions": 3,
+        "decision_changes": 3,
+        "rescued_case_ids": [
+          "D040"
+        ],
+        "harmed_case_ids": [
+          "D022",
+          "D053"
+        ],
+        "mean_absolute_probability_shift": 0.3564451357330556,
+        "mean_signed_probability_shift": 0.07532809845147219
+      },
+      "dynamic_selected": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 5,
+        "after_correct": 3,
+        "rescued": 0,
+        "harmed": 2,
+        "net_correct_change": -2,
+        "both_correct": 3,
+        "both_wrong": 1,
+        "unchanged_decisions": 4,
+        "decision_changes": 2,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [
+          "D053",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.3154327375828657,
+        "mean_signed_probability_shift": 0.10383412336904552
+      }
+    },
+    "minor_wording": {
+      "dynamic_repeat_last": {
+        "rows": 21,
+        "groups": 21,
+        "before_correct": 14,
+        "after_correct": 13,
+        "rescued": 3,
+        "harmed": 4,
+        "net_correct_change": -1,
+        "both_correct": 10,
+        "both_wrong": 4,
+        "unchanged_decisions": 14,
+        "decision_changes": 7,
+        "rescued_case_ids": [
+          "D041",
+          "D051",
+          "D055"
+        ],
+        "harmed_case_ids": [
+          "D020",
+          "D033",
+          "D058",
+          "D068"
+        ],
+        "mean_absolute_probability_shift": 0.2964421427618218,
+        "mean_signed_probability_shift": 0.13700920026489494
+      },
+      "dynamic_fixed": {
+        "rows": 21,
+        "groups": 21,
+        "before_correct": 9,
+        "after_correct": 13,
+        "rescued": 5,
+        "harmed": 1,
+        "net_correct_change": 4,
+        "both_correct": 8,
+        "both_wrong": 7,
+        "unchanged_decisions": 15,
+        "decision_changes": 6,
+        "rescued_case_ids": [
+          "D015",
+          "D039",
+          "D048",
+          "D054",
+          "D060"
+        ],
+        "harmed_case_ids": [
+          "D068"
+        ],
+        "mean_absolute_probability_shift": 0.24610380503653081,
+        "mean_signed_probability_shift": 0.20177446825541812
+      },
+      "dynamic_selected": {
+        "rows": 21,
+        "groups": 21,
+        "before_correct": 14,
+        "after_correct": 14,
+        "rescued": 1,
+        "harmed": 1,
+        "net_correct_change": 0,
+        "both_correct": 13,
+        "both_wrong": 6,
+        "unchanged_decisions": 19,
+        "decision_changes": 2,
+        "rescued_case_ids": [
+          "D042"
+        ],
+        "harmed_case_ids": [
+          "D058"
+        ],
+        "mean_absolute_probability_shift": 0.27053282289881253,
+        "mean_signed_probability_shift": 0.1505673595194809
+      }
+    },
+    "source_ambiguity": {
+      "dynamic_repeat_last": {
+        "rows": 3,
+        "groups": 3,
+        "before_correct": 0,
+        "after_correct": 2,
+        "rescued": 2,
+        "harmed": 0,
+        "net_correct_change": 2,
+        "both_correct": 0,
+        "both_wrong": 1,
+        "unchanged_decisions": 1,
+        "decision_changes": 2,
+        "rescued_case_ids": [
+          "D043",
+          "D075"
+        ],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.2951437441805799,
+        "mean_signed_probability_shift": 0.22437207599275877
+      },
+      "dynamic_fixed": {
+        "rows": 3,
+        "groups": 3,
+        "before_correct": 3,
+        "after_correct": 1,
+        "rescued": 0,
+        "harmed": 2,
+        "net_correct_change": -2,
+        "both_correct": 1,
+        "both_wrong": 0,
+        "unchanged_decisions": 1,
+        "decision_changes": 2,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [
+          "D007",
+          "D075"
+        ],
+        "mean_absolute_probability_shift": 0.4237323629113922,
+        "mean_signed_probability_shift": -0.11851345846056625
+      },
+      "dynamic_selected": {
+        "rows": 3,
+        "groups": 3,
+        "before_correct": 1,
+        "after_correct": 2,
+        "rescued": 1,
+        "harmed": 0,
+        "net_correct_change": 1,
+        "both_correct": 1,
+        "both_wrong": 1,
+        "unchanged_decisions": 2,
+        "decision_changes": 1,
+        "rescued_case_ids": [
+          "D043"
+        ],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.23927329365117675,
+        "mean_signed_probability_shift": 0.10384339578029766
+      }
+    },
+    "faithful_or_style": {
+      "dynamic_repeat_last": {
+        "rows": 45,
+        "groups": 45,
+        "before_correct": 20,
+        "after_correct": 28,
+        "rescued": 16,
+        "harmed": 8,
+        "net_correct_change": 8,
+        "both_correct": 12,
+        "both_wrong": 9,
+        "unchanged_decisions": 21,
+        "decision_changes": 24,
+        "rescued_case_ids": [
+          "D002",
+          "D009",
+          "D013",
+          "D017",
+          "D021",
+          "D027",
+          "D031",
+          "D032",
+          "D037",
+          "D038",
+          "D049",
+          "D050",
+          "D052",
+          "D062",
+          "D063",
+          "D064"
+        ],
+        "harmed_case_ids": [
+          "D008",
+          "D011",
+          "D018",
+          "D024",
+          "D028",
+          "D030",
+          "D066",
+          "D074"
+        ],
+        "mean_absolute_probability_shift": 0.30974335993431634,
+        "mean_signed_probability_shift": -0.027246921600656036
+      },
+      "dynamic_fixed": {
+        "rows": 45,
+        "groups": 45,
+        "before_correct": 26,
+        "after_correct": 31,
+        "rescued": 11,
+        "harmed": 6,
+        "net_correct_change": 5,
+        "both_correct": 20,
+        "both_wrong": 8,
+        "unchanged_decisions": 28,
+        "decision_changes": 17,
+        "rescued_case_ids": [
+          "D002",
+          "D006",
+          "D012",
+          "D017",
+          "D021",
+          "D032",
+          "D037",
+          "D044",
+          "D056",
+          "D061",
+          "D065"
+        ],
+        "harmed_case_ids": [
+          "D003",
+          "D008",
+          "D018",
+          "D034",
+          "D059",
+          "D066"
+        ],
+        "mean_absolute_probability_shift": 0.24781246752278838,
+        "mean_signed_probability_shift": 0.010020434610555727
+      },
+      "dynamic_selected": {
+        "rows": 45,
+        "groups": 45,
+        "before_correct": 33,
+        "after_correct": 32,
+        "rescued": 7,
+        "harmed": 8,
+        "net_correct_change": -1,
+        "both_correct": 25,
+        "both_wrong": 5,
+        "unchanged_decisions": 30,
+        "decision_changes": 15,
+        "rescued_case_ids": [
+          "D006",
+          "D010",
+          "D019",
+          "D029",
+          "D031",
+          "D061",
+          "D077"
+        ],
+        "harmed_case_ids": [
+          "D026",
+          "D028",
+          "D030",
+          "D035",
+          "D038",
+          "D045",
+          "D059",
+          "D066"
+        ],
+        "mean_absolute_probability_shift": 0.2501382967894919,
+        "mean_signed_probability_shift": 0.0028663287484875714
+      }
+    },
+    "no_original": {
+      "dynamic_repeat_last": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_fixed": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_selected": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      }
+    }
+  },
+  "controlled_fusion_effects_by_translation_group_and_language": {
+    "all79": {
+      "zh": {
+        "dynamic_fixed": {
+          "rows": 79,
+          "disagreement_rows": 54,
+          "baseline_correct": 38,
+          "candidate_correct": 44,
+          "rescued": 30,
+          "harmed": 24,
+          "net_correct_change": 6,
+          "rescued_case_ids": [
+            "D003",
+            "D004",
+            "D005",
+            "D007",
+            "D009",
+            "D013",
+            "D016",
+            "D025",
+            "D027",
+            "D031",
+            "D035",
+            "D038",
+            "D041",
+            "D043",
+            "D047",
+            "D049",
+            "D050",
+            "D051",
+            "D052",
+            "D053",
+            "D055",
+            "D057",
+            "D059",
+            "D062",
+            "D063",
+            "D064",
+            "D070",
+            "D071",
+            "D075",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D001",
+            "D006",
+            "D011",
+            "D012",
+            "D015",
+            "D019",
+            "D024",
+            "D026",
+            "D028",
+            "D030",
+            "D033",
+            "D039",
+            "D040",
+            "D044",
+            "D048",
+            "D054",
+            "D056",
+            "D058",
+            "D060",
+            "D061",
+            "D065",
+            "D074",
+            "D078",
+            "D079"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 79,
+          "disagreement_rows": 50,
+          "baseline_correct": 38,
+          "candidate_correct": 56,
+          "rescued": 34,
+          "harmed": 16,
+          "net_correct_change": 18,
+          "rescued_case_ids": [
+            "D002",
+            "D003",
+            "D005",
+            "D009",
+            "D013",
+            "D016",
+            "D017",
+            "D021",
+            "D025",
+            "D027",
+            "D032",
+            "D035",
+            "D036",
+            "D037",
+            "D038",
+            "D041",
+            "D045",
+            "D047",
+            "D049",
+            "D050",
+            "D051",
+            "D052",
+            "D053",
+            "D055",
+            "D057",
+            "D059",
+            "D062",
+            "D063",
+            "D064",
+            "D070",
+            "D071",
+            "D072",
+            "D075",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D006",
+            "D008",
+            "D010",
+            "D018",
+            "D019",
+            "D020",
+            "D022",
+            "D024",
+            "D029",
+            "D033",
+            "D034",
+            "D042",
+            "D061",
+            "D068",
+            "D074",
+            "D077"
+          ]
+        }
+      },
+      "original": {
+        "dynamic_fixed": {
+          "rows": 75,
+          "disagreement_rows": 12,
+          "baseline_correct": 46,
+          "candidate_correct": 48,
+          "rescued": 7,
+          "harmed": 5,
+          "net_correct_change": 2,
+          "rescued_case_ids": [
+            "D005",
+            "D020",
+            "D035",
+            "D047",
+            "D057",
+            "D070",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D001",
+            "D019",
+            "D026",
+            "D034",
+            "D075"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 75,
+          "disagreement_rows": 11,
+          "baseline_correct": 46,
+          "candidate_correct": 51,
+          "rescued": 8,
+          "harmed": 3,
+          "net_correct_change": 5,
+          "rescued_case_ids": [
+            "D003",
+            "D005",
+            "D011",
+            "D036",
+            "D047",
+            "D057",
+            "D070",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D026",
+            "D034",
+            "D038"
+          ]
+        }
+      }
+    },
+    "all75_public_originals": {
+      "zh": {
+        "dynamic_fixed": {
+          "rows": 75,
+          "disagreement_rows": 51,
+          "baseline_correct": 37,
+          "candidate_correct": 42,
+          "rescued": 28,
+          "harmed": 23,
+          "net_correct_change": 5,
+          "rescued_case_ids": [
+            "D003",
+            "D005",
+            "D007",
+            "D009",
+            "D013",
+            "D025",
+            "D027",
+            "D031",
+            "D035",
+            "D038",
+            "D041",
+            "D043",
+            "D047",
+            "D049",
+            "D050",
+            "D051",
+            "D052",
+            "D053",
+            "D055",
+            "D057",
+            "D059",
+            "D062",
+            "D063",
+            "D064",
+            "D070",
+            "D071",
+            "D075",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D001",
+            "D006",
+            "D011",
+            "D012",
+            "D015",
+            "D019",
+            "D024",
+            "D026",
+            "D028",
+            "D030",
+            "D033",
+            "D039",
+            "D040",
+            "D044",
+            "D048",
+            "D054",
+            "D056",
+            "D058",
+            "D060",
+            "D061",
+            "D065",
+            "D074",
+            "D078"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 75,
+          "disagreement_rows": 48,
+          "baseline_correct": 37,
+          "candidate_correct": 53,
+          "rescued": 32,
+          "harmed": 16,
+          "net_correct_change": 16,
+          "rescued_case_ids": [
+            "D002",
+            "D003",
+            "D005",
+            "D009",
+            "D013",
+            "D017",
+            "D021",
+            "D025",
+            "D027",
+            "D032",
+            "D035",
+            "D036",
+            "D037",
+            "D038",
+            "D041",
+            "D045",
+            "D047",
+            "D049",
+            "D050",
+            "D051",
+            "D052",
+            "D053",
+            "D055",
+            "D057",
+            "D059",
+            "D062",
+            "D063",
+            "D064",
+            "D070",
+            "D071",
+            "D075",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D006",
+            "D008",
+            "D010",
+            "D018",
+            "D019",
+            "D020",
+            "D022",
+            "D024",
+            "D029",
+            "D033",
+            "D034",
+            "D042",
+            "D061",
+            "D068",
+            "D074",
+            "D077"
+          ]
+        }
+      },
+      "original": {
+        "dynamic_fixed": {
+          "rows": 75,
+          "disagreement_rows": 12,
+          "baseline_correct": 46,
+          "candidate_correct": 48,
+          "rescued": 7,
+          "harmed": 5,
+          "net_correct_change": 2,
+          "rescued_case_ids": [
+            "D005",
+            "D020",
+            "D035",
+            "D047",
+            "D057",
+            "D070",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D001",
+            "D019",
+            "D026",
+            "D034",
+            "D075"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 75,
+          "disagreement_rows": 11,
+          "baseline_correct": 46,
+          "candidate_correct": 51,
+          "rescued": 8,
+          "harmed": 3,
+          "net_correct_change": 5,
+          "rescued_case_ids": [
+            "D003",
+            "D005",
+            "D011",
+            "D036",
+            "D047",
+            "D057",
+            "D070",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D026",
+            "D034",
+            "D038"
+          ]
+        }
+      }
+    },
+    "definite_meaning_error": {
+      "zh": {
+        "dynamic_fixed": {
+          "rows": 6,
+          "disagreement_rows": 5,
+          "baseline_correct": 3,
+          "candidate_correct": 4,
+          "rescued": 3,
+          "harmed": 2,
+          "net_correct_change": 1,
+          "rescued_case_ids": [
+            "D025",
+            "D053",
+            "D071"
+          ],
+          "harmed_case_ids": [
+            "D040",
+            "D078"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 6,
+          "disagreement_rows": 4,
+          "baseline_correct": 3,
+          "candidate_correct": 5,
+          "rescued": 3,
+          "harmed": 1,
+          "net_correct_change": 2,
+          "rescued_case_ids": [
+            "D025",
+            "D053",
+            "D071"
+          ],
+          "harmed_case_ids": [
+            "D022"
+          ]
+        }
+      },
+      "original": {
+        "dynamic_fixed": {
+          "rows": 6,
+          "disagreement_rows": 0,
+          "baseline_correct": 3,
+          "candidate_correct": 3,
+          "rescued": 0,
+          "harmed": 0,
+          "net_correct_change": 0,
+          "rescued_case_ids": [],
+          "harmed_case_ids": []
+        },
+        "dynamic_selected": {
+          "rows": 6,
+          "disagreement_rows": 0,
+          "baseline_correct": 3,
+          "candidate_correct": 3,
+          "rescued": 0,
+          "harmed": 0,
+          "net_correct_change": 0,
+          "rescued_case_ids": [],
+          "harmed_case_ids": []
+        }
+      }
+    },
+    "minor_wording": {
+      "zh": {
+        "dynamic_fixed": {
+          "rows": 21,
+          "disagreement_rows": 11,
+          "baseline_correct": 14,
+          "candidate_correct": 9,
+          "rescued": 3,
+          "harmed": 8,
+          "net_correct_change": -5,
+          "rescued_case_ids": [
+            "D041",
+            "D051",
+            "D055"
+          ],
+          "harmed_case_ids": [
+            "D001",
+            "D015",
+            "D033",
+            "D039",
+            "D048",
+            "D054",
+            "D058",
+            "D060"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 21,
+          "disagreement_rows": 8,
+          "baseline_correct": 14,
+          "candidate_correct": 14,
+          "rescued": 4,
+          "harmed": 4,
+          "net_correct_change": 0,
+          "rescued_case_ids": [
+            "D036",
+            "D041",
+            "D051",
+            "D055"
+          ],
+          "harmed_case_ids": [
+            "D020",
+            "D033",
+            "D042",
+            "D068"
+          ]
+        }
+      },
+      "original": {
+        "dynamic_fixed": {
+          "rows": 21,
+          "disagreement_rows": 2,
+          "baseline_correct": 13,
+          "candidate_correct": 13,
+          "rescued": 1,
+          "harmed": 1,
+          "net_correct_change": 0,
+          "rescued_case_ids": [
+            "D020"
+          ],
+          "harmed_case_ids": [
+            "D001"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 21,
+          "disagreement_rows": 1,
+          "baseline_correct": 13,
+          "candidate_correct": 14,
+          "rescued": 1,
+          "harmed": 0,
+          "net_correct_change": 1,
+          "rescued_case_ids": [
+            "D036"
+          ],
+          "harmed_case_ids": []
+        }
+      }
+    },
+    "source_ambiguity": {
+      "zh": {
+        "dynamic_fixed": {
+          "rows": 3,
+          "disagreement_rows": 3,
+          "baseline_correct": 0,
+          "candidate_correct": 3,
+          "rescued": 3,
+          "harmed": 0,
+          "net_correct_change": 3,
+          "rescued_case_ids": [
+            "D007",
+            "D043",
+            "D075"
+          ],
+          "harmed_case_ids": []
+        },
+        "dynamic_selected": {
+          "rows": 3,
+          "disagreement_rows": 1,
+          "baseline_correct": 0,
+          "candidate_correct": 1,
+          "rescued": 1,
+          "harmed": 0,
+          "net_correct_change": 1,
+          "rescued_case_ids": [
+            "D075"
+          ],
+          "harmed_case_ids": []
+        }
+      },
+      "original": {
+        "dynamic_fixed": {
+          "rows": 3,
+          "disagreement_rows": 1,
+          "baseline_correct": 2,
+          "candidate_correct": 1,
+          "rescued": 0,
+          "harmed": 1,
+          "net_correct_change": -1,
+          "rescued_case_ids": [],
+          "harmed_case_ids": [
+            "D075"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 3,
+          "disagreement_rows": 0,
+          "baseline_correct": 2,
+          "candidate_correct": 2,
+          "rescued": 0,
+          "harmed": 0,
+          "net_correct_change": 0,
+          "rescued_case_ids": [],
+          "harmed_case_ids": []
+        }
+      }
+    },
+    "faithful_or_style": {
+      "zh": {
+        "dynamic_fixed": {
+          "rows": 45,
+          "disagreement_rows": 32,
+          "baseline_correct": 20,
+          "candidate_correct": 26,
+          "rescued": 19,
+          "harmed": 13,
+          "net_correct_change": 6,
+          "rescued_case_ids": [
+            "D003",
+            "D005",
+            "D009",
+            "D013",
+            "D027",
+            "D031",
+            "D035",
+            "D038",
+            "D047",
+            "D049",
+            "D050",
+            "D052",
+            "D057",
+            "D059",
+            "D062",
+            "D063",
+            "D064",
+            "D070",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D006",
+            "D011",
+            "D012",
+            "D019",
+            "D024",
+            "D026",
+            "D028",
+            "D030",
+            "D044",
+            "D056",
+            "D061",
+            "D065",
+            "D074"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 45,
+          "disagreement_rows": 35,
+          "baseline_correct": 20,
+          "candidate_correct": 33,
+          "rescued": 24,
+          "harmed": 11,
+          "net_correct_change": 13,
+          "rescued_case_ids": [
+            "D002",
+            "D003",
+            "D005",
+            "D009",
+            "D013",
+            "D017",
+            "D021",
+            "D027",
+            "D032",
+            "D035",
+            "D037",
+            "D038",
+            "D045",
+            "D047",
+            "D049",
+            "D050",
+            "D052",
+            "D057",
+            "D059",
+            "D062",
+            "D063",
+            "D064",
+            "D070",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D006",
+            "D008",
+            "D010",
+            "D018",
+            "D019",
+            "D024",
+            "D029",
+            "D034",
+            "D061",
+            "D074",
+            "D077"
+          ]
+        }
+      },
+      "original": {
+        "dynamic_fixed": {
+          "rows": 45,
+          "disagreement_rows": 9,
+          "baseline_correct": 28,
+          "candidate_correct": 31,
+          "rescued": 6,
+          "harmed": 3,
+          "net_correct_change": 3,
+          "rescued_case_ids": [
+            "D005",
+            "D035",
+            "D047",
+            "D057",
+            "D070",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D019",
+            "D026",
+            "D034"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 45,
+          "disagreement_rows": 10,
+          "baseline_correct": 28,
+          "candidate_correct": 32,
+          "rescued": 7,
+          "harmed": 3,
+          "net_correct_change": 4,
+          "rescued_case_ids": [
+            "D003",
+            "D005",
+            "D011",
+            "D047",
+            "D057",
+            "D070",
+            "D076"
+          ],
+          "harmed_case_ids": [
+            "D026",
+            "D034",
+            "D038"
+          ]
+        }
+      }
+    },
+    "no_original": {
+      "zh": {
+        "dynamic_fixed": {
+          "rows": 4,
+          "disagreement_rows": 3,
+          "baseline_correct": 1,
+          "candidate_correct": 2,
+          "rescued": 2,
+          "harmed": 1,
+          "net_correct_change": 1,
+          "rescued_case_ids": [
+            "D004",
+            "D016"
+          ],
+          "harmed_case_ids": [
+            "D079"
+          ]
+        },
+        "dynamic_selected": {
+          "rows": 4,
+          "disagreement_rows": 2,
+          "baseline_correct": 1,
+          "candidate_correct": 3,
+          "rescued": 2,
+          "harmed": 0,
+          "net_correct_change": 2,
+          "rescued_case_ids": [
+            "D016",
+            "D072"
+          ],
+          "harmed_case_ids": []
+        }
+      },
+      "original": {
+        "dynamic_fixed": {
+          "rows": 0,
+          "disagreement_rows": 0,
+          "baseline_correct": 0,
+          "candidate_correct": 0,
+          "rescued": 0,
+          "harmed": 0,
+          "net_correct_change": 0,
+          "rescued_case_ids": [],
+          "harmed_case_ids": []
+        },
+        "dynamic_selected": {
+          "rows": 0,
+          "disagreement_rows": 0,
+          "baseline_correct": 0,
+          "candidate_correct": 0,
+          "rescued": 0,
+          "harmed": 0,
+          "net_correct_change": 0,
+          "rescued_case_ids": [],
+          "harmed_case_ids": []
+        }
+      }
+    }
+  },
+  "minimal_chinese_fix_by_translation_group": {
+    "all79": {
+      "dynamic_repeat_last": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 4,
+        "after_correct": 5,
+        "rescued": 2,
+        "harmed": 1,
+        "net_correct_change": 1,
+        "both_correct": 3,
+        "both_wrong": 1,
+        "unchanged_decisions": 4,
+        "decision_changes": 3,
+        "rescued_case_ids": [
+          "D025",
+          "D071"
+        ],
+        "harmed_case_ids": [
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.14801933323183145,
+        "mean_signed_probability_shift": 0.021867288174167727
+      },
+      "dynamic_fixed": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 4,
+        "after_correct": 4,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 4,
+        "both_wrong": 3,
+        "unchanged_decisions": 7,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.1434346736409087,
+        "mean_signed_probability_shift": 0.057617103507633986
+      },
+      "dynamic_selected": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 5,
+        "after_correct": 5,
+        "rescued": 1,
+        "harmed": 1,
+        "net_correct_change": 0,
+        "both_correct": 4,
+        "both_wrong": 1,
+        "unchanged_decisions": 5,
+        "decision_changes": 2,
+        "rescued_case_ids": [
+          "D033"
+        ],
+        "harmed_case_ids": [
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.14236692717132945,
+        "mean_signed_probability_shift": 0.05261455556767471
+      }
+    },
+    "all75_public_originals": {
+      "dynamic_repeat_last": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 4,
+        "after_correct": 5,
+        "rescued": 2,
+        "harmed": 1,
+        "net_correct_change": 1,
+        "both_correct": 3,
+        "both_wrong": 1,
+        "unchanged_decisions": 4,
+        "decision_changes": 3,
+        "rescued_case_ids": [
+          "D025",
+          "D071"
+        ],
+        "harmed_case_ids": [
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.14801933323183145,
+        "mean_signed_probability_shift": 0.021867288174167727
+      },
+      "dynamic_fixed": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 4,
+        "after_correct": 4,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 4,
+        "both_wrong": 3,
+        "unchanged_decisions": 7,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.1434346736409087,
+        "mean_signed_probability_shift": 0.057617103507633986
+      },
+      "dynamic_selected": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 5,
+        "after_correct": 5,
+        "rescued": 1,
+        "harmed": 1,
+        "net_correct_change": 0,
+        "both_correct": 4,
+        "both_wrong": 1,
+        "unchanged_decisions": 5,
+        "decision_changes": 2,
+        "rescued_case_ids": [
+          "D033"
+        ],
+        "harmed_case_ids": [
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.14236692717132945,
+        "mean_signed_probability_shift": 0.05261455556767471
+      }
+    },
+    "definite_meaning_error": {
+      "dynamic_repeat_last": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 3,
+        "after_correct": 4,
+        "rescued": 2,
+        "harmed": 1,
+        "net_correct_change": 1,
+        "both_correct": 2,
+        "both_wrong": 1,
+        "unchanged_decisions": 3,
+        "decision_changes": 3,
+        "rescued_case_ids": [
+          "D025",
+          "D071"
+        ],
+        "harmed_case_ids": [
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.1722762754034959,
+        "mean_signed_probability_shift": 0.025098889502888234
+      },
+      "dynamic_fixed": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 4,
+        "after_correct": 4,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 4,
+        "both_wrong": 2,
+        "unchanged_decisions": 6,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.14084984411795146,
+        "mean_signed_probability_shift": 0.04072934562913095
+      },
+      "dynamic_selected": {
+        "rows": 6,
+        "groups": 6,
+        "before_correct": 5,
+        "after_correct": 4,
+        "rescued": 0,
+        "harmed": 1,
+        "net_correct_change": -1,
+        "both_correct": 4,
+        "both_wrong": 1,
+        "unchanged_decisions": 5,
+        "decision_changes": 1,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.13983233113404542,
+        "mean_signed_probability_shift": 0.03512123092978156
+      }
+    },
+    "minor_wording": {
+      "dynamic_repeat_last": {
+        "rows": 1,
+        "groups": 1,
+        "before_correct": 1,
+        "after_correct": 1,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 1,
+        "both_wrong": 0,
+        "unchanged_decisions": 1,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.0024776802018446897,
+        "mean_signed_probability_shift": 0.0024776802018446897
+      },
+      "dynamic_fixed": {
+        "rows": 1,
+        "groups": 1,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 1,
+        "unchanged_decisions": 1,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.1589436507786521,
+        "mean_signed_probability_shift": 0.1589436507786521
+      },
+      "dynamic_selected": {
+        "rows": 1,
+        "groups": 1,
+        "before_correct": 0,
+        "after_correct": 1,
+        "rescued": 1,
+        "harmed": 0,
+        "net_correct_change": 1,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 1,
+        "rescued_case_ids": [
+          "D033"
+        ],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.15757450339503365,
+        "mean_signed_probability_shift": 0.15757450339503365
+      }
+    },
+    "source_ambiguity": {
+      "dynamic_repeat_last": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_fixed": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_selected": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      }
+    },
+    "faithful_or_style": {
+      "dynamic_repeat_last": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_fixed": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_selected": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      }
+    },
+    "no_original": {
+      "dynamic_repeat_last": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_fixed": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      },
+      "dynamic_selected": {
+        "rows": 0,
+        "groups": 0,
+        "before_correct": 0,
+        "after_correct": 0,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 0,
+        "both_wrong": 0,
+        "unchanged_decisions": 0,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": null,
+        "mean_signed_probability_shift": null
+      }
+    },
+    "all7_fixed_candidates": {
+      "dynamic_repeat_last": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 4,
+        "after_correct": 5,
+        "rescued": 2,
+        "harmed": 1,
+        "net_correct_change": 1,
+        "both_correct": 3,
+        "both_wrong": 1,
+        "unchanged_decisions": 4,
+        "decision_changes": 3,
+        "rescued_case_ids": [
+          "D025",
+          "D071"
+        ],
+        "harmed_case_ids": [
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.14801933323183145,
+        "mean_signed_probability_shift": 0.021867288174167727
+      },
+      "dynamic_fixed": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 4,
+        "after_correct": 4,
+        "rescued": 0,
+        "harmed": 0,
+        "net_correct_change": 0,
+        "both_correct": 4,
+        "both_wrong": 3,
+        "unchanged_decisions": 7,
+        "decision_changes": 0,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.1434346736409087,
+        "mean_signed_probability_shift": 0.057617103507633986
+      },
+      "dynamic_selected": {
+        "rows": 7,
+        "groups": 7,
+        "before_correct": 5,
+        "after_correct": 5,
+        "rescued": 1,
+        "harmed": 1,
+        "net_correct_change": 0,
+        "both_correct": 4,
+        "both_wrong": 1,
+        "unchanged_decisions": 5,
+        "decision_changes": 2,
+        "rescued_case_ids": [
+          "D033"
+        ],
+        "harmed_case_ids": [
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.14236692717132945,
+        "mean_signed_probability_shift": 0.05261455556767471
+      }
+    }
+  },
+  "within_batch_chinese_duplicate_consistency": {
+    "dynamic_repeat_last": {
+      "max_absolute_probability_difference": 0.0,
+      "decision_changes": 0
+    },
+    "dynamic_fixed": {
+      "max_absolute_probability_difference": 0.0,
+      "decision_changes": 0
+    },
+    "dynamic_selected": {
+      "max_absolute_probability_difference": 0.0,
+      "decision_changes": 0
+    }
+  },
+  "between_layout_chinese_consistency": {
+    "dynamic_repeat_last": {
+      "historical_cache": {
+        "mean_absolute_probability_difference": 0.010364952045324888,
+        "max_absolute_probability_difference": 0.04770999512427976,
+        "decision_changes": 9,
+        "changed_case_ids": [
+          "D021",
+          "D023",
+          "D030",
+          "D032",
+          "D046",
+          "D066",
+          "D067",
+          "D072",
+          "D073"
+        ]
+      },
+      "initial_mixed_microbatch": {
+        "mean_absolute_probability_difference": 0.007737255344310975,
+        "max_absolute_probability_difference": 0.03739897256033253,
+        "decision_changes": 4,
+        "changed_case_ids": [
+          "D030",
+          "D032",
+          "D046",
+          "D051"
+        ]
+      }
+    },
+    "dynamic_fixed": {
+      "historical_cache": {
+        "mean_absolute_probability_difference": 0.009087223410841604,
+        "max_absolute_probability_difference": 0.05033624714733692,
+        "decision_changes": 3,
+        "changed_case_ids": [
+          "D014",
+          "D034",
+          "D069"
+        ]
+      },
+      "initial_mixed_microbatch": {
+        "mean_absolute_probability_difference": 0.007258821870611506,
+        "max_absolute_probability_difference": 0.03826652488413246,
+        "decision_changes": 1,
+        "changed_case_ids": [
+          "D054"
+        ]
+      }
+    },
+    "dynamic_selected": {
+      "historical_cache": {
+        "mean_absolute_probability_difference": 0.010052209201550673,
+        "max_absolute_probability_difference": 0.04886145219098437,
+        "decision_changes": 0,
+        "changed_case_ids": []
+      },
+      "initial_mixed_microbatch": {
+        "mean_absolute_probability_difference": 0.007541680306096603,
+        "max_absolute_probability_difference": 0.042164269598628734,
+        "decision_changes": 2,
+        "changed_case_ids": [
+          "D006",
+          "D020"
+        ]
+      }
+    }
+  },
+  "historical_vs_initial_chinese_consistency": {
+    "dynamic_repeat_last": {
+      "rows": 79,
+      "mean_absolute_probability_difference": 0.00886081806468622,
+      "max_absolute_probability_difference": 0.03321463158743698,
+      "decision_changes": 7,
+      "changed_case_ids": [
+        "D021",
+        "D023",
+        "D051",
+        "D066",
+        "D067",
+        "D072",
+        "D073"
+      ]
+    },
+    "dynamic_fixed": {
+      "rows": 79,
+      "mean_absolute_probability_difference": 0.007893953117298291,
+      "max_absolute_probability_difference": 0.03202932996505248,
+      "decision_changes": 4,
+      "changed_case_ids": [
+        "D014",
+        "D034",
+        "D054",
+        "D069"
+      ]
+    },
+    "dynamic_selected": {
+      "rows": 79,
+      "mean_absolute_probability_difference": 0.008472796200233912,
+      "max_absolute_probability_difference": 0.03417850054864846,
+      "decision_changes": 2,
+      "changed_case_ids": [
+        "D006",
+        "D020"
+      ]
+    }
+  },
+  "cached_head_consistency": {
+    "dynamic_repeat_last": {
+      "rows": 79,
+      "historical_mean_absolute_probability_difference": 0.0,
+      "historical_max_absolute_probability_difference": 0.0,
+      "historical_decision_changes": 0,
+      "historical_probabilities_exact": true,
+      "paired_mean_absolute_probability_difference": 4.256408762605755e-17,
+      "paired_max_absolute_probability_difference": 2.220446049250313e-16,
+      "paired_decision_changes": 0
+    },
+    "dynamic_fixed": {
+      "rows": 79,
+      "historical_mean_absolute_probability_difference": 0.0,
+      "historical_max_absolute_probability_difference": 0.0,
+      "historical_decision_changes": 0,
+      "historical_probabilities_exact": true,
+      "paired_mean_absolute_probability_difference": 3.4773320586626e-17,
+      "paired_max_absolute_probability_difference": 2.220446049250313e-16,
+      "paired_decision_changes": 0
+    },
+    "dynamic_selected": {
+      "rows": 79,
+      "historical_mean_absolute_probability_difference": 0.0,
+      "historical_max_absolute_probability_difference": 0.0,
+      "historical_decision_changes": 0,
+      "historical_probabilities_exact": true,
+      "paired_mean_absolute_probability_difference": 4.6516497363936523e-17,
+      "paired_max_absolute_probability_difference": 3.3306690738754696e-16,
+      "paired_decision_changes": 0
+    }
+  },
+  "semantic_review_scope": "三份初轮助理审查覆盖79条；13条二轮语义审查。原始评级和证据均保留，不构成独立人类金标。",
+  "minimal_fix_scope": "7条文本候选：6条最终明确词义/实体/角色错误及1条minor交通术语。D040包含姓名解释仍有不确定性的附加改动。",
+  "limitations": [
+    "案例由中文模型分歧选出，任何分层结果均为事后诊断，不是整体语言准确率。",
+    "换原文混合了语言分布与翻译表达效应；最小中文修复只检测指定局部文本改动。",
+    "明确局部译错不等于整个请求安全意图改变，更不等于官方二元标签错误。",
+    "faithful_or_style45 表示本次文本审查未发现明确意义错误，不能严格证明这些文本的所有方面均无问题。",
+    "同批次重复文本对照和跨批次布局差异应与内容变化分开解释。"
+  ],
+  "validation": {
+    "case_ids_unique_and_exact79": true,
+    "binary_labels_unchanged": true,
+    "official75_prompts_and_labels_exact": true,
+    "all_protected_hashes_unchanged": true,
+    "threshold_fixed": 0.5,
+    "production_data_changed": false,
+    "training_performed": false,
+    "external_registry_consumed": false
+  },
+  "second_layout_minimal_fix_replication": {
+    "minimal_chinese_fix": {
+      "dynamic_repeat_last": {
+        "rows": 7,
+        "before_correct": 3,
+        "after_correct": 5,
+        "rescued": 2,
+        "harmed": 0,
+        "unchanged": 5,
+        "rescued_case_ids": [
+          "D025",
+          "D071"
+        ],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.13941937062082757
+      },
+      "dynamic_fixed": {
+        "rows": 7,
+        "before_correct": 4,
+        "after_correct": 4,
+        "rescued": 0,
+        "harmed": 0,
+        "unchanged": 7,
+        "rescued_case_ids": [],
+        "harmed_case_ids": [],
+        "mean_absolute_probability_shift": 0.1363291388020748
+      },
+      "dynamic_selected": {
+        "rows": 7,
+        "before_correct": 5,
+        "after_correct": 4,
+        "rescued": 1,
+        "harmed": 2,
+        "unchanged": 4,
+        "rescued_case_ids": [
+          "D033"
+        ],
+        "harmed_case_ids": [
+          "D053",
+          "D078"
+        ],
+        "mean_absolute_probability_shift": 0.14727460399096962
+      }
+    },
+    "probability_and_decision_changes_from_controlled_layout": {
+      "dynamic_repeat_last": {
+        "zh": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.008757062628876568,
+          "max_absolute_probability_difference": 0.028286287849803637,
+          "decision_changes": 1,
+          "changed_case_ids": [
+            "D078"
+          ]
+        },
+        "original": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.005179788425897661,
+          "max_absolute_probability_difference": 0.020405197657834884,
+          "decision_changes": 0,
+          "changed_case_ids": []
+        },
+        "zh_minimal_fix": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.007384452470368071,
+          "max_absolute_probability_difference": 0.025066629007382213,
+          "decision_changes": 0,
+          "changed_case_ids": []
+        }
+      },
+      "dynamic_fixed": {
+        "zh": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.009663261857814123,
+          "max_absolute_probability_difference": 0.029621982337290187,
+          "decision_changes": 0,
+          "changed_case_ids": []
+        },
+        "original": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.001855512799952476,
+          "max_absolute_probability_difference": 0.007062424836327935,
+          "decision_changes": 0,
+          "changed_case_ids": []
+        },
+        "zh_minimal_fix": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.006668281954335387,
+          "max_absolute_probability_difference": 0.01990231996630354,
+          "decision_changes": 0,
+          "changed_case_ids": []
+        }
+      },
+      "dynamic_selected": {
+        "zh": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.009777725328383438,
+          "max_absolute_probability_difference": 0.029041705635291737,
+          "decision_changes": 0,
+          "changed_case_ids": []
+        },
+        "original": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.0025419069392198135,
+          "max_absolute_probability_difference": 0.010226051595990965,
+          "decision_changes": 0,
+          "changed_case_ids": []
+        },
+        "zh_minimal_fix": {
+          "rows": 7,
+          "mean_absolute_probability_difference": 0.00695588250112538,
+          "max_absolute_probability_difference": 0.017100254655431302,
+          "decision_changes": 1,
+          "changed_case_ids": [
+            "D053"
+          ]
+        }
+      }
+    },
+    "all_three_arms_effect_stable_case_ids": [
+      "D022",
+      "D025",
+      "D033",
+      "D040",
+      "D071"
+    ],
+    "any_arm_layout_sensitive_case_ids": [
+      "D053",
+      "D078"
+    ],
+    "near_threshold_case_ids": [
+      "D022",
+      "D025",
+      "D033",
+      "D040",
+      "D053",
+      "D071",
+      "D078"
+    ],
+    "scope": "Read-only second-layout replication of seven pre-existing Chinese minimal translation counterfactuals",
+    "fixed_threshold": 0.5,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "protocol_sha256": "b24a4a5599a54f0d37df468c51ad13f646455ee76a3fecda076ecb4a6caad9ea",
+    "predictions_sha256": "2050c72c69c65e3d738ef9b32b79fc3ebd7c74da38044a59b81d8b200cd0f722",
+    "feature_manifest_sha256": "db719ee5e18c47ecff81873d6cd465200d5d755a4100610b2d0fffc3b5a5e4e4",
+    "input_texts_labels_and_protected_artifacts_unchanged": true,
+    "no_training": true,
+    "no_production_data_edits": true,
+    "no_external_holdout_consumption": true,
+    "limitations": [
+      "Seven text-only-selected errors from a post-hoc disagreement cohort, not a population accuracy estimate.",
+      "Two batch layouts do not exhaust numerical/runtime sensitivity.",
+      "Original-versus-Chinese difference includes language sensitivity; Chinese minimal edit is the local translation counterfactual."
+    ]
+  },
+  "second_layout_replication_role": "第二批次布局只复核既定7条修复候选；主case_analysis及minimal_fix_case_effects仍保留第一同case控制结果。不把第一布局与复核布局平均，不改变阈值，也不按复核结果重选样本。",
+  "input_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/cases.parquet": "3944f6a6e88be273c7a788fffcf07ded76813d82f433b8f82b3a4c60d91e973c",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/paired_predictions.parquet": "a168a999645c184bcdc9453c8cf710c17b1644f188ec7e3cc74d71e00a71ec65",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/controlled_predictions.parquet": "33801019618ea53b941b1aefa069228bbe4e2b54fbe11532316b01856c9bb7f0",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/second_semantic_review.json": "52790537a984bb32578496c6b873019ad2539d5c718ed2ca7f8b966bc37191d5",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/text_review_part_1_annotations.json": "1763ac45172342ba9b4d54fb5801402c9fc7629e9a9a66e59237a9ae8f930d2b",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/text_review_part_2_annotations.json": "f354b7ec7e5481e21287151d4cf723690ff659ac23bb19189f2e92c0b3046a66",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/text_review_part_3_annotations.json": "d5fb1ff308bd02f5a413083e8725537c7f1d6f64b865f330e06bb30dfa472d97",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_protocol.json": "b24a4a5599a54f0d37df468c51ad13f646455ee76a3fecda076ecb4a6caad9ea",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_predictions.parquet": "2050c72c69c65e3d738ef9b32b79fc3ebd7c74da38044a59b81d8b200cd0f722",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_disagreement79_translation_analysis_20261012/fix_layout_replication_results.json": "dd9937ff9a340a9f0420700594b0bc2151d8f4198e4f0eca9cb89ab9578dc725"
+  },
+  "output_sha256": {
+    "case_analysis.parquet": "054cfa70b0b6e3e3513ecfb6582233d1cce5fb5c4d95a7fff3863cad10dee8ac",
+    "case_analysis.csv": "c10c54c6945af3df4791624bbb6593e2ff0f24c82c14e867d3d9712aab5228a1",
+    "minimal_fix_case_effects.csv": "eb78018c27e59fe0ce9bef4041078ae52d5993e43ce38b2436f442e1e852667d"
+  },
+  "consolidation_script_sha256": "2e126aadb2b079dbb5721b9a4281272f81fa8cc80847fb1d71369cffec8102df"
+}

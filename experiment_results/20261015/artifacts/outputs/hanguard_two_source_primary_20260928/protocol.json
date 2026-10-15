@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-09-28T10:05:32.076569+00:00",
+  "state": "registered",
+  "task": "existing_primary_category_classification",
+  "data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/hanguard_two_source_primary_20260928",
+  "input_data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/hanguard_two_source_primary_20260928",
+  "feature_cache_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_two_source_primary_20260928/feature_cache",
+  "parent_run": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_repaired_core_20260928/runs/E04_s42",
+  "parent_study": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_repaired_core_20260928",
+  "description_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/hanguard_two_source_primary_20260928/descriptions.json",
+  "description_sha256": "ee797066ad76c8c3dc6d864f66e16e446225473831c95e172e8721f9b96540ae",
+  "label_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "all_arms": [
+    "last_mlp",
+    "learned_queries",
+    "description_queries"
+  ],
+  "rows": {
+    "train": 27618,
+    "validation": 3451,
+    "test": 3452
+  },
+  "data_sha256": {
+    "train": "9d9abd18aef162f8c24030ad564a9b6e4d4c8d4dd5dace4761b792c9ddd47ec7",
+    "validation": "8fbe5cb41b88826d10e4ce0ea8c0ffefa90233a030bf91e4a2f14dc4962c9ab7",
+    "test": "4d92a6e61445c92b5cd6df9942e2a4d0744fecd12f4b9babe55567769ccb7e7a"
+  },
+  "epochs": 40,
+  "effective_batch": 128,
+  "max_micro": 64,
+  "token_budget": 16384,
+  "pad_multiple": 32,
+  "max_tokens": 4096,
+  "head_lr": 0.001,
+  "weight_decay": 0.01,
+  "dropout": 0.1,
+  "head_width": 128,
+  "cache_budget_gb": 8,
+  "cache_on_gpu": true,
+  "gpu_ids": [
+    5,
+    6,
+    7
+  ],
+  "training_labels": "Inherited two-source primary categories; category_id1..5 only in type CE; no WildGuard type supervision",
+  "loss": "Five-way cross entropy on the existing harmful subset",
+  "checkpoint_selection": "minimum validation harmful-subset CE; stop after 8 epochs without >=1e-4 improvement; maximum40",
+  "type_decision": "argmax of five softmax probabilities",
+  "primary_contrast": "description_queries versus exactly equal-parameter learned_queries; both versus near-equal-parameter MLP",
+  "type_metrics": [
+    "accuracy",
+    "macro_f1",
+    "per_class",
+    "confusion_matrix"
+  ],
+  "end_to_end_metrics": "Six classes0..5 on the same two-source test subset after unchanged parent binary gate",
+  "binary_gate": "Frozen E04 and existing validation-selected threshold; safe gate yields category0",
+  "input": "Full Chinese text; original split membership; no augmentation or truncation",
+  "backbone": "Frozen E04 Qwen3.5-4B plus LoRA",
+  "new_multilabel_annotations_used": false,
+  "feature_reuse": "One frozen E04 full-text last-layer cache shared by every head and seed",
+  "limitations": [
+    "Inherited source labels are not newly reviewed human gold.",
+    "JailBench domains and formal national-standard clauses are not identical, especially class5.",
+    "Existing split identities have been explored; not a fresh blind test.",
+    "MLP705655 and query706177 parameters differ by522(0.074%); query variants exactly matched.",
+    "Attention weights are aggregation weights, not validated causal explanations.",
+    "Backbone and LoRA were trained for binary detection and remain frozen during type-head training."
+  ],
+  "experiment_scope": "two_source_full_primary_category",
+  "source_data_sha256": {
+    "train": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "validation": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "test": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+  },
+  "dataset_manifest_sha256": "1f7b9c94b5b07ab59c4d8f356e41b43658c86f5e3a7c76717211cca87b9e1acb",
+  "type_rows": {
+    "train": 15578,
+    "validation": 1875,
+    "test": 1828
+  },
+  "type_sources": [
+    "chinese_curated",
+    "jailbench"
+  ],
+  "early_stopping_patience": 8,
+  "early_stopping_min_delta": 0.0001,
+  "head_width_by_arm": {
+    "last_mlp": 275,
+    "learned_queries": 128,
+    "description_queries": 128
+  },
+  "maximum_head_parameters": {
+    "last_mlp": 705655,
+    "learned_queries": 706177,
+    "description_queries": 706177
+  },
+  "binary_training": "Existing three-source E04 backbone/LoRA/binary head frozen; binary training is not rerun",
+  "comparisons_to_older_results": "No direct improvement claim against old three-source or8k test metrics; different test populations"
+}

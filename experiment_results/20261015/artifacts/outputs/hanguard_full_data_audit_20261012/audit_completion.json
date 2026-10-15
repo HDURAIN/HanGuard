@@ -1,0 +1,33 @@
+{
+  "state": "independent_data_audit_complete; data_repair_and_dataset_revalidation_required_before_model_experiments",
+  "input_hashes": {
+    "structure_results.json": "d4ecf4d1c951181ff3b55f1b98ff1a2393ccca2bbedf8c4ff3aa23d8f4003fe1",
+    "translation_scan_results.json": "eaea7355214aab1cb18c9307fdf6f16e635b514a26435fa8090f032a5d9ab732",
+    "text_family_results.json": "5f6a638bca2b263f1e67934307db75a27ce9e1c4fae6f2662ae294cf73f84a0e",
+    "category_only_recovery_manifest.json": "a13bc5b046c6238fd5fd9e27a7c644e7d17f3758aa3ebd28e0ef9652b32355c7",
+    "uniform_sampling_manifest.json": "e57892d0fc89dba78d9da0fc861c9a337149c4d333b42babcc14c9ac87c0a3fd",
+    "uniform_sample_annotations.json": "fb3a1d83db3aee310747ac709828e7c6e5d4524a66bfcdb023cd459eb47071c1",
+    "representative_sampling_manifest.json": "96f1612e53a50564a23dfc58f2d3d258a439e69620486894f3c8105a7fe13231",
+    "translation_scan_family_findings.json": "daa3d33d40733352ab939c0a3d3e5f4c2fbe8dec87308f5c7f748b956e0bfe23",
+    "diagnostic_candidate_findings.json": "d0e319007742926674d6d92145b0586d397377d92e56be7005c20b41d048e9df",
+    "independent_full_audit_review.json": "6673a9036b1bdbfb9ca596c20a7e6a7f0ce9b574ba90e6e0456095a3a20f2c46",
+    "translation_scan_confirmed_union.json": "e777af0baa95376c0d9323a11650eebd0ec624996fbf0a4a67250baff5113a76",
+    "translation_scan_additional_pattern_annotations.json": "4117bd0f5270aea83c2a477a35d9e95a92779547c34187b6508a6aa4ac7d8849"
+  },
+  "artifact_sha256": {
+    "audit_summary.json": "7494e518707c5c7031dbf986bb3aa112aee680e5780e48a7837cd91b6ca55385",
+    "repair_plan.json": "a81174568444e32b92c4b10be26e0bcf0ac9e83033272aac741c1840077e3c0e",
+    "report.md": "861e659db3060766cb4f2be5b3ca6b7a4704fadac39b89dd358997ed33643c51",
+    "reviewed_translation_issue_queue.csv": "2b6ba460ca0970ea3612db5f6ff202df1aa70e44ae926be2600d48dfe7b1c4c3",
+    "reviewed_translation_issue_queue.parquet": "4ce73cfb54dfa1b2bc4b8e8636f0cb659ed11494afa593bfa4241752612da4a1"
+  },
+  "active_data_sha256": {
+    "train": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "validation": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "test": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+  },
+  "script_sha256": "cbdb97ce1fa90093041e24b0713b865db0cf22b087ffb4964ca034c3dbf117a6",
+  "no_training": true,
+  "no_model_scoring": true,
+  "no_binary_relabeling": true
+}

@@ -1,0 +1,131 @@
+{
+  "split": "validation",
+  "seed": 43,
+  "selected_layers": [
+    17,
+    18,
+    28,
+    32
+  ],
+  "fixed_layers": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "common_epoch_budget": 12,
+  "common_batch_order": true,
+  "paired_dropout_stream": true,
+  "matched_initialization": {
+    "arms": [
+      "repeat_last",
+      "fusion_fixed",
+      "fusion_selected"
+    ],
+    "parameters": 1656709,
+    "initialization_sha256": "9a5e36030403cc12d653de9e58f80d9d00613ea6c400697e05385328768f46ad"
+  },
+  "arms": {
+    "last": {
+      "parameters": 327937,
+      "initial_state_sha256": "1db2f881bd404468a2267c54b40643cc262213059b8ec8bf5618921914e5bfa5",
+      "best_epoch": 3,
+      "validation_bce": 0.07402092218399048,
+      "threshold": 0.6116498720758025,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9739455694569844,
+        "f1": 0.9749690210656753,
+        "recall": 0.968011811023622,
+        "precision": 0.982026959560659,
+        "fpr": 0.01951748441312009,
+        "bce": 0.07402092757592803,
+        "brier": 0.020441221016466282,
+        "tp": 3934,
+        "tn": 3617,
+        "fp": 72,
+        "fn": 130,
+        "threshold": 0.6116498720758025,
+        "auroc": 0.9964394571646287,
+        "auprc": 0.99700672052557
+      },
+      "checkpoint_sha256": "1f4932799857444a94e1865d7222551c6d00955e834dc32675ff300cf037daaf"
+    },
+    "repeat_last": {
+      "parameters": 1656709,
+      "initial_state_sha256": "9a5e36030403cc12d653de9e58f80d9d00613ea6c400697e05385328768f46ad",
+      "best_epoch": 5,
+      "validation_bce": 0.07488495111465454,
+      "threshold": 0.752759434607405,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9736876047981426,
+        "f1": 0.9745762711864406,
+        "recall": 0.9621062992125984,
+        "precision": 0.9873737373737373,
+        "fpr": 0.013553808620222282,
+        "bce": 0.0748849471474471,
+        "brier": 0.02014703478593369,
+        "tp": 3910,
+        "tn": 3639,
+        "fp": 50,
+        "fn": 154,
+        "threshold": 0.752759434607405,
+        "auroc": 0.9965729941964084,
+        "auprc": 0.9970735366298046
+      },
+      "checkpoint_sha256": "a5b8904035e0b41619731dcbaaf7ff263bb7ae31b6efaf8dc3389d870cd47460"
+    },
+    "fusion_fixed": {
+      "parameters": 1656709,
+      "initial_state_sha256": "9a5e36030403cc12d653de9e58f80d9d00613ea6c400697e05385328768f46ad",
+      "best_epoch": 3,
+      "validation_bce": 0.07267610728740692,
+      "threshold": 0.5479059429589165,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9753643750806139,
+        "f1": 0.9764168415853809,
+        "recall": 0.9729330708661418,
+        "precision": 0.9799256505576208,
+        "fpr": 0.021957169964760097,
+        "bce": 0.07267611698785852,
+        "brier": 0.019714699273826793,
+        "tp": 3954,
+        "tn": 3608,
+        "fp": 81,
+        "fn": 110,
+        "threshold": 0.5479059429589165,
+        "auroc": 0.9967267418778535,
+        "auprc": 0.997236099232522
+      },
+      "checkpoint_sha256": "5a684b0840bdcb87730776dff31a601e7c4282be4f09f388fff21570f59bf15d"
+    },
+    "fusion_selected": {
+      "parameters": 1656709,
+      "initial_state_sha256": "9a5e36030403cc12d653de9e58f80d9d00613ea6c400697e05385328768f46ad",
+      "best_epoch": 3,
+      "validation_bce": 0.0723961740732193,
+      "threshold": 0.511595306289657,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9753643750806139,
+        "f1": 0.9764691388444007,
+        "recall": 0.9751476377952756,
+        "precision": 0.9777942264988897,
+        "fpr": 0.02439685551640011,
+        "bce": 0.0723961708394077,
+        "brier": 0.01991389083483177,
+        "tp": 3963,
+        "tn": 3599,
+        "fp": 90,
+        "fn": 101,
+        "threshold": 0.511595306289657,
+        "auroc": 0.9966065452088887,
+        "auprc": 0.9971554118819268
+      },
+      "checkpoint_sha256": "f9e6078732ffdd246b83c3997a55255bad8f38cbe373cc4713f3e87c7cd3a5dc"
+    }
+  },
+  "validation_predictions_sha256": "be4a2bee0755c12a04010d35d4978572d087a2bcba4f5eebfd959d6dd38e832d"
+}

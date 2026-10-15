@@ -1,0 +1,98 @@
+{
+  "schema": "hanguard_e03_training_code_provenance_amendment_v1",
+  "state": "locked_pretest",
+  "read_only_mode": "0444",
+  "created_at": "2026-10-12T11:06:25.731883+00:00",
+  "scope": "Training-code provenance correction for E03 LoRA seeds 42/43/44; no test access.",
+  "protocol": {
+    "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_e03_lora_multiseed_20261012/protocol.json",
+    "sha256": "5b4953da8abe2d09d6ddc42b2ecea848edf92b6c90b5caedba5c55634798e24f",
+    "registered_at": "2026-10-12T10:07:41.868553+00:00",
+    "file_mtime_ns": 1791799661867933520,
+    "file_mtime_local": "2026-10-12T18:07:41.867934+08:00"
+  },
+  "hanguard_model": {
+    "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/hanguard_model.py",
+    "protocol_registered_sha256": "94bec800c9c89a776c4e8a69418d0f43e1835e87baf4ad4e43f935751abe4fcc",
+    "current_sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58",
+    "mtime_ns": 1790600835207034393,
+    "mtime_local": "2026-09-28T21:07:15.207034+08:00",
+    "mtime_precedes_protocol_registration": true
+  },
+  "git_evidence": {
+    "repository": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard",
+    "head_commit_at_amendment": "e08bd1f602bf60f38f0d2d9d16ab6a6347210d6c",
+    "head_blob_oid": "61a24efee8f728591b47974e3d37d5c16f2ed173",
+    "head_sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58",
+    "working_tree_blob_oid": "61a24efee8f728591b47974e3d37d5c16f2ed173",
+    "working_tree_status": "",
+    "all_history_versions": [
+      {
+        "commit": "60dd8a5aca6d182a99cb488b00995766f0a512d7",
+        "blob_oid": "61a24efee8f728591b47974e3d37d5c16f2ed173",
+        "sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58"
+      },
+      {
+        "commit": "89b91a071c0ad4fd043b5d514a1b8be912c72c2e",
+        "blob_oid": "61a24efee8f728591b47974e3d37d5c16f2ed173",
+        "sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58"
+      },
+      {
+        "commit": "b8df2cf5449f9aa80108ebb1725800fb6a40b412",
+        "blob_oid": "61a24efee8f728591b47974e3d37d5c16f2ed173",
+        "sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58"
+      }
+    ],
+    "all_history_sha256_identical": true
+  },
+  "pre_existing_runs": [
+    {
+      "seed": 42,
+      "provenance_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s42/provenance.json",
+      "provenance_sha256": "d2d2c21918baabfd1545430384b64826d37cab6de85472bf61dc93f1a2c93234",
+      "provenance_mtime_ns": 1791799728680191543,
+      "provenance_mtime_local": "2026-10-12T18:08:48.680192+08:00",
+      "trainer_code_sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+      "heads_code_sha256": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+      "hanguard_model_sha256_recorded_in_run_provenance": null,
+      "limitation": "The legacy per-run provenance schema did not record hanguard_model.py SHA-256.",
+      "live_process_observation_at_amendment": {
+        "pid": 2461084,
+        "ps_lstart": "Mon Oct 12 18:08:19 2026",
+        "command": ".venv-hanguard/bin/python scripts/hanguard/repaired_study.py train --output outputs/hanguard_e03_lora_multiseed_20261012 --arm E03 --seed 42"
+      }
+    },
+    {
+      "seed": 43,
+      "provenance_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_e03_lora_multiseed_20261012/runs/E03_s43/provenance.json",
+      "provenance_sha256": "bd044b33a641cba9ba0e26bbb61cfe10fd1562602e608d8911ae08523a7048e3",
+      "provenance_mtime_ns": 1791800961391584959,
+      "provenance_mtime_local": "2026-10-12T18:29:21.391585+08:00",
+      "trainer_code_sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+      "heads_code_sha256": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+      "hanguard_model_sha256_recorded_in_run_provenance": null,
+      "limitation": "The legacy per-run provenance schema did not record hanguard_model.py SHA-256.",
+      "live_process_observation_at_amendment": {
+        "pid": 2589445,
+        "ps_lstart": "Mon Oct 12 18:28:59 2026",
+        "command": ".venv-hanguard/bin/python scripts/hanguard/repaired_study.py train --output outputs/hanguard_e03_lora_multiseed_20261012 --arm E03 --seed 43"
+      }
+    }
+  ],
+  "execution_order_evidence": {
+    "repaired_study_sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+    "fact": "repaired_study.train calls setup before writing provenance; setup imports hanguard_model.load_base_model. Thus each provenance mtime is a conservative post-import bound."
+  },
+  "finding": "The 94bec... protocol value is stale registration metadata. The clean working file, Git HEAD, and every repository history version resolve to SHA-256 1251a52f..., whose mtime predates protocol registration and both observed seed42/43 launches.",
+  "future_seed_policy": {
+    "seed": 44,
+    "required_sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58",
+    "required_entrypoint": "finalize_e03_lora_multiseed.py train --seed 44",
+    "launch_receipt": "finalization/E03_s44_training_launch_receipt.json",
+    "rule": "The wrapper must verify this sidecar and import the locked module before invoking training."
+  },
+  "limitations": [
+    "Legacy seed42/43 run provenance records trainer/head hashes but omits hanguard_model.py.",
+    "Filesystem mtime and the live ps observations are supporting provenance, not cryptographic process attestation."
+  ]
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "phase": 0,
+    "phase_name": "head_warmup",
+    "epoch": 0,
+    "validation_bce": 0.19241979718208313,
+    "seconds": 76.30836818704847
+  }
+]

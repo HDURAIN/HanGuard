@@ -1,0 +1,318 @@
+{
+  "scope": "Exploratory lexical similarity of completed folds 0/1; Chinese WildGuard only.",
+  "training_started": false,
+  "neural_inference_started": false,
+  "formal_holdout_accessed": false,
+  "method": "Character 2-4-gram TF-IDF cosine; vocabulary/IDF indexed only from same-fold inner-train WildGuard. Separate nearest safe/harmful references. No outer-held IDF fitting.",
+  "settings": {
+    "min_df": 2,
+    "max_features": 100000,
+    "sublinear_tf": true,
+    "dtype": "float32",
+    "normalization": "NFKC/lowercase/collapsed whitespace"
+  },
+  "input_sha256": {
+    "outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/held_predictions.parquet": "2e4ba9704a4f50df79e7dbf223a9dab426aa54e111db58013830f146ad49a82f",
+    "outputs/hanguard_ab_diagnosis_20261012/partition/B.parquet": "168b395c834a455e52929147d0bfee8161d52a1728094f39775c40a5b4b3a8e9",
+    "outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_0_assignments.parquet": "fbc889ecd2998c248cbfcb3c04990b7fead88d577970e192eea400b3997281aa",
+    "outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_1_assignments.parquet": "937be5aa5e444f86d68643285a8fc9ba2534402feb5bf8fee918860ee321ebae"
+  },
+  "script_sha256": "3bd756e2ec6144315a2cfc79e96b5b74e943d230e873566ee3c3b3b8b303f9fb",
+  "folds": [
+    {
+      "fold": 0,
+      "reference_rows": 7909,
+      "reference_safe": 3808,
+      "reference_harmful": 4101,
+      "query_rows": 2198,
+      "vocabulary_size": 100000
+    },
+    {
+      "fold": 1,
+      "reference_rows": 7909,
+      "reference_safe": 3808,
+      "reference_harmful": 4101,
+      "query_rows": 2198,
+      "vocabulary_size": 100000
+    }
+  ],
+  "summary": {
+    "harmful": {
+      "all": {
+        "rows": 2280,
+        "nearest_safe_cosine_median": 0.13103603571653366,
+        "nearest_harmful_cosine_median": 0.18704060465097427,
+        "safe_minus_harmful_similarity_median": -0.028934653848409653,
+        "safe_nearer_fraction": 0.2820175438596491,
+        "baseline_error_rate": 0.060087719298245613,
+        "sparse_error_rate": 0.07192982456140351,
+        "newly_wrong": 37,
+        "rescued": 10
+      },
+      "baseline_correct": {
+        "rows": 2143,
+        "nearest_safe_cosine_median": 0.13069507479667664,
+        "nearest_harmful_cosine_median": 0.18923188745975494,
+        "safe_minus_harmful_similarity_median": -0.03203380107879639,
+        "safe_nearer_fraction": 0.2655156322911806,
+        "baseline_error_rate": 0.0,
+        "sparse_error_rate": 0.01726551563229118,
+        "newly_wrong": 37,
+        "rescued": 0
+      },
+      "baseline_wrong": {
+        "rows": 137,
+        "nearest_safe_cosine_median": 0.14070069789886475,
+        "nearest_harmful_cosine_median": 0.1320166289806366,
+        "safe_minus_harmful_similarity_median": 0.0016923323273658752,
+        "safe_nearer_fraction": 0.5401459854014599,
+        "baseline_error_rate": 1.0,
+        "sparse_error_rate": 0.927007299270073,
+        "newly_wrong": 0,
+        "rescued": 10
+      },
+      "newly_wrong": {
+        "rows": 37,
+        "nearest_safe_cosine_median": 0.1347295045852661,
+        "nearest_harmful_cosine_median": 0.1415492445230484,
+        "safe_minus_harmful_similarity_median": -0.021017268300056458,
+        "safe_nearer_fraction": 0.40540540540540543,
+        "baseline_error_rate": 0.0,
+        "sparse_error_rate": 1.0,
+        "newly_wrong": 37,
+        "rescued": 0
+      },
+      "rescued": {
+        "rows": 10,
+        "nearest_safe_cosine_median": 0.13935856521129608,
+        "nearest_harmful_cosine_median": 0.11321455240249634,
+        "safe_minus_harmful_similarity_median": 0.020438913255929947,
+        "safe_nearer_fraction": 0.8,
+        "baseline_error_rate": 1.0,
+        "sparse_error_rate": 0.0,
+        "newly_wrong": 0,
+        "rescued": 10
+      },
+      "similarity_bands": {
+        "0_0.25": {
+          "rows": 1984,
+          "nearest_safe_cosine_median": 0.12268553674221039,
+          "nearest_harmful_cosine_median": 0.16816581785678864,
+          "safe_minus_harmful_similarity_median": -0.03407012298703194,
+          "safe_nearer_fraction": 0.23941532258064516,
+          "baseline_error_rate": 0.051915322580645164,
+          "sparse_error_rate": 0.06502016129032258,
+          "newly_wrong": 33,
+          "rescued": 7
+        },
+        "0.25_0.5": {
+          "rows": 263,
+          "nearest_safe_cosine_median": 0.31122490763664246,
+          "nearest_harmful_cosine_median": 0.3098362982273102,
+          "safe_minus_harmful_similarity_median": 0.01717481017112732,
+          "safe_nearer_fraction": 0.5437262357414449,
+          "baseline_error_rate": 0.10646387832699619,
+          "sparse_error_rate": 0.11026615969581749,
+          "newly_wrong": 4,
+          "rescued": 3
+        },
+        "0.5_0.75": {
+          "rows": 25,
+          "nearest_safe_cosine_median": 0.5670643448829651,
+          "nearest_harmful_cosine_median": 0.46772322058677673,
+          "safe_minus_harmful_similarity_median": 0.10269767045974731,
+          "safe_nearer_fraction": 0.84,
+          "baseline_error_rate": 0.2,
+          "sparse_error_rate": 0.2,
+          "newly_wrong": 0,
+          "rescued": 0
+        },
+        "0.75_1.0001": {
+          "rows": 8,
+          "nearest_safe_cosine_median": 0.7654283344745636,
+          "nearest_harmful_cosine_median": 0.7606638669967651,
+          "safe_minus_harmful_similarity_median": 0.04220893979072571,
+          "safe_nearer_fraction": 0.5,
+          "baseline_error_rate": 0.125,
+          "sparse_error_rate": 0.125,
+          "newly_wrong": 0,
+          "rescued": 0
+        }
+      },
+      "margin_groups": {
+        "safe_nearer_True": {
+          "rows": 643,
+          "nearest_safe_cosine_median": 0.15441341698169708,
+          "nearest_harmful_cosine_median": 0.12286271899938583,
+          "safe_minus_harmful_similarity_median": 0.026792138814926147,
+          "safe_nearer_fraction": 1.0,
+          "baseline_error_rate": 0.1150855365474339,
+          "sparse_error_rate": 0.12597200622083982,
+          "newly_wrong": 15,
+          "rescued": 8
+        },
+        "safe_nearer_False": {
+          "rows": 1637,
+          "nearest_safe_cosine_median": 0.12187232822179794,
+          "nearest_harmful_cosine_median": 0.22075296938419342,
+          "safe_minus_harmful_similarity_median": -0.06750623881816864,
+          "safe_nearer_fraction": 0.0,
+          "baseline_error_rate": 0.038485033598045205,
+          "sparse_error_rate": 0.05070250458155162,
+          "newly_wrong": 22,
+          "rescued": 2
+        }
+      }
+    },
+    "safe": {
+      "all": {
+        "rows": 2116,
+        "nearest_safe_cosine_median": 0.1904657632112503,
+        "nearest_harmful_cosine_median": 0.14212030172348022,
+        "safe_minus_harmful_similarity_median": 0.024413786828517914,
+        "safe_nearer_fraction": 0.6824196597353497,
+        "baseline_error_rate": 0.04914933837429111,
+        "sparse_error_rate": 0.04678638941398866,
+        "newly_wrong": 14,
+        "rescued": 19
+      },
+      "baseline_correct": {
+        "rows": 2012,
+        "nearest_safe_cosine_median": 0.19652456045150757,
+        "nearest_harmful_cosine_median": 0.14308933168649673,
+        "safe_minus_harmful_similarity_median": 0.025867730379104614,
+        "safe_nearer_fraction": 0.6908548707753479,
+        "baseline_error_rate": 0.0,
+        "sparse_error_rate": 0.006958250497017893,
+        "newly_wrong": 14,
+        "rescued": 0
+      },
+      "baseline_wrong": {
+        "rows": 104,
+        "nearest_safe_cosine_median": 0.13378072530031204,
+        "nearest_harmful_cosine_median": 0.13330215215682983,
+        "safe_minus_harmful_similarity_median": 0.0033655688166618347,
+        "safe_nearer_fraction": 0.5192307692307693,
+        "baseline_error_rate": 1.0,
+        "sparse_error_rate": 0.8173076923076923,
+        "newly_wrong": 0,
+        "rescued": 19
+      },
+      "newly_wrong": {
+        "rows": 14,
+        "nearest_safe_cosine_median": 0.11781303957104683,
+        "nearest_harmful_cosine_median": 0.11721935868263245,
+        "safe_minus_harmful_similarity_median": 0.0012696310877799988,
+        "safe_nearer_fraction": 0.6428571428571429,
+        "baseline_error_rate": 0.0,
+        "sparse_error_rate": 1.0,
+        "newly_wrong": 14,
+        "rescued": 0
+      },
+      "rescued": {
+        "rows": 19,
+        "nearest_safe_cosine_median": 0.11915665119886398,
+        "nearest_harmful_cosine_median": 0.1382952779531479,
+        "safe_minus_harmful_similarity_median": -0.0032998770475387573,
+        "safe_nearer_fraction": 0.47368421052631576,
+        "baseline_error_rate": 1.0,
+        "sparse_error_rate": 0.0,
+        "newly_wrong": 0,
+        "rescued": 19
+      },
+      "similarity_bands": {
+        "0_0.25": {
+          "rows": 1263,
+          "nearest_safe_cosine_median": 0.12754426896572113,
+          "nearest_harmful_cosine_median": 0.11941215395927429,
+          "safe_minus_harmful_similarity_median": 0.006862178444862366,
+          "safe_nearer_fraction": 0.5795724465558195,
+          "baseline_error_rate": 0.06571654790182106,
+          "sparse_error_rate": 0.06334125098970704,
+          "newly_wrong": 14,
+          "rescued": 17
+        },
+        "0.25_0.5": {
+          "rows": 542,
+          "nearest_safe_cosine_median": 0.3509451597929001,
+          "nearest_harmful_cosine_median": 0.22994805127382278,
+          "safe_minus_harmful_similarity_median": 0.10565339028835297,
+          "safe_nearer_fraction": 0.8118081180811808,
+          "baseline_error_rate": 0.02952029520295203,
+          "sparse_error_rate": 0.027675276752767528,
+          "newly_wrong": 0,
+          "rescued": 1
+        },
+        "0.5_0.75": {
+          "rows": 255,
+          "nearest_safe_cosine_median": 0.595016360282898,
+          "nearest_harmful_cosine_median": 0.2906133532524109,
+          "safe_minus_harmful_similarity_median": 0.30898064374923706,
+          "safe_nearer_fraction": 0.8705882352941177,
+          "baseline_error_rate": 0.01568627450980392,
+          "sparse_error_rate": 0.01568627450980392,
+          "newly_wrong": 0,
+          "rescued": 0
+        },
+        "0.75_1.0001": {
+          "rows": 56,
+          "nearest_safe_cosine_median": 0.8178301453590393,
+          "nearest_harmful_cosine_median": 0.3004557490348816,
+          "safe_minus_harmful_similarity_median": 0.5436957776546478,
+          "safe_nearer_fraction": 0.8928571428571429,
+          "baseline_error_rate": 0.017857142857142856,
+          "sparse_error_rate": 0.0,
+          "newly_wrong": 0,
+          "rescued": 1
+        }
+      },
+      "margin_groups": {
+        "safe_nearer_True": {
+          "rows": 1444,
+          "nearest_safe_cosine_median": 0.24572911858558655,
+          "nearest_harmful_cosine_median": 0.13754897564649582,
+          "safe_minus_harmful_similarity_median": 0.06520659476518631,
+          "safe_nearer_fraction": 1.0,
+          "baseline_error_rate": 0.037396121883656507,
+          "sparse_error_rate": 0.037396121883656507,
+          "newly_wrong": 9,
+          "rescued": 9
+        },
+        "safe_nearer_False": {
+          "rows": 672,
+          "nearest_safe_cosine_median": 0.12012960016727448,
+          "nearest_harmful_cosine_median": 0.15110129117965698,
+          "safe_minus_harmful_similarity_median": -0.02054595947265625,
+          "safe_nearer_fraction": 0.0,
+          "baseline_error_rate": 0.0744047619047619,
+          "sparse_error_rate": 0.06696428571428571,
+          "newly_wrong": 5,
+          "rescued": 10
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "neighbors.csv": {
+      "sha256": "4aeeffe3e1514a18e0395065aec92be8e9c4c01d10da26d6c3ab92bacf3f5815",
+      "rows": 4396
+    }
+  },
+  "limitations": [
+    "Lexical similarity is not semantic similarity or proof of the same intent.",
+    "Reference matches are corpus candidates, not adjudicated contrastive pairs.",
+    "Index contains only WildGuard inner-train B, not the full A backbone training corpus.",
+    "Observational association cannot establish that safe training examples caused errors.",
+    "Only two completed folds; inspection follows user-selected stopping and is exploratory.",
+    "Similarity/error associations may be confounded by topic, length, and inherited label ambiguity.",
+    "Raw prompts are not exported.",
+    "Safe/harmful reference pools differ in size (3808 versus 4101 per fold); maxima can be affected by candidate-pool size.",
+    "The safe_nearer=False subgroup includes similarity ties.",
+    "Nearest-safe/harmful cosine values are often low; relative proximity does not mean high semantic similarity."
+  ],
+  "external_context": {
+    "paper_url": "https://arxiv.org/html/2406.18495v3#S3.SS1.SSS1",
+    "checked_date": "2026-10-13",
+    "fact": "Original dataset construction deliberately includes benign requests superficially resembling unsafe ones and benign requests discussing sensitive but safe topics."
+  }
+}

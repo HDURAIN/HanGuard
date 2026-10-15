@@ -1,0 +1,58 @@
+{
+  "schema": "hanguard_jailbench_seed_fraction_cross_environment_verification_v1",
+  "complete": true,
+  "gpu_used": false,
+  "original_strict_assertion_preserved": true,
+  "exact_full_document_match": false,
+  "all_computed_values_and_input_sha_equal": true,
+  "differences": [
+    {
+      "path": ".versions.tokenizers",
+      "reference": "0.20.3",
+      "candidate": "0.22.2"
+    }
+  ],
+  "strict_verifications": {
+    "reference": {
+      "command": [
+        "/mnt/data1/zhouhanyu/miniconda3/envs/hanguard/bin/python",
+        "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/analyze.py",
+        "--output",
+        "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.json",
+        "--verify-only"
+      ],
+      "strict_original_verification": {
+        "verified": true,
+        "output": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.json",
+        "sha256": "52364005be6cd7a14d36faa1ea34f7aa963fc180e078b0ce9dafc2c29f58fdab"
+      },
+      "interpreter_sha256": "5ba73fc1f0a5250e16e4a191f7bc621bdb5e9927c30c75abfd5cdbe6083af51d"
+    },
+    "candidate": {
+      "command": [
+        "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+        "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/analyze.py",
+        "--output",
+        "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.tokenizers_0.22.2.json",
+        "--verify-only"
+      ],
+      "strict_original_verification": {
+        "verified": true,
+        "output": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.tokenizers_0.22.2.json",
+        "sha256": "27af1dc2be99f3c9e5843d65d7e0d5171525419b2a814300d36b27591041085f"
+      },
+      "interpreter_sha256": "5ba73fc1f0a5250e16e4a191f7bc621bdb5e9927c30c75abfd5cdbe6083af51d"
+    }
+  },
+  "interpretation": "The original cross-environment failure was recorded tokenizers version metadata only; all computed fractions, offset coverage, OOF predictions, confusion counts and SHA bindings are exactly equal.",
+  "caution": "This verifies this fixed dataset/tokenizer/code pair; it does not prove arbitrary tokenizer versions equivalent.",
+  "artifacts": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/analyze.py": "587560750ed6fde0a334fc915b901734a83ecf994bbabba75df62e117daf827c",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.json": "52364005be6cd7a14d36faa1ea34f7aa963fc180e078b0ce9dafc2c29f58fdab",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/results.tokenizers_0.22.2.json": "27af1dc2be99f3c9e5843d65d7e0d5171525419b2a814300d36b27591041085f"
+  },
+  "verifier": {
+    "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_task_fit_research_20261013/jailbench_seed_fraction_audit/verify_environments.py",
+    "sha256": "d9bc9a208ca67ae22ffe67bc2d2f73faae10abb4eb63a3b73aa934b32b7f304c"
+  }
+}

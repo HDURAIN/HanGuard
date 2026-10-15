@@ -1,0 +1,18 @@
+{
+  "tests": {
+    "command": ".venv-hanguard/bin/python -m pytest -q tests/test_remediated_dataset_contract.py tests/test_current_training.py tests/test_repaired_study.py",
+    "passed": 70
+  },
+  "legacy_repaired_study_sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+  "legacy_frozen_protocol_load": "passed",
+  "legacy_dynamic_protocol_load": "passed",
+  "category_parent_lineage_guard": {
+    "new_parent_new_same_split_subset": "passed",
+    "mixed_legacy_and_new_versions": "rejected",
+    "cross_split_or_prompt_or_binary_or_category_drift": "rejected",
+    "registered_parent_input_hash_drift": "rejected",
+    "legacy_parent_legacy_data": "preserved"
+  },
+  "default_route_changed": false,
+  "training_started": false
+}

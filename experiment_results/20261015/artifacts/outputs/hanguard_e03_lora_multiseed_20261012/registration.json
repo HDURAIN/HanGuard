@@ -1,0 +1,15 @@
+{
+  "state": "locked_for_training",
+  "protocol_sha256": "5b4953da8abe2d09d6ddc42b2ecea848edf92b6c90b5caedba5c55634798e24f",
+  "arms_sha256": "9298227d03ca68ed7acf0f968d63fc7c7cdf477a560241b98d31d21a78212765",
+  "source_protocol_sha256": "70826c18f855301ddb6a306f6eea16933a6b0aeca7a1438d60d356674bd36f64",
+  "source_arms_sha256": "87d780b33f28c96c70ca6a2cc1df149d0f66cf86c0d8774e687447f8e945077f",
+  "fresh_training": true,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "arm": "E03",
+  "test_access_before_all_selection": false
+}

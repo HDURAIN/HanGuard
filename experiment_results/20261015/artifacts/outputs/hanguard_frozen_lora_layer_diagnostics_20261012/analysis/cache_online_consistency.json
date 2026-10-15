@@ -1,0 +1,22 @@
+{
+  "validation": {
+    "rows": 7753,
+    "base_id_exact": true,
+    "mean_absolute_probability_difference": 5.6565579800242185e-05,
+    "max_absolute_probability_difference": 0.03204622856795902,
+    "pearson": 0.9999987862792428,
+    "threshold_decision_agreement": 0.9998710176705792,
+    "offline_accuracy": 0.9742035341158262,
+    "online_accuracy": 0.974332516445247
+  },
+  "test": {
+    "rows": 7778,
+    "base_id_exact": true,
+    "mean_absolute_probability_difference": 3.153533969372769e-05,
+    "max_absolute_probability_difference": 0.020986204304280276,
+    "pearson": 0.999999494066359,
+    "threshold_decision_agreement": 1.0,
+    "offline_accuracy": 0.9682437644638725,
+    "online_accuracy": 0.9682437644638725
+  }
+}

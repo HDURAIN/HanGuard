@@ -1,0 +1,97 @@
+{
+  "split": "validation",
+  "anchor": 32,
+  "count": 4,
+  "layers": [
+    17,
+    18,
+    28,
+    32
+  ],
+  "greedy_order": [
+    32,
+    17,
+    28,
+    18
+  ],
+  "eligibility": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "eligibility_rule": {
+    "auroc_margin": 0.002,
+    "accuracy_margin": 0.02
+  },
+  "eligible_layers": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "fallback_layers": [],
+  "oracle_accuracy": 0.986198890751967,
+  "trace": [
+    {
+      "step": 1,
+      "layer": 32,
+      "newly_rescued": 0,
+      "remaining_oracle_errors": 204,
+      "mean_absolute_probability_correlation": 1.0,
+      "validation_auroc": 0.9958689565488374,
+      "validation_accuracy": 0.9736876047981426
+    },
+    {
+      "step": 2,
+      "layer": 17,
+      "newly_rescued": 74,
+      "remaining_oracle_errors": 130,
+      "mean_absolute_probability_correlation": 0.9821778326921744,
+      "validation_auroc": 0.9945451923466873,
+      "validation_accuracy": 0.9708499935508835
+    },
+    {
+      "step": 3,
+      "layer": 28,
+      "newly_rescued": 15,
+      "remaining_oracle_errors": 115,
+      "mean_absolute_probability_correlation": 0.9896832303822973,
+      "validation_auroc": 0.9952415592856395,
+      "validation_accuracy": 0.9734296401393009
+    },
+    {
+      "step": 4,
+      "layer": 18,
+      "newly_rescued": 8,
+      "remaining_oracle_errors": 107,
+      "mean_absolute_probability_correlation": 0.9886907476875995,
+      "validation_auroc": 0.9952385577040062,
+      "validation_accuracy": 0.9718818521862505
+    }
+  ],
+  "probe_selection_sha256": "b35620a6f3795a513bb57e15a37e3debe7610ccfef2dac64d32e5d68f8f64cb4",
+  "validation_predictions_sha256": "da2376d93928f6296bb12eea61a675ae4e60c51fe043fab845a83a6e9ff0e609"
+}

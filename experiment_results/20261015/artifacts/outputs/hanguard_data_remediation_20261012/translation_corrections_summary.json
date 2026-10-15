@@ -1,0 +1,17 @@
+{
+  "queue_rows": 106,
+  "total_reviewed_units": 115,
+  "decision_counts": {
+    "correct": 88,
+    "keep": 27
+  },
+  "queue_decision_counts": {
+    "correct": 83,
+    "keep": 23
+  },
+  "labels_changed": 0,
+  "source_queue_sha256": "4ce73cfb54dfa1b2bc4b8e8636f0cb659ed11494afa593bfa4241752612da4a1",
+  "corrections_sha256": "49218bf184a63f1ba30d3a4bd8f2d46150a238eab027091a6533b1049b0437ac",
+  "needs_independent_qa": true,
+  "method": "Read full bilingual text and existing semantic evidence; choose minimal source-faithful edits. No model correctness/probabilities used to choose wording. Quoted obfuscated fill-in string, incomplete code, placeholders and JSON keys/enums retained literally."
+}

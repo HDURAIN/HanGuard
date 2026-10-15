@@ -1,0 +1,126 @@
+{
+  "schema": "hanguard_experiment_archive_summary_sources_v1",
+  "generated_from": "Existing aggregate/result JSON only; no raw prompt, prediction rows, feature caches or model weights read.",
+  "metrics_rows": 55,
+  "comparison_rows": 68,
+  "accuracy_unit": "0_to_1; accuracy_percent=100*accuracy; accuracy_delta_pp=100*(candidate_accuracy-baseline_accuracy)",
+  "standard_deviation": "Accuracy_std values copied from existing aggregate JSON across head seeds; no new uncertainty estimates.",
+  "comparison_rule": "Within the same experiment, task, dataset, evaluation population, threshold-selection policy and seed scope only; no cross-study improvement claims.",
+  "confidence_interval_policy": "Not recomputed or included in summary CSV; inspect original source comparison JSON.",
+  "definitions": {
+    "ab_best_single": "Linear-probe-selected layer followed by a freshly fitted MLP; not best of32 separately trained MLPs.",
+    "fresh_v5": "No completed accuracy included; formal test is unopened at archive creation.",
+    "independent_lora_multiseed": "No completed test accuracy included.",
+    "sparse_partial": "User-stopped2/5-fold exploratory subset; never presented as full registered OOF."
+  },
+  "source_artifacts": [
+    {
+      "source_artifact": "artifacts/outputs/hanguard_ab_diagnosis_20261012/partition/manifest.json",
+      "original_path": "outputs/hanguard_ab_diagnosis_20261012/partition/manifest.json",
+      "sha256": "8d2e3e47353b4df8086a5a24eb5bb04a45ce368be6df44c5667f593b5a77a789",
+      "bytes": 43157
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/results.json",
+      "original_path": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/results.json",
+      "sha256": "3167323240401a450d0e571b3390c0ca90a59bde281b92e74de3e6c8d42e4f58",
+      "bytes": 279896
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/protocol.json",
+      "original_path": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/protocol.json",
+      "sha256": "942a18435967bfc20eee262b7ac5700c90179a44cf808c98f29f33245a941617",
+      "bytes": 2715
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/analysis/results.json",
+      "original_path": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/analysis/results.json",
+      "sha256": "8ad648dcbeb165d235dc5a050b521c6fa7d0659c1dff58a796df6bb1f16fe7b0",
+      "bytes": 279284
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/protocol.json",
+      "original_path": "outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_mean/protocol.json",
+      "sha256": "4a79e94c26c6cf7be801a261f285a2df9c78cb21d394b39f672466a26918baf6",
+      "bytes": 2715
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/analysis/results.json",
+      "original_path": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/analysis/results.json",
+      "sha256": "95f4531b42bc9feb79fb4e35d447ada7897cfa51b1090aae787a6236e2451b06",
+      "bytes": 280437
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/protocol.json",
+      "original_path": "outputs/hanguard_ab_diagnosis_20261012/readouts/base_last/protocol.json",
+      "sha256": "3a8b4fc4fc908c6d0a9b4d4508a22ec340561ed250e6f711ca195d4aad3990fe",
+      "bytes": 2644
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/protocol.json",
+      "original_path": "outputs/hanguard_dynamic_gate_diagnostics_20261012/protocol.json",
+      "sha256": "1e32c97a398ad7c122293582973dc05546361f8c83dbb1336706cf09d5aac748",
+      "bytes": 3352
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_dynamic_gate_diagnostics_20261012/results.json",
+      "original_path": "outputs/hanguard_dynamic_gate_diagnostics_20261012/results.json",
+      "sha256": "b2d790fa675e2e2ff344198c68a2b56d2e59101a9757deff8ba6bea32a1cdde8",
+      "bytes": 163492
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/protocol.json",
+      "original_path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/protocol.json",
+      "sha256": "799d7b1dc20b58cc4a851f6c2f9da353af1ec64238f26db9a752bf92c0f2dce2",
+      "bytes": 3780
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_frozen_lora_layer_diagnostics_20261012/results.json",
+      "original_path": "outputs/hanguard_frozen_lora_layer_diagnostics_20261012/results.json",
+      "sha256": "09ccb27569301657ec36bdea9e6e22afdc0b8f54ffe61f6ce2525b01d7953867",
+      "bytes": 191943
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_repaired_core_20260928/arms.json",
+      "original_path": "outputs/hanguard_repaired_core_20260928/arms.json",
+      "sha256": "87d780b33f28c96c70ca6a2cc1df149d0f66cf86c0d8774e687447f8e945077f",
+      "bytes": 614
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_repaired_core_20260928/protocol.json",
+      "original_path": "outputs/hanguard_repaired_core_20260928/protocol.json",
+      "sha256": "70826c18f855301ddb6a306f6eea16933a6b0aeca7a1438d60d356674bd36f64",
+      "bytes": 5657
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_repaired_core_20260928/summary.json",
+      "original_path": "outputs/hanguard_repaired_core_20260928/summary.json",
+      "sha256": "6998d1651a0daea6e012cff48806bf3df5cd03507a5ed54d0a901889ed4be2e1",
+      "bytes": 122295
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/protocol.json",
+      "original_path": "outputs/hanguard_sparse_token_readout_20261013_v3/protocol.json",
+      "sha256": "972a059977b5d937e29186a0d0c92703fa53b1e6d186907c678fb0656b00dc99",
+      "bytes": 10638
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/results.json",
+      "original_path": "outputs/hanguard_sparse_token_readout_20261013_v3/stopped_analysis/results.json",
+      "sha256": "7c9d343e83e151dd82d2734ff25022a7ce24ad0b9dbc336ac6ae5434120fb2a0",
+      "bytes": 53793
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_two_source_primary_20260928/protocol.json",
+      "original_path": "outputs/hanguard_two_source_primary_20260928/protocol.json",
+      "sha256": "c10fb65df35adcef046e2e30c9c09809c1bcad3501f37ad405731b146158aa64",
+      "bytes": 4611
+    },
+    {
+      "source_artifact": "artifacts/outputs/hanguard_two_source_primary_20260928/report.json",
+      "original_path": "outputs/hanguard_two_source_primary_20260928/report.json",
+      "sha256": "ebeb65d27331a636d7c79cfc83559802f43d4e9ea78eb30cd68ed8843d78124b",
+      "bytes": 231575
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "split": "validation",
+  "seed": 44,
+  "selected_layers": [
+    17,
+    18,
+    28,
+    32
+  ],
+  "fixed_layers": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "common_epoch_budget": 12,
+  "common_batch_order": true,
+  "paired_dropout_stream": true,
+  "matched_initialization": {
+    "arms": [
+      "repeat_last",
+      "fusion_fixed",
+      "fusion_selected"
+    ],
+    "parameters": 1656709,
+    "initialization_sha256": "980317b43a0d633d5cf837446b7cc4ab982cbf5bafdd0fc12a3aa956d0cffc77"
+  },
+  "arms": {
+    "last": {
+      "parameters": 327937,
+      "initial_state_sha256": "e15c8f04d676593bda6397855fba74f67110810cfc75110c80afcd84af62acbd",
+      "best_epoch": 4,
+      "validation_bce": 0.07296658307313919,
+      "threshold": 0.537360725448222,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.974332516445247,
+        "f1": 0.9754290653167058,
+        "recall": 0.9719488188976378,
+        "precision": 0.9789343246592317,
+        "fpr": 0.02304147465437788,
+        "bce": 0.07296658169427314,
+        "brier": 0.020142217833438652,
+        "tp": 3950,
+        "tn": 3604,
+        "fp": 85,
+        "fn": 114,
+        "threshold": 0.537360725448222,
+        "auroc": 0.9965788639560472,
+        "auprc": 0.9971032462525018
+      },
+      "checkpoint_sha256": "39e6d0d5eca4df51f147c3c62a43d7b052f1e6b640cb01800159ae8d06bb7f32"
+    },
+    "repeat_last": {
+      "parameters": 1656709,
+      "initial_state_sha256": "980317b43a0d633d5cf837446b7cc4ab982cbf5bafdd0fc12a3aa956d0cffc77",
+      "best_epoch": 4,
+      "validation_bce": 0.07171547412872314,
+      "threshold": 0.4304064672279925,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9757513220688766,
+        "f1": 0.9768529918739227,
+        "recall": 0.9761318897637795,
+        "precision": 0.9775751601774273,
+        "fpr": 0.024667931688804556,
+        "bce": 0.07171547632074031,
+        "brier": 0.01972161877004677,
+        "tp": 3967,
+        "tn": 3598,
+        "fp": 91,
+        "fn": 97,
+        "threshold": 0.4304064672279925,
+        "auroc": 0.9966739140411053,
+        "auprc": 0.9971841923646563
+      },
+      "checkpoint_sha256": "4b6a5258a2335e321975b8dc573507d109e763a63f7bee59805602afdcf83ab7"
+    },
+    "fusion_fixed": {
+      "parameters": 1656709,
+      "initial_state_sha256": "980317b43a0d633d5cf837446b7cc4ab982cbf5bafdd0fc12a3aa956d0cffc77",
+      "best_epoch": 3,
+      "validation_bce": 0.07394465804100037,
+      "threshold": 0.6299084982219125,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9751064104217723,
+        "f1": 0.9760872258704002,
+        "recall": 0.969242125984252,
+        "precision": 0.9830296980284502,
+        "fpr": 0.018433179723502304,
+        "bce": 0.07394466148004371,
+        "brier": 0.019931552064615988,
+        "tp": 3939,
+        "tn": 3621,
+        "fp": 68,
+        "fn": 125,
+        "threshold": 0.6299084982219125,
+        "auroc": 0.996598074078501,
+        "auprc": 0.9971234243336308
+      },
+      "checkpoint_sha256": "a8110f7dc1403acb2bc497c8d37086287a2c61ab178fe8c6704c741bcf22f66d"
+    },
+    "fusion_selected": {
+      "parameters": 1656709,
+      "initial_state_sha256": "980317b43a0d633d5cf837446b7cc4ab982cbf5bafdd0fc12a3aa956d0cffc77",
+      "best_epoch": 3,
+      "validation_bce": 0.07297056168317795,
+      "threshold": 0.7072406020543459,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9745904811040887,
+        "f1": 0.975530989939138,
+        "recall": 0.9662893700787402,
+        "precision": 0.9849510910458992,
+        "fpr": 0.01626457034426674,
+        "bce": 0.07297056288671915,
+        "brier": 0.01997932080437534,
+        "tp": 3927,
+        "tn": 3629,
+        "fp": 60,
+        "fn": 137,
+        "threshold": 0.7072406020543459,
+        "auroc": 0.9966575053948428,
+        "auprc": 0.9971557767452922
+      },
+      "checkpoint_sha256": "2b48fe539ec7ff1155b5b0ff0ac3c0d5053cab795f8565f86a30de5fbaf8890c"
+    }
+  },
+  "validation_predictions_sha256": "e6298881a7e6dea020f8f314ca55e22f61e0f1bc136300f1de0294ad0445fcb9"
+}

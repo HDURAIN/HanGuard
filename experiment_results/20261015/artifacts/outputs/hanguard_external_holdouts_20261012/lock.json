@@ -1,0 +1,22 @@
+{
+  "state": "registered_unconsumed",
+  "prediction_artifacts": [],
+  "files": {
+    "build_holdout_manifest.py": {
+      "sha256": "48b7fec82b3c17ce7808ef3577495b82d2d7890843209562e93ff6c9be0db146",
+      "bytes": 13271
+    },
+    "wildguard_en_test_index.parquet": {
+      "sha256": "8d63a002ac7b6444caf0888f91d01fa8b7e3339324cf56c6809709eece12e36e",
+      "bytes": 470875
+    },
+    "injection_defense_index.parquet": {
+      "sha256": "220b32bae4529f17fcbb5da733f5fd688fecb81872e36a368712f2189aea9f60",
+      "bytes": 4941408
+    },
+    "manifest.json": {
+      "sha256": "30a97d8d4d769dfa9c7e47c57bbee136592f1300ae647457ca20c7eff524586c",
+      "bytes": 5271
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "locked": true,
+  "protocol_sha256": "c10fb65df35adcef046e2e30c9c09809c1bcad3501f37ad405731b146158aa64",
+  "selection_sha256": {
+    "runs/last_mlp_s42/selection.json": "48748c8e3b89b2dc05f7f5f372b418fd4eea339d75c981ed1680c3a36fe9055e",
+    "runs/learned_queries_s42/selection.json": "2469b64699f8c2b26bbdce5f869d172bd2a2a7a76dd338fec14d2ef2246c0ff4",
+    "runs/description_queries_s42/selection.json": "e2332ccb8358558244aa8b068010ec53f70421d31b549814a29185c081479de7",
+    "runs/last_mlp_s43/selection.json": "4ee89635e1d33f1dd8e9f5b40b14d8fa4d3d7f85b1051601a764379d5f7a994e",
+    "runs/learned_queries_s43/selection.json": "64a801445a0776addc99ea68556996fdc5bc3e9cc3fa6069ac8457b32513f17a",
+    "runs/description_queries_s43/selection.json": "4ac574ca0ca7b305babf08d1e9e12f057119cbf43829328f00e45bed59ac48f6",
+    "runs/last_mlp_s44/selection.json": "f81beb2a04219d41abe7c8c270dd34d8822cffe99326d4b67a454a825a79716d",
+    "runs/learned_queries_s44/selection.json": "cf6ef6f4934efa6f438ed85afc1359834c3aca4b21739571b539ae317c7a4b24",
+    "runs/description_queries_s44/selection.json": "e00d25fa4829556309fafa9181b5aeac12619c1ef6b85e0ff9a581002329b0c2"
+  },
+  "test_dataset_sha256": "4d92a6e61445c92b5cd6df9942e2a4d0744fecd12f4b9babe55567769ccb7e7a",
+  "locked_at": "2026-09-28T10:15:31.981892+00:00"
+}

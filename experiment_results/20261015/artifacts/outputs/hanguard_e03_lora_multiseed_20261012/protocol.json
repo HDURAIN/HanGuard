@@ -1,0 +1,123 @@
+{
+  "created_at": "2026-10-12T10:07:41.868542+00:00",
+  "state": "registered",
+  "data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired",
+  "model_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B",
+  "data_sha256": {
+    "train": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "validation": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "test": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+  },
+  "data_manifest_sha256": "d14bbd6f38f2b165004005bd733a5b6eeb9df8cec71674d282fbfcc4cb9c7b12",
+  "release_qa_sha256": "48061c145dd43733a787365b1e26cb1605ae5c51e69f693bc355dcad3782fdad",
+  "model_config_sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+  "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+  "rows": {
+    "train": 62155,
+    "validation": 7753,
+    "test": 7778
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "all_arms": [
+    "E03"
+  ],
+  "warm_head_epochs": 1,
+  "epochs": 3,
+  "effective_batch": 128,
+  "token_budget": 24576,
+  "max_micro": 64,
+  "pad_multiple": 32,
+  "max_tokens": 4096,
+  "head_lr": 0.0001,
+  "warm_head_lr": 0.001,
+  "adapter_lr": 2e-05,
+  "position_weight": 0.1,
+  "prototype_warmup_samples": 16000,
+  "prototype_topk": 32,
+  "prototype_gamma_start": 0.99,
+  "prototype_gamma_end": 0.95,
+  "pseudo_sigma_start": 0.98,
+  "pseudo_sigma_end": 0.5,
+  "scl_weight": 0.01,
+  "scl_temperature": 0.1,
+  "scl_pair_scope": "full_effective_batch_gradient_cache",
+  "prototype_diversity_weight": 0.01,
+  "weight_decay": 0.01,
+  "lr_warmup_ratio": 0.05,
+  "checkpoint_selection": "minimum_validation_bce",
+  "primary_threshold": "maximum_validation_accuracy",
+  "secondary_thresholds": [
+    "validation_f1",
+    "validation_fpr_5pct",
+    "fixed_0.5"
+  ],
+  "raw_input": true,
+  "truncate": false,
+  "reuse_old_adapter": false,
+  "reuse_old_features": false,
+  "gpu_ids": [
+    0,
+    1
+  ],
+  "references": [
+    "R02"
+  ],
+  "limitations": [
+    "The existing train/validation/test split identities have been explored previously; internal test remains diagnostic.",
+    "The local injection_defense source is reserved as a locked external stress test; its inherited labels are not independent human gold.",
+    "Only E03 final-layer BCE LoRA is trained here; frozen-head fusion methods are compared after adapter selection."
+  ],
+  "micro_size_grid": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "scl_forward_passes": 2,
+  "prototype_init_per_class": 1024,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "head_width": 128,
+  "layers": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "shield_mask": "valid_body_tokens_excluding_final_position_for_auxiliary_and_prototypes",
+  "batch_budget_rationale": "Initial 8192-padded-token GPU probes used <=12.25GB of 48GB; raise to 24576 and revalidate all mechanism families before registration.",
+  "shield_note": "Prompt-only adaptation. The final position is excluded from both auxiliary loss and prototype candidates; its supervision is the real sentence label.",
+  "scl_note": "Full effective batch (128 except final partial batch), two-pass gradient cache with identical dropout seeds; no extra text augmentation.",
+  "save_policy": "Retain best head/adapter, validation/test predictions, compact diagnostics; overwrite resume at half epochs and remove it after selection. No full hidden-state cache.",
+  "required_preflight_arms": [
+    "E03"
+  ],
+  "scope": "independent_lora_seed_confirmation",
+  "previous_study": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_repaired_study_20260928",
+  "scope_reason": "Three fresh E03 LoRA trainings under one immutable protocol to measure representation-seed stability before external confirmation.",
+  "warmup_regression_preflight_arms": [
+    "E03",
+    "E16"
+  ],
+  "gpu_note": "GPU 0 and GPU 1 have unrelated processes; use six idle GPUs. R02 runs when the first GPU becomes available.",
+  "registered_at": "2026-10-12T10:07:41.868553+00:00",
+  "code_sha256": {
+    "repaired_queue.py": "dfebb486454d8bd41ef5691513e1b23ab7fc77c4e4d74c6a332cbd976dafe1b3",
+    "repaired_study.py": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+    "repaired_heads.py": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+    "repaired_references.py": "59d80d76f22f165d904c60b908f4b989a64cb3ff49e87849a53168ec16c7ed5e",
+    "report_repaired_study.py": "11bde61b79ed782a9aa1697b836bdac7f239bb3b4c2428a5660f6c4a054c3635",
+    "lora_fusion.py": "71280e4bcb95b099227530cf71814dde2b1a7112f1fe3d5128b165c30ff2baf2",
+    "feature_fusion.py": "030232cbe0609a41d91c767dc84d6bb28368b938d17cbccb8bb55f9e4e4cbb4f",
+    "head_improvements.py": "01a633581b5a4fe4ed4d59d7d9a11e0a516c11fa7b501776511c004e31494318",
+    "hanguard_model.py": "94bec800c9c89a776c4e8a69418d0f43e1835e87baf4ad4e43f935751abe4fcc"
+  }
+}

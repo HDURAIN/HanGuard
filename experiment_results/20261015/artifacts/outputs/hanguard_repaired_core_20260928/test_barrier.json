@@ -1,0 +1,14 @@
+{
+  "locked": true,
+  "locked_at": "2026-09-28T06:30:21.976027+00:00",
+  "protocol_sha256": "70826c18f855301ddb6a306f6eea16933a6b0aeca7a1438d60d356674bd36f64",
+  "selection_sha256": {
+    "runs/E03_s42/selection.json": "56e7a7d72a7f988cd91e680c87581b95229e33920db48a3fc8ef800e40dbf595",
+    "runs/E04_s42/selection.json": "90fae0b8e5838d0ad42719eca3dcc2354f7ec76518a2ef89cd7038c400f8ad40",
+    "runs/E13_s42/selection.json": "b5032ecbe3321a1c07fcd753ba9fb6e031d36f78d4e41fe0602586648b8cd39b",
+    "runs/E14_s42/selection.json": "4ea93a80f62f60fb7e66623c17e1afb16c851252afdfb5a0be043cb598ee1153",
+    "runs/E15_s42/selection.json": "d434e96c243b40bce40810f41c08b4459382b18425b99a6bb754b5e0ba186227",
+    "runs/E16_s42/selection.json": "c551a68207172eb40664a7543aa257a379ad3c837f6a6b3eeee819de5b8d7aa9",
+    "references/R02/selection.json": "6e03607861afc0c18a279f46b44ce83ae3f7f2f2b099ac9295f48cf4abb2b172"
+  }
+}

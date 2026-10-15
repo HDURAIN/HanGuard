@@ -1,0 +1,155 @@
+{
+  "arm": "E03",
+  "seed": 42,
+  "protocol_sha256": "70826c18f855301ddb6a306f6eea16933a6b0aeca7a1438d60d356674bd36f64",
+  "arms_sha256": "87d780b33f28c96c70ca6a2cc1df149d0f66cf86c0d8774e687447f8e945077f",
+  "train_sha256": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+  "validation_sha256": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+  "validation_bce": 0.07524796575307846,
+  "best_epoch": {
+    "phase": 3,
+    "phase_name": "joint",
+    "epoch": 3.0,
+    "validation_bce": 0.07524796575307846,
+    "seconds": 69.89804143598303
+  },
+  "threshold": 0.5571559974562554,
+  "f1_threshold": 0.5571559974562554,
+  "fpr_threshold": 0.24513528202318463,
+  "validation_f1": {
+    "n": 7753,
+    "accuracy": 0.974332516445247,
+    "f1": 0.9754290653167058,
+    "recall": 0.9719488188976378,
+    "precision": 0.9789343246592317,
+    "fpr": 0.02304147465437788,
+    "auroc": 0.9961557076475497,
+    "tp": 3950,
+    "tn": 3604,
+    "fp": 85,
+    "fn": 114,
+    "threshold": 0.5571559974562554
+  },
+  "validation_fpr_5pct": {
+    "n": 7753,
+    "accuracy": 0.9678833999742036,
+    "f1": 0.9698072026191342,
+    "recall": 0.984005905511811,
+    "precision": 0.9560124312694238,
+    "fpr": 0.049878015722418,
+    "auroc": 0.9961557076475497,
+    "tp": 3999,
+    "tn": 3505,
+    "fp": 184,
+    "fn": 65,
+    "threshold": 0.24513528202318463
+  },
+  "threshold_rule": "maximum validation accuracy; ties nearest 0.5",
+  "metrics": {
+    "n": 7753,
+    "accuracy": 0.974332516445247,
+    "f1": 0.9754290653167058,
+    "recall": 0.9719488188976378,
+    "precision": 0.9789343246592317,
+    "fpr": 0.02304147465437788,
+    "auroc": 0.9961557076475497,
+    "tp": 3950,
+    "tn": 3604,
+    "fp": 85,
+    "fn": 114,
+    "threshold": 0.5571559974562554
+  },
+  "fixed_05": {
+    "n": 7753,
+    "accuracy": 0.9738165871275635,
+    "f1": 0.9750092330419796,
+    "recall": 0.9744094488188977,
+    "precision": 0.975609756097561,
+    "fpr": 0.02683654106804012,
+    "auroc": 0.9961557076475497,
+    "tp": 3960,
+    "tn": 3590,
+    "fp": 99,
+    "fn": 104,
+    "threshold": 0.5
+  },
+  "checkpoint_hashes": {
+    "head.pt": "5b8ddad996e766e93fe13dd67a4ddae081f4d0e20e893c185d2382efab75c8ae",
+    "adapter.pt": "5283c5c6b210f33539a06a0583135875a27d86b6914127d17ffba5658691ae25"
+  },
+  "history": [
+    {
+      "phase": 0,
+      "phase_name": "head_warmup",
+      "epoch": 0,
+      "validation_bce": 0.17735354602336884,
+      "seconds": 85.13758205797058
+    },
+    {
+      "phase": 1,
+      "phase_name": "joint",
+      "epoch": 0.5,
+      "validation_bce": 0.11490635573863983,
+      "seconds": 69.96853306901176
+    },
+    {
+      "phase": 1,
+      "phase_name": "joint",
+      "epoch": 1.0,
+      "validation_bce": 0.08959823846817017,
+      "seconds": 69.8032118959818
+    },
+    {
+      "phase": 2,
+      "phase_name": "joint",
+      "epoch": 1.5,
+      "validation_bce": 0.08107028156518936,
+      "seconds": 70.02019087702502
+    },
+    {
+      "phase": 2,
+      "phase_name": "joint",
+      "epoch": 2.0,
+      "validation_bce": 0.07774833589792252,
+      "seconds": 70.28781279496616
+    },
+    {
+      "phase": 3,
+      "phase_name": "joint",
+      "epoch": 2.5,
+      "validation_bce": 0.07599792629480362,
+      "seconds": 70.57454428897472
+    },
+    {
+      "phase": 3,
+      "phase_name": "joint",
+      "epoch": 3.0,
+      "validation_bce": 0.07524796575307846,
+      "seconds": 69.89804143598303
+    }
+  ],
+  "train_order_hashes": [
+    {
+      "phase": 0,
+      "sha256": "5e228d9695b1120e920a3a1d54613e9a1fb17c6535a33457cb1217cd6acc0802"
+    },
+    {
+      "phase": 1,
+      "sha256": "29793c339170597259281ae65408761af7d78b618239e92f60cc7d67914501c4"
+    },
+    {
+      "phase": 2,
+      "sha256": "ed327bc0876d31a812c9344cada7094bea2be81e1018c002a92f178547502d32"
+    },
+    {
+      "phase": 3,
+      "sha256": "af38a5988200626fbf7ad863f8390530a9d52e80b03e70d19b5988f66090ffe2"
+    }
+  ],
+  "completed_training_rows": 248620,
+  "seconds": 8631.350740681984,
+  "training_seconds": 8074.693461265939,
+  "fresh_base": true,
+  "head_warmup_epochs": 1,
+  "epochs": 3
+}

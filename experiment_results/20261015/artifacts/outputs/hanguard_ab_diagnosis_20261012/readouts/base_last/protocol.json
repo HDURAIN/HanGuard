@@ -1,0 +1,58 @@
+{
+  "schema": "hanguard_ab_frozen_readouts_v1",
+  "cache_manifest_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/features/base/last.manifest.json",
+  "cache_manifest_sha256": "e1cabfd0718ef8046779c9b77c9477eec74e301bc03beff092c36eda592903f8",
+  "ab_protocol_sha256": "8d2e3e47353b4df8086a5a24eb5bb04a45ce368be6df44c5667f593b5a77a789",
+  "adapter_sha256": null,
+  "representation": "base",
+  "pooling": "last",
+  "ordered_base_id_sha256": "f630fb9ca27c5e2303e3f0561264a5423c20bf05ae1b3be62ee27a5883af6c03",
+  "rows": 20048,
+  "outer_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "inner_partition": "immutable per-fold inner_train/inner_validation/outer_validation roles from A/B manifest",
+  "code_sha256": {
+    "ab_frozen_readout_diagnostics.py": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+    "repaired_heads.py": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+    "frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+    "oof_probe_logit_stack.py": "7bea1bb10eac53e212bd617e953243f09df597fa3718bb1357756164135e58c2"
+  },
+  "settings": {
+    "seed": 42,
+    "probe_epochs": 12,
+    "head_epochs": 12,
+    "max_epochs": 40,
+    "probe_lr": 0.001,
+    "head_lr": 0.001,
+    "weight_decay": 0.001,
+    "width": 128,
+    "dropout": 0.1,
+    "batch_size": 256,
+    "joint_features": true,
+    "bootstrap_draws": 2000,
+    "extension_rule": {
+      "milestones": [
+        24,
+        40
+      ],
+      "recent_epochs": 3,
+      "relative_dev_bce_improvement": 0.002,
+      "trigger": "any arm/linear probe has its best dev BCE at the latest epoch and improves over the last three epochs",
+      "effect": "extend every matched head/all 32 linear probes to the same next milestone, capped at max_epochs",
+      "selection_scope": "inner dev only; no outer validation labels or metrics"
+    }
+  },
+  "selection_scope": "inner dev of each outer-training partition; no formal validation/test access",
+  "interpretation": "screening with one A-only LoRA and one head seed; not cross-LoRA replication",
+  "stop_directories": [
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/base_last",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012"
+  ]
+}

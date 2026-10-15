@@ -1,0 +1,514 @@
+{
+  "active_foreign_policy": "record_only",
+  "active_workers": 0,
+  "automatic_training_launch_disabled": false,
+  "candidate_gpus": [
+    2,
+    4,
+    5,
+    7,
+    3,
+    0,
+    1,
+    6
+  ],
+  "completed_workers": [],
+  "cuda_loaded_by_scheduler": false,
+  "current_fit_started": false,
+  "formal_test_opened": false,
+  "formal_validation_opened": true,
+  "gpu_candidates": [
+    {
+      "all_nvidia_pids": [
+        9539,
+        1482094,
+        3716546
+      ],
+      "available": true,
+      "blocking_processes": [
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "zzx",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 1482094,
+          "start_time_ticks": 89743042,
+          "uid": 1021
+        },
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "lylyly",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 3716546,
+          "start_time_ticks": 99188865,
+          "uid": 1025
+        }
+      ],
+      "completely_idle": false,
+      "eligible": false,
+      "free_gib": 11.58984375,
+      "ignored_verified_display_pids": [
+        9539
+      ],
+      "index": 2,
+      "nvidia_processes": [
+        {
+          "classification": "registered_system_display",
+          "pid": 9539,
+          "process_name": "/usr/lib/xorg/Xorg",
+          "type": "G"
+        },
+        {
+          "classification": "blocking",
+          "pid": 1482094,
+          "process_name": "/home/zzx/miniconda3/envs/diffusion/bin/python",
+          "type": "C"
+        },
+        {
+          "classification": "blocking",
+          "pid": 3716546,
+          "process_name": "ray::WorkerDict",
+          "type": "C"
+        }
+      ],
+      "owned_pids": [],
+      "pids": [
+        1482094,
+        3716546
+      ],
+      "pipeline_blocked": false,
+      "uuid": "GPU-2f386f51-6deb-5621-2d9a-788c177772c4"
+    },
+    {
+      "all_nvidia_pids": [
+        9539,
+        1872004
+      ],
+      "available": true,
+      "blocking_processes": [
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "fws",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 1872004,
+          "start_time_ticks": 96933690,
+          "uid": 1012
+        }
+      ],
+      "completely_idle": false,
+      "eligible": false,
+      "free_gib": 5.6171875,
+      "ignored_verified_display_pids": [
+        9539
+      ],
+      "index": 4,
+      "nvidia_processes": [
+        {
+          "classification": "registered_system_display",
+          "pid": 9539,
+          "process_name": "/usr/lib/xorg/Xorg",
+          "type": "G"
+        },
+        {
+          "classification": "blocking",
+          "pid": 1872004,
+          "process_name": "/home1/fws/anaconda3/envs/llava/bin/python",
+          "type": "C"
+        }
+      ],
+      "owned_pids": [],
+      "pids": [
+        1872004
+      ],
+      "pipeline_blocked": false,
+      "uuid": "GPU-d576137e-3271-99a8-bd98-77aff3483ba3"
+    },
+    {
+      "all_nvidia_pids": [
+        9539,
+        1872005
+      ],
+      "available": true,
+      "blocking_processes": [
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "fws",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 1872005,
+          "start_time_ticks": 96933690,
+          "uid": 1012
+        }
+      ],
+      "completely_idle": false,
+      "eligible": false,
+      "free_gib": 5.650390625,
+      "ignored_verified_display_pids": [
+        9539
+      ],
+      "index": 5,
+      "nvidia_processes": [
+        {
+          "classification": "registered_system_display",
+          "pid": 9539,
+          "process_name": "/usr/lib/xorg/Xorg",
+          "type": "G"
+        },
+        {
+          "classification": "blocking",
+          "pid": 1872005,
+          "process_name": "/home1/fws/anaconda3/envs/llava/bin/python",
+          "type": "C"
+        }
+      ],
+      "owned_pids": [],
+      "pids": [
+        1872005
+      ],
+      "pipeline_blocked": false,
+      "uuid": "GPU-c80b253a-c5df-8840-c6b4-8ba948fffa61"
+    },
+    {
+      "all_nvidia_pids": [
+        9539,
+        1872007
+      ],
+      "available": true,
+      "blocking_processes": [
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "fws",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 1872007,
+          "start_time_ticks": 96933691,
+          "uid": 1012
+        }
+      ],
+      "completely_idle": false,
+      "eligible": false,
+      "free_gib": 5.5859375,
+      "ignored_verified_display_pids": [
+        9539
+      ],
+      "index": 7,
+      "nvidia_processes": [
+        {
+          "classification": "registered_system_display",
+          "pid": 9539,
+          "process_name": "/usr/lib/xorg/Xorg",
+          "type": "G"
+        },
+        {
+          "classification": "blocking",
+          "pid": 1872007,
+          "process_name": "/home1/fws/anaconda3/envs/llava/bin/python",
+          "type": "C"
+        }
+      ],
+      "owned_pids": [],
+      "pids": [
+        1872007
+      ],
+      "pipeline_blocked": false,
+      "uuid": "GPU-4a304e3d-9670-cbe1-34e2-38ad17c43a53"
+    },
+    {
+      "all_nvidia_pids": [
+        9539,
+        1051413
+      ],
+      "available": true,
+      "blocking_processes": [
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "wangzihan",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 1051413,
+          "start_time_ticks": 100902076,
+          "uid": 1002
+        }
+      ],
+      "completely_idle": false,
+      "eligible": false,
+      "free_gib": 9.56640625,
+      "ignored_verified_display_pids": [
+        9539
+      ],
+      "index": 3,
+      "nvidia_processes": [
+        {
+          "classification": "registered_system_display",
+          "pid": 9539,
+          "process_name": "/usr/lib/xorg/Xorg",
+          "type": "G"
+        },
+        {
+          "classification": "blocking",
+          "pid": 1051413,
+          "process_name": "/home/wangzihan/condaenv/vllm/bin/python",
+          "type": "C"
+        }
+      ],
+      "owned_pids": [],
+      "pids": [
+        1051413
+      ],
+      "pipeline_blocked": false,
+      "uuid": "GPU-04c1c559-377e-d982-ebbf-1f359d4122b6"
+    },
+    {
+      "all_nvidia_pids": [
+        9539,
+        170734,
+        410049,
+        447629,
+        466573,
+        3120969,
+        3968918
+      ],
+      "available": true,
+      "blocking_processes": [
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "xinanshiyou",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 170734,
+          "start_time_ticks": 94901154,
+          "uid": 1013
+        },
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "xinanshiyou",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 410049,
+          "start_time_ticks": 95166922,
+          "uid": 1013
+        },
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "xinanshiyou",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 447629,
+          "start_time_ticks": 95214059,
+          "uid": 1013
+        },
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "xinanshiyou",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 466573,
+          "start_time_ticks": 95240151,
+          "uid": 1013
+        },
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "user_wsh",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 3120969,
+          "start_time_ticks": 98456701,
+          "uid": 1009
+        },
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "user_wsh",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 3968918,
+          "start_time_ticks": 99391910,
+          "uid": 1009
+        }
+      ],
+      "completely_idle": false,
+      "eligible": false,
+      "free_gib": 7.08984375,
+      "ignored_verified_display_pids": [
+        9539
+      ],
+      "index": 0,
+      "nvidia_processes": [
+        {
+          "classification": "registered_system_display",
+          "pid": 9539,
+          "process_name": "/usr/lib/xorg/Xorg",
+          "type": "G"
+        },
+        {
+          "classification": "blocking",
+          "pid": 170734,
+          "process_name": "/home1/xinanshiyou/modeltrace/venv/bin/python",
+          "type": "C"
+        },
+        {
+          "classification": "blocking",
+          "pid": 410049,
+          "process_name": "/home1/xinanshiyou/modeltrace/venv/bin/python",
+          "type": "C"
+        },
+        {
+          "classification": "blocking",
+          "pid": 447629,
+          "process_name": "/home1/xinanshiyou/modeltrace/venv/bin/python",
+          "type": "C"
+        },
+        {
+          "classification": "blocking",
+          "pid": 466573,
+          "process_name": "/home1/xinanshiyou/modeltrace/venv/bin/python",
+          "type": "C"
+        },
+        {
+          "classification": "blocking",
+          "pid": 3120969,
+          "process_name": "python",
+          "type": "C"
+        },
+        {
+          "classification": "blocking",
+          "pid": 3968918,
+          "process_name": "/home1/wsh/home/miniconda3/envs/countvlm/bin/python",
+          "type": "C"
+        }
+      ],
+      "owned_pids": [],
+      "pids": [
+        170734,
+        410049,
+        447629,
+        466573,
+        3120969,
+        3968918
+      ],
+      "pipeline_blocked": false,
+      "uuid": "GPU-8c38d507-eb1d-32a8-32da-3241c7f4ec94"
+    },
+    {
+      "all_nvidia_pids": [
+        9539,
+        1152156,
+        2314319
+      ],
+      "available": true,
+      "blocking_processes": [
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "user_wsh",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 1152156,
+          "start_time_ticks": 101008521,
+          "uid": 1009
+        },
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "user_wsh",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 2314319,
+          "start_time_ticks": 102288620,
+          "uid": 1009
+        }
+      ],
+      "completely_idle": false,
+      "eligible": false,
+      "free_gib": 9.79296875,
+      "ignored_verified_display_pids": [
+        9539
+      ],
+      "index": 1,
+      "nvidia_processes": [
+        {
+          "classification": "registered_system_display",
+          "pid": 9539,
+          "process_name": "/usr/lib/xorg/Xorg",
+          "type": "G"
+        },
+        {
+          "classification": "blocking",
+          "pid": 1152156,
+          "process_name": "/home1/wsh/home/miniconda3/envs/countvlm_qwen/bin/python",
+          "type": "C"
+        },
+        {
+          "classification": "blocking",
+          "pid": 2314319,
+          "process_name": "/home1/wsh/home/miniconda3/envs/countvlm/bin/python",
+          "type": "C"
+        }
+      ],
+      "owned_pids": [],
+      "pids": [
+        1152156,
+        2314319
+      ],
+      "pipeline_blocked": false,
+      "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552"
+    },
+    {
+      "all_nvidia_pids": [
+        9539,
+        1872006
+      ],
+      "available": true,
+      "blocking_processes": [
+        {
+          "classification": "foreign",
+          "error_type": "PermissionError",
+          "owner": "fws",
+          "ownership_verified_by": "proc_uid_and_process_birth",
+          "pid": 1872006,
+          "start_time_ticks": 96933691,
+          "uid": 1012
+        }
+      ],
+      "completely_idle": false,
+      "eligible": false,
+      "free_gib": 5.564453125,
+      "ignored_verified_display_pids": [
+        9539
+      ],
+      "index": 6,
+      "nvidia_processes": [
+        {
+          "classification": "registered_system_display",
+          "pid": 9539,
+          "process_name": "/usr/lib/xorg/Xorg",
+          "type": "G"
+        },
+        {
+          "classification": "blocking",
+          "pid": 1872006,
+          "process_name": "/home1/fws/anaconda3/envs/llava/bin/python",
+          "type": "C"
+        }
+      ],
+      "owned_pids": [],
+      "pids": [
+        1872006
+      ],
+      "pipeline_blocked": false,
+      "uuid": "GPU-926c64bf-2929-2a69-eb2f-783bae2d9603"
+    }
+  ],
+  "head_fit_attempt": 3,
+  "max_cuda_workers": 8,
+  "monitor_live": true,
+  "monitor_pid": 2582190,
+  "phase": "fit",
+  "requires_review": false,
+  "reserved_gpus": [],
+  "resource_losses": [],
+  "runtime_control_sha256": "92aae7dcf841d543d65d210f91de0098e3fe477a7884eb8b10b9e383dd692172",
+  "schema": "hanguard_frozen_base_dynamic_parallel_resource_v1",
+  "state": "CPU_wait_for_empty_candidates",
+  "updated_unix": 1792072292.479593,
+  "workers": []
+}

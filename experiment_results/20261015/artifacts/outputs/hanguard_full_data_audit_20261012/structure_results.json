@@ -1,0 +1,1614 @@
+{
+  "audit": "whole_corpus_read_only_structural_audit",
+  "uses_model_predictions": false,
+  "uses_error_selected_cohort": false,
+  "changes_labels": false,
+  "trains_models": false,
+  "scope": {
+    "current_rows": 77686,
+    "archive_rows": 80709,
+    "quarantined_rows": 3023,
+    "raw_source_rows": 126624,
+    "splits": {
+      "train": 62155,
+      "validation": 7753,
+      "test": 7778
+    },
+    "source_rows": {
+      "wildguard_zh": 43165,
+      "chinese_curated": 26918,
+      "jailbench": 7603
+    },
+    "official_test_accessed": false
+  },
+  "checks": {
+    "archived_original_member_hash_mismatches": 0,
+    "archived_original_builder_hash_mismatches": 0,
+    "archived_split_builder_hash_mismatches": 0,
+    "critical_null_rows": 0,
+    "invalid_empty_prompt_rows": 0,
+    "invalid_binary_label_rows": 0,
+    "invalid_category_rows": 0,
+    "binary_category_inconsistency_rows": 0,
+    "category_text_mapping_inconsistency_rows": 0,
+    "stored_split_file_mismatch_rows": 0,
+    "normalized_prompt_mismatch_rows": 0,
+    "sample_id_mismatch_rows": 0,
+    "accepted_quarantine_overlap_ids": 0,
+    "partition_missing_archive_ids": 0,
+    "partition_extra_ids": 0,
+    "archive_old_base_id_set_difference": 0,
+    "accepted_eligibility_error_rows": 0,
+    "quarantine_eligibility_error_rows": 0,
+    "archive_old_prompt_mismatch_rows": 0,
+    "stable_original_field_changes": 0,
+    "non_wildguard_text_changes": 0,
+    "manifest_artifact_hash_mismatches": 0,
+    "release_bound_manifest_mismatch": 0,
+    "raw_source_manifest_hash_mismatches": 0,
+    "normalized_cross_split_duplicate_groups": 0,
+    "group_id_cross_split_groups": 0,
+    "source_unit_cross_split_groups": 0,
+    "raw_full_wildguard_official_legacy_prompt_mismatches": 0,
+    "raw_full_wildguard_chunks_chinese_prompt_mismatches": 0,
+    "raw_full_wildguard_chunks_chinese_binary_mismatches": 0,
+    "raw_full_wildguard_chinese_official_binary_mismatches": 0,
+    "wildguard_mapping_coverage_missing_ids": 0,
+    "wildguard_mapping_duplicate_base_ids": 0,
+    "wildguard_original_prompt_mismatches": 0,
+    "wildguard_original_binary_mismatches": 0,
+    "wildguard_mapping_original_binary_mismatches": 0,
+    "wildguard_mapping_original_adversarial_mismatches": 0,
+    "wildguard_mapping_original_subcategory_mismatches": 0,
+    "wildguard_old_chinese_prompt_mismatches": 0,
+    "wildguard_inherited_category_mismatches": 0,
+    "wildguard_original_hash_mismatches": 0,
+    "curated_parent_prompt_mismatches": 0,
+    "curated_parent_binary_mismatches": 0,
+    "curated_parent_category_mismatches": 0,
+    "jailbench_query_parent_mismatches": 0,
+    "jailbench_source_seed_text_missing_rows": 0,
+    "jailbench_seed_domain_mismatches": 0,
+    "jailbench_source_unit_hash_mismatches": 0,
+    "jailbench_parent_category_mismatches": 0,
+    "jailbench_not_harmful_rows": 0,
+    "jailbench_parent_seed_cross_split_groups": 0,
+    "historical_reconstruction_membership_difference": 0,
+    "historical_reconstruction_base_id_difference": 0,
+    "historical_reconstruction_group_id_mismatches": 0,
+    "historical_manifest_exclusion_count_mismatch": 0,
+    "current_token_length_mismatches": 0,
+    "current_over_model_4096_rows": 0,
+    "current_legacy_length_flag_mismatch_rows": 0,
+    "translation_metadata_input_truncated_rows": 0,
+    "translation_metadata_generation_length_finish_rows": 0,
+    "translation_metadata_original_metadata_prompt_mismatch_rows": 0,
+    "translation_metadata_effective_metadata_translation_mismatch_rows": 0,
+    "translation_metadata_model_translation_hash_mismatch_rows": 0,
+    "translation_metadata_effective_translation_hash_mismatch_rows": 0,
+    "translation_metadata_retained_review_without_recorded_approve_or_correction_rows": 0,
+    "input_hash_changed_during_audit": 0,
+    "raw_full_wildguard_row_count_mismatch": 0
+  },
+  "structural_error_check_failures": {},
+  "schema": {
+    "prompt": "object",
+    "category_id": "object",
+    "prompt_harm_label": "object",
+    "source": "object",
+    "source_file": "object",
+    "source_row": "int64",
+    "source_unit": "object",
+    "base_normalized": "object",
+    "base_id": "object",
+    "exclusion_reason": "object",
+    "group_id": "object",
+    "prompt_tokens": "int64",
+    "category_label": "object",
+    "text_form": "object",
+    "template_id": "object",
+    "normalized_prompt": "object",
+    "sample_id": "object",
+    "split": "object",
+    "old_prompt": "object",
+    "old_sample_id": "object",
+    "old_normalized_prompt": "object",
+    "original_english": "object",
+    "original_english_sha256": "object",
+    "translation_status": "object",
+    "revision_reason": "object",
+    "translation_metadata_json": "object",
+    "model_translation": "object",
+    "model_translation_sha256": "object",
+    "translation_source": "object",
+    "correction_source": "object",
+    "reviewer": "object",
+    "translation_changed": "bool",
+    "prompt_over_legacy_limit": "bool",
+    "quarantine_reason": "object",
+    "repair_eligible": "bool"
+  },
+  "null_counts": {
+    "prompt": 0,
+    "category_id": 0,
+    "prompt_harm_label": 0,
+    "source": 0,
+    "source_file": 0,
+    "source_row": 0,
+    "source_unit": 0,
+    "base_normalized": 0,
+    "base_id": 0,
+    "exclusion_reason": 0,
+    "group_id": 0,
+    "prompt_tokens": 0,
+    "category_label": 0,
+    "text_form": 0,
+    "template_id": 0,
+    "normalized_prompt": 0,
+    "sample_id": 0,
+    "split": 0,
+    "old_prompt": 0,
+    "old_sample_id": 0,
+    "old_normalized_prompt": 0,
+    "original_english": 0,
+    "original_english_sha256": 0,
+    "translation_status": 0,
+    "revision_reason": 0,
+    "translation_metadata_json": 0,
+    "model_translation": 0,
+    "model_translation_sha256": 0,
+    "translation_source": 0,
+    "correction_source": 0,
+    "reviewer": 0,
+    "translation_changed": 0,
+    "prompt_over_legacy_limit": 0,
+    "quarantine_reason": 0,
+    "repair_eligible": 0
+  },
+  "empty_string_counts": {
+    "prompt": 0,
+    "category_id": 0,
+    "prompt_harm_label": 0,
+    "source": 0,
+    "source_file": 0,
+    "source_row": 0,
+    "source_unit": 0,
+    "base_normalized": 0,
+    "base_id": 0,
+    "exclusion_reason": 77686,
+    "group_id": 0,
+    "prompt_tokens": 0,
+    "category_label": 0,
+    "text_form": 0,
+    "template_id": 77686,
+    "normalized_prompt": 0,
+    "sample_id": 0,
+    "split": 0,
+    "old_prompt": 0,
+    "old_sample_id": 0,
+    "old_normalized_prompt": 0,
+    "original_english": 34521,
+    "original_english_sha256": 34521,
+    "translation_status": 0,
+    "revision_reason": 0,
+    "translation_metadata_json": 0,
+    "model_translation": 34521,
+    "model_translation_sha256": 34521,
+    "translation_source": 0,
+    "correction_source": 0,
+    "reviewer": 77578,
+    "translation_changed": 0,
+    "prompt_over_legacy_limit": 0,
+    "quarantine_reason": 77686,
+    "repair_eligible": 0
+  },
+  "intentional_empty_fields_explained": {
+    "template_id": "All 77,686 rows empty; this release does not retain recovered JailBench wrapper-template IDs. Existing metadata cannot certify unseen-template separation.",
+    "original_english/model_translation": "Empty for native Chinese sources by design.",
+    "reviewer": "Empty unless individual assistant review exists; missing reviewer is not equivalent to missing binary annotation.",
+    "exclusion_reason/quarantine_reason": "Empty in retained rows by membership definition."
+  },
+  "stable_original_field_changes_by_column": {
+    "group_id": 0,
+    "split": 0,
+    "source": 0,
+    "source_file": 0,
+    "source_row": 0,
+    "source_unit": 0,
+    "category_id": 0,
+    "prompt_harm_label": 0,
+    "category_label": 0,
+    "text_form": 0,
+    "template_id": 0
+  },
+  "label_distribution": [
+    {
+      "prompt_harm_label": "harmful",
+      "rows": 40761
+    },
+    {
+      "prompt_harm_label": "unharmful",
+      "rows": 36925
+    }
+  ],
+  "source_label_distribution": [
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "rows": 11678
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "rows": 15240
+    },
+    {
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "rows": 7603
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "rows": 21480
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "rows": 21685
+    }
+  ],
+  "category_binary_distribution": [
+    {
+      "category_id": "0",
+      "category_label": "安全",
+      "prompt_harm_label": "unharmful",
+      "rows": 36925
+    },
+    {
+      "category_id": "1",
+      "category_label": "违反社会主义核心价值观的内容",
+      "prompt_harm_label": "harmful",
+      "rows": 15306
+    },
+    {
+      "category_id": "2",
+      "category_label": "歧视性内容",
+      "prompt_harm_label": "harmful",
+      "rows": 7167
+    },
+    {
+      "category_id": "3",
+      "category_label": "商业违法违规",
+      "prompt_harm_label": "harmful",
+      "rows": 4660
+    },
+    {
+      "category_id": "4",
+      "category_label": "侵犯他人合法权益",
+      "prompt_harm_label": "harmful",
+      "rows": 9805
+    },
+    {
+      "category_id": "5",
+      "category_label": "无法满足特定服务类型的安全需求",
+      "prompt_harm_label": "harmful",
+      "rows": 3823
+    }
+  ],
+  "source_category_distribution": [
+    {
+      "source": "chinese_curated",
+      "category_id": "0",
+      "prompt_harm_label": "unharmful",
+      "rows": 15240
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "1",
+      "prompt_harm_label": "harmful",
+      "rows": 4784
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "2",
+      "prompt_harm_label": "harmful",
+      "rows": 930
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "3",
+      "prompt_harm_label": "harmful",
+      "rows": 1354
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "4",
+      "prompt_harm_label": "harmful",
+      "rows": 3157
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "5",
+      "prompt_harm_label": "harmful",
+      "rows": 1453
+    },
+    {
+      "source": "jailbench",
+      "category_id": "1",
+      "prompt_harm_label": "harmful",
+      "rows": 1530
+    },
+    {
+      "source": "jailbench",
+      "category_id": "2",
+      "prompt_harm_label": "harmful",
+      "rows": 2435
+    },
+    {
+      "source": "jailbench",
+      "category_id": "3",
+      "prompt_harm_label": "harmful",
+      "rows": 1086
+    },
+    {
+      "source": "jailbench",
+      "category_id": "4",
+      "prompt_harm_label": "harmful",
+      "rows": 1441
+    },
+    {
+      "source": "jailbench",
+      "category_id": "5",
+      "prompt_harm_label": "harmful",
+      "rows": 1111
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "0",
+      "prompt_harm_label": "unharmful",
+      "rows": 21685
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "1",
+      "prompt_harm_label": "harmful",
+      "rows": 8992
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "2",
+      "prompt_harm_label": "harmful",
+      "rows": 3802
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "3",
+      "prompt_harm_label": "harmful",
+      "rows": 2220
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "4",
+      "prompt_harm_label": "harmful",
+      "rows": 5207
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "5",
+      "prompt_harm_label": "harmful",
+      "rows": 1259
+    }
+  ],
+  "split_source_label_distribution": [
+    {
+      "split": "test",
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "rows": 1067
+    },
+    {
+      "split": "test",
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "rows": 1624
+    },
+    {
+      "split": "test",
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "rows": 761
+    },
+    {
+      "split": "test",
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "rows": 2249
+    },
+    {
+      "split": "test",
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "rows": 2077
+    },
+    {
+      "split": "train",
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "rows": 9495
+    },
+    {
+      "split": "train",
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "rows": 12040
+    },
+    {
+      "split": "train",
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "rows": 6083
+    },
+    {
+      "split": "train",
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "rows": 17042
+    },
+    {
+      "split": "train",
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "rows": 17495
+    },
+    {
+      "split": "validation",
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "rows": 1116
+    },
+    {
+      "split": "validation",
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "rows": 1576
+    },
+    {
+      "split": "validation",
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "rows": 759
+    },
+    {
+      "split": "validation",
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "rows": 2189
+    },
+    {
+      "split": "validation",
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "rows": 2113
+    }
+  ],
+  "split_category_distribution": [
+    {
+      "split": "test",
+      "category_id": "0",
+      "rows": 3701
+    },
+    {
+      "split": "test",
+      "category_id": "1",
+      "rows": 1534
+    },
+    {
+      "split": "test",
+      "category_id": "2",
+      "rows": 716
+    },
+    {
+      "split": "test",
+      "category_id": "3",
+      "rows": 468
+    },
+    {
+      "split": "test",
+      "category_id": "4",
+      "rows": 972
+    },
+    {
+      "split": "test",
+      "category_id": "5",
+      "rows": 387
+    },
+    {
+      "split": "train",
+      "category_id": "0",
+      "rows": 29535
+    },
+    {
+      "split": "train",
+      "category_id": "1",
+      "rows": 12240
+    },
+    {
+      "split": "train",
+      "category_id": "2",
+      "rows": 5738
+    },
+    {
+      "split": "train",
+      "category_id": "3",
+      "rows": 3731
+    },
+    {
+      "split": "train",
+      "category_id": "4",
+      "rows": 7857
+    },
+    {
+      "split": "train",
+      "category_id": "5",
+      "rows": 3054
+    },
+    {
+      "split": "validation",
+      "category_id": "0",
+      "rows": 3689
+    },
+    {
+      "split": "validation",
+      "category_id": "1",
+      "rows": 1532
+    },
+    {
+      "split": "validation",
+      "category_id": "2",
+      "rows": 713
+    },
+    {
+      "split": "validation",
+      "category_id": "3",
+      "rows": 461
+    },
+    {
+      "split": "validation",
+      "category_id": "4",
+      "rows": 976
+    },
+    {
+      "split": "validation",
+      "category_id": "5",
+      "rows": 382
+    }
+  ],
+  "split_drift": {
+    "train": {
+      "harmful_fraction": 0.5248169897836055,
+      "category_max_absolute_fraction_difference_from_all": 0.0001965646859089787
+    },
+    "validation": {
+      "harmful_fraction": 0.524184186766413,
+      "category_max_absolute_fraction_difference_from_all": 0.0005770118795272172
+    },
+    "test": {
+      "harmful_fraction": 0.5241707379789149,
+      "category_max_absolute_fraction_difference_from_all": 0.0012453592495141053
+    }
+  },
+  "exact_identity_duplicate_summaries": {
+    "base_id": {
+      "duplicates": {
+        "groups": 0,
+        "rows": 0
+      },
+      "cross_split": {
+        "groups": 0,
+        "rows": 0
+      },
+      "binary_conflicts": {
+        "groups": 0,
+        "rows": 0
+      },
+      "category_conflicts": {
+        "groups": 0,
+        "rows": 0
+      }
+    },
+    "sample_id": {
+      "duplicates": {
+        "groups": 0,
+        "rows": 0
+      },
+      "cross_split": {
+        "groups": 0,
+        "rows": 0
+      },
+      "binary_conflicts": {
+        "groups": 0,
+        "rows": 0
+      },
+      "category_conflicts": {
+        "groups": 0,
+        "rows": 0
+      }
+    },
+    "group_id": {
+      "duplicates": {
+        "groups": 522,
+        "rows": 7694
+      },
+      "cross_split": {
+        "groups": 0,
+        "rows": 0
+      },
+      "binary_conflicts": {
+        "groups": 0,
+        "rows": 0
+      },
+      "category_conflicts": {
+        "groups": 14,
+        "rows": 78
+      }
+    },
+    "source_unit": {
+      "duplicates": {
+        "groups": 522,
+        "rows": 7694
+      },
+      "cross_split": {
+        "groups": 0,
+        "rows": 0
+      },
+      "binary_conflicts": {
+        "groups": 0,
+        "rows": 0
+      },
+      "category_conflicts": {
+        "groups": 14,
+        "rows": 78
+      }
+    },
+    "prompt": {
+      "duplicates": {
+        "groups": 0,
+        "rows": 0
+      },
+      "cross_split": {
+        "groups": 0,
+        "rows": 0
+      },
+      "binary_conflicts": {
+        "groups": 0,
+        "rows": 0
+      },
+      "category_conflicts": {
+        "groups": 0,
+        "rows": 0
+      }
+    },
+    "normalized_prompt": {
+      "duplicates": {
+        "groups": 0,
+        "rows": 0
+      },
+      "cross_split": {
+        "groups": 0,
+        "rows": 0
+      },
+      "binary_conflicts": {
+        "groups": 0,
+        "rows": 0
+      },
+      "category_conflicts": {
+        "groups": 0,
+        "rows": 0
+      }
+    }
+  },
+  "split_pair_overlaps": [
+    {
+      "left": "train",
+      "right": "validation",
+      "base_id": 0,
+      "sample_id": 0,
+      "group_id": 0,
+      "source_unit": 0,
+      "prompt": 0,
+      "normalized_prompt": 0
+    },
+    {
+      "left": "train",
+      "right": "test",
+      "base_id": 0,
+      "sample_id": 0,
+      "group_id": 0,
+      "source_unit": 0,
+      "prompt": 0,
+      "normalized_prompt": 0
+    },
+    {
+      "left": "validation",
+      "right": "test",
+      "base_id": 0,
+      "sample_id": 0,
+      "group_id": 0,
+      "source_unit": 0,
+      "prompt": 0,
+      "normalized_prompt": 0
+    }
+  ],
+  "group_statistics": {
+    "chinese_curated": {
+      "rows": 26918,
+      "groups": 26918,
+      "min_group_rows": 1,
+      "max_group_rows": 1
+    },
+    "jailbench": {
+      "rows": 7603,
+      "groups": 522,
+      "min_group_rows": 1,
+      "max_group_rows": 15
+    },
+    "wildguard_zh": {
+      "rows": 43165,
+      "groups": 43165,
+      "min_group_rows": 1,
+      "max_group_rows": 1
+    }
+  },
+  "mixed_source_group_count": 91,
+  "source_unit_not_equal_group_id_rows": 7266,
+  "source_binary_dependency": {
+    "source_only_majority_correct_fraction": 0.5731792086090158,
+    "all_rows_majority_correct_fraction": 0.524689133177149,
+    "jailbench_harmful_fraction": 1.0,
+    "jailbench_native_binary_annotation_available": false,
+    "jailbench_binary_rule": "Historical project builder assigns every JailBench query harmful; source CSV has domain labels, no independent binary label column.",
+    "interpretation": "These are deterministic descriptive contingencies, not model fitting or evidence of dataset corruption."
+  },
+  "token_lengths": {
+    "min": 1,
+    "median": 31.0,
+    "p95": 221.0,
+    "p99": 346.0,
+    "max": 3202,
+    "mean": 64.06070591869835
+  },
+  "source_token_lengths": {
+    "chinese_curated": {
+      "min": 2,
+      "median": 21.0,
+      "p95": 47.0,
+      "p99": 75.0,
+      "max": 342,
+      "mean": 23.674307155063527
+    },
+    "jailbench": {
+      "min": 39,
+      "median": 88.0,
+      "p95": 342.0,
+      "p99": 349.0,
+      "max": 361,
+      "mean": 100.3300013152703
+    },
+    "wildguard_zh": {
+      "min": 1,
+      "median": 45.0,
+      "p95": 255.0,
+      "p99": 366.0,
+      "max": 3202,
+      "mean": 82.85754662342175
+    }
+  },
+  "source_label_token_lengths": [
+    {
+      "source": "chinese_curated",
+      "label": "harmful",
+      "min": 5,
+      "median": 33.0,
+      "p95": 49.0,
+      "p99": 63.0,
+      "max": 342,
+      "mean": 32.69575269737969
+    },
+    {
+      "source": "chinese_curated",
+      "label": "unharmful",
+      "min": 2,
+      "median": 12.0,
+      "p95": 42.0,
+      "p99": 92.0,
+      "max": 241,
+      "mean": 16.761417322834646
+    },
+    {
+      "source": "jailbench",
+      "label": "harmful",
+      "min": 39,
+      "median": 88.0,
+      "p95": 342.0,
+      "p99": 349.0,
+      "max": 361,
+      "mean": 100.3300013152703
+    },
+    {
+      "source": "wildguard_zh",
+      "label": "harmful",
+      "min": 3,
+      "median": 43.0,
+      "p95": 264.0,
+      "p99": 367.0,
+      "max": 1366,
+      "mean": 87.86685288640597
+    },
+    {
+      "source": "wildguard_zh",
+      "label": "unharmful",
+      "min": 1,
+      "median": 49.0,
+      "p95": 241.79999999999927,
+      "p99": 362.3199999999997,
+      "max": 3202,
+      "mean": 77.89559603412498
+    }
+  ],
+  "tokens_over_370": 407,
+  "tokens_over_4096": 0,
+  "unicode_review_candidates": {
+    "unexpected_cc_rows": 0,
+    "unicode_cf_rows": 25,
+    "replacement_character_rows": 5
+  },
+  "public_original_lineage": {
+    "official_train_rows": 86759,
+    "archived_mapped_rows": 46187,
+    "retained_mapped_rows": 43165,
+    "official_original_filename": "data/sources/wildguard_en/train.parquet",
+    "original_prompt_identity": {
+      "duplicates": {
+        "groups": 1,
+        "rows": 2
+      },
+      "cross_split": {
+        "groups": 0,
+        "rows": 0
+      },
+      "binary_conflicts": {
+        "groups": 0,
+        "rows": 0
+      },
+      "category_conflicts": {
+        "groups": 0,
+        "rows": 0
+      }
+    },
+    "original_parent_row_identity": {
+      "duplicates": {
+        "groups": 0,
+        "rows": 0
+      },
+      "cross_split": {
+        "groups": 0,
+        "rows": 0
+      },
+      "binary_conflicts": {
+        "groups": 0,
+        "rows": 0
+      },
+      "category_conflicts": {
+        "groups": 0,
+        "rows": 0
+      }
+    },
+    "retained_adversarial_and_binary": [
+      {
+        "original_adversarial": false,
+        "prompt_harm_label": "harmful",
+        "rows": 11669
+      },
+      {
+        "original_adversarial": false,
+        "prompt_harm_label": "unharmful",
+        "rows": 10891
+      },
+      {
+        "original_adversarial": true,
+        "prompt_harm_label": "harmful",
+        "rows": 9811
+      },
+      {
+        "original_adversarial": true,
+        "prompt_harm_label": "unharmful",
+        "rows": 10794
+      }
+    ],
+    "retained_original_subcategories": [
+      {
+        "original_subcategory": "benign",
+        "prompt_harm_label": "unharmful",
+        "rows": 21685
+      },
+      {
+        "original_subcategory": "causing_material_harm_by_disseminating_misinformation",
+        "prompt_harm_label": "harmful",
+        "rows": 485
+      },
+      {
+        "original_subcategory": "copyright_violations",
+        "prompt_harm_label": "harmful",
+        "rows": 503
+      },
+      {
+        "original_subcategory": "cyberattack",
+        "prompt_harm_label": "harmful",
+        "rows": 324
+      },
+      {
+        "original_subcategory": "defamation_encouraging_unethical_or_unsafe_actions",
+        "prompt_harm_label": "harmful",
+        "rows": 770
+      },
+      {
+        "original_subcategory": "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns",
+        "prompt_harm_label": "harmful",
+        "rows": 1519
+      },
+      {
+        "original_subcategory": "fraud_assisting_illegal_activities",
+        "prompt_harm_label": "harmful",
+        "rows": 710
+      },
+      {
+        "original_subcategory": "mental_health_over-reliance_crisis",
+        "prompt_harm_label": "harmful",
+        "rows": 513
+      },
+      {
+        "original_subcategory": "others",
+        "prompt_harm_label": "harmful",
+        "rows": 9749
+      },
+      {
+        "original_subcategory": "private_information_individual",
+        "prompt_harm_label": "harmful",
+        "rows": 906
+      },
+      {
+        "original_subcategory": "sensitive_information_organization_government",
+        "prompt_harm_label": "harmful",
+        "rows": 1085
+      },
+      {
+        "original_subcategory": "sexual_content",
+        "prompt_harm_label": "harmful",
+        "rows": 626
+      },
+      {
+        "original_subcategory": "social_stereotypes_and_unfair_discrimination",
+        "prompt_harm_label": "harmful",
+        "rows": 2431
+      },
+      {
+        "original_subcategory": "toxic_language_hate_speech",
+        "prompt_harm_label": "harmful",
+        "rows": 943
+      },
+      {
+        "original_subcategory": "violence_and_physical_harm",
+        "prompt_harm_label": "harmful",
+        "rows": 916
+      }
+    ],
+    "source_lineage_scope": "All 46,187 selected WildGuard rows, including the 3,022 quarantined rows; current 43,165 rows are a subset of official training data. Public official test was not loaded.",
+    "raw_full_wildguard_alignment_rows": 86759,
+    "raw_source_translation_identity": {
+      "raw_official_rows": 86759,
+      "unique_normalized_original_prompts": 47803,
+      "raw_original_duplicate_groups": 18926,
+      "raw_original_duplicate_member_rows": 57882,
+      "unique_normalized_old_chinese_prompts": 48167,
+      "chinese_groups_with_distinct_normalized_originals": 153,
+      "chinese_member_rows_with_distinct_normalized_originals": 980,
+      "chinese_binary_conflict_groups": 23,
+      "chinese_binary_conflict_member_rows": 88,
+      "chinese_category_only_conflict_groups": 1955,
+      "chinese_category_only_conflict_member_rows": 5863,
+      "interpretation": "Original duplicate response-bearing rows and old Chinese many-to-one mappings are counted separately. Distinct normalized original wording does not alone prove different semantics or mistranslation."
+    }
+  },
+  "historical_selection": {
+    "raw_source_rows": 126624,
+    "original_selected_rows": 80709,
+    "current_rows": 77686,
+    "old_excluded_rows": 45915,
+    "historical_exclusions": [
+      {
+        "source": "chinese_curated",
+        "exclusion_reason": "conflicting_labels_for_same_chinese_text",
+        "rows": 683
+      },
+      {
+        "source": "chinese_curated",
+        "exclusion_reason": "duplicate_chinese_text",
+        "rows": 1109
+      },
+      {
+        "source": "chinese_curated",
+        "exclusion_reason": "overlength_no_truncation",
+        "rows": 354
+      },
+      {
+        "source": "jailbench",
+        "exclusion_reason": "conflicting_labels_for_same_chinese_text",
+        "rows": 683
+      },
+      {
+        "source": "jailbench",
+        "exclusion_reason": "overlength_no_truncation",
+        "rows": 2514
+      },
+      {
+        "source": "wildguard_zh",
+        "exclusion_reason": "conflicting_labels_for_same_chinese_text",
+        "rows": 5951
+      },
+      {
+        "source": "wildguard_zh",
+        "exclusion_reason": "duplicate_chinese_text",
+        "rows": 34620
+      },
+      {
+        "source": "wildguard_zh",
+        "exclusion_reason": "invalid_text_or_label",
+        "rows": 1
+      }
+    ],
+    "historical_source_label_exclusions": [
+      {
+        "source": "chinese_curated",
+        "prompt_harm_label": "harmful",
+        "exclusion_reason": "conflicting_labels_for_same_chinese_text",
+        "rows": 683
+      },
+      {
+        "source": "chinese_curated",
+        "prompt_harm_label": "harmful",
+        "exclusion_reason": "duplicate_chinese_text",
+        "rows": 1109
+      },
+      {
+        "source": "chinese_curated",
+        "prompt_harm_label": "harmful",
+        "exclusion_reason": "overlength_no_truncation",
+        "rows": 353
+      },
+      {
+        "source": "chinese_curated",
+        "prompt_harm_label": "unharmful",
+        "exclusion_reason": "overlength_no_truncation",
+        "rows": 1
+      },
+      {
+        "source": "jailbench",
+        "prompt_harm_label": "harmful",
+        "exclusion_reason": "conflicting_labels_for_same_chinese_text",
+        "rows": 683
+      },
+      {
+        "source": "jailbench",
+        "prompt_harm_label": "harmful",
+        "exclusion_reason": "overlength_no_truncation",
+        "rows": 2514
+      },
+      {
+        "source": "wildguard_zh",
+        "prompt_harm_label": "harmful",
+        "exclusion_reason": "conflicting_labels_for_same_chinese_text",
+        "rows": 5892
+      },
+      {
+        "source": "wildguard_zh",
+        "prompt_harm_label": "harmful",
+        "exclusion_reason": "duplicate_chinese_text",
+        "rows": 17236
+      },
+      {
+        "source": "wildguard_zh",
+        "prompt_harm_label": "harmful",
+        "exclusion_reason": "invalid_text_or_label",
+        "rows": 1
+      },
+      {
+        "source": "wildguard_zh",
+        "prompt_harm_label": "unharmful",
+        "exclusion_reason": "conflicting_labels_for_same_chinese_text",
+        "rows": 59
+      },
+      {
+        "source": "wildguard_zh",
+        "prompt_harm_label": "unharmful",
+        "exclusion_reason": "duplicate_chinese_text",
+        "rows": 17384
+      }
+    ],
+    "old_input_limits": {
+      "max_prompt_tokens": 370,
+      "translation_input_max_length": 512,
+      "translation_max_new_tokens": 256,
+      "note": "Translation limits are documented historical generator settings; old 370-token eligibility is independently reconstructed here."
+    },
+    "current_added_back_historical_excluded_rows": 0,
+    "current_quarantine_counts": [
+      {
+        "source": "chinese_curated",
+        "prompt_harm_label": "unharmful",
+        "rows": 1
+      },
+      {
+        "source": "wildguard_zh",
+        "prompt_harm_label": "harmful",
+        "rows": 1607
+      },
+      {
+        "source": "wildguard_zh",
+        "prompt_harm_label": "unharmful",
+        "rows": 1415
+      }
+    ],
+    "current_quarantine_reason_counts": {
+      "translation_status_review": 1769,
+      "within_split_normalized_duplicate": 802,
+      "cross_split_normalized_duplicate": 479,
+      "cross_split_normalized_english_lineage": 427,
+      "translation_generation_length_limit": 40,
+      "translation_status_error": 45,
+      "conflicting_labels_for_same_normalized_english": 46,
+      "conflicting_labels_for_same_normalized_text": 52
+    },
+    "current_quarantine_fractions_by_source": {
+      "chinese_curated": 3.714848248449051e-05,
+      "jailbench": 0.0,
+      "wildguard_zh": 0.06542966635633403
+    },
+    "jailbench_wrapper_selection": [
+      {
+        "wrapper_id": "J01",
+        "original_rows": 540,
+        "currently_retained_rows": 509,
+        "fully_missing": false,
+        "min_original_tokens": 81,
+        "max_original_tokens": 113,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 31
+        }
+      },
+      {
+        "wrapper_id": "J02",
+        "original_rows": 540,
+        "currently_retained_rows": 507,
+        "fully_missing": false,
+        "min_original_tokens": 61,
+        "max_original_tokens": 93,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 33
+        }
+      },
+      {
+        "wrapper_id": "J03",
+        "original_rows": 540,
+        "currently_retained_rows": 504,
+        "fully_missing": false,
+        "min_original_tokens": 60,
+        "max_original_tokens": 92,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 36
+        }
+      },
+      {
+        "wrapper_id": "J04",
+        "original_rows": 540,
+        "currently_retained_rows": 0,
+        "fully_missing": true,
+        "min_original_tokens": 676,
+        "max_original_tokens": 739,
+        "original_rows_over_370": 540,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "overlength_no_truncation": 503,
+          "conflicting_labels_for_same_chinese_text": 37
+        }
+      },
+      {
+        "wrapper_id": "J05",
+        "original_rows": 540,
+        "currently_retained_rows": 508,
+        "fully_missing": false,
+        "min_original_tokens": 72,
+        "max_original_tokens": 104,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 32
+        }
+      },
+      {
+        "wrapper_id": "J06",
+        "original_rows": 540,
+        "currently_retained_rows": 0,
+        "fully_missing": true,
+        "min_original_tokens": 661,
+        "max_original_tokens": 693,
+        "original_rows_over_370": 540,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "overlength_no_truncation": 507,
+          "conflicting_labels_for_same_chinese_text": 33
+        }
+      },
+      {
+        "wrapper_id": "J07",
+        "original_rows": 540,
+        "currently_retained_rows": 510,
+        "fully_missing": false,
+        "min_original_tokens": 86,
+        "max_original_tokens": 118,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 30
+        }
+      },
+      {
+        "wrapper_id": "J08",
+        "original_rows": 540,
+        "currently_retained_rows": 511,
+        "fully_missing": false,
+        "min_original_tokens": 74,
+        "max_original_tokens": 106,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 29
+        }
+      },
+      {
+        "wrapper_id": "J09",
+        "original_rows": 540,
+        "currently_retained_rows": 502,
+        "fully_missing": false,
+        "min_original_tokens": 339,
+        "max_original_tokens": 371,
+        "original_rows_over_370": 1,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 37,
+          "overlength_no_truncation": 1
+        }
+      },
+      {
+        "wrapper_id": "J10",
+        "original_rows": 540,
+        "currently_retained_rows": 505,
+        "fully_missing": false,
+        "min_original_tokens": 39,
+        "max_original_tokens": 71,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 35
+        }
+      },
+      {
+        "wrapper_id": "J11",
+        "original_rows": 540,
+        "currently_retained_rows": 504,
+        "fully_missing": false,
+        "min_original_tokens": 62,
+        "max_original_tokens": 94,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 36
+        }
+      },
+      {
+        "wrapper_id": "J12",
+        "original_rows": 540,
+        "currently_retained_rows": 508,
+        "fully_missing": false,
+        "min_original_tokens": 91,
+        "max_original_tokens": 123,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 32
+        }
+      },
+      {
+        "wrapper_id": "J13",
+        "original_rows": 540,
+        "currently_retained_rows": 506,
+        "fully_missing": false,
+        "min_original_tokens": 81,
+        "max_original_tokens": 113,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 34
+        }
+      },
+      {
+        "wrapper_id": "J14",
+        "original_rows": 540,
+        "currently_retained_rows": 507,
+        "fully_missing": false,
+        "min_original_tokens": 85,
+        "max_original_tokens": 117,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 33
+        }
+      },
+      {
+        "wrapper_id": "J15",
+        "original_rows": 540,
+        "currently_retained_rows": 506,
+        "fully_missing": false,
+        "min_original_tokens": 105,
+        "max_original_tokens": 136,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 34
+        }
+      },
+      {
+        "wrapper_id": "J16",
+        "original_rows": 540,
+        "currently_retained_rows": 509,
+        "fully_missing": false,
+        "min_original_tokens": 90,
+        "max_original_tokens": 122,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 31
+        }
+      },
+      {
+        "wrapper_id": "J17",
+        "original_rows": 540,
+        "currently_retained_rows": 0,
+        "fully_missing": true,
+        "min_original_tokens": 589,
+        "max_original_tokens": 652,
+        "original_rows_over_370": 540,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "overlength_no_truncation": 497,
+          "conflicting_labels_for_same_chinese_text": 43
+        }
+      },
+      {
+        "wrapper_id": "J18",
+        "original_rows": 540,
+        "currently_retained_rows": 0,
+        "fully_missing": true,
+        "min_original_tokens": 504,
+        "max_original_tokens": 568,
+        "original_rows_over_370": 540,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "overlength_no_truncation": 503,
+          "conflicting_labels_for_same_chinese_text": 37
+        }
+      },
+      {
+        "wrapper_id": "J19",
+        "original_rows": 540,
+        "currently_retained_rows": 0,
+        "fully_missing": true,
+        "min_original_tokens": 572,
+        "max_original_tokens": 604,
+        "original_rows_over_370": 540,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "overlength_no_truncation": 503,
+          "conflicting_labels_for_same_chinese_text": 37
+        }
+      },
+      {
+        "wrapper_id": "J20",
+        "original_rows": 540,
+        "currently_retained_rows": 507,
+        "fully_missing": false,
+        "min_original_tokens": 86,
+        "max_original_tokens": 118,
+        "original_rows_over_370": 0,
+        "original_rows_over_4096": 0,
+        "historical_exclusion_counts": {
+          "conflicting_labels_for_same_chinese_text": 33
+        }
+      }
+    ],
+    "original_chinese_conflict_breakdown": {
+      "binary_conflict": {
+        "groups": 23,
+        "member_rows": 88
+      },
+      "category_only_conflict": {
+        "groups": 2638,
+        "member_rows": 7229
+      }
+    }
+  },
+  "retained_translation_provenance": {
+    "finish_reason_counts": {
+      "stop": 43165
+    },
+    "effective_qa_counts": {
+      "clean": 43150,
+      "review": 15
+    },
+    "status_counts": {
+      "ok": 43165
+    },
+    "translation_source_counts": {
+      "model": 43132,
+      "recorded_bilingual_correction": 33
+    },
+    "individually_recorded_reviewer_rows": 108,
+    "source_labels_preserved": true,
+    "semantic_equivalence_certified": false
+  },
+  "builder_review": {
+    "current_translation_builder": "scripts/hanguard/build_translation_repaired_dataset.py",
+    "original_builder": "archive/repository_before_cleanup_20260928.tar.gz:scripts/hanguard/build_three_source_dataset.py",
+    "group_allocator": "archive/repository_before_cleanup_20260928.tar.gz:scripts/hanguard/build_academic_dataset.py:assign_groups",
+    "split_algorithm": "80/10/10 greedy category and source/form stratum balancing over union-find groups. Known JailBench seed units and original normalized text identities are linked before splitting. Current release preserves those historical assignments.",
+    "retranslation_collision_policy": "Quarantine every member of normalized-Chinese duplicate groups and cross-split/conflicting normalized-original groups. Original labels and splits are preserved.",
+    "covers_semantic_families": false,
+    "covers_wrapper_template_holdout": false
+  },
+  "limitations": [
+    "All mechanical checks are exhaustive over specified files; passing does not prove semantic translation or annotation correctness.",
+    "No latent semantic near-duplicate or context completeness adjudication is performed in this structural component.",
+    "Historical source selection is reconstructed from raw local source files and old code; discarded rows are not restored or silently added back.",
+    "Original official binary labels are verified by equality, not reannotated. WildGuard public official test is not consumed.",
+    "Native JailBench binary harmful labels originate in the project construction rule rather than a binary field in its original CSV."
+  ],
+  "input_hashes_before": {
+    "data/three_source_translation_repaired/train.parquet": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "data/three_source_translation_repaired/validation.parquet": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "data/three_source_translation_repaired/test.parquet": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09",
+    "data/three_source_translation_repaired/full_repaired_archive.parquet": "d35f93d25bc6c3e67df28059d43a2aa2a6ce7e3b11bdaaaf4eb5bdfe09a075a5",
+    "data/three_source_translation_repaired/quarantine.parquet": "dfc0b61c7acc83e63a1f7a99c4362ecafda7700da3ccd484090141d8acc4b6f8",
+    "data/three_source_translation_repaired/manifest.json": "d14bbd6f38f2b165004005bd733a5b6eeb9df8cec71674d282fbfcc4cb9c7b12",
+    "data/three_source_translation_repaired/release_qa.json": "48061c145dd43733a787365b1e26cb1605ae5c51e69f693bc355dcad3782fdad",
+    "data/three_source_translation_repaired/audit.json": "cb221d69de8a75bfdf8e864687366ca7ac62bc982e8339303421c052af6c466a",
+    "outputs/hanguard_translation_repair_20260928/source_mapping.parquet": "c09de904dc1a97666e6ddaf6e1dcf407a096efe0e736ed2b97bee2766b10d02f",
+    "data/sources/wildguard_en/train.parquet": "9844a24e5734be9c32cf9fa21340b919f2c5746cb2f81b220894e03d35ee7a92",
+    "data/sources/wildguard_zh.parquet": "20eb3d6792af4aa087a6b13116e07064d044dc7cc355b7d359b5579074c19d18",
+    "data/sources/hanguard_v3.parquet": "5a8c1334b7a62294aff9aeffc56b18f95f8b58d760fd43dabd72b53c3754b933",
+    "data/sources/jailbench/JailBench.csv": "f84e0b119fb9d87fb8873af3491f34151a0250dc3267c11bdce7cb90d18ec493",
+    "data/sources/jailbench/JailBench-seed.csv": "6d7025379c10b39ed33d33bf1446d41106c57a9bd349c8c8d6c802948c551de8",
+    "archive/data_before_repair_20260928.tar.gz": "f6900736209ba70ab333a9567d7a1464f681fcba115db05e87b12fa60193b7ab",
+    "archive/repository_before_cleanup_20260928.tar.gz": "6c464abf1dd0f82230be58bb27cf44f7ff93e3ec8a14e40177343c83726adba7",
+    "models/Qwen3.5-4B/tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "models/Qwen3.5-4B/tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+    "archive/source_provenance/legacy/data/train_wildguard.parquet": "38768e34f4a2b7cc115e4e2ee4e41eef860eae5b133ef045485363a2b525ce75",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_000.parquet": "5e3cf84e9d5d86e13555547a7c8c024306b833f87478e612c5a54bbcebf59c6c",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_001.parquet": "ec2efc38e4d64da9836b90d7167c1e90034ed7a64a242120df011b3a7762fe9d",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_002.parquet": "56e3a10d524f268f694c9735f98dc3f8356bd083f20c324ea4ee4605f34c1371",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_003.parquet": "8e86e528294b81ae672fe8e310828e5bb6fa873cd77269b2e1c4b6a1ea05c36a",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_004.parquet": "f6cc3ebcfcb5c8cc22cbc3d0c3afded88b337f1293186c4194467ed21acd8ee8",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_005.parquet": "0043ffbfb1c5c2546f1c68f8b1f2388a957d522c2a9920855d4e0be0ae9bcebe"
+  },
+  "input_hashes_after": {
+    "data/three_source_translation_repaired/train.parquet": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "data/three_source_translation_repaired/validation.parquet": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "data/three_source_translation_repaired/test.parquet": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09",
+    "data/three_source_translation_repaired/full_repaired_archive.parquet": "d35f93d25bc6c3e67df28059d43a2aa2a6ce7e3b11bdaaaf4eb5bdfe09a075a5",
+    "data/three_source_translation_repaired/quarantine.parquet": "dfc0b61c7acc83e63a1f7a99c4362ecafda7700da3ccd484090141d8acc4b6f8",
+    "data/three_source_translation_repaired/manifest.json": "d14bbd6f38f2b165004005bd733a5b6eeb9df8cec71674d282fbfcc4cb9c7b12",
+    "data/three_source_translation_repaired/release_qa.json": "48061c145dd43733a787365b1e26cb1605ae5c51e69f693bc355dcad3782fdad",
+    "data/three_source_translation_repaired/audit.json": "cb221d69de8a75bfdf8e864687366ca7ac62bc982e8339303421c052af6c466a",
+    "outputs/hanguard_translation_repair_20260928/source_mapping.parquet": "c09de904dc1a97666e6ddaf6e1dcf407a096efe0e736ed2b97bee2766b10d02f",
+    "data/sources/wildguard_en/train.parquet": "9844a24e5734be9c32cf9fa21340b919f2c5746cb2f81b220894e03d35ee7a92",
+    "data/sources/wildguard_zh.parquet": "20eb3d6792af4aa087a6b13116e07064d044dc7cc355b7d359b5579074c19d18",
+    "data/sources/hanguard_v3.parquet": "5a8c1334b7a62294aff9aeffc56b18f95f8b58d760fd43dabd72b53c3754b933",
+    "data/sources/jailbench/JailBench.csv": "f84e0b119fb9d87fb8873af3491f34151a0250dc3267c11bdce7cb90d18ec493",
+    "data/sources/jailbench/JailBench-seed.csv": "6d7025379c10b39ed33d33bf1446d41106c57a9bd349c8c8d6c802948c551de8",
+    "archive/data_before_repair_20260928.tar.gz": "f6900736209ba70ab333a9567d7a1464f681fcba115db05e87b12fa60193b7ab",
+    "archive/repository_before_cleanup_20260928.tar.gz": "6c464abf1dd0f82230be58bb27cf44f7ff93e3ec8a14e40177343c83726adba7",
+    "models/Qwen3.5-4B/tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "models/Qwen3.5-4B/tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+    "archive/source_provenance/legacy/data/train_wildguard.parquet": "38768e34f4a2b7cc115e4e2ee4e41eef860eae5b133ef045485363a2b525ce75",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_000.parquet": "5e3cf84e9d5d86e13555547a7c8c024306b833f87478e612c5a54bbcebf59c6c",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_001.parquet": "ec2efc38e4d64da9836b90d7167c1e90034ed7a64a242120df011b3a7762fe9d",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_002.parquet": "56e3a10d524f268f694c9735f98dc3f8356bd083f20c324ea4ee4605f34c1371",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_003.parquet": "8e86e528294b81ae672fe8e310828e5bb6fa873cd77269b2e1c4b6a1ea05c36a",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_004.parquet": "f6cc3ebcfcb5c8cc22cbc3d0c3afded88b337f1293186c4194467ed21acd8ee8",
+    "archive/source_provenance/legacy/data/train_wildguard_checkpoints/chunk_005.parquet": "0043ffbfb1c5c2546f1c68f8b1f2388a957d522c2a9920855d4e0be0ae9bcebe"
+  },
+  "code_sha256": "b82bfc50f5069d28cfd69683cc25a6a904e020564f02f26f1faabd6308cd01b9",
+  "source_label_joint_split_drift": [
+    {
+      "source": "chinese_curated",
+      "split_harmful_fractions": {
+        "test": 0.3965068747677443,
+        "train": 0.4409101462735082,
+        "validation": 0.4145616641901932
+      },
+      "train_to_test_harmful_fraction_difference_pp": -4.4403271505763895
+    },
+    {
+      "source": "jailbench",
+      "split_harmful_fractions": {
+        "test": 1.0,
+        "train": 1.0,
+        "validation": 1.0
+      },
+      "train_to_test_harmful_fraction_difference_pp": 0.0
+    },
+    {
+      "source": "wildguard_zh",
+      "split_harmful_fractions": {
+        "test": 0.5198797965788257,
+        "train": 0.4934418160233952,
+        "validation": 0.5088331008833101
+      },
+      "train_to_test_harmful_fraction_difference_pp": 2.643798055543045
+    }
+  ],
+  "known_group_category_disagreement_review_candidates": {
+    "groups": 14,
+    "rows": 78,
+    "all_groups_binary_consistent": true,
+    "candidate_group_ids": [
+      "004bec556c1569bf09db5a0d0a67c183eb874e59135fc47f4eda8802525ffdf7",
+      "012bf69d058018f864712293c1d7a137a744f7a58c38af73ddd2291a61e56380",
+      "0535f26e2f5f58b8c8bf3320048dad4573689625c900ff05925ef94e95385e16",
+      "056f0e89a91fbc586be857123cdf6ea7c1e72930bfd2c8f2cd3f0c0448bfb658",
+      "05d9ba6bdf0ab3755ca2aa89df664c7abfbfe669ea8ddb4fcd53ba22b0a6f8cf",
+      "068c4b9d5bebf2da153565e8a4584373c6fc800825873114fdc3b6f18225719a",
+      "072f98c5d2270698133c5b5b3d3bfe07664a7d0f86381ec8544d1a79c28c661c",
+      "074e75a1348535de5a272241f5c33f79e16887db508434944f608b544e579156",
+      "07dacefae43fcae97410882bf823bd29ea6b4c8900691cd9b1db94a9b73baba1",
+      "0911fe3265a199ab7066fb3c2796ffbb23bd6ca35a7a5b28d49af2daaafc012e",
+      "096a5eb1b113548db8b6e8afb36609fd9afbe4a72e5455d2c756e12cff0a4cac",
+      "0cd75b39ed7fb3af641e09fc15fb22cb1a81c0ef8d262e1a9cd9fc1a6acf9de1",
+      "140de0aa3eb9a010f91bcd0dca855bdecbaf1b61b370932431db1c6ba6086269",
+      "18c937c78dd691cdb3cb59d1960961a6c61b79c9bfe3a2627c440792b683cc92"
+    ],
+    "interpretation": "Shared lineage with different full text and different category labels is a review candidate, not definitive wrong labels. Binary supervision remains consistent."
+  },
+  "flag_record_counts_by_severity": {
+    "historical_selection_property": 45915,
+    "manual_review_candidate": 110
+  },
+  "flag_record_counts_by_issue": {
+    "historical_exclusion:duplicate_chinese_text": 35729,
+    "historical_exclusion:conflicting_labels_for_same_chinese_text": 7317,
+    "historical_exclusion:overlength_no_truncation": 2868,
+    "known_group_category_disagreement": 78,
+    "unicode_cf": 25,
+    "unicode_replacement": 5,
+    "retained_within_split_normalized_original_duplicate": 2,
+    "historical_exclusion:invalid_text_or_label": 1
+  },
+  "output_sha256": {
+    "structure_flags.csv": "e7192e2d90a1a4cb1a66d3913ef27fd01f53c3ff201ce16d2f1656e52cb6a966"
+  }
+}

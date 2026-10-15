@@ -1,0 +1,38 @@
+{
+  "E03": {
+    "lora": true,
+    "mode": "last",
+    "readout": "mlp",
+    "objective": "bce"
+  },
+  "E04": {
+    "lora": true,
+    "mode": "fusion",
+    "readout": "mlp",
+    "objective": "bce"
+  },
+  "E13": {
+    "lora": true,
+    "mode": "last",
+    "readout": "mlp",
+    "objective": "fixed"
+  },
+  "E14": {
+    "lora": true,
+    "mode": "last",
+    "readout": "mlp",
+    "objective": "dynamic"
+  },
+  "E15": {
+    "lora": true,
+    "mode": "fusion",
+    "readout": "mlp",
+    "objective": "fixed"
+  },
+  "E16": {
+    "lora": true,
+    "mode": "fusion",
+    "readout": "mlp",
+    "objective": "dynamic"
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "OOF_decisions_exact": true,
+  "artifact_sha256": {
+    "constant_oracle_controls.json": "7f86258bef7e5963ac8227b2e31648503bbfdd039ef2ee2849c1cc8cafd4bfff",
+    "dev_saved_metric_consistency.json": "176912f8438e26807a5546756ded7813e9830d189d3f860d81f23828b50e2f70",
+    "greedy_trace_by_label.csv": "bc09583b8c03f921dfd108af9424ef151406796797413ea6f96a8c0d51a3e8ca",
+    "greedy_trace_by_label.parquet": "4ae8005b2a31579a34519f10a22057963e3d97cdc694c043aafdded882cfd023",
+    "layer_rescue_harm_by_label.csv": "71b3db8ba64b249ede156b6b2245c6ae19259f3a9197a72592488b558b134091",
+    "layer_rescue_harm_by_label.parquet": "b019eee36cf5ebb7187a2270b626691a53165a27f88acbbfcb0e631fb68b63e3",
+    "layers_OOF_curve.csv": "150ca31b229df63b87d04d15fb5b569b57ad0131f12f8b7b3ebe2c88bafa1351",
+    "layers_OOF_curve.parquet": "9e00b6bd6b54930e1269f06807329a4e820a9e9959a11461174c8470e29ccc59",
+    "layers_by_fold.csv": "0a2c73f97685107088ec08b25e4a462032569c0cd22e0a2eaa49f8403e8eada3",
+    "layers_by_fold.parquet": "6e59f5dc28a5834eafabd8f01dff325a0f8192a20cf48c11fbea88c845b21959"
+  },
+  "bounded_conclusions": [
+    "The registered rescue objective rewards an oracle correctness union and does not penalize candidate errors on anchor-correct rows.",
+    "A fixed all-zero/all-one pair attains100% correctness union without instance information; this is a non-deployable metric control, never a model gain.",
+    "Actual selected shallow probes predict both classes and possess substantial discrimination; the evidence does not show single-class collapse.",
+    "The hypothetical majority-only first-slot comparison tests the objective, without adding candidates or changing the registered rule.",
+    "Probe-selection and this frozen readout may be misaligned; the analysis neither proves causality of the entire fusion deficit nor absence of useful raw early-layer information.",
+    "These results cannot establish that data are clean or that all multilayer fusion methods fail."
+  ],
+  "complete": true,
+  "constant_majority_hypothetical_first_slot_folds": 5,
+  "constant_majority_hypothetical_first_slot_wins": 4,
+  "dev_joint_label_transitions_are_marginal_bounds": true,
+  "dev_uses_saved_authoritative_confusion_and_trace": true,
+  "formal_validation_or_test_opened": false,
+  "greedy_objective": {
+    "candidate_quality_floor": false,
+    "harm_penalty": false,
+    "primary": "uncovered correct decisions",
+    "ties": [
+      "higher dev accuracy",
+      "lower dev BCE",
+      "higher layer index"
+    ]
+  },
+  "nested_dev_metrics_are_descriptive_and_not_independent_OOF": true,
+  "no_training": true,
+  "numerical_replay_limitation": "A threshold may equal a GPU sample probability; CPU/GPU rounding can flip a boundary row. No CPU mask was substituted or threshold tuned; this is not evidence explaining actual fusion degradation.",
+  "oracle_by_fold_scope": [
+    {
+      "anchor_accuracy": 0.9730576441102757,
+      "anchor_errors": 43,
+      "anchor_layer": 21,
+      "fold": 0,
+      "oracle_not_deployable": true,
+      "rows": 1596,
+      "scope": "inner_dev_saved",
+      "selected_probe_oracle_accuracy": 0.9924812030075187,
+      "selected_set_oracle_rescued": 31
+    },
+    {
+      "anchor_accuracy": 0.9643480428820743,
+      "anchor_errors": 143,
+      "anchor_layer": 21,
+      "fold": 0,
+      "oracle_not_deployable": true,
+      "rows": 4011,
+      "scope": "outer_held",
+      "selected_probe_oracle_accuracy": 0.9895287958115183,
+      "selected_set_oracle_rescued": 101
+    },
+    {
+      "anchor_accuracy": 0.9711779448621554,
+      "anchor_errors": 46,
+      "anchor_layer": 29,
+      "fold": 1,
+      "oracle_not_deployable": true,
+      "rows": 1596,
+      "scope": "inner_dev_saved",
+      "selected_probe_oracle_accuracy": 0.9962406015037594,
+      "selected_set_oracle_rescued": 40
+    },
+    {
+      "anchor_accuracy": 0.9660932435801546,
+      "anchor_errors": 136,
+      "anchor_layer": 29,
+      "fold": 1,
+      "oracle_not_deployable": true,
+      "rows": 4011,
+      "scope": "outer_held",
+      "selected_probe_oracle_accuracy": 0.9907753677387185,
+      "selected_set_oracle_rescued": 99
+    },
+    {
+      "anchor_accuracy": 0.9761904761904762,
+      "anchor_errors": 38,
+      "anchor_layer": 25,
+      "fold": 2,
+      "oracle_not_deployable": true,
+      "rows": 1596,
+      "scope": "inner_dev_saved",
+      "selected_probe_oracle_accuracy": 0.9962406015037594,
+      "selected_set_oracle_rescued": 32
+    },
+    {
+      "anchor_accuracy": 0.9660847880299251,
+      "anchor_errors": 136,
+      "anchor_layer": 25,
+      "fold": 2,
+      "oracle_not_deployable": true,
+      "rows": 4010,
+      "scope": "outer_held",
+      "selected_probe_oracle_accuracy": 0.9902743142144639,
+      "selected_set_oracle_rescued": 97
+    },
+    {
+      "anchor_accuracy": 0.9774436090225563,
+      "anchor_errors": 36,
+      "anchor_layer": 22,
+      "fold": 3,
+      "oracle_not_deployable": true,
+      "rows": 1596,
+      "scope": "inner_dev_saved",
+      "selected_probe_oracle_accuracy": 0.9949874686716792,
+      "selected_set_oracle_rescued": 28
+    },
+    {
+      "anchor_accuracy": 0.9648291344474932,
+      "anchor_errors": 141,
+      "anchor_layer": 22,
+      "fold": 3,
+      "oracle_not_deployable": true,
+      "rows": 4009,
+      "scope": "outer_held",
+      "selected_probe_oracle_accuracy": 0.9880269393863806,
+      "selected_set_oracle_rescued": 93
+    },
+    {
+      "anchor_accuracy": 0.9718045112781954,
+      "anchor_errors": 45,
+      "anchor_layer": 29,
+      "fold": 4,
+      "oracle_not_deployable": true,
+      "rows": 1596,
+      "scope": "inner_dev_saved",
+      "selected_probe_oracle_accuracy": 0.993734335839599,
+      "selected_set_oracle_rescued": 35
+    },
+    {
+      "anchor_accuracy": 0.9648115797354629,
+      "anchor_errors": 141,
+      "anchor_layer": 29,
+      "fold": 4,
+      "oracle_not_deployable": true,
+      "rows": 4007,
+      "scope": "outer_held",
+      "selected_probe_oracle_accuracy": 0.9890192163713502,
+      "selected_set_oracle_rescued": 97
+    }
+  ],
+  "original_selection_rule_changed": false,
+  "readout": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last",
+  "saved_registered_head_comparisons": [
+    {
+      "baseline": "best_single",
+      "both_correct": 19130,
+      "both_wrong": 519,
+      "candidate": "fusion_selected",
+      "group_bootstrap": {
+        "accuracy": {
+          "bootstrap_mean": -0.0049723131575767476,
+          "ci95": [
+            -0.006897257358731637,
+            -0.003023442280777833
+          ],
+          "delta": -0.00493814844373508
+        },
+        "ci_high": -0.003023442280777833,
+        "ci_low": -0.006897257358731637,
+        "f1": {
+          "bootstrap_mean": -0.004649875754919378,
+          "ci95": [
+            -0.006414338338659134,
+            -0.0028787369394861822
+          ],
+          "delta": -0.004614723879097893
+        },
+        "groups": 17492,
+        "observed": -0.00493814844373508,
+        "repetitions": 2000,
+        "seed": 42,
+        "unit": "group_id cluster"
+      },
+      "harmed": 249,
+      "net_correct": -99,
+      "rescued": 150,
+      "scope": "conditional on this fixed A adapter and split; does not estimate LoRA-seed variance"
+    },
+    {
+      "baseline": "repeat_best",
+      "both_correct": 19167,
+      "both_wrong": 564,
+      "candidate": "fusion_selected",
+      "group_bootstrap": {
+        "accuracy": {
+          "bootstrap_mean": -0.004550284903453255,
+          "ci95": [
+            -0.006449013494721864,
+            -0.002767865422420942
+          ],
+          "delta": -0.004539106145251437
+        },
+        "ci_high": -0.002767865422420942,
+        "ci_low": -0.006449013494721864,
+        "f1": {
+          "bootstrap_mean": -0.0041830503208819285,
+          "ci95": [
+            -0.0059704214492729115,
+            -0.002495155100413053
+          ],
+          "delta": -0.004168883433508075
+        },
+        "groups": 17492,
+        "observed": -0.004539106145251437,
+        "repetitions": 2000,
+        "seed": 42,
+        "unit": "group_id cluster"
+      },
+      "harmed": 204,
+      "net_correct": -91,
+      "rescued": 113,
+      "scope": "conditional on this fixed A adapter and split; does not estimate LoRA-seed variance"
+    },
+    {
+      "baseline": "repeat_best",
+      "both_correct": 19187,
+      "both_wrong": 568,
+      "candidate": "fusion_selected_best_anchor",
+      "group_bootstrap": {
+        "accuracy": {
+          "bootstrap_mean": -0.0037515197443429163,
+          "ci95": [
+            -0.005616422699751972,
+            -0.0019334464850405942
+          ],
+          "delta": -0.0037410215482841513
+        },
+        "ci_high": -0.0019334464850405942,
+        "ci_low": -0.005616422699751972,
+        "f1": {
+          "bootstrap_mean": -0.0034106442334623514,
+          "ci95": [
+            -0.005166085708540552,
+            -0.0017392213700859998
+          ],
+          "delta": -0.0033980878549628724
+        },
+        "groups": 17492,
+        "observed": -0.0037410215482841513,
+        "repetitions": 2000,
+        "seed": 42,
+        "unit": "group_id cluster"
+      },
+      "harmed": 184,
+      "net_correct": -75,
+      "rescued": 109,
+      "scope": "conditional on this fixed A adapter and split; does not estimate LoRA-seed variance"
+    },
+    {
+      "baseline": "fusion_selected",
+      "both_correct": 19265,
+      "both_wrong": 737,
+      "candidate": "fusion_selected_best_anchor",
+      "group_bootstrap": {
+        "accuracy": {
+          "bootstrap_mean": 0.0007987651591103384,
+          "ci95": [
+            9.864292023822329e-05,
+            0.0015060505762626685
+          ],
+          "delta": 0.0007980845969672856
+        },
+        "ci_high": 0.0015060505762626685,
+        "ci_low": 9.864292023822329e-05,
+        "f1": {
+          "bootstrap_mean": 0.000772406087419577,
+          "ci95": [
+            0.00011122311906610893,
+            0.0014423381042189738
+          ],
+          "delta": 0.0007707955785452025
+        },
+        "groups": 17492,
+        "observed": 0.0007980845969672856,
+        "repetitions": 2000,
+        "seed": 42,
+        "unit": "group_id cluster"
+      },
+      "harmed": 15,
+      "net_correct": 16,
+      "rescued": 31,
+      "scope": "conditional on this fixed A adapter and split; does not estimate LoRA-seed variance"
+    }
+  ],
+  "schema": "hanguard_greedy_probe_rescue_explanation_v1",
+  "shallow_selected_descriptive": {
+    "OOF_AUROC_range": [
+      0.913966228798631,
+      0.9648716291166846
+    ],
+    "OOF_accuracy_range": [
+      0.8187032418952619,
+      0.8957865868860633
+    ],
+    "OOF_positive_prediction_rate_range": [
+      0.48354114713216956,
+      0.5756669159810521
+    ],
+    "layer_range": [
+      1,
+      5
+    ],
+    "selected_fold_layer_pairs": 9
+  },
+  "source_and_input_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/features/adapted/B.metadata.parquet": "cbe72d303eafd43f3044f11bda031349fd0d516504070d75da6311e2dc65ece5",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/features/adapted/last.manifest.json": "1811237553bfb3b764584d6105b7422e1208f1bd13f0082965c298a750314f32",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/features/adapted/last.npy": "cac260d13b2576ff8a2129bc97db7f7cfd4d55c57fe7c0bb4a18731f42c168e8",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/features/adapted/replay_audit.json": "62b6808f786dc6cfd073d0b6a8d7e6d03f3c3b2fd7018d5b53be08307a44e876",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/protocol.json": "236da7fd4857bc79e01d38f535e114f9e1c1ba01952bf212f905c362bb3646ef",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/registration.json": "96c8c1bf2c4f27a605b0e7474a35a5c22b7dad4eae24483d975e63caf86c192a",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/runs/E03_s42/adapter.pt": "bf6716e32eb034675c7e49ff91197410e57e463c7e53af66ad85b340ff990dc8",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/lora_study/runs/E03_s42/diagnostic_lineage.json": "e234d17d1f90adb6c4dd4aa1472aa0965edaa23f0e773f8418e67aad8b120077",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/B.parquet": "168b395c834a455e52929147d0bfee8161d52a1728094f39775c40a5b4b3a8e9",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_0_assignments.parquet": "fbc889ecd2998c248cbfcb3c04990b7fead88d577970e192eea400b3997281aa",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_1_assignments.parquet": "937be5aa5e444f86d68643285a8fc9ba2534402feb5bf8fee918860ee321ebae",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_2_assignments.parquet": "74275b92ad0f15cb7cc7803b3a65d5e3f726c13a7d601cda483ebfccb63397e0",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_3_assignments.parquet": "f5b05fe2aadd3a8a0b9f11dcb633d6f37a23692823f07d22fa7fff94f9d855a3",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/folds/fold_4_assignments.parquet": "e7b52e6e74f0c8db10f43bcf499be3fd7ca822618ad2ee298f98382a2fe16f46",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/lora_data/train.parquet": "83e9fbd8b673f856969a1c5430c0012e23826e2e90cd0667b59e37e7d75c4edc",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/lora_data/validation.parquet": "8f610cef0df8bb48d53ceb5624470add0d6463eb2da3f8c55a710ce06d98e7d6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/partition/manifest.json": "8d2e3e47353b4df8086a5a24eb5bb04a45ce368be6df44c5667f593b5a77a789",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/head_outer_predictions.parquet": "22521e7130176a33a9f111380bdb083ae6241aa66690a74f8a773ddea257f0a3",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/probe_outer_predictions.parquet": "7ffa05bfe5f3e289e3e4c2a2645d88614f14e6bc32c0fc01868c75c461557f77",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/analysis/results.json": "3167323240401a450d0e571b3390c0ca90a59bde281b92e74de3e6c8d42e4f58",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/complete.json": "e24a20cbfc98121ef1d590a5f05055cf91222317fd22d19afcefd8b4f370cea4",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/gradient_update_audit.json": "50f3ae00a692b03da35bbd3bc70d7e9e94d8bd616b8bcf287dd9262d425a7e8e",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/heads.pt": "a44691ab183102fedbaedc0823807a9908b63bb2b6c28f414cab5f07c28c1d78",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/held_predictions.parquet": "d9bda9d06c4ffddf65f064fc94d55e4a84a87b4a24b40acfa1b9cc24b2392519",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/history.json": "0d5fbaac7aeaeb43f5e10d788dabd8351a23e587216036cbc45f03b553b99f1a",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/heads/selection.json": "bdd8341bad0a2580fa55bf4d9241f0e414681941150161f011595e09e394d9fc",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/probes/complete.json": "df89086f03f28f1ef222e2667df3c6966d4a7760a9a2e03fac00ba01cc3703a2",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/probes/held_predictions.parquet": "6098f8a08417e86f30fd076c03175b8b68468dbb746313b9b0a4f865ad601044",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/probes/history.json": "4a1a1d55638c2a578e282cd34494ae7e41f898a30a6517d6c93c2c292dc7f828",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/probes/probes.pt": "4d144a729d7b5a627633bac93ce584a49bb1f6ac23e23e7c8b964b80cf5436b4",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_0/probes/selection.json": "b62766c68d51ecc14f19218b6dfd1d3c4be7861c93c70175b5eb29ddc6b74a1d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/complete.json": "816f523040fcc333b6fafa863dd16aa2ab3afd0dc0dfb7f3b6d414039613b413",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/gradient_update_audit.json": "0f62e08a3c26f5b3aa84c7c952ef04ed2fcfc8d04e172d81f7e7f75eee06316c",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/heads.pt": "e622c2f11fa006cf50138fd988927e28304ffc2c9cfc90d2c35f68824ff9b013",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/held_predictions.parquet": "ea1d3e5e3bba474f0fdcbc2679362e6a1afa1b61c3cb2c08a1ad5463b6ad65c7",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/history.json": "c3b593a5f1361ab07e34e71008fcd0c1cc12f2a2da499521ecde970777e9882d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/heads/selection.json": "8a22b1155e2922e18e8691911d95c1d636c16bc14bee49a948eb935ae0fd2695",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/probes/complete.json": "90f769d080712fe9cd40ec87fdcfe2622ca2c1315379d5c9d585195de79e7866",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/probes/held_predictions.parquet": "c0b4a7e93994cad65fdbe2c46b14fa7dc69d303cb7c11e95abe8175d48ab4684",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/probes/history.json": "33cde584bf693245ff165ef86c0a886d3cf51dbcca0d78e423191d2c2cf3df37",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/probes/probes.pt": "67d06c794c401f5c179f2bd21bb6793ca21cd1e8ecf03835c42998dcd6942aa7",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_1/probes/selection.json": "30a6d8237f1798bd24a0491219b1fc016a7c72e82fd46aa7f18899fb62e681f7",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/complete.json": "27b3854aebd68d5f1ac7dec2606ab7a3ee3e44ed266d880c4d99ddc318047b76",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/gradient_update_audit.json": "931c237c1298d542fa8e7c63d82d12e48acf3e98542f2e4e6a7832d9d3a565dc",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/heads.pt": "a73813fde5c2749162cef5de479ebc40fc32781242f22a895a2c78a4323795c8",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/held_predictions.parquet": "31f3a5d30578c54d7a7dc6ab61a656f038a186ded90139c85c8da5cf49f71a9d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/history.json": "2733bc98a6aaf75b58d37fb88cb7c4f120701f5ba0cbaff2dd2f06d907ba55bd",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/heads/selection.json": "2f12cb10d28c3f9f5541f4fb1ddd991f811ebce1f745c4e6f01a56e651d43701",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/probes/complete.json": "a3af82669ac19ebe0752ef7f6e208b30d33d92949d0469a0f5a35d52eeb42d99",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/probes/held_predictions.parquet": "05480d0dd6609b16a1a87fecdef13bc8a1383f55b107012c3cc52948a4b997be",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/probes/history.json": "f586e9729efba63ea825b24932fcdcb37f9266a0e499239325234af9e4af4b75",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/probes/probes.pt": "ec24e2997c68f820d054890d2e1e6f2b89b2a3a900d671e6a245c1d5e99be2d2",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_2/probes/selection.json": "517810b6900ce47070ea73b99fcbca99f8495c873e992cc61988737846831de5",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/complete.json": "b4bf40a156b3291ed726442ceaef6fc59025f5155a90a6ac5a781fa73bd2c6ca",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/gradient_update_audit.json": "7587e3cf5e04605246ce992e3d752f11cb682a2fc73d0ee2d05f537684e3555d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/heads.pt": "c9e326b1f341aa52138c8a034162cfe8104381df6951c0dc99980bed3753aad6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/held_predictions.parquet": "c6a36a376bf73a9b61a418adf8225068107c2604a6abfd98184649998f8c98fe",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/history.json": "39e1829748e192b242710a556d4ed670b9f079667ed11666465d7a6c4355a831",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/heads/selection.json": "ee0ef65129d586675bf5b53adc590ed1f019dd804f3c503a9a3c8593f63cca96",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/probes/complete.json": "f0642426327dc36f8b476e2141e3a6db8173c64cc072eee0711df8644f0edb9e",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/probes/held_predictions.parquet": "c607303ec07e29f15d209512071d4fce7b5d871f595aed63935fc30b42709234",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/probes/history.json": "04ab2abdab329df49212dc85c311ddf386fbe077254b9149b1289500dc97a4e0",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/probes/probes.pt": "43133630b204b22fc528eb810daa886b60c89d88ac678b5554623f4124887bf1",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_3/probes/selection.json": "eb8a9218406c01b863ebddcafa7b40b9a1421153a6fa87cc3199ae67c925f657",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/complete.json": "77336f4d5ef37644b78c5c6fcefea7547b4b4319a056a64fe05207a4598b77b3",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/gradient_update_audit.json": "e34def118f02f02ea788b6af5d922e5ead350e6bbb8d0e3e2124295689118ee9",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/heads.pt": "960647ed50c5ca9e04cd4e6b0c2a4044c44afbc8703d7b1fa43d635dcc95a122",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/held_predictions.parquet": "09743f5ba315fd0c74cbdc9265321c0484487f4c86db38f81fb837b234cfd877",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/history.json": "7e5462ea94c28d89e7d7dc3e1baa26f5b146f20554e10d1808bf9dd78123bd50",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/heads/selection.json": "2d37dfea1055cf04666a67edc764eaf25446e9fce0a930547af5f7c5dfbe41ae",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/probes/complete.json": "348f25f98dd14356b6c144fa92b01bf4cad21c1034297a1591daf3c5d245853e",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/probes/held_predictions.parquet": "5051d9c00647c2d2284a80223ff92f538e1fe54de436594db378caa7fc269a09",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/probes/history.json": "0c34ae48ea0d87168e48ab0950e59d577accec0ac328fc92eea472375d22db64",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/probes/probes.pt": "69dc856a93c67b14b6eac8bca4ef645fad83b1eea517b2c51974abaabfd6c975",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/fold_4/probes/selection.json": "843c79d6628b7ba493d70c7a2fddc521efbad33323b17681bcf31004916ebe05",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_ab_diagnosis_20261012/readouts/adapted_last/protocol.json": "942a18435967bfc20eee262b7ac5700c90179a44cf808c98f29f33245a941617",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_diagnostic_queue.py": "c86d8a9a8e85ec830b0e983b29af9ab8b80fd2f17ab8f2e5f9bfc9c06eb3f04d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_frozen_readout_diagnostics.py": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_probe_rescue_audit.py": "417773c45f419c50ba1950dbc623cbc03c1a814167efc387d945fb3d52bcb287",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_readout_parallel_queue.py": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/oof_probe_logit_stack.py": "7bea1bb10eac53e212bd617e953243f09df597fa3718bb1357756164135e58c2",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/repaired_heads.py": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6"
+  }
+}

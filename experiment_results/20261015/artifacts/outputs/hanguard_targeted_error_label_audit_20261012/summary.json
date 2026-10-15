@@ -1,0 +1,113 @@
+{
+  "scope": "posthoc error and label audit on an already explored test set; diagnostic only",
+  "inputs": {
+    "test": {
+      "path": "data/three_source_translation_repaired/test.parquet",
+      "sha256": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09",
+      "rows": 7778
+    },
+    "mapping": {
+      "path": "outputs/hanguard_translation_repair_20260928/source_mapping.parquet",
+      "sha256": "c09de904dc1a97666e6ddaf6e1dcf407a096efe0e736ed2b97bee2766b10d02f"
+    },
+    "diagnostic_protocol_sha256": "799d7b1dc20b58cc4a851f6c2f9da353af1ec64238f26db9a752bf92c0f2dce2"
+  },
+  "row_identity": {
+    "test_unique_base_id": true,
+    "wildguard_rows": 4326,
+    "wildguard_mapping_complete": true,
+    "wildguard_english_exact_match": true,
+    "wildguard_binary_label_exact_match": true,
+    "lineage_evidence_counts": {
+      "verified_shuffle42_translation_chunks_and_current_source_row": 4326
+    }
+  },
+  "model_consensus": {
+    "models": 20,
+    "families": 4,
+    "all_models_wrong": 104,
+    "all_families_wrong": 156,
+    "wildguard_all_models_wrong": 100,
+    "wildguard_all_families_wrong": 149,
+    "category3_all_families_wrong": 9,
+    "wildguard_category3_all_families_wrong": 9
+  },
+  "category3": {
+    "test_rows": 468,
+    "by_source": {
+      "wildguard_zh": 248,
+      "jailbench": 112,
+      "chinese_curated": 108
+    },
+    "wildguard_rows": 248,
+    "wildguard_documented_rule_category_available": 177,
+    "wildguard_documented_rule_matches_category3": 81,
+    "wildguard_documented_rule_mismatches_category3": 96,
+    "accepted_split_provenance": {
+      "split_sha256": {
+        "train": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+        "validation": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+        "test": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+      },
+      "accepted_wildguard_rows": 43165,
+      "current_category3_rows": 2220,
+      "subcategory_without_documented_rule": 615,
+      "documented_rule_matches_category3": 700,
+      "documented_rule_maps_elsewhere": 905,
+      "warning": "The historical rule is provenance evidence, not independently adjudicated category gold."
+    },
+    "warning": "The documented subcategory rule is provenance evidence, not independently adjudicated gold."
+  },
+  "translation": {
+    "wildguard_status": {
+      "ok": 4326
+    },
+    "wildguard_effective_qa": {
+      "clean": 4326
+    },
+    "wildguard_recorded_corrections": 9,
+    "wildguard_over_legacy_limit": 48,
+    "consensus_error_recorded_corrections": 0,
+    "consensus_error_over_legacy_limit": 1
+  },
+  "review_packet": {
+    "rows": 159,
+    "blinded_form": "review_form_blinded.csv",
+    "key": "review_key_with_predictions.parquet",
+    "selection_reason_counts": {
+      "wildguard_hash_control_harmful": 15,
+      "wildguard_consensus_error_safe": 20,
+      "category3_hash_control_jailbench": 10,
+      "fusion_rescue_disagreement": 15,
+      "all32_stack_rescue": 10,
+      "category3_model_error_wildguard_zh": 10,
+      "category3_model_error_jailbench": 7,
+      "category3_hash_control_wildguard_zh": 10,
+      "wildguard_consensus_error_harmful": 20,
+      "wildguard_hash_control_safe": 15,
+      "category3_hash_control_chinese_curated": 10,
+      "fusion_harm_disagreement": 15,
+      "all32_stack_harm": 10
+    },
+    "design": "model-guided cases plus fixed-hash controls; reviewers are blinded to inherited labels, model outputs, and selection reason"
+  },
+  "preliminary_consensus_error_spotcheck": {
+    "rows": 40,
+    "assessment_counts": {
+      "ambiguous_policy_boundary": 17,
+      "current_label_plausible": 12,
+      "current_label_likely_wrong": 11
+    },
+    "translation_assessment_counts": {
+      "no_obvious_material_error": 40
+    },
+    "scope": "Single-reviewer preliminary triage of the 40 highest-priority WildGuard consensus errors; this is not independent adjudication or a prevalence estimate."
+  },
+  "limitations": [
+    "Model-guided cases cannot estimate corpus label-error prevalence.",
+    "Only fixed-hash controls may be used for an unbiased audit estimate within their stated sampling frame.",
+    "The 20 prediction variants are correlated; all-model agreement is triage evidence, not 20 independent votes.",
+    "Adjudicating or correcting this test makes it a development set; corrected metrics are not blind-test results.",
+    "Category 3 is a primary-category field while the evaluated task is binary harmfulness; category issues do not by themselves invalidate binary labels."
+  ]
+}

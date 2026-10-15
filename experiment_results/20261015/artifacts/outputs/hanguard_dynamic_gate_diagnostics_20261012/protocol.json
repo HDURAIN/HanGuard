@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "study": "input-conditioned dynamic layer gate on one frozen E03_s42 LoRA cache",
+  "source": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_lora_layer_diagnostics_20261012",
+  "source_protocol_sha256": "799d7b1dc20b58cc4a851f6c2f9da353af1ec64238f26db9a752bf92c0f2dce2",
+  "selected_layers_sha256": "601e3925f559740c66814d149226b44a29533560d267c2f5ab9ea74548c82e35",
+  "selected_layers": [
+    17,
+    18,
+    28,
+    32
+  ],
+  "cache_manifest_sha256": {
+    "train": "930a9d3d8572c3e54ce9beab10432712a9a2a3d06dcb6a1a75fc9413dc12c866",
+    "validation": "26cdad2a1ab8fc7783d48806c3784a40fe1ea3a62849eadc0399188c0bec9f13",
+    "test": "64dbc1c19d1732d73253dd3e15c64a1843189c434524b009c9bced3c989ec81d"
+  },
+  "adapter_sha256": "5283c5c6b210f33539a06a0583135875a27d86b6914127d17ffba5658691ae25",
+  "data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_translation_repaired",
+  "data_sha256": {
+    "train": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+    "validation": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+    "test": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09"
+  },
+  "rows": {
+    "train": 62155,
+    "validation": 7753,
+    "test": 7778
+  },
+  "fixed_layers": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "arms": [
+    "dynamic_repeat_last",
+    "dynamic_fixed",
+    "dynamic_selected"
+  ],
+  "architecture": {
+    "width": 128,
+    "gate_width": 64,
+    "layer_count": 4,
+    "dropout": 0.1,
+    "gate": "per-sample additive attention over independently projected layer values",
+    "direct_path": "layer-32 projection plus 1e-3 identity-initialized fusion residual",
+    "fusion_init_scale": 0.001
+  },
+  "training": {
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "epochs": 12,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "checkpoint_selection": "minimum validation BCE independently per arm and seed",
+    "threshold_selection": "primary decision threshold pre-registered at 0.5; validation accuracy optimum is sensitivity analysis only",
+    "calibration": "none in this diagnostic; use out-of-fold calibration before changing the primary threshold",
+    "common_batch_order": true,
+    "paired_dropout_stream": true
+  },
+  "analysis": {
+    "repetitions": 2000,
+    "seed": 314159
+  },
+  "code_sha256": {
+    "dynamic_gate_diagnostics.py": "580130cad2c9527c2dd7a19b9031e0ece9be331c4e57d74a32431dc1ed4f356c",
+    "frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f"
+  },
+  "primary_estimand": "dynamic_fixed/dynamic_selected minus dynamic_repeat_last under identical capacity, initialization, batch order, dropout stream, frozen features, and validation rules",
+  "limitations": [
+    "The frozen adapter was trained jointly with an E03 final-layer head.",
+    "Head seeds are not independent LoRA seeds.",
+    "The source test split has already been explored; this is a post-hoc diagnostic.",
+    "The selected-layer arm reuses a validation-driven exploratory layer selection.",
+    "The primary threshold is fixed at 0.5; no out-of-fold calibration is fitted in this diagnostic.",
+    "Per-source and gate-weight analyses are descriptive and unadjusted for multiplicity."
+  ]
+}

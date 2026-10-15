@@ -1,0 +1,68 @@
+{
+  "status": "reviewable_data_repair_plan; no_active_data_changes",
+  "tasks": [
+    {
+      "order": 1,
+      "task": "Separate binary eligibility from type-label disagreement",
+      "inputs": [
+        "category_only_recovery_units.csv",
+        "category_only_recovery_members.csv"
+      ],
+      "deliverable": "New version with source-faithful binary labels and separate type supervision mask",
+      "conditions": [
+        "Use complete original identity before deduplication, not old Chinese identity alone.",
+        "Review 39 old many-to-one candidate units.",
+        "Define group/split treatment for 1952 formerly excluded WildGuard units; do not silently copy unknown split."
+      ]
+    },
+    {
+      "order": 2,
+      "task": "Restore long-wrapper coverage using current complete-text budget",
+      "inputs": [
+        "jailbench_recovered_families.parquet",
+        "structure_results.json"
+      ],
+      "deliverable": "All 20 raw wrapper families considered with known parent-seed grouping",
+      "conditions": [
+        "All 2700 missing-family raw rows are within4096; deduplicate jointly with category-only recovery.",
+        "Retain immutable original source and inherited binary provenance."
+      ]
+    },
+    {
+      "order": 3,
+      "task": "Repair source-text meaning and enforce translation completeness",
+      "inputs": [
+        "reviewed_translation_issue_queue.csv",
+        "translation_scan_flags.parquet"
+      ],
+      "deliverable": "Logged corrections or retranslation with source/target hashes and independent semantic checks",
+      "conditions": [
+        "Do not let translator refusal replace source requests.",
+        "Retain JSON/code/literals/examples and the final output task.",
+        "Correct polarity, role, outcome, entity and critical-constraint errors by source evidence.",
+        "Machine flags and literal-name policy differences require triage; never relabel official binary by a rule flag."
+      ]
+    },
+    {
+      "order": 4,
+      "task": "Register an evaluation structure that measures the intended generalization",
+      "deliverable": "Source×binary joint distribution report, original-family grouping and separate seed/template generalization scopes",
+      "conditions": [
+        "Group verified punctuation/style variants together.",
+        "Review lexical near matches individually; different payloads are not automatic duplicates.",
+        "Report performance by source/length/template and use matched benign format controls."
+      ]
+    },
+    {
+      "order": 5,
+      "task": "Run matched method comparisons after dataset QA passes",
+      "deliverable": "Fresh baseline then same frozen LoRA, capacity match, all-layer probes and fusion comparisons on one new data version",
+      "conditions": [
+        "Register dataset, model and extraction identities anew; do not reuse old features with new text.",
+        "Select checkpoints/layers/thresholds using validation only.",
+        "Validate extraction numerical consistency before interpreting small gains.",
+        "Use one protocol across all method arms; scores across data versions are not algorithm deltas."
+      ]
+    }
+  ]
+}

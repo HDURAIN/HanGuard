@@ -1,0 +1,131 @@
+{
+  "split": "validation",
+  "seed": 42,
+  "selected_layers": [
+    17,
+    18,
+    28,
+    32
+  ],
+  "fixed_layers": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "common_epoch_budget": 12,
+  "common_batch_order": true,
+  "paired_dropout_stream": true,
+  "matched_initialization": {
+    "arms": [
+      "repeat_last",
+      "fusion_fixed",
+      "fusion_selected"
+    ],
+    "parameters": 1656709,
+    "initialization_sha256": "c7c378e28d7d63506f935c4edb331867c93f3e127bf3009809044246e89035e0"
+  },
+  "arms": {
+    "last": {
+      "parameters": 327937,
+      "initial_state_sha256": "3067ae33d91daa2a06c3cecc4f7ffca0bb06d307ec8ea402dbad580289794330",
+      "best_epoch": 4,
+      "validation_bce": 0.07352400571107864,
+      "threshold": 0.5262744806139764,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9740745517864052,
+        "f1": 0.975182121249537,
+        "recall": 0.9717027559055118,
+        "precision": 0.9786864931846344,
+        "fpr": 0.023312550826782324,
+        "bce": 0.07352401610610196,
+        "brier": 0.020272718430825745,
+        "tp": 3949,
+        "tn": 3603,
+        "fp": 86,
+        "fn": 115,
+        "threshold": 0.5262744806139764,
+        "auroc": 0.9963905647349109,
+        "auprc": 0.9969447422717015
+      },
+      "checkpoint_sha256": "7843235dd97fe48e9500a1953bba52a3687ee5ba5944eed09e2176155361f306"
+    },
+    "repeat_last": {
+      "parameters": 1656709,
+      "initial_state_sha256": "c7c378e28d7d63506f935c4edb331867c93f3e127bf3009809044246e89035e0",
+      "best_epoch": 4,
+      "validation_bce": 0.07334115356206894,
+      "threshold": 0.4591712500961751,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9740745517864052,
+        "f1": 0.9752066115702479,
+        "recall": 0.9726870078740157,
+        "precision": 0.9777393024981449,
+        "fpr": 0.02439685551640011,
+        "bce": 0.07334115547663016,
+        "brier": 0.020271366958570375,
+        "tp": 3953,
+        "tn": 3599,
+        "fp": 90,
+        "fn": 111,
+        "threshold": 0.4591712500961751,
+        "auroc": 0.9964847476963861,
+        "auprc": 0.9970353794820658
+      },
+      "checkpoint_sha256": "c88bf6b596e4b3b37cb249a78ee8ef34d84d9c17781b771c89b175f122a9a03e"
+    },
+    "fusion_fixed": {
+      "parameters": 1656709,
+      "initial_state_sha256": "c7c378e28d7d63506f935c4edb331867c93f3e127bf3009809044246e89035e0",
+      "best_epoch": 3,
+      "validation_bce": 0.0730317011475563,
+      "threshold": 0.5116525442256633,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9752353927511931,
+        "f1": 0.9763255240443897,
+        "recall": 0.9741633858267716,
+        "precision": 0.9784972812654473,
+        "fpr": 0.02358362699918677,
+        "bce": 0.0730317076528506,
+        "brier": 0.019723226366199945,
+        "tp": 3959,
+        "tn": 3602,
+        "fp": 87,
+        "fn": 105,
+        "threshold": 0.5116525442256633,
+        "auroc": 0.9967475528438451,
+        "auprc": 0.99728383273112
+      },
+      "checkpoint_sha256": "5f1e948c9898dd95d5c4a063f5f7dd5fabbf6e80816b4cc3e327789daff0a429"
+    },
+    "fusion_selected": {
+      "parameters": 1656709,
+      "initial_state_sha256": "c7c378e28d7d63506f935c4edb331867c93f3e127bf3009809044246e89035e0",
+      "best_epoch": 4,
+      "validation_bce": 0.07172256708145142,
+      "threshold": 0.5210425950586907,
+      "validation_metrics": {
+        "n": 7753,
+        "accuracy": 0.9767831807042435,
+        "f1": 0.9778434268833087,
+        "recall": 0.9773622047244095,
+        "precision": 0.9783251231527094,
+        "fpr": 0.02385470317159122,
+        "bce": 0.07172257423588345,
+        "brier": 0.019577194054095463,
+        "tp": 3972,
+        "tn": 3601,
+        "fp": 88,
+        "fn": 92,
+        "threshold": 0.5210425950586907,
+        "auroc": 0.9966909230036947,
+        "auprc": 0.9972343026750379
+      },
+      "checkpoint_sha256": "e1d60357f35d21124e9e803709e940c85af7458452313c7df10caec1ab93ce50"
+    }
+  },
+  "validation_predictions_sha256": "4a64916256f1da42489d5201139a3f1380fb32c25c4b521ff51c1da990d71d17"
+}
