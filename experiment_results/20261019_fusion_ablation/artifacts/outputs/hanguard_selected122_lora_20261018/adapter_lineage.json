@@ -1,0 +1,18 @@
+{
+  "adapter_sha256": "d4b8d083bf10c70175553adff3bc8abb7e631d8cb16aa9d351b903ddaafc920e",
+  "selection_sha256": "9f6a4c6aba3d085fd164cf1d962210979b05a235aa1d9a100addae4ac06b02ea",
+  "actual_selected_phase": {
+    "phase": 3,
+    "phase_name": "joint",
+    "epoch": 3.0,
+    "validation_bce": 0.07445266097784042,
+    "seconds": 92.79113238095306
+  },
+  "adapter_delta": {
+    "basis": "Standard PEFT initialization has zero LoRA B matrices; selected checkpoint compared with zero B.",
+    "lora_b_tensors": 152,
+    "nonzero_lora_b_tensors": 152,
+    "lora_b_squared_l2": 2.3819403365487233,
+    "lora_b_max_abs": 0.005772192031145096
+  }
+}

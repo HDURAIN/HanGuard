@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "pid": 1426229,
+    "uid": 1036,
+    "start_time_ticks": 187719996,
+    "command_sha256": "4b5d8e0a155ddeed0bb8feb0ad449134ab8dbfd035cac669fb30a8c112b88f9a"
+  },
+  "command": [
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/qwen3guard_supervised_study_v2.py",
+    "run",
+    "--output",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2"
+  ],
+  "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/coordinator.log",
+  "launched_unix": 1792921491.958961
+}

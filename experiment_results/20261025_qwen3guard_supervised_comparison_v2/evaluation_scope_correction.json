@@ -1,0 +1,12 @@
+{
+  "role": "auxiliary_supervised_adaptation",
+  "represents_original_qwen3guard": false,
+  "raw_model_reference": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_clean_test_20261025_v2",
+  "original_binary_accuracy": {
+    "unsafe_only": 0.9086227544910179,
+    "unsafe_or_controversial": 0.9482634730538922
+  },
+  "native_local_five_class": "N/A: incompatible native and local taxonomies without a reliable direct mapping",
+  "scientific_protocol_results_predictions_unchanged": true,
+  "created_unix": 1792932924.4134836
+}

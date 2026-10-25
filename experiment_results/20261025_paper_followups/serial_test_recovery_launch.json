@@ -1,0 +1,16 @@
+{
+  "identity": {
+    "pid": 1080829,
+    "uid": 1036,
+    "start_time_ticks": 187335133,
+    "command_sha256": "c499b7dee89abcfd25568b0f9e8c2bdcc5e3b03ebea9410cdcace14acc2da9d8"
+  },
+  "command": [
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/paper_followup_recovery.py",
+    "--output",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025"
+  ],
+  "launched_unix": 1792917643.3229523,
+  "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/serial_test_recovery.log"
+}

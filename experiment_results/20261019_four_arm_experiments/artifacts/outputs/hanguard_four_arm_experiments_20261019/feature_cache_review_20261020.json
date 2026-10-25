@@ -1,0 +1,54 @@
+{
+  "reviewed_unix": 1792511442.7837183,
+  "formal_study_state": "requires_review",
+  "formal_heads_completed": 0,
+  "formal_heads_planned": 24,
+  "training_rows_extracted": 55296,
+  "training_rows_total": 66802,
+  "training_tokens_extracted": 2222080,
+  "training_tokens_total": 5529795,
+  "completed_row_audit": {
+    "schema": "hanguard_completed_token_rows_parent_last_comparison_v1",
+    "complete": true,
+    "passed": false,
+    "original_study": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_four_arm_experiments_20261019",
+    "original_study_protocol_sha256": "40ed402ad52604ddb67d1fa2526f470aa3440e2f9d9634febc3334cd4e0fceda",
+    "cache_plan_sha256": "160c13880ee8ba6dfc71734a865a8c1f70f5183f03df0e98e7df91d67d947200",
+    "completed_chunks": 27,
+    "expected_completed_rows": 55296,
+    "checked_rows": 55296,
+    "exact_matching_rows": 55104,
+    "different_rows": 192,
+    "different_elements": 426050,
+    "max_abs": 9.5625,
+    "affected_chunks": [
+      {
+        "chunk_id": 26,
+        "different_rows": 192,
+        "min_valid_tokens": 128,
+        "max_valid_tokens": 130,
+        "max_abs": 9.5625
+      }
+    ],
+    "comparison": "all completed raw L32 token-cache row ends versus identically ordered parent merged L32 last vectors",
+    "atol": 0,
+    "rtol": 0,
+    "full_feature_artifacts_hashed_by_this_audit": false,
+    "scope": "numeric last-vector audit for every completed row; this does not establish agreement of all intermediate token vectors",
+    "allow_production_resume": false,
+    "completed_unix": 1792511362.130905
+  },
+  "diagnostic_queue": {
+    "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_four_arm_replay_diagnostics_20261020",
+    "protocol_sha256": "ed2a880daebf4253fe40fb423d637b59255ecc2ad60b94dc9a0d5201c3e4e5f1",
+    "state_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_four_arm_replay_diagnostics_20261020/state.json",
+    "state_at_review": "waiting_empty_gpu",
+    "automatic_run": true,
+    "coordinator_pid": 3055154,
+    "free_gpu_count_at_review": 0
+  },
+  "scientific_protocol_modified": false,
+  "dataset_modified": false,
+  "tolerance_relaxed": false,
+  "production_resume_currently_allowed": false
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "qwen3guard_supervised_matched_data_v2",
+  "state": "complete",
+  "automatic_run": false,
+  "coordinator_identity": {
+    "pid": 1426229,
+    "uid": 1036,
+    "start_time_ticks": 187719996,
+    "command_sha256": "4b5d8e0a155ddeed0bb8feb0ad449134ab8dbfd035cac669fb30a8c112b88f9a"
+  },
+  "updated_unix": 1792931049.369444,
+  "progress": {
+    "features": {
+      "train": {
+        "total_shards": 131,
+        "complete_shards": 131,
+        "complete": true
+      },
+      "validation": {
+        "total_shards": 17,
+        "complete_shards": 17,
+        "complete": true
+      },
+      "test": {
+        "total_shards": 17,
+        "complete_shards": 17,
+        "complete": true
+      }
+    },
+    "training": {
+      "total_jobs": 6,
+      "selected_jobs": 6,
+      "completed_jobs": 6,
+      "total_heads": 18,
+      "selected_heads": 18,
+      "test_complete_heads": 18,
+      "pending_jobs": [],
+      "test_barrier_locked": true
+    }
+  },
+  "active_workers": [],
+  "failures": {}
+}

@@ -26,6 +26,9 @@ import unicodedata
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
+from scripts.hanguard import remediated_dataset_contract as data_contract
+
 SPLITS = ('train', 'validation', 'test')
 ENTRYPOINT = 'hanguard_current_training'
 CATEGORY_ARMS = ['last_mlp', 'learned_queries', 'description_queries']
@@ -35,7 +38,8 @@ BINARY_ARMS = {
 }
 COMMON_CODE = ['hanguard_model.py', 'scripts/hanguard/train.py',
                'scripts/hanguard/current_training.py', 'scripts/hanguard/repaired_study.py',
-               'scripts/hanguard/repaired_heads.py']
+               'scripts/hanguard/repaired_heads.py', 'scripts/hanguard/remediated_dataset_contract.py',
+               'scripts/hanguard/remediated_binary_study.py']
 CATEGORY_CODE = ['multilabel_study.py', 'multilabel_heads.py', 'primary_category_study.py',
                  'primary_category_contract.py', 'primary_category_queue.py', 'primary_category_report.py']
 
@@ -68,6 +72,7 @@ def normalized(text):
 def audit_data(directory, stage, max_tokens):
     """Inspect inherited labels and split isolation without transforming rows."""
     directory = Path(directory)
+    release = data_contract.release_contract(directory)
     summaries, hashes, identities = {}, {}, {}
     permitted = {'chinese_curated', 'jailbench'} | ({'wildguard_zh'} if stage == 'binary' else set())
     for split in SPLITS:
@@ -82,22 +87,25 @@ def audit_data(directory, stage, max_tokens):
             raise ValueError(f'{split}: split or source outside the registered stage scope')
         if not frame.prompt.map(lambda text: isinstance(text, str) and bool(text.strip())).all():
             raise ValueError(f'{split}: full nonempty input text required')
-        categories = pd.to_numeric(frame.category_id, errors='coerce')
-        if not categories.isin(range(6)).all() or not frame.prompt_harm_label.isin(['harmful', 'unharmful']).all():
-            raise ValueError(f'{split}: only inherited categories 0..5 and known binary labels are supported')
-        if not categories.gt(0).eq(frame.prompt_harm_label.eq('harmful')).all():
-            raise ValueError(f'{split}: inherited type and binary labels disagree')
-        if not categories.eq(0).any() or not categories.gt(0).any():
+        categories, type_mask, harmful = data_contract.label_arrays(frame,
+            require_type_mask=bool(release))
+        canonical = frame.assign(_normalized_text=frame.prompt.map(normalized))
+        if canonical.groupby('_normalized_text').prompt_harm_label.nunique().gt(1).any():
+            raise ValueError(f'{split}: identical canonical full text has contradictory binary labels')
+        if stage == 'category' and (categories < 0).any():
+            raise ValueError(f'{split}: existing primary-category stage requires known types; use the binary release for unknown types')
+        if not harmful.any() or harmful.all():
             raise ValueError(f'{split}: both safe and harmful evaluation examples are required')
         lengths = pd.to_numeric(frame.prompt_tokens, errors='coerce')
         if lengths.isna().any() or not lengths.ge(1).all() or not lengths.eq(lengths.astype('int64')).all() or lengths.max() > max_tokens:
             raise ValueError(f'{split}: stored full input lengths exceed the budget; increase max_tokens, never truncate')
         identities[split] = {key: set(frame[key]) for key in ['base_id', 'group_id']}
-        identities[split]['normalized_text'] = set(frame.prompt.map(normalized))
+        identities[split]['normalized_text'] = set(canonical._normalized_text)
         hashes[split] = sha(path)
-        summaries[split] = dict(rows=len(frame), type_rows=int(categories.gt(0).sum()),
-            safe_rows=int(categories.eq(0).sum()), maximum_stored_tokens=int(lengths.max()),
-            category_counts={str(key): int(value) for key, value in categories.value_counts().sort_index().items()},
+        summaries[split] = dict(rows=len(frame), type_rows=int(type_mask.sum()),
+            safe_rows=int((~harmful).sum()), harmful_rows=int(harmful.sum()),
+            unknown_type_rows=int((categories < 0).sum()), maximum_stored_tokens=int(lengths.max()),
+            category_counts={str(key): int(value) for key, value in pd.Series(categories).value_counts().sort_index().items()},
             source_counts={str(key): int(value) for key, value in frame.source.value_counts().items()})
     overlaps = {}
     for index, left in enumerate(SPLITS):
@@ -107,11 +115,11 @@ def audit_data(directory, stage, max_tokens):
                 raise ValueError(f'Cross-split identity/text overlap: {left}/{right}: {counts}')
             overlaps[f'{left}__{right}'] = counts
     qa = directory / 'release_qa.json'
-    if stage == 'binary' and qa.exists():
+    if stage == 'binary' and qa.exists() and not release:
         value = json.loads(qa.read_text())
         if value.get('release_status') != 'qa_complete_with_documented_limitations' or value.get('dataset_manifest_sha256') != sha(directory / 'manifest.json'):
             raise ValueError('Binary repaired dataset release QA is missing or inconsistent')
-    return dict(passed=True, stage=stage, data_sha256=hashes, split_summaries=summaries,
+    return dict(passed=True, stage=stage, data_sha256=hashes, split_summaries=summaries, **release,
         cross_split_intersection_counts=overlaps, no_reannotation=True, no_text_changes=True,
         no_resplitting=True, no_truncation=True,
         limitation='Inherited labels; no new human verification. Groups/normalized text audited, not semantic duplicates.',
@@ -155,7 +163,7 @@ def build_protocol(args):
     stage = args.stage
     if args.output.exists() and any(args.output.iterdir()):
         raise FileExistsError('Use a new output directory; existing experiments are immutable (or explicitly --resume)')
-    data = (args.data or ROOT / ('data/three_source_translation_repaired' if stage == 'binary' else 'data/hanguard_two_source_primary_20260928')).resolve()
+    data = (args.data or ROOT / ('data/three_source_remediated_20261012' if stage == 'binary' else 'data/hanguard_two_source_remediated_20261012')).resolve()
     if not args.seeds or len(set(args.seeds)) != len(args.seeds) or any(seed < 0 for seed in args.seeds):
         raise ValueError('Unique nonnegative seeds required')
     if not args.gpus or len(set(args.gpus)) != len(args.gpus) or any(gpu < 0 for gpu in args.gpus):
@@ -184,6 +192,7 @@ def build_protocol(args):
         limitations=['Existing split identities have been explored; not a new blind test.',
                     'Inherited source labels are not newly human-verified gold.',
                     'No augmentation, reannotation, sample filtering or text truncation is performed.'])
+    protocol.update({key: audit[key] for key in ('dataset_contract', 'dataset_version') if key in audit})
     if protocol['token_budget'] < 1 or protocol['head_lr'] <= 0 or args.adapter_lr <= 0:
         raise ValueError('Token budget and learning rates must be positive')
     if stage == 'binary':
@@ -203,6 +212,9 @@ def build_protocol(args):
     else:
         run = (args.parent_run or ROOT / 'outputs/hanguard_repaired_core_20260928/runs/E04_s42').resolve()
         parent, parent_hashes = parent_registration(run)
+        lineage, lineage_hashes = data_contract.category_parent_lineage(data, parent)
+        parent_hashes.update(lineage_hashes)
+        protocol.update(lineage)
         descriptions = (args.descriptions or data / 'descriptions.json').resolve()
         content = json.loads(descriptions.read_text())
         classes = content.get('classes', [])
@@ -312,13 +324,20 @@ def run_worker(study, label, arguments, gpu=None):
     verify(study)
 
 
+def binary_script(protocol):
+    """Old registrations keep their worker; only explicit new data uses the wrapper."""
+    return ('scripts/hanguard/remediated_binary_study.py'
+            if protocol.get('dataset_contract') == data_contract.CONTRACT
+            else 'scripts/hanguard/repaired_study.py')
+
+
 def preflight(study):
     protocol = verify(study)
     if protocol['training_stage'] == 'category':
         run_worker(study, 'extract', ['scripts/hanguard/multilabel_study.py', 'extract', '--output', str(study)], protocol['extraction_gpu'])
         script = 'scripts/hanguard/primary_category_study.py'
     else:
-        script = 'scripts/hanguard/repaired_study.py'
+        script = binary_script(protocol)
     for arm in protocol['all_arms']:
         seed = protocol['seeds'][0]
         arguments = [script, 'preflight', '--output', str(study), '--arm', arm, '--seed', str(seed)]
@@ -367,7 +386,7 @@ def run_registered(study):
     def execute_phase(phase):
         def worker(gpu, assigned):
             for arm, seed in assigned:
-                run_worker(study, f'{phase}_{arm}_s{seed}', ['scripts/hanguard/repaired_study.py', phase,
+                run_worker(study, f'{phase}_{arm}_s{seed}', [binary_script(protocol), phase,
                     '--output', str(study), '--arm', arm, '--seed', str(seed)], gpu)
         gpus = protocol['gpu_ids']
         with ThreadPoolExecutor(max_workers=len(gpus)) as executor:

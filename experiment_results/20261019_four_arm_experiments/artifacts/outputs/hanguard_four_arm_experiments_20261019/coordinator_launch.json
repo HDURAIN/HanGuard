@@ -1,0 +1,26 @@
+{
+  "pid": 301599,
+  "identity": {
+    "pid": 301599,
+    "uid": 1036,
+    "start_time_ticks": 136612897,
+    "command_sha256": "fc30986378ad9a4c0a46aca1d0cf5481f731cd7c44f48983ad2d53b2708911b3",
+    "argv": [
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/four_arm_experiment_study.py",
+      "run",
+      "--output",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_four_arm_experiments_20261019"
+    ],
+    "cwd": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard"
+  },
+  "command": [
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/four_arm_experiment_study.py",
+    "run",
+    "--output",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_four_arm_experiments_20261019"
+  ],
+  "protocol_sha256": "40ed402ad52604ddb67d1fa2526f470aa3440e2f9d9634febc3334cd4e0fceda",
+  "started_unix": 1792410420.9757195
+}

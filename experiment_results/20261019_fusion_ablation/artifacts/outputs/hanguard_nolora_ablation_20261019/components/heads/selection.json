@@ -1,0 +1,272 @@
+{
+  "schema": "hanguard_nolora_fusion_ablation_v1",
+  "task": "components",
+  "complete": true,
+  "no_lora": true,
+  "thresholds": {
+    "uniform_weights": 0.45460960132245004,
+    "no_anchor": 0.5124892992226376,
+    "shared_projection": 0.4721973622382035,
+    "top4": 0.5763018708828782,
+    "two_layers": 0.5472702295115466,
+    "mean_pool": 0.5887043177737253,
+    "anchor_replay": 0.39511502559788186
+  },
+  "best_epochs": {
+    "uniform_weights": 3,
+    "no_anchor": 3,
+    "shared_projection": 3,
+    "top4": 3,
+    "two_layers": 3,
+    "mean_pool": 3,
+    "anchor_replay": 3
+  },
+  "validation_bce": {
+    "uniform_weights": 0.11590841358808719,
+    "no_anchor": 0.11774325396293189,
+    "shared_projection": 0.11972888505309671,
+    "top4": 0.1166373778691149,
+    "two_layers": 0.11686930748294157,
+    "mean_pool": 0.14268883728775164,
+    "anchor_replay": 0.114737122811724
+  },
+  "validation_metrics": {
+    "uniform_weights": {
+      "n": 8350,
+      "accuracy": 0.9541317365269462,
+      "f1": 0.9584012164657326,
+      "recall": 0.9545651233232367,
+      "precision": 0.96226826608506,
+      "fpr": 0.04640557939914163,
+      "bce": 0.11590841358808719,
+      "brier": 0.03421655496570086,
+      "tp": 4412,
+      "tn": 3555,
+      "fp": 173,
+      "fn": 210,
+      "threshold": 0.45460960132245004,
+      "auroc": 0.9917994597586093,
+      "auprc": 0.9938077743996598
+    },
+    "no_anchor": {
+      "n": 8350,
+      "accuracy": 0.9550898203592815,
+      "f1": 0.9591992166249592,
+      "recall": 0.9536996971008221,
+      "precision": 0.9647625300941125,
+      "fpr": 0.043186695278969955,
+      "bce": 0.11774325396293189,
+      "brier": 0.03421744759900233,
+      "tp": 4408,
+      "tn": 3567,
+      "fp": 161,
+      "fn": 214,
+      "threshold": 0.5124892992226376,
+      "auroc": 0.9913789341143218,
+      "auprc": 0.9935789076152781
+    },
+    "shared_projection": {
+      "n": 8350,
+      "accuracy": 0.9531736526946107,
+      "f1": 0.9575967899360156,
+      "recall": 0.9552141929900476,
+      "precision": 0.9599913024570559,
+      "fpr": 0.04935622317596566,
+      "bce": 0.11972888505309671,
+      "brier": 0.03478670574519032,
+      "tp": 4415,
+      "tn": 3544,
+      "fp": 184,
+      "fn": 207,
+      "threshold": 0.4721973622382035,
+      "auroc": 0.9910256716803197,
+      "auprc": 0.9934034340874975
+    },
+    "top4": {
+      "n": 8350,
+      "accuracy": 0.9532934131736527,
+      "f1": 0.9574700109051254,
+      "recall": 0.9498052790999567,
+      "precision": 0.965259454705365,
+      "fpr": 0.04238197424892704,
+      "bce": 0.1166373778691149,
+      "brier": 0.034890819673839384,
+      "tp": 4390,
+      "tn": 3570,
+      "fp": 158,
+      "fn": 232,
+      "threshold": 0.5763018708828782,
+      "auroc": 0.9915517640023548,
+      "auprc": 0.9936517472918789
+    },
+    "two_layers": {
+      "n": 8350,
+      "accuracy": 0.9532934131736527,
+      "f1": 0.9576179091501847,
+      "recall": 0.9532669839896148,
+      "precision": 0.9620087336244542,
+      "fpr": 0.04667381974248927,
+      "bce": 0.11686930748294157,
+      "brier": 0.034873752154817285,
+      "tp": 4406,
+      "tn": 3554,
+      "fp": 174,
+      "fn": 216,
+      "threshold": 0.5472702295115466,
+      "auroc": 0.9915298845974561,
+      "auprc": 0.9936334929844054
+    },
+    "mean_pool": {
+      "n": 8350,
+      "accuracy": 0.9461077844311377,
+      "f1": 0.9509910694837725,
+      "recall": 0.9446127217654695,
+      "precision": 0.9574561403508772,
+      "fpr": 0.05203862660944206,
+      "bce": 0.14268883728775164,
+      "brier": 0.042490415598921444,
+      "tp": 4366,
+      "tn": 3534,
+      "fp": 194,
+      "fn": 256,
+      "threshold": 0.5887043177737253,
+      "auroc": 0.9875877033333768,
+      "auprc": 0.9909076904183987
+    },
+    "anchor_replay": {
+      "n": 8350,
+      "accuracy": 0.9548502994011976,
+      "f1": 0.9593793772222821,
+      "recall": 0.9632193855473821,
+      "precision": 0.9555698647778493,
+      "fpr": 0.05552575107296137,
+      "bce": 0.114737122811724,
+      "brier": 0.033753913074375426,
+      "tp": 4452,
+      "tn": 3521,
+      "fp": 207,
+      "fn": 170,
+      "threshold": 0.39511502559788186,
+      "auroc": 0.9919380486681536,
+      "auprc": 0.9939269306718833
+    }
+  },
+  "specs": {
+    "uniform_weights": {
+      "kind": "uniform_weights",
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "anchor": 19
+    },
+    "no_anchor": {
+      "kind": "no_anchor",
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "anchor": 19
+    },
+    "shared_projection": {
+      "kind": "shared_projection",
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "anchor": 19
+    },
+    "top4": {
+      "kind": "top4",
+      "layers": [
+        15,
+        17,
+        18,
+        19
+      ],
+      "anchor": 19
+    },
+    "two_layers": {
+      "kind": "two_layers",
+      "layers": [
+        16,
+        32
+      ],
+      "anchor": 19
+    },
+    "mean_pool": {
+      "kind": "mean_pool",
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "anchor": 19
+    },
+    "anchor_replay": {
+      "kind": "full",
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "anchor": 19
+    }
+  },
+  "parameters": {
+    "uniform_weights": {
+      "total": 1656709,
+      "trainable": 1656705
+    },
+    "no_anchor": {
+      "total": 1328901,
+      "trainable": 1328901
+    },
+    "shared_projection": {
+      "total": 672517,
+      "trainable": 672517
+    },
+    "top4": {
+      "total": 1656709,
+      "trainable": 1656709
+    },
+    "two_layers": {
+      "total": 1000579,
+      "trainable": 1000579
+    },
+    "mean_pool": {
+      "total": 327937,
+      "trainable": 327937
+    },
+    "anchor_replay": {
+      "total": 1656709,
+      "trainable": 1656709
+    }
+  },
+  "final_common_epoch_budget": 12,
+  "total_seconds": 478.1901949089952,
+  "selection_scope": "validation only",
+  "execution": {
+    "training_device": "cpu",
+    "cpu_threads": 8,
+    "cuda_visible_devices": "",
+    "torch_cuda_version": "12.4",
+    "cuda_device_name": null,
+    "cuda_device_capability": null,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false
+  },
+  "checkpoint_sha256": "51545e6139d5218fdd4414f51e0143d701c730099b67bf934a76d7a44ef53f94",
+  "test_opened": false,
+  "shared_projection_definition": "Shared Linear-GELU-LayerNorm module across four distinct inputs",
+  "mean_pool_definition": "Mean raw 8/16/24/32 features, then the single-layer LayerNorm and MLP"
+}

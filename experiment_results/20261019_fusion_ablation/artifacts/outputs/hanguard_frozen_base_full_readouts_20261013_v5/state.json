@@ -1,0 +1,16 @@
+{
+  "state": "completed",
+  "training_started": true,
+  "backbone_training_started": false,
+  "formal_validation_opened": true,
+  "formal_test_opened": true,
+  "protocol_sha256": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+  "updated_unix": 1792261537.530297,
+  "error_type": null,
+  "reason": null,
+  "automatic_retry": false,
+  "recovery_control_protocol_sha256": "92aae7dcf841d543d65d210f91de0098e3fe477a7884eb8b10b9e383dd692172",
+  "head_fit_attempt": 3,
+  "post_selection_recovery_control_sha256": "30c61fa1986312a29e420e613e9a7d87f22586188bfa6eb779c86c0f6e27462d",
+  "test_monitor_control_sha256": "1a80fe1fccffd9069a570ea582e821dc2d6810f89193b68f25630db300a0936e"
+}

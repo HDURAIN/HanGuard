@@ -1,0 +1,20 @@
+{
+  "schema": "hanguard_qwen3guard_clean_test_v1",
+  "source": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_clean_test_20261025",
+  "files": {
+    "ADMISSION.md": "1d2e3b7213a2198e39d71be55f3436681a754e18ae00634a3340ccaadd0cf457",
+    "README.md": "5eb86af490a746001b9f8163a0fcb7c3733ed0294cf386cf218c8e127460b509",
+    "plan.json": "7120d55a0064eb69e1d5c9e1df84e547995a4df05f32289455aec0cfcf6303d4",
+    "protocol.json": "68144913eaa93059a9fddba7cdaa04ac6921da6eebe1530d7097a4fbc5f0e94a",
+    "protocol_registration.json": "f34cd037f81dbeba69c0213a0544325730a4274bbe91b0f0f6583d2f1e4fb9f1",
+    "queue_registration.json": "9566afafc804c87224ca35e875f9ee0bed602de08d6d928410133ffd5a8b9bcb",
+    "shared_admission_amendment.json": "360ccedda723a99802c02ad391c5a23d5c97ea0834acebc6bb98265ace1164d8",
+    "source_snapshot/qwen3guard_clean_eval.py": "b4211ea143567f55ba2239d7d0b7c84076b2ef3b07ed9d6d5f733da864d4cdce",
+    "source_snapshot/qwen3guard_clean_queue.py": "4d631f45b412613d6855aed17167dbe13b8500fafa3143820620c6ba5b068924",
+    "source_snapshot/qwen3guard_shared_runner.py": "b175ca8f2afa3da60b17f67c4522e8ce4528cc4ee3f69a40673f2be491dafa1c",
+    "superseded.json": "9292e22c37f98205c8d26f0cc983bbb6c7ae2c74f22b931a1a54effc0a94ec05",
+    "tests/test_qwen3guard_clean_eval.py": "1f3aa72d69ace8de6ba9725a0e63a02c6b85b8d4a260e0abeb472435d8873595",
+    "tests/test_qwen3guard_clean_queue.py": "24efea85dc152eb9c6a2dfb238d385aeb9d0311731e8080a22520d0eaac73d51",
+    "tests/test_qwen3guard_shared_runner.py": "60c9c123b6e3f1e247b114e9ac092668e4aa2b5f85eced6a224ab7a416627918"
+  }
+}

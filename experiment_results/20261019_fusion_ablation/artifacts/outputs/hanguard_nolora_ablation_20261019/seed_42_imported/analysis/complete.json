@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "artifacts": {
+    "results.json": "fae15b7aaf720cf61dc5f430f9f0ad3c7395f6a0e04b3044582f519aa556cb09",
+    "predictions.parquet": "c801a81cf00c77cd163f75bc07fa35cd9bf3b79884da8639978562044100a512",
+    "predictions.csv": "dbafa67bbb1e4990267a42f8493bbcb3acc39867e74978afa77400009a65df13"
+  }
+}

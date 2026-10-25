@@ -1,0 +1,31 @@
+{
+  "schema": "qwen3guard_authorized_shared_admission_v1",
+  "protocol_sha256": "acd0c5c9d015a9b43300c78c1961ab44bdb87bd193f80b5efd4a6e9e23d22847",
+  "original_queue_registration_sha256": "fdb610e4de499eb01b81cf30a520a708bacd76c93d22ba9354ce0645c6759d41",
+  "plan_sha256": "7120d55a0064eb69e1d5c9e1df84e547995a4df05f32289455aec0cfcf6303d4",
+  "sources": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/qwen3guard_shared_runner.py": "6436ff9acdea37c46d265c9009ec78bdd7fb06236a1792c9295dc625817bd941",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/qwen3guard_clean_eval.py": "5bfef13a44ef32c3d7c18c617d2c3bf5486a5c188629dd5e1e08d7b2153e1c7a",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/qwen3guard_clean_queue.py": "39a20a3c28bf7d3289c31cd1db4cd7751e9fb3fe45bd0ee83a7cc3433bc73ff7"
+  },
+  "authorization": "User explicitly allowed sharing GPUs with other users on 2026-10-25",
+  "gpu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "poll_seconds": 1.0,
+  "minimum_free_gib": 22.0,
+  "allocator_cap_gib": 14.0,
+  "admission_headroom_gib": 8.0,
+  "admission": "Other users may already be present; require verified inventory, UUID and free memory",
+  "other_processes": "Never signal, reconfigure or evict another user's process",
+  "unchanged": "Raw texts, all 8350 rows, official template, precision, decoding, fixed batch plan and scoring",
+  "batch_splitting": "Only the original registered OOM-recursive splitting is allowed",
+  "timing": "Shared-GPU timings are operational estimates, not isolated efficiency benchmarks"
+}

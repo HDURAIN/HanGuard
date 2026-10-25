@@ -1,5 +1,7 @@
 # 历史归档
 
+本目录的压缩归档属于20260928历史整理。当前论文与后续实验轻量证据见[实验结果目录](../experiment_results/README.md)；20261025入口整理与核验见[仓库整理记录](../docs/repository_cleanup.md)。
+
 这里保存清理前的代码和必要来源证据，不是活动训练目录。所有归档均在项目根目录内部，清理不会处理服务器其他目录。
 
 - `repository_before_cleanup_20260928.tar.gz`：清理前的脚本、测试、README 和研究文档；对应 JSON 保存归档 SHA256。

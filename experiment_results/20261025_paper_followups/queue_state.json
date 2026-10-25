@@ -1,0 +1,76 @@
+{
+  "schema": "hanguard_three_paper_followups_v1",
+  "state": "complete",
+  "automatic_run": false,
+  "coordinator_identity": {
+    "pid": 1080829,
+    "uid": 1036,
+    "start_time_ticks": 187335133,
+    "command_sha256": "c499b7dee89abcfd25568b0f9e8c2bdcc5e3b03ebea9410cdcace14acc2da9d8"
+  },
+  "updated_unix": 1792917769.2073548,
+  "children": {
+    "pooling": {
+      "total_jobs": 6,
+      "selected_jobs": 6,
+      "fit_complete_jobs": 6,
+      "completed_jobs": 6,
+      "test_complete_jobs": 6,
+      "total_heads": 12,
+      "selected_heads": 12,
+      "test_complete_heads": 12,
+      "pending_jobs": [],
+      "test_barrier_locked": true
+    },
+    "external": {
+      "state": "complete",
+      "pending_jobs": [],
+      "completed_jobs": 6,
+      "total_jobs": 6,
+      "selected_seeds": [
+        42,
+        43,
+        44
+      ],
+      "evaluated_seeds": [
+        42,
+        43,
+        44
+      ]
+    },
+    "analysis": {
+      "cpu_analysis_complete": true,
+      "benchmark_complete": true,
+      "benchmark_pending": false
+    }
+  },
+  "active_workers": [],
+  "failures": {},
+  "recovered_failures": {
+    "external::43": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/logs/external__43_gpu3_1792901784424541077.log"
+    },
+    "external::44": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/logs/external__44_gpu4_1792901798709794668.log"
+    }
+  },
+  "recent_events": [
+    {
+      "seed": 43,
+      "gpu": 1,
+      "exit_code": 0,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/logs/serial_external_s43_gpu1_1792917656931448271.log",
+      "finished_unix": 1792917715.1008506
+    },
+    {
+      "seed": 44,
+      "gpu": 1,
+      "exit_code": 0,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/logs/serial_external_s44_gpu1_1792917720351782781.log",
+      "finished_unix": 1792917769.1647615
+    }
+  ],
+  "recovery_registration_sha256": "1e6baa3965364aac4f1f577bae5f656acbcf7e74000e019bad5a758e54d99bc9"
+}

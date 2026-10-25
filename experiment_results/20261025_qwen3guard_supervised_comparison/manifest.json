@@ -1,0 +1,28 @@
+{
+  "schema": "qwen3guard_supervised_matched_data_v1",
+  "files": {
+    "PROTOCOL_NOTES.md": "b9ea38607ff3df9b7bbe901da3e25629384cc542d327ad2a4063b5ad261c95e1",
+    "coordinator_launch.json": "3f20294fb37d3b110643b36e26cbc5d6ef29f32cf1bfb20caec1e974401f31cc",
+    "features/train/manifest.json": "6ac80bd2a4a94797364e33f24eb33426bebd117fdd68486cff692e11505ce343",
+    "features/validation/manifest.json": "9167a375457024d0ed48d8facf0561b46beeede24a0c1abd30658e3a0b9a4c45",
+    "protocol.json": "e513b743dbea8d80a9612ef8fcbb1756eab34a6c1c51dad0935b371a53a6ae75",
+    "protocol_registration.json": "bfa5f696d2f0753b504013ff55df9ae35613494edba06306e5f7564bbe9b11f1",
+    "queue_state.json": "6fc1596d0950da228d53b669653cb083bf9036c69ad0295aa227b16bb4221283",
+    "queue_state_before_drain_audit.json": "b5e4f9e4c903f3a2bc82e67d04f77c6e49db976fba30c72e65b5c69e67bd472e",
+    "runtime_failure_summary.json": "5579a8befcb8389f4c3f054da905e6bfe57f06c0daa147e3e379952d54761509",
+    "source_snapshot/clean_ablation_heads.py": "b64f06e7af4a86841f64a92d8c81f6cee965c43ab2203272762bc98e362e8d2f",
+    "source_snapshot/clean_ablation_training.py": "5146c503f18502f384e204431097fab5b7719a1c8be63e8f36b0ca7532541aff",
+    "source_snapshot/frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+    "source_snapshot/multilabel_heads.py": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6",
+    "source_snapshot/paper_pooling_controls.py": "5739f97863b25387a1a10cbb96d547023679946e1859a2fdaef3e4da28fed15a",
+    "source_snapshot/qwen3guard_clean_queue.py": "39a20a3c28bf7d3289c31cd1db4cd7751e9fb3fe45bd0ee83a7cc3433bc73ff7",
+    "source_snapshot/qwen3guard_supervised_features.py": "2cf86b773754cc3815265bdec854732a8b5d6ca7de14002415a3b3bd7453de2c",
+    "source_snapshot/qwen3guard_supervised_study.py": "09d740d7f15b3dc6b0839e39dd8b23b5ef5ac72271f879aa2eea0dba50f4f639",
+    "source_snapshot/qwen3guard_supervised_training.py": "a0c879911bfab4682f5d3449d7abade52a3316ddcdfcc4ba4225370d5e57138a",
+    "source_snapshot/test_qwen3guard_supervised_features.py": "8fe73460613653c15b371956e36c9bde6f2711f850bfdc3043565f85dd6bd247",
+    "source_snapshot/test_qwen3guard_supervised_study.py": "d94607843dcaddb4b5764749fc26dbc83ce42d77f7d89ba10c1d50b92a11b510",
+    "source_snapshot/test_qwen3guard_supervised_training.py": "ee54f6e4d41d712bd920ae10fc146d27dadf72c518d73ad073c6c6baeb9be68d",
+    "validation_checks.json": "3e4407926a519f7746a3d1b3a2c08876abd464407deaa3731f6850efbebc89a7"
+  },
+  "source": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025"
+}

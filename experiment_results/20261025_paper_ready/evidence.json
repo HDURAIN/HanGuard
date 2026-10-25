@@ -1,0 +1,51 @@
+{
+  "schema": "hanguard_paper_materials_20261025_v1",
+  "scope": "Paper tables and writing materials derived from completed runs; no new experiments",
+  "sources": {
+    "outputs/hanguard_clean_ablation_20261022/protocol.json": "3ea2567ea04e7fc5390bb42fd8cfce6266b16e2c4c1e986d84470f684b9bd98b",
+    "outputs/hanguard_clean_ablation_20261022/results.json": "e4642e585fc6547ca5c30e794bb3f61fc9c07dba4a9dfa06af6ca5b130d5c52d",
+    "outputs/hanguard_clean_ablation_20261022/selection_lock.json": "dea75159eafe1cbd3fc8d8ae2c4eaa148bad3013a64a588a4d53355ff52006ed",
+    "outputs/qwen3guard_clean_test_20261025_v2/protocol.json": "acd0c5c9d015a9b43300c78c1961ab44bdb87bd193f80b5efd4a6e9e23d22847",
+    "outputs/qwen3guard_clean_test_20261025_v2/results.json": "dbefe459d2685ca6e5c1c8666b830dff79a1c084bda9799b059da1ddd4d546fb",
+    "outputs/hanguard_paper_followups_20261025/pooling/results.json": "37831748f3664647933c9509271b82c969677f5d37e3e1e3f4dcaa714e539478",
+    "outputs/hanguard_paper_followups_20261025/external/results.json": "bd09c49e6eb0960a9319b51b79da12658da64512b712e52063f3f8f299e84227",
+    "data/hanguard_two_source_remediated_20261012/descriptions.json": "ee797066ad76c8c3dc6d864f66e16e446225473831c95e172e8721f9b96540ae",
+    "scripts/hanguard/clean_ablation_heads.py": "b64f06e7af4a86841f64a92d8c81f6cee965c43ab2203272762bc98e362e8d2f",
+    "scripts/hanguard/multilabel_heads.py": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6",
+    "scripts/hanguard/package_paper_experiment_materials.py": "1c290c6a1e060b3d1d3a489473f69b24e92bd26c6272628cd06ca225023afbb0",
+    "outputs/hanguard_clean_ablation_20261022/heads/binary/s42/selection.json": "c05c9cee8ef0a0ce84db8c783d89c1c8edc9acb2b7c0708246bd32f2a2ee0c81",
+    "outputs/hanguard_clean_ablation_20261022/heads/binary/s43/selection.json": "0155782785cb146deaa18ca1c1cc37c3a5b3f242fba397b58c211ab0571e0b4e",
+    "outputs/hanguard_clean_ablation_20261022/heads/binary/s44/selection.json": "d3c000578853389b69f264cff380a8433312758d5c9dd843ba28488231e005a4",
+    "outputs/hanguard_clean_ablation_20261022/heads/category/s42/selection.json": "e29a279f9b8ab2163b10dceb19e61b8000f976f150a30ec26515f001a8011c51",
+    "outputs/hanguard_clean_ablation_20261022/heads/category/s43/selection.json": "48c4aeef818e508ca6ac7052812d5abc6963643c2f1f7f1da7d3f37bda5957cc",
+    "outputs/hanguard_clean_ablation_20261022/heads/category/s44/selection.json": "546e5485897fd0607dfd3e4673b994214bcffdea30aeee92408358d8ea68bd78",
+    "outputs/hanguard_paper_followups_20261025/analysis/paired_changes_by_seed.csv": "2a912b61c1c44c892df6b69476d01e416def9498b3fe987240b5e85b1af25892",
+    "outputs/hanguard_paper_followups_20261025/analysis/paired_summary.csv": "59b2d6d97fba01bb1e07229f7f1b9f852a6f270be89b186f42a3e993bdff2fa9",
+    "outputs/hanguard_paper_followups_20261025/analysis/strata_summary.csv": "f48523d5ca7d7462830cddfa548949ad1eeaa064e37ac7d98f8056437d12dbcf",
+    "outputs/hanguard_paper_followups_20261025/analysis/parameters.csv": "9c069202b7052490a711e3b1b359a03f2f47ad594e4257d155392565f89a732c",
+    "outputs/hanguard_paper_followups_20261025/analysis/efficiency.csv": "5afaa17ec7ff5e495a809b8cb25772b7e4f92862ad859485b4a73fd6153acc22",
+    "outputs/hanguard_paper_followups_20261025/analysis/efficiency_complete.json": "a9dc01953767fcd483a2c6351324f294f30751c13b6edfa788a1c46f0bf8b200"
+  },
+  "method_names": {
+    "CQA": "Category-Query Attention",
+    "MLF": "Fixed Multi-Layer Residual Fusion"
+  },
+  "raw_test_sha256": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6",
+  "binary_test_rows": 8350,
+  "category_test_rows": 2180,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "main_arms": [
+    "baseline",
+    "fusion_only",
+    "category_only",
+    "fusion_category"
+  ],
+  "native_baseline": "Qwen3Guard-Gen-4B official generative interface",
+  "native_guard_local_five_class": "N/A",
+  "encoder_guard_status": "On hold at user request; no comparison result",
+  "metrics_units": "Percent for metrics; percentage points for differences; standard deviations are sample SD across paired seeds"
+}

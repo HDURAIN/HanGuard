@@ -1,0 +1,523 @@
+{
+  "schema": "hanguard_qwen3guard_clean_test_v1",
+  "complete": true,
+  "inference_complete": true,
+  "protocol_sha256": "acd0c5c9d015a9b43300c78c1961ab44bdb87bd193f80b5efd4a6e9e23d22847",
+  "data_sha256": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6",
+  "rows": 8350,
+  "invalid_safety_rows": 0,
+  "coverage": 1.0,
+  "invalid_category_rows": 0,
+  "hit_generation_limit_rows": 0,
+  "mappings": {
+    "unsafe_only": {
+      "n": 8350,
+      "valid_rows": 8350,
+      "invalid_rows": 0,
+      "coverage": 1.0,
+      "accuracy": 0.9086227544910179,
+      "accuracy_valid_rows": 0.9086227544910179,
+      "macro_f1": 0.9085853075401578,
+      "harmful_f1": 0.9104354971240756,
+      "harmful_precision": 0.9951244547087503,
+      "harmful_recall": 0.8390307226308957,
+      "safe_recall": 0.9949034334763949,
+      "fpr": 0.00509656652360515,
+      "fnr": 0.1609692773691043,
+      "tp": 3878,
+      "tn": 3709,
+      "fp": 19,
+      "fn": 744,
+      "invalid_positive": 0,
+      "invalid_negative": 0,
+      "fpr_including_invalid": 0.00509656652360515,
+      "fnr_including_invalid": 0.1609692773691043,
+      "auroc": null,
+      "auprc": null,
+      "note": "Accuracy denominator includes every row; invalid is an abstention/error. FPR/FNR count only explicit false decisions; *_including_invalid also count abstentions. No continuous score/AUROC is available."
+    },
+    "unsafe_or_controversial": {
+      "n": 8350,
+      "valid_rows": 8350,
+      "invalid_rows": 0,
+      "coverage": 1.0,
+      "accuracy": 0.9482634730538922,
+      "accuracy_valid_rows": 0.9482634730538922,
+      "macro_f1": 0.9478150850860629,
+      "harmful_f1": 0.9526523454625164,
+      "harmful_precision": 0.9653487338960463,
+      "harmful_recall": 0.9402855906533968,
+      "safe_recall": 0.9581545064377682,
+      "fpr": 0.04184549356223176,
+      "fnr": 0.0597144093466032,
+      "tp": 4346,
+      "tn": 3572,
+      "fp": 156,
+      "fn": 276,
+      "invalid_positive": 0,
+      "invalid_negative": 0,
+      "fpr_including_invalid": 0.04184549356223176,
+      "fnr_including_invalid": 0.0597144093466032,
+      "auroc": null,
+      "auprc": null,
+      "note": "Accuracy denominator includes every row; invalid is an abstention/error. FPR/FNR count only explicit false decisions; *_including_invalid also count abstentions. No continuous score/AUROC is available."
+    }
+  },
+  "by_source": {
+    "chinese_curated": {
+      "unsafe_only": {
+        "n": 2692,
+        "valid_rows": 2692,
+        "invalid_rows": 0,
+        "coverage": 1.0,
+        "accuracy": 0.8777860326894502,
+        "accuracy_valid_rows": 0.8777860326894502,
+        "macro_f1": 0.8694825962893521,
+        "harmful_f1": 0.8365623447590661,
+        "harmful_precision": 0.9964497041420118,
+        "harmful_recall": 0.7208904109589042,
+        "safe_recall": 0.9980314960629921,
+        "fpr": 0.001968503937007874,
+        "fnr": 0.2791095890410959,
+        "tp": 842,
+        "tn": 1521,
+        "fp": 3,
+        "fn": 326,
+        "invalid_positive": 0,
+        "invalid_negative": 0,
+        "fpr_including_invalid": 0.001968503937007874,
+        "fnr_including_invalid": 0.2791095890410959,
+        "auroc": null,
+        "auprc": null,
+        "note": "Accuracy denominator includes every row; invalid is an abstention/error. FPR/FNR count only explicit false decisions; *_including_invalid also count abstentions. No continuous score/AUROC is available."
+      },
+      "unsafe_or_controversial": {
+        "n": 2692,
+        "valid_rows": 2692,
+        "invalid_rows": 0,
+        "coverage": 1.0,
+        "accuracy": 0.9323922734026746,
+        "accuracy_valid_rows": 0.9323922734026746,
+        "macro_f1": 0.9297298103578051,
+        "harmful_f1": 0.9160516605166051,
+        "harmful_precision": 0.993,
+        "harmful_recall": 0.8501712328767124,
+        "safe_recall": 0.9954068241469817,
+        "fpr": 0.004593175853018373,
+        "fnr": 0.14982876712328766,
+        "tp": 993,
+        "tn": 1517,
+        "fp": 7,
+        "fn": 175,
+        "invalid_positive": 0,
+        "invalid_negative": 0,
+        "fpr_including_invalid": 0.004593175853018373,
+        "fnr_including_invalid": 0.14982876712328766,
+        "auroc": null,
+        "auprc": null,
+        "note": "Accuracy denominator includes every row; invalid is an abstention/error. FPR/FNR count only explicit false decisions; *_including_invalid also count abstentions. No continuous score/AUROC is available."
+      }
+    },
+    "jailbench": {
+      "unsafe_only": {
+        "n": 1080,
+        "valid_rows": 1080,
+        "invalid_rows": 0,
+        "coverage": 1.0,
+        "accuracy": 0.8583333333333333,
+        "accuracy_valid_rows": 0.8583333333333333,
+        "macro_f1": 0.4618834080717489,
+        "harmful_f1": 0.9237668161434978,
+        "harmful_precision": 1.0,
+        "harmful_recall": 0.8583333333333333,
+        "safe_recall": null,
+        "fpr": null,
+        "fnr": 0.14166666666666666,
+        "tp": 927,
+        "tn": 0,
+        "fp": 0,
+        "fn": 153,
+        "invalid_positive": 0,
+        "invalid_negative": 0,
+        "fpr_including_invalid": null,
+        "fnr_including_invalid": 0.14166666666666666,
+        "auroc": null,
+        "auprc": null,
+        "note": "Accuracy denominator includes every row; invalid is an abstention/error. FPR/FNR count only explicit false decisions; *_including_invalid also count abstentions. No continuous score/AUROC is available."
+      },
+      "unsafe_or_controversial": {
+        "n": 1080,
+        "valid_rows": 1080,
+        "invalid_rows": 0,
+        "coverage": 1.0,
+        "accuracy": 0.975,
+        "accuracy_valid_rows": 0.975,
+        "macro_f1": 0.4936708860759494,
+        "harmful_f1": 0.9873417721518988,
+        "harmful_precision": 1.0,
+        "harmful_recall": 0.975,
+        "safe_recall": null,
+        "fpr": null,
+        "fnr": 0.025,
+        "tp": 1053,
+        "tn": 0,
+        "fp": 0,
+        "fn": 27,
+        "invalid_positive": 0,
+        "invalid_negative": 0,
+        "fpr_including_invalid": null,
+        "fnr_including_invalid": 0.025,
+        "auroc": null,
+        "auprc": null,
+        "note": "Accuracy denominator includes every row; invalid is an abstention/error. FPR/FNR count only explicit false decisions; *_including_invalid also count abstentions. No continuous score/AUROC is available."
+      }
+    },
+    "wildguard_zh": {
+      "unsafe_only": {
+        "n": 4578,
+        "valid_rows": 4578,
+        "invalid_rows": 0,
+        "coverage": 1.0,
+        "accuracy": 0.9386194844910442,
+        "accuracy_valid_rows": 0.9386194844910442,
+        "macro_f1": 0.9386012008585594,
+        "harmful_f1": 0.937541675927984,
+        "harmful_precision": 0.9924705882352941,
+        "harmful_recall": 0.888374052232519,
+        "safe_recall": 0.9927404718693285,
+        "fpr": 0.007259528130671506,
+        "fnr": 0.11162594776748104,
+        "tp": 2109,
+        "tn": 2188,
+        "fp": 16,
+        "fn": 265,
+        "invalid_positive": 0,
+        "invalid_negative": 0,
+        "fpr_including_invalid": 0.007259528130671506,
+        "fnr_including_invalid": 0.11162594776748104,
+        "auroc": null,
+        "auprc": null,
+        "note": "Accuracy denominator includes every row; invalid is an abstention/error. FPR/FNR count only explicit false decisions; *_including_invalid also count abstentions. No continuous score/AUROC is available."
+      },
+      "unsafe_or_controversial": {
+        "n": 4578,
+        "valid_rows": 4578,
+        "invalid_rows": 0,
+        "coverage": 1.0,
+        "accuracy": 0.9512887723896898,
+        "accuracy_valid_rows": 0.9512887723896898,
+        "macro_f1": 0.9511488602841058,
+        "harmful_f1": 0.9537632179141613,
+        "harmful_precision": 0.9391588403429971,
+        "harmful_recall": 0.9688289806234204,
+        "safe_recall": 0.9323956442831216,
+        "fpr": 0.06760435571687841,
+        "fnr": 0.031171019376579612,
+        "tp": 2300,
+        "tn": 2055,
+        "fp": 149,
+        "fn": 74,
+        "invalid_positive": 0,
+        "invalid_negative": 0,
+        "fpr_including_invalid": 0.06760435571687841,
+        "fnr_including_invalid": 0.031171019376579612,
+        "auroc": null,
+        "auprc": null,
+        "note": "Accuracy denominator includes every row; invalid is an abstention/error. FPR/FNR count only explicit false decisions; *_including_invalid also count abstentions. No continuous score/AUROC is available."
+      }
+    }
+  },
+  "safety_distribution": {
+    "unsafe": 3897,
+    "safe": 3848,
+    "controversial": 605
+  },
+  "native_category_counts": {
+    "Non-violent Illegal Acts": 1156,
+    "Jailbreak": 501,
+    "Unethical Acts": 1400,
+    "Violent": 488,
+    "Sexual Content or Sexual Acts": 459,
+    "PII": 252,
+    "Politically Sensitive Topics": 143,
+    "Copyright Violation": 36,
+    "Suicide & Self-Harm": 67
+  },
+  "five_class": "N/A",
+  "two_stage_system": "N/A",
+  "hanguard_reference": {
+    "baseline": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9384830339321358,
+        "accuracy_sd": 0.0009972052692053131,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9373652694610779,
+          0.9392814371257485,
+          0.9388023952095809
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.9377245508982036,
+        "accuracy_sd": 0.00043180254795974286,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.937245508982036,
+          0.9378443113772456,
+          0.9380838323353293
+        ]
+      }
+    },
+    "fusion_only": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9491417165668663,
+        "accuracy_sd": 0.0004205849801537804,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9487425149700599,
+          0.9491017964071856,
+          0.9495808383233533
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.9499800399201597,
+        "accuracy_sd": 0.001163177827092508,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9489820359281437,
+          0.9497005988023952,
+          0.9512574850299401
+        ]
+      }
+    },
+    "category_only": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9586027944111777,
+        "accuracy_sd": 0.0015399043131326402,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9603592814371258,
+          0.9574850299401197,
+          0.9579640718562874
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.9571257485029939,
+        "accuracy_sd": 0.0013335962545700584,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9556886227544911,
+          0.9573652694610778,
+          0.9583233532934132
+        ]
+      }
+    },
+    "fusion_category": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9611576846307385,
+        "accuracy_sd": 0.0025386208535864005,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9584431137724551,
+          0.9615568862275449,
+          0.9634730538922156
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.9609181636726548,
+        "accuracy_sd": 0.001864318471670363,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9591616766467066,
+          0.9607185628742515,
+          0.962874251497006
+        ]
+      }
+    },
+    "fusion_repeat_last": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9379241516966067,
+        "accuracy_sd": 0.002353935806435993,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9370059880239521,
+          0.9405988023952095,
+          0.9361676646706587
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.9364870259481038,
+        "accuracy_sd": 0.001046334724317909,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9367664670658683,
+          0.9373652694610779,
+          0.9353293413173652
+        ]
+      }
+    },
+    "category_fusion_repeat_last": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9583632734530938,
+        "accuracy_sd": 0.0026027821657010767,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9555688622754491,
+          0.9588023952095809,
+          0.9607185628742515
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.9586027944111777,
+        "accuracy_sd": 0.0025414441584665783,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9556886227544911,
+          0.9597604790419162,
+          0.9603592814371258
+        ]
+      }
+    },
+    "category_shared": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9584830339321356,
+        "accuracy_sd": 0.0027318342692096826,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9553293413173652,
+          0.9601197604790419,
+          0.96
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.9578443113772455,
+        "accuracy_sd": 0.0024920541373275036,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9549700598802395,
+          0.9594011976047904,
+          0.9591616766467066
+        ]
+      }
+    },
+    "fusion_category_shared": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9617165668662674,
+        "accuracy_sd": 0.0017202763613904462,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9597604790419162,
+          0.9623952095808384,
+          0.962994011976048
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.960998003992016,
+        "accuracy_sd": 0.002019423532126433,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9586826347305389,
+          0.9623952095808384,
+          0.9619161676646707
+        ]
+      }
+    },
+    "probe_selected_single": {
+      "validation_threshold": {
+        "accuracy_mean": 0.9471457085828344,
+        "accuracy_sd": 0.0005659659432637996,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9467065868263473,
+          0.9469461077844311,
+          0.9477844311377246
+        ]
+      },
+      "fixed_threshold_05": {
+        "accuracy_mean": 0.9473053892215568,
+        "accuracy_sd": 0.000863605095919532,
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "per_seed": [
+          0.9463473053892215,
+          0.9475449101796407,
+          0.9480239520958084
+        ]
+      }
+    }
+  },
+  "comparison_note": "Guard is a zero-shot externally trained safety model; hanguard heads use local train supervision. Not an internal causal ablation.",
+  "completed_unix": 1792893229.7004092,
+  "predictions_sha256": "8ee8af461f9b0b4f2252df9bcb8a3936191fe26975166f108abbdb952119316d"
+}

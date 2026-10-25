@@ -1,0 +1,7 @@
+{
+  "command": ".venv-hanguard/bin/python -m unittest discover -s tests -p test_qwen3guard_supervised*.py -q",
+  "tests": 26,
+  "passed": true,
+  "protocol_sha256": "e513b743dbea8d80a9612ef8fcbb1756eab34a6c1c51dad0935b371a53a6ae75",
+  "completed_unix": 1792920985.6181023
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "hanguard_fusion_ablation_index_v1",
+  "studies": [
+    {
+      "study": "nolora_original",
+      "status": "complete",
+      "source": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/results.json"
+    },
+    {
+      "study": "lora_selected122",
+      "status": "complete",
+      "source": "outputs/hanguard_selected122_lora_20261018/readouts/analysis/results.json"
+    },
+    {
+      "study": "nolora_fixed_selected122",
+      "status": "complete",
+      "models_retrained": false,
+      "source": "data/three_source_wildguard122_subset_20261018/old_model_subset_metrics.json"
+    },
+    {
+      "study": "nolora_additional_ablation",
+      "status": "complete",
+      "source": "outputs/hanguard_nolora_ablation_20261019",
+      "result_files": 5
+    },
+    {
+      "study": "nolora_reference_analysis",
+      "status": "complete",
+      "source": "outputs/hanguard_nolora_reference_analysis_20261019"
+    }
+  ],
+  "scope_note": "Full 8350 and outcome-selected 8228 scopes are separate; the latter is descriptive, not an independent blind test."
+}

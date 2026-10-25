@@ -1,0 +1,135 @@
+{
+  "schema": "qwen3guard_supervised_content_features_v2_singleton",
+  "split": "validation",
+  "rows": 8350,
+  "hidden_size": 2560,
+  "model_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3Guard-Gen-4B",
+  "protocol_sha256": "582bb3819a36bab3a5cd52850220372bf267ef66de341953a16f460cca2b07bf",
+  "raw_data_sha256": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+  "metadata_sha256": "20a256ca9abeeed168fec52e2aeb8fda9fcd128490a49363adbde7752efc93ba",
+  "files": {
+    "prepared/content_lengths.npy": "a69ffea9acc57362bb8f861b317aa93608cea581c0da85a7002efafe172f855b",
+    "prepared/lengths.npy": "0452fd0257a4ddd12bc62c5873ce366b9311ac77763b8b75cdb00a717946eff1",
+    "prepared/metadata.parquet": "20a256ca9abeeed168fec52e2aeb8fda9fcd128490a49363adbde7752efc93ba",
+    "prepared/row_offsets.npy": "94771eb08f1b386487eabd88e6904ba49eb10f416e0e1c9203b9d9a8282f46c1",
+    "prepared/token_ids.npy": "565e908b25d47b152292abddcb550b7c2e1f5ba40656bd444eece8ac2aa12522",
+    "prepared/user_ends.npy": "59827f776f8786a4547681886d33aa4d637dd8a3b414786f7199ac0c11606c80",
+    "prepared/user_starts.npy": "44e211e8d9cb33ed22280776fcc574b40da0a9a77b0cb0c4ad6c5f2de77c549e"
+  },
+  "shards": [
+    {
+      "shard_index": 0,
+      "row_start": 0,
+      "row_end": 512,
+      "content_tokens": 46989
+    },
+    {
+      "shard_index": 1,
+      "row_start": 512,
+      "row_end": 1024,
+      "content_tokens": 47502
+    },
+    {
+      "shard_index": 2,
+      "row_start": 1024,
+      "row_end": 1536,
+      "content_tokens": 44564
+    },
+    {
+      "shard_index": 3,
+      "row_start": 1536,
+      "row_end": 2048,
+      "content_tokens": 44140
+    },
+    {
+      "shard_index": 4,
+      "row_start": 2048,
+      "row_end": 2560,
+      "content_tokens": 44733
+    },
+    {
+      "shard_index": 5,
+      "row_start": 2560,
+      "row_end": 3072,
+      "content_tokens": 49699
+    },
+    {
+      "shard_index": 6,
+      "row_start": 3072,
+      "row_end": 3584,
+      "content_tokens": 47221
+    },
+    {
+      "shard_index": 7,
+      "row_start": 3584,
+      "row_end": 4096,
+      "content_tokens": 47818
+    },
+    {
+      "shard_index": 8,
+      "row_start": 4096,
+      "row_end": 4608,
+      "content_tokens": 47236
+    },
+    {
+      "shard_index": 9,
+      "row_start": 4608,
+      "row_end": 5120,
+      "content_tokens": 50783
+    },
+    {
+      "shard_index": 10,
+      "row_start": 5120,
+      "row_end": 5632,
+      "content_tokens": 45250
+    },
+    {
+      "shard_index": 11,
+      "row_start": 5632,
+      "row_end": 6144,
+      "content_tokens": 44949
+    },
+    {
+      "shard_index": 12,
+      "row_start": 6144,
+      "row_end": 6656,
+      "content_tokens": 49358
+    },
+    {
+      "shard_index": 13,
+      "row_start": 6656,
+      "row_end": 7168,
+      "content_tokens": 47011
+    },
+    {
+      "shard_index": 14,
+      "row_start": 7168,
+      "row_end": 7680,
+      "content_tokens": 44657
+    },
+    {
+      "shard_index": 15,
+      "row_start": 7680,
+      "row_end": 8192,
+      "content_tokens": 42135
+    },
+    {
+      "shard_index": 16,
+      "row_start": 8192,
+      "row_end": 8350,
+      "content_tokens": 14491
+    }
+  ],
+  "input_tokens": 3233497,
+  "content_tokens": 758536,
+  "max_input_tokens": 1102,
+  "template_prefix_sha256": "c3ab624aaa333b7d8553ed12b3685906ffb56b022e9c5fe40b8eaaeb44dd967f",
+  "template_suffix_sha256": "4c9043d41a97ac0be48cc5ed5b5b7fc274016fdd9b572d9993c468628e754977",
+  "content_selection": "offset overlap with original user characters",
+  "representation": "raw last decoder block before final RMSNorm",
+  "padding_side": "right",
+  "truncation": false,
+  "canonical_singleton": true,
+  "boundary_token_policy": "include every token overlapping user text",
+  "created_unix": 1792921613.1385427
+}

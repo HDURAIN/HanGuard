@@ -1,0 +1,277 @@
+{
+  "schema": "hanguard_external_macbert_document_classifier_v1",
+  "seed": 42,
+  "complete": true,
+  "protocol_sha256": "25f0baedb547510d91ca7161bbef6a84fce8915a5e22530cb284f045583ea317",
+  "selection_lock_sha256": "be02b7b62aa0cbe489e9a897e263c1869f3f8ca990e0292d96cf0f856547c85c",
+  "rows": 2180,
+  "metrics": {
+    "n": 2180,
+    "accuracy": 0.8114678899082569,
+    "macro_f1": 0.8016343106624108,
+    "confusion_matrix": [
+      [
+        581,
+        9,
+        8,
+        42,
+        40
+      ],
+      [
+        24,
+        378,
+        1,
+        5,
+        5
+      ],
+      [
+        6,
+        24,
+        217,
+        20,
+        9
+      ],
+      [
+        58,
+        15,
+        14,
+        380,
+        39
+      ],
+      [
+        33,
+        24,
+        21,
+        14,
+        213
+      ]
+    ],
+    "per_class": {
+      "1": {
+        "precision": 0.8276353276353277,
+        "recall": 0.8544117647058823,
+        "f1": 0.8408104196816208,
+        "support": 680
+      },
+      "2": {
+        "precision": 0.84,
+        "recall": 0.9152542372881356,
+        "f1": 0.8760139049826188,
+        "support": 413
+      },
+      "3": {
+        "precision": 0.8314176245210728,
+        "recall": 0.7862318840579711,
+        "f1": 0.8081936685288641,
+        "support": 276
+      },
+      "4": {
+        "precision": 0.824295010845987,
+        "recall": 0.7509881422924901,
+        "f1": 0.7859358841778697,
+        "support": 506
+      },
+      "5": {
+        "precision": 0.696078431372549,
+        "recall": 0.6983606557377049,
+        "f1": 0.6972176759410802,
+        "support": 305
+      }
+    }
+  },
+  "by_source": {
+    "chinese_curated": {
+      "n": 1168,
+      "accuracy": 0.7662671232876712,
+      "macro_f1": 0.7298327861603221,
+      "confusion_matrix": [
+        [
+          401,
+          9,
+          7,
+          42,
+          20
+        ],
+        [
+          24,
+          58,
+          1,
+          5,
+          5
+        ],
+        [
+          6,
+          3,
+          97,
+          20,
+          9
+        ],
+        [
+          24,
+          5,
+          14,
+          234,
+          39
+        ],
+        [
+          13,
+          4,
+          10,
+          13,
+          105
+        ]
+      ],
+      "per_class": {
+        "1": {
+          "precision": 0.8568376068376068,
+          "recall": 0.837160751565762,
+          "f1": 0.8468848996832101,
+          "support": 479
+        },
+        "2": {
+          "precision": 0.7341772151898734,
+          "recall": 0.6236559139784946,
+          "f1": 0.6744186046511628,
+          "support": 93
+        },
+        "3": {
+          "precision": 0.751937984496124,
+          "recall": 0.7185185185185186,
+          "f1": 0.7348484848484849,
+          "support": 135
+        },
+        "4": {
+          "precision": 0.7452229299363057,
+          "recall": 0.740506329113924,
+          "f1": 0.7428571428571429,
+          "support": 316
+        },
+        "5": {
+          "precision": 0.5898876404494382,
+          "recall": 0.7241379310344828,
+          "f1": 0.6501547987616099,
+          "support": 145
+        }
+      }
+    },
+    "jailbench": {
+      "n": 1012,
+      "accuracy": 0.8636363636363636,
+      "macro_f1": 0.8498739701199579,
+      "confusion_matrix": [
+        [
+          180,
+          0,
+          1,
+          0,
+          20
+        ],
+        [
+          0,
+          320,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          21,
+          120,
+          0,
+          0
+        ],
+        [
+          34,
+          10,
+          0,
+          146,
+          0
+        ],
+        [
+          20,
+          20,
+          11,
+          1,
+          108
+        ]
+      ],
+      "per_class": {
+        "1": {
+          "precision": 0.7692307692307693,
+          "recall": 0.8955223880597015,
+          "f1": 0.8275862068965517,
+          "support": 201
+        },
+        "2": {
+          "precision": 0.862533692722372,
+          "recall": 1.0,
+          "f1": 0.9261939218523878,
+          "support": 320
+        },
+        "3": {
+          "precision": 0.9090909090909091,
+          "recall": 0.851063829787234,
+          "f1": 0.8791208791208791,
+          "support": 141
+        },
+        "4": {
+          "precision": 0.9931972789115646,
+          "recall": 0.7684210526315789,
+          "f1": 0.8664688427299704,
+          "support": 190
+        },
+        "5": {
+          "precision": 0.84375,
+          "recall": 0.675,
+          "f1": 0.75,
+          "support": 160
+        }
+      }
+    }
+  },
+  "paired_parent_accuracy": {
+    "category_only": {
+      "delta": -0.008256880733944955,
+      "ci95": [
+        -0.04383764638427634,
+        0.029172140207434322
+      ],
+      "unit": "group_id cluster",
+      "groups": 1211,
+      "repetitions": 2000
+    },
+    "fusion_category": {
+      "delta": -0.010091743119266056,
+      "ci95": [
+        -0.047182879917661055,
+        0.026271803869804544
+      ],
+      "unit": "group_id cluster",
+      "groups": 1211,
+      "repetitions": 2000
+    }
+  },
+  "test_window_stats": {
+    "schema": "hanguard_external_macbert_document_classifier_v1",
+    "split": "test",
+    "documents": 2180,
+    "source_sha256": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6",
+    "files": {
+      "metadata.parquet": "07cc1d6594416b8467e38e5fad5f75c6ee4b08bdf6f699d52c010363f01923d4",
+      "windows.jsonl": "d2c71d8753ed7f45cb90c0fd079bbd2c2b06864b7b66048431367a56ff586197"
+    },
+    "protocol_sha256": "25f0baedb547510d91ca7161bbef6a84fce8915a5e22530cb284f045583ea317",
+    "selection_lock_sha256": "be02b7b62aa0cbe489e9a897e263c1869f3f8ca990e0292d96cf0f856547c85c",
+    "truncation": false,
+    "covered_raw_tokens": 458902,
+    "windows": 2637,
+    "long_documents": 303,
+    "empty_token_documents": 0,
+    "max_raw_tokens": 1259,
+    "max_windows": 3,
+    "window_content_tokens": 510,
+    "overlap": 128,
+    "pooling": "document mean of all window logits before CE"
+  },
+  "checkpoint_parameter_count": 102271493
+}

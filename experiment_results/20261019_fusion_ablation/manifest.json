@@ -1,0 +1,1085 @@
+{
+  "schema": "hanguard_fusion_ablation_archive_v1",
+  "created_utc": "2026-10-19T10:35:21.457505+00:00",
+  "file_policy": "Small allowlisted JSON and text-free numerical predictions only; no weights, features or raw complete text.",
+  "files": [
+    {
+      "archive_path": "README.md",
+      "bytes": 7626,
+      "sha256": "1726d604e0d75d9bc24fc05ff4f7d9c46957d56ab7f4760adf80b3d6e772fb72"
+    },
+    {
+      "archive_path": "ablation_coverage.csv",
+      "bytes": 3932,
+      "sha256": "ccbb1aed6db8d3e2533bcb0436bd61ffbb706a5d41dc5497d7d0895f7c448dcb",
+      "transform": "completed_result_tables_with_explicit_pending_states"
+    },
+    {
+      "archive_path": "artifacts/data/three_source_wildguard122_subset_20261018/excluded_base_ids.txt",
+      "bytes": 7930,
+      "sha256": "8de5b1b45ca4aa6fbf6ef08651b09cce2d1c3a284aa3c5531f7b08019e3f245f",
+      "transform": "byte_identical",
+      "source_path": "data/three_source_wildguard122_subset_20261018/excluded_base_ids.txt",
+      "source_sha256": "8de5b1b45ca4aa6fbf6ef08651b09cce2d1c3a284aa3c5531f7b08019e3f245f"
+    },
+    {
+      "archive_path": "artifacts/data/three_source_wildguard122_subset_20261018/filter_policy.json",
+      "bytes": 2078,
+      "sha256": "cebf8f867d8e0347e0f1c73a004b364fd099e8f3d006616409ecde1a27c08171",
+      "transform": "byte_identical",
+      "source_path": "data/three_source_wildguard122_subset_20261018/filter_policy.json",
+      "source_sha256": "cebf8f867d8e0347e0f1c73a004b364fd099e8f3d006616409ecde1a27c08171"
+    },
+    {
+      "archive_path": "artifacts/data/three_source_wildguard122_subset_20261018/manifest.json",
+      "bytes": 4443,
+      "sha256": "19928e626a4b45eeff6ba677f1a9c5a37eb7831485a3fc969ddf173aa06a73c7",
+      "transform": "byte_identical",
+      "source_path": "data/three_source_wildguard122_subset_20261018/manifest.json",
+      "source_sha256": "19928e626a4b45eeff6ba677f1a9c5a37eb7831485a3fc969ddf173aa06a73c7"
+    },
+    {
+      "archive_path": "artifacts/data/three_source_wildguard122_subset_20261018/nolora_fixed_predictions.csv",
+      "bytes": 3026466,
+      "sha256": "7f4efaf441c51288daa15d22c899fe8945a16b4b5a3693ad3f4b058a672eba91",
+      "rows": 8228,
+      "columns": [
+        "base_id",
+        "group_id",
+        "source",
+        "category_id",
+        "type_label_mask",
+        "split",
+        "label",
+        "prompt_tokens",
+        "probability_last",
+        "threshold_last",
+        "prediction_last",
+        "probability_best_single",
+        "threshold_best_single",
+        "prediction_best_single",
+        "probability_repeat_best",
+        "threshold_repeat_best",
+        "prediction_repeat_best",
+        "probability_fusion_fixed",
+        "threshold_fusion_fixed",
+        "prediction_fusion_fixed",
+        "probability_fusion_fixed_best_anchor",
+        "threshold_fusion_fixed_best_anchor",
+        "prediction_fusion_fixed_best_anchor"
+      ],
+      "transform": "allowlisted_metadata_and_predictions_only",
+      "excluded_ids_sha256": "8de5b1b45ca4aa6fbf6ef08651b09cce2d1c3a284aa3c5531f7b08019e3f245f",
+      "selection_policy": "posthoc_error_selected_test_subset",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/predictions.csv",
+      "source_sha256": "414bf87e594f73eb190a4f2337d26d068e7ad34766d7fd10ef8a4dcd00a6d29e"
+    },
+    {
+      "archive_path": "artifacts/data/three_source_wildguard122_subset_20261018/nolora_recomputed_metrics.json",
+      "bytes": 1677,
+      "sha256": "7988191bb2b5361acb9e2392f91d686ef446cc20818cd1f72b322e1584df6f77",
+      "transform": "recomputed_from_retained_fixed_predictions",
+      "excluded_ids_sha256": "8de5b1b45ca4aa6fbf6ef08651b09cce2d1c3a284aa3c5531f7b08019e3f245f",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/predictions.csv",
+      "source_sha256": "414bf87e594f73eb190a4f2337d26d068e7ad34766d7fd10ef8a4dcd00a6d29e"
+    },
+    {
+      "archive_path": "artifacts/data/three_source_wildguard122_subset_20261018/old_model_subset_metrics.json",
+      "bytes": 1681,
+      "sha256": "14a0f95c8bc274cc8c081ef0bb0da36f4bf69c38187f1ffa8cce0b7680b3cb7a",
+      "transform": "byte_identical",
+      "source_path": "data/three_source_wildguard122_subset_20261018/old_model_subset_metrics.json",
+      "source_sha256": "14a0f95c8bc274cc8c081ef0bb0da36f4bf69c38187f1ffa8cce0b7680b3cb7a"
+    },
+    {
+      "archive_path": "artifacts/data/three_source_wildguard122_subset_20261018/release_qa.json",
+      "bytes": 2560,
+      "sha256": "10927eb5865abb5f69117c863c114debc14bf7b7f2c7109b8b6134c41cb19ab4",
+      "transform": "byte_identical",
+      "source_path": "data/three_source_wildguard122_subset_20261018/release_qa.json",
+      "source_sha256": "10927eb5865abb5f69117c863c114debc14bf7b7f2c7109b8b6134c41cb19ab4"
+    },
+    {
+      "archive_path": "artifacts/data/three_source_wildguard122_subset_20261018/split_policy.json",
+      "bytes": 507,
+      "sha256": "39e98c3623a8a1a4bd9adaa3ba2c711c6ac9e47b03199ccb8668ea2c935d6785",
+      "transform": "byte_identical",
+      "source_path": "data/three_source_wildguard122_subset_20261018/split_policy.json",
+      "source_sha256": "39e98c3623a8a1a4bd9adaa3ba2c711c6ac9e47b03199ccb8668ea2c935d6785"
+    },
+    {
+      "archive_path": "artifacts/hanguard_model.py",
+      "bytes": 15423,
+      "sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58",
+      "transform": "byte_identical",
+      "source_path": "hanguard_model.py",
+      "source_sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/anchor_harm_review_20261018/quantitative_summary.json",
+      "bytes": 17261,
+      "sha256": "6dd3a6ec6987f05d8ff09675ed25d52a890ef1c4333ea356bf16ed343ba88437",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/anchor_harm_review_20261018/quantitative_summary.json",
+      "source_sha256": "6dd3a6ec6987f05d8ff09675ed25d52a890ef1c4333ea356bf16ed343ba88437"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/anchor_harm_review_20261018/review_summary.json",
+      "bytes": 4773,
+      "sha256": "94a0f16433bf04b74b6f05cbccafa2f8574aa124e3fa5ddf04a0921540fd5c24",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/anchor_harm_review_20261018/review_summary.json",
+      "source_sha256": "94a0f16433bf04b74b6f05cbccafa2f8574aa124e3fa5ddf04a0921540fd5c24"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/complete.json",
+      "bytes": 505,
+      "sha256": "76f0c45e8cba28b67d3006975bd4100a66d304f8c7f4b00b5a573c18daf04ca4",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/complete.json",
+      "source_sha256": "76f0c45e8cba28b67d3006975bd4100a66d304f8c7f4b00b5a573c18daf04ca4"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/predictions.csv",
+      "bytes": 3070915,
+      "sha256": "2d50fea926ea27d2c811b545c69a7cfe73fba3e500b8f2aea357686ba5eec28a",
+      "rows": 8350,
+      "columns": [
+        "base_id",
+        "group_id",
+        "source",
+        "category_id",
+        "type_label_mask",
+        "split",
+        "label",
+        "prompt_tokens",
+        "probability_last",
+        "threshold_last",
+        "prediction_last",
+        "probability_best_single",
+        "threshold_best_single",
+        "prediction_best_single",
+        "probability_repeat_best",
+        "threshold_repeat_best",
+        "prediction_repeat_best",
+        "probability_fusion_fixed",
+        "threshold_fusion_fixed",
+        "prediction_fusion_fixed",
+        "probability_fusion_fixed_best_anchor",
+        "threshold_fusion_fixed_best_anchor",
+        "prediction_fusion_fixed_best_anchor"
+      ],
+      "transform": "allowlisted_metadata_and_predictions_only",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/predictions.csv",
+      "source_sha256": "414bf87e594f73eb190a4f2337d26d068e7ad34766d7fd10ef8a4dcd00a6d29e"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/results.json",
+      "bytes": 20688,
+      "sha256": "f61475073cbad99720dbe1d52ede8e72a21da5010fcd1830834093a08c0a7167",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/results.json",
+      "source_sha256": "f61475073cbad99720dbe1d52ede8e72a21da5010fcd1830834093a08c0a7167"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/test_access.json",
+      "bytes": 252,
+      "sha256": "6a886a697b1fff95aab4a66c42ab79268220bf3421e21b9d19ebbfbaefb97c20",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/test_access.json",
+      "source_sha256": "6a886a697b1fff95aab4a66c42ab79268220bf3421e21b9d19ebbfbaefb97c20"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/heads/selection.json",
+      "bytes": 7613,
+      "sha256": "03ceae61c8f6565e0a537eabfd127d5b24736da94b983c49ed81597b30eb3625",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/heads/selection.json",
+      "source_sha256": "03ceae61c8f6565e0a537eabfd127d5b24736da94b983c49ed81597b30eb3625"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol.json",
+      "bytes": 13234,
+      "sha256": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol.json",
+      "source_sha256": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol_registration.json",
+      "bytes": 2316,
+      "sha256": "2958b2bdaade7aa5d9b0c82d88d3a92c4e206d4156615e15ae4c5293b59863b9",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol_registration.json",
+      "source_sha256": "2958b2bdaade7aa5d9b0c82d88d3a92c4e206d4156615e15ae4c5293b59863b9"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/selection_lock.json",
+      "bytes": 4205,
+      "sha256": "b9adabdb0d2ad631e365c4b2bf4003c2655955170d74a9b8bf34334528556512",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/selection_lock.json",
+      "source_sha256": "b9adabdb0d2ad631e365c4b2bf4003c2655955170d74a9b8bf34334528556512"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_frozen_base_full_readouts_20261013_v5/state.json",
+      "bytes": 697,
+      "sha256": "c3dfa89ccc21eeed871f58ba0533761a12461851f16a38ca155b9bbe09c22d15",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_frozen_base_full_readouts_20261013_v5/state.json",
+      "source_sha256": "c3dfa89ccc21eeed871f58ba0533761a12461851f16a38ca155b9bbe09c22d15"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/components/analysis/complete.json",
+      "bytes": 505,
+      "sha256": "f58153966c470be73c8a1aaef5970b657316ec6186a71e7384d6d6c569d6129b",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/components/analysis/complete.json",
+      "source_sha256": "f58153966c470be73c8a1aaef5970b657316ec6186a71e7384d6d6c569d6129b"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/components/analysis/predictions.csv",
+      "bytes": 5374591,
+      "sha256": "12400ad47a0ec39ea20c89cde334ae66c10fbdbadb4d709afa9371d17ad779ad",
+      "rows": 8350,
+      "columns": [
+        "base_id",
+        "group_id",
+        "source",
+        "label",
+        "prompt_tokens",
+        "probability_last",
+        "probability_best_single",
+        "probability_repeat_best",
+        "probability_fusion_fixed",
+        "probability_fusion_fixed_best_anchor",
+        "probability_uniform_weights",
+        "probability_no_anchor",
+        "probability_shared_projection",
+        "probability_top4",
+        "probability_two_layers",
+        "probability_mean_pool",
+        "probability_anchor_replay",
+        "threshold_last",
+        "prediction_last",
+        "threshold_best_single",
+        "prediction_best_single",
+        "threshold_repeat_best",
+        "prediction_repeat_best",
+        "threshold_fusion_fixed",
+        "prediction_fusion_fixed",
+        "threshold_fusion_fixed_best_anchor",
+        "prediction_fusion_fixed_best_anchor",
+        "threshold_uniform_weights",
+        "prediction_uniform_weights",
+        "threshold_no_anchor",
+        "prediction_no_anchor",
+        "threshold_shared_projection",
+        "prediction_shared_projection",
+        "threshold_top4",
+        "prediction_top4",
+        "threshold_two_layers",
+        "prediction_two_layers",
+        "threshold_mean_pool",
+        "prediction_mean_pool",
+        "threshold_anchor_replay",
+        "prediction_anchor_replay"
+      ],
+      "transform": "allowlisted_metadata_and_predictions_only",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/components/analysis/predictions.csv",
+      "source_sha256": "7ff27b93cc59322a70c6aad40f92dcc0ba54c0f485da6bec1cafea8c8eaa0c23"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json",
+      "bytes": 128442,
+      "sha256": "e8d6afb81538be88fd3dc8068c3c805584535d07ad817fe1986251bb1b8e5c5c",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json",
+      "source_sha256": "e8d6afb81538be88fd3dc8068c3c805584535d07ad817fe1986251bb1b8e5c5c"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/components/analysis/test_access.json",
+      "bytes": 158,
+      "sha256": "564cc92bd97cc0e4d09ac62f5e7f2365e6fac2dd1105aada1c2412e06f4a31b7",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/components/analysis/test_access.json",
+      "source_sha256": "564cc92bd97cc0e4d09ac62f5e7f2365e6fac2dd1105aada1c2412e06f4a31b7"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/components/heads/selection.json",
+      "bytes": 6559,
+      "sha256": "0176eb291db078179e46e281afd1195ca33ddb67243f21b351f8578d522cdf43",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/components/heads/selection.json",
+      "source_sha256": "0176eb291db078179e46e281afd1195ca33ddb67243f21b351f8578d522cdf43"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/components/protocol.json",
+      "bytes": 14520,
+      "sha256": "c03a3e6bb868aba9803cd8bb3d7a13473a8c2da6ae14aa73c9edc9e2d4d0f91c",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/components/protocol.json",
+      "source_sha256": "c03a3e6bb868aba9803cd8bb3d7a13473a8c2da6ae14aa73c9edc9e2d4d0f91c"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/components/selection_lock.json",
+      "bytes": 4886,
+      "sha256": "a37b3d8b4894e39e1b82ee8ce27e8764d56f8571ddf09faf30e8283282691c25",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/components/selection_lock.json",
+      "source_sha256": "a37b3d8b4894e39e1b82ee8ce27e8764d56f8571ddf09faf30e8283282691c25"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/protocol.json",
+      "bytes": 32331,
+      "sha256": "bb18d8e47e756a9d1364ef02cb37945f7e09bf04b8296ad808809e849da7e5cd",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/protocol.json",
+      "source_sha256": "bb18d8e47e756a9d1364ef02cb37945f7e09bf04b8296ad808809e849da7e5cd"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/protocol_registration.json",
+      "bytes": 92,
+      "sha256": "21b5d242940dafb9f920f3ba0654a5682d38d7ce0c61869df65b3d206aa4f670",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/protocol_registration.json",
+      "source_sha256": "21b5d242940dafb9f920f3ba0654a5682d38d7ce0c61869df65b3d206aa4f670"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/queue_protocol.json",
+      "bytes": 1630,
+      "sha256": "112018f60a71d930e634357de17e6f4b0b1e2e96ec3885102d88a3e4191fd4fa",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/queue_protocol.json",
+      "source_sha256": "112018f60a71d930e634357de17e6f4b0b1e2e96ec3885102d88a3e4191fd4fa"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/queue_registration.json",
+      "bytes": 83,
+      "sha256": "7ea5e379b9c12dc58df81e3327ef5be5a599690f5039f9375441637f0af3d3e5",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/queue_registration.json",
+      "source_sha256": "7ea5e379b9c12dc58df81e3327ef5be5a599690f5039f9375441637f0af3d3e5"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/queue_state.json",
+      "bytes": 169,
+      "sha256": "54349564ed84a16866cef5541ed6bc492e4871ab83546c2a748a657310ccc230",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/queue_state.json",
+      "source_sha256": "54349564ed84a16866cef5541ed6bc492e4871ab83546c2a748a657310ccc230"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/results.json",
+      "bytes": 314448,
+      "sha256": "48eeec301ba9bb56b0cf6397a1e05d605f0dfb0d7d658d650a6aa4100e7726df",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/results.json",
+      "source_sha256": "48eeec301ba9bb56b0cf6397a1e05d605f0dfb0d7d658d650a6aa4100e7726df"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_42_imported/analysis/complete.json",
+      "bytes": 318,
+      "sha256": "9a4edbe95e4f2e328ce1f42f90868b4fc286fa6af90e3057da6cb34790ef9420",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_42_imported/analysis/complete.json",
+      "source_sha256": "9a4edbe95e4f2e328ce1f42f90868b4fc286fa6af90e3057da6cb34790ef9420"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_42_imported/analysis/predictions.csv",
+      "bytes": 2966417,
+      "sha256": "f41cbcd7ee78ceecfca029a6eaeeaf5a33f017737cc36bc053bf24b405006258",
+      "rows": 8350,
+      "columns": [
+        "base_id",
+        "group_id",
+        "source",
+        "label",
+        "prompt_tokens",
+        "probability_last",
+        "threshold_last",
+        "prediction_last",
+        "probability_best_single",
+        "threshold_best_single",
+        "prediction_best_single",
+        "probability_repeat_best",
+        "threshold_repeat_best",
+        "prediction_repeat_best",
+        "probability_fusion_fixed",
+        "threshold_fusion_fixed",
+        "prediction_fusion_fixed",
+        "probability_fusion_fixed_best_anchor",
+        "threshold_fusion_fixed_best_anchor",
+        "prediction_fusion_fixed_best_anchor"
+      ],
+      "transform": "allowlisted_metadata_and_predictions_only",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_42_imported/analysis/predictions.csv",
+      "source_sha256": "dbafa67bbb1e4990267a42f8493bbcb3acc39867e74978afa77400009a65df13"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_42_imported/analysis/results.json",
+      "bytes": 34203,
+      "sha256": "fae15b7aaf720cf61dc5f430f9f0ad3c7395f6a0e04b3044582f519aa556cb09",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_42_imported/analysis/results.json",
+      "source_sha256": "fae15b7aaf720cf61dc5f430f9f0ad3c7395f6a0e04b3044582f519aa556cb09"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/complete.json",
+      "bytes": 505,
+      "sha256": "a32b61f750f490bdc41912301cc0065f1f7cd7d0cc182bfff84c51ca7f715bf5",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/complete.json",
+      "source_sha256": "a32b61f750f490bdc41912301cc0065f1f7cd7d0cc182bfff84c51ca7f715bf5"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/predictions.csv",
+      "bytes": 3081808,
+      "sha256": "bc81d55eb41a924803116e73ce6914993097189f66e8ac51d46eb6dce84b0de4",
+      "rows": 8350,
+      "columns": [
+        "base_id",
+        "group_id",
+        "source",
+        "category_id",
+        "type_label_mask",
+        "split",
+        "label",
+        "prompt_tokens",
+        "probability_last",
+        "threshold_last",
+        "prediction_last",
+        "probability_best_single",
+        "threshold_best_single",
+        "prediction_best_single",
+        "probability_repeat_best",
+        "threshold_repeat_best",
+        "prediction_repeat_best",
+        "probability_fusion_fixed",
+        "threshold_fusion_fixed",
+        "prediction_fusion_fixed",
+        "probability_fusion_fixed_best_anchor",
+        "threshold_fusion_fixed_best_anchor",
+        "prediction_fusion_fixed_best_anchor"
+      ],
+      "transform": "allowlisted_metadata_and_predictions_only",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/predictions.csv",
+      "source_sha256": "a73e70e75a6254740e022cc25f92d18b2aa4c693cd2f1f8f9b59dc4e1506afe2"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/results.json",
+      "bytes": 54729,
+      "sha256": "bf491861fc75b90e0e87e67528eeea049e403c4ea7133c11fc2bb12634b62e2a",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/results.json",
+      "source_sha256": "bf491861fc75b90e0e87e67528eeea049e403c4ea7133c11fc2bb12634b62e2a"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/test_access.json",
+      "bytes": 252,
+      "sha256": "092f767ebb9b0d04cdb0f4b6251c3ef344c0a1e343a2756ab1fbdb66bb9c5a7d",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/test_access.json",
+      "source_sha256": "092f767ebb9b0d04cdb0f4b6251c3ef344c0a1e343a2756ab1fbdb66bb9c5a7d"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_43/heads/selection.json",
+      "bytes": 7408,
+      "sha256": "c6248b37f1a539d9ebb20e68474154ac1cec88d166ff0aeea40cf94ccb615672",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_43/heads/selection.json",
+      "source_sha256": "c6248b37f1a539d9ebb20e68474154ac1cec88d166ff0aeea40cf94ccb615672"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_43/protocol.json",
+      "bytes": 13412,
+      "sha256": "43fcd094981c60937b376dd3453cf729a04263cfb47928db0aa758ec8df1ad6c",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_43/protocol.json",
+      "source_sha256": "43fcd094981c60937b376dd3453cf729a04263cfb47928db0aa758ec8df1ad6c"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_43/selection_lock.json",
+      "bytes": 3476,
+      "sha256": "590d2afbe2bcdd260d244104d096faa22a61df9a72e79bbb88e2c597eb28a8d0",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_43/selection_lock.json",
+      "source_sha256": "590d2afbe2bcdd260d244104d096faa22a61df9a72e79bbb88e2c597eb28a8d0"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/complete.json",
+      "bytes": 505,
+      "sha256": "41e69dabbf4a79c9614f43ee1a439d038de82e3d5a7592905ee3e80896a39559",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/complete.json",
+      "source_sha256": "41e69dabbf4a79c9614f43ee1a439d038de82e3d5a7592905ee3e80896a39559"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/predictions.csv",
+      "bytes": 3074406,
+      "sha256": "d9cf55b309ed143052de25a4a58b813ce3bd2290919b3d05ec1e2106de2008b2",
+      "rows": 8350,
+      "columns": [
+        "base_id",
+        "group_id",
+        "source",
+        "category_id",
+        "type_label_mask",
+        "split",
+        "label",
+        "prompt_tokens",
+        "probability_last",
+        "threshold_last",
+        "prediction_last",
+        "probability_best_single",
+        "threshold_best_single",
+        "prediction_best_single",
+        "probability_repeat_best",
+        "threshold_repeat_best",
+        "prediction_repeat_best",
+        "probability_fusion_fixed",
+        "threshold_fusion_fixed",
+        "prediction_fusion_fixed",
+        "probability_fusion_fixed_best_anchor",
+        "threshold_fusion_fixed_best_anchor",
+        "prediction_fusion_fixed_best_anchor"
+      ],
+      "transform": "allowlisted_metadata_and_predictions_only",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/predictions.csv",
+      "source_sha256": "572ca4671fddc021504dea98ed3f51355c3e8bb2eec01f315ef7b2b6dd2ee5c2"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/results.json",
+      "bytes": 54740,
+      "sha256": "ee1f44a24c73067d5620321001de8e3a95437089f2bed6b1b959a6e33a4203f5",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/results.json",
+      "source_sha256": "ee1f44a24c73067d5620321001de8e3a95437089f2bed6b1b959a6e33a4203f5"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/test_access.json",
+      "bytes": 253,
+      "sha256": "9072de313eaef88816ed0c6b09e83e6875dbd3179fdd23df25fed8c44b79baee",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/test_access.json",
+      "source_sha256": "9072de313eaef88816ed0c6b09e83e6875dbd3179fdd23df25fed8c44b79baee"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_44/heads/selection.json",
+      "bytes": 6891,
+      "sha256": "f6664215a9deccf346590abf5a4e157d238915d5a7aa38ec007352404c738b96",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_44/heads/selection.json",
+      "source_sha256": "f6664215a9deccf346590abf5a4e157d238915d5a7aa38ec007352404c738b96"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_44/protocol.json",
+      "bytes": 13412,
+      "sha256": "30aa8ca90e56bbbd86d9e29179fc20f5ff3254a6eb98e406e2de1207e72847b2",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_44/protocol.json",
+      "source_sha256": "30aa8ca90e56bbbd86d9e29179fc20f5ff3254a6eb98e406e2de1207e72847b2"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/seed_44/selection_lock.json",
+      "bytes": 3476,
+      "sha256": "5cb1b447bd8bd744ce9060e29c9468725b2ecd6dea14312c42efdebff7772268",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/seed_44/selection_lock.json",
+      "source_sha256": "5cb1b447bd8bd744ce9060e29c9468725b2ecd6dea14312c42efdebff7772268"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_ablation_20261019/summary.csv",
+      "bytes": 7532,
+      "sha256": "5eb48bf2c44bddc51816a698d17e994729eea0df8fb4baf40babb6f573d3418e",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_ablation_20261019/summary.csv",
+      "source_sha256": "5eb48bf2c44bddc51816a698d17e994729eea0df8fb4baf40babb6f573d3418e"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_reference_analysis_20261019/artifact_manifest.json",
+      "bytes": 3233,
+      "sha256": "d1a92954c02308aaf6aba399c97faa7cf09a31214767ffebe1db49dd9d34b531",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_reference_analysis_20261019/artifact_manifest.json",
+      "source_sha256": "d1a92954c02308aaf6aba399c97faa7cf09a31214767ffebe1db49dd9d34b531"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_reference_analysis_20261019/error_complementarity.csv",
+      "bytes": 3713,
+      "sha256": "88bbce18442726d87465df3da95e39f7e37372e723d9f300cfce8048fe67e192",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_reference_analysis_20261019/error_complementarity.csv",
+      "source_sha256": "88bbce18442726d87465df3da95e39f7e37372e723d9f300cfce8048fe67e192"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_reference_analysis_20261019/layer_probe.csv",
+      "bytes": 7589,
+      "sha256": "7943e68540d4337ecaea29cdaeaeeb3df7b388499353d4395dd181da819c19e5",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_reference_analysis_20261019/layer_probe.csv",
+      "source_sha256": "7943e68540d4337ecaea29cdaeaeeb3df7b388499353d4395dd181da819c19e5"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_reference_analysis_20261019/main_results.json",
+      "bytes": 36640,
+      "sha256": "e8eda64d3fb3ba2da743017f6ca33730a8efc4de7bc65a5cfbd1d104beb58def",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_reference_analysis_20261019/main_results.json",
+      "source_sha256": "e8eda64d3fb3ba2da743017f6ca33730a8efc4de7bc65a5cfbd1d104beb58def"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_reference_analysis_20261019/metrics.csv",
+      "bytes": 6308,
+      "sha256": "4e610e43661cf9eeb074e770a85be15bae6264612aca99d06edfb173cbb9b0df",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_reference_analysis_20261019/metrics.csv",
+      "source_sha256": "4e610e43661cf9eeb074e770a85be15bae6264612aca99d06edfb173cbb9b0df"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_reference_analysis_20261019/report.md",
+      "bytes": 2551,
+      "sha256": "3f2acc93eae088cd91ca7c31834429af3cca9ea249611788ee2c53efdea46658",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_reference_analysis_20261019/report.md",
+      "source_sha256": "3f2acc93eae088cd91ca7c31834429af3cca9ea249611788ee2c53efdea46658"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_reference_analysis_20261019/source_metrics.csv",
+      "bytes": 16572,
+      "sha256": "f866e601a6a94f3c3a108f4bd4cdb453ba5fd55ed1ced310d05de508d98653e3",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_reference_analysis_20261019/source_metrics.csv",
+      "source_sha256": "f866e601a6a94f3c3a108f4bd4cdb453ba5fd55ed1ced310d05de508d98653e3"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_nolora_reference_analysis_20261019/threshold_sensitivity.csv",
+      "bytes": 2612,
+      "sha256": "9d641726d56997f0afb199583fb04dbdbe1681cccd2f9659a664a78916710c92",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_nolora_reference_analysis_20261019/threshold_sensitivity.csv",
+      "source_sha256": "9d641726d56997f0afb199583fb04dbdbe1681cccd2f9659a664a78916710c92"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_analysis_20261018/cpu_validation.json",
+      "bytes": 659,
+      "sha256": "b0edc22c026caeb915b9f504edcd649d9a1236f0d29c8cc376569402c16eb77e",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_analysis_20261018/cpu_validation.json",
+      "source_sha256": "b0edc22c026caeb915b9f504edcd649d9a1236f0d29c8cc376569402c16eb77e"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_analysis_20261018/decision_record.json",
+      "bytes": 652,
+      "sha256": "69a6bafadbb3fea085ac92dc2e1d0da45949f6d6b4ca2a90b50fbaf9e61cc57a",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_analysis_20261018/decision_record.json",
+      "source_sha256": "69a6bafadbb3fea085ac92dc2e1d0da45949f6d6b4ca2a90b50fbaf9e61cc57a"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_analysis_20261018/selection_arithmetic.json",
+      "bytes": 539,
+      "sha256": "c5deaa657ffaf76b401f02e4878e00b142514bcd9fdfadbefa1dfcc23a8191a4",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_analysis_20261018/selection_arithmetic.json",
+      "source_sha256": "c5deaa657ffaf76b401f02e4878e00b142514bcd9fdfadbefa1dfcc23a8191a4"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/adapter_lineage.json",
+      "bytes": 641,
+      "sha256": "d913d25e6579000c152024533aa12379ea70a2503cc593857f0b5aaa71d8a410",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/adapter_lineage.json",
+      "source_sha256": "d913d25e6579000c152024533aa12379ea70a2503cc593857f0b5aaa71d8a410"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/protocol.json",
+      "bytes": 15058,
+      "sha256": "ea53cbd58756ddb810f35e4bad3c406ef0e31288b94d3ecf21e476e118b323fc",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/protocol.json",
+      "source_sha256": "ea53cbd58756ddb810f35e4bad3c406ef0e31288b94d3ecf21e476e118b323fc"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/readouts/analysis/complete.json",
+      "bytes": 505,
+      "sha256": "df03879ba57cfa50f844b963725a075f9701015b9968da9bce8e8ade5f2a0caa",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/readouts/analysis/complete.json",
+      "source_sha256": "df03879ba57cfa50f844b963725a075f9701015b9968da9bce8e8ade5f2a0caa"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/readouts/analysis/predictions.csv",
+      "bytes": 3577431,
+      "sha256": "6bb15e626f4dcb0931bf7b539e679f614c9271aac5ec9be054c0c90a4f586dbf",
+      "rows": 8228,
+      "columns": [
+        "category_id",
+        "source",
+        "base_id",
+        "group_id",
+        "prompt_tokens",
+        "sample_id",
+        "split",
+        "type_label_mask",
+        "label",
+        "probability_last",
+        "threshold_last",
+        "prediction_last",
+        "probability_best_single",
+        "threshold_best_single",
+        "prediction_best_single",
+        "probability_repeat_best",
+        "threshold_repeat_best",
+        "prediction_repeat_best",
+        "probability_fusion_fixed",
+        "threshold_fusion_fixed",
+        "prediction_fusion_fixed",
+        "probability_fusion_fixed_best_anchor",
+        "threshold_fusion_fixed_best_anchor",
+        "prediction_fusion_fixed_best_anchor"
+      ],
+      "transform": "allowlisted_metadata_and_predictions_only",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/readouts/analysis/predictions.csv",
+      "source_sha256": "96a32485180b6cc9270872c70769c24eb45eb96f579d4ff9a4fcc26848461eb5"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/readouts/analysis/results.json",
+      "bytes": 21721,
+      "sha256": "19f3a2f12b0d179a2b5f17117d148ef67be446390eb48fe099a2281f858814e9",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/readouts/analysis/results.json",
+      "source_sha256": "19f3a2f12b0d179a2b5f17117d148ef67be446390eb48fe099a2281f858814e9"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/readouts/analysis/test_access.json",
+      "bytes": 252,
+      "sha256": "8e7ba612b84f7c648110d27abd616d8241949b0475509f266f3a57a76e277929",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/readouts/analysis/test_access.json",
+      "source_sha256": "8e7ba612b84f7c648110d27abd616d8241949b0475509f266f3a57a76e277929"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/readouts/heads/selection.json",
+      "bytes": 8650,
+      "sha256": "8c8e854fa45456c629ba88171a5b134deabc6fa127e8f4803d1050904cf03af4",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/readouts/heads/selection.json",
+      "source_sha256": "8c8e854fa45456c629ba88171a5b134deabc6fa127e8f4803d1050904cf03af4"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/readouts/protocol.json",
+      "bytes": 16827,
+      "sha256": "523180735fdcc16025d206472ebc253411441f5e109a2ed9890940fc678ab1db",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/readouts/protocol.json",
+      "source_sha256": "523180735fdcc16025d206472ebc253411441f5e109a2ed9890940fc678ab1db"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/readouts/registration.json",
+      "bytes": 92,
+      "sha256": "948968adccdba5d2aae80926186d1f86f3fa5454d6a1af7cd7469d150dca805c",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/readouts/registration.json",
+      "source_sha256": "948968adccdba5d2aae80926186d1f86f3fa5454d6a1af7cd7469d150dca805c"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/readouts/selection_lock.json",
+      "bytes": 4969,
+      "sha256": "ed7fc3009bd1ae0995af58a3cbf743cdade74017c2a6bd973645d9d5456153df",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/readouts/selection_lock.json",
+      "source_sha256": "ed7fc3009bd1ae0995af58a3cbf743cdade74017c2a6bd973645d9d5456153df"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/registration.json",
+      "bytes": 3863,
+      "sha256": "6cc5b940028be1c0be24a66d7f91c22ec73ddd0986dae98ed6a77b9db49595b3",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/registration.json",
+      "source_sha256": "6cc5b940028be1c0be24a66d7f91c22ec73ddd0986dae98ed6a77b9db49595b3"
+    },
+    {
+      "archive_path": "artifacts/outputs/hanguard_selected122_lora_20261018/state.json",
+      "bytes": 2480,
+      "sha256": "86092d437d64b3375c60f6b86bda3c6da36c5d9308676d3db5eb0114e316adb9",
+      "transform": "byte_identical",
+      "source_path": "outputs/hanguard_selected122_lora_20261018/state.json",
+      "source_sha256": "86092d437d64b3375c60f6b86bda3c6da36c5d9308676d3db5eb0114e316adb9"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/ab_diagnostic_queue.py",
+      "bytes": 37042,
+      "sha256": "c86d8a9a8e85ec830b0e983b29af9ab8b80fd2f17ab8f2e5f9bfc9c06eb3f04d",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/ab_diagnostic_queue.py",
+      "source_sha256": "c86d8a9a8e85ec830b0e983b29af9ab8b80fd2f17ab8f2e5f9bfc9c06eb3f04d"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/ab_frozen_readout_diagnostics.py",
+      "bytes": 53312,
+      "sha256": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/ab_frozen_readout_diagnostics.py",
+      "source_sha256": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/ab_readout_parallel_queue.py",
+      "bytes": 27464,
+      "sha256": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/ab_readout_parallel_queue.py",
+      "source_sha256": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/analyze_fusion_reference_results.py",
+      "bytes": 19412,
+      "sha256": "a19e1f8aaf4bed123341d7db786e1a72e458f6fdf7632ee4c34c7b29b9dfc882",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/analyze_fusion_reference_results.py",
+      "source_sha256": "a19e1f8aaf4bed123341d7db786e1a72e458f6fdf7632ee4c34c7b29b9dfc882"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/build_selected_test_subset.py",
+      "bytes": 14146,
+      "sha256": "43a3203c6d1f9d27cbe14724c6c901c3b4f7bccbc5d1afe8e57576a2e0fca548",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/build_selected_test_subset.py",
+      "source_sha256": "43a3203c6d1f9d27cbe14724c6c901c3b4f7bccbc5d1afe8e57576a2e0fca548"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/current_training.py",
+      "bytes": 29382,
+      "sha256": "1b18846b02aac8fa2a3f4fbb71a024bcc2a9fcd0683f1fc8d8a5a3654cbab984",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/current_training.py",
+      "source_sha256": "1b18846b02aac8fa2a3f4fbb71a024bcc2a9fcd0683f1fc8d8a5a3654cbab984"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/fragment_clean_lora_study.py",
+      "bytes": 48313,
+      "sha256": "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/fragment_clean_lora_study.py",
+      "source_sha256": "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_base_parallel_features.py",
+      "bytes": 37673,
+      "sha256": "145bfa24813a4dc52ab53df1dadbe314f6216f7d1942360f73ef85c5e9b95573",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_base_parallel_features.py",
+      "source_sha256": "145bfa24813a4dc52ab53df1dadbe314f6216f7d1942360f73ef85c5e9b95573"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_base_parallel_queue.py",
+      "bytes": 29162,
+      "sha256": "d46725329a3b9421c24bc1fb7de47e815212a5665ed1c788529f39b58885724f",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_base_parallel_queue.py",
+      "source_sha256": "d46725329a3b9421c24bc1fb7de47e815212a5665ed1c788529f39b58885724f"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_base_parallel_study.py",
+      "bytes": 14850,
+      "sha256": "5e829867c39aa53c2c12088b7df8bb04fcf5fcb542431fd8bab76b55e7ac07d3",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_base_parallel_study.py",
+      "source_sha256": "5e829867c39aa53c2c12088b7df8bb04fcf5fcb542431fd8bab76b55e7ac07d3"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_base_readout_admission_v2.py",
+      "bytes": 21357,
+      "sha256": "856d93dd4a7c44907d4a248aeac37193652bbf9f3f3743b4d9f84cb8de4b8574",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_base_readout_admission_v2.py",
+      "source_sha256": "856d93dd4a7c44907d4a248aeac37193652bbf9f3f3743b4d9f84cb8de4b8574"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_base_readout_heads.py",
+      "bytes": 31933,
+      "sha256": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_base_readout_heads.py",
+      "source_sha256": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_base_readout_queue.py",
+      "bytes": 25759,
+      "sha256": "c824554b6d3157029abe34773e915e03ebd88559db805ec43a86ccaf52059e06",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_base_readout_queue.py",
+      "source_sha256": "c824554b6d3157029abe34773e915e03ebd88559db805ec43a86ccaf52059e06"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_base_readout_study.py",
+      "bytes": 30346,
+      "sha256": "b500fbcabdd3b94dd35293d8805983bbe1895667cb435357245f2b4b3e9d85b4",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_base_readout_study.py",
+      "source_sha256": "b500fbcabdd3b94dd35293d8805983bbe1895667cb435357245f2b4b3e9d85b4"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_base_resumable_heads.py",
+      "bytes": 25218,
+      "sha256": "f09ff42f8fc1e94d71bdc0bc30520e07d9d415baf4a049b27b6efa8491f1eca2",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_base_resumable_heads.py",
+      "source_sha256": "f09ff42f8fc1e94d71bdc0bc30520e07d9d415baf4a049b27b6efa8491f1eca2"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/frozen_lora_layer_diagnostics.py",
+      "bytes": 100056,
+      "sha256": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/frozen_lora_layer_diagnostics.py",
+      "source_sha256": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/multilabel_heads.py",
+      "bytes": 9311,
+      "sha256": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/multilabel_heads.py",
+      "source_sha256": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/nolora_ablation_queue.py",
+      "bytes": 12731,
+      "sha256": "16bde63e4452a50881ac5dc687b6d036ea97a42d0fa7d793f6159fec1764f502",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/nolora_ablation_queue.py",
+      "source_sha256": "16bde63e4452a50881ac5dc687b6d036ea97a42d0fa7d793f6159fec1764f502"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/nolora_fusion_ablation.py",
+      "bytes": 40051,
+      "sha256": "612ea025f4799cf748683d13b6c7b12ee949689abae31657debbac98be61941a",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/nolora_fusion_ablation.py",
+      "source_sha256": "612ea025f4799cf748683d13b6c7b12ee949689abae31657debbac98be61941a"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/package_fusion_ablation_results.py",
+      "bytes": 39706,
+      "sha256": "64a401b471f11a719ff947dcab8f0765696d4777eb88f4b9b5904f7e42cb2b36",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/package_fusion_ablation_results.py",
+      "source_sha256": "64a401b471f11a719ff947dcab8f0765696d4777eb88f4b9b5904f7e42cb2b36"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/remediated_binary_study.py",
+      "bytes": 1583,
+      "sha256": "dfd13ad93bbd2ac9d4c9a1450c63ab288ad53869199608ef82b17e554b4e10cb",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/remediated_binary_study.py",
+      "source_sha256": "dfd13ad93bbd2ac9d4c9a1450c63ab288ad53869199608ef82b17e554b4e10cb"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/remediated_dataset_contract.py",
+      "bytes": 8324,
+      "sha256": "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/remediated_dataset_contract.py",
+      "source_sha256": "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/repaired_heads.py",
+      "bytes": 24832,
+      "sha256": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/repaired_heads.py",
+      "source_sha256": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/repaired_study.py",
+      "bytes": 46373,
+      "sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/repaired_study.py",
+      "source_sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/report_repaired_study.py",
+      "bytes": 22015,
+      "sha256": "11bde61b79ed782a9aa1697b836bdac7f239bb3b4c2428a5660f6c4a054c3635",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/report_repaired_study.py",
+      "source_sha256": "11bde61b79ed782a9aa1697b836bdac7f239bb3b4c2428a5660f6c4a054c3635"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/selected_subset_lora_study.py",
+      "bytes": 6642,
+      "sha256": "aebdde4c9df32c130e9b6f5fcfe643c4a9ed95c87008ea4520dc7c47771e5b5d",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/selected_subset_lora_study.py",
+      "source_sha256": "aebdde4c9df32c130e9b6f5fcfe643c4a9ed95c87008ea4520dc7c47771e5b5d"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/sparse_token_readout_queue.py",
+      "bytes": 22346,
+      "sha256": "bff67bcd07d78e77d7fd3bb723cfd9b1728e421ff10e89ce873625dd798636eb",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/sparse_token_readout_queue.py",
+      "source_sha256": "bff67bcd07d78e77d7fd3bb723cfd9b1728e421ff10e89ce873625dd798636eb"
+    },
+    {
+      "archive_path": "artifacts/scripts/hanguard/train.py",
+      "bytes": 424,
+      "sha256": "d1258bcf5c20f19755c9c7546e5037b80f2789bb9ef82f593bd00263b141858c",
+      "transform": "byte_identical",
+      "source_path": "scripts/hanguard/train.py",
+      "source_sha256": "d1258bcf5c20f19755c9c7546e5037b80f2789bb9ef82f593bd00263b141858c"
+    },
+    {
+      "archive_path": "artifacts/tests/test_nolora_ablation_queue.py",
+      "bytes": 3344,
+      "sha256": "983c99e3d437228012066478c3762614385b360e8abcc8c99a3511ae4145ba19",
+      "transform": "byte_identical",
+      "source_path": "tests/test_nolora_ablation_queue.py",
+      "source_sha256": "983c99e3d437228012066478c3762614385b360e8abcc8c99a3511ae4145ba19"
+    },
+    {
+      "archive_path": "artifacts/tests/test_nolora_fusion_ablation.py",
+      "bytes": 13512,
+      "sha256": "9c90165e75dcd8f3652d0d77ba3b8a21df06d31abf98f9ca2c3b6e8308b95151",
+      "transform": "byte_identical",
+      "source_path": "tests/test_nolora_fusion_ablation.py",
+      "source_sha256": "9c90165e75dcd8f3652d0d77ba3b8a21df06d31abf98f9ca2c3b6e8308b95151"
+    },
+    {
+      "archive_path": "component_ablation.csv",
+      "bytes": 2792,
+      "sha256": "de51398776db9f80e120ac0c4c63f006d98a2b146b5727a370a11c2132ac703f",
+      "transform": "completed_result_tables_with_explicit_pending_states"
+    },
+    {
+      "archive_path": "index.json",
+      "bytes": 1081,
+      "sha256": "cae2b2db3c821278b879c07e13ccc8480d87fea2282257131a539eaf7c60b76a"
+    },
+    {
+      "archive_path": "results_summary.csv",
+      "bytes": 42365,
+      "sha256": "42a2e9fdda52571fc2d5ebec77f3c4f2675dedaedb897dd8553eb827d07b8495",
+      "transform": "normalized_metrics_percent_and_percentage_points"
+    },
+    {
+      "archive_path": "seed_gains.csv",
+      "bytes": 1084,
+      "sha256": "5aa618587f7c542803a26848e9cb58404d01814401c2ed1ec229a20038660329",
+      "transform": "completed_result_tables_with_explicit_pending_states"
+    },
+    {
+      "archive_path": "seed_summary.csv",
+      "bytes": 3333,
+      "sha256": "bc44e49938db0f10240e5695b272f78123ac966bf334188a4a3c9958fd99d3b6",
+      "transform": "completed_result_tables_with_explicit_pending_states"
+    },
+    {
+      "archive_path": "source_dependencies.json",
+      "bytes": 9994,
+      "sha256": "706e4add00ec9c65c705d1175bb07298736758b90bf2684f59620c67f2be77e1"
+    }
+  ]
+}

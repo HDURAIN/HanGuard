@@ -1,0 +1,150 @@
+{
+  "scope": "AI text review of a prediction-selected error subset; not human gold or population label-error prevalence",
+  "no_training_relabeling_or_deletion_performed": true,
+  "annotation_counts": {
+    "semantic_judgment": {
+      "clear_unharmful": 64,
+      "clear_harmful": 18,
+      "boundary_or_context_dependent": 33,
+      "insufficient_context": 11
+    },
+    "label_assessment": {
+      "supported": 77,
+      "ambiguous": 44,
+      "questionable": 5
+    },
+    "translation_assessment": {
+      "no_material_issue": 117,
+      "not_applicable": 4,
+      "clear_material_issue": 2,
+      "possible_material_issue": 3
+    },
+    "dominant_phenomenon": {
+      "ordinary_benign": 16,
+      "benign_risky_topic": 48,
+      "harmful_fiction_or_roleplay": 19,
+      "clear_harmful_request": 9,
+      "indirect_or_ambiguous_intent": 20,
+      "ambiguous_or_fragment": 11,
+      "jailbreak_without_payload": 3
+    },
+    "noise_support": {
+      "none": 64,
+      "possible": 39,
+      "explicit_distractor": 23
+    }
+  },
+  "by_original_binary_label": {
+    "0": {
+      "semantic_judgment": {
+        "clear_unharmful": 59,
+        "boundary_or_context_dependent": 8,
+        "insufficient_context": 10
+      },
+      "label_assessment": {
+        "supported": 59,
+        "ambiguous": 18
+      },
+      "translation_assessment": {
+        "no_material_issue": 74,
+        "not_applicable": 2,
+        "possible_material_issue": 1
+      },
+      "dominant_phenomenon": {
+        "ordinary_benign": 15,
+        "benign_risky_topic": 46,
+        "indirect_or_ambiguous_intent": 5,
+        "ambiguous_or_fragment": 10,
+        "jailbreak_without_payload": 1
+      },
+      "noise_support": {
+        "none": 52,
+        "possible": 17,
+        "explicit_distractor": 8
+      }
+    },
+    "1": {
+      "semantic_judgment": {
+        "clear_harmful": 18,
+        "boundary_or_context_dependent": 25,
+        "clear_unharmful": 5,
+        "insufficient_context": 1
+      },
+      "label_assessment": {
+        "supported": 18,
+        "ambiguous": 26,
+        "questionable": 5
+      },
+      "translation_assessment": {
+        "no_material_issue": 43,
+        "clear_material_issue": 2,
+        "possible_material_issue": 2,
+        "not_applicable": 2
+      },
+      "dominant_phenomenon": {
+        "harmful_fiction_or_roleplay": 19,
+        "clear_harmful_request": 9,
+        "indirect_or_ambiguous_intent": 15,
+        "benign_risky_topic": 2,
+        "jailbreak_without_payload": 2,
+        "ambiguous_or_fragment": 1,
+        "ordinary_benign": 1
+      },
+      "noise_support": {
+        "explicit_distractor": 15,
+        "none": 12,
+        "possible": 22
+      }
+    }
+  },
+  "questionable_label_ids": [
+    "H037",
+    "H046",
+    "H085",
+    "H100",
+    "H125"
+  ],
+  "translation_issue_ids": [
+    "H019",
+    "H046",
+    "H051",
+    "H077",
+    "H124"
+  ],
+  "original_126_remaining_harms_at_common_05": 117,
+  "original_126_anchor_correct_at_05": 8,
+  "original_126_best_single_wrong_at_05": 1,
+  "output_score_change_abs_ge_point_2": 105,
+  "public_original_exact_match_count": 122,
+  "whole_test_narrow_translation_rule_candidates": 5,
+  "whole_test_translation_rule_exclusion_sensitivity": {
+    "rows": 8345,
+    "best_single_correct": 7893,
+    "best_single_accuracy": 0.9458358298382264,
+    "fusion_fixed_correct": 7924,
+    "fusion_fixed_accuracy": 0.949550629119233,
+    "fusion_fixed_rescued": 191,
+    "fusion_fixed_harmed": 160,
+    "fusion_fixed_delta_pp": 0.3714799281006591,
+    "fusion_fixed_best_anchor_correct": 7946,
+    "fusion_fixed_best_anchor_accuracy": 0.952186938286399,
+    "fusion_fixed_best_anchor_rescued": 177,
+    "fusion_fixed_best_anchor_harmed": 124,
+    "fusion_fixed_best_anchor_delta_pp": 0.6351108448172559
+  },
+  "candidate_ids": [
+    "2bb8848e160543e5dc58a2aa4f0f06fd196bfaf00756ecc766ff2cb6dbddf7f6",
+    "984c820e955089f980a08a496956f4c09660096ca3e4283af5a8d96c6768e5db",
+    "c3eb20f8e1dcf1e77a5a9eac4a4438be26c2d5f94f33cc9bc2c4f774b27c2366",
+    "ea3c1064394898ad34c38f71f5f27d961c2ff53d569d12079fc23bf5891015fe",
+    "fb477e0a633ea101520445bedca5a1c118027a90e790d3b23f981bca463b8d3a"
+  ],
+  "limitations": [
+    "Every reviewed sample was selected for anchor-harm; this selection cannot estimate overall semantic error rates.",
+    "Reviewers knew original labels and error-subset membership; this was not blinded human adjudication.",
+    "Label boundaries follow source-specific policies that are not fully specified here.",
+    "Wrapper presence, length and score changes do not establish a causal mechanism.",
+    "Subset exclusion changes the evaluation population and cannot predict retraining effects.",
+    "The narrow translation scan is post-hoc, non-exhaustive and requires adjudication."
+  ]
+}

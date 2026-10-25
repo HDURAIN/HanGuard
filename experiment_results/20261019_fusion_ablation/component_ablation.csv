@@ -1,0 +1,15 @@
+evaluation_scope,method,status,accuracy_percent,gain_vs_anchor_replay_pp,parameters_total,parameters_trainable,layers,anchor_layer,training_device,common_epoch_budget,source
+full_test_8350,anchor_replay,completed,94.98203592814372,0.0,1656709,1656709,8/16/24/32,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+full_test_8350,uniform_weights,completed,95.18562874251498,0.2035928143712562,1656709,1656705,8/16/24/32,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+full_test_8350,no_anchor,completed,95.02994011976048,0.04790419161676551,1328901,1328901,8/16/24/32,none,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+full_test_8350,shared_projection,completed,94.99401197604791,0.011976047904194154,672517,672517,8/16/24/32,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+full_test_8350,top4,completed,94.93413173652695,-0.04790419161676551,1656709,1656709,15/17/18/19,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+full_test_8350,two_layers,completed,95.17365269461078,0.19161676646706205,1000579,1000579,16/32,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+full_test_8350,mean_pool,completed,93.97604790419162,-1.005988023952098,327937,327937,8/16/24/32,none,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+selected_test_8228,anchor_replay,completed,96.13514827418571,0.0,1656709,1656709,8/16/24/32,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+selected_test_8228,uniform_weights,completed,96.28099173553719,0.1458434613514803,1656709,1656705,8/16/24/32,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+selected_test_8228,no_anchor,completed,96.0379192999514,-0.0972289742343202,1328901,1328901,8/16/24/32,none,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+selected_test_8228,shared_projection,completed,95.8920758385999,-0.2430724355858116,672517,672517,8/16/24/32,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+selected_test_8228,top4,completed,95.55177442877978,-0.5833738454059323,1656709,1656709,15/17/18/19,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+selected_test_8228,two_layers,completed,96.05007292173067,-0.08507535245503295,1000579,1000579,16/32,19,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json
+selected_test_8228,mean_pool,completed,94.77394263490521,-1.361205639280505,327937,327937,8/16/24/32,none,cpu,12,outputs/hanguard_nolora_ablation_20261019/components/analysis/results.json

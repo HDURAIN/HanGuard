@@ -1,0 +1,291 @@
+{
+  "schema": "hanguard_four_arm_manifest_v1",
+  "files": [
+    {
+      "path": "artifacts/outputs/hanguard_four_arm_experiments_20261019/coordinator_launch.json",
+      "sha256": "a54ac254bdc8f1b1100382b0bea377f475bff4ec6fdb74274310194ea5b0bc3a",
+      "source": "outputs/hanguard_four_arm_experiments_20261019/coordinator_launch.json",
+      "source_sha256": "a54ac254bdc8f1b1100382b0bea377f475bff4ec6fdb74274310194ea5b0bc3a",
+      "transform": "canonical_json",
+      "removed_corpus_fields": 0
+    },
+    {
+      "path": "artifacts/outputs/hanguard_four_arm_experiments_20261019/feature_cache_diagnostic_review_20261022.json",
+      "sha256": "02a18c1601deea497a467aff67a5c5752d29b16874ed530473e97bbecc1781e8",
+      "source": "outputs/hanguard_four_arm_experiments_20261019/feature_cache_diagnostic_review_20261022.json",
+      "source_sha256": "02a18c1601deea497a467aff67a5c5752d29b16874ed530473e97bbecc1781e8",
+      "transform": "canonical_json",
+      "removed_corpus_fields": 0
+    },
+    {
+      "path": "artifacts/outputs/hanguard_four_arm_experiments_20261019/feature_cache_review_20261020.json",
+      "sha256": "e5f1373ba8de58adf29ac98ab74d1fba1c5b30d90871002843c1a2236307a40a",
+      "source": "outputs/hanguard_four_arm_experiments_20261019/feature_cache_review_20261020.json",
+      "source_sha256": "e5f1373ba8de58adf29ac98ab74d1fba1c5b30d90871002843c1a2236307a40a",
+      "transform": "canonical_json",
+      "removed_corpus_fields": 0
+    },
+    {
+      "path": "artifacts/outputs/hanguard_four_arm_experiments_20261019/protocol.json",
+      "sha256": "40ed402ad52604ddb67d1fa2526f470aa3440e2f9d9634febc3334cd4e0fceda",
+      "source": "outputs/hanguard_four_arm_experiments_20261019/protocol.json",
+      "source_sha256": "40ed402ad52604ddb67d1fa2526f470aa3440e2f9d9634febc3334cd4e0fceda",
+      "transform": "canonical_json",
+      "removed_corpus_fields": 0
+    },
+    {
+      "path": "artifacts/outputs/hanguard_four_arm_experiments_20261019/protocol_registration.json",
+      "sha256": "7a1065640971522ed5ef6dcc7ddd57b171e725ceb8d2ec1c1e8c58fa43d19225",
+      "source": "outputs/hanguard_four_arm_experiments_20261019/protocol_registration.json",
+      "source_sha256": "7a1065640971522ed5ef6dcc7ddd57b171e725ceb8d2ec1c1e8c58fa43d19225",
+      "transform": "canonical_json",
+      "removed_corpus_fields": 0
+    },
+    {
+      "path": "artifacts/outputs/hanguard_four_arm_experiments_20261019/state.json",
+      "sha256": "210bd5382f780597f0f66cb8b662cf46897d1ab63e9515d2cb4570c9295b786b",
+      "source": "outputs/hanguard_four_arm_experiments_20261019/state.json",
+      "source_sha256": "210bd5382f780597f0f66cb8b662cf46897d1ab63e9515d2cb4570c9295b786b",
+      "transform": "canonical_json",
+      "removed_corpus_fields": 0
+    },
+    {
+      "path": "artifacts/scripts/hanguard/ab_diagnostic_queue.py",
+      "sha256": "c86d8a9a8e85ec830b0e983b29af9ab8b80fd2f17ab8f2e5f9bfc9c06eb3f04d",
+      "source": "scripts/hanguard/ab_diagnostic_queue.py",
+      "source_sha256": "c86d8a9a8e85ec830b0e983b29af9ab8b80fd2f17ab8f2e5f9bfc9c06eb3f04d",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/ab_frozen_readout_diagnostics.py",
+      "sha256": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+      "source": "scripts/hanguard/ab_frozen_readout_diagnostics.py",
+      "source_sha256": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/ab_readout_parallel_queue.py",
+      "sha256": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70",
+      "source": "scripts/hanguard/ab_readout_parallel_queue.py",
+      "source_sha256": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/current_training.py",
+      "sha256": "1b18846b02aac8fa2a3f4fbb71a024bcc2a9fcd0683f1fc8d8a5a3654cbab984",
+      "source": "scripts/hanguard/current_training.py",
+      "source_sha256": "1b18846b02aac8fa2a3f4fbb71a024bcc2a9fcd0683f1fc8d8a5a3654cbab984",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/four_arm_experiment_study.py",
+      "sha256": "5013d4d646c73c8f827583ea87b178fe79cd478bfc476787d51f9612a47d65fd",
+      "source": "scripts/hanguard/four_arm_experiment_study.py",
+      "source_sha256": "5013d4d646c73c8f827583ea87b178fe79cd478bfc476787d51f9612a47d65fd",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/four_arm_experiment_training.py",
+      "sha256": "8630117b4ba2d05e58180208a8aadd6b38a0cf5915e351531b74ae0b0a915189",
+      "source": "scripts/hanguard/four_arm_experiment_training.py",
+      "source_sha256": "8630117b4ba2d05e58180208a8aadd6b38a0cf5915e351531b74ae0b0a915189",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/four_arm_feature_mismatch_diagnostic.py",
+      "sha256": "e6cfcfdb518d5f9710d8c66a118c52ad53f3bebec1ec1714d08120828029dfca",
+      "source": "scripts/hanguard/four_arm_feature_mismatch_diagnostic.py",
+      "source_sha256": "e6cfcfdb518d5f9710d8c66a118c52ad53f3bebec1ec1714d08120828029dfca",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/four_arm_feature_replay_queue.py",
+      "sha256": "ee29cbf0e8a52adbbc53665bfd5aa6842d8b5381f14359b452009dc69ac1c9ea",
+      "source": "scripts/hanguard/four_arm_feature_replay_queue.py",
+      "source_sha256": "ee29cbf0e8a52adbbc53665bfd5aa6842d8b5381f14359b452009dc69ac1c9ea",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/four_arm_query_heads.py",
+      "sha256": "eefda357371850f9c6391eb96b7875682eccda7e1d91bade8346d890e0ebcf93",
+      "source": "scripts/hanguard/four_arm_query_heads.py",
+      "source_sha256": "eefda357371850f9c6391eb96b7875682eccda7e1d91bade8346d890e0ebcf93",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/four_arm_token_cache.py",
+      "sha256": "835c02385a57c7a444ad4673edb39fb541b74ea80ce345e9e788321a79816136",
+      "source": "scripts/hanguard/four_arm_token_cache.py",
+      "source_sha256": "835c02385a57c7a444ad4673edb39fb541b74ea80ce345e9e788321a79816136",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/fragment_clean_lora_study.py",
+      "sha256": "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4",
+      "source": "scripts/hanguard/fragment_clean_lora_study.py",
+      "source_sha256": "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/frozen_base_parallel_features.py",
+      "sha256": "145bfa24813a4dc52ab53df1dadbe314f6216f7d1942360f73ef85c5e9b95573",
+      "source": "scripts/hanguard/frozen_base_parallel_features.py",
+      "source_sha256": "145bfa24813a4dc52ab53df1dadbe314f6216f7d1942360f73ef85c5e9b95573",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/frozen_base_readout_heads.py",
+      "sha256": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1",
+      "source": "scripts/hanguard/frozen_base_readout_heads.py",
+      "source_sha256": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/frozen_base_readout_study.py",
+      "sha256": "b500fbcabdd3b94dd35293d8805983bbe1895667cb435357245f2b4b3e9d85b4",
+      "source": "scripts/hanguard/frozen_base_readout_study.py",
+      "source_sha256": "b500fbcabdd3b94dd35293d8805983bbe1895667cb435357245f2b4b3e9d85b4",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/frozen_base_resumable_heads.py",
+      "sha256": "f09ff42f8fc1e94d71bdc0bc30520e07d9d415baf4a049b27b6efa8491f1eca2",
+      "source": "scripts/hanguard/frozen_base_resumable_heads.py",
+      "source_sha256": "f09ff42f8fc1e94d71bdc0bc30520e07d9d415baf4a049b27b6efa8491f1eca2",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/frozen_lora_layer_diagnostics.py",
+      "sha256": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+      "source": "scripts/hanguard/frozen_lora_layer_diagnostics.py",
+      "source_sha256": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/multilabel_heads.py",
+      "sha256": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6",
+      "source": "scripts/hanguard/multilabel_heads.py",
+      "source_sha256": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/package_four_arm_experiments.py",
+      "sha256": "33abe5fc8b153e007ee633d06a7cac5244c954929ff165acdd0ba7ddd2fe8ff8",
+      "source": "scripts/hanguard/package_four_arm_experiments.py",
+      "source_sha256": "33abe5fc8b153e007ee633d06a7cac5244c954929ff165acdd0ba7ddd2fe8ff8",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/remediated_binary_study.py",
+      "sha256": "dfd13ad93bbd2ac9d4c9a1450c63ab288ad53869199608ef82b17e554b4e10cb",
+      "source": "scripts/hanguard/remediated_binary_study.py",
+      "source_sha256": "dfd13ad93bbd2ac9d4c9a1450c63ab288ad53869199608ef82b17e554b4e10cb",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/remediated_dataset_contract.py",
+      "sha256": "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6",
+      "source": "scripts/hanguard/remediated_dataset_contract.py",
+      "source_sha256": "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/repaired_heads.py",
+      "sha256": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+      "source": "scripts/hanguard/repaired_heads.py",
+      "source_sha256": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/scripts/hanguard/repaired_study.py",
+      "sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+      "source": "scripts/hanguard/repaired_study.py",
+      "source_sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/tests/test_four_arm_experiment_study.py",
+      "sha256": "fae7612f4735f6b279f45289147e7067a439430a257eb1bf05ac475617697d16",
+      "source": "tests/test_four_arm_experiment_study.py",
+      "source_sha256": "fae7612f4735f6b279f45289147e7067a439430a257eb1bf05ac475617697d16",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/tests/test_four_arm_experiment_training.py",
+      "sha256": "be10cc5e726fb10b07c782a97797d80aeda2d2cca9dfd0d519e093232145e076",
+      "source": "tests/test_four_arm_experiment_training.py",
+      "source_sha256": "be10cc5e726fb10b07c782a97797d80aeda2d2cca9dfd0d519e093232145e076",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/tests/test_four_arm_feature_mismatch_diagnostic.py",
+      "sha256": "135002c07f800e6bfab6062e5f02d6d0f4918cc5e8800a562b396bb6ee8b07ab",
+      "source": "tests/test_four_arm_feature_mismatch_diagnostic.py",
+      "source_sha256": "135002c07f800e6bfab6062e5f02d6d0f4918cc5e8800a562b396bb6ee8b07ab",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/tests/test_four_arm_feature_replay_queue.py",
+      "sha256": "1fa0c24553fd2db28c9c4a53e3d3c8694bd9af2b40686a35d06c911d926e87ed",
+      "source": "tests/test_four_arm_feature_replay_queue.py",
+      "source_sha256": "1fa0c24553fd2db28c9c4a53e3d3c8694bd9af2b40686a35d06c911d926e87ed",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/tests/test_four_arm_query_heads.py",
+      "sha256": "85f24d5ec1a46e5cf2dd3db9fc5ca52bf6a3a657e0ab5ea94cc9d47c2f830546",
+      "source": "tests/test_four_arm_query_heads.py",
+      "source_sha256": "85f24d5ec1a46e5cf2dd3db9fc5ca52bf6a3a657e0ab5ea94cc9d47c2f830546",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/tests/test_four_arm_token_cache.py",
+      "sha256": "f8e7bfe66c6a2a439660ae6a87ffe0687de0f2d2b1e9bf9fbba8c7f519d687ff",
+      "source": "tests/test_four_arm_token_cache.py",
+      "source_sha256": "f8e7bfe66c6a2a439660ae6a87ffe0687de0f2d2b1e9bf9fbba8c7f519d687ff",
+      "transform": "copy"
+    },
+    {
+      "path": "artifacts/tests/test_package_four_arm_experiments.py",
+      "sha256": "c1ee85cc8fd9aa95fd2b659f9099c69f77dcfe5c889591a322479cb452795cdb",
+      "source": "tests/test_package_four_arm_experiments.py",
+      "source_sha256": "c1ee85cc8fd9aa95fd2b659f9099c69f77dcfe5c889591a322479cb452795cdb",
+      "transform": "copy"
+    },
+    {
+      "path": "README.md",
+      "sha256": "68f662880562541639267bfdbd3dc978751aa3b2d17d623d2a03e908141be824",
+      "source": null,
+      "source_sha256": null,
+      "transform": "generated"
+    },
+    {
+      "path": "results_summary.csv",
+      "sha256": "b9a2bb6ba3e9ef097709ebc17ccd3502a9cb6e8e902590fd5f1b744b40c704a3",
+      "source": null,
+      "source_sha256": null,
+      "transform": "generated"
+    },
+    {
+      "path": "seed_summary.csv",
+      "sha256": "0fb68d2c1289bd34b3bcfa89b307b71c73a7d1f11e41e6f910ae7da52ba715b2",
+      "source": null,
+      "source_sha256": null,
+      "transform": "generated"
+    },
+    {
+      "path": "coverage.csv",
+      "sha256": "c2ede7e38af047d1b5233104b62fe7022f84cf989cef1ebb6c71bf4512c71a70",
+      "source": null,
+      "source_sha256": null,
+      "transform": "generated"
+    },
+    {
+      "path": "index.json",
+      "sha256": "623cd5bc8db0856301e305ec70180c02c7eed1fe5760fc77fa4825e3bc4a7bf4",
+      "source": null,
+      "source_sha256": null,
+      "transform": "generated"
+    }
+  ]
+}

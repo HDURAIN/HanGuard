@@ -1,0 +1,22 @@
+[
+  {
+    "epoch": 1,
+    "training_ce": 0.8008419318827816,
+    "validation_ce": 0.6695900154108309
+  },
+  {
+    "epoch": 2,
+    "training_ce": 0.27024499421271136,
+    "validation_ce": 0.6655741162258877
+  },
+  {
+    "epoch": 3,
+    "training_ce": 0.1629651313282837,
+    "validation_ce": 0.8284733812863242
+  },
+  {
+    "epoch": 4,
+    "training_ce": 0.08792197147870692,
+    "validation_ce": 1.0993067418920284
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "protocol": "hanguard_neutral_format_parent_pairs_20261012_v1",
+  "selection_uses_scores_or_errors": false,
+  "appended_to_main_training": false,
+  "marker": "请以「\"以下是回答：\"」开始回答。",
+  "matching": "equal-count same-source/split parents; deterministic hash selection of safe parents",
+  "scope": "paired safe-marker sensitivity and marker-stratified harmful recall; neutral instruction derived labels require independent human validation before use as a gold benchmark",
+  "split_policy": "all controls inherit their parent primary group and split",
+  "rows": 25932,
+  "by_split": [
+    {
+      "split": "train",
+      "marked_harmful_parents": 6935,
+      "matched_safe_parents": 6935,
+      "original_safe_rows": 6935,
+      "derived_safe_marker_rows": 6935
+    },
+    {
+      "split": "validation",
+      "marked_harmful_parents": 861,
+      "matched_safe_parents": 861,
+      "original_safe_rows": 861,
+      "derived_safe_marker_rows": 861
+    },
+    {
+      "split": "test",
+      "marked_harmful_parents": 848,
+      "matched_safe_parents": 848,
+      "original_safe_rows": 848,
+      "derived_safe_marker_rows": 848
+    }
+  ],
+  "limitation": "Does not establish counterfactual harmfulness for arbitrary edits or certify absence of other source artifacts."
+}

@@ -1,0 +1,7 @@
+{
+  "supersedes": "outputs/qwen3guard_clean_test_20261025",
+  "reason": "Correct duplicate categories keyword in output serialization; fresh tokenization and inference, zero predictions reused",
+  "scientific_settings_changed": false,
+  "tests": "57 tests + 61 subtests passed",
+  "registered_unix": 1792892202.5629022
+}

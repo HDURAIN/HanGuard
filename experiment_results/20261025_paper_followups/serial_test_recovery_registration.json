@@ -1,0 +1,17 @@
+{
+  "schema": "paper_followup_serial_test_recovery_v1",
+  "root_protocol_sha256": "ab9c99527336a90191713918965d7a466487e6996de962212f8c868382eb3762",
+  "external_protocol_sha256": "25f0baedb547510d91ca7161bbef6a84fce8915a5e22530cb284f045583ea317",
+  "selection_lock_sha256": "be02b7b62aa0cbe489e9a897e263c1869f3f8ca990e0292d96cf0f856547c85c",
+  "test_manifest_sha256": "4c44546c872ad043fa1052d953950ed1d30b54fcd9998fb8b2a1064296e665fe",
+  "source": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/paper_followup_recovery.py",
+  "source_sha256": "58c13b659a86ee18940bf35037c3786baaf0a0f6a613f8d0bf6c34099637d6b9",
+  "mode": "Sequential original external workers; saved checkpoints only; no retraining",
+  "reason": "Concurrent nonblocking selection/test-preparation locks caused two evaluation workers to exit",
+  "gpu_policy": {
+    "cap_gib": 8.0,
+    "headroom_gib": 6.0,
+    "exclusive": false
+  },
+  "poll_seconds": 3.0
+}

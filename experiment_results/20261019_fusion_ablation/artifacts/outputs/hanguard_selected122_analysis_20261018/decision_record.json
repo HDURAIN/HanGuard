@@ -1,0 +1,13 @@
+{
+  "user_correction": "sample was intended, not fragment; retain the exact 122-row exclusion experiment",
+  "mistaken_454_study_stopped_before_training": true,
+  "mistaken_study": "outputs/hanguard_fragment_clean_lora_20261018",
+  "active_study": "outputs/hanguard_selected122_lora_20261018",
+  "data_version": "three_source_wildguard122_subset_20261018",
+  "original_train_validation_byte_identical": true,
+  "test_rows": 8228,
+  "excluded_test_rows": 122,
+  "known_gain_condition": "Old fixed no-LoRA models only; fresh LoRA not evaluated yet",
+  "text_style_categories_are_not_established_error_causes": true,
+  "updated_unix": 1792323388.043162
+}

@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "protocol_sha256": "acd0c5c9d015a9b43300c78c1961ab44bdb87bd193f80b5efd4a6e9e23d22847",
+  "chunk_id": 24,
+  "rows": 240,
+  "predictions_sha256": "3bb0d041c6af0e1d0b5f1ec25bdc4c17c8d76e44cc9c40f57a6ed09bc2d521b6",
+  "identity": {
+    "pid": 2329299,
+    "uid": 1036,
+    "start_time_ticks": 184792408,
+    "command_sha256": "9b14e75ac783bf55947eedde802cd9e94b7da336544a492222cf39e5aa5d5d53",
+    "argv": [
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/qwen3guard_shared_runner.py",
+      "worker",
+      "--output",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_clean_test_20261025_v2",
+      "--gpu",
+      "4"
+    ],
+    "cwd": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard"
+  },
+  "physical_gpu": 4,
+  "gpu_uuid": "GPU-d576137e-3271-99a8-bd98-77aff3483ba3",
+  "seconds": 23.2989821434021,
+  "oom_events": [],
+  "invalid_safety_rows": 0,
+  "invalid_category_rows": 0,
+  "hit_generation_limit_rows": 0,
+  "completed_unix": 1792892848.582411
+}

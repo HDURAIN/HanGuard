@@ -1,0 +1,33 @@
+{
+  "schema": "hanguard_fresh_frozen_base_readouts_v1",
+  "complete": true,
+  "test_opened": false,
+  "protocol_sha256": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+  "artifacts": {
+    "heads/selected_heads.pt": "2146c01fbf09b8eeeadb785101ab0afd33c94e9f8efd53909bf1bc6b147d3546",
+    "heads/selection.json": "03ceae61c8f6565e0a537eabfd127d5b24736da94b983c49ed81597b30eb3625",
+    "heads/validation_predictions.parquet": "63213631e71dd40a334b5addbb4b9236938d57966ea2c85f8fb18ff984211c2e",
+    "heads/attempts.json": "f9b4858ff754f439813b399344e689e2315d39935e2763ab7f8128452ff30f24",
+    "heads/fit_started.json": "d634a57601208f986de5bd155d3513a9dd5831689250fbe7ebd5b3b1b3172f4a",
+    "heads/budget_12/all_layer_mlps.pt": "3e2543b68e507f90a8b1899087998161a9d6bbdf5b995dd8cde6d2c99bebd5e0",
+    "heads/budget_12/layer_history.json": "4817be1b7436034f1edd915c27fedfe2aae5bf90b2f8daad66a4327c4127bc1f",
+    "heads/budget_12/fusion_history.json": "69bd12a22ae14e6f276f88171a1ba4c67ecfd6f61be131e389e2db17adae014d",
+    "heads/budget_12/layer_gradient_audit.json": "a798f75f51fadd8335834a265d290690edb57fbbd01f7e6d27c53bd6b3b3b135",
+    "heads/budget_12/fusion_gradient_audit.json": "be97aa1fda80686b7ea546bcf41331f397f165ef0e2bc9f4d00faff28d2198a4",
+    "heads/budget_12/layers_resume.pt": "03c00a916694f3a3bab10106ed737684501b817fdbee4cde75ae0800db81455b",
+    "heads/budget_12/fusion_resume.pt": "89888c21b0fac1a5ce78746ff7a02f77ce43e7fd2c3007b98109d6485689c29b",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/train.manifest.json": "8ec5fe0a8d175a9356294f45c83154ea62116599589b0e94b6bc551e4f94f74d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/validation.manifest.json": "d4363bf86325cbc040af5d2523e4a5574788f64601b70434f684d08cdd8d53cd",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_base_readout_heads.py": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/repaired_heads.py": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_frozen_readout_diagnostics.py": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/control_protocol.json": "92aae7dcf841d543d65d210f91de0098e3fe477a7884eb8b10b9e383dd692172",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/source_snapshot/frozen_base_cooperative_runner.py": "bc2ac7cb6f28c0b9b12e7917bf812d08daf37d166b0b2f479040c5d623e2efe0",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/recovery_004/source_snapshot/frozen_base_resumable_heads.py": "f09ff42f8fc1e94d71bdc0bc30520e07d9d415baf4a049b27b6efa8491f1eca2",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/train.npy": "e178953fb9ef639ddc94eed93b6f04800dd3ee9f56707f350f5f0a463154c011",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/train.metadata.parquet": "8ac24b665d9503ee8523f680caa1d4ead38dac5f9724f83ff2e5de9113ca8127",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/validation.npy": "eace672a83bac242e11a25089b817121c63b1a2b0c4ffd87743e2ff029133258",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/caches/validation.metadata.parquet": "de0d5ac79e7ce34bbcad19838f53e343a9a38732f7a4cbb9ea8f471d8608a832"
+  }
+}

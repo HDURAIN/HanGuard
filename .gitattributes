@@ -1,0 +1,9 @@
+# Registered experiments and manifests use byte-level SHA256 identities.
+# Preserve committed bytes across clones, including CRLF in exported CSV.
+* -text
+*.csv whitespace=trailing-space,space-before-tab,cr-at-eol
+
+# Preserve the existing EOF layout of registered source and regression fixtures.
+scripts/hanguard/clean_ablation_io.py whitespace=-blank-at-eof
+experiment_results/**/clean_ablation_io.py whitespace=-blank-at-eof
+tests/test_frozen_base_locked_test_resume.py whitespace=-blank-at-eof

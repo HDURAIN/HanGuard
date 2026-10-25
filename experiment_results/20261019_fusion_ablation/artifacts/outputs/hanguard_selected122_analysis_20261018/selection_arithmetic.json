@@ -1,0 +1,15 @@
+{
+  "scope": "Descriptive arithmetic for the old fixed no-LoRA predictions, choosing known anchor-harms; not a training improvement or an independent test",
+  "original_test_rows": 8350,
+  "original_net_correct_advantage": 51,
+  "minimum_known_harm_removals_for_target_pp": {
+    "1.0": 33,
+    "1.5": 74,
+    "2.0": 114,
+    "2.1": 122
+  },
+  "selected_122_delta_pp": 2.1025765678172097,
+  "selected_122_fraction_of_original_test": 0.014610778443113773,
+  "training_validation_rows_removed": 0,
+  "full_test_result_also_retained": true
+}

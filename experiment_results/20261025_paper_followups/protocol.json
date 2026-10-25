@@ -1,0 +1,65 @@
+{
+  "schema": "hanguard_three_paper_followups_v1",
+  "output": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025",
+  "parent": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022",
+  "parent_protocol_sha256": "3ea2567ea04e7fc5390bb42fd8cfce6266b16e2c4c1e986d84470f684b9bd98b",
+  "parent_results_sha256": "e4642e585fc6547ca5c30e794bb3f61fc9c07dba4a9dfa06af6ca5b130d5c52d",
+  "children": {
+    "pooling": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/pooling/protocol.json",
+      "sha256": "76d72cd10a483129d7e008b7ba4a399f89234983496f753ff9b64e80e9712e9a"
+    },
+    "external": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/external/protocol.json",
+      "sha256": "25f0baedb547510d91ca7161bbef6a84fce8915a5e22530cb284f045583ea317"
+    },
+    "analysis": {
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/analysis/protocol.json",
+      "sha256": "8944f5fa4d3cb07812857aa8290943c7feff1817474d9b3f6b8c35a7a6903aaf"
+    }
+  },
+  "sources": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/paper_followup_study.py": "0284e321f93728d509481a5f6ca15a61878bceac46f88dd359286dcbfc5aa831",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/paper_pooling_controls.py": "5739f97863b25387a1a10cbb96d547023679946e1859a2fdaef3e4da28fed15a",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/paper_external_classifier.py": "d5bc28a34121bf8a6651b238d5919b79d8294426b9cc51d7724072f6f82a7688",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/paper_error_efficiency.py": "c897000a62ea1797be3649fc90907cb88d2395d97240470b9f50411685422bc5",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/qwen3guard_clean_queue.py": "39a20a3c28bf7d3289c31cd1db4cd7751e9fb3fe45bd0ee83a7cc3433bc73ff7",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/tests/test_paper_followup_study.py": "dd088f22d17231de87c80b3d84f99e15ea1610a3d0a982a0c994ff324a24cfc1",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/tests/test_paper_pooling_controls.py": "7d81f39fd67894810300f946ef629342a83b39a45d93046d45d151832cf6b8f0",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/tests/test_paper_external_classifier.py": "38fbfb0cb68fa68fe89960391726fbe7103b680bd8f769706fdd10622da490bc",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/tests/test_paper_error_efficiency.py": "7ad2a78cab7f3991c255a853475a64a42d4fba4216be87e5d1ebf44dc2d072ac"
+  },
+  "budgets": {
+    "pooling": {
+      "cap_gib": 4.0,
+      "headroom_gib": 4.0,
+      "exclusive": false
+    },
+    "external": {
+      "cap_gib": 8.0,
+      "headroom_gib": 6.0,
+      "exclusive": false
+    },
+    "analysis": {
+      "cap_gib": 32.0,
+      "headroom_gib": 8.0,
+      "exclusive": true
+    }
+  },
+  "gpu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "poll_seconds": 3.0,
+  "authorization": "User requested all three followups and explicitly allowed GPU sharing",
+  "efficiency": "Exclusive GPU only; arrival of another compute process invalidates the attempt",
+  "shared_training": "One followup worker per GPU, process allocator cap plus entry headroom; no foreign signals",
+  "model": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/chinese-macbert-base",
+  "created_unix": 1792893632.812237
+}

@@ -1,0 +1,1213 @@
+{
+  "policy_id": "hanguard_source_binary_family_groups_20261012_v1",
+  "seed": 20261012,
+  "target_fractions": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "rows": 83502,
+  "groups": 72872,
+  "rows_removed": 0,
+  "binary_labels_changed": 0,
+  "honors_old_split_assignments": false,
+  "preserves_old_split_provenance": true,
+  "grouping_rules": [
+    "Verified legacy parent families including multi-group original identity links",
+    "Same complete official original prompt",
+    "Same-binary punctuation style families; preserve all members",
+    "228 audited original near-match split-family pairs, including differing payloads",
+    "JailBench exact source parent seed; no wrapper-to-wrapper graph edges",
+    "Paired controls inherit parent group and split"
+  ],
+  "edge_counts": {
+    "legacy_parent_family": 10400,
+    "jailbench_parent_seed": 10260,
+    "same_binary_punctuation_style_family": 103,
+    "audited_original_near_match_split_family": 228
+  },
+  "component_merge_counts": {
+    "legacy_parent_family": 10400,
+    "jailbench_parent_seed": 0,
+    "same_binary_punctuation_style_family": 102,
+    "audited_original_near_match_split_family": 128
+  },
+  "punctuation_style_same_binary_groups": 75,
+  "punctuation_style_same_binary_rows": 178,
+  "punctuation_binary_conflict_flags": [],
+  "punctuation_binary_conflict_groups_not_automatically_merged": 0,
+  "audited_original_near_match_pairs": 228,
+  "audited_original_near_match_pairs_linked": 228,
+  "audited_original_near_match_missing_endpoint_pairs": [],
+  "original_near_match_semantics": "Conservative split-family membership only. Different payloads and labels are retained; no semantic duplicate claim.",
+  "official_original_binary_conflict_flags": [],
+  "original_identity_cross_split_groups": 0,
+  "jailbench_parent_seed_cross_split_groups": 0,
+  "group_cross_split_groups": 0,
+  "derived_control_parent_links": 0,
+  "group_sizes": {
+    "min": 1,
+    "median": 1.0,
+    "p95": 1.0,
+    "max": 41
+  },
+  "total_targets_and_actual": [
+    {
+      "split": "train",
+      "target_rows": 66802,
+      "actual_rows": 66802,
+      "difference_rows": 0
+    },
+    {
+      "split": "validation",
+      "target_rows": 8350,
+      "actual_rows": 8350,
+      "difference_rows": 0
+    },
+    {
+      "split": "test",
+      "target_rows": 8350,
+      "actual_rows": 8350,
+      "difference_rows": 0
+    }
+  ],
+  "source_binary_targets_and_actual": [
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "split": "train",
+      "stratum_total": 11683,
+      "target_fraction": 0.8,
+      "target_rows": 9347,
+      "actual_rows": 9347,
+      "difference_rows": 0,
+      "actual_fraction": 0.8000513566720876
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "split": "validation",
+      "stratum_total": 11683,
+      "target_fraction": 0.1,
+      "target_rows": 1168,
+      "actual_rows": 1168,
+      "difference_rows": 0,
+      "actual_fraction": 0.09997432166395617
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "split": "test",
+      "stratum_total": 11683,
+      "target_fraction": 0.1,
+      "target_rows": 1168,
+      "actual_rows": 1168,
+      "difference_rows": 0,
+      "actual_fraction": 0.09997432166395617
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "split": "train",
+      "stratum_total": 15242,
+      "target_fraction": 0.8,
+      "target_rows": 12194,
+      "actual_rows": 12194,
+      "difference_rows": 0,
+      "actual_fraction": 0.8000262432751607
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "split": "validation",
+      "stratum_total": 15242,
+      "target_fraction": 0.1,
+      "target_rows": 1524,
+      "actual_rows": 1524,
+      "difference_rows": 0,
+      "actual_fraction": 0.09998687836241962
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "split": "test",
+      "stratum_total": 15242,
+      "target_fraction": 0.1,
+      "target_rows": 1524,
+      "actual_rows": 1524,
+      "difference_rows": 0,
+      "actual_fraction": 0.09998687836241962
+    },
+    {
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "split": "train",
+      "stratum_total": 10800,
+      "target_fraction": 0.8,
+      "target_rows": 8640,
+      "actual_rows": 8640,
+      "difference_rows": 0,
+      "actual_fraction": 0.8
+    },
+    {
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "split": "validation",
+      "stratum_total": 10800,
+      "target_fraction": 0.1,
+      "target_rows": 1080,
+      "actual_rows": 1080,
+      "difference_rows": 0,
+      "actual_fraction": 0.1
+    },
+    {
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "split": "test",
+      "stratum_total": 10800,
+      "target_fraction": 0.1,
+      "target_rows": 1080,
+      "actual_rows": 1080,
+      "difference_rows": 0,
+      "actual_fraction": 0.1
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "split": "train",
+      "stratum_total": 23738,
+      "target_fraction": 0.8,
+      "target_rows": 18990,
+      "actual_rows": 18990,
+      "difference_rows": 0,
+      "actual_fraction": 0.7999831493807398
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "split": "validation",
+      "stratum_total": 23738,
+      "target_fraction": 0.1,
+      "target_rows": 2374,
+      "actual_rows": 2374,
+      "difference_rows": 0,
+      "actual_fraction": 0.10000842530963013
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "split": "test",
+      "stratum_total": 23738,
+      "target_fraction": 0.1,
+      "target_rows": 2374,
+      "actual_rows": 2374,
+      "difference_rows": 0,
+      "actual_fraction": 0.10000842530963013
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "split": "train",
+      "stratum_total": 22039,
+      "target_fraction": 0.8,
+      "target_rows": 17631,
+      "actual_rows": 17631,
+      "difference_rows": 0,
+      "actual_fraction": 0.7999909251780933
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "split": "validation",
+      "stratum_total": 22039,
+      "target_fraction": 0.1,
+      "target_rows": 2204,
+      "actual_rows": 2204,
+      "difference_rows": 0,
+      "actual_fraction": 0.1000045374109533
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "split": "test",
+      "stratum_total": 22039,
+      "target_fraction": 0.1,
+      "target_rows": 2204,
+      "actual_rows": 2204,
+      "difference_rows": 0,
+      "actual_fraction": 0.1000045374109533
+    }
+  ],
+  "source_binary_joint_train_test_drift": [
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "global_joint_fraction": 0.139912816459486,
+      "train_joint_fraction": 0.13992096045028593,
+      "test_joint_fraction": 0.13988023952095807,
+      "train_test_difference_pp": -0.004072092932785876
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "global_joint_fraction": 0.182534550070657,
+      "train_joint_fraction": 0.1825394449267986,
+      "test_joint_fraction": 0.18251497005988024,
+      "train_test_difference_pp": -0.0024474866918366978
+    },
+    {
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "global_joint_fraction": 0.12933821944384566,
+      "train_joint_fraction": 0.12933744498667704,
+      "test_joint_fraction": 0.12934131736526946,
+      "train_test_difference_pp": 0.0003872378592423287
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "global_joint_fraction": 0.2842806160331489,
+      "train_joint_fraction": 0.28427292596030057,
+      "test_joint_fraction": 0.284311377245509,
+      "train_test_difference_pp": 0.003845128520840735
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "global_joint_fraction": 0.26393379799286243,
+      "train_joint_fraction": 0.26392922367593785,
+      "test_joint_fraction": 0.26395209580838325,
+      "train_test_difference_pp": 0.00228721324453951
+    }
+  ],
+  "per_source_harmful_fraction_train_test_drift": [
+    {
+      "source": "chinese_curated",
+      "harmful_fraction_by_split": {
+        "train": 0.4339167169583585,
+        "validation": 0.4338781575037147,
+        "test": 0.4338781575037147
+      },
+      "train_test_harmful_fraction_difference_pp": -0.003855945464376065
+    },
+    {
+      "source": "jailbench",
+      "harmful_fraction_by_split": {
+        "train": 1.0,
+        "validation": 1.0,
+        "test": 1.0
+      },
+      "train_test_harmful_fraction_difference_pp": 0.0
+    },
+    {
+      "source": "wildguard_zh",
+      "harmful_fraction_by_split": {
+        "train": 0.5185549275006144,
+        "validation": 0.5185670598514636,
+        "test": 0.5185670598514636
+      },
+      "train_test_harmful_fraction_difference_pp": 0.0012132350849181073
+    }
+  ],
+  "max_source_binary_fraction_deviation_pp": 0.005135667208755468,
+  "allocation": {
+    "method": "Largest-share-first deterministic greedy whole-group allocation with normalized squared source-binary and row-count deviations, followed by up to two improving whole-group move sweeps",
+    "initial_objective": 0.0,
+    "final_objective": 0.0,
+    "whole_group_refinement_moves": 0,
+    "refinement_sweeps": 1
+  },
+  "secondary_category_balance": {
+    "enabled": true,
+    "seed": 20261012,
+    "secondary_objective": "source_x_category_including_minus1",
+    "method": "Deterministic cross-split whole-group swaps restricted to identical source_x_binary vectors; category profiles compress pair search",
+    "primary_source_binary_counts_strictly_preserved": true,
+    "total_split_rows_strictly_preserved": true,
+    "initial_category_objective": 133.75975821563785,
+    "final_category_objective": 2.19556987632715,
+    "whole_group_swaps": 121,
+    "swaps_by_primary_vector_signature": {
+      "(0, 0, 0, 1, 0)": 62,
+      "(1, 0, 0, 0, 0)": 38,
+      "(0, 0, 20, 0, 0)": 9,
+      "(1, 0, 20, 0, 0)": 12
+    },
+    "sweeps": 3,
+    "exchangeable_primary_vector_buckets": 10,
+    "limitation": "A secondary objective under fixed whole-family and exact primary quotas. Nonexchangeable group vectors and integer group sizes can leave category residuals; report them explicitly."
+  },
+  "source_category_targets_and_actual": [
+    {
+      "source": "chinese_curated",
+      "category_id": "0",
+      "split": "train",
+      "stratum_total": 15242,
+      "target_fraction": 0.8,
+      "target_rows": 12194,
+      "actual_rows": 12194,
+      "difference_rows": 0,
+      "actual_fraction": 0.8000262432751607
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "0",
+      "split": "validation",
+      "stratum_total": 15242,
+      "target_fraction": 0.1,
+      "target_rows": 1524,
+      "actual_rows": 1524,
+      "difference_rows": 0,
+      "actual_fraction": 0.09998687836241962
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "0",
+      "split": "test",
+      "stratum_total": 15242,
+      "target_fraction": 0.1,
+      "target_rows": 1524,
+      "actual_rows": 1524,
+      "difference_rows": 0,
+      "actual_fraction": 0.09998687836241962
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "1",
+      "split": "train",
+      "stratum_total": 4784,
+      "target_fraction": 0.8,
+      "target_rows": 3827,
+      "actual_rows": 3827,
+      "difference_rows": 0,
+      "actual_fraction": 0.7999581939799331
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "1",
+      "split": "validation",
+      "stratum_total": 4784,
+      "target_fraction": 0.1,
+      "target_rows": 479,
+      "actual_rows": 478,
+      "difference_rows": -1,
+      "actual_fraction": 0.09991638795986622
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "1",
+      "split": "test",
+      "stratum_total": 4784,
+      "target_fraction": 0.1,
+      "target_rows": 478,
+      "actual_rows": 479,
+      "difference_rows": 1,
+      "actual_fraction": 0.10012541806020067
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "2",
+      "split": "train",
+      "stratum_total": 935,
+      "target_fraction": 0.8,
+      "target_rows": 748,
+      "actual_rows": 748,
+      "difference_rows": 0,
+      "actual_fraction": 0.8
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "2",
+      "split": "validation",
+      "stratum_total": 935,
+      "target_fraction": 0.1,
+      "target_rows": 94,
+      "actual_rows": 94,
+      "difference_rows": 0,
+      "actual_fraction": 0.10053475935828877
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "2",
+      "split": "test",
+      "stratum_total": 935,
+      "target_fraction": 0.1,
+      "target_rows": 93,
+      "actual_rows": 93,
+      "difference_rows": 0,
+      "actual_fraction": 0.09946524064171124
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "3",
+      "split": "train",
+      "stratum_total": 1354,
+      "target_fraction": 0.8,
+      "target_rows": 1083,
+      "actual_rows": 1083,
+      "difference_rows": 0,
+      "actual_fraction": 0.7998522895125554
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "3",
+      "split": "validation",
+      "stratum_total": 1354,
+      "target_fraction": 0.1,
+      "target_rows": 136,
+      "actual_rows": 136,
+      "difference_rows": 0,
+      "actual_fraction": 0.10044313146233383
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "3",
+      "split": "test",
+      "stratum_total": 1354,
+      "target_fraction": 0.1,
+      "target_rows": 135,
+      "actual_rows": 135,
+      "difference_rows": 0,
+      "actual_fraction": 0.09970457902511078
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "4",
+      "split": "train",
+      "stratum_total": 3157,
+      "target_fraction": 0.8,
+      "target_rows": 2525,
+      "actual_rows": 2526,
+      "difference_rows": 1,
+      "actual_fraction": 0.8001267025657269
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "4",
+      "split": "validation",
+      "stratum_total": 3157,
+      "target_fraction": 0.1,
+      "target_rows": 316,
+      "actual_rows": 315,
+      "difference_rows": -1,
+      "actual_fraction": 0.09977827050997783
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "4",
+      "split": "test",
+      "stratum_total": 3157,
+      "target_fraction": 0.1,
+      "target_rows": 316,
+      "actual_rows": 316,
+      "difference_rows": 0,
+      "actual_fraction": 0.10009502692429521
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "5",
+      "split": "train",
+      "stratum_total": 1453,
+      "target_fraction": 0.8,
+      "target_rows": 1163,
+      "actual_rows": 1163,
+      "difference_rows": 0,
+      "actual_fraction": 0.8004129387474191
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "5",
+      "split": "validation",
+      "stratum_total": 1453,
+      "target_fraction": 0.1,
+      "target_rows": 145,
+      "actual_rows": 145,
+      "difference_rows": 0,
+      "actual_fraction": 0.09979353062629043
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "5",
+      "split": "test",
+      "stratum_total": 1453,
+      "target_fraction": 0.1,
+      "target_rows": 145,
+      "actual_rows": 145,
+      "difference_rows": 0,
+      "actual_fraction": 0.09979353062629043
+    },
+    {
+      "source": "jailbench",
+      "category_id": "-1",
+      "split": "train",
+      "stratum_total": 683,
+      "target_fraction": 0.8,
+      "target_rows": 547,
+      "actual_rows": 547,
+      "difference_rows": 0,
+      "actual_fraction": 0.8008784773060029
+    },
+    {
+      "source": "jailbench",
+      "category_id": "-1",
+      "split": "validation",
+      "stratum_total": 683,
+      "target_fraction": 0.1,
+      "target_rows": 68,
+      "actual_rows": 68,
+      "difference_rows": 0,
+      "actual_fraction": 0.09956076134699854
+    },
+    {
+      "source": "jailbench",
+      "category_id": "-1",
+      "split": "test",
+      "stratum_total": 683,
+      "target_fraction": 0.1,
+      "target_rows": 68,
+      "actual_rows": 68,
+      "difference_rows": 0,
+      "actual_fraction": 0.09956076134699854
+    },
+    {
+      "source": "jailbench",
+      "category_id": "1",
+      "split": "train",
+      "stratum_total": 2039,
+      "target_fraction": 0.8,
+      "target_rows": 1631,
+      "actual_rows": 1638,
+      "difference_rows": 7,
+      "actual_fraction": 0.8033349681216283
+    },
+    {
+      "source": "jailbench",
+      "category_id": "1",
+      "split": "validation",
+      "stratum_total": 2039,
+      "target_fraction": 0.1,
+      "target_rows": 204,
+      "actual_rows": 200,
+      "difference_rows": -4,
+      "actual_fraction": 0.0980872976949485
+    },
+    {
+      "source": "jailbench",
+      "category_id": "1",
+      "split": "test",
+      "stratum_total": 2039,
+      "target_fraction": 0.1,
+      "target_rows": 204,
+      "actual_rows": 201,
+      "difference_rows": -3,
+      "actual_fraction": 0.09857773418342325
+    },
+    {
+      "source": "jailbench",
+      "category_id": "2",
+      "split": "train",
+      "stratum_total": 3243,
+      "target_fraction": 0.8,
+      "target_rows": 2595,
+      "actual_rows": 2588,
+      "difference_rows": -7,
+      "actual_fraction": 0.7980265186555658
+    },
+    {
+      "source": "jailbench",
+      "category_id": "2",
+      "split": "validation",
+      "stratum_total": 3243,
+      "target_fraction": 0.1,
+      "target_rows": 324,
+      "actual_rows": 335,
+      "difference_rows": 11,
+      "actual_fraction": 0.10329941412272588
+    },
+    {
+      "source": "jailbench",
+      "category_id": "2",
+      "split": "test",
+      "stratum_total": 3243,
+      "target_fraction": 0.1,
+      "target_rows": 324,
+      "actual_rows": 320,
+      "difference_rows": -4,
+      "actual_fraction": 0.0986740672217083
+    },
+    {
+      "source": "jailbench",
+      "category_id": "3",
+      "split": "train",
+      "stratum_total": 1445,
+      "target_fraction": 0.8,
+      "target_rows": 1156,
+      "actual_rows": 1164,
+      "difference_rows": 8,
+      "actual_fraction": 0.8055363321799308
+    },
+    {
+      "source": "jailbench",
+      "category_id": "3",
+      "split": "validation",
+      "stratum_total": 1445,
+      "target_fraction": 0.1,
+      "target_rows": 145,
+      "actual_rows": 140,
+      "difference_rows": -5,
+      "actual_fraction": 0.09688581314878893
+    },
+    {
+      "source": "jailbench",
+      "category_id": "3",
+      "split": "test",
+      "stratum_total": 1445,
+      "target_fraction": 0.1,
+      "target_rows": 144,
+      "actual_rows": 141,
+      "difference_rows": -3,
+      "actual_fraction": 0.09757785467128027
+    },
+    {
+      "source": "jailbench",
+      "category_id": "4",
+      "split": "train",
+      "stratum_total": 1914,
+      "target_fraction": 0.8,
+      "target_rows": 1531,
+      "actual_rows": 1532,
+      "difference_rows": 1,
+      "actual_fraction": 0.800417972831766
+    },
+    {
+      "source": "jailbench",
+      "category_id": "4",
+      "split": "validation",
+      "stratum_total": 1914,
+      "target_fraction": 0.1,
+      "target_rows": 192,
+      "actual_rows": 192,
+      "difference_rows": 0,
+      "actual_fraction": 0.10031347962382445
+    },
+    {
+      "source": "jailbench",
+      "category_id": "4",
+      "split": "test",
+      "stratum_total": 1914,
+      "target_fraction": 0.1,
+      "target_rows": 191,
+      "actual_rows": 190,
+      "difference_rows": -1,
+      "actual_fraction": 0.09926854754440961
+    },
+    {
+      "source": "jailbench",
+      "category_id": "5",
+      "split": "train",
+      "stratum_total": 1476,
+      "target_fraction": 0.8,
+      "target_rows": 1181,
+      "actual_rows": 1171,
+      "difference_rows": -10,
+      "actual_fraction": 0.7933604336043361
+    },
+    {
+      "source": "jailbench",
+      "category_id": "5",
+      "split": "validation",
+      "stratum_total": 1476,
+      "target_fraction": 0.1,
+      "target_rows": 148,
+      "actual_rows": 145,
+      "difference_rows": -3,
+      "actual_fraction": 0.09823848238482384
+    },
+    {
+      "source": "jailbench",
+      "category_id": "5",
+      "split": "test",
+      "stratum_total": 1476,
+      "target_fraction": 0.1,
+      "target_rows": 147,
+      "actual_rows": 160,
+      "difference_rows": 13,
+      "actual_fraction": 0.10840108401084012
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "-1",
+      "split": "train",
+      "stratum_total": 2006,
+      "target_fraction": 0.8,
+      "target_rows": 1605,
+      "actual_rows": 1605,
+      "difference_rows": 0,
+      "actual_fraction": 0.8000997008973081
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "-1",
+      "split": "validation",
+      "stratum_total": 2006,
+      "target_fraction": 0.1,
+      "target_rows": 201,
+      "actual_rows": 201,
+      "difference_rows": 0,
+      "actual_fraction": 0.10019940179461616
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "-1",
+      "split": "test",
+      "stratum_total": 2006,
+      "target_fraction": 0.1,
+      "target_rows": 200,
+      "actual_rows": 200,
+      "difference_rows": 0,
+      "actual_fraction": 0.09970089730807577
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "0",
+      "split": "train",
+      "stratum_total": 22039,
+      "target_fraction": 0.8,
+      "target_rows": 17631,
+      "actual_rows": 17631,
+      "difference_rows": 0,
+      "actual_fraction": 0.7999909251780933
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "0",
+      "split": "validation",
+      "stratum_total": 22039,
+      "target_fraction": 0.1,
+      "target_rows": 2204,
+      "actual_rows": 2204,
+      "difference_rows": 0,
+      "actual_fraction": 0.1000045374109533
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "0",
+      "split": "test",
+      "stratum_total": 22039,
+      "target_fraction": 0.1,
+      "target_rows": 2204,
+      "actual_rows": 2204,
+      "difference_rows": 0,
+      "actual_fraction": 0.1000045374109533
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "1",
+      "split": "train",
+      "stratum_total": 9072,
+      "target_fraction": 0.8,
+      "target_rows": 7258,
+      "actual_rows": 7258,
+      "difference_rows": 0,
+      "actual_fraction": 0.8000440917107584
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "1",
+      "split": "validation",
+      "stratum_total": 9072,
+      "target_fraction": 0.1,
+      "target_rows": 907,
+      "actual_rows": 906,
+      "difference_rows": -1,
+      "actual_fraction": 0.09986772486772487
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "1",
+      "split": "test",
+      "stratum_total": 9072,
+      "target_fraction": 0.1,
+      "target_rows": 907,
+      "actual_rows": 908,
+      "difference_rows": 1,
+      "actual_fraction": 0.10008818342151675
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "2",
+      "split": "train",
+      "stratum_total": 3870,
+      "target_fraction": 0.8,
+      "target_rows": 3096,
+      "actual_rows": 3096,
+      "difference_rows": 0,
+      "actual_fraction": 0.8
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "2",
+      "split": "validation",
+      "stratum_total": 3870,
+      "target_fraction": 0.1,
+      "target_rows": 387,
+      "actual_rows": 387,
+      "difference_rows": 0,
+      "actual_fraction": 0.1
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "2",
+      "split": "test",
+      "stratum_total": 3870,
+      "target_fraction": 0.1,
+      "target_rows": 387,
+      "actual_rows": 387,
+      "difference_rows": 0,
+      "actual_fraction": 0.1
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "3",
+      "split": "train",
+      "stratum_total": 2254,
+      "target_fraction": 0.8,
+      "target_rows": 1803,
+      "actual_rows": 1803,
+      "difference_rows": 0,
+      "actual_fraction": 0.7999112688553682
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "3",
+      "split": "validation",
+      "stratum_total": 2254,
+      "target_fraction": 0.1,
+      "target_rows": 226,
+      "actual_rows": 226,
+      "difference_rows": 0,
+      "actual_fraction": 0.1002661934338953
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "3",
+      "split": "test",
+      "stratum_total": 2254,
+      "target_fraction": 0.1,
+      "target_rows": 225,
+      "actual_rows": 225,
+      "difference_rows": 0,
+      "actual_fraction": 0.09982253771073647
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "4",
+      "split": "train",
+      "stratum_total": 5268,
+      "target_fraction": 0.8,
+      "target_rows": 4214,
+      "actual_rows": 4214,
+      "difference_rows": 0,
+      "actual_fraction": 0.7999240698557327
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "4",
+      "split": "validation",
+      "stratum_total": 5268,
+      "target_fraction": 0.1,
+      "target_rows": 527,
+      "actual_rows": 527,
+      "difference_rows": 0,
+      "actual_fraction": 0.10003796507213364
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "4",
+      "split": "test",
+      "stratum_total": 5268,
+      "target_fraction": 0.1,
+      "target_rows": 527,
+      "actual_rows": 527,
+      "difference_rows": 0,
+      "actual_fraction": 0.10003796507213364
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "5",
+      "split": "train",
+      "stratum_total": 1268,
+      "target_fraction": 0.8,
+      "target_rows": 1014,
+      "actual_rows": 1014,
+      "difference_rows": 0,
+      "actual_fraction": 0.7996845425867508
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "5",
+      "split": "validation",
+      "stratum_total": 1268,
+      "target_fraction": 0.1,
+      "target_rows": 127,
+      "actual_rows": 127,
+      "difference_rows": 0,
+      "actual_fraction": 0.10015772870662461
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "5",
+      "split": "test",
+      "stratum_total": 1268,
+      "target_fraction": 0.1,
+      "target_rows": 127,
+      "actual_rows": 127,
+      "difference_rows": 0,
+      "actual_fraction": 0.10015772870662461
+    }
+  ],
+  "source_category_train_test_distribution_drift": [
+    {
+      "source": "chinese_curated",
+      "category_id": "0",
+      "source_category_fraction_by_split": {
+        "train": 0.5660832830416416,
+        "validation": 0.5661218424962853,
+        "test": 0.5661218424962853
+      },
+      "train_test_difference_pp": 0.0038559454643705138
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "1",
+      "source_category_fraction_by_split": {
+        "train": 0.1776612042152175,
+        "validation": 0.1775631500742942,
+        "test": 0.17793462109955424
+      },
+      "train_test_difference_pp": 0.027341688433674127
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "2",
+      "source_category_fraction_by_split": {
+        "train": 0.03472447890070099,
+        "validation": 0.034918276374442794,
+        "test": 0.034546805349182766
+      },
+      "train_test_difference_pp": -0.017767355151822317
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "3",
+      "source_category_fraction_by_split": {
+        "train": 0.05027621744580103,
+        "validation": 0.05052005943536404,
+        "test": 0.050148588410104014
+      },
+      "train_test_difference_pp": -0.012762903569701889
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "4",
+      "source_category_fraction_by_split": {
+        "train": 0.11726475094006777,
+        "validation": 0.11701337295690936,
+        "test": 0.11738484398216939
+      },
+      "train_test_difference_pp": 0.012009304210161553
+    },
+    {
+      "source": "chinese_curated",
+      "category_id": "5",
+      "source_category_fraction_by_split": {
+        "train": 0.05399006545657119,
+        "validation": 0.05386329866270431,
+        "test": 0.05386329866270431
+      },
+      "train_test_difference_pp": -0.01267667938668754
+    },
+    {
+      "source": "jailbench",
+      "category_id": "-1",
+      "source_category_fraction_by_split": {
+        "train": 0.06331018518518519,
+        "validation": 0.06296296296296296,
+        "test": 0.06296296296296296
+      },
+      "train_test_difference_pp": -0.03472222222222349
+    },
+    {
+      "source": "jailbench",
+      "category_id": "1",
+      "source_category_fraction_by_split": {
+        "train": 0.18958333333333333,
+        "validation": 0.18518518518518517,
+        "test": 0.18611111111111112
+      },
+      "train_test_difference_pp": -0.347222222222221
+    },
+    {
+      "source": "jailbench",
+      "category_id": "2",
+      "source_category_fraction_by_split": {
+        "train": 0.29953703703703705,
+        "validation": 0.3101851851851852,
+        "test": 0.2962962962962963
+      },
+      "train_test_difference_pp": -0.3240740740740766
+    },
+    {
+      "source": "jailbench",
+      "category_id": "3",
+      "source_category_fraction_by_split": {
+        "train": 0.13472222222222222,
+        "validation": 0.12962962962962962,
+        "test": 0.13055555555555556
+      },
+      "train_test_difference_pp": -0.4166666666666652
+    },
+    {
+      "source": "jailbench",
+      "category_id": "4",
+      "source_category_fraction_by_split": {
+        "train": 0.17731481481481481,
+        "validation": 0.17777777777777778,
+        "test": 0.17592592592592593
+      },
+      "train_test_difference_pp": -0.1388888888888884
+    },
+    {
+      "source": "jailbench",
+      "category_id": "5",
+      "source_category_fraction_by_split": {
+        "train": 0.1355324074074074,
+        "validation": 0.13425925925925927,
+        "test": 0.14814814814814814
+      },
+      "train_test_difference_pp": 1.2615740740740733
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "-1",
+      "source_category_fraction_by_split": {
+        "train": 0.04382731219791923,
+        "validation": 0.043905635648754916,
+        "test": 0.043687199650502405
+      },
+      "train_test_difference_pp": -0.014011254741682494
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "0",
+      "source_category_fraction_by_split": {
+        "train": 0.4814450724993856,
+        "validation": 0.4814329401485365,
+        "test": 0.4814329401485365
+      },
+      "train_test_difference_pp": -0.0012132350849125562
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "1",
+      "source_category_fraction_by_split": {
+        "train": 0.1981922940389394,
+        "validation": 0.19790301441677588,
+        "test": 0.1983398864132809
+      },
+      "train_test_difference_pp": 0.014759237434150418
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "2",
+      "source_category_fraction_by_split": {
+        "train": 0.08454165642664045,
+        "validation": 0.08453473132372215,
+        "test": 0.08453473132372215
+      },
+      "train_test_difference_pp": -0.0006925102918303727
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "3",
+      "source_category_fraction_by_split": {
+        "train": 0.04923404603915786,
+        "validation": 0.049366535605067714,
+        "test": 0.0491480996068152
+      },
+      "train_test_difference_pp": -0.008594643234265814
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "4",
+      "source_category_fraction_by_split": {
+        "train": 0.11507058791403839,
+        "validation": 0.11511577107907384,
+        "test": 0.11511577107907384
+      },
+      "train_test_difference_pp": 0.004518316503544784
+    },
+    {
+      "source": "wildguard_zh",
+      "category_id": "5",
+      "source_category_fraction_by_split": {
+        "train": 0.027689030883919063,
+        "validation": 0.027741371778069027,
+        "test": 0.027741371778069027
+      },
+      "train_test_difference_pp": 0.005234089414996382
+    }
+  ],
+  "native_known_harmful_type_distribution": [
+    {
+      "category_id": "1",
+      "conditional_native_harmful_type_fraction_by_split": {
+        "train": 0.31336009174311924,
+        "validation": 0.3110091743119266,
+        "test": 0.3119266055045872
+      },
+      "train_test_difference_pp": -0.14334862385320668
+    },
+    {
+      "category_id": "2",
+      "conditional_native_harmful_type_fraction_by_split": {
+        "train": 0.19128440366972477,
+        "validation": 0.19678899082568807,
+        "test": 0.18944954128440367
+      },
+      "train_test_difference_pp": -0.1834862385321101
+    },
+    {
+      "category_id": "3",
+      "conditional_native_harmful_type_fraction_by_split": {
+        "train": 0.12884174311926605,
+        "validation": 0.12660550458715597,
+        "test": 0.12660550458715597
+      },
+      "train_test_difference_pp": -0.22362385321100797
+    },
+    {
+      "category_id": "4",
+      "conditional_native_harmful_type_fraction_by_split": {
+        "train": 0.2326834862385321,
+        "validation": 0.23256880733944954,
+        "test": 0.23211009174311928
+      },
+      "train_test_difference_pp": -0.05733944954128267
+    },
+    {
+      "category_id": "5",
+      "conditional_native_harmful_type_fraction_by_split": {
+        "train": 0.1338302752293578,
+        "validation": 0.13302752293577982,
+        "test": 0.13990825688073394
+      },
+      "train_test_difference_pp": 0.607798165137613
+    }
+  ],
+  "complete_mapping_identity_sha256": "c54c4f8a615c68711c2a22fefa7aa31f5b060df97f8f28bda31803889a05cf9b",
+  "primary_evaluation_scope": "unseen_parent_seed_seen_wrapper_families; not an unseen-wrapper evaluation",
+  "code_sha256": "1468f683e9bfc9899b6e6b68166a95db35b71e2897d6e6012744017c139d20f8",
+  "family_pair_input_sha256": "519efcb300a6d79c463e6709b00cba2eaf8f142c0d2cbb85ab42473eece9a2be",
+  "paired_control_protocol": "Derived controls retain parent_base_id and copy parent group_id/split; template wording alone does not join parents."
+}

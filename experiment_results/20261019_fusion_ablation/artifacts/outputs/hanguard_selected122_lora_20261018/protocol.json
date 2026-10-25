@@ -1,0 +1,237 @@
+{
+  "schema": "hanguard_selected122_fresh_lora_v1",
+  "data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018",
+  "model_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B",
+  "num_layers": 32,
+  "hidden_size": 2560,
+  "seed": 42,
+  "gpu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "policy": {
+    "prelaunch_foreign": "block",
+    "active_foreign": "record_only",
+    "max_cuda_workers": 8,
+    "reserved_gpus": [],
+    "never_terminate_foreign": true
+  },
+  "minimum_free_gib": 36.0,
+  "poll_seconds": 2.0,
+  "chunk_groups": 24,
+  "code_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/hanguard_model.py": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_frozen_readout_diagnostics.py": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_readout_parallel_queue.py": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/current_training.py": "1b18846b02aac8fa2a3f4fbb71a024bcc2a9fcd0683f1fc8d8a5a3654cbab984",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/fragment_clean_lora_study.py": "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_base_readout_heads.py": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_base_readout_study.py": "b500fbcabdd3b94dd35293d8805983bbe1895667cb435357245f2b4b3e9d85b4",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_base_resumable_heads.py": "f09ff42f8fc1e94d71bdc0bc30520e07d9d415baf4a049b27b6efa8491f1eca2",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/remediated_binary_study.py": "dfd13ad93bbd2ac9d4c9a1450c63ab288ad53869199608ef82b17e554b4e10cb",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/remediated_dataset_contract.py": "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/repaired_heads.py": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/repaired_study.py": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/report_repaired_study.py": "11bde61b79ed782a9aa1697b836bdac7f239bb3b4c2428a5660f6c4a054c3635",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/selected_subset_lora_study.py": "aebdde4c9df32c130e9b6f5fcfe643c4a9ed95c87008ea4520dc7c47771e5b5d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/train.py": "d1258bcf5c20f19755c9c7546e5037b80f2789bb9ef82f593bd00263b141858c"
+  },
+  "inputs": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/manifest.json": "19928e626a4b45eeff6ba677f1a9c5a37eb7831485a3fc969ddf173aa06a73c7",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/release_qa.json": "10927eb5865abb5f69117c863c114debc14bf7b7f2c7109b8b6134c41cb19ab4",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/split_policy.json": "39e98c3623a8a1a4bd9adaa3ba2c711c6ac9e47b03199ccb8668ea2c935d6785",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/test.parquet": "401031cea082be0d6b9c655227279be825e72577ed00e5be03ecb02a323cfd67",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/train.parquet": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/validation.parquet": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/config.json": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/configuration.json": "f888421726665e8a84b738eed42a64875aed79de8be7daade851ac8bf4c0cef9",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/model.safetensors-00001-of-00002.safetensors": "26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/model.safetensors-00002-of-00002.safetensors": "cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/model.safetensors.index.json": "cf3f798ee02ba45f9622aa8892a47369ab667d0afbf154ee7c2212de42e6302d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/README.md": "620c172274d8399082977e0d2bf3f62de0ff287ac483972b8328595f8a2e1c08",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/excluded122.csv": "366e371521634f56336fe1dd9abe5f18c2054a30bf00b2df8d7d3193a85319f3",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/excluded122.parquet": "383d8fc40f450360335cf710f06b1f408f90558fa7c9569222fba4b62ffdcd5c",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/excluded_base_ids.txt": "8de5b1b45ca4aa6fbf6ef08651b09cce2d1c3a284aa3c5531f7b08019e3f245f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/filter_policy.json": "cebf8f867d8e0347e0f1c73a004b364fd099e8f3d006616409ecde1a27c08171",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/old_model_subset_metrics.json": "14a0f95c8bc274cc8c081ef0bb0da36f4bf69c38187f1ffa8cce0b7680b3cb7a"
+  },
+  "input_stats": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/manifest.json": {
+      "size": 4443,
+      "mtime_ns": 1792323214237450179
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/release_qa.json": {
+      "size": 2560,
+      "mtime_ns": 1792323214237450179
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/split_policy.json": {
+      "size": 507,
+      "mtime_ns": 1792323213809449333
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/test.parquet": {
+      "size": 33045402,
+      "mtime_ns": 1792323211717445201
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/train.parquet": {
+      "size": 268431802,
+      "mtime_ns": 1792323147009313930
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/validation.parquet": {
+      "size": 33457193,
+      "mtime_ns": 1792323193989409909
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/chat_template.jinja": {
+      "size": 7756,
+      "mtime_ns": 1789980854650683433
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/config.json": {
+      "size": 3161,
+      "mtime_ns": 1789980854618683332
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/configuration.json": {
+      "size": 73,
+      "mtime_ns": 1789980854490682927
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/merges.txt": {
+      "size": 3353259,
+      "mtime_ns": 1789980860610702271
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/model.safetensors-00001-of-00002.safetensors": {
+      "size": 5329398688,
+      "mtime_ns": 1789981763597374178
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/model.safetensors-00002-of-00002.safetensors": {
+      "size": 3990429408,
+      "mtime_ns": 1789981625104978603
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/model.safetensors.index.json": {
+      "size": 76196,
+      "mtime_ns": 1789980856966690757
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/preprocessor_config.json": {
+      "size": 390,
+      "mtime_ns": 1789980856666689808
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/tokenizer.json": {
+      "size": 12807982,
+      "mtime_ns": 1789980865146716592
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/tokenizer_config.json": {
+      "size": 16710,
+      "mtime_ns": 1789980855722686823
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/video_preprocessor_config.json": {
+      "size": 385,
+      "mtime_ns": 1789980855870687291
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3.5-4B/vocab.json": {
+      "size": 6722759,
+      "mtime_ns": 1789980859594699062
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/README.md": {
+      "size": 625,
+      "mtime_ns": 1792323214237450179
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/excluded122.csv": {
+      "size": 2077497,
+      "mtime_ns": 1792323213797449310
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/excluded122.parquet": {
+      "size": 987611,
+      "mtime_ns": 1792323213773449263
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/excluded_base_ids.txt": {
+      "size": 7930,
+      "mtime_ns": 1792323213745449208
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/filter_policy.json": {
+      "size": 2078,
+      "mtime_ns": 1792323213809449333
+    },
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_wildguard122_subset_20261018/old_model_subset_metrics.json": {
+      "size": 1681,
+      "mtime_ns": 1792323213801449318
+    }
+  },
+  "runtime": {
+    "python": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+    "prefix": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard",
+    "versions": {
+      "torch": "2.6.0",
+      "transformers": "5.3.0",
+      "tokenizers": "0.22.2",
+      "peft": "0.18.1",
+      "triton": "3.2.0",
+      "causal-conv1d": "1.5.3.post1",
+      "flash-linear-attention": "0.3.2",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3"
+    },
+    "torch_cuda": "12.4"
+  },
+  "created_unix": 1792323328.864272,
+  "methods": [
+    "last",
+    "best_single",
+    "repeat_best",
+    "fusion_fixed",
+    "fusion_fixed_best_anchor"
+  ],
+  "settings": {
+    "seed": 42,
+    "width": 128,
+    "dropout": 0.1,
+    "batch_size": 256,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "grad_clip": 5.0,
+    "epochs": 12,
+    "max_epochs": 40,
+    "layers": [
+      8,
+      16,
+      24,
+      32
+    ],
+    "bootstrap_draws": 2000
+  },
+  "extraction": {
+    "token_budget": 16384,
+    "max_micro": 64,
+    "pad_multiple": 32,
+    "max_tokens": 4096,
+    "pooling": "last_valid_token",
+    "raw_block_outputs": true,
+    "dtype": "float16",
+    "truncation": false
+  },
+  "limitations": [
+    "Test membership was selected post hoc using labels and two previous models: best single layer correct and anchor fusion wrong on 122 WildGuard rows.",
+    "This subset comparison is conditional and exploratory, not a blind estimate or evidence that excluded rows have bad labels or defective text.",
+    "Train and validation bytes are unchanged; no outcome-dependent filtering is applied inside the training loop.",
+    "The previous +2.10 percentage-point gain belongs only to the old fixed no-LoRA models on this subset; a fresh LoRA gain is unknown.",
+    "One fresh E03 LoRA seed; all five readouts share exactly that selected frozen adapter.",
+    "Complete original microbatch groups are distributed; different batch shapes are not claimed equivalent."
+  ],
+  "lora_registration_sha256": "cd3f8887e77e5644b59c6eb01c3d9dd24a9f8afe7c0b1cc00855eb35552782d7",
+  "lora_protocol_sha256": "73be421ad52f2a5769c03adaab17ef4f94858c3d6bd7fc3f2592b7fb37ecda97",
+  "scientific_scope": "posthoc_error_selected_test_subset",
+  "subset_selection_policy": "posthoc_error_selected_test_subset",
+  "is_quality_cleanup": false,
+  "blind_test": false,
+  "scope": "Post hoc error-selected test subset: unchanged train and validation; 122 WildGuard test rows excluded using previous frozen-base model errors. Fresh E03 LoRA shared by all five frozen readouts; validation-only model selection within this exploratory study; not blind or quality-cleaned."
+}

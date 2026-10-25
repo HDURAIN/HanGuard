@@ -1,0 +1,13 @@
+task,seed,status,source
+binary,42,pending,outputs/hanguard_four_arm_experiments_20261019/heads/binary/s42/test_results.json
+binary,43,pending,outputs/hanguard_four_arm_experiments_20261019/heads/binary/s43/test_results.json
+binary,44,pending,outputs/hanguard_four_arm_experiments_20261019/heads/binary/s44/test_results.json
+category,42,pending,outputs/hanguard_four_arm_experiments_20261019/heads/category/s42/test_results.json
+category,43,pending,outputs/hanguard_four_arm_experiments_20261019/heads/category/s43/test_results.json
+category,44,pending,outputs/hanguard_four_arm_experiments_20261019/heads/category/s44/test_results.json
+classic_gate_type_factorial,42,pending,outputs/hanguard_four_arm_experiments_20261019/analysis/results.json
+classic_gate_type_factorial,43,pending,outputs/hanguard_four_arm_experiments_20261019/analysis/results.json
+classic_gate_type_factorial,44,pending,outputs/hanguard_four_arm_experiments_20261019/analysis/results.json
+fusion_in_both_stages_factorial,42,pending,outputs/hanguard_four_arm_experiments_20261019/analysis/results.json
+fusion_in_both_stages_factorial,43,pending,outputs/hanguard_four_arm_experiments_20261019/analysis/results.json
+fusion_in_both_stages_factorial,44,pending,outputs/hanguard_four_arm_experiments_20261019/analysis/results.json

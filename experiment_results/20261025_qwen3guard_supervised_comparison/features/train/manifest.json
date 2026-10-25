@@ -1,0 +1,818 @@
+{
+  "schema": "qwen3guard_supervised_content_features_v1",
+  "split": "train",
+  "rows": 66802,
+  "hidden_size": 2560,
+  "model_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/models/Qwen3Guard-Gen-4B",
+  "protocol_sha256": "e513b743dbea8d80a9612ef8fcbb1756eab34a6c1c51dad0935b371a53a6ae75",
+  "raw_data_sha256": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+  "metadata_sha256": "43518b0dc409ed392643f22dde7cb813a608c23319ef8386764b3daaad9ba85a",
+  "files": {
+    "prepared/content_lengths.npy": "e46def08eae3c868bc540e3e620e9ab1d42a19894de92b09854d04100284b824",
+    "prepared/lengths.npy": "9069dbd27917f52a9599d5ded1ceb18cb2eeb580de4ed05b5869190c619df472",
+    "prepared/metadata.parquet": "43518b0dc409ed392643f22dde7cb813a608c23319ef8386764b3daaad9ba85a",
+    "prepared/row_offsets.npy": "259c8fb53092f36c32b011327d47e59ca70b6598698d12b918a8b4d23f06e3a4",
+    "prepared/token_ids.npy": "56b6a31e2f27ba7659d89affdcf4ef406bfc9f6c5e76b0db911e9520b3490cf0",
+    "prepared/user_ends.npy": "bfcf94ccf5d5f55e99d92445aa6ee52b53725844c7fb6d3f2bb48205458a13ec",
+    "prepared/user_starts.npy": "263f9558a16adc8a1b4327a0cc568a091b2a4fd6f2bb18589741b483b2b94c12"
+  },
+  "shards": [
+    {
+      "shard_index": 0,
+      "row_start": 0,
+      "row_end": 512,
+      "content_tokens": 46038
+    },
+    {
+      "shard_index": 1,
+      "row_start": 512,
+      "row_end": 1024,
+      "content_tokens": 42862
+    },
+    {
+      "shard_index": 2,
+      "row_start": 1024,
+      "row_end": 1536,
+      "content_tokens": 48907
+    },
+    {
+      "shard_index": 3,
+      "row_start": 1536,
+      "row_end": 2048,
+      "content_tokens": 45592
+    },
+    {
+      "shard_index": 4,
+      "row_start": 2048,
+      "row_end": 2560,
+      "content_tokens": 43230
+    },
+    {
+      "shard_index": 5,
+      "row_start": 2560,
+      "row_end": 3072,
+      "content_tokens": 50547
+    },
+    {
+      "shard_index": 6,
+      "row_start": 3072,
+      "row_end": 3584,
+      "content_tokens": 40980
+    },
+    {
+      "shard_index": 7,
+      "row_start": 3584,
+      "row_end": 4096,
+      "content_tokens": 52407
+    },
+    {
+      "shard_index": 8,
+      "row_start": 4096,
+      "row_end": 4608,
+      "content_tokens": 45797
+    },
+    {
+      "shard_index": 9,
+      "row_start": 4608,
+      "row_end": 5120,
+      "content_tokens": 46749
+    },
+    {
+      "shard_index": 10,
+      "row_start": 5120,
+      "row_end": 5632,
+      "content_tokens": 47255
+    },
+    {
+      "shard_index": 11,
+      "row_start": 5632,
+      "row_end": 6144,
+      "content_tokens": 51849
+    },
+    {
+      "shard_index": 12,
+      "row_start": 6144,
+      "row_end": 6656,
+      "content_tokens": 48602
+    },
+    {
+      "shard_index": 13,
+      "row_start": 6656,
+      "row_end": 7168,
+      "content_tokens": 44291
+    },
+    {
+      "shard_index": 14,
+      "row_start": 7168,
+      "row_end": 7680,
+      "content_tokens": 49465
+    },
+    {
+      "shard_index": 15,
+      "row_start": 7680,
+      "row_end": 8192,
+      "content_tokens": 43156
+    },
+    {
+      "shard_index": 16,
+      "row_start": 8192,
+      "row_end": 8704,
+      "content_tokens": 45691
+    },
+    {
+      "shard_index": 17,
+      "row_start": 8704,
+      "row_end": 9216,
+      "content_tokens": 45551
+    },
+    {
+      "shard_index": 18,
+      "row_start": 9216,
+      "row_end": 9728,
+      "content_tokens": 45864
+    },
+    {
+      "shard_index": 19,
+      "row_start": 9728,
+      "row_end": 10240,
+      "content_tokens": 43485
+    },
+    {
+      "shard_index": 20,
+      "row_start": 10240,
+      "row_end": 10752,
+      "content_tokens": 47801
+    },
+    {
+      "shard_index": 21,
+      "row_start": 10752,
+      "row_end": 11264,
+      "content_tokens": 47150
+    },
+    {
+      "shard_index": 22,
+      "row_start": 11264,
+      "row_end": 11776,
+      "content_tokens": 46403
+    },
+    {
+      "shard_index": 23,
+      "row_start": 11776,
+      "row_end": 12288,
+      "content_tokens": 51310
+    },
+    {
+      "shard_index": 24,
+      "row_start": 12288,
+      "row_end": 12800,
+      "content_tokens": 48853
+    },
+    {
+      "shard_index": 25,
+      "row_start": 12800,
+      "row_end": 13312,
+      "content_tokens": 44987
+    },
+    {
+      "shard_index": 26,
+      "row_start": 13312,
+      "row_end": 13824,
+      "content_tokens": 45364
+    },
+    {
+      "shard_index": 27,
+      "row_start": 13824,
+      "row_end": 14336,
+      "content_tokens": 40989
+    },
+    {
+      "shard_index": 28,
+      "row_start": 14336,
+      "row_end": 14848,
+      "content_tokens": 46378
+    },
+    {
+      "shard_index": 29,
+      "row_start": 14848,
+      "row_end": 15360,
+      "content_tokens": 54441
+    },
+    {
+      "shard_index": 30,
+      "row_start": 15360,
+      "row_end": 15872,
+      "content_tokens": 48340
+    },
+    {
+      "shard_index": 31,
+      "row_start": 15872,
+      "row_end": 16384,
+      "content_tokens": 51291
+    },
+    {
+      "shard_index": 32,
+      "row_start": 16384,
+      "row_end": 16896,
+      "content_tokens": 43843
+    },
+    {
+      "shard_index": 33,
+      "row_start": 16896,
+      "row_end": 17408,
+      "content_tokens": 46246
+    },
+    {
+      "shard_index": 34,
+      "row_start": 17408,
+      "row_end": 17920,
+      "content_tokens": 42204
+    },
+    {
+      "shard_index": 35,
+      "row_start": 17920,
+      "row_end": 18432,
+      "content_tokens": 45286
+    },
+    {
+      "shard_index": 36,
+      "row_start": 18432,
+      "row_end": 18944,
+      "content_tokens": 49370
+    },
+    {
+      "shard_index": 37,
+      "row_start": 18944,
+      "row_end": 19456,
+      "content_tokens": 44989
+    },
+    {
+      "shard_index": 38,
+      "row_start": 19456,
+      "row_end": 19968,
+      "content_tokens": 45055
+    },
+    {
+      "shard_index": 39,
+      "row_start": 19968,
+      "row_end": 20480,
+      "content_tokens": 47954
+    },
+    {
+      "shard_index": 40,
+      "row_start": 20480,
+      "row_end": 20992,
+      "content_tokens": 46924
+    },
+    {
+      "shard_index": 41,
+      "row_start": 20992,
+      "row_end": 21504,
+      "content_tokens": 52890
+    },
+    {
+      "shard_index": 42,
+      "row_start": 21504,
+      "row_end": 22016,
+      "content_tokens": 49010
+    },
+    {
+      "shard_index": 43,
+      "row_start": 22016,
+      "row_end": 22528,
+      "content_tokens": 45206
+    },
+    {
+      "shard_index": 44,
+      "row_start": 22528,
+      "row_end": 23040,
+      "content_tokens": 51007
+    },
+    {
+      "shard_index": 45,
+      "row_start": 23040,
+      "row_end": 23552,
+      "content_tokens": 49526
+    },
+    {
+      "shard_index": 46,
+      "row_start": 23552,
+      "row_end": 24064,
+      "content_tokens": 47817
+    },
+    {
+      "shard_index": 47,
+      "row_start": 24064,
+      "row_end": 24576,
+      "content_tokens": 48378
+    },
+    {
+      "shard_index": 48,
+      "row_start": 24576,
+      "row_end": 25088,
+      "content_tokens": 43183
+    },
+    {
+      "shard_index": 49,
+      "row_start": 25088,
+      "row_end": 25600,
+      "content_tokens": 45771
+    },
+    {
+      "shard_index": 50,
+      "row_start": 25600,
+      "row_end": 26112,
+      "content_tokens": 47377
+    },
+    {
+      "shard_index": 51,
+      "row_start": 26112,
+      "row_end": 26624,
+      "content_tokens": 45356
+    },
+    {
+      "shard_index": 52,
+      "row_start": 26624,
+      "row_end": 27136,
+      "content_tokens": 49773
+    },
+    {
+      "shard_index": 53,
+      "row_start": 27136,
+      "row_end": 27648,
+      "content_tokens": 46905
+    },
+    {
+      "shard_index": 54,
+      "row_start": 27648,
+      "row_end": 28160,
+      "content_tokens": 45998
+    },
+    {
+      "shard_index": 55,
+      "row_start": 28160,
+      "row_end": 28672,
+      "content_tokens": 47783
+    },
+    {
+      "shard_index": 56,
+      "row_start": 28672,
+      "row_end": 29184,
+      "content_tokens": 52975
+    },
+    {
+      "shard_index": 57,
+      "row_start": 29184,
+      "row_end": 29696,
+      "content_tokens": 51777
+    },
+    {
+      "shard_index": 58,
+      "row_start": 29696,
+      "row_end": 30208,
+      "content_tokens": 40986
+    },
+    {
+      "shard_index": 59,
+      "row_start": 30208,
+      "row_end": 30720,
+      "content_tokens": 47415
+    },
+    {
+      "shard_index": 60,
+      "row_start": 30720,
+      "row_end": 31232,
+      "content_tokens": 42533
+    },
+    {
+      "shard_index": 61,
+      "row_start": 31232,
+      "row_end": 31744,
+      "content_tokens": 46459
+    },
+    {
+      "shard_index": 62,
+      "row_start": 31744,
+      "row_end": 32256,
+      "content_tokens": 42670
+    },
+    {
+      "shard_index": 63,
+      "row_start": 32256,
+      "row_end": 32768,
+      "content_tokens": 48692
+    },
+    {
+      "shard_index": 64,
+      "row_start": 32768,
+      "row_end": 33280,
+      "content_tokens": 40870
+    },
+    {
+      "shard_index": 65,
+      "row_start": 33280,
+      "row_end": 33792,
+      "content_tokens": 45088
+    },
+    {
+      "shard_index": 66,
+      "row_start": 33792,
+      "row_end": 34304,
+      "content_tokens": 45129
+    },
+    {
+      "shard_index": 67,
+      "row_start": 34304,
+      "row_end": 34816,
+      "content_tokens": 48157
+    },
+    {
+      "shard_index": 68,
+      "row_start": 34816,
+      "row_end": 35328,
+      "content_tokens": 47388
+    },
+    {
+      "shard_index": 69,
+      "row_start": 35328,
+      "row_end": 35840,
+      "content_tokens": 50482
+    },
+    {
+      "shard_index": 70,
+      "row_start": 35840,
+      "row_end": 36352,
+      "content_tokens": 45709
+    },
+    {
+      "shard_index": 71,
+      "row_start": 36352,
+      "row_end": 36864,
+      "content_tokens": 43457
+    },
+    {
+      "shard_index": 72,
+      "row_start": 36864,
+      "row_end": 37376,
+      "content_tokens": 41672
+    },
+    {
+      "shard_index": 73,
+      "row_start": 37376,
+      "row_end": 37888,
+      "content_tokens": 51831
+    },
+    {
+      "shard_index": 74,
+      "row_start": 37888,
+      "row_end": 38400,
+      "content_tokens": 46949
+    },
+    {
+      "shard_index": 75,
+      "row_start": 38400,
+      "row_end": 38912,
+      "content_tokens": 50410
+    },
+    {
+      "shard_index": 76,
+      "row_start": 38912,
+      "row_end": 39424,
+      "content_tokens": 49962
+    },
+    {
+      "shard_index": 77,
+      "row_start": 39424,
+      "row_end": 39936,
+      "content_tokens": 43049
+    },
+    {
+      "shard_index": 78,
+      "row_start": 39936,
+      "row_end": 40448,
+      "content_tokens": 51787
+    },
+    {
+      "shard_index": 79,
+      "row_start": 40448,
+      "row_end": 40960,
+      "content_tokens": 43391
+    },
+    {
+      "shard_index": 80,
+      "row_start": 40960,
+      "row_end": 41472,
+      "content_tokens": 48400
+    },
+    {
+      "shard_index": 81,
+      "row_start": 41472,
+      "row_end": 41984,
+      "content_tokens": 48232
+    },
+    {
+      "shard_index": 82,
+      "row_start": 41984,
+      "row_end": 42496,
+      "content_tokens": 44507
+    },
+    {
+      "shard_index": 83,
+      "row_start": 42496,
+      "row_end": 43008,
+      "content_tokens": 48277
+    },
+    {
+      "shard_index": 84,
+      "row_start": 43008,
+      "row_end": 43520,
+      "content_tokens": 45697
+    },
+    {
+      "shard_index": 85,
+      "row_start": 43520,
+      "row_end": 44032,
+      "content_tokens": 50251
+    },
+    {
+      "shard_index": 86,
+      "row_start": 44032,
+      "row_end": 44544,
+      "content_tokens": 48332
+    },
+    {
+      "shard_index": 87,
+      "row_start": 44544,
+      "row_end": 45056,
+      "content_tokens": 41396
+    },
+    {
+      "shard_index": 88,
+      "row_start": 45056,
+      "row_end": 45568,
+      "content_tokens": 41290
+    },
+    {
+      "shard_index": 89,
+      "row_start": 45568,
+      "row_end": 46080,
+      "content_tokens": 41385
+    },
+    {
+      "shard_index": 90,
+      "row_start": 46080,
+      "row_end": 46592,
+      "content_tokens": 41655
+    },
+    {
+      "shard_index": 91,
+      "row_start": 46592,
+      "row_end": 47104,
+      "content_tokens": 47522
+    },
+    {
+      "shard_index": 92,
+      "row_start": 47104,
+      "row_end": 47616,
+      "content_tokens": 47950
+    },
+    {
+      "shard_index": 93,
+      "row_start": 47616,
+      "row_end": 48128,
+      "content_tokens": 45694
+    },
+    {
+      "shard_index": 94,
+      "row_start": 48128,
+      "row_end": 48640,
+      "content_tokens": 45179
+    },
+    {
+      "shard_index": 95,
+      "row_start": 48640,
+      "row_end": 49152,
+      "content_tokens": 47217
+    },
+    {
+      "shard_index": 96,
+      "row_start": 49152,
+      "row_end": 49664,
+      "content_tokens": 47860
+    },
+    {
+      "shard_index": 97,
+      "row_start": 49664,
+      "row_end": 50176,
+      "content_tokens": 44707
+    },
+    {
+      "shard_index": 98,
+      "row_start": 50176,
+      "row_end": 50688,
+      "content_tokens": 49395
+    },
+    {
+      "shard_index": 99,
+      "row_start": 50688,
+      "row_end": 51200,
+      "content_tokens": 47531
+    },
+    {
+      "shard_index": 100,
+      "row_start": 51200,
+      "row_end": 51712,
+      "content_tokens": 41250
+    },
+    {
+      "shard_index": 101,
+      "row_start": 51712,
+      "row_end": 52224,
+      "content_tokens": 41761
+    },
+    {
+      "shard_index": 102,
+      "row_start": 52224,
+      "row_end": 52736,
+      "content_tokens": 52821
+    },
+    {
+      "shard_index": 103,
+      "row_start": 52736,
+      "row_end": 53248,
+      "content_tokens": 50026
+    },
+    {
+      "shard_index": 104,
+      "row_start": 53248,
+      "row_end": 53760,
+      "content_tokens": 49025
+    },
+    {
+      "shard_index": 105,
+      "row_start": 53760,
+      "row_end": 54272,
+      "content_tokens": 46543
+    },
+    {
+      "shard_index": 106,
+      "row_start": 54272,
+      "row_end": 54784,
+      "content_tokens": 48389
+    },
+    {
+      "shard_index": 107,
+      "row_start": 54784,
+      "row_end": 55296,
+      "content_tokens": 47516
+    },
+    {
+      "shard_index": 108,
+      "row_start": 55296,
+      "row_end": 55808,
+      "content_tokens": 50163
+    },
+    {
+      "shard_index": 109,
+      "row_start": 55808,
+      "row_end": 56320,
+      "content_tokens": 47386
+    },
+    {
+      "shard_index": 110,
+      "row_start": 56320,
+      "row_end": 56832,
+      "content_tokens": 46264
+    },
+    {
+      "shard_index": 111,
+      "row_start": 56832,
+      "row_end": 57344,
+      "content_tokens": 47365
+    },
+    {
+      "shard_index": 112,
+      "row_start": 57344,
+      "row_end": 57856,
+      "content_tokens": 48254
+    },
+    {
+      "shard_index": 113,
+      "row_start": 57856,
+      "row_end": 58368,
+      "content_tokens": 49155
+    },
+    {
+      "shard_index": 114,
+      "row_start": 58368,
+      "row_end": 58880,
+      "content_tokens": 42989
+    },
+    {
+      "shard_index": 115,
+      "row_start": 58880,
+      "row_end": 59392,
+      "content_tokens": 48746
+    },
+    {
+      "shard_index": 116,
+      "row_start": 59392,
+      "row_end": 59904,
+      "content_tokens": 47760
+    },
+    {
+      "shard_index": 117,
+      "row_start": 59904,
+      "row_end": 60416,
+      "content_tokens": 50017
+    },
+    {
+      "shard_index": 118,
+      "row_start": 60416,
+      "row_end": 60928,
+      "content_tokens": 48144
+    },
+    {
+      "shard_index": 119,
+      "row_start": 60928,
+      "row_end": 61440,
+      "content_tokens": 45371
+    },
+    {
+      "shard_index": 120,
+      "row_start": 61440,
+      "row_end": 61952,
+      "content_tokens": 47454
+    },
+    {
+      "shard_index": 121,
+      "row_start": 61952,
+      "row_end": 62464,
+      "content_tokens": 47232
+    },
+    {
+      "shard_index": 122,
+      "row_start": 62464,
+      "row_end": 62976,
+      "content_tokens": 52044
+    },
+    {
+      "shard_index": 123,
+      "row_start": 62976,
+      "row_end": 63488,
+      "content_tokens": 46076
+    },
+    {
+      "shard_index": 124,
+      "row_start": 63488,
+      "row_end": 64000,
+      "content_tokens": 46091
+    },
+    {
+      "shard_index": 125,
+      "row_start": 64000,
+      "row_end": 64512,
+      "content_tokens": 46344
+    },
+    {
+      "shard_index": 126,
+      "row_start": 64512,
+      "row_end": 65024,
+      "content_tokens": 49355
+    },
+    {
+      "shard_index": 127,
+      "row_start": 65024,
+      "row_end": 65536,
+      "content_tokens": 45170
+    },
+    {
+      "shard_index": 128,
+      "row_start": 65536,
+      "row_end": 66048,
+      "content_tokens": 45270
+    },
+    {
+      "shard_index": 129,
+      "row_start": 66048,
+      "row_end": 66560,
+      "content_tokens": 46279
+    },
+    {
+      "shard_index": 130,
+      "row_start": 66560,
+      "row_end": 66802,
+      "content_tokens": 22689
+    }
+  ],
+  "input_tokens": 25914523,
+  "content_tokens": 6113740,
+  "max_input_tokens": 3261,
+  "template_prefix_sha256": "c3ab624aaa333b7d8553ed12b3685906ffb56b022e9c5fe40b8eaaeb44dd967f",
+  "template_suffix_sha256": "4c9043d41a97ac0be48cc5ed5b5b7fc274016fdd9b572d9993c468628e754977",
+  "content_selection": "offset overlap with original user characters",
+  "representation": "raw last decoder block before final RMSNorm",
+  "padding_side": "right",
+  "truncation": false,
+  "boundary_token_policy": "include every token overlapping user text",
+  "created_unix": 1792921138.886451
+}

@@ -1,0 +1,100 @@
+{
+  "dataset_contract": "hanguard_binary_type_decoupled_v1",
+  "dataset_version": "three_source_fragment_clean_20261018",
+  "release_status": "qa_complete_with_documented_limitations",
+  "rows": 83048,
+  "parent_rows": 83502,
+  "removed_fragment_rows": 454,
+  "parent_data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012",
+  "parent_dataset_version": "three_source_remediated_20261012",
+  "parent_manifest_sha256": "a108e631d7978f680feebc6e9276d5c470cc44e2037fd56a940f82fdf33f1a80",
+  "parent_split_sha256": {
+    "train": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "validation": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "test": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6"
+  },
+  "splits": {
+    "train": {
+      "parent_rows": 66802,
+      "retained_rows": 66444,
+      "removed_rows": 358,
+      "retained_source_counts": {
+        "wildguard_zh": 36263,
+        "chinese_curated": 21541,
+        "jailbench": 8640
+      },
+      "removed_source_counts": {
+        "wildguard_zh": 358
+      },
+      "retained_binary_counts": {
+        "harmful": 36951,
+        "unharmful": 29493
+      },
+      "removed_binary_counts": {
+        "unharmful": 332,
+        "harmful": 26
+      }
+    },
+    "validation": {
+      "parent_rows": 8350,
+      "retained_rows": 8310,
+      "removed_rows": 40,
+      "retained_source_counts": {
+        "wildguard_zh": 4538,
+        "chinese_curated": 2692,
+        "jailbench": 1080
+      },
+      "removed_source_counts": {
+        "wildguard_zh": 40
+      },
+      "retained_binary_counts": {
+        "harmful": 4618,
+        "unharmful": 3692
+      },
+      "removed_binary_counts": {
+        "unharmful": 36,
+        "harmful": 4
+      }
+    },
+    "test": {
+      "parent_rows": 8350,
+      "retained_rows": 8294,
+      "removed_rows": 56,
+      "retained_source_counts": {
+        "wildguard_zh": 4522,
+        "chinese_curated": 2692,
+        "jailbench": 1080
+      },
+      "removed_source_counts": {
+        "wildguard_zh": 56
+      },
+      "retained_binary_counts": {
+        "harmful": 4619,
+        "unharmful": 3675
+      },
+      "removed_binary_counts": {
+        "unharmful": 53,
+        "harmful": 3
+      }
+    }
+  },
+  "split_sha256": {
+    "train": "2ec86ab4a79c432676ac57ee48aa069890eb1c1c63e1ac6bb6b51770d0f28398",
+    "validation": "d20dce0ef287c7ee8c756057ef238cc6d9a5fb105241b230a2d4eee0353caeff",
+    "test": "45b3e9bdfe19fb54c078059327a08d055737decec37711dd9c96d7c745fdd1a1"
+  },
+  "filter_policy_sha256": "0da55fac1c52133c181823f5a428fa2d17d20edfbc388db6d43c313b09b5b2e9",
+  "split_policy_sha256": "71ea1d07e114989044f62b229dd5ebaf8bcbbfe0fb53b74127405ff8c928b224",
+  "excluded_fragments_sha256": "1e5465e06c5ca2b7d8a60f68a078950469bc082f592a8c6b67797fe4c85033ff",
+  "excluded_fragments_review_csv_sha256": "cf3683adfcca6fc23b95fb863c4cead2d3ffe5be696be402658ba12e505f978e",
+  "review_decisions_sha256": "736f9e57087f3fc30694df7214d2b205b22c94b2570e49af62dc8f5428bb57d3",
+  "builder_sha256": "0b41195c150e336df5394ac7f3b92c073ddf1ccaeaf64ec37b41aeca4b0bbd11",
+  "original_binary_labels_changed": 0,
+  "retained_texts_changed": 0,
+  "retained_split_assignments_changed": 0,
+  "limitations": [
+    "Candidate screening is conservative and cannot certify all unscreened text is complete.",
+    "Original dataset/test identities and earlier error analyses have been explored; this is not a new blind benchmark.",
+    "AI semantic decisions can be imperfect; every removed row and reason remains auditable."
+  ]
+}

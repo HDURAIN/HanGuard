@@ -1,0 +1,28 @@
+{
+  "release_status": "qa_complete_with_documented_limitations",
+  "dataset_version": "hanguard_two_source_remediated_20261012",
+  "manifest_sha256": "7590e84cab13362ce1e0b75b441ffb2e745b43e39a27034a7f3a12d38d46cc47",
+  "dataset_manifest_sha256": "7590e84cab13362ce1e0b75b441ffb2e745b43e39a27034a7f3a12d38d46cc47",
+  "split_sha256": {
+    "train": "26fb0a08c3504378fc4a58d951c692759bf7b6f07cd75e23506dfab89dfc8633",
+    "validation": "aa57b4b107709ecf0f74746044ff9f1d55436e10e441884af7062e82f13420c0",
+    "test": "ea6bff136d0536794098095ecc6ee6196f3640dbb91ad02e6b81918e5aa074d7"
+  },
+  "reviewed_candidate_manifest_sha256": "2b3069ced4ff30e6972ad87cc18338f16819de691ea0cb45170a94e66fe85265",
+  "independent_reports_sha256": {
+    "outputs/hanguard_data_remediation_20261012/independent_release_source_audit.json": "353081b7f441c61f8f83f8be570737de904e744227b00abe5e0c31fa63255bc1",
+    "outputs/hanguard_data_remediation_20261012/independent_release_qa.json": "caec5eda36e8538a1c4c1d6b679a8c0c7208316590c76c92f7aad2d8e5fb1d56",
+    "outputs/hanguard_data_remediation_20261012/independent_release_views_qa.json": "f5ad3091cb8af279e347ba97c4350e829f53c173adfb72b61148d5ed244d5395",
+    "outputs/hanguard_data_remediation_20261012/translation_corrections_qa.json": "84a851c55ae8ee85b5f96d4de6bcc7c42145f635abcec6c5540af51692052caf",
+    "outputs/hanguard_data_remediation_20261012/recovered_translation_corrections_qa.json": "649dd3f1480d4ccf5944486c5a46791d2d54014282948ff19bc49d91fb0ff04f",
+    "outputs/hanguard_data_remediation_20261012/archived_recovery_translation_corrections_qa.json": "f303099bc7a46f7d6d9fcbc2c772dd19eddf0800b736cc79fb19dd60a1ba4099",
+    "outputs/hanguard_data_remediation_20261012/canonical_collision_translation_corrections_qa.json": "8e8384f661e4cdfaeac4d91fdb7f4a7899ae915f54bdbea7ef77cda6ff6f90fc",
+    "outputs/hanguard_data_remediation_20261012/collision_term_family_translation_corrections_qa.json": "5fc5c214bc3307f6a4cbee6169785cd2dd52695d6bf7de14c41f52db26d3a4a0",
+    "outputs/hanguard_data_remediation_20261012/known_semantic_regression_review.json": "bc83f673989326c958391c6366e1e7d5cc66d97e84dfe3951267097a7c2be3f0"
+  },
+  "metadata_only_finalization": "Final status/QA references/README digest and category parent final-manifest link; all verified parquet/view bytes unchanged.",
+  "source_binary_labels_changed": 0,
+  "input_truncation_rows": 0,
+  "training_started": false,
+  "universal_semantic_or_annotation_correctness_certified": false
+}

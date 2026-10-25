@@ -1,0 +1,16 @@
+{
+  "cpu_tests_passed": 11,
+  "pytest_subtests_passed": 4,
+  "test_files": [
+    "tests/test_selected_subset_lora_study.py",
+    "tests/test_selected_test_subset.py"
+  ],
+  "prior_core_suite_passed": 12,
+  "gpu_test_run": false,
+  "recorded_unix": 1792323306.5683782,
+  "source_sha256": {
+    "scripts/hanguard/selected_subset_lora_study.py": "aebdde4c9df32c130e9b6f5fcfe643c4a9ed95c87008ea4520dc7c47771e5b5d",
+    "scripts/hanguard/build_selected_test_subset.py": "43a3203c6d1f9d27cbe14724c6c901c3b4f7bccbc5d1afe8e57576a2e0fca548",
+    "scripts/hanguard/fragment_clean_lora_study.py": "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4"
+  }
+}

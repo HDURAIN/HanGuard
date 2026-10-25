@@ -1,0 +1,1158 @@
+{
+  "schema": "hanguard_clean_ablation_v1",
+  "task": "category",
+  "seed": 43,
+  "protocol_sha256": "3ea2567ea04e7fc5390bb42fd8cfce6266b16e2c4c1e986d84470f684b9bd98b",
+  "checkpoint_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022/heads/category/s43/selected_heads.pt",
+  "checkpoint_sha256": "99b64bb3ff59203a6ae34c54add99bc8d5e992a3c8391bab61d026c96cfa2674",
+  "validation_predictions_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022/heads/category/s43/validation_predictions.parquet",
+  "validation_predictions_sha256": "51e4a004197adce5b9353a5e43b41cfdedb004b6f51c5814bcda8fa71f45b1e0",
+  "arms": {
+    "baseline": {
+      "best_epoch": 4,
+      "validation_ce": 0.6111486093726823,
+      "parameters": 328453,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "baseline",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": false,
+        "has_fusion": false,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": false,
+        "repeat_last_capacity_control": false,
+        "category_readout": null,
+        "query_implementation": null,
+        "fusion_layers": [],
+        "fusion_weights": [],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": null,
+        "trainable_parameters": 328453,
+        "fusion_parameters": 0,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.7720183486238532,
+        "macro_f1": 0.7762843330550769,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.8794063079777366,
+            "recall": 0.6991150442477876,
+            "f1": 0.7789646672144618
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.789587852494577,
+            "recall": 0.8484848484848485,
+            "f1": 0.8179775280898877
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.8079710144927537,
+            "recall": 0.8079710144927537,
+            "f1": 0.8079710144927537
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.6536585365853659,
+            "recall": 0.7928994082840237,
+            "f1": 0.7165775401069518
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.7612456747404844,
+            "recall": 0.7586206896551724,
+            "f1": 0.7599309153713298
+          }
+        ],
+        "confusion_matrix": [
+          [
+            474,
+            44,
+            23,
+            116,
+            21
+          ],
+          [
+            13,
+            364,
+            1,
+            35,
+            16
+          ],
+          [
+            6,
+            7,
+            223,
+            36,
+            4
+          ],
+          [
+            33,
+            30,
+            14,
+            402,
+            28
+          ],
+          [
+            13,
+            16,
+            15,
+            26,
+            220
+          ]
+        ]
+      }
+    },
+    "fusion_only": {
+      "best_epoch": 5,
+      "validation_ce": 0.6160089861173776,
+      "parameters": 1657221,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "fusion_only",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": false,
+        "has_fusion": true,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": false,
+        "repeat_last_capacity_control": false,
+        "category_readout": null,
+        "query_implementation": null,
+        "fusion_layers": [
+          8,
+          16,
+          24,
+          32
+        ],
+        "fusion_weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": "zero_output_residual",
+        "trainable_parameters": 1657221,
+        "fusion_parameters": 1328768,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.7935779816513762,
+        "macro_f1": 0.7862649253903566,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.8111587982832618,
+            "recall": 0.8362831858407079,
+            "f1": 0.8235294117647058
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.9207650273224044,
+            "recall": 0.7855477855477856,
+            "f1": 0.8477987421383648
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.680327868852459,
+            "recall": 0.9021739130434783,
+            "f1": 0.7757009345794392
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.751953125,
+            "recall": 0.7593688362919132,
+            "f1": 0.7556427870461236
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.810126582278481,
+            "recall": 0.6620689655172414,
+            "f1": 0.7286527514231499
+          }
+        ],
+        "confusion_matrix": [
+          [
+            567,
+            15,
+            38,
+            50,
+            8
+          ],
+          [
+            32,
+            337,
+            8,
+            40,
+            12
+          ],
+          [
+            14,
+            0,
+            249,
+            10,
+            3
+          ],
+          [
+            64,
+            10,
+            26,
+            385,
+            22
+          ],
+          [
+            22,
+            4,
+            45,
+            27,
+            192
+          ]
+        ]
+      }
+    },
+    "category_only": {
+      "best_epoch": 1,
+      "validation_ce": 0.5031613082471942,
+      "parameters": 706177,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "category_only",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": true,
+        "has_fusion": false,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": false,
+        "repeat_last_capacity_control": false,
+        "category_readout": "L32_all_valid_token_learned_queries",
+        "query_implementation": "MultiLabelHead.learned_queries",
+        "fusion_layers": [],
+        "fusion_weights": [],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": null,
+        "trainable_parameters": 706177,
+        "fusion_parameters": 0,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.8325688073394495,
+        "macro_f1": 0.8324923350680649,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.8306010928961749,
+            "recall": 0.8967551622418879,
+            "f1": 0.8624113475177305
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.8952618453865336,
+            "recall": 0.8368298368298368,
+            "f1": 0.8650602409638555
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.9058823529411765,
+            "recall": 0.8369565217391305,
+            "f1": 0.8700564971751412
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.7718940936863544,
+            "recall": 0.747534516765286,
+            "f1": 0.7595190380761523
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.7906976744186046,
+            "recall": 0.8206896551724138,
+            "f1": 0.805414551607445
+          }
+        ],
+        "confusion_matrix": [
+          [
+            608,
+            8,
+            17,
+            34,
+            11
+          ],
+          [
+            24,
+            359,
+            0,
+            38,
+            8
+          ],
+          [
+            14,
+            1,
+            231,
+            14,
+            16
+          ],
+          [
+            65,
+            31,
+            4,
+            379,
+            28
+          ],
+          [
+            21,
+            2,
+            3,
+            26,
+            238
+          ]
+        ]
+      }
+    },
+    "fusion_category": {
+      "best_epoch": 1,
+      "validation_ce": 0.5172786989952214,
+      "parameters": 2034945,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "fusion_category",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": true,
+        "has_fusion": true,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": false,
+        "repeat_last_capacity_control": false,
+        "category_readout": "L32_all_valid_token_learned_queries",
+        "query_implementation": "MultiLabelHead.learned_queries",
+        "fusion_layers": [
+          8,
+          16,
+          24,
+          32
+        ],
+        "fusion_weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": "zero_output_residual",
+        "trainable_parameters": 2034945,
+        "fusion_parameters": 1328768,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.8330275229357799,
+        "macro_f1": 0.8323375628042277,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.812,
+            "recall": 0.8982300884955752,
+            "f1": 0.8529411764705882
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.9328165374677002,
+            "recall": 0.8414918414918415,
+            "f1": 0.8848039215686274
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.8837209302325582,
+            "recall": 0.8260869565217391,
+            "f1": 0.8539325842696629
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.7916666666666666,
+            "recall": 0.7495069033530573,
+            "f1": 0.7700101317122594
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.780327868852459,
+            "recall": 0.8206896551724138,
+            "f1": 0.8
+          }
+        ],
+        "confusion_matrix": [
+          [
+            609,
+            9,
+            12,
+            31,
+            17
+          ],
+          [
+            20,
+            361,
+            1,
+            37,
+            10
+          ],
+          [
+            24,
+            1,
+            228,
+            14,
+            9
+          ],
+          [
+            76,
+            15,
+            5,
+            380,
+            31
+          ],
+          [
+            21,
+            1,
+            12,
+            18,
+            238
+          ]
+        ]
+      }
+    },
+    "fusion_repeat_last": {
+      "best_epoch": 4,
+      "validation_ce": 0.6258247094048409,
+      "parameters": 1657221,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "fusion_repeat_last",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": false,
+        "has_fusion": true,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": false,
+        "repeat_last_capacity_control": true,
+        "category_readout": null,
+        "query_implementation": null,
+        "fusion_layers": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "fusion_weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": "zero_output_residual",
+        "trainable_parameters": 1657221,
+        "fusion_parameters": 1328768,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.7752293577981652,
+        "macro_f1": 0.777266784386341,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.8878676470588235,
+            "recall": 0.7123893805309734,
+            "f1": 0.79050736497545
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.8109339407744874,
+            "recall": 0.8298368298368298,
+            "f1": 0.8202764976958525
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.7929824561403509,
+            "recall": 0.8188405797101449,
+            "f1": 0.8057040998217468
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.6746575342465754,
+            "recall": 0.777120315581854,
+            "f1": 0.7222731439046746
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.7042682926829268,
+            "recall": 0.7965517241379311,
+            "f1": 0.7475728155339806
+          }
+        ],
+        "confusion_matrix": [
+          [
+            483,
+            40,
+            24,
+            102,
+            29
+          ],
+          [
+            12,
+            356,
+            1,
+            37,
+            23
+          ],
+          [
+            4,
+            4,
+            226,
+            34,
+            8
+          ],
+          [
+            32,
+            26,
+            18,
+            394,
+            37
+          ],
+          [
+            13,
+            13,
+            16,
+            17,
+            231
+          ]
+        ]
+      }
+    },
+    "category_fusion_repeat_last": {
+      "best_epoch": 1,
+      "validation_ce": 0.5320699813338363,
+      "parameters": 2034945,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "category_fusion_repeat_last",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": true,
+        "has_fusion": true,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": false,
+        "repeat_last_capacity_control": true,
+        "category_readout": "L32_all_valid_token_learned_queries",
+        "query_implementation": "MultiLabelHead.learned_queries",
+        "fusion_layers": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "fusion_weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": "zero_output_residual",
+        "trainable_parameters": 2034945,
+        "fusion_parameters": 1328768,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.8279816513761468,
+        "macro_f1": 0.8268175773648464,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.8224932249322493,
+            "recall": 0.8952802359882006,
+            "f1": 0.8573446327683616
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.9228723404255319,
+            "recall": 0.8088578088578089,
+            "f1": 0.8621118012422361
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.8875968992248062,
+            "recall": 0.8297101449275363,
+            "f1": 0.8576779026217228
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.772635814889336,
+            "recall": 0.757396449704142,
+            "f1": 0.7649402390438247
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.7652733118971061,
+            "recall": 0.8206896551724138,
+            "f1": 0.7920133111480865
+          }
+        ],
+        "confusion_matrix": [
+          [
+            607,
+            8,
+            14,
+            33,
+            16
+          ],
+          [
+            19,
+            347,
+            1,
+            52,
+            10
+          ],
+          [
+            28,
+            1,
+            229,
+            6,
+            12
+          ],
+          [
+            63,
+            18,
+            7,
+            384,
+            35
+          ],
+          [
+            21,
+            2,
+            7,
+            22,
+            238
+          ]
+        ]
+      }
+    },
+    "category_shared": {
+      "best_epoch": 2,
+      "validation_ce": 0.49873302782067946,
+      "parameters": 706177,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "category_shared",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": true,
+        "has_fusion": false,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": true,
+        "repeat_last_capacity_control": false,
+        "category_readout": "L32_all_valid_token_learned_queries",
+        "query_implementation": "MultiLabelHead.learned_queries",
+        "fusion_layers": [],
+        "fusion_weights": [],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": null,
+        "trainable_parameters": 706177,
+        "fusion_parameters": 0,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.8458715596330275,
+        "macro_f1": 0.8460297428468386,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.8482269503546099,
+            "recall": 0.8820058997050148,
+            "f1": 0.8647866955892987
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.8464818763326226,
+            "recall": 0.9254079254079254,
+            "f1": 0.8841870824053452
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.8612099644128114,
+            "recall": 0.8768115942028986,
+            "f1": 0.8689407540394973
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.8391608391608392,
+            "recall": 0.7100591715976331,
+            "f1": 0.7692307692307693
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.8344594594594594,
+            "recall": 0.8517241379310345,
+            "f1": 0.8430034129692833
+          }
+        ],
+        "confusion_matrix": [
+          [
+            598,
+            19,
+            21,
+            29,
+            11
+          ],
+          [
+            11,
+            397,
+            0,
+            20,
+            1
+          ],
+          [
+            12,
+            1,
+            242,
+            8,
+            13
+          ],
+          [
+            74,
+            46,
+            3,
+            360,
+            24
+          ],
+          [
+            10,
+            6,
+            15,
+            12,
+            247
+          ]
+        ]
+      }
+    },
+    "fusion_category_shared": {
+      "best_epoch": 2,
+      "validation_ce": 0.5077543095435121,
+      "parameters": 2034945,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "fusion_category_shared",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": true,
+        "has_fusion": true,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": true,
+        "repeat_last_capacity_control": false,
+        "category_readout": "L32_all_valid_token_learned_queries",
+        "query_implementation": "MultiLabelHead.learned_queries",
+        "fusion_layers": [
+          8,
+          16,
+          24,
+          32
+        ],
+        "fusion_weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": "zero_output_residual",
+        "trainable_parameters": 2034945,
+        "fusion_parameters": 1328768,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.8619266055045871,
+        "macro_f1": 0.8632440820972602,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.8360881542699724,
+            "recall": 0.8952802359882006,
+            "f1": 0.8646723646723646
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.9282296650717703,
+            "recall": 0.9044289044289044,
+            "f1": 0.9161747343565525
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.867595818815331,
+            "recall": 0.9021739130434783,
+            "f1": 0.8845470692717584
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.8684807256235828,
+            "recall": 0.7554240631163708,
+            "f1": 0.8080168776371308
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.8181818181818182,
+            "recall": 0.8689655172413793,
+            "f1": 0.842809364548495
+          }
+        ],
+        "confusion_matrix": [
+          [
+            607,
+            10,
+            23,
+            31,
+            7
+          ],
+          [
+            16,
+            388,
+            1,
+            12,
+            12
+          ],
+          [
+            12,
+            1,
+            249,
+            5,
+            9
+          ],
+          [
+            79,
+            15,
+            2,
+            383,
+            28
+          ],
+          [
+            12,
+            4,
+            12,
+            10,
+            252
+          ]
+        ]
+      }
+    },
+    "probe_selected_single": {
+      "best_epoch": 4,
+      "validation_ce": 0.6111486093726823,
+      "parameters": 328453,
+      "architecture": {
+        "architecture": "clean_nine_arm_fixed_fusion_category_query_v1",
+        "arm": "probe_selected_single",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 5,
+        "seed": 43,
+        "dropout": 0.1,
+        "has_category": false,
+        "has_fusion": false,
+        "output": "raw_logits",
+        "objective": "softmax_cross_entropy",
+        "global_readout": "L32_last_valid_token",
+        "shared_token_attention": false,
+        "repeat_last_capacity_control": false,
+        "category_readout": null,
+        "query_implementation": null,
+        "fusion_layers": [],
+        "fusion_weights": [],
+        "learnable_layer_weights": false,
+        "best_layer_anchor": false,
+        "fusion_initialization": null,
+        "trainable_parameters": 328453,
+        "fusion_parameters": 0,
+        "token_truncation": false
+      },
+      "validation_metrics": {
+        "rows": 2180,
+        "accuracy": 0.7720183486238532,
+        "macro_f1": 0.7762843330550769,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "per_class": [
+          {
+            "category_id": 1,
+            "support": 678,
+            "precision": 0.8794063079777366,
+            "recall": 0.6991150442477876,
+            "f1": 0.7789646672144618
+          },
+          {
+            "category_id": 2,
+            "support": 429,
+            "precision": 0.789587852494577,
+            "recall": 0.8484848484848485,
+            "f1": 0.8179775280898877
+          },
+          {
+            "category_id": 3,
+            "support": 276,
+            "precision": 0.8079710144927537,
+            "recall": 0.8079710144927537,
+            "f1": 0.8079710144927537
+          },
+          {
+            "category_id": 4,
+            "support": 507,
+            "precision": 0.6536585365853659,
+            "recall": 0.7928994082840237,
+            "f1": 0.7165775401069518
+          },
+          {
+            "category_id": 5,
+            "support": 290,
+            "precision": 0.7612456747404844,
+            "recall": 0.7586206896551724,
+            "f1": 0.7599309153713298
+          }
+        ],
+        "confusion_matrix": [
+          [
+            474,
+            44,
+            23,
+            116,
+            21
+          ],
+          [
+            13,
+            364,
+            1,
+            35,
+            16
+          ],
+          [
+            6,
+            7,
+            223,
+            36,
+            4
+          ],
+          [
+            33,
+            30,
+            14,
+            402,
+            28
+          ],
+          [
+            13,
+            16,
+            15,
+            26,
+            220
+          ]
+        ]
+      }
+    }
+  },
+  "training_rows": 17440,
+  "validation_rows": 2180,
+  "final_budget": 12,
+  "extensions": [],
+  "settings": {
+    "width": 128,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "dropout": 0.1,
+    "epochs": 12,
+    "max_epochs": 40,
+    "token_budget": 8192,
+    "max_micro": 32,
+    "effective_batch": 128,
+    "grad_clip": 5.0,
+    "pad_multiple": 1,
+    "bootstrap_draws": 2000,
+    "selected_layer": 32
+  },
+  "source_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_training.py": "5146c503f18502f384e204431097fab5b7719a1c8be63e8f36b0ca7532541aff",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_heads.py": "b64f06e7af4a86841f64a92d8c81f6cee965c43ab2203272762bc98e362e8d2f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_features.py": "bbfa64f255a65f2489fc3ef0fd71f05e6e21b325547d35910b39e977590a1736",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/multilabel_heads.py": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f"
+  },
+  "data_sha256": {
+    "train": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "validation": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "test": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6"
+  },
+  "device": "cuda",
+  "wall_seconds": 3324.2457695999183,
+  "formal_test_opened": false,
+  "selection_scope": "validation_only",
+  "objective": "native_known_harmful_five_class_softmax_ce",
+  "probe_selection_sha256": "04e7ceea1c93657e9c3ab713e7734e79bda689e47572d95d791faa932f41f6ac",
+  "selected_probe_layer": 32,
+  "train_length_edges": [
+    32.0,
+    44.0,
+    91.0
+  ]
+}

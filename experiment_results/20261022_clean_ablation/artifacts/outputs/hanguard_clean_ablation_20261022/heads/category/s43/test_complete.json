@@ -1,0 +1,12 @@
+{
+  "schema": "hanguard_clean_ablation_v1",
+  "complete": true,
+  "task": "category",
+  "seed": 43,
+  "protocol_sha256": "3ea2567ea04e7fc5390bb42fd8cfce6266b16e2c4c1e986d84470f684b9bd98b",
+  "rootselection_lock_sha256": "dea75159eafe1cbd3fc8d8ae2c4eaa148bad3013a64a588a4d53355ff52006ed",
+  "artifacts": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022/heads/category/s43/test_predictions.parquet": "b689e8ef16805c7aba1d86ae3fa703a12454db5602c8a6c5d191827eb2c410c1",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022/heads/category/s43/test_results.json": "c57db5c5782ae9e394feacd3d854cff5c3b34c264f860bd8f395456a89a19258"
+  }
+}

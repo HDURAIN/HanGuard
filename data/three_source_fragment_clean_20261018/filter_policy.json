@@ -1,0 +1,31 @@
+{
+  "policy_id": "hanguard_missing_context_fragment_filter_20261018_v1",
+  "parent_dataset_version": "three_source_remediated_20261012",
+  "screen_scope": "All parent train/validation/test texts; labels and model predictions absent from review packets",
+  "remove": "An incomplete request or follow-up depends on missing referents, prior content or unfilled required fields, so the current task cannot be independently recovered",
+  "retain": [
+    "Complete short requests, ordinary greetings and independently interpretable statements",
+    "Complete harmful requests and risk-topic benign requests alike",
+    "Every uncertain review decision"
+  ],
+  "decision_source": "AI text-only semantic review, not new human gold annotation",
+  "no_label_or_prediction_filtering": true,
+  "no_text_changes": true,
+  "no_label_changes": true,
+  "no_resplitting": true,
+  "limitations": [
+    "Candidate screening is conservative and cannot certify all unscreened text is complete.",
+    "Original dataset/test identities and earlier error analyses have been explored; this is not a new blind benchmark.",
+    "AI semantic decisions can be imperfect; every removed row and reason remains auditable."
+  ],
+  "candidate_packet_sha256": "520d45ad76dbee969c9b49be8627b37efa7821a18ee0d34f0b09f7bbc81792be",
+  "review_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/final_review_decisions.jsonl": "98cd679de6aeb2db945201f4208d026de0cbad1802d903e0fae0f22c5d600f8d"
+  },
+  "review_decision_counts": {
+    "keep": 1866,
+    "remove_fragment": 454,
+    "uncertain": 280
+  },
+  "review_provenance_sha256": "bfdd497c4b5efababb818bb79057ea91aceea124651d24ec20ccf09ec576c325"
+}

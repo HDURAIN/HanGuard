@@ -1,0 +1,90 @@
+{
+  "dataset_contract": "hanguard_binary_type_decoupled_v1",
+  "dataset_version": "three_source_wildguard122_subset_20261018",
+  "release_status": "qa_complete_with_documented_limitations",
+  "selection_policy": "posthoc_error_selected_test_subset",
+  "is_quality_cleanup": false,
+  "train_validation_byte_identical": true,
+  "rows": 83380,
+  "excluded_test_rows": 122,
+  "parent_data_dir": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012",
+  "parent_dataset_version": "three_source_remediated_20261012",
+  "parent_manifest_sha256": "a108e631d7978f680feebc6e9276d5c470cc44e2037fd56a940f82fdf33f1a80",
+  "parent_split_sha256": {
+    "train": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "validation": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "test": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6"
+  },
+  "splits": {
+    "train": {
+      "parent_rows": 66802,
+      "retained_rows": 66802,
+      "removed_rows": 0,
+      "retained_source_counts": {
+        "wildguard_zh": 36621,
+        "chinese_curated": 21541,
+        "jailbench": 8640
+      },
+      "retained_binary_counts": {
+        "harmful": 36977,
+        "unharmful": 29825
+      }
+    },
+    "validation": {
+      "parent_rows": 8350,
+      "retained_rows": 8350,
+      "removed_rows": 0,
+      "retained_source_counts": {
+        "wildguard_zh": 4578,
+        "chinese_curated": 2692,
+        "jailbench": 1080
+      },
+      "retained_binary_counts": {
+        "harmful": 4622,
+        "unharmful": 3728
+      }
+    },
+    "test": {
+      "parent_rows": 8350,
+      "retained_rows": 8228,
+      "removed_rows": 122,
+      "retained_source_counts": {
+        "wildguard_zh": 4456,
+        "chinese_curated": 2692,
+        "jailbench": 1080
+      },
+      "retained_binary_counts": {
+        "harmful": 4575,
+        "unharmful": 3653
+      }
+    }
+  },
+  "split_sha256": {
+    "train": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "validation": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "test": "401031cea082be0d6b9c655227279be825e72577ed00e5be03ecb02a323cfd67"
+  },
+  "evidence_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/predictions.parquet": "b01c3c837dd6ac2f64a87fa7b8a2b6d1be90d51c984b2378ac931a73edc7ac30",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/predictions.csv": "414bf87e594f73eb190a4f2337d26d068e7ad34766d7fd10ef8a4dcd00a6d29e",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol.json": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/results.json": "f61475073cbad99720dbe1d52ede8e72a21da5010fcd1830834093a08c0a7167",
+    "excluded_base_ids.txt": "8de5b1b45ca4aa6fbf6ef08651b09cce2d1c3a284aa3c5531f7b08019e3f245f"
+  },
+  "filter_policy_sha256": "cebf8f867d8e0347e0f1c73a004b364fd099e8f3d006616409ecde1a27c08171",
+  "split_policy_sha256": "39e98c3623a8a1a4bd9adaa3ba2c711c6ac9e47b03199ccb8668ea2c935d6785",
+  "excluded122_parquet_sha256": "383d8fc40f450360335cf710f06b1f408f90558fa7c9569222fba4b62ffdcd5c",
+  "excluded122_csv_sha256": "366e371521634f56336fe1dd9abe5f18c2054a30bf00b2df8d7d3193a85319f3",
+  "old_model_subset_metrics_sha256": "14a0f95c8bc274cc8c081ef0bb0da36f4bf69c38187f1ffa8cce0b7680b3cb7a",
+  "builder_sha256": "43a3203c6d1f9d27cbe14724c6c901c3b4f7bccbc5d1afe8e57576a2e0fca548",
+  "original_binary_labels_changed": 0,
+  "retained_texts_changed": 0,
+  "retained_split_assignments_changed": 0,
+  "limitations": [
+    "Test exclusions depend on labels and old no-LoRA model correctness; this is a posthoc error-selected subset.",
+    "No evidence establishes that all excluded rows are faulty, mislabeled or incomplete.",
+    "The selected-subset old-model gain is mechanically favored by selection and is not an unbiased method improvement.",
+    "This is not a new blind test; retain and report the original complete-test results.",
+    "Train and validation are unchanged; this subset alone does not remove training examples or constitute data-quality remediation."
+  ]
+}

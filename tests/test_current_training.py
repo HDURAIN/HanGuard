@@ -208,3 +208,39 @@ def test_current_binary_rows_are_registered_but_legacy_counts_are_preserved(envi
     protocol.pop('training_entrypoint')
     with pytest.raises(ValueError, match='expected 62155'):
         repaired_study.load_split('train', Tokenizer(), protocol)
+
+
+def test_remediated_category_registration_binds_same_split_binary_parent_data(environment):
+    """Child registration cannot silently use old splits with a new binary LoRA."""
+    version = 'three_source_remediated_20261012'
+    parent_data = environment.root / version; parent_data.mkdir()
+    for split in training.SPLITS:
+        frame = pd.read_parquet(environment.data / f'{split}.parquet')
+        frame['type_label_mask'] = pd.to_numeric(frame.category_id).gt(0)
+        frame.to_parquet(environment.data / f'{split}.parquet', index=False)
+        frame.to_parquet(parent_data / f'{split}.parquet', index=False)
+    training.dump(parent_data / 'manifest.json', dict(dataset_contract=training.data_contract.CONTRACT,
+        dataset_version=version))
+    training.dump(environment.data / 'manifest.json', dict(dataset_contract=training.data_contract.CONTRACT,
+        dataset_version='hanguard_two_source_remediated_20261012', parent_dataset_version=version,
+        parent_manifest_sha256=training.sha(parent_data / 'manifest.json')))
+    for directory in (parent_data, environment.data):
+        training.dump(directory / 'release_qa.json', dict(release_status='qa_complete_with_documented_limitations',
+            manifest_sha256=training.sha(directory / 'manifest.json'),
+            split_sha256={s: training.sha(directory / f'{s}.parquet') for s in training.SPLITS}))
+    protocol_path = environment.parent.parents[1] / 'protocol.json'
+    parent = json.loads(protocol_path.read_text())
+    parent.update(data_dir=str(parent_data), dataset_contract=training.data_contract.CONTRACT,
+        dataset_version=version, data_sha256={s: training.sha(parent_data / f'{s}.parquet') for s in training.SPLITS})
+    training.dump(protocol_path, parent)
+    selected_path = environment.parent / 'selection.json'
+    selected = json.loads(selected_path.read_text()); selected['protocol_sha256'] = training.sha(protocol_path)
+    training.dump(selected_path, selected)
+    args = environment.args('category')
+    protocol = training.init(args); training.register(args.output)
+    assert protocol['parent_dataset_version'] == version
+    assert protocol['category_same_split_parent_rows_verified'] == dict(train=6, validation=6, test=6)
+    assert str(parent_data / 'train.parquet') in protocol['parent_artifact_sha256']
+    path = parent_data / 'train.parquet'; path.write_bytes(b'changed binary parent inputs')
+    with pytest.raises(ValueError, match='artifact changed'):
+        training.verify(args.output)

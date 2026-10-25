@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "protocol_sha256": "582bb3819a36bab3a5cd52850220372bf267ef66de341953a16f460cca2b07bf",
+  "selection_lock_sha256": "59d6042ff89c0ae7e5a7030fff8d026fa60dc1dab30627439cdcc4b6c5a04f69",
+  "artifacts": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s42/test_predictions.parquet": "7cd28a84237ebc7ae0639ab83c2ed73189515a41daea5a7094c3b13ee00d9e26",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s42/test_results.json": "5d69f10acd55fbbeab4afb580f6a086e0887661ab31029aede27225af95f360b"
+  }
+}

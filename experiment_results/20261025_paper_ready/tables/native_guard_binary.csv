@@ -1,0 +1,4 @@
+model,protocol,rule,rows,accuracy_mean_percent,accuracy_sd_percent,macro_f1_mean_percent,macro_f1_sd_percent,harmful_f1_mean_percent,harmful_f1_sd_percent,harmful_recall_mean_percent,harmful_recall_sd_percent,fpr_mean_percent,fpr_sd_percent,category_accuracy
+Qwen3Guard-Gen-4B,native_zero_shot,unsafe_only,8350,90.86227544910179,,90.85853075401577,,91.04354971240755,,83.90307226308957,,0.509656652360515,,N/A: incompatible native taxonomy
+Qwen3Guard-Gen-4B,native_zero_shot,unsafe_or_controversial,8350,94.82634730538922,,94.7815085086063,,95.26523454625165,,94.02855906533968,,4.184549356223176,,N/A: incompatible native taxonomy
+hanguard CQA+MLF,local_supervised_components,validation_selected_threshold,8350,96.11576846307385,0.2538620853586408,96.07429232506544,0.2558187816422357,96.47766641535877,0.2333155363593838,96.10558199913457,0.4321718813379108,3.871602288984263,0.3981660242884891,83.1346

@@ -1,0 +1,113 @@
+{
+  "schema": "qwen3guard_supervised_matched_data_v1",
+  "state": "failed",
+  "automatic_run": false,
+  "coordinator_identity": {
+    "pid": 1378110,
+    "uid": 1036,
+    "start_time_ticks": 187669359,
+    "command_sha256": "274e3b5c1a00f407999b8d3032eb932b653b3ef7070066bf5ca2e0b864592740"
+  },
+  "updated_unix": 1792921374.7269747,
+  "error": "RuntimeError('Study STOP file exists')",
+  "active_workers": [],
+  "failures": {
+    "extract:train:2": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_0-1-2-3_1792921156754358785.log"
+    },
+    "extract:train:0": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_0-1-2-3_1792921156754358785.log"
+    },
+    "extract:train:3": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_0-1-2-3_1792921156754358785.log"
+    },
+    "extract:train:1": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_0-1-2-3_1792921156754358785.log"
+    },
+    "extract:train:7": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_4-5-6-7_1792921160074214837.log"
+    },
+    "extract:train:5": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_4-5-6-7_1792921160074214837.log"
+    },
+    "extract:train:4": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_4-5-6-7_1792921160074214837.log"
+    },
+    "extract:train:6": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_4-5-6-7_1792921160074214837.log"
+    },
+    "extract:train:8": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_8-9-10-11_1792921164504092774.log"
+    },
+    "extract:train:9": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_8-9-10-11_1792921164504092774.log"
+    },
+    "extract:train:11": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_8-9-10-11_1792921164504092774.log"
+    },
+    "extract:train:10": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_8-9-10-11_1792921164504092774.log"
+    },
+    "extract:train:13": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_12-13-14-15_1792921170233491365.log"
+    },
+    "extract:train:15": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_12-13-14-15_1792921170233491365.log"
+    },
+    "extract:train:14": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_12-13-14-15_1792921170233491365.log"
+    },
+    "extract:train:12": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_12-13-14-15_1792921170233491365.log"
+    },
+    "extract:train:17": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_16-17-18-19_1792921178535763076.log"
+    },
+    "extract:train:16": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_16-17-18-19_1792921178535763076.log"
+    },
+    "extract:train:18": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_16-17-18-19_1792921178535763076.log"
+    },
+    "extract:train:19": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_16-17-18-19_1792921178535763076.log"
+    },
+    "extract:train:23": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_20-21-22-23_1792921197407190728.log"
+    },
+    "extract:train:21": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_20-21-22-23_1792921197407190728.log"
+    },
+    "extract:train:20": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_20-21-22-23_1792921197407190728.log"
+    },
+    "extract:train:22": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025/logs/extract_train_20-21-22-23_1792921197407190728.log"
+    }
+  },
+  "drain_verified": true
+}

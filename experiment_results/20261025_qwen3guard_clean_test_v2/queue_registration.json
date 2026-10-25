@@ -1,0 +1,28 @@
+{
+  "schema": "qwen3guard_clean_empty_gpu_queue_v1",
+  "protocol_sha256": "acd0c5c9d015a9b43300c78c1961ab44bdb87bd193f80b5efd4a6e9e23d22847",
+  "sources": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/qwen3guard_clean_queue.py": "39a20a3c28bf7d3289c31cd1db4cd7751e9fb3fe45bd0ee83a7cc3433bc73ff7",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/qwen3guard_clean_eval.py": "5bfef13a44ef32c3d7c18c617d2c3bf5486a5c188629dd5e1e08d7b2153e1c7a"
+  },
+  "gpu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "poll_seconds": 5.0,
+  "minimum_free_gib": 20.0,
+  "admission": "No NVIDIA process of any owner at admission; recheck in worker",
+  "system_display_exception": {
+    "pid": 9539,
+    "uid": 126,
+    "start_time_ticks": 10027,
+    "command_sha256": "5c4df965a58cfe2ca87303f3e0abf46b4fb972dbe2aa730f8e4e56417a5e16d1"
+  },
+  "post_admission": "Record arrivals and retain our admitted worker"
+}

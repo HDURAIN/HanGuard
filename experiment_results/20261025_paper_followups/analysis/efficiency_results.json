@@ -1,0 +1,2231 @@
+{
+  "schema": "hanguard_paper_error_efficiency_v1",
+  "complete": true,
+  "protocol_sha256": "8944f5fa4d3cb07812857aa8290943c7feff1817474d9b3f6b8c35a7a6903aaf",
+  "attempt": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/analysis/efficiency_attempts/2923563_1792897013192524312",
+  "gpu": {
+    "index": 1,
+    "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552",
+    "free_gib": 47.1259765625,
+    "utilization": 0,
+    "pids": [
+      2923563
+    ],
+    "ignored_system_display_pids": [
+      9539
+    ]
+  },
+  "cases": [
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "binary",
+      "arm": "baseline",
+      "batch_size": 1,
+      "head_parameters": 328066,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 52.71575748617761,
+      "latency_ms_p50": 165.1732084574178,
+      "latency_ms_p95": 221.3931574835442,
+      "mean_batch_ms": 164.73674214430503,
+      "examples_per_second": 6.070291223338789,
+      "tokenization_seconds": 0.8611661300528795,
+      "peak_allocated_gib": 8.672704219818115,
+      "peak_reserved_gib": 9.044921875,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "binary",
+      "arm": "baseline",
+      "batch_size": 8,
+      "head_parameters": 328066,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 17.92584630101919,
+      "latency_ms_p50": 469.9137285351753,
+      "latency_ms_p95": 688.1359397550113,
+      "mean_batch_ms": 448.1461575254798,
+      "examples_per_second": 17.851318962932652,
+      "tokenization_seconds": 0.7433328286278993,
+      "peak_allocated_gib": 9.766920566558838,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "binary",
+      "arm": "fusion_only",
+      "batch_size": 1,
+      "head_parameters": 1656834,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 57.70961164589971,
+      "latency_ms_p50": 186.24669406563044,
+      "latency_ms_p95": 227.81207314692443,
+      "mean_batch_ms": 180.3425363934366,
+      "examples_per_second": 5.545003524949836,
+      "tokenization_seconds": 0.9257008666172624,
+      "peak_allocated_gib": 8.672718524932861,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "binary",
+      "arm": "fusion_only",
+      "batch_size": 8,
+      "head_parameters": 1656834,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 18.42247944418341,
+      "latency_ms_p50": 476.2652046047151,
+      "latency_ms_p95": 692.8668097709306,
+      "mean_batch_ms": 460.56198610458523,
+      "examples_per_second": 17.370083162233335,
+      "tokenization_seconds": 0.7900991067290306,
+      "peak_allocated_gib": 9.767035007476807,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "binary",
+      "arm": "category_only",
+      "batch_size": 1,
+      "head_parameters": 705793,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 56.127423455473036,
+      "latency_ms_p50": 179.85332803800702,
+      "latency_ms_p95": 218.93456128891557,
+      "mean_batch_ms": 175.39819829835324,
+      "examples_per_second": 5.701312839593682,
+      "tokenization_seconds": 0.9110411428846419,
+      "peak_allocated_gib": 8.672704219818115,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "binary",
+      "arm": "category_only",
+      "batch_size": 8,
+      "head_parameters": 705793,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 18.223386668600142,
+      "latency_ms_p50": 497.8601785842329,
+      "latency_ms_p95": 688.5885393829085,
+      "mean_batch_ms": 455.58466671500355,
+      "examples_per_second": 17.559853490425954,
+      "tokenization_seconds": 0.7288244289811701,
+      "peak_allocated_gib": 9.766920566558838,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "binary",
+      "arm": "fusion_category",
+      "batch_size": 1,
+      "head_parameters": 2034561,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 61.22703642421402,
+      "latency_ms_p50": 192.14049447327852,
+      "latency_ms_p95": 294.20639724703506,
+      "mean_batch_ms": 191.3344888256688,
+      "examples_per_second": 5.2264492728811325,
+      "tokenization_seconds": 0.9115579281933606,
+      "peak_allocated_gib": 8.672718524932861,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "binary",
+      "arm": "fusion_category",
+      "batch_size": 8,
+      "head_parameters": 2034561,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 17.274133967934176,
+      "latency_ms_p50": 448.15407251007855,
+      "latency_ms_p95": 687.8234630450606,
+      "mean_batch_ms": 431.8533491983544,
+      "examples_per_second": 18.524807124572103,
+      "tokenization_seconds": 0.5434299097396433,
+      "peak_allocated_gib": 9.767035007476807,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "category",
+      "arm": "baseline",
+      "batch_size": 1,
+      "head_parameters": 328453,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 53.48216776549816,
+      "latency_ms_p50": 168.17525087390095,
+      "latency_ms_p95": 219.443537062034,
+      "mean_batch_ms": 167.13177426718175,
+      "examples_per_second": 5.9833027225653135,
+      "tokenization_seconds": 0.8536678655073047,
+      "peak_allocated_gib": 8.672704219818115,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "category",
+      "arm": "baseline",
+      "batch_size": 8,
+      "head_parameters": 328453,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 17.94381257868372,
+      "latency_ms_p50": 471.3301459560171,
+      "latency_ms_p95": 684.7465963684954,
+      "mean_batch_ms": 448.595314467093,
+      "examples_per_second": 17.833445294682956,
+      "tokenization_seconds": 0.6110217550303787,
+      "peak_allocated_gib": 9.766920566558838,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "category",
+      "arm": "fusion_only",
+      "batch_size": 1,
+      "head_parameters": 1657221,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 52.555371693568304,
+      "latency_ms_p50": 159.39819754566997,
+      "latency_ms_p95": 249.03004310326654,
+      "mean_batch_ms": 164.23553654240095,
+      "examples_per_second": 6.088816227307958,
+      "tokenization_seconds": 0.8535598497837782,
+      "peak_allocated_gib": 8.672718524932861,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "category",
+      "arm": "fusion_only",
+      "batch_size": 8,
+      "head_parameters": 1657221,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 19.146823670715094,
+      "latency_ms_p50": 511.6698514902964,
+      "latency_ms_p95": 700.6598038831726,
+      "mean_batch_ms": 478.67059176787734,
+      "examples_per_second": 16.712954874569473,
+      "tokenization_seconds": 0.9077687647659332,
+      "peak_allocated_gib": 9.767035007476807,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "category",
+      "arm": "category_only",
+      "batch_size": 1,
+      "head_parameters": 706177,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 61.92596606747247,
+      "latency_ms_p50": 192.94610305223614,
+      "latency_ms_p95": 242.2323034494184,
+      "mean_batch_ms": 193.51864396085148,
+      "examples_per_second": 5.167460765187557,
+      "tokenization_seconds": 0.9936209984589368,
+      "peak_allocated_gib": 8.672704219818115,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "category",
+      "arm": "category_only",
+      "batch_size": 8,
+      "head_parameters": 706177,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 18.25441727391444,
+      "latency_ms_p50": 466.39314002823085,
+      "latency_ms_p95": 693.8569293124601,
+      "mean_batch_ms": 456.36043184786104,
+      "examples_per_second": 17.53000357109618,
+      "tokenization_seconds": 0.7626416001003236,
+      "peak_allocated_gib": 9.766920566558838,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "category",
+      "arm": "fusion_category",
+      "batch_size": 1,
+      "head_parameters": 2034945,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 61.37548125325702,
+      "latency_ms_p50": 196.36363699100912,
+      "latency_ms_p95": 253.96016117883846,
+      "mean_batch_ms": 191.7983789164282,
+      "examples_per_second": 5.213808404687963,
+      "tokenization_seconds": 0.9139450525399297,
+      "peak_allocated_gib": 8.672718524932861,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "category",
+      "arm": "fusion_category",
+      "batch_size": 8,
+      "head_parameters": 2034945,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 17.787197707919404,
+      "latency_ms_p50": 454.11316701211035,
+      "latency_ms_p95": 687.6695911632851,
+      "mean_batch_ms": 444.6799426979851,
+      "examples_per_second": 17.990467371795514,
+      "tokenization_seconds": 0.6562214992009103,
+      "peak_allocated_gib": 9.767035007476807,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "system",
+      "arm": "baseline",
+      "batch_size": 1,
+      "head_parameters": 656519,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 54.79176901699975,
+      "latency_ms_p50": 178.14353795256466,
+      "latency_ms_p95": 224.9844296835363,
+      "mean_batch_ms": 171.22427817812422,
+      "examples_per_second": 5.840293272894994,
+      "tokenization_seconds": 0.8606135006994009,
+      "peak_allocated_gib": 8.672704219818115,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "system",
+      "arm": "baseline",
+      "batch_size": 8,
+      "head_parameters": 656519,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 18.020794389769435,
+      "latency_ms_p50": 459.6974034793675,
+      "latency_ms_p95": 685.475961456541,
+      "mean_batch_ms": 450.5198597442359,
+      "examples_per_second": 17.75726380750822,
+      "tokenization_seconds": 0.6449688237626106,
+      "peak_allocated_gib": 9.766920566558838,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "system",
+      "arm": "fusion_only",
+      "batch_size": 1,
+      "head_parameters": 3314055,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 61.23984838835895,
+      "latency_ms_p50": 189.6573614794761,
+      "latency_ms_p95": 246.43048959551382,
+      "mean_batch_ms": 191.37452621362172,
+      "examples_per_second": 5.225355849522786,
+      "tokenization_seconds": 0.9532846114598215,
+      "peak_allocated_gib": 8.672718524932861,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "system",
+      "arm": "fusion_only",
+      "batch_size": 8,
+      "head_parameters": 3314055,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 18.13414582493715,
+      "latency_ms_p50": 454.59227554965764,
+      "latency_ms_p95": 691.2525742431171,
+      "mean_batch_ms": 453.35364562342875,
+      "examples_per_second": 17.646268155622327,
+      "tokenization_seconds": 0.7085965757723898,
+      "peak_allocated_gib": 9.767035007476807,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "system",
+      "arm": "category_only",
+      "batch_size": 1,
+      "head_parameters": 1411970,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 61.54538888228126,
+      "latency_ms_p50": 196.40594441443682,
+      "latency_ms_p95": 239.61468918714672,
+      "mean_batch_ms": 192.32934025712893,
+      "examples_per_second": 5.199414705333466,
+      "tokenization_seconds": 0.9962018996011466,
+      "peak_allocated_gib": 8.672704219818115,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "system",
+      "arm": "category_only",
+      "batch_size": 8,
+      "head_parameters": 1411970,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 17.560698984423652,
+      "latency_ms_p50": 451.31998194847256,
+      "latency_ms_p95": 688.955599127803,
+      "mean_batch_ms": 439.0174746105913,
+      "examples_per_second": 18.222509268215358,
+      "tokenization_seconds": 0.5917042782530189,
+      "peak_allocated_gib": 9.766920566558838,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "system",
+      "arm": "fusion_category",
+      "batch_size": 1,
+      "head_parameters": 4069506,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 416,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 61.23601263365708,
+      "latency_ms_p50": 196.38444005977362,
+      "latency_ms_p95": 235.80176152754575,
+      "mean_batch_ms": 191.36253948017838,
+      "examples_per_second": 5.225683159914281,
+      "tokenization_seconds": 0.9221708411350846,
+      "peak_allocated_gib": 8.672718524932861,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "hanguard_Qwen3.5-4B",
+      "task": "system",
+      "arm": "fusion_category",
+      "batch_size": 8,
+      "head_parameters": 4069506,
+      "backbone_parameters": 4539265536,
+      "backbone_forward_calls": 468,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 17.94658614206128,
+      "latency_ms_p50": 454.7634379705414,
+      "latency_ms_p95": 689.707438100595,
+      "mean_batch_ms": 448.66465355153196,
+      "examples_per_second": 17.83068921670949,
+      "tokenization_seconds": 0.59151592082344,
+      "peak_allocated_gib": 9.767035007476807,
+      "peak_reserved_gib": 10.0,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "Qwen3Guard-Gen-4B",
+      "task": "binary_native_generation",
+      "arm": "official_zero_shot",
+      "batch_size": 1,
+      "head_parameters": 0,
+      "backbone_parameters": 4411424256,
+      "invocations": 320,
+      "examples": 320,
+      "elapsed_seconds": 385.4607725571841,
+      "latency_ms_p50": 1178.490703459829,
+      "latency_ms_p95": 1722.5244148634376,
+      "mean_batch_ms": 1204.5649142412003,
+      "examples_per_second": 0.8301752675819358,
+      "tokenization_seconds": 2.665750620653853,
+      "peak_allocated_gib": 8.49052619934082,
+      "peak_reserved_gib": 8.673828125,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    },
+    {
+      "model": "Qwen3Guard-Gen-4B",
+      "task": "binary_native_generation",
+      "arm": "official_zero_shot",
+      "batch_size": 8,
+      "head_parameters": 0,
+      "backbone_parameters": 4411424256,
+      "invocations": 40,
+      "examples": 320,
+      "elapsed_seconds": 78.47955725016072,
+      "latency_ms_p50": 1979.7538040438667,
+      "latency_ms_p95": 2447.1060684765685,
+      "mean_batch_ms": 1961.988931254018,
+      "examples_per_second": 4.077494970823687,
+      "tokenization_seconds": 1.3569387521129102,
+      "peak_allocated_gib": 10.129548072814941,
+      "peak_reserved_gib": 10.873046875,
+      "warmup_passes": 3,
+      "measured_passes": 10,
+      "timing_scope": "fresh tokenization + transfer + real backbone + head/generation + CPU output"
+    }
+  ],
+  "gpu_name": "NVIDIA RTX A6000",
+  "cuda_version": "12.4",
+  "isolation_observations": [
+    {
+      "time": 1792897102.17373,
+      "valid": true,
+      "free_gib": 47.1259765625
+    },
+    {
+      "time": 1792897109.2945254,
+      "valid": true,
+      "free_gib": 47.1259765625
+    },
+    {
+      "time": 1792897114.5536175,
+      "valid": true,
+      "free_gib": 38.6279296875
+    },
+    {
+      "time": 1792897121.7983062,
+      "valid": true,
+      "free_gib": 38.6201171875
+    },
+    {
+      "time": 1792897129.0295777,
+      "valid": true,
+      "free_gib": 38.2548828125
+    },
+    {
+      "time": 1792897134.1279595,
+      "valid": true,
+      "free_gib": 38.2509765625
+    },
+    {
+      "time": 1792897140.2337065,
+      "valid": true,
+      "free_gib": 38.2490234375
+    },
+    {
+      "time": 1792897145.9078104,
+      "valid": true,
+      "free_gib": 37.9990234375
+    },
+    {
+      "time": 1792897153.5588562,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897163.1407647,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897171.7725847,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897178.3934574,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897185.0134766,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897190.645427,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897196.130063,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897203.344654,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897208.4168093,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897212.836157,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897217.6300979,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897224.479782,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897231.0300326,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897237.9580107,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897243.774605,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897250.7910225,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897257.9587843,
+      "valid": true,
+      "free_gib": 37.9970703125
+    },
+    {
+      "time": 1792897263.7702682,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897268.9868143,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897275.6136868,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897284.4720008,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897291.6509502,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897297.7146637,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897304.45918,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897311.4377432,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897316.3346086,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897321.413284,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897327.5084727,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897334.9418411,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897340.9480917,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897346.903015,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897354.704313,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897360.9441314,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897368.1046405,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897375.789934,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897382.1998906,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897387.5091763,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897392.2754383,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897398.1088333,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897406.4784124,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897412.8359008,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897419.2528734,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897425.097309,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897431.9406672,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897437.4416635,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897442.356751,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897447.7251515,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897453.6323082,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897460.1694233,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897470.4907997,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897482.4973276,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897491.703601,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897501.5220244,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897510.1187422,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897518.9438615,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897526.7016246,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897533.1764655,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897538.9628935,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897543.9480321,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897549.752089,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897557.138466,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897563.9409194,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897568.387598,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897573.191721,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897577.8766532,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897583.4767516,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897588.8586175,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897594.9701707,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897599.6545737,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897605.0051236,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897612.579502,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897618.8097832,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897624.240364,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897629.3554106,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897634.757312,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897640.5417457,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897645.4325776,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897652.2437735,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897658.2599053,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897667.6966987,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897677.9378357,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897684.0495367,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897688.5235398,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897693.0864737,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897697.7036204,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897702.0687425,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897706.8890767,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897713.346643,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897717.5109565,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897721.960045,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897727.5897112,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897734.3240905,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897742.9250011,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897750.9116273,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897760.2392175,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897767.6336553,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897775.723357,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897782.8488436,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897789.4309957,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897794.3545752,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897802.0702727,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897809.4691844,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897814.584009,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897820.7909074,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897827.3375309,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897834.4601943,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897840.406866,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897845.6033738,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897851.9810526,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897857.527638,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897863.8501067,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897872.7726393,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897881.7749898,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897887.408107,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897894.0722024,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897900.6443665,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897906.565409,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897911.3558226,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897917.32473,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897924.4246569,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897930.844099,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897937.8004684,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897944.9506826,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897951.912159,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897957.7395806,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897964.7299383,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897971.6541598,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897977.413811,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897983.6460268,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897989.5965343,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792897995.9788907,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898002.959532,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898010.295762,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898016.9358335,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898023.672225,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898030.595392,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898035.7269707,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898040.9357488,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898045.3629518,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898050.6504447,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898055.7466626,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898062.2543502,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898068.7652354,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898075.662933,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898081.3949144,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898087.7492843,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898094.6888936,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898101.0607202,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898106.8158455,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898113.579217,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898122.069837,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898130.9891558,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898138.0905104,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898145.4063556,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898152.1036084,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898157.9714324,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898165.2070632,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898175.1900117,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898182.5177445,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898186.8633134,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898194.271088,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898203.2714818,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898211.0081954,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898218.151173,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898224.5742173,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898229.9875777,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898235.3444223,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898242.7530644,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898250.4521341,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898255.5782864,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898260.922284,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898267.150353,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898274.155805,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898279.540922,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898285.0668566,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898290.6823568,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898295.2235343,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898301.637289,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898306.6907609,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898312.7300746,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898320.3568945,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898327.0690565,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898336.2782059,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898343.8704839,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898350.5003722,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898354.9541707,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898360.544453,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898367.3491626,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898375.0068882,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898380.4568565,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898386.1577272,
+      "valid": true,
+      "free_gib": 37.0419921875
+    },
+    {
+      "time": 1792898392.8364239,
+      "valid": true,
+      "free_gib": 39.5166015625
+    },
+    {
+      "time": 1792898401.369829,
+      "valid": true,
+      "free_gib": 38.7763671875
+    },
+    {
+      "time": 1792898408.9344857,
+      "valid": true,
+      "free_gib": 38.6455078125
+    },
+    {
+      "time": 1792898415.1473267,
+      "valid": true,
+      "free_gib": 38.5283203125
+    },
+    {
+      "time": 1792898422.964476,
+      "valid": true,
+      "free_gib": 38.5166015625
+    },
+    {
+      "time": 1792898428.1697319,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898433.0734687,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898440.0397224,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898446.170781,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898451.2808008,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898455.986972,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898464.6442363,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898472.9054046,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898478.5725217,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898485.3262863,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898493.011953,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898500.9402027,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898506.4317634,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898514.0872974,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898520.8178036,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898525.7188714,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898533.2911663,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898541.9976134,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898549.5483282,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898556.2894492,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898562.4931705,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898570.760121,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898576.0869417,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898582.847645,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898588.5020895,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898593.4199986,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898600.0739977,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898609.8729115,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898617.6809773,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898625.7404246,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898631.9179115,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898637.7394207,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898646.6386886,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898655.247315,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898662.4138944,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898667.5029824,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898677.2288013,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898685.3369198,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898690.7230394,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898696.1998754,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898703.0770934,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898708.87283,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898713.3456378,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898719.7927485,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898724.8993866,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898733.9621978,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898742.4891222,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898749.5533643,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898756.7215059,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898762.951658,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898769.7396789,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898777.519625,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898785.3322856,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898792.186126,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898798.4249403,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898805.5768933,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898813.0421994,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898820.1184304,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898826.37144,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898834.3789997,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898841.470717,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898847.6962583,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898856.1747835,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898864.0781581,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898870.6677315,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898877.9544122,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898886.3703775,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898895.1811266,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898905.1584888,
+      "valid": true,
+      "free_gib": 38.3662109375
+    },
+    {
+      "time": 1792898912.633432,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898919.8782117,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898928.1331878,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898933.9944663,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898938.8863127,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898944.7030544,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898951.758632,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898956.2133985,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898961.7596562,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898966.6977358,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898971.7712057,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898978.2570066,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898984.9526033,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898991.3854039,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792898996.592501,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792899003.577823,
+      "valid": true,
+      "free_gib": 36.1669921875
+    },
+    {
+      "time": 1792899014.8058681,
+      "valid": true,
+      "free_gib": 36.1669921875
+    }
+  ],
+  "sample": [
+    {
+      "base_id": "003b0c86be146a921868674db295abd2618df3924f588a1f8d9cafbef1358c76",
+      "raw_tokens": 64,
+      "length_target": 64
+    },
+    {
+      "base_id": "06cce015fe4870f573959dbf317f22f2049575b313728f1b14f9b65de6be2b79",
+      "raw_tokens": 64,
+      "length_target": 64
+    },
+    {
+      "base_id": "0c6be74ef0b6bf1c11152a53840370ec1dc595848d10829319cbcd0e82f7a264",
+      "raw_tokens": 64,
+      "length_target": 64
+    },
+    {
+      "base_id": "0d0990994ddbdd719d326e00d34db2524e8e0d3a8532ff202fbbbb5d10d25fd6",
+      "raw_tokens": 64,
+      "length_target": 64
+    },
+    {
+      "base_id": "112aa0410c882e8e30635e82ebfead6a99a29a8956f540a1db0d386cc72bc5e9",
+      "raw_tokens": 64,
+      "length_target": 64
+    },
+    {
+      "base_id": "113838e5e612783fccc90789bb473eedac7a94cdaac70788c0c3ffbe365ee614",
+      "raw_tokens": 64,
+      "length_target": 64
+    },
+    {
+      "base_id": "1b9ee646afeb48d427c6173d31185b34f4b80ec667ff9c97239fa73e24ca60b8",
+      "raw_tokens": 64,
+      "length_target": 64
+    },
+    {
+      "base_id": "26737d3c819adf7b8dd5ddda31929bca6722c6e8c039b76a693922ca79a747bb",
+      "raw_tokens": 64,
+      "length_target": 64
+    },
+    {
+      "base_id": "163f155a52cfbd0fe5ce083d9873f97be671dab68d832b81c5378736f8305d8a",
+      "raw_tokens": 256,
+      "length_target": 256
+    },
+    {
+      "base_id": "ea07c48f3e8244fad13ed0b1bd9a2a559ca07145ea30eb4c3782a24b0289e625",
+      "raw_tokens": 256,
+      "length_target": 256
+    },
+    {
+      "base_id": "06f0424a5a152c564a394f1e4215e2274b5cd92ac9b11ef872a474990603dcd9",
+      "raw_tokens": 255,
+      "length_target": 256
+    },
+    {
+      "base_id": "0925c1d04e0fd1f6f86c3793044ada9da908149414cd9755f74a8cd44e2e1105",
+      "raw_tokens": 257,
+      "length_target": 256
+    },
+    {
+      "base_id": "365d1e7ed9285bf0a774d92954bf7c0a6e6a6b078c4d96cb893f408f9b06ecbd",
+      "raw_tokens": 257,
+      "length_target": 256
+    },
+    {
+      "base_id": "56edd12c275a80b50df671f5850a1a4be25c2d7758e017e0681b9730e0e591fc",
+      "raw_tokens": 255,
+      "length_target": 256
+    },
+    {
+      "base_id": "59c98bdc039cec0678f80dfb3d2674da18211f2ed264d2deef316c6c88306d85",
+      "raw_tokens": 257,
+      "length_target": 256
+    },
+    {
+      "base_id": "91a316c61768601fdc9b729d47e3a8887e27d29b86fa9076527fb377c5adf41d",
+      "raw_tokens": 257,
+      "length_target": 256
+    },
+    {
+      "base_id": "f8f6dbf33a479929f2b6f425bafb7e90452081fce64c1d140102eb4223bd68dd",
+      "raw_tokens": 737,
+      "length_target": 1024
+    },
+    {
+      "base_id": "8f3cf2056f3ae8ce541ada74ca4e06ba710ba862631b8c3e511f70b06d44a752",
+      "raw_tokens": 720,
+      "length_target": 1024
+    },
+    {
+      "base_id": "7e553ec8e01bb9369112fea021d54e2ed73c1e0b3bed35661039c7ff6cab60d4",
+      "raw_tokens": 710,
+      "length_target": 1024
+    },
+    {
+      "base_id": "dfefa23e4517c3bca4130c8b15dffdeb01927887029eaa3822323159af0ec0ee",
+      "raw_tokens": 702,
+      "length_target": 1024
+    },
+    {
+      "base_id": "f58a2bfdb7ccf96c17f43f396c77bbaacbc052e2c3cf796cb9e96d3024d41ca8",
+      "raw_tokens": 700,
+      "length_target": 1024
+    },
+    {
+      "base_id": "162e5d93bb3b5372a9b289d84887707e3c793e826f550223d28f2a02b9cfb384",
+      "raw_tokens": 698,
+      "length_target": 1024
+    },
+    {
+      "base_id": "62ff64e94b86bb6435b458d4f2aea6ea78f0cf9d427b8d2b63c85b7f43ae9ada",
+      "raw_tokens": 698,
+      "length_target": 1024
+    },
+    {
+      "base_id": "65f31552b0059cc07139dd0b77b82726b27437927a63f192cd235528c3c4ddfd",
+      "raw_tokens": 696,
+      "length_target": 1024
+    },
+    {
+      "base_id": "c04f0a2da08cae6ff0fc2a3a281dbd640413fd4c7e770211a20ad1d80b3ab0f1",
+      "raw_tokens": 696,
+      "length_target": "longest"
+    },
+    {
+      "base_id": "48dbe704248ca3c123b44f057110536625ed6ca9a5a29b561217e91a77e016b6",
+      "raw_tokens": 695,
+      "length_target": "longest"
+    },
+    {
+      "base_id": "39abab6bb6e8e65c85b9305c6850be2db45dfbb77f90ec2849e856e23d880ae5",
+      "raw_tokens": 692,
+      "length_target": "longest"
+    },
+    {
+      "base_id": "601bdbb61d6eb463b2082df81daef008a6e1850f08cf39d842760901008aa1c2",
+      "raw_tokens": 692,
+      "length_target": "longest"
+    },
+    {
+      "base_id": "a7c0442518e632d5f14f49509d31b6f26c3d98672996bdd9d1f46c0f1ef0d1c9",
+      "raw_tokens": 692,
+      "length_target": "longest"
+    },
+    {
+      "base_id": "dbdb2e78be5ea211a52af05d8b4f773caca68d831bc0209d1d355714856907e6",
+      "raw_tokens": 692,
+      "length_target": "longest"
+    },
+    {
+      "base_id": "012485b70e771e1abb5c6ed0d0c1ceaef9910592ff1c4459649bc5741d8379ef",
+      "raw_tokens": 690,
+      "length_target": "longest"
+    },
+    {
+      "base_id": "1600cc58ea7b445e07fe8daf7c314c408f78f70cc9320ab658748e794c9466ba",
+      "raw_tokens": 690,
+      "length_target": "longest"
+    }
+  ],
+  "settings": {
+    "samples": 32,
+    "targets": [
+      64,
+      256,
+      1024,
+      "longest"
+    ],
+    "per_target": 8,
+    "warmup_passes": 3,
+    "measured_passes": 10,
+    "batch_sizes": [
+      1,
+      8
+    ],
+    "seed": 42,
+    "cpu_threads": 4,
+    "guard_max_new_tokens": 128,
+    "isolation_poll_seconds": 1.0,
+    "backbone": "Qwen3.5-4B frozen BF16",
+    "raw_block_storage_dtype": "float16",
+    "sdpa": "math",
+    "system": "one shared backbone forward; both binary and type head always computed"
+  },
+  "completed_unix": 1792899015.2721093
+}

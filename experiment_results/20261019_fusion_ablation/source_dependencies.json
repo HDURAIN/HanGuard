@@ -1,0 +1,250 @@
+{
+  "schema": "hanguard_fusion_source_dependencies_v1",
+  "discovery": "Allowlisted repository Python protocol bindings plus static project import closure; no imports executed.",
+  "sources": [
+    {
+      "source_path": "hanguard_model.py",
+      "sha256": "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58",
+      "registered_sha256": [
+        "1251a52f0dd95f2b12bb299f8162e5ec811589f514217cff6dbf665680b4cb58"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/ab_diagnostic_queue.py",
+      "sha256": "c86d8a9a8e85ec830b0e983b29af9ab8b80fd2f17ab8f2e5f9bfc9c06eb3f04d",
+      "registered_sha256": [
+        "c86d8a9a8e85ec830b0e983b29af9ab8b80fd2f17ab8f2e5f9bfc9c06eb3f04d"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/ab_frozen_readout_diagnostics.py",
+      "sha256": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+      "registered_sha256": [
+        "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/ab_readout_parallel_queue.py",
+      "sha256": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70",
+      "registered_sha256": [
+        "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/analyze_fusion_reference_results.py",
+      "sha256": "a19e1f8aaf4bed123341d7db786e1a72e458f6fdf7632ee4c34c7b29b9dfc882",
+      "registered_sha256": [
+        "a19e1f8aaf4bed123341d7db786e1a72e458f6fdf7632ee4c34c7b29b9dfc882"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/build_selected_test_subset.py",
+      "sha256": "43a3203c6d1f9d27cbe14724c6c901c3b4f7bccbc5d1afe8e57576a2e0fca548",
+      "registered_sha256": [
+        "43a3203c6d1f9d27cbe14724c6c901c3b4f7bccbc5d1afe8e57576a2e0fca548"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/current_training.py",
+      "sha256": "1b18846b02aac8fa2a3f4fbb71a024bcc2a9fcd0683f1fc8d8a5a3654cbab984",
+      "registered_sha256": [
+        "1b18846b02aac8fa2a3f4fbb71a024bcc2a9fcd0683f1fc8d8a5a3654cbab984"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/fragment_clean_lora_study.py",
+      "sha256": "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4",
+      "registered_sha256": [
+        "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_base_parallel_features.py",
+      "sha256": "145bfa24813a4dc52ab53df1dadbe314f6216f7d1942360f73ef85c5e9b95573",
+      "registered_sha256": [
+        "145bfa24813a4dc52ab53df1dadbe314f6216f7d1942360f73ef85c5e9b95573"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_base_parallel_queue.py",
+      "sha256": "d46725329a3b9421c24bc1fb7de47e815212a5665ed1c788529f39b58885724f",
+      "registered_sha256": [
+        "d46725329a3b9421c24bc1fb7de47e815212a5665ed1c788529f39b58885724f"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_base_parallel_study.py",
+      "sha256": "5e829867c39aa53c2c12088b7df8bb04fcf5fcb542431fd8bab76b55e7ac07d3",
+      "registered_sha256": [
+        "5e829867c39aa53c2c12088b7df8bb04fcf5fcb542431fd8bab76b55e7ac07d3"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_base_readout_admission_v2.py",
+      "sha256": "856d93dd4a7c44907d4a248aeac37193652bbf9f3f3743b4d9f84cb8de4b8574",
+      "registered_sha256": [
+        "856d93dd4a7c44907d4a248aeac37193652bbf9f3f3743b4d9f84cb8de4b8574"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_base_readout_heads.py",
+      "sha256": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1",
+      "registered_sha256": [
+        "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_base_readout_queue.py",
+      "sha256": "c824554b6d3157029abe34773e915e03ebd88559db805ec43a86ccaf52059e06",
+      "registered_sha256": [
+        "c824554b6d3157029abe34773e915e03ebd88559db805ec43a86ccaf52059e06"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_base_readout_study.py",
+      "sha256": "b500fbcabdd3b94dd35293d8805983bbe1895667cb435357245f2b4b3e9d85b4",
+      "registered_sha256": [
+        "b500fbcabdd3b94dd35293d8805983bbe1895667cb435357245f2b4b3e9d85b4"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_base_resumable_heads.py",
+      "sha256": "f09ff42f8fc1e94d71bdc0bc30520e07d9d415baf4a049b27b6efa8491f1eca2",
+      "registered_sha256": [
+        "f09ff42f8fc1e94d71bdc0bc30520e07d9d415baf4a049b27b6efa8491f1eca2"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/frozen_lora_layer_diagnostics.py",
+      "sha256": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+      "registered_sha256": [
+        "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/multilabel_heads.py",
+      "sha256": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6",
+      "registered_sha256": [],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/nolora_ablation_queue.py",
+      "sha256": "16bde63e4452a50881ac5dc687b6d036ea97a42d0fa7d793f6159fec1764f502",
+      "registered_sha256": [
+        "16bde63e4452a50881ac5dc687b6d036ea97a42d0fa7d793f6159fec1764f502"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/nolora_fusion_ablation.py",
+      "sha256": "612ea025f4799cf748683d13b6c7b12ee949689abae31657debbac98be61941a",
+      "registered_sha256": [
+        "612ea025f4799cf748683d13b6c7b12ee949689abae31657debbac98be61941a"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/package_fusion_ablation_results.py",
+      "sha256": "64a401b471f11a719ff947dcab8f0765696d4777eb88f4b9b5904f7e42cb2b36",
+      "registered_sha256": [],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/remediated_binary_study.py",
+      "sha256": "dfd13ad93bbd2ac9d4c9a1450c63ab288ad53869199608ef82b17e554b4e10cb",
+      "registered_sha256": [
+        "dfd13ad93bbd2ac9d4c9a1450c63ab288ad53869199608ef82b17e554b4e10cb"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/remediated_dataset_contract.py",
+      "sha256": "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6",
+      "registered_sha256": [
+        "7c919d469e52428ec7957782b852beb17d05d192c36378364c3511cd5e9b24c6"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/repaired_heads.py",
+      "sha256": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+      "registered_sha256": [
+        "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/repaired_study.py",
+      "sha256": "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249",
+      "registered_sha256": [
+        "ca86fc00cb43afb1d95d76d003a3733f355e6eae753e4916c2f006380712e249"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/report_repaired_study.py",
+      "sha256": "11bde61b79ed782a9aa1697b836bdac7f239bb3b4c2428a5660f6c4a054c3635",
+      "registered_sha256": [
+        "11bde61b79ed782a9aa1697b836bdac7f239bb3b4c2428a5660f6c4a054c3635"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/selected_subset_lora_study.py",
+      "sha256": "aebdde4c9df32c130e9b6f5fcfe643c4a9ed95c87008ea4520dc7c47771e5b5d",
+      "registered_sha256": [
+        "aebdde4c9df32c130e9b6f5fcfe643c4a9ed95c87008ea4520dc7c47771e5b5d"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/sparse_token_readout_queue.py",
+      "sha256": "bff67bcd07d78e77d7fd3bb723cfd9b1728e421ff10e89ce873625dd798636eb",
+      "registered_sha256": [
+        "bff67bcd07d78e77d7fd3bb723cfd9b1728e421ff10e89ce873625dd798636eb"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "scripts/hanguard/train.py",
+      "sha256": "d1258bcf5c20f19755c9c7546e5037b80f2789bb9ef82f593bd00263b141858c",
+      "registered_sha256": [
+        "d1258bcf5c20f19755c9c7546e5037b80f2789bb9ef82f593bd00263b141858c"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "tests/test_nolora_ablation_queue.py",
+      "sha256": "983c99e3d437228012066478c3762614385b360e8abcc8c99a3511ae4145ba19",
+      "registered_sha256": [
+        "983c99e3d437228012066478c3762614385b360e8abcc8c99a3511ae4145ba19"
+      ],
+      "matches_all_registered_hashes": true
+    },
+    {
+      "source_path": "tests/test_nolora_fusion_ablation.py",
+      "sha256": "9c90165e75dcd8f3652d0d77ba3b8a21df06d31abf98f9ca2c3b6e8308b95151",
+      "registered_sha256": [
+        "9c90165e75dcd8f3652d0d77ba3b8a21df06d31abf98f9ca2c3b6e8308b95151"
+      ],
+      "matches_all_registered_hashes": true
+    }
+  ]
+}

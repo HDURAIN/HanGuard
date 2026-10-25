@@ -1,0 +1,67 @@
+{
+  "complete": true,
+  "protocol_sha256": "3ea2567ea04e7fc5390bb42fd8cfce6266b16e2c4c1e986d84470f684b9bd98b",
+  "baseline_sha256": "d6c401728c796200f3c08393316f56a50d164057a1f3297f6588c807ee84e415",
+  "calibrations": [
+    {
+      "worker_id": "calibrate_joint_none_cuda2_1792642765356748213",
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022/calibration/calibrate_joint_none_cuda2_1792642765356748213.json",
+      "sha256": "d6c401728c796200f3c08393316f56a50d164057a1f3297f6588c807ee84e415",
+      "identity": {
+        "pid": 35305,
+        "uid": 1036,
+        "start_time_ticks": 159847337,
+        "command_sha256": "af55833cf069123afefdd3a60e7f3ca3415682ac7793756dbf6a44142c8814f2",
+        "argv": [
+          "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+          "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_study.py",
+          "worker",
+          "--output",
+          "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022",
+          "--worker-id",
+          "calibrate_joint_none_cuda2_1792642765356748213",
+          "--phase",
+          "calibrate",
+          "--device",
+          "cuda",
+          "--gpu",
+          "2"
+        ],
+        "cwd": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard"
+      },
+      "gpu": 2
+    },
+    {
+      "worker_id": "calibrate_joint_none_cuda2_1792642859410946661",
+      "path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022/calibration/calibrate_joint_none_cuda2_1792642859410946661.json",
+      "sha256": "9e7a1534d05d2e6c26550e7e9c333b05b9b3d55d403006faf5d2a22e52f28397",
+      "identity": {
+        "pid": 45376,
+        "uid": 1036,
+        "start_time_ticks": 159856743,
+        "command_sha256": "9aac80edf72e1855584f6a0a4353586619f593a82776b5f67ff057e0ec56aa26",
+        "argv": [
+          "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+          "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_study.py",
+          "worker",
+          "--output",
+          "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022",
+          "--worker-id",
+          "calibrate_joint_none_cuda2_1792642859410946661",
+          "--phase",
+          "calibrate",
+          "--device",
+          "cuda",
+          "--gpu",
+          "2"
+        ],
+        "cwd": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard"
+      },
+      "gpu": 2
+    }
+  ],
+  "distinct_physical_gpus": [
+    2
+  ],
+  "locked_unix": 1792642922.6243513
+}

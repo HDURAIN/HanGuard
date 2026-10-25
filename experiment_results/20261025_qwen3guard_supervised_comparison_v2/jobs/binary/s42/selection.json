@@ -1,0 +1,171 @@
+{
+  "schema": "qwen3guard_supervised_readouts_v1",
+  "task": "binary",
+  "seed": 42,
+  "protocol_sha256": "582bb3819a36bab3a5cd52850220372bf267ef66de341953a16f460cca2b07bf",
+  "arms": {
+    "last_mlp": {
+      "best_epoch": 10,
+      "validation_ce": 0.06835791011192192,
+      "architecture": {
+        "arm": "last_mlp",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 2,
+        "dropout": 0.1,
+        "readout": "L36 last valid full-template token",
+        "explicit_class_embeddings": false,
+        "frozen_backbone": true,
+        "lora": false,
+        "parameters": 328066,
+        "pooling": null
+      },
+      "threshold": 0.5506164492162574,
+      "validation_metrics": {
+        "n": 8350,
+        "accuracy": 0.9741317365269461,
+        "f1": 0.9765421372719374,
+        "recall": 0.972739073993942,
+        "precision": 0.9803750545137374,
+        "fpr": 0.024141630901287552,
+        "bce": 0.06835791011192191,
+        "brier": 0.01974868265538687,
+        "tp": 4496,
+        "tn": 3638,
+        "fp": 90,
+        "fn": 126,
+        "threshold": 0.5506164492162574,
+        "auroc": 0.9969543520167586,
+        "auprc": 0.9977111864069907
+      }
+    },
+    "mean_pool_mlp": {
+      "best_epoch": 3,
+      "validation_ce": 0.07903909441588017,
+      "architecture": {
+        "arm": "mean_pool_mlp",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 2,
+        "dropout": 0.1,
+        "readout": "L36 user-content tokens",
+        "explicit_class_embeddings": false,
+        "frozen_backbone": true,
+        "lora": false,
+        "parameters": 344834,
+        "pooling": {
+          "arm": "mean_pool_mlp",
+          "hidden_size": 2560,
+          "width": 128,
+          "num_classes": 2,
+          "dropout": 0.1,
+          "readout": "L36 user-content tokens",
+          "explicit_class_embeddings": false,
+          "mean_definition": "mean of LN(Linear/GELU(token-wise LN(raw))) projected values",
+          "attention_query": null,
+          "classifier": "ordinary width->width->classes MLP",
+          "parameters": 344834,
+          "parameter_count_matching": "Actual functional parameter count; no dummy parameters"
+        }
+      },
+      "threshold": 0.5840490348206512,
+      "validation_metrics": {
+        "n": 8350,
+        "accuracy": 0.9726946107784431,
+        "f1": 0.9751633986928104,
+        "recall": 0.9684119428818693,
+        "precision": 0.9820096533567354,
+        "fpr": 0.021995708154506438,
+        "bce": 0.07903909441588017,
+        "brier": 0.022371832262442406,
+        "tp": 4476,
+        "tn": 3646,
+        "fp": 82,
+        "fn": 146,
+        "threshold": 0.5840490348206512,
+        "auroc": 0.9959147030529488,
+        "auprc": 0.9969805971406263
+      }
+    },
+    "shared_attention_mlp": {
+      "best_epoch": 6,
+      "validation_ce": 0.06443590948395812,
+      "architecture": {
+        "arm": "shared_attention_mlp",
+        "hidden_size": 2560,
+        "width": 128,
+        "num_classes": 2,
+        "dropout": 0.1,
+        "readout": "L36 user-content tokens",
+        "explicit_class_embeddings": false,
+        "frozen_backbone": true,
+        "lora": false,
+        "parameters": 673026,
+        "pooling": {
+          "arm": "shared_attention_mlp",
+          "hidden_size": 2560,
+          "width": 128,
+          "num_classes": 2,
+          "dropout": 0.1,
+          "readout": "L36 user-content tokens",
+          "explicit_class_embeddings": false,
+          "mean_definition": "mean of LN(Linear/GELU(token-wise LN(raw))) projected values",
+          "attention_query": "one independent learned width-vector",
+          "classifier": "ordinary width->width->classes MLP",
+          "parameters": 673026,
+          "parameter_count_matching": "Actual functional parameter count; no dummy parameters"
+        }
+      },
+      "threshold": 0.49631882032286584,
+      "validation_metrics": {
+        "n": 8350,
+        "accuracy": 0.9748502994011976,
+        "f1": 0.9771540469973891,
+        "recall": 0.9716572912159238,
+        "precision": 0.9827133479212253,
+        "fpr": 0.02119098712446352,
+        "bce": 0.06443590948395811,
+        "brier": 0.01869077574753801,
+        "tp": 4491,
+        "tn": 3649,
+        "fp": 79,
+        "fn": 131,
+        "threshold": 0.49631882032286584,
+        "auroc": 0.9971572443231941,
+        "auprc": 0.9978877415099361
+      }
+    }
+  },
+  "artifacts": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s42/selected_heads.pt": "275a262f95c856bc9e6fd8adc09d03943a5121a4fa23198cac15e56e686f0fc1",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s42/validation_predictions.parquet": "1f5c69fbb906a3b8114949925c3931fae664ef881b35862f17793ee72e3a8d61"
+  },
+  "training_rows": 66802,
+  "validation_rows": 8350,
+  "final_budget": 12,
+  "extensions": [],
+  "oom_events": [],
+  "settings": {
+    "width": 128,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "dropout": 0.1,
+    "epochs": 12,
+    "max_epochs": 40,
+    "token_budget": 8192,
+    "max_micro": 32,
+    "effective_batch": 128,
+    "grad_clip": 5.0,
+    "pad_multiple": 1,
+    "bootstrap_draws": 2000
+  },
+  "device_type": "cuda",
+  "selection_scope": "validation_only",
+  "formal_test_opened": false,
+  "train_length_edges": [
+    16.0,
+    38.0,
+    114.0
+  ],
+  "wall_seconds": 2784.289405887015
+}

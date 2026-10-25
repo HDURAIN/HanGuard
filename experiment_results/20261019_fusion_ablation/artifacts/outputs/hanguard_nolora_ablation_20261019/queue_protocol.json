@@ -1,0 +1,28 @@
+{
+  "schema": "hanguard_nolora_ablation_queue_v1",
+  "tasks": [
+    "components",
+    "seed43",
+    "seed44"
+  ],
+  "study": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_nolora_ablation_20261019",
+  "policy": {
+    "prelaunch_foreign": "block",
+    "active_foreign": "record_only",
+    "reserved_gpus": [],
+    "minimum_free_gib": 4.0,
+    "max_cpu_workers": 1,
+    "cpu_threads": 8,
+    "gpu_threads": 4,
+    "never_terminate_foreign": true
+  },
+  "bindings": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/nolora_ablation_queue.py": "16bde63e4452a50881ac5dc687b6d036ea97a42d0fa7d793f6159fec1764f502",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/nolora_fusion_ablation.py": "612ea025f4799cf748683d13b6c7b12ee949689abae31657debbac98be61941a",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_nolora_ablation_20261019/protocol.json": "bb18d8e47e756a9d1364ef02cb37945f7e09bf04b8296ad808809e849da7e5cd",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_nolora_ablation_20261019/protocol_registration.json": "21b5d242940dafb9f920f3ba0654a5682d38d7ce0c61869df65b3d206aa4f670",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/fragment_clean_lora_study.py": "ea62f3d200f0cc2b0184847158df5fa9a6e6266ab5ec308294bc1c9d9df392a4",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_readout_parallel_queue.py": "3898d7797e7fef0b5cef4b82305fc3a32e7fbeef026bdbbfacbe8a83e3a0be70"
+  },
+  "created_unix": 1792397774.4669135
+}

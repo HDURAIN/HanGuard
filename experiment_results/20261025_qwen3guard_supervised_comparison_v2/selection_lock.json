@@ -1,0 +1,33 @@
+{
+  "complete": true,
+  "protocol_sha256": "582bb3819a36bab3a5cd52850220372bf267ef66de341953a16f460cca2b07bf",
+  "selections": {
+    "binary/s42": "d1455bd4c01c80992c9f9241ba7d68b25ee3e01d5af674114ca31acb9449a169",
+    "binary/s43": "529a8c77bdd876d96bd98de633b4a8ee4b6055f5a553b05523a47bc9410a9219",
+    "binary/s44": "b649707e7eb8da221c0787ae539adf93eabe937f5f175710a78d6897d8ecc2b7",
+    "category/s42": "08d3332b0a01a6f6e0eac31147a174105b096f7d120a9cd63df873df59c01096",
+    "category/s43": "24b67ee78cbe0bd9d7874398f51d77be01f2872a78886fa9779faca4c8f14676",
+    "category/s44": "c11256384230db548be87404e9163fd55287dcf6b076ae84f42ccc9a88cc1070"
+  },
+  "artifacts": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s42/selection.json": "d1455bd4c01c80992c9f9241ba7d68b25ee3e01d5af674114ca31acb9449a169",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s42/selected_heads.pt": "275a262f95c856bc9e6fd8adc09d03943a5121a4fa23198cac15e56e686f0fc1",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s42/validation_predictions.parquet": "1f5c69fbb906a3b8114949925c3931fae664ef881b35862f17793ee72e3a8d61",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s43/selection.json": "529a8c77bdd876d96bd98de633b4a8ee4b6055f5a553b05523a47bc9410a9219",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s43/selected_heads.pt": "1faf04f3d258564edfdee2e80bb9028cbd47944e8bcf8fa9f677ef6330b47525",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s43/validation_predictions.parquet": "f180913d662da6643a7b89f4207f1bbba87298ef43f46d61384e397bc17538a5",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s44/selection.json": "b649707e7eb8da221c0787ae539adf93eabe937f5f175710a78d6897d8ecc2b7",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s44/selected_heads.pt": "2c5aec2098dce89fa25282b98da1640a19ab19c4970c95d36463cf034dca3ab9",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/binary/s44/validation_predictions.parquet": "0b527065d50024c96a3461f61360fca38b3fc285cea94d9b7a38d23b4f932617",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s42/selection.json": "08d3332b0a01a6f6e0eac31147a174105b096f7d120a9cd63df873df59c01096",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s42/selected_heads.pt": "81c6176618b0616ec140f2faaf7361d88a0db45b0e74853df95b9ebe67349563",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s42/validation_predictions.parquet": "1bdf4ebf591ed8c06e8f7124ac295780eac8b9bb07245b232d439515136f752e",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s43/selection.json": "24b67ee78cbe0bd9d7874398f51d77be01f2872a78886fa9779faca4c8f14676",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s43/selected_heads.pt": "35e6a92ae5b1b6e15a1b22a26d4821e75332591b4ba5988248350b19a2e0bbfe",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s43/validation_predictions.parquet": "bc0232ab86ae035d63308ab18b8af563de3b94f4feb98b44f1ea5d4147ae7907",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s44/selection.json": "c11256384230db548be87404e9163fd55287dcf6b076ae84f42ccc9a88cc1070",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s44/selected_heads.pt": "41a6c9abe1095bcbbc465fdb2a74f42e4b00b94540f0275cbe69622e4f75e8ce",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2/jobs/category/s44/validation_predictions.parquet": "3c4300adec16e4e0625c4fdd4fa2d8c5bf5c7156642d4bdf727a43ee7e5cd481"
+  },
+  "scope": "all tasks and seeds before any new test evaluation"
+}

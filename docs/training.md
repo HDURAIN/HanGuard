@@ -1,13 +1,15 @@
-# hanguard 当前训练入口
+# hanguard 兼容部署包训练入口
 
-统一入口为 `scripts/hanguard/train.py`。它训练分类器，不再训练生成两行标签的旧 SFT 模型。
+> **2026-10-25 更新：** 本文说明已有部署包的`train.py`流程。当前论文的四组消融使用`clean_ablation_study.py`，请从[实验正文](paper_experiments_20261025.md)与[脚本导航](../scripts/hanguard/README.md)复现；两条流程的训练范围、结构和权重格式不同。
+
+兼容部署训练入口为 `scripts/hanguard/train.py`。它训练分类器，不再训练生成两行标签的旧 SFT 模型。
 
 | 阶段 | 默认数据 | 默认方法 | 训练内容 |
 |---|---|---|---|
-| `binary` | `data/three_source_translation_repaired` | E03：LoRA＋末层 MLP；E04：LoRA＋多层融合 | 重新加载本地 Qwen3.5-4B，训练 LoRA 和有害判别头 |
-| `category` | `data/hanguard_two_source_primary_20260928` | 末 token MLP、可学习类别查询、描述类别查询 | 冻结已选二分类骨干和 LoRA，只训练五分类头 |
+| `binary` | `data/three_source_remediated_20261012` | E03：LoRA＋末层 MLP；E04：LoRA＋多层融合 | 重新加载本地 Qwen3.5-4B，训练 LoRA 和有害判别头 |
+| `category` | `data/hanguard_two_source_remediated_20261012` | 末 token MLP、可学习类别查询、描述类别查询 | 冻结匹配新版切分的二分类骨干和 LoRA，只训练五分类头 |
 
-二分类使用修复后三来源原始中文文本。类型训练只接受中文整理语料与 JailBench，保留原标签；类别 1–5 参加交叉熵，安全类 0 仅保留用于二分类门控及六类端到端评估。没有重新标注、增强、重划分或截断。
+二分类使用经过来源核验、翻译整改和整组重新切分的三来源数据。二分类标签继承原来源；类型冲突记为 `category_id=-1`、`type_label_mask=False`，保留用于二分类，不参加类型监督。类型子集只取新版同一切分中的中文整理语料与 JailBench 已知类型记录；类别 1–5 参加交叉熵，安全类 0 保留用于门控及六类端到端评估。完整文本不截断，格式控制和模板留出视图单独保存，没有追加到主训练集。整改内容及局限见 [新版数据说明](../data/three_source_remediated_20261012/README.md)。
 
 ## 环境与冷启动
 
@@ -20,7 +22,7 @@ python3 -m venv .venv-hanguard
 
 GPU 编号需按本机空闲设备设置，示例中的 `5 6 7` 不是自动探测结果。单卡可写 `--gpus 0`；多卡按任务并行，每张卡训练一个实验，不是把同一次训练拆成 DDP。
 
-已有合适的二分类父模型时，可直接进行类型阶段。默认父模型为 `outputs/hanguard_repaired_core_20260928/runs/E04_s42`，必须同时保留其父目录的 `protocol.json`、`arms.json` 和该 run 的 `selection.json`、`adapter.pt`、`head.pt`。历史协议包含原路径和哈希；若冷启动环境无法满足这些路径，应先训练一个新的二分类父模型，不改写历史协议。
+类型阶段需要通过 `--parent-run` 指定在匹配新版二分类数据上训练、按验证集选择的父模型，同时保留其父目录的 `protocol.json`、`arms.json` 和该 run 的 `selection.json`、`adapter.pt`、`head.pt`。旧父模型曾见过新版测试集中的部分样本，入口会拒绝将它配给新版类型子集。历史显式 `--data` 与匹配历史父模型仍兼容；历史协议、数据和检查点原样保留。
 
 ## 先检查，不启动 GPU
 
@@ -29,10 +31,12 @@ GPU 编号需按本机空闲设备设置，示例中的 `5 6 7` 不是自动探�
   --output outputs/hanguard_binary_next --gpus 5 6 7
 
 .venv-hanguard/bin/python scripts/hanguard/train.py category dry-run \
-  --output outputs/hanguard_category_next --gpus 5 6 7
+  --output outputs/hanguard_category_next \
+  --parent-run outputs/hanguard_binary_parent_next/runs/E04_s42 \
+  --gpus 5 6 7
 ```
 
-`dry-run` 检查数据内容、标签一致性、来源范围、跨集 ID/group/规范化全文重叠、长度元数据、模型配置及父检查点。它打印协议和审计，不创建输出目录，不加载模型，不启动 worker。长度元数据检查不能代替 tokenizer 核验：实际 worker 会重新编码完整文本，超预算时报错，不截断。
+类型 `dry-run` 要等匹配新版的父模型准备好后执行。`dry-run` 检查数据内容、独立二分类与类型标签、发布 QA 哈希、来源范围、跨集 ID/group/规范化全文重叠、长度元数据、模型配置及父检查点。类型阶段还逐条核对父数据同一切分中的 ID、完整文本、来源和标签。它不创建实验目录、不加载模型、不启动 worker。实际 worker 会重新编码完整文本，超预算时报错，不截断。
 
 ## 完整训练
 
@@ -70,7 +74,8 @@ GPU 编号需按本机空闲设备设置，示例中的 `5 6 7` 不是自动探�
 
 ```bash
 .venv-hanguard/bin/python scripts/hanguard/train.py category init \
-  --output outputs/hanguard_category_next --gpus 5 6 7
+  --output outputs/hanguard_category_next \
+  --parent-run outputs/hanguard_binary_parent_next/runs/E04_s42 --gpus 5 6 7
 .venv-hanguard/bin/python scripts/hanguard/train.py category register \
   --output outputs/hanguard_category_next
 .venv-hanguard/bin/python scripts/hanguard/train.py category preflight \

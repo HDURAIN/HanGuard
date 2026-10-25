@@ -1,0 +1,846 @@
+{
+  "schema": "hanguard_three_paper_followups_v1",
+  "state": "failed",
+  "automatic_run": false,
+  "coordinator_identity": {
+    "pid": 2525832,
+    "uid": 1036,
+    "start_time_ticks": 184938697,
+    "command_sha256": "23d74de1a7813f7363585940044e1cba78ecdc7bbcbe346c8e7a17a5ef2cf7fd"
+  },
+  "updated_unix": 1792901858.6304238,
+  "children": {
+    "pooling": {
+      "total_jobs": 6,
+      "selected_jobs": 6,
+      "fit_complete_jobs": 6,
+      "completed_jobs": 6,
+      "test_complete_jobs": 6,
+      "total_heads": 12,
+      "selected_heads": 12,
+      "test_complete_heads": 12,
+      "pending_jobs": [],
+      "test_barrier_locked": true
+    },
+    "external": {
+      "state": "evaluate",
+      "pending_jobs": [
+        {
+          "seed": 43,
+          "phase": "evaluate"
+        },
+        {
+          "seed": 44,
+          "phase": "evaluate"
+        }
+      ],
+      "completed_jobs": 4,
+      "total_jobs": 6,
+      "selected_seeds": [
+        42,
+        43,
+        44
+      ],
+      "evaluated_seeds": [
+        42
+      ]
+    },
+    "analysis": {
+      "cpu_analysis_complete": true,
+      "benchmark_complete": true,
+      "benchmark_pending": false
+    }
+  },
+  "active_workers": [],
+  "failures": {
+    "external::43": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/logs/external__43_gpu3_1792901784424541077.log"
+    },
+    "external::44": {
+      "exit_code": 1,
+      "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/logs/external__44_gpu4_1792901798709794668.log"
+    }
+  },
+  "recent_events": [
+    {
+      "event": "launch",
+      "job": {
+        "task": "category",
+        "seed": 42,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 0,
+      "identity": {
+        "pid": 2527638,
+        "uid": 1036,
+        "start_time_ticks": 184940351,
+        "command_sha256": "81a7d330c36dd6a1b4f1d0f19f344f140fa58c62a710e0c5f03a58c2496e2968"
+      },
+      "inventory": {
+        "index": 0,
+        "uuid": "GPU-8c38d507-eb1d-32a8-32da-3241c7f4ec94",
+        "free_gib": 13.8935546875,
+        "utilization": 61,
+        "pids": [
+          170734,
+          410049,
+          447629,
+          466573,
+          3502664,
+          3502665,
+          3984545
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792893695.5023317
+    },
+    {
+      "event": "launch",
+      "job": {
+        "seed": 42,
+        "phase": "fit",
+        "kind": "external"
+      },
+      "gpu": 4,
+      "identity": {
+        "pid": 2528700,
+        "uid": 1036,
+        "start_time_ticks": 184941017,
+        "command_sha256": "5cbd844aa181110a004c2a60f44cb9ed0f4b21903c88be43a22267f387d638df"
+      },
+      "inventory": {
+        "index": 4,
+        "uuid": "GPU-d576137e-3271-99a8-bd98-77aff3483ba3",
+        "free_gib": 29.060546875,
+        "utilization": 27,
+        "pids": [
+          3317102
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792893702.1645365
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "category",
+        "seed": 43,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 5,
+      "identity": {
+        "pid": 2530144,
+        "uid": 1036,
+        "start_time_ticks": 184941703,
+        "command_sha256": "b3357d64989dab21b0c06f239f5212e10b9c01aa66c3c5ed31748605abd40807"
+      },
+      "inventory": {
+        "index": 5,
+        "uuid": "GPU-c80b253a-c5df-8840-c6b4-8ba948fffa61",
+        "free_gib": 11.6767578125,
+        "utilization": 97,
+        "pids": [
+          2496714,
+          3534807,
+          3734534
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792893709.0159645
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "category",
+        "seed": 44,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 7,
+      "identity": {
+        "pid": 2532698,
+        "uid": 1036,
+        "start_time_ticks": 184942648,
+        "command_sha256": "b5e8ea3dd796c6ef4754950b6465f40d371148969f7a518aef0988591edc3a26"
+      },
+      "inventory": {
+        "index": 7,
+        "uuid": "GPU-4a304e3d-9670-cbe1-34e2-38ad17c43a53",
+        "free_gib": 12.9091796875,
+        "utilization": 100,
+        "pids": [
+          3502668,
+          3534808
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792893718.4668958
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "category",
+        "seed": 42,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 0,
+      "exit_code": 0,
+      "time": 1792895019.8164835
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "binary",
+        "seed": 42,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 0,
+      "identity": {
+        "pid": 2704361,
+        "uid": 1036,
+        "start_time_ticks": 185073949,
+        "command_sha256": "750f7c7498798e92de6392f1e2409c081470ee155542591873bfe5b93f6ebef5"
+      },
+      "inventory": {
+        "index": 0,
+        "uuid": "GPU-8c38d507-eb1d-32a8-32da-3241c7f4ec94",
+        "free_gib": 13.8818359375,
+        "utilization": 30,
+        "pids": [
+          170734,
+          410049,
+          447629,
+          466573,
+          3502664,
+          3502665,
+          3984545
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792895031.4785469
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "category",
+        "seed": 44,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 7,
+      "exit_code": 0,
+      "time": 1792895214.1723537
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "binary",
+        "seed": 43,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 7,
+      "identity": {
+        "pid": 2730314,
+        "uid": 1036,
+        "start_time_ticks": 185093341,
+        "command_sha256": "1a0ee79e064626a54387939af105ec5aa2482d442a48a95bfa752a10de1305e1"
+      },
+      "inventory": {
+        "index": 7,
+        "uuid": "GPU-4a304e3d-9670-cbe1-34e2-38ad17c43a53",
+        "free_gib": 12.9091796875,
+        "utilization": 100,
+        "pids": [
+          3502668,
+          3534808
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792895225.4024374
+    },
+    {
+      "event": "launch",
+      "job": {
+        "kind": "analysis",
+        "phase": "benchmark"
+      },
+      "gpu": 1,
+      "identity": {
+        "pid": 2753735,
+        "uid": 1036,
+        "start_time_ticks": 185120303,
+        "command_sha256": "7a928e1c72aa2178b66d5750a01003e0bbabf937a67cb1e8635dadc898c492c9"
+      },
+      "inventory": {
+        "index": 1,
+        "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552",
+        "free_gib": 47.384765625,
+        "utilization": 0,
+        "pids": [],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792895495.024649
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "category",
+        "seed": 43,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 5,
+      "exit_code": 0,
+      "time": 1792895545.7555118
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "binary",
+        "seed": 44,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 5,
+      "identity": {
+        "pid": 2759382,
+        "uid": 1036,
+        "start_time_ticks": 185126491,
+        "command_sha256": "c42a6d3e4a4426bbf795c2aa82c0107bfce08426bb2d9e4ecefc5825aeb9eefb"
+      },
+      "inventory": {
+        "index": 5,
+        "uuid": "GPU-c80b253a-c5df-8840-c6b4-8ba948fffa61",
+        "free_gib": 9.7529296875,
+        "utilization": 95,
+        "pids": [
+          2496714,
+          3534807,
+          3734534
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792895556.9016185
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "kind": "analysis",
+        "phase": "benchmark"
+      },
+      "gpu": 1,
+      "exit_code": 75,
+      "time": 1792896980.3559527
+    },
+    {
+      "event": "launch",
+      "job": {
+        "kind": "analysis",
+        "phase": "benchmark"
+      },
+      "gpu": 1,
+      "identity": {
+        "pid": 2923563,
+        "uid": 1036,
+        "start_time_ticks": 185269987,
+        "command_sha256": "7a928e1c72aa2178b66d5750a01003e0bbabf937a67cb1e8635dadc898c492c9"
+      },
+      "inventory": {
+        "index": 1,
+        "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552",
+        "free_gib": 47.384765625,
+        "utilization": 0,
+        "pids": [],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792896991.8613534
+    },
+    {
+      "event": "launch",
+      "job": {
+        "seed": 43,
+        "phase": "fit",
+        "kind": "external"
+      },
+      "gpu": 3,
+      "identity": {
+        "pid": 2950867,
+        "uid": 1036,
+        "start_time_ticks": 185293263,
+        "command_sha256": "019c741e51e789ccd50ee11a76c6cd22d5fc1f9e414fe1dcfd0b4ae58c9a05db"
+      },
+      "inventory": {
+        "index": 3,
+        "uuid": "GPU-04c1c559-377e-d982-ebbf-1f359d4122b6",
+        "free_gib": 46.6015625,
+        "utilization": 6,
+        "pids": [
+          1623615
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792897224.617697
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "seed": 42,
+        "phase": "fit",
+        "kind": "external"
+      },
+      "gpu": 4,
+      "exit_code": 0,
+      "time": 1792897236.1479993
+    },
+    {
+      "event": "launch",
+      "job": {
+        "seed": 44,
+        "phase": "fit",
+        "kind": "external"
+      },
+      "gpu": 4,
+      "identity": {
+        "pid": 2953546,
+        "uid": 1036,
+        "start_time_ticks": 185295385,
+        "command_sha256": "dbc0d615c521e480e082f0676f2b3bdcda5cada6a473faa15c82a519a3d0f384"
+      },
+      "inventory": {
+        "index": 4,
+        "uuid": "GPU-d576137e-3271-99a8-bd98-77aff3483ba3",
+        "free_gib": 29.060546875,
+        "utilization": 85,
+        "pids": [
+          3317102
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792897245.8398962
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "binary",
+        "seed": 42,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 0,
+      "exit_code": 0,
+      "time": 1792898178.3972073
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "binary",
+        "seed": 43,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 7,
+      "exit_code": 0,
+      "time": 1792898769.022143
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "kind": "analysis",
+        "phase": "benchmark"
+      },
+      "gpu": 1,
+      "exit_code": 0,
+      "time": 1792899024.5268607
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "category",
+        "seed": 42,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 0,
+      "identity": {
+        "pid": 3278289,
+        "uid": 1036,
+        "start_time_ticks": 185561416,
+        "command_sha256": "81a7d330c36dd6a1b4f1d0f19f344f140fa58c62a710e0c5f03a58c2496e2968"
+      },
+      "inventory": {
+        "index": 0,
+        "uuid": "GPU-8c38d507-eb1d-32a8-32da-3241c7f4ec94",
+        "free_gib": 13.8056640625,
+        "utilization": 100,
+        "pids": [
+          170734,
+          410049,
+          447629,
+          466573,
+          3502664,
+          3502665,
+          3984545
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792899906.159204
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "category",
+        "seed": 43,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 1,
+      "identity": {
+        "pid": 3278845,
+        "uid": 1036,
+        "start_time_ticks": 185561860,
+        "command_sha256": "1feafe44f729da26246a6469683a2cfad6bf04af8c85411bbb537a096fab22f6"
+      },
+      "inventory": {
+        "index": 1,
+        "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552",
+        "free_gib": 47.384765625,
+        "utilization": 0,
+        "pids": [],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792899910.5927744
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "category",
+        "seed": 44,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 2,
+      "identity": {
+        "pid": 3279639,
+        "uid": 1036,
+        "start_time_ticks": 185562437,
+        "command_sha256": "1ffa8b58ec8ced4bafdfe29733bc107b883988e13cf9bd096d303675ac5d45f2"
+      },
+      "inventory": {
+        "index": 2,
+        "uuid": "GPU-2f386f51-6deb-5621-2d9a-788c177772c4",
+        "free_gib": 24.1455078125,
+        "utilization": 23,
+        "pids": [
+          3164307,
+          3164308
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792899916.362188
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "binary",
+        "seed": 42,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 7,
+      "identity": {
+        "pid": 3280693,
+        "uid": 1036,
+        "start_time_ticks": 185563135,
+        "command_sha256": "c354bdc2ce6a5280db61c9ff4acc841cc52c59e42b3c7a8250f852bc9958d285"
+      },
+      "inventory": {
+        "index": 7,
+        "uuid": "GPU-4a304e3d-9670-cbe1-34e2-38ad17c43a53",
+        "free_gib": 12.9091796875,
+        "utilization": 100,
+        "pids": [
+          3502668,
+          3534808
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792899923.3407216
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "binary",
+        "seed": 44,
+        "phase": "fit",
+        "kind": "pooling"
+      },
+      "gpu": 5,
+      "exit_code": 0,
+      "time": 1792899939.186463
+    },
+    {
+      "event": "launch",
+      "job": {
+        "task": "binary",
+        "seed": 43,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 5,
+      "identity": {
+        "pid": 3284967,
+        "uid": 1036,
+        "start_time_ticks": 185565774,
+        "command_sha256": "ff864c9713549621aa4bc0a36789511481c9de64bf22cdf1a722fdd0a851d08e"
+      },
+      "inventory": {
+        "index": 5,
+        "uuid": "GPU-c80b253a-c5df-8840-c6b4-8ba948fffa61",
+        "free_gib": 9.7880859375,
+        "utilization": 98,
+        "pids": [
+          3069949,
+          3140692,
+          3534807
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792899949.7259622
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "category",
+        "seed": 42,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 0,
+      "exit_code": 0,
+      "time": 1792899961.1295257
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "category",
+        "seed": 43,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 1,
+      "exit_code": 0,
+      "time": 1792899961.1296477
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "category",
+        "seed": 44,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 2,
+      "exit_code": 0,
+      "time": 1792899961.1297858
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "binary",
+        "seed": 42,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 7,
+      "exit_code": 0,
+      "time": 1792899969.9688942
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "task": "binary",
+        "seed": 43,
+        "phase": "evaluate",
+        "kind": "pooling"
+      },
+      "gpu": 5,
+      "exit_code": 0,
+      "time": 1792900000.2523277
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "seed": 43,
+        "phase": "fit",
+        "kind": "external"
+      },
+      "gpu": 3,
+      "exit_code": 0,
+      "time": 1792900402.761821
+    },
+    {
+      "event": "launch",
+      "job": {
+        "seed": 42,
+        "phase": "evaluate",
+        "kind": "external"
+      },
+      "gpu": 1,
+      "identity": {
+        "pid": 3494495,
+        "uid": 1036,
+        "start_time_ticks": 185748589,
+        "command_sha256": "19f45bd9295069848d546ad100057b5505321678bbdb775af5c074e3b649290c"
+      },
+      "inventory": {
+        "index": 1,
+        "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552",
+        "free_gib": 47.384765625,
+        "utilization": 0,
+        "pids": [],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792901777.8779757
+    },
+    {
+      "event": "launch",
+      "job": {
+        "seed": 43,
+        "phase": "evaluate",
+        "kind": "external"
+      },
+      "gpu": 3,
+      "identity": {
+        "pid": 3494771,
+        "uid": 1036,
+        "start_time_ticks": 185749244,
+        "command_sha256": "019c741e51e789ccd50ee11a76c6cd22d5fc1f9e414fe1dcfd0b4ae58c9a05db"
+      },
+      "inventory": {
+        "index": 3,
+        "uuid": "GPU-04c1c559-377e-d982-ebbf-1f359d4122b6",
+        "free_gib": 46.470703125,
+        "utilization": 11,
+        "pids": [
+          1623615
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792901784.4261148
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "seed": 44,
+        "phase": "fit",
+        "kind": "external"
+      },
+      "gpu": 4,
+      "exit_code": 0,
+      "time": 1792901787.468213
+    },
+    {
+      "event": "launch",
+      "job": {
+        "seed": 44,
+        "phase": "evaluate",
+        "kind": "external"
+      },
+      "gpu": 4,
+      "identity": {
+        "pid": 3495285,
+        "uid": 1036,
+        "start_time_ticks": 185750672,
+        "command_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "inventory": {
+        "index": 4,
+        "uuid": "GPU-d576137e-3271-99a8-bd98-77aff3483ba3",
+        "free_gib": 29.060546875,
+        "utilization": 0,
+        "pids": [
+          3317102
+        ],
+        "ignored_system_display_pids": [
+          9539
+        ]
+      },
+      "time": 1792901798.7114263
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "seed": 43,
+        "phase": "evaluate",
+        "kind": "external"
+      },
+      "gpu": 3,
+      "exit_code": 1,
+      "time": 1792901807.7282267
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "seed": 44,
+        "phase": "evaluate",
+        "kind": "external"
+      },
+      "gpu": 4,
+      "exit_code": 1,
+      "time": 1792901819.6236064
+    },
+    {
+      "event": "worker_exit",
+      "job": {
+        "seed": 42,
+        "phase": "evaluate",
+        "kind": "external"
+      },
+      "gpu": 1,
+      "exit_code": 0,
+      "time": 1792901858.595553
+    }
+  ]
+}

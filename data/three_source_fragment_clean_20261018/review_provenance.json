@@ -1,0 +1,1053 @@
+{
+  "scope": "Full parent release candidate screen; per-row AI text review without labels/predictions; all proposed deletions cross-reviewed",
+  "rule": "A row is removed only if the initial text reviewer and the cross reviewer both accept missing-context exclusion; every disputed case is retained",
+  "input_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/broad_review_packet.jsonl": "520d45ad76dbee969c9b49be8627b37efa7821a18ee0d34f0b09f7bbc81792be",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/review_decisions_0001_1300.jsonl": "12431dd5278781a97a9fc3178a91b214b80913d7f2d7aada75fe37240015c078",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/review_decisions_1301_2600.jsonl": "58228ea68b83ba416e63cde107d9a239270d9e27bcca4cad2211f135f762679d",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json": "cd727e235f28ce284b29fea263343a29e7c8b994fa8730b73afdde081c795753",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json": "aa99b1042054192a3faa03f5f0eb2d1bad4602060f4298b0f2956b46e6135304"
+  },
+  "candidate_rows": 2600,
+  "initial_decision_counts": {
+    "keep": 1866,
+    "remove_fragment": 568,
+    "uncertain": 166
+  },
+  "final_decision_counts": {
+    "keep": 1866,
+    "remove_fragment": 454,
+    "uncertain": 280
+  },
+  "conservative_retention_overrides": [
+    {
+      "review_id": "F0069",
+      "base_id": "0806497b86346ab2180649700d8747c88cfb31ae171556ac68ea04c545109d18",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "要求用真土豆制作“它们”，没有说明食品或产物。",
+      "retention_reason_zh": "完整表达想用真实土豆而非袋装成品制作食物，虽最终制品未名，普通烹饪请求边界可保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json"
+    },
+    {
+      "review_id": "F0486",
+      "base_id": "3cc105d0d1e47ffabca58ce7da0b38ffce08e6cf39aa4ceb69cd6d33997a8060",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "要求核实容易夸大的“那个”，具体说法没有提供。",
+      "retention_reason_zh": "对助手有时夸张的核实提醒可视为普通反馈，虽具体观点未提供，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json"
+    },
+    {
+      "review_id": "F0560",
+      "base_id": "460c3c70b5a32373ab6db5e983249678f2ea8df053868413e4c9e5f97e08cc9a",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "“他说是但我不确定”没有问题、事件或具体说法。",
+      "retention_reason_zh": "“他说是，但我不确定”可视为完整的普通不确定回应，虽事件未明，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json"
+    },
+    {
+      "review_id": "F0608",
+      "base_id": "4c4c5a3e2d3d57440042f927bdcf3d12676a2601b4b13fcb83a541e1139b377f",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "“什么，那很混乱”只有澄清请求，没有可恢复的主题。",
+      "retention_reason_zh": "“什么？这令人困惑”可视为完整的普通困惑反馈；没有具体操作请求，不宜仅因短承接删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json"
+    },
+    {
+      "review_id": "F0936",
+      "base_id": "714d50d573a5f5a9125cdd6aa6ac41a31000a9141d2b17fe37a6da4c4510c8c6",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "问对方是否也喜欢“那个”，所指内容未提供。",
+      "retention_reason_zh": "“哇，我喜欢那个！你喜欢吗？”可作为普通正面回应和反问，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json"
+    },
+    {
+      "review_id": "F1074",
+      "base_id": "82abf0163fc8815c1e62958636ecf5fbbc0e56a11a441244c288fa9dea841cee",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "说KTM仍生产“它们”，具体产品未提供。",
+      "retention_reason_zh": "明确陈述KTM仍生产某物，已有品牌和生产主题；产品未名但属于完整陈述，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json"
+    },
+    {
+      "review_id": "F1133",
+      "base_id": "8a6fab492f3f82592ff898486a1140a21890db3ad3a194d80552a4a6d65a7807",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "要核算购买及保险预算，没有物品或费用对象。",
+      "retention_reason_zh": "表达正在安排预算及保险的完整实际需求；虽具体资产未名，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json"
+    },
+    {
+      "review_id": "F1213",
+      "base_id": "9609bfa92cdd2c4ec15ca369f1bbf03cebfa8b64cf74cb069203dcf01ded0375",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "只说看到“它们”很痛苦，所指内容和任务缺失。",
+      "retention_reason_zh": "“看到他们很痛苦”是完整情绪表达，不应仅因对象身份未知删除，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_0001_1300.json"
+    },
+    {
+      "review_id": "F1301",
+      "base_id": "a0510a936813212bfcb0a89c50a61881760bb11d749cf09fa5630ea8c4e39d5a",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅评价未提供对象像甜甜圈，缺少被评价内容。",
+      "retention_reason_zh": "对食物类别作出完整判断“像甜甜圈”，可理解为普通回答，不应仅因that未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1317",
+      "base_id": "a237bf7110051b751c1592eaafefe97c66f0ba75b7451f25074bf8cc2b7ec67f",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们很热缺少指代与语境，无法明确所述内容。",
+      "retention_reason_zh": "完整表达某人的评价及惊讶，不应仅因they/she未具名删除，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1320",
+      "base_id": "a2ada7d544182a21193fdfe38beeb71ba99bcbe45c445bb1b617470b932fc1ee",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "只有全部，缺少所选内容或对象。",
+      "retention_reason_zh": "“All of it”是常规完整数量回答，与普通肯定回应同样保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1331",
+      "base_id": "a3f6185e41f0f39fb912e6de2434287886989133235b85514bd40c0e5d1fd015",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "做不到和可能的具体事项均未提供。",
+      "retention_reason_zh": "属于对拒绝或能力的普通质疑反馈，缺少动作不足以确认是坏数据，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1332",
+      "base_id": "a424c6ce9a6b0d8c172f38a4f15da3bf6dca4836f072e8b5c502d126039990c9",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未给出要学的语言，仅延续未提供的学习话题。",
+      "retention_reason_zh": "明确表达尽量学会说语言的偏好，含义完整，不因them未列语言名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1343",
+      "base_id": "a50894fadaca629e3e2d78e857b79d37a2078b68c57d0017886849e8588a39b3",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅回答是画作，缺少问题及指代对象。",
+      "retention_reason_zh": "“It is paintings”是完整物品类别回答，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1346",
+      "base_id": "a539167727f197c09fd507a2316bf671574ea2fa92c16c713c3eda2345aec84f",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这个点子的内容未提供，只有对拒绝帮助的回应。",
+      "retention_reason_zh": "完整表达不满并评价主意能致富，没有明确截断，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1353",
+      "base_id": "a61f5134f6433c3ae59d32d54a0b9e970f9f85098ad900f2e0fe2fd35a6c6fbb",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们和先前建议未明确，仅复述缺失上下文。",
+      "retention_reason_zh": "完整复述“不要与他们来往”的建议，不仅因人物未具名判残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1357",
+      "base_id": "a70fb8baf161084a4c8b40b5a203788bd2b45d9ae9fc92c65edb110c04d15508",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这个项目未描述，无法确定所求建议对象。",
+      "retention_reason_zh": "“如何拿下项目”可独立理解为一般项目推进请求，不要求先给出项目全文。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1361",
+      "base_id": "a7681ace6e09444fb0e0fd88fa49fe17aa8d9b9b8a8ad91b8907e852abf30690",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这种肉类的来源和责任情境均未给出。",
+      "retention_reason_zh": "当前任务可理解为肉类使用与责任风险咨询；细节不全但不是明显句子残片，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1367",
+      "base_id": "a87808cfeef3a7a613ba9e022b908af4af23308a5b5e0024c464887232697d74",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "声音、人物、引语均指向未提供前文。",
+      "retention_reason_zh": "关于声音与核实引语的完整观察，不因人物未具名直接删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1378",
+      "base_id": "aa4a27aa0778fbed040c52937042f8aedbf7c7e9157687c2246b3448b5289ce8",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "收藏对象和时间参照均缺失。",
+      "retention_reason_zh": "关于收藏数量及年代的完整回应，虽然具体收藏物未给仍保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1385",
+      "base_id": "abb3a1738c676eb4610def8b03e029c233ffb18b06785c683289d8d876236fda",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "在线广告的对象和内容未提供，依赖前文开端。",
+      "retention_reason_zh": "“网络广告应放哪些信息”可以独立理解并回答一般原则，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1392",
+      "base_id": "ac1ce0d920cf681575123dbb487563e0cade336e2d0fc154667b50a551e001c3",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "它的种类未说明，无法确定娱乐对象。",
+      "retention_reason_zh": "提供年龄信息并询问如何娱乐陪伴，是完整照护诉求；对象类别不明列不确定。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1403",
+      "base_id": "ad566143e0b8b667f22b5590ce3f3d760638a9dfc82deff18a9056548d92ab30",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "该角色及这所指的情节未提供。",
+      "retention_reason_zh": "完整解释角色过去遭遇了坏事，具有独立叙事含义，不是明显残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1422",
+      "base_id": "aee63d405acecbf04ea065add1d633a9ce0f1c28e37f9f7b2f18690f1b86d8d4",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅说它不起作用，缺少对象与故障内容。",
+      "retention_reason_zh": "“它不起作用”是普通故障反馈，不应仅因短或省略对象就删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1433",
+      "base_id": "afad290ef937e6cc4d73a61c739cb1f338c246d3cba97f9e70e1a0a5ee6eee6c",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "要尝试的方法及目标都未提供。",
+      "retention_reason_zh": "普通接受建议并愿意尝试的完整回应，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1434",
+      "base_id": "afb1e5a0af4a8a0b8de668c497449359c5a2bd1137d2d65d02ff8baa3311e858",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "类似事情未描述，仅提炸药无法确定所求操作。",
+      "retention_reason_zh": "已有炸药及缩小实施规模的明确内容，可能包含实质危险意图，不能因缺少事件名直接删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1443",
+      "base_id": "b1092f03d3abd4e44df2b683ef0a83fe8594271a1ebcb3d08e77e5eec5e610ce",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们所指对象未提供，玩具适用对象不明。",
+      "retention_reason_zh": "请求帮助锻炼的玩具建议，虽然对象类别不明，已有完整用途与产品类别，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1455",
+      "base_id": "b2795b449b62189f0649bc6e2babda66586aaae325bc9a5d96df5dc921d8cadd",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那种型号及它们所指配件未给出。",
+      "retention_reason_zh": "完整表达手机配件的兼容与价格顾虑，不仅因配件未具名判残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1464",
+      "base_id": "b3fb0117177871649563f0d47ff400b90c04546e34323c80454636bbae796fa1",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "需要看到的东西未提供，问题无法独立理解。",
+      "retention_reason_zh": "完整澄清加感谢的普通回应，不应删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1472",
+      "base_id": "b4a5a93142af61d5b4a93ee6c003d1ad9485d29f2e34dcba7a7bfde989ac18bb",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们和困难事项都未说明。",
+      "retention_reason_zh": "完整表达事情困难并希望简化的态度，缺少具体细节不足以确定为坏数据。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1520",
+      "base_id": "ba027868e2796842500d9c51de4c987ce0599e83373e28a5289ef4e1239ee029",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅回答那是深蹲，未提供被识别动作。",
+      "retention_reason_zh": "“It was squats”是明确动作类别的完整回答，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1544",
+      "base_id": "bca7ecb60fe823b1e05c496d96fb4b25c61831a082430c7c25a0ac2aef555495",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "它们的种类未说明，快慢和体型均依赖前文。",
+      "retention_reason_zh": "完整描述体型巨大、行动慢，不仅因动物或物品未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1552",
+      "base_id": "bdefdbba7b0abbb72f9984be3b9b4b88ed4453b5233ff0aa5c1e1c3795914477",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未说明希望成功的任务或目标。",
+      "retention_reason_zh": "“什么步骤能让我成功”是宽泛但独立的成功建议请求，不是必须依赖前文的残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1554",
+      "base_id": "be3c66c3fbaeb8e6e5c661cfc5653c9c6d37dcc8b7a5d8ad64426ea042479792",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "虽提背痛，但每天所指活动和频次未给出。",
+      "retention_reason_zh": "已提供背痛与看医生前处理的完整医疗求助；具体频率所指不明，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1555",
+      "base_id": "be4ddad9d53cad98ea7288a8e755fb0f6d35aa85c573854d956507073411ae4d",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未说明比较终端速度的对象。",
+      "retention_reason_zh": "达到终端速度时间不同是明确完整的物理概念问题，不一定需要列明每个物体。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1564",
+      "base_id": "bf4a1f7914315e93ba5e44906837945a5de44d964271d5a95346ae15fb414a4c",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们及搬入地点或情境未提供。",
+      "retention_reason_zh": "表达防止入住或进入的完整比较意见，缺少所指细节时保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1566",
+      "base_id": "bf7b45e5dafeeba927e4224ac0b5a7ce3efcee9997d30380b42283752d64d8b4",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "要求更冒犯但未提供被评价对象。",
+      "retention_reason_zh": "明确要求更冒犯的评论与最坏特征，有可识别攻击意图，不因受攻击对象未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1568",
+      "base_id": "bf9566681c06cd8e3d146d9ac33f33126fba1a093d5971c08a1b091b7ca6fb21",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "导致过敏的物品仅为它，具体对象未提供。",
+      "retention_reason_zh": "“它导致过敏”是完整症状陈述，不仅因过敏原未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1584",
+      "base_id": "c10eda1525bd714f6593822c50f818c5f0005666d8fbe3a0a12c8a1d44c1bdac",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "数学题未提供，无法解题。",
+      "retention_reason_zh": "“如何攻克这道数学题”可以理解为解题思路求助，未给题目使其欠具体但不是确定残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1589",
+      "base_id": "c1d5da6fce4bdaaa9ae11b7e56a138ac204b75b7ce7e65c346287e383a89da57",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅给报复他们这一动机，缺少对应行为。",
+      "retention_reason_zh": "明确表达报复动机，有可识别意图，不应因them未具名直接排除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1590",
+      "base_id": "c234e0f96acdb8880e4a2e630b628e337815bb0341f4a80a96c842cdb62a7bc7",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们所指群体或对象未提供，刻薄内容依赖前文。",
+      "retention_reason_zh": "明确要求最坏最刻薄的话语，攻击性生成意图完整，不因目标未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1600",
+      "base_id": "c32b0acc163dc333247b46ecf67ed4481b83cfa5ad3f7e4fb9e0fb2104c85518",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅否定他们没有做某事，具体事情未提供。",
+      "retention_reason_zh": "“No, they have not”是普通否定回答，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1604",
+      "base_id": "c397aab6748ed51d81b27a06daddc659c0a061271a96e0ac87d85dc8ffc96aa0",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "煮沸食材未给出，针对先前建议的纠正无法独立理解。",
+      "retention_reason_zh": "完整纠错并给出冷水煮沸的说明，不能仅因食材未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1607",
+      "base_id": "c3effb2cb79eecbaf8e3db3b797964dffc59f1d2513e11d2ff30aa78fd84015f",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们所指家庭成员或动物未说明。",
+      "retention_reason_zh": "询问到家后适应所需时间，照护和适应目标明确，对象信息不足列不确定保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1616",
+      "base_id": "c51eeca705d2ff011e108f2ad1c07fa68732a7a53de03a5280a2dd1dde8f055f",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那些事及迷路情境未说明，条件追问依赖前文。",
+      "retention_reason_zh": "已经给出迷路情境，可以独立理解为迷路后的求助，前文措施不是唯一语义来源。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1641",
+      "base_id": "c8834f94ba5d3be961b3a9c0ec24f565b6d9af885f184559e20b8e8a4b50d9d6",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "只抱怨前一回答，未提供原问题或回答内容。",
+      "retention_reason_zh": "针对性别相关回答表达被冒犯，是完整反馈，不应删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1661",
+      "base_id": "cb1ba5c565974126dadf72b2a95788db21c6e4490f00fb454d5a57a59721d153",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "需弄清的事情及要带回家的对象均未提供。",
+      "retention_reason_zh": "完整表达带回家前要先确认的态度，不仅因对象未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1685",
+      "base_id": "cdbf6d297d2899169c6cd05ffeffa868c90c971fab3fd794cc200d02cc77ff23",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这些快递员的事件或资料未提供。",
+      "retention_reason_zh": "明确询问运毒人员的走私方法，实质请求完整，不能因these couriers未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1686",
+      "base_id": "cdc0a44d9494216001c89345fc942165070ca267802bb460a52280ed0d033dbf",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "占用一天时间的具体事项未提供。",
+      "retention_reason_zh": "“大约一天的75%”可作为常规数量回答，不应只因没有复述原问题删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1707",
+      "base_id": "d0fd5728f952a454f56a49ef9ec65b6dc499644db1693704865978cb1ffc8fe5",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "声音及对象未说明，因果追问依赖前文。",
+      "retention_reason_zh": "声音使对象烦躁的完整理解性反馈，虽对象未具名仍保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1723",
+      "base_id": "d2cd012871f04cbfa10e4028c024c34828422d63d09586545a9df170727e23b0",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未说明原药物或病症，副作用与泰诺安全性问题缺上下文。",
+      "retention_reason_zh": "有减少副作用、是否服泰诺的明确医疗求助，不仅因背景药物未给就判坏数据。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1747",
+      "base_id": "d689522b49360802eff804d4bb7e2394e54d4491f1ead651ce4d6c3ac9925f78",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这些信息的内容未提供。",
+      "retention_reason_zh": "普通接受信息的肯定回应，与Yes please同样保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1758",
+      "base_id": "d77f2b8a5b5598b199bac4235b24195093bdff03c3ab93197baed5b2ff21ccf4",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这个项目未描述，无法确定所求拆解对象。",
+      "retention_reason_zh": "“如何完成有挑战的项目”是完整的一般项目管理请求，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1769",
+      "base_id": "d8e07ebad917123bfb691880fee3d0700066e50206d60792e17bcbeb27e49c26",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那些视频及视频应达成的目标未提供。",
+      "retention_reason_zh": "“那些视频都无法播放”是完整故障反馈，不能仅因视频链接缺失直接删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1780",
+      "base_id": "da25d708eb9f4b8fa4b44b1de8aeba9d3dd97088be05653a17647af01d6633c6",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这件事未说明，只有追问的元对话。",
+      "retention_reason_zh": "完整解释自己不懂所以发问的普通反馈，不应删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1789",
+      "base_id": "dc0aba2413ce850a49ffe925352707942f31a4d8832a8d6f97afcd5d1512a0b5",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未提供清洁对象、污渍及已试方法。",
+      "retention_reason_zh": "明确询问清洁喷雾选择，虽清洁对象未知但已有产品类别和用途，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1791",
+      "base_id": "dc6bc71f10324ce05ef1ddf74ab8e5909ed83a009039f299051f15b3c88a3e59",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "它们所指物件及涂装未提供。",
+      "retention_reason_zh": "完整描述在亚利桑那公园与住宅见过的涂装现象，不因物品未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1806",
+      "base_id": "dea9b3eb655cf4235aa51672ae1635418b0b2cfc15125b23d40076f32b953cab",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未说明要去除的气味来源及情况。",
+      "retention_reason_zh": "已经明确提出物品或人沾染气味后的除臭问题，可以理解一般清洁求助，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1830",
+      "base_id": "e0cbe25b14d5a0f5fbcc26f6ad8e4146748fa5949d223beaf6ea171a66bc0b42",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们所指对象未提供，贬低评价依赖前文。",
+      "retention_reason_zh": "具有完整的辱骂评价并寻求认同，不应只因they未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1834",
+      "base_id": "e1381611ee38ff2cc0a3d9afc139d49a768a2dd127713f774cf393ffa731693f",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这项工作量未描述，无法确定任务。",
+      "retention_reason_zh": "“如何快速完成工作量”是完整生产力请求，不依赖具体工作清单才能成立。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1837",
+      "base_id": "e18dec0502f8e2a5e67e4e166baf71daeb0211858c04662060ce5ec4d95eaee0",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们及所承担责任的事项未提供。",
+      "retention_reason_zh": "完整表达不会承担责任的判断，不仅因人未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1875",
+      "base_id": "e58dca1d7cdf2dffeaf04cd4e3bddbbc772c72e76fd651f67130005f324aeb60",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未提供被批评的假设或话语。",
+      "retention_reason_zh": "批评对方种族主义假设，是完整反馈，不是明显截断。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1877",
+      "base_id": "e5c5d96db0acf544467e50659dc319e166889a803c045592956ac38a9a8e8649",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他所指卡通角色未具名，仅回答身份类别。",
+      "retention_reason_zh": "“他是著名卡通角色”是完整类别回答，不因角色未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1882",
+      "base_id": "e6a22f806f2758207b56d41f286d6a0c4438ed507472ff5aced4f06626bce5de",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "该软件技术问题未描述，无法分析。",
+      "retention_reason_zh": "明确询问解决软件技术问题的方法，可视为一般调试求助，不应直接判残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1916",
+      "base_id": "ebca971766532b16e1f5dc2cd781ffe7793869f0c267ce2f1c379ebd48cbfe9a",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那所指影响驾驶的因素未提供。",
+      "retention_reason_zh": "完整评价某事会影响长途驾驶，无明确截断，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1919",
+      "base_id": "ec3170c037855ba1963ef9d883d45ad972af070b843a2cef819a36dd1c9e7226",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "只更正为正确地，未说明要做什么。",
+      "retention_reason_zh": "完整纠正自己用词为properly并说明含义，普通纠错回应应保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1925",
+      "base_id": "ed364d348872aab2c8ae47245ff98aa5bf0bc6db2fa36fa0e3abbbc30092fdf1",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那页内容或链接未提供，只评论其与疫苗及自闭症无关。",
+      "retention_reason_zh": "完整指出页面内容与疫苗、自闭症无关，有明确反馈内容，不应删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1937",
+      "base_id": "ee7e083fe7a434f1880d0386aaa8dd373e290f82d05def23ee76bf9e6119c20a",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们确实如此未提供对应行为或对象。",
+      "retention_reason_zh": "“yes they did”是常规肯定回答，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1950",
+      "base_id": "f0041b12f8718e2bb9fd375f742293352e0d8be6282c8bef80833b98afead038",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这件事及想联系人员的用途未说明。",
+      "retention_reason_zh": "明确希望直接联系真人，不愿继续讨论，是可独立理解的交互请求，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1961",
+      "base_id": "f1291cf5b691aa6ef1846d11713f988b432c22d9092f73516829cb065870f4ac",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他所指移民人物未具名。",
+      "retention_reason_zh": "完整陈述某人从德国移民美国，不仅因he未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F1984",
+      "base_id": "f3bdec23a67dacb869e064d32f91fedcb3de6ebe39b56aa419d75e071aa7fec4",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那所指对高血压的影响因素未提供。",
+      "retention_reason_zh": "完整表达对高血压患者影响的担忧，缺少事件细节时保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2034",
+      "base_id": "fb801b09342bda1fe2736ae0e26d7484271f02d6430e1b567d51bb49103b656e",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "只比较母乳和配方奶，未给比较的具体结果或问题。",
+      "retention_reason_zh": "母乳与配方奶比较是可独立识别的喂养问题，结局指标不明应列不确定保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2045",
+      "base_id": "fce31bf95b8a70c0381dca115194d0e6f3e56ccf55746b120f9af394ce44c8a4",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "被称为谎言或不够的内容未提供。",
+      "retention_reason_zh": "普通否定与“不够”的完整反馈，不应因前文未复述就删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2049",
+      "base_id": "fd91ebc169353aa2b0130921de49b9e05dcf9f2d9b9c6fa2bf59875046c9cce7",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "只说明为了娱乐，未给对应请求或行为。",
+      "retention_reason_zh": "“这是为了娱乐”是完整动机说明，不等于句子截断，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2056",
+      "base_id": "fe1433c306b009d135a713020fa67a53702504f20ca5dd0237c88b81d13c12bc",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "它们所指排出物及先前比较内容未提供。",
+      "retention_reason_zh": "对passing解释为从身体排出，具有完整词义澄清功能，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2077",
+      "base_id": "08c39048265863cd1e57b5751d3c1ed61097fed3c1f947b71ad6e7be2a44a56f",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们所指对象及事件未说明。",
+      "retention_reason_zh": "完整表达对未具名人群可能暴力的判断，不仅因they未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2105",
+      "base_id": "25709b2fbe9cf48a90ff3d0c658291ebd2f84cd07a23f68c03cdd9cce7282f26",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这道菜未提供，无法理解录入内容。",
+      "retention_reason_zh": "主动提出介绍菜肴来完善数据库，是完整交互提议，不需要先列出菜名才能成立。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2158",
+      "base_id": "4fd2864a42316262f135427dcf24968499a173f03d39041cf59dac65117651f6",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那样所指活动未提供。",
+      "retention_reason_zh": "“男孩们不会喜欢那样”是完整普通意见，不仅因that未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2161",
+      "base_id": "5458ab4d6bb75747c97dac8d85cdb0dc352a749cf32d78af696b8b99e3683c7d",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "它们所指比较对象未提供。",
+      "retention_reason_zh": "“正确，它们相似”是普通肯定比较反馈，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2208",
+      "base_id": "80be8c7b3d5b56c4534d3974585bc501318de7fe45ac8f200a4c4ae97f48cdbe",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅回答好的请，缺少被同意的具体动作。",
+      "retention_reason_zh": "“Yes please”是正常礼貌回答，不应作为残片排除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2219",
+      "base_id": "892374e94f85d82283816141c27b7a89bee20fc2c5b93f2499b0a3e1f86b7ab8",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "它不会缺少动作或属性，不能独立理解。",
+      "retention_reason_zh": "“No, it wouldn't”是正常否定回答，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2238",
+      "base_id": "9a3778981a03003775baa2e690c9aceb3d25446378a48c96f9324570861bb343",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "跳转到球体但未给具体任务或问题。",
+      "retention_reason_zh": "含hydro与下一个sphere的教学承接可以推知地球圈层主题，尚不足以高置信认定残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2250",
+      "base_id": "aa6e68bd73a87d364dc33b74affe06a412b578b1393d2636ae493623f3495c5d",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "需帮助的人及其困境未提供。",
+      "retention_reason_zh": "明确希望获得除治疗信息以外的帮助方式，可理解一般心理支持请求，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2260",
+      "base_id": "b361db80508e1cbc537d03b838847e0100b2347be2b32ac050b97f0191b1411a",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "第二个未提供，只评论前文选项。",
+      "retention_reason_zh": "对This little piggy及第二个内容表达评价，是完整反馈，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2279",
+      "base_id": "c23e23484e9ec672a6779b50873e03f1fb4e55d65e6eb450aade53e00b12a4f1",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "所讨论球类项目未提供，黑球及球数争论依赖前文。",
+      "retention_reason_zh": "黑色数字、单球线索可能足以识别轮盘等游戏背景，不能高置信排除，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2288",
+      "base_id": "cb8dc7e16a988f8a3ccb9070c6be7b718c43d56ffceb044b2bfecc64cb6be5a2",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们所指对象及协调活动未说明。",
+      "retention_reason_zh": "完整表达需要协调或知道标记的判断，不仅因主体未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2300",
+      "base_id": "db6df60b8898dd8d1806c229d60906e6a6071ef7249b22926a2fb43f99ea1222",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那样互动的具体方式未提供。",
+      "retention_reason_zh": "对模型无法以某种方式互动表达完整反馈，不是明显残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2303",
+      "base_id": "dede06e31f05f85ac8dc5cc8c5a8a28a64b46e6951d4a8dad1c036033ba5c760",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "搭配对象未提供，无法判断核桃替换或搭配。",
+      "retention_reason_zh": "第一问“你觉得核桃怎么样”本身是独立问题，搭配背景不足不应导致整条删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2305",
+      "base_id": "e037bbadae7f2c30d9694a34d0702199804150998c6bf0f62281698b69769871",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "她所做的那样事情未提供。",
+      "retention_reason_zh": "完整表达对某人的行为预期及对方会夸大的反馈，不仅因人物未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2313",
+      "base_id": "e8b7a5b4b80d51dc3715d57afea04296ecdcaa96edd509188cdb22cd8a864d38",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "它们所指浇水植物未提供。",
+      "retention_reason_zh": "“为什么持续浇水不好”可理解为一般过度浇水问题，不一定依赖具体植物名称。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2363",
+      "base_id": "1a05131b65c592ae613d5535ab290682a89bf92f232d28695d72968e79e660d0",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们所指午睡对象未给出，可能为不同年龄人群或动物。",
+      "retention_reason_zh": "询问让对象午睡的方法，已有完整休息照护目标，对象年龄或种类不明时保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2374",
+      "base_id": "2419f0a8ebabb3b1e3ed8a2bdcdce39e084faf93c07a787983c3ac28288cf324",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未说明馅料用于何物，重要性问题不完整。",
+      "retention_reason_zh": "“馅料种类是否重要”已有可理解烹饪主题，虽菜肴缺失但不足以高置信删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2382",
+      "base_id": "2eddf0f7e56d8c8ba55288f9d4733752aa6b818ee94b516143509e9e4ba48297",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅给出法国赠美线索而未具名，缺少原问题。",
+      "retention_reason_zh": "法国赠送美国的礼物可强烈指向自由女神像，且本身是完整事实陈述，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2383",
+      "base_id": "2f1bf4ac5ae10ae9617f969dc657e7297323bcca77e9e9d8a7e0b65c890d3973",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "要用叉子压碎的食材及制作品未提供。",
+      "retention_reason_zh": "明确比较用叉子压碎与搅拌机带来的质地，已有完整烹饪方法诉求，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2403",
+      "base_id": "41c062e6f85b153df6870385a50a17948e7be3b4f85fbda52f8b4b61f7e46d6c",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "动物及所提供帮助的场景未给出。",
+      "retention_reason_zh": "“动物如何帮助”是可理解的一般问题，不要求先指明单一动物才能成立。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2416",
+      "base_id": "4c2e7dde82f591a6b14a6645eca8d3c17d29758423b2c68369cc80e0df875915",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未说明鲜草莓用于什么或和什么比较。",
+      "retention_reason_zh": "询问是否更适合使用新鲜草莓，本身有完整食材选择含义，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2425",
+      "base_id": "541cc6124359d7762d3771bf4d2ff5ddccbb405b3a208c971ec13fc6f6befdd1",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "故事人物及设定未提供，仅延续对结局的要求。",
+      "retention_reason_zh": "已经给出局外人角色、幸福结局、团结主题等完整写作要求，不能因角色未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2437",
+      "base_id": "64b6d4dcbd3a22bf5aa87ca3f5316f03ebca33d198ce9e11dff8e252d3c284d1",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "只给代表亚利桑那第五选区的身份线索，未提供所指人物或问题。",
+      "retention_reason_zh": "“代表亚利桑那第五选区”是完整且有辨识性的事实回答，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2454",
+      "base_id": "74b5331bde50997d47f1fcdba42dc818c77893562c7659b0064a24fec3d2fc00",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这一问题未描述。",
+      "retention_reason_zh": "寻找问题解决办法可以是一般解决问题方法的独立请求，不直接作为残片排除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2459",
+      "base_id": "7acc051798dd1824d421ef6b86cc6c27aed442ceef788f2c4f0f84c7d8c3c091",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "游戏未具名，无法判断摧毁基地的获胜规则。",
+      "retention_reason_zh": "“摧毁对方基地才能获胜”有明确游戏机制含义，游戏名称不明时保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2467",
+      "base_id": "84a9fa883870036ab259e1911429f536c5f28e92f5653fccfc5e5294480a4e0a",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "那样做的内容及这些视频未提供。",
+      "retention_reason_zh": "“看不到这些视频”是完整可理解的故障反馈，与F1769视频无法播放口径一致保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2469",
+      "base_id": "8a96b74b3977ecce1b20c78fd3eb91724ec5d41295a2477f4fb65308099db6d3",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "其中一样东西所指载具未说明，缺少上下文。",
+      "retention_reason_zh": "在残障车位停车的资格物品可推测为停车许可，使用目标明确，不直接判残片。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2479",
+      "base_id": "96b4aa05090ba75f70ecbf5f7e258893e3655e0d9d98a7cf5d6c560dbae0b9e7",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未说明谁的年龄或要从事何事。",
+      "retention_reason_zh": "“那似乎太年轻”是普通年龄评价反馈，不仅因that未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2524",
+      "base_id": "bfefea088d73916f45ad7d7e4bb304a3c60c223620087f5bbc2adf43e414b9a7",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "仅回答材质是聚酯纤维，缺少对象与问题。",
+      "retention_reason_zh": "“是聚酯纤维”是完整材质回答，保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2539",
+      "base_id": "c8e126fc59d284ddb83412d6525f710fcc300b00bd7e5a22049b37d95e2d365a",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们及涂色所指对象未提供。",
+      "retention_reason_zh": "改变颜色的例子有可辨操作内容，未指明对象时保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2545",
+      "base_id": "ccc4f49450559b1222b2e007860f9e0ccedd28ddf927c361d3cc37eea9be3d41",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "药片或口香糖的用途未提供，无法判断帮助效果。",
+      "retention_reason_zh": "贴片和口香糖的组合强烈提示戒烟治疗，当前问题可能足够独立识别，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2547",
+      "base_id": "cd9a79df73cf2f46554589fcd395917f9a7daf4cee0c7dcc632e85ddd54be464",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "通常做得不错的活动未说明，只评价自己松懈。",
+      "retention_reason_zh": "完整表达通常做得不错、最近松懈的自我评价，不仅因it未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2551",
+      "base_id": "d284df4a4de4d249fa0974c9fa546aac97532b400a4f426c73a00dc17befb665",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他让做的具体事情未提供。",
+      "retention_reason_zh": "“是他迫使我的”是完整被迫经历的陈述，不能因人物和动作未复述直接删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2559",
+      "base_id": "da7cd6bbc91cb7ca1bc8203ca27cdfc867f2b664671cafe1e4c020bf4d3b7381",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "未给出他所指演员，无法理解影片出演纠正。",
+      "retention_reason_zh": "已经点名两部影片并纠正出演情况，是可理解反馈，不仅因演员未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2564",
+      "base_id": "dea356e670711134d80f4cdc217237cb91b0554c650a0f24b84432fc69d3dd4b",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "别人的帮助所指任务未给出。",
+      "retention_reason_zh": "对别人帮助的说法提出澄清并表达能独立完成，是普通完整交互反馈，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2566",
+      "base_id": "e255f3bfd92763ae83e2d886e1f2a297094006f44a9d84e577bb2db0fa36a2dd",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "太早所指时间和事件未提供。",
+      "retention_reason_zh": "“那太早了”是正常时间评价，不应单因短和指代删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2575",
+      "base_id": "eaa2d57a9baa5ee1d1214d16f97975e73bb97c6ba5f4c3e1509953eadc2d9788",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "英文为Fun in the sun for one thing这一列举片段，未提供所请求活动或原问题。",
+      "retention_reason_zh": "提供户外阳光下活动的偏好，可以独立理解部分需求，保守保留。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2592",
+      "base_id": "f7353200ea6177af52ba60b6ae51c39924bba56915b4690e065982699187a106",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "他们所指食物消费者未给出，仅评论饮食范围。",
+      "retention_reason_zh": "完整表达可食食品种类广泛的判断，不仅因主体未具名删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    },
+    {
+      "review_id": "F2594",
+      "base_id": "f7ec3e994b4b58f268c6506d5247ce41005edfd6d6f427104c8e859ed6b836c5",
+      "original_decision": "remove_fragment",
+      "final_decision": "uncertain",
+      "original_reason_zh": "这个主意及双方不同意的具体事情未提供。",
+      "retention_reason_zh": "同意与否及劝说女性的意图已经可识别，可能包含性胁迫相关风险，不能因this未明删除。",
+      "cross_review_file": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_fragment_cleanup_20261018/fragment_filter_design/cross_review_1301_2600.json"
+    }
+  ],
+  "final_review_decisions_sha256": "98cd679de6aeb2db945201f4208d026de0cbad1802d903e0fae0f22c5d600f8d",
+  "not_human_gold": true,
+  "original_dataset_unchanged": true
+}

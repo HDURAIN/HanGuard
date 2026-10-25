@@ -1,0 +1,9 @@
+{
+  "policy_id": "inherited_same_split_after_posthoc_test_selection_20261018",
+  "selection_policy": "posthoc_error_selected_test_subset",
+  "parent_policy_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/data/three_source_remediated_20261012/split_policy.json",
+  "parent_policy_sha256": "29b2a2455b8db080078260344d9ba937135f053c872efbcb220f348cf0ca73c9",
+  "retained_split_assignments_unchanged": true,
+  "train_validation_byte_identical": true,
+  "group_split_isolation_verified": true
+}

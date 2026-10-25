@@ -1,0 +1,74 @@
+{
+  "release_status": "qa_complete_with_documented_limitations",
+  "selection_policy": "posthoc_error_selected_test_subset",
+  "is_quality_cleanup": false,
+  "manifest_sha256": "19928e626a4b45eeff6ba677f1a9c5a37eb7831485a3fc969ddf173aa06a73c7",
+  "split_sha256": {
+    "train": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "validation": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "test": "401031cea082be0d6b9c655227279be825e72577ed00e5be03ecb02a323cfd67"
+  },
+  "passed": true,
+  "checks": {
+    "exact_old_model_error_predicate": true,
+    "expected_selected_test_rows": 122,
+    "train_validation_byte_identical": true,
+    "retained_frame_values_identical": true,
+    "original_binary_and_type_labels_unchanged": true,
+    "original_split_assignments_unchanged": true,
+    "cross_split_group_overlap": 0,
+    "prediction_csv_parquet_agree": true,
+    "same_retained_rows_for_all_models": true
+  },
+  "split_summaries": {
+    "train": {
+      "parent_rows": 66802,
+      "retained_rows": 66802,
+      "removed_rows": 0,
+      "retained_source_counts": {
+        "wildguard_zh": 36621,
+        "chinese_curated": 21541,
+        "jailbench": 8640
+      },
+      "retained_binary_counts": {
+        "harmful": 36977,
+        "unharmful": 29825
+      }
+    },
+    "validation": {
+      "parent_rows": 8350,
+      "retained_rows": 8350,
+      "removed_rows": 0,
+      "retained_source_counts": {
+        "wildguard_zh": 4578,
+        "chinese_curated": 2692,
+        "jailbench": 1080
+      },
+      "retained_binary_counts": {
+        "harmful": 4622,
+        "unharmful": 3728
+      }
+    },
+    "test": {
+      "parent_rows": 8350,
+      "retained_rows": 8228,
+      "removed_rows": 122,
+      "retained_source_counts": {
+        "wildguard_zh": 4456,
+        "chinese_curated": 2692,
+        "jailbench": 1080
+      },
+      "retained_binary_counts": {
+        "harmful": 4575,
+        "unharmful": 3653
+      }
+    }
+  },
+  "limitations": [
+    "Test exclusions depend on labels and old no-LoRA model correctness; this is a posthoc error-selected subset.",
+    "No evidence establishes that all excluded rows are faulty, mislabeled or incomplete.",
+    "The selected-subset old-model gain is mechanically favored by selection and is not an unbiased method improvement.",
+    "This is not a new blind test; retain and report the original complete-test results.",
+    "Train and validation are unchanged; this subset alone does not remove training examples or constitute data-quality remediation."
+  ]
+}

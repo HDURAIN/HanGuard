@@ -1,0 +1,88 @@
+{
+  "release_status": "qa_complete_with_documented_limitations",
+  "manifest_sha256": "0648931551be03f8f3f4d4a50a13fad1c1faa6c30fc8a3e1e6a6405f1fb3c645",
+  "split_sha256": {
+    "train": "2ec86ab4a79c432676ac57ee48aa069890eb1c1c63e1ac6bb6b51770d0f28398",
+    "validation": "d20dce0ef287c7ee8c756057ef238cc6d9a5fb105241b230a2d4eee0353caeff",
+    "test": "45b3e9bdfe19fb54c078059327a08d055737decec37711dd9c96d7c745fdd1a1"
+  },
+  "passed": true,
+  "checks": {
+    "complete_candidate_review_coverage": true,
+    "removed_only_explicit_remove_fragment": true,
+    "uncertain_decisions_retained": true,
+    "retained_frame_values_identical": true,
+    "original_binary_and_type_labels_unchanged": true,
+    "original_split_assignments_unchanged": true,
+    "cross_split_group_overlap": 0,
+    "no_truncation_or_text_changes": true
+  },
+  "split_summaries": {
+    "train": {
+      "parent_rows": 66802,
+      "retained_rows": 66444,
+      "removed_rows": 358,
+      "retained_source_counts": {
+        "wildguard_zh": 36263,
+        "chinese_curated": 21541,
+        "jailbench": 8640
+      },
+      "removed_source_counts": {
+        "wildguard_zh": 358
+      },
+      "retained_binary_counts": {
+        "harmful": 36951,
+        "unharmful": 29493
+      },
+      "removed_binary_counts": {
+        "unharmful": 332,
+        "harmful": 26
+      }
+    },
+    "validation": {
+      "parent_rows": 8350,
+      "retained_rows": 8310,
+      "removed_rows": 40,
+      "retained_source_counts": {
+        "wildguard_zh": 4538,
+        "chinese_curated": 2692,
+        "jailbench": 1080
+      },
+      "removed_source_counts": {
+        "wildguard_zh": 40
+      },
+      "retained_binary_counts": {
+        "harmful": 4618,
+        "unharmful": 3692
+      },
+      "removed_binary_counts": {
+        "unharmful": 36,
+        "harmful": 4
+      }
+    },
+    "test": {
+      "parent_rows": 8350,
+      "retained_rows": 8294,
+      "removed_rows": 56,
+      "retained_source_counts": {
+        "wildguard_zh": 4522,
+        "chinese_curated": 2692,
+        "jailbench": 1080
+      },
+      "removed_source_counts": {
+        "wildguard_zh": 56
+      },
+      "retained_binary_counts": {
+        "harmful": 4619,
+        "unharmful": 3675
+      },
+      "removed_binary_counts": {
+        "unharmful": 53,
+        "harmful": 3
+      }
+    }
+  },
+  "reviewed_candidates": 2600,
+  "removed_fragment_rows": 454,
+  "semantic_review_is_human_gold": false
+}

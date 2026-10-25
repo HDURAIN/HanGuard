@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "selection_lock_sha256": "5cb1b447bd8bd744ce9060e29c9468725b2ecd6dea14312c42efdebff7772268",
+  "artifacts": {
+    "predictions.parquet": "d0e2a1c6c5f5a896eec78915f66fe711cf1156d76208e9a16a962ec251c4d018",
+    "predictions.csv": "572ca4671fddc021504dea98ed3f51355c3e8bb2eec01f315ef7b2b6dd2ee5c2",
+    "results.json": "ee1f44a24c73067d5620321001de8e3a95437089f2bed6b1b959a6e33a4203f5",
+    "test_access.json": "9072de313eaef88816ed0c6b09e83e6875dbd3179fdd23df25fed8c44b79baee"
+  }
+}

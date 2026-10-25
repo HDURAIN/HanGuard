@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "seed": 42,
+  "protocol_sha256": "25f0baedb547510d91ca7161bbef6a84fce8915a5e22530cb284f045583ea317",
+  "artifacts": {
+    "test_predictions.parquet": "acba22451a32da6e9942fea393488257a3537f42d85014ad4aede71999257338",
+    "test_results.json": "50c5f84215817da0bf7a6051fdde6658b596c8fef08592c6e71057a5b1933248"
+  }
+}

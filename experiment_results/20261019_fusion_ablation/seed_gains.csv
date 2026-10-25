@@ -1,0 +1,7 @@
+evaluation_scope,seed,status,best_single_accuracy_percent,anchor_accuracy_percent,anchor_gain_vs_best_single_pp,source
+full_test_8350,42,completed,94.58682634730539,95.19760479041916,0.6107784431137797,outputs/hanguard_nolora_ablation_20261019/seed_42_imported/analysis/results.json
+full_test_8350,43,completed,94.52694610778443,95.19760479041916,0.6706586826347394,outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/results.json
+full_test_8350,44,completed,94.6946107784431,95.08982035928145,0.39520958083832936,outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/results.json
+selected_test_8228,42,completed,94.50656295576081,96.60913952357802,2.102576567817205,outputs/hanguard_nolora_ablation_20261019/seed_42_imported/analysis/results.json
+selected_test_8228,43,completed,94.8954788526981,95.85561497326202,0.9601361205639258,outputs/hanguard_nolora_ablation_20261019/seed_43/analysis/results.json
+selected_test_8228,44,completed,95.08993680116676,95.74623237724842,0.6562955760816669,outputs/hanguard_nolora_ablation_20261019/seed_44/analysis/results.json

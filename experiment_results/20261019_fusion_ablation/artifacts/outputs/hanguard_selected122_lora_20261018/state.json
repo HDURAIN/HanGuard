@@ -1,0 +1,102 @@
+{
+  "state": "completed",
+  "updated_unix": 1792369768.101025,
+  "coordinator_pid": 1657605,
+  "training_started": true,
+  "formal_test_opened": true,
+  "scientific_scope": "posthoc_error_selected_test_subset",
+  "subset_selection_policy": "posthoc_error_selected_test_subset",
+  "is_quality_cleanup": false,
+  "blind_test": false,
+  "active_workers": 0,
+  "active_gpus": [],
+  "gpu_candidates": [
+    {
+      "index": 0,
+      "uuid": "GPU-8c38d507-eb1d-32a8-32da-3241c7f4ec94",
+      "free_gib": 20.619140625,
+      "pids": [
+        170734,
+        410049,
+        447629,
+        466573,
+        482670
+      ]
+    },
+    {
+      "index": 1,
+      "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552",
+      "free_gib": 7.0244140625,
+      "pids": [
+        313
+      ]
+    },
+    {
+      "index": 2,
+      "uuid": "GPU-2f386f51-6deb-5621-2d9a-788c177772c4",
+      "free_gib": 2.2177734375,
+      "pids": [
+        66358,
+        1733896
+      ]
+    },
+    {
+      "index": 3,
+      "uuid": "GPU-04c1c559-377e-d982-ebbf-1f359d4122b6",
+      "free_gib": 46.994140625,
+      "pids": [
+        1747056
+      ]
+    },
+    {
+      "index": 4,
+      "uuid": "GPU-d576137e-3271-99a8-bd98-77aff3483ba3",
+      "free_gib": 5.6171875,
+      "pids": [
+        1872004
+      ]
+    },
+    {
+      "index": 5,
+      "uuid": "GPU-c80b253a-c5df-8840-c6b4-8ba948fffa61",
+      "free_gib": 5.6484375,
+      "pids": [
+        1872005
+      ]
+    },
+    {
+      "index": 6,
+      "uuid": "GPU-926c64bf-2929-2a69-eb2f-783bae2d9603",
+      "free_gib": 5.5625,
+      "pids": [
+        1872006
+      ]
+    },
+    {
+      "index": 7,
+      "uuid": "GPU-4a304e3d-9670-cbe1-34e2-38ad17c43a53",
+      "free_gib": 5.5859375,
+      "pids": [
+        1872007
+      ]
+    }
+  ],
+  "automatic_wait_for_empty_gpu": false,
+  "actual_selected_phase": {
+    "phase": 3,
+    "phase_name": "joint",
+    "epoch": 3.0,
+    "validation_bce": 0.07445266097784042,
+    "seconds": 92.79113238095306
+  },
+  "adapter_delta": {
+    "basis": "Standard PEFT initialization has zero LoRA B matrices; selected checkpoint compared with zero B.",
+    "lora_b_tensors": 152,
+    "nonzero_lora_b_tensors": 152,
+    "lora_b_squared_l2": 2.3819403365487233,
+    "lora_b_max_abs": 0.005772192031145096
+  },
+  "gpu_inventory_error": "TimeoutExpired(['nvidia-smi', '--query-compute-apps=gpu_uuid,pid', '--format=csv,noheader,nounits'], 10)",
+  "error_type": "RuntimeError",
+  "reason": "Live worker process identity became unverifiable"
+}

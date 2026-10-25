@@ -1,0 +1,11 @@
+{
+  "tests": 28,
+  "passed": true,
+  "protocol_sha256": "582bb3819a36bab3a5cd52850220372bf267ef66de341953a16f460cca2b07bf",
+  "commands": [
+    "unittest test_qwen3guard_supervised_study_v2.py",
+    "unittest test_qwen3guard_supervised_features_v2.py",
+    "unittest test_qwen3guard_supervised_training.py"
+  ],
+  "completed_unix": 1792921492.0037866
+}

@@ -1,0 +1,182 @@
+{
+  "schema": "hanguard_clean_ablation_v1",
+  "task": "binary",
+  "seed": 42,
+  "protocol_sha256": "3ea2567ea04e7fc5390bb42fd8cfce6266b16e2c4c1e986d84470f684b9bd98b",
+  "layers": {
+    "1": {
+      "best_epoch": 12,
+      "validation_ce": 0.32404264051295906,
+      "parameters": 5122
+    },
+    "2": {
+      "best_epoch": 3,
+      "validation_ce": 0.2934475517935646,
+      "parameters": 5122
+    },
+    "3": {
+      "best_epoch": 5,
+      "validation_ce": 0.2639581437302619,
+      "parameters": 5122
+    },
+    "4": {
+      "best_epoch": 5,
+      "validation_ce": 0.2486854882875551,
+      "parameters": 5122
+    },
+    "5": {
+      "best_epoch": 5,
+      "validation_ce": 0.24107567406540537,
+      "parameters": 5122
+    },
+    "6": {
+      "best_epoch": 6,
+      "validation_ce": 0.23830614272653775,
+      "parameters": 5122
+    },
+    "7": {
+      "best_epoch": 4,
+      "validation_ce": 0.23347042333053963,
+      "parameters": 5122
+    },
+    "8": {
+      "best_epoch": 3,
+      "validation_ce": 0.20929322262840583,
+      "parameters": 5122
+    },
+    "9": {
+      "best_epoch": 3,
+      "validation_ce": 0.20391810334434715,
+      "parameters": 5122
+    },
+    "10": {
+      "best_epoch": 3,
+      "validation_ce": 0.18936739748066356,
+      "parameters": 5122
+    },
+    "11": {
+      "best_epoch": 3,
+      "validation_ce": 0.1858310552151461,
+      "parameters": 5122
+    },
+    "12": {
+      "best_epoch": 3,
+      "validation_ce": 0.17038149232059516,
+      "parameters": 5122
+    },
+    "13": {
+      "best_epoch": 3,
+      "validation_ce": 0.16664576880595713,
+      "parameters": 5122
+    },
+    "14": {
+      "best_epoch": 3,
+      "validation_ce": 0.15420907775250808,
+      "parameters": 5122
+    },
+    "15": {
+      "best_epoch": 4,
+      "validation_ce": 0.14876375561855706,
+      "parameters": 5122
+    },
+    "16": {
+      "best_epoch": 3,
+      "validation_ce": 0.14767698911618177,
+      "parameters": 5122
+    },
+    "17": {
+      "best_epoch": 4,
+      "validation_ce": 0.14602311995213146,
+      "parameters": 5122
+    },
+    "18": {
+      "best_epoch": 4,
+      "validation_ce": 0.14365888879235184,
+      "parameters": 5122
+    },
+    "19": {
+      "best_epoch": 4,
+      "validation_ce": 0.14285598629636057,
+      "parameters": 5122
+    },
+    "20": {
+      "best_epoch": 7,
+      "validation_ce": 0.14835660022490374,
+      "parameters": 5122
+    },
+    "21": {
+      "best_epoch": 5,
+      "validation_ce": 0.15024682081372223,
+      "parameters": 5122
+    },
+    "22": {
+      "best_epoch": 7,
+      "validation_ce": 0.1499020653707795,
+      "parameters": 5122
+    },
+    "23": {
+      "best_epoch": 7,
+      "validation_ce": 0.165630802953103,
+      "parameters": 5122
+    },
+    "24": {
+      "best_epoch": 3,
+      "validation_ce": 0.15892570389101418,
+      "parameters": 5122
+    },
+    "25": {
+      "best_epoch": 2,
+      "validation_ce": 0.1665965274684641,
+      "parameters": 5122
+    },
+    "26": {
+      "best_epoch": 5,
+      "validation_ce": 0.16897602103167936,
+      "parameters": 5122
+    },
+    "27": {
+      "best_epoch": 5,
+      "validation_ce": 0.18896742008226433,
+      "parameters": 5122
+    },
+    "28": {
+      "best_epoch": 5,
+      "validation_ce": 0.16512869362602808,
+      "parameters": 5122
+    },
+    "29": {
+      "best_epoch": 5,
+      "validation_ce": 0.1693101045496372,
+      "parameters": 5122
+    },
+    "30": {
+      "best_epoch": 2,
+      "validation_ce": 0.1668458630032404,
+      "parameters": 5122
+    },
+    "31": {
+      "best_epoch": 2,
+      "validation_ce": 0.16552445463377105,
+      "parameters": 5122
+    },
+    "32": {
+      "best_epoch": 6,
+      "validation_ce": 0.161754248782896,
+      "parameters": 5122
+    }
+  },
+  "epochs": 12,
+  "checkpoint_sha256": "94410d44bd27a2b016948f8923d88ce56040280719bada9b73a086090a4b8437",
+  "validation_predictions_sha256": "eb2042f900d22ce9a845db708e0d81f4bc984bedb42cfa6249550cececc595a1",
+  "training_rows": 66802,
+  "validation_rows": 8350,
+  "formal_test_opened": false,
+  "selection_scope": "validation_only",
+  "source_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_training.py": "5146c503f18502f384e204431097fab5b7719a1c8be63e8f36b0ca7532541aff",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_heads.py": "b64f06e7af4a86841f64a92d8c81f6cee965c43ab2203272762bc98e362e8d2f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_features.py": "bbfa64f255a65f2489fc3ef0fd71f05e6e21b325547d35910b39e977590a1736",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/multilabel_heads.py": "0c9bf47fa6c5f005a5c0cfc07e74cf3ad1b8834ef67d185f8061a92de2a7deb6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f"
+  }
+}

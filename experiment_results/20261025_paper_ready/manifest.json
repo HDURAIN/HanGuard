@@ -1,0 +1,25 @@
+{
+  "schema": "hanguard_paper_materials_20261025_v1",
+  "files": {
+    "README.md": "5bbab4d284643dbb297b8b01b8ac01624648f2bf40b719cee30a3ff0958de0ce",
+    "evidence.json": "b50002750bfbf53b8b7683cd6dde19d5c82b232a7978e899f2016a1b1cb85b1d",
+    "supplementary/efficiency.csv": "5afaa17ec7ff5e495a809b8cb25772b7e4f92862ad859485b4a73fd6153acc22",
+    "supplementary/paired_changes_by_seed.csv": "2a912b61c1c44c892df6b69476d01e416def9498b3fe987240b5e85b1af25892",
+    "supplementary/paired_summary.csv": "59b2d6d97fba01bb1e07229f7f1b9f852a6f270be89b186f42a3e993bdff2fa9",
+    "supplementary/parameters.csv": "9c069202b7052490a711e3b1b359a03f2f47ad594e4257d155392565f89a732c",
+    "supplementary/strata_summary.csv": "f48523d5ca7d7462830cddfa548949ad1eeaa064e37ac7d98f8056437d12dbcf",
+    "tables/five_class_metrics.csv": "59ac15cddad4debfb69bf445e869aacdc7797aeea9707be4f34adf7f36d2a136",
+    "tables/main_ablation.csv": "7695aa3970e197cf0b103fc9dc93bc02b8a8c9cf3e1a69b5b72b33ad8a940fb9",
+    "tables/main_ablation.tex": "e0a2df0a8d093b4e37d656b18ec456388da6ea11b4a87adce4723c1afa5ed2fa",
+    "tables/native_guard_binary.csv": "314b4f03552e9794a49716834274595aea9071e2c1e21798dd08043937db3243",
+    "tables/native_guard_binary.tex": "31fcdc1982a609a137b7d8ee8000b7b746dd230ea7c42750979f034ddb4b4182",
+    "tables/paired_deltas.csv": "d37a403adaa8a862a75a9552dbf994105a9fd1879ddef11fb5219b54c6e9ab12",
+    "tables/paired_deltas.tex": "07101f19b15e3335347ad60427f16fcaf3043a4d737feeafc4bcdfee2f111634",
+    "tables/seed_results.csv": "f9dbb09cc31e08fdb998ec32dfbef26da4aad81ce30879e5d09b02732df58a30",
+    "tables/supplementary_controls.csv": "e1d05a13152e467ffad5c6a076b9ac7c8b875e58f9f41d4618c2214bf385002e"
+  },
+  "documents": {
+    "docs/paper_experiments_20261025.md": "48fad22835a912687e9ddbdefc2fe2d2e514d1d391ec9dced5776366456cd2aa",
+    "docs/paper_supporting_evidence_20261025.md": "a24318a378fa989f03d3b7b94cf1b598848a7dd235d5120b8c507c6ed9a3853e"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "state": "superseded_after_runtime_error",
+  "reason": "First generated batch could not be serialized because categories was passed twice to dict(); no completed prediction chunks exist.",
+  "completed_chunks": 0,
+  "replacement_output": "outputs/qwen3guard_clean_test_20261025_v2",
+  "created_unix": 1792892120.0903642
+}

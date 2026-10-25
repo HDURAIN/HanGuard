@@ -1,0 +1,34 @@
+{
+  "schema": "hanguard_nolora_reference_analysis_artifacts_v1",
+  "subset_selection_policy": "posthoc_error_selected_test_subset",
+  "artifacts": {
+    "main_results.json": "e8eda64d3fb3ba2da743017f6ca33730a8efc4de7bc65a5cfbd1d104beb58def",
+    "metrics.csv": "4e610e43661cf9eeb074e770a85be15bae6264612aca99d06edfb173cbb9b0df",
+    "source_metrics.csv": "f866e601a6a94f3c3a108f4bd4cdb453ba5fd55ed1ced310d05de508d98653e3",
+    "threshold_sensitivity.csv": "9d641726d56997f0afb199583fb04dbdbe1681cccd2f9659a664a78916710c92",
+    "error_complementarity.csv": "88bbce18442726d87465df3da95e39f7e37372e723d9f300cfce8048fe67e192",
+    "layer_probe.csv": "7943e68540d4337ecaea29cdaeaeeb3df7b388499353d4395dd181da819c19e5",
+    "report.md": "3f2acc93eae088cd91ca7c31834429af3cca9ea249611788ee2c53efdea46658"
+  },
+  "input_sha256": {
+    "outputs/hanguard_frozen_base_full_readouts_20261013_v5/protocol.json": "faf06b8c22c223a38820705737613a7c8d2f2b2c412c12c93ed2a7a741f8fe7d",
+    "outputs/hanguard_frozen_base_full_readouts_20261013_v5/heads/selection.json": "03ceae61c8f6565e0a537eabfd127d5b24736da94b983c49ed81597b30eb3625",
+    "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/results.json": "f61475073cbad99720dbe1d52ede8e72a21da5010fcd1830834093a08c0a7167",
+    "outputs/hanguard_frozen_base_full_readouts_20261013_v5/analysis/predictions.parquet": "b01c3c837dd6ac2f64a87fa7b8a2b6d1be90d51c984b2378ac931a73edc7ac30",
+    "data/three_source_wildguard122_subset_20261018/filter_policy.json": "cebf8f867d8e0347e0f1c73a004b364fd099e8f3d006616409ecde1a27c08171",
+    "data/three_source_wildguard122_subset_20261018/excluded_base_ids.txt": "8de5b1b45ca4aa6fbf6ef08651b09cce2d1c3a284aa3c5531f7b08019e3f245f",
+    "data/three_source_wildguard122_subset_20261018/old_model_subset_metrics.json": "14a0f95c8bc274cc8c081ef0bb0da36f4bf69c38187f1ffa8cce0b7680b3cb7a",
+    "data/three_source_wildguard122_subset_20261018/manifest.json": "19928e626a4b45eeff6ba677f1a9c5a37eb7831485a3fc969ddf173aa06a73c7",
+    "outputs/hanguard_selected122_lora_20261018/readouts/analysis/results.json": "19f3a2f12b0d179a2b5f17117d148ef67be446390eb48fe099a2281f858814e9",
+    "data/three_source_remediated_20261012/train.parquet": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "data/three_source_remediated_20261012/validation.parquet": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "data/three_source_remediated_20261012/test.parquet": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6",
+    "data/three_source_wildguard122_subset_20261018/train.parquet": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "data/three_source_wildguard122_subset_20261018/validation.parquet": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "data/three_source_wildguard122_subset_20261018/test.parquet": "401031cea082be0d6b9c655227279be825e72577ed00e5be03ecb02a323cfd67"
+  },
+  "source_sha256": {
+    "scripts/hanguard/analyze_fusion_reference_results.py": "a19e1f8aaf4bed123341d7db786e1a72e458f6fdf7632ee4c34c7b29b9dfc882",
+    "scripts/hanguard/frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f"
+  }
+}

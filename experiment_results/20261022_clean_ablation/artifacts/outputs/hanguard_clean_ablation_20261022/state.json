@@ -1,0 +1,96 @@
+{
+  "state": "completed",
+  "automatic_run": false,
+  "formal_test_opened": true,
+  "active_workers": [],
+  "updated_unix": 1792680114.2594166,
+  "coordinator_pid": 14886,
+  "completed_independent_replays": 1,
+  "required_independent_replays": 2,
+  "gpu_inventory": [
+    {
+      "index": 0,
+      "uuid": "GPU-8c38d507-eb1d-32a8-32da-3241c7f4ec94",
+      "free_gib": 40.1953125,
+      "pids": [
+        170734,
+        410049,
+        447629,
+        466573,
+        3008431
+      ]
+    },
+    {
+      "index": 1,
+      "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552",
+      "free_gib": 43.0185546875,
+      "pids": [
+        3008430
+      ]
+    },
+    {
+      "index": 2,
+      "uuid": "GPU-2f386f51-6deb-5621-2d9a-788c177772c4",
+      "free_gib": 5.220703125,
+      "pids": [
+        1455988
+      ]
+    },
+    {
+      "index": 3,
+      "uuid": "GPU-04c1c559-377e-d982-ebbf-1f359d4122b6",
+      "free_gib": 14.1279296875,
+      "pids": [
+        2925146,
+        3008442
+      ]
+    },
+    {
+      "index": 4,
+      "uuid": "GPU-d576137e-3271-99a8-bd98-77aff3483ba3",
+      "free_gib": 24.6923828125,
+      "pids": [
+        3317102,
+        3008432
+      ]
+    },
+    {
+      "index": 5,
+      "uuid": "GPU-c80b253a-c5df-8840-c6b4-8ba948fffa61",
+      "free_gib": 32.625,
+      "pids": [
+        3189393
+      ]
+    },
+    {
+      "index": 6,
+      "uuid": "GPU-926c64bf-2929-2a69-eb2f-783bae2d9603",
+      "free_gib": 11.3369140625,
+      "pids": [
+        3317103,
+        3071292
+      ]
+    },
+    {
+      "index": 7,
+      "uuid": "GPU-4a304e3d-9670-cbe1-34e2-38ad17c43a53",
+      "free_gib": 32.625,
+      "pids": [
+        3083855
+      ]
+    }
+  ],
+  "extraction_progress": {
+    "split": "test",
+    "complete": false,
+    "total_chunks": 5,
+    "complete_chunks": 4,
+    "claimed_chunks": 1,
+    "pending_chunks": 0,
+    "completed_rows": 7968,
+    "total_rows": 8350,
+    "completed_tokens": 484144,
+    "total_tokens": 694077
+  },
+  "pending_tasks": []
+}

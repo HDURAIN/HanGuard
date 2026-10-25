@@ -1,0 +1,92 @@
+{
+  "state": "requires_review",
+  "active_workers": [],
+  "automatic_run": false,
+  "formal_test_opened": false,
+  "updated_unix": 1792411299.2142253,
+  "coordinator_pid": 301599,
+  "extraction_progress": {
+    "split": "train",
+    "complete": false,
+    "total_chunks": 37,
+    "complete_chunks": 27,
+    "claimed_chunks": 0,
+    "pending_chunks": 10,
+    "completed_rows": 55296,
+    "total_rows": 66802,
+    "completed_tokens": 2222080,
+    "total_tokens": 5529795
+  },
+  "gpu_inventory": [
+    {
+      "index": 0,
+      "uuid": "GPU-8c38d507-eb1d-32a8-32da-3241c7f4ec94",
+      "free_gib": 4.240234375,
+      "pids": [
+        170734,
+        410049,
+        447629,
+        466573,
+        2860536
+      ]
+    },
+    {
+      "index": 1,
+      "uuid": "GPU-415e79ca-b1a5-f844-a736-7601bd3ad552",
+      "free_gib": 24.3115234375,
+      "pids": [
+        327618
+      ]
+    },
+    {
+      "index": 2,
+      "uuid": "GPU-2f386f51-6deb-5621-2d9a-788c177772c4",
+      "free_gib": 17.4140625,
+      "pids": [
+        66358
+      ]
+    },
+    {
+      "index": 3,
+      "uuid": "GPU-04c1c559-377e-d982-ebbf-1f359d4122b6",
+      "free_gib": 19.576171875,
+      "pids": [
+        1910291
+      ]
+    },
+    {
+      "index": 4,
+      "uuid": "GPU-d576137e-3271-99a8-bd98-77aff3483ba3",
+      "free_gib": 5.6171875,
+      "pids": [
+        1872004
+      ]
+    },
+    {
+      "index": 5,
+      "uuid": "GPU-c80b253a-c5df-8840-c6b4-8ba948fffa61",
+      "free_gib": 5.6484375,
+      "pids": [
+        1872005
+      ]
+    },
+    {
+      "index": 6,
+      "uuid": "GPU-926c64bf-2929-2a69-eb2f-783bae2d9603",
+      "free_gib": 5.5625,
+      "pids": [
+        1872006
+      ]
+    },
+    {
+      "index": 7,
+      "uuid": "GPU-4a304e3d-9670-cbe1-34e2-38ad17c43a53",
+      "free_gib": 5.5859375,
+      "pids": [
+        1872007
+      ]
+    }
+  ],
+  "error_type": "RuntimeError",
+  "reason": "extract_train_none_cuda1_1792410612894735555 failed with exit 1; inspect its log"
+}

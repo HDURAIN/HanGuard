@@ -1,0 +1,291 @@
+{
+  "dataset_contract": "hanguard_binary_type_decoupled_v1",
+  "dataset_version": "three_source_remediated_20261012",
+  "release_status": "qa_complete_with_documented_limitations",
+  "rows": 83502,
+  "input_rows": 83503,
+  "input_intake_counts": {
+    "retained_77686": 77686,
+    "recovered_5155": 5155,
+    "approved_archive_recovery": 662
+  },
+  "duplicate_original_identity_rows_collapsed": 1,
+  "quarantined_rows": 0,
+  "quarantine_reasons": {},
+  "category_unknown_rows": 2689,
+  "binary_counts": {
+    "harmful": 46221,
+    "unharmful": 37281
+  },
+  "source_counts": {
+    "wildguard_zh": 45777,
+    "chinese_curated": 26925,
+    "jailbench": 10800
+  },
+  "original_binary_labels_changed": 0,
+  "training_started": false,
+  "classifier_scores_used": false,
+  "maximum_full_input_tokens": 3202,
+  "max_prompt_tokens": 4096,
+  "input_truncation_rows": 0,
+  "applied_existing_or_global_translation_fix_rows": 165,
+  "correction_origins": {
+    "retained_bilingual_corrections": 88,
+    "full_corpus_known_family_review": 7,
+    "archived_recovery_bilingual_sample": 23,
+    "distinct_original_same_chinese_review": 6,
+    "full_release_confirmed_term_family_review": 41
+  },
+  "new_translation_rows": 1952,
+  "new_translation_manually_corrected_rows": 53,
+  "category_only_recovered_or_retained_type_policy": "category=-1/type_label_mask=False; keep original known source binary",
+  "resplit": true,
+  "primary_split_policy": "hanguard_source_binary_family_groups_20261012_v1",
+  "canonical_chinese_duplicate_groups": 54,
+  "canonical_chinese_duplicate_policy": "only collapse equal original-source+binary identities; retain distinct originals in one family with complete member provenance",
+  "source_binary_stratum_allocation": [
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "split": "train",
+      "stratum_total": 11683,
+      "target_fraction": 0.8,
+      "target_rows": 9347,
+      "actual_rows": 9347,
+      "difference_rows": 0,
+      "actual_fraction": 0.8000513566720876
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "split": "validation",
+      "stratum_total": 11683,
+      "target_fraction": 0.1,
+      "target_rows": 1168,
+      "actual_rows": 1168,
+      "difference_rows": 0,
+      "actual_fraction": 0.09997432166395617
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "harmful",
+      "split": "test",
+      "stratum_total": 11683,
+      "target_fraction": 0.1,
+      "target_rows": 1168,
+      "actual_rows": 1168,
+      "difference_rows": 0,
+      "actual_fraction": 0.09997432166395617
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "split": "train",
+      "stratum_total": 15242,
+      "target_fraction": 0.8,
+      "target_rows": 12194,
+      "actual_rows": 12194,
+      "difference_rows": 0,
+      "actual_fraction": 0.8000262432751607
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "split": "validation",
+      "stratum_total": 15242,
+      "target_fraction": 0.1,
+      "target_rows": 1524,
+      "actual_rows": 1524,
+      "difference_rows": 0,
+      "actual_fraction": 0.09998687836241962
+    },
+    {
+      "source": "chinese_curated",
+      "prompt_harm_label": "unharmful",
+      "split": "test",
+      "stratum_total": 15242,
+      "target_fraction": 0.1,
+      "target_rows": 1524,
+      "actual_rows": 1524,
+      "difference_rows": 0,
+      "actual_fraction": 0.09998687836241962
+    },
+    {
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "split": "train",
+      "stratum_total": 10800,
+      "target_fraction": 0.8,
+      "target_rows": 8640,
+      "actual_rows": 8640,
+      "difference_rows": 0,
+      "actual_fraction": 0.8
+    },
+    {
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "split": "validation",
+      "stratum_total": 10800,
+      "target_fraction": 0.1,
+      "target_rows": 1080,
+      "actual_rows": 1080,
+      "difference_rows": 0,
+      "actual_fraction": 0.1
+    },
+    {
+      "source": "jailbench",
+      "prompt_harm_label": "harmful",
+      "split": "test",
+      "stratum_total": 10800,
+      "target_fraction": 0.1,
+      "target_rows": 1080,
+      "actual_rows": 1080,
+      "difference_rows": 0,
+      "actual_fraction": 0.1
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "split": "train",
+      "stratum_total": 23738,
+      "target_fraction": 0.8,
+      "target_rows": 18990,
+      "actual_rows": 18990,
+      "difference_rows": 0,
+      "actual_fraction": 0.7999831493807398
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "split": "validation",
+      "stratum_total": 23738,
+      "target_fraction": 0.1,
+      "target_rows": 2374,
+      "actual_rows": 2374,
+      "difference_rows": 0,
+      "actual_fraction": 0.10000842530963013
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "harmful",
+      "split": "test",
+      "stratum_total": 23738,
+      "target_fraction": 0.1,
+      "target_rows": 2374,
+      "actual_rows": 2374,
+      "difference_rows": 0,
+      "actual_fraction": 0.10000842530963013
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "split": "train",
+      "stratum_total": 22039,
+      "target_fraction": 0.8,
+      "target_rows": 17631,
+      "actual_rows": 17631,
+      "difference_rows": 0,
+      "actual_fraction": 0.7999909251780933
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "split": "validation",
+      "stratum_total": 22039,
+      "target_fraction": 0.1,
+      "target_rows": 2204,
+      "actual_rows": 2204,
+      "difference_rows": 0,
+      "actual_fraction": 0.1000045374109533
+    },
+    {
+      "source": "wildguard_zh",
+      "prompt_harm_label": "unharmful",
+      "split": "test",
+      "stratum_total": 22039,
+      "target_fraction": 0.1,
+      "target_rows": 2204,
+      "actual_rows": 2204,
+      "difference_rows": 0,
+      "actual_fraction": 0.1000045374109533
+    }
+  ],
+  "splits": {
+    "train": {
+      "rows": 66802,
+      "sha256": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2"
+    },
+    "validation": {
+      "rows": 8350,
+      "sha256": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca"
+    },
+    "test": {
+      "rows": 8350,
+      "sha256": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6"
+    }
+  },
+  "provenance": {
+    "input_sha256": {
+      "data/three_source_translation_repaired/train.parquet": "2a73451f2bd9be458108bca332f4e98a23a7a72bad7c6acc3d6b68fbcd6229cd",
+      "data/three_source_translation_repaired/validation.parquet": "ca55e00f606dd9b4c9aa1bdd89866e3f56d470b160b46a6f1d3d93c7f7613114",
+      "data/three_source_translation_repaired/test.parquet": "fcbb6cf4bfb6e137781d147880f13983d087323e71ce63b06dfeb442ad9c2b09",
+      "data/three_source_translation_repaired/manifest.json": "d14bbd6f38f2b165004005bd733a5b6eeb9df8cec71674d282fbfcc4cb9c7b12",
+      "outputs/hanguard_data_remediation_20261012/recovery_source_rows.parquet": "0bf6b736e6b7793b3625f7491f4c3599477b551c539ed5ef7cc9794f79e1c2c3",
+      "outputs/hanguard_data_remediation_20261012/recovered_translations.parquet": "4d1399bd71700a512257ed521b352a2fae12dd9d712980fee7f66a20fafcb7e3",
+      "outputs/hanguard_data_remediation_20261012/archived_quarantine_recovery_rows.parquet": "9d65c2555d8843138c928610bb92d1c8f55e9c71d97cc067f07ae163a42906e6",
+      "outputs/hanguard_data_remediation_20261012/translation_corrections.jsonl": "49218bf184a63f1ba30d3a4bd8f2d46150a238eab027091a6533b1049b0437ac",
+      "outputs/hanguard_data_remediation_20261012/recovered_translation_corrections.jsonl": "5ee90e70bf4dffb8ced25e4ecdaf368d55b7583c4d729b5420c6aa3603028152",
+      "outputs/hanguard_data_remediation_20261012/known_semantic_regression_corrections.jsonl": "87813b77114b05d88ca29b142d7459a50f3ba982ed3f01a0076bb9ec7bb267bf",
+      "outputs/hanguard_data_remediation_20261012/group_split_policy.py": "1468f683e9bfc9899b6e6b68166a95db35b71e2897d6e6012744017c139d20f8",
+      "data/sources/wildguard_en/train.parquet": "9844a24e5734be9c32cf9fa21340b919f2c5746cb2f81b220894e03d35ee7a92",
+      "data/sources/wildguard_zh.parquet": "20eb3d6792af4aa087a6b13116e07064d044dc7cc355b7d359b5579074c19d18",
+      "data/sources/hanguard_v3.parquet": "5a8c1334b7a62294aff9aeffc56b18f95f8b58d760fd43dabd72b53c3754b933",
+      "data/sources/jailbench/JailBench.csv": "f84e0b119fb9d87fb8873af3491f34151a0250dc3267c11bdce7cb90d18ec493",
+      "data/sources/jailbench/JailBench-seed.csv": "6d7025379c10b39ed33d33bf1446d41106c57a9bd349c8c8d6c802948c551de8",
+      "outputs/hanguard_data_remediation_20261012/archived_recovery_translation_corrections.jsonl": "63be0c25febfa5f026a66129be2fd7c21b67491ff701f4dcf338e2bebd1bb30d",
+      "outputs/hanguard_data_remediation_20261012/canonical_collision_translation_corrections.jsonl": "559ac3ec2e56fda6b53c8953db7df1c86b294f513e4ea822bb83d48f002ceb71",
+      "outputs/hanguard_data_remediation_20261012/collision_term_family_translation_corrections.jsonl": "017f63fe3b7e3dc15f1ad082b6574d2db14fdef450536b68a1caf6023f2eab76"
+    },
+    "builder_sha256": "3e7e25ba28cabe908c997d1dea1f609526f856e2d0303987b6edc5f6f158af44",
+    "tokenizer_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+  },
+  "artifact_sha256": {
+    "train.parquet": "6518e14de4978f61bb7a0af11ccc3f66d3c2565b01f3499941b7c71154e5d7a2",
+    "validation.parquet": "ea0ef77446846743e3f45b8c1d935ce9331eb77a76e3b1aed370b25195c844ca",
+    "test.parquet": "d7278d141f942f9058b524a24bd4a3783e650b73d02b0f90c9e8dbbacdbfacd6",
+    "applied_translation_corrections.jsonl": "ba3aefc801964753bf5eb903543a638410ff02c8cf53b575aa3f2197d841ee83",
+    "identity_merge_members.parquet": "d5856d36df3acf6197250003bca86de71c84549ae980f5e2cec045bcd1dbcf23",
+    "quarantine.parquet": "6e19749aa71df3585a1a09f2c223d0b14d79f52278abbed8a0be7cfced0f9477",
+    "group_split_members.parquet": "fe0d673fd9273e4e6e056813f281b2f03912d9d1f75931e39e64588027987335",
+    "split_policy.json": "29b2a2455b8db080078260344d9ba937135f053c872efbcb220f348cf0ca73c9",
+    "distinct_original_same_chinese_candidates.json": "57c65a241e23c70c81f56c0eb019581cfbb22fc02a853c8b6ee4a342b9e87e21",
+    "benign_format_control_view.parquet": "d08bc2c9eebc6a0297863533cf2f151808f79f541c96a4573344923fffce8dcc",
+    "benign_format_control_protocol.json": "afae89c1fdbf4ff4d8cc8df2bfe6594024fa357fef0185cb8df281dab94dfddb",
+    "jailbench_template_holdout_view.parquet": "90f5d2ffc96d5e383a0a51a55566b8f8df88d6ec9c590317f5608028ee7eda6e",
+    "jailbench_template_holdout_protocol.json": "8ce9821b7a21d8046dd76b6c9beaff8c92e75de3f5cad9d3c0570f325a07e9fb",
+    "README.md": "d3676953ff9b93650c5a4c57f03e84ea66cd9257b0132e2ecc10b405eb95ed93"
+  },
+  "limitations": [
+    "Source binary labels are inherited. No newly invented harmfulness boundary or claim of universal correct labels.",
+    "Machine scans plus bilingual sampled/flagged review do not certify every translation semantically.",
+    "Original official WildGuard training source only; official test was not used for remediation.",
+    "JailBench project rule assigns harmful to all queries; wrapper view supports harmful recall, not complete binary accuracy.",
+    "Benign format controls are a separate diagnostic derivative, not new human-labeled training data.",
+    "New primary splits invalidate reuse of old trained LoRA/checkpoints/features for clean evaluation. Retrain baselines from the base model.",
+    "Project multiclass mapping remains inherited/partially uncertain; old category-stage data stays separately versioned.",
+    "Prior main test was explored. This release is a documented remediation evaluation, not a pristine external confirmation set."
+  ],
+  "independent_qa_reports_sha256": {
+    "outputs/hanguard_data_remediation_20261012/independent_release_source_audit.json": "353081b7f441c61f8f83f8be570737de904e744227b00abe5e0c31fa63255bc1",
+    "outputs/hanguard_data_remediation_20261012/independent_release_qa.json": "caec5eda36e8538a1c4c1d6b679a8c0c7208316590c76c92f7aad2d8e5fb1d56",
+    "outputs/hanguard_data_remediation_20261012/independent_release_views_qa.json": "f5ad3091cb8af279e347ba97c4350e829f53c173adfb72b61148d5ed244d5395",
+    "outputs/hanguard_data_remediation_20261012/translation_corrections_qa.json": "84a851c55ae8ee85b5f96d4de6bcc7c42145f635abcec6c5540af51692052caf",
+    "outputs/hanguard_data_remediation_20261012/recovered_translation_corrections_qa.json": "649dd3f1480d4ccf5944486c5a46791d2d54014282948ff19bc49d91fb0ff04f",
+    "outputs/hanguard_data_remediation_20261012/archived_recovery_translation_corrections_qa.json": "f303099bc7a46f7d6d9fcbc2c772dd19eddf0800b736cc79fb19dd60a1ba4099",
+    "outputs/hanguard_data_remediation_20261012/canonical_collision_translation_corrections_qa.json": "8e8384f661e4cdfaeac4d91fdb7f4a7899ae915f54bdbea7ef77cda6ff6f90fc",
+    "outputs/hanguard_data_remediation_20261012/collision_term_family_translation_corrections_qa.json": "5fc5c214bc3307f6a4cbee6169785cd2dd52695d6bf7de14c41f52db26d3a4a0",
+    "outputs/hanguard_data_remediation_20261012/known_semantic_regression_review.json": "bc83f673989326c958391c6366e1e7d5cc66d97e84dfe3951267097a7c2be3f0"
+  },
+  "unique_corrected_translation_units": 218,
+  "raw_source_pointers_represented": 123059
+}

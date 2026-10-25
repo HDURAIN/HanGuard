@@ -1,0 +1,16 @@
+task,seed,status,source
+binary,42,complete,outputs/hanguard_clean_ablation_20261022/heads/binary/s42/test_results.json
+binary,43,complete,outputs/hanguard_clean_ablation_20261022/heads/binary/s43/test_results.json
+binary,44,complete,outputs/hanguard_clean_ablation_20261022/heads/binary/s44/test_results.json
+category,42,complete,outputs/hanguard_clean_ablation_20261022/heads/category/s42/test_results.json
+category,43,complete,outputs/hanguard_clean_ablation_20261022/heads/category/s43/test_results.json
+category,44,complete,outputs/hanguard_clean_ablation_20261022/heads/category/s44/test_results.json
+corresponding_both_stages,42,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json
+corresponding_both_stages,43,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json
+corresponding_both_stages,44,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json
+classic_gate_type_factorial,42,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json
+classic_gate_type_factorial,43,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json
+classic_gate_type_factorial,44,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json
+fusion_in_both_stages_factorial,42,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json
+fusion_in_both_stages_factorial,43,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json
+fusion_in_both_stages_factorial,44,complete,outputs/hanguard_clean_ablation_20261022/analysis/results.json

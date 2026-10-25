@@ -1,0 +1,18 @@
+{
+  "schema": "hanguard_external_macbert_document_classifier_v1",
+  "seed": 44,
+  "protocol_sha256": "25f0baedb547510d91ca7161bbef6a84fce8915a5e22530cb284f045583ea317",
+  "best_epoch": 2,
+  "validation_ce": 0.6655741162258877,
+  "completed_epochs": 4,
+  "selection_scope": "validation_only",
+  "formal_test_opened": false,
+  "parameter_count": 102271493,
+  "artifacts": {
+    "selected_model.pt": "d5165d8de608c9f7ae2cda990edeacac8d4e5ab625e06779b8136211c69a7936",
+    "validation_predictions.parquet": "7917113a83fa036dcba68177afb730ee0ca4d9faef23cb31e397dbdc6c1547e7"
+  },
+  "device": "cuda",
+  "window_limit": 4,
+  "oom_events": []
+}

@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "protocol_sha256": "25f0baedb547510d91ca7161bbef6a84fce8915a5e22530cb284f045583ea317",
+  "selections": {
+    "42": "e3c841752a24649ae9d4c7ae0dcce9ee08c1dfee281e2fa6a0893b72add4a100",
+    "43": "118409b6caabe80f51ca263df7b4f9f91af5b6dc20382d8478b8501a69cdb40a",
+    "44": "656491b2905b205ed1edb2fc251829baf3e7514c02f16bce4a96931cfac8a155"
+  },
+  "artifacts": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/external/seeds/s42/selected_model.pt": "2a86bfe72473c145ed2e77ee2f130e2374296608d6b7e10b0910a5efdec73af0",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/external/seeds/s42/validation_predictions.parquet": "4dcc5b226f67a256466f84477f5bd844a1d7c0976f41d3e6c09fc9e1027f097a",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/external/seeds/s43/selected_model.pt": "16c39384c0d3202c0f383a9319a92298d80283963f94452b8bb515aaabb27a45",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/external/seeds/s43/validation_predictions.parquet": "fdcccd8bf49daf9d7eda4bd72d6413ad5d8f4203f3003e61a9a39deccc3ba382",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/external/seeds/s44/selected_model.pt": "d5165d8de608c9f7ae2cda990edeacac8d4e5ab625e06779b8136211c69a7936",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/external/seeds/s44/validation_predictions.parquet": "7917113a83fa036dcba68177afb730ee0ca4d9faef23cb31e397dbdc6c1547e7"
+  }
+}

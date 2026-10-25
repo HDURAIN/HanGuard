@@ -1,0 +1,27 @@
+{
+  "pid": 14886,
+  "identity": {
+    "pid": 14886,
+    "uid": 1036,
+    "start_time_ticks": 159825841,
+    "command_sha256": "ddfcbcc9b853280f4fb2cac3922c298f32d038f39ad3eb48608be48967e2a893",
+    "argv": [
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_study.py",
+      "run",
+      "--output",
+      "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022"
+    ],
+    "cwd": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard"
+  },
+  "command": [
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/.venv-hanguard/bin/python",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/clean_ablation_study.py",
+    "run",
+    "--output",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022"
+  ],
+  "protocol_sha256": "3ea2567ea04e7fc5390bb42fd8cfce6266b16e2c4c1e986d84470f684b9bd98b",
+  "started_unix": 1792642550.4131968,
+  "log": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_clean_ablation_20261022/coordinator.log"
+}

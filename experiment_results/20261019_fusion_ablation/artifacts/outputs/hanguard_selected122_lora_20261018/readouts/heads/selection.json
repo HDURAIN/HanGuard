@@ -1,0 +1,269 @@
+{
+  "schema": "hanguard_selected122_frozen_lora_readouts_v1",
+  "complete": true,
+  "no_lora": false,
+  "best_single_layer": 19,
+  "best_single_definition": "minimum validation BCE among 32 independent equally trained MLP checkpoints; lowest layer index breaks ties",
+  "layer_validation_bce": [
+    0.2881079421457608,
+    0.2653789096621142,
+    0.23829878136238225,
+    0.22219957058708328,
+    0.21149956701804454,
+    0.203480047709933,
+    0.18967204040736588,
+    0.16668012444740457,
+    0.16543796418084006,
+    0.1446883954474096,
+    0.1345174567037096,
+    0.12061128869809669,
+    0.10913989794360043,
+    0.09314011166149667,
+    0.08716928711595609,
+    0.08578946594001655,
+    0.07962897160347715,
+    0.08025180666186252,
+    0.07788733206001183,
+    0.08130366640880098,
+    0.07942099632959365,
+    0.07824350755937223,
+    0.08366045701678694,
+    0.08481516996642721,
+    0.08530841367337173,
+    0.08706078078211017,
+    0.08755554120110423,
+    0.0837144108034444,
+    0.08365110668722178,
+    0.08157396378637445,
+    0.08155046972266254,
+    0.08127014799385263
+  ],
+  "layer_best_epochs": [
+    10,
+    5,
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    6,
+    4,
+    2,
+    6,
+    2,
+    1,
+    4,
+    2,
+    1,
+    2,
+    2,
+    2,
+    1,
+    2
+  ],
+  "thresholds": {
+    "last": 0.40140392249707724,
+    "best_single": 0.45892018493136033,
+    "repeat_best": 0.5209280452190753,
+    "fusion_fixed": 0.5691999528716807,
+    "fusion_fixed_best_anchor": 0.5980688379551937
+  },
+  "best_epochs": {
+    "last": 2,
+    "best_single": 6,
+    "repeat_best": 4,
+    "fusion_fixed": 2,
+    "fusion_fixed_best_anchor": 2
+  },
+  "final_common_epoch_budget": 12,
+  "total_seconds": 800.6583482241258,
+  "attempts": [
+    {
+      "budget": 12,
+      "seconds": 800.5841906201094,
+      "best_single_layer": 19,
+      "layer_extension": null,
+      "fusion_extension": null,
+      "discarded_for_common_budget_extension": false
+    }
+  ],
+  "validation_metrics": {
+    "last": {
+      "n": 8350,
+      "accuracy": 0.972814371257485,
+      "f1": 0.9753448463125882,
+      "recall": 0.9714409346603202,
+      "precision": 0.9792802617230099,
+      "fpr": 0.025482832618025753,
+      "bce": 0.08127014799385263,
+      "brier": 0.02194053227976797,
+      "tp": 4490,
+      "tn": 3633,
+      "fp": 95,
+      "fn": 132,
+      "threshold": 0.40140392249707724,
+      "auroc": 0.9961720907471823,
+      "auprc": 0.9971191930687057
+    },
+    "best_single": {
+      "n": 8350,
+      "accuracy": 0.972814371257485,
+      "f1": 0.9753126699293094,
+      "recall": 0.9701427953266984,
+      "precision": 0.9805379400830965,
+      "fpr": 0.023873390557939914,
+      "bce": 0.07788733206001183,
+      "brier": 0.02153131733066408,
+      "tp": 4484,
+      "tn": 3639,
+      "fp": 89,
+      "fn": 138,
+      "threshold": 0.45892018493136033,
+      "auroc": 0.9960502741135417,
+      "auprc": 0.9971277500820024
+    },
+    "repeat_best": {
+      "n": 8350,
+      "accuracy": 0.9714970059880239,
+      "f1": 0.9740401396160558,
+      "recall": 0.9660320207702293,
+      "precision": 0.9821821381434228,
+      "fpr": 0.021727467811158797,
+      "bce": 0.07793903300417207,
+      "brier": 0.021844915564690037,
+      "tp": 4465,
+      "tn": 3647,
+      "fp": 81,
+      "fn": 157,
+      "threshold": 0.5209280452190753,
+      "auroc": 0.9962073763656929,
+      "auprc": 0.997229396194438
+    },
+    "fusion_fixed": {
+      "n": 8350,
+      "accuracy": 0.9740119760479042,
+      "f1": 0.9763384581834043,
+      "recall": 0.968628299437473,
+      "precision": 0.9841723455704551,
+      "fpr": 0.019313304721030045,
+      "bce": 0.07864075318313464,
+      "brier": 0.021173957988586106,
+      "tp": 4477,
+      "tn": 3656,
+      "fp": 72,
+      "fn": 145,
+      "threshold": 0.5691999528716807,
+      "auroc": 0.9964293043347453,
+      "auprc": 0.9972914967870768
+    },
+    "fusion_fixed_best_anchor": {
+      "n": 8350,
+      "accuracy": 0.9749700598802395,
+      "f1": 0.9772405531961232,
+      "recall": 0.9707918649935093,
+      "precision": 0.9837754878316158,
+      "fpr": 0.01984978540772532,
+      "bce": 0.07604512593237739,
+      "brier": 0.020687398532648282,
+      "tp": 4487,
+      "tn": 3654,
+      "fp": 74,
+      "fn": 135,
+      "threshold": 0.5980688379551937,
+      "auroc": 0.996402491907522,
+      "auprc": 0.9973039324922394
+    }
+  },
+  "matched_initialization": {
+    "arms": [
+      "repeat_best",
+      "fusion_fixed",
+      "fusion_fixed_best_anchor"
+    ],
+    "parameters": 1656709,
+    "initialization_sha256": "c7c378e28d7d63506f935c4edb331867c93f3e127bf3009809044246e89035e0"
+  },
+  "specs": {
+    "repeat_best": {
+      "mode": "repeat_last",
+      "layers": [
+        19
+      ]
+    },
+    "fusion_fixed": {
+      "mode": "fusion",
+      "layers": [
+        8,
+        16,
+        24,
+        32
+      ]
+    },
+    "fusion_fixed_best_anchor": {
+      "mode": "fusion_best_anchor",
+      "layers": [
+        8,
+        16,
+        24,
+        32,
+        19
+      ]
+    },
+    "last": {
+      "mode": "last",
+      "layers": [
+        32
+      ]
+    },
+    "best_single": {
+      "mode": "last",
+      "layers": [
+        19
+      ]
+    }
+  },
+  "checkpoint_sha256": "bc2eae4b6d53b78c63e03fb093ac11fed5e3a2ff44af0298283d6ca26ceddfd0",
+  "protocol_sha256": "523180735fdcc16025d206472ebc253411441f5e109a2ed9890940fc678ab1db",
+  "train_validation_manifest_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_selected122_lora_20261018/readouts/caches/train.manifest.json": "f896b5f15013cd98fdaac600b00275ad49536ca4d35535fa2cf7d3c6287201d7",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_selected122_lora_20261018/readouts/caches/validation.manifest.json": "9708bcabf52b8b6c64a9ccbda016b9570162dce23872cd0dac19aec0fbd78948"
+  },
+  "source_sha256": {
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_base_readout_heads.py": "1330d40f79aa9a163c3ac118c55cc5cea8d26dc0408ef5f41e8b3b01425454a1",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/repaired_heads.py": "b6a902a7d5046447b39cbe26f60d17e0aac01123adcb6877b28c096cf814ebe6",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/ab_frozen_readout_diagnostics.py": "bb2d0f762621c3108527b5755bd5c6174c142fa71fc7112c3915827c098f618f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/scripts/hanguard/frozen_lora_layer_diagnostics.py": "7547d3387ef44c9bce5d38104a8e2570a0f4ac1c0cbca41ec808246fcba1d38f",
+    "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_selected122_lora_20261018/readouts/adapter_readout_runtime.py.snapshot": "aebdde4c9df32c130e9b6f5fcfe643c4a9ed95c87008ea4520dc7c47771e5b5d"
+  },
+  "selection_scope": "validation only; test cache unopened",
+  "test_opened": false,
+  "execution_schema": "hanguard_frozen_base_resumable_fit_v1",
+  "extension_rule": "12/24/40 validation BCE milestones; any arm may trigger common re-fit; all final arms have the same budget",
+  "use_lora": true,
+  "adapter_sha256": "d4b8d083bf10c70175553adff3bc8abb7e631d8cb16aa9d351b903ddaafc920e",
+  "adapter_path": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_selected122_lora_20261018/lora/runs/E03_s42/adapter.pt",
+  "scientific_scope": "posthoc_error_selected_test_subset",
+  "subset_selection_policy": "posthoc_error_selected_test_subset",
+  "is_quality_cleanup": false,
+  "blind_test": false,
+  "scope": "Post hoc error-selected test subset: unchanged train and validation; 122 WildGuard test rows excluded using previous frozen-base model errors. Fresh E03 LoRA shared by all five frozen readouts; validation-only model selection within this exploratory study; not blind or quality-cleaned.",
+  "limitations": [
+    "Test membership was selected post hoc using labels and two previous models: best single layer correct and anchor fusion wrong on 122 WildGuard rows.",
+    "This subset comparison is conditional and exploratory, not a blind estimate or evidence that excluded rows have bad labels or defective text.",
+    "Train and validation bytes are unchanged; no outcome-dependent filtering is applied inside the training loop.",
+    "The previous +2.10 percentage-point gain belongs only to the old fixed no-LoRA models on this subset; a fresh LoRA gain is unknown.",
+    "One fresh E03 LoRA seed; all five readouts share exactly that selected frozen adapter.",
+    "Complete original microbatch groups are distributed; different batch shapes are not claimed equivalent."
+  ]
+}

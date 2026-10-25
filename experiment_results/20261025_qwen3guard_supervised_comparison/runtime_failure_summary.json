@@ -1,0 +1,132 @@
+{
+  "state": "failed",
+  "all_workers_exited": true,
+  "admissions": [
+    {
+      "identity": {
+        "pid": 1402371,
+        "uid": 1036,
+        "start_time_ticks": 187690542,
+        "command_sha256": "69877d74f5f32d203d9d91946d8729ba61e21f34271523b43810f56b6c388e7a"
+      },
+      "exited": true,
+      "error": "ValueError(\"Batched/singleton feature calibration failed: {'batch_index': 0, 'relative_rmse': 0.01165190550478802, 'cosine': 0.9999334582673185, 'max_abs': 5.0, 'repeated_padded_batch_bitwise_equal': True}\")",
+      "finished_unix": 1792921229.5340192
+    },
+    {
+      "identity": {
+        "pid": 1405024,
+        "uid": 1036,
+        "start_time_ticks": 187693741,
+        "command_sha256": "0fda23b30bd160f8daedf1d79bb2796f90ffe569cc936b2ce1f06eee711913f8"
+      },
+      "exited": true,
+      "error": "RuntimeError('Study STOP file exists')",
+      "finished_unix": 1792921250.6037416
+    },
+    {
+      "identity": {
+        "pid": 1397044,
+        "uid": 1036,
+        "start_time_ticks": 187686477,
+        "command_sha256": "7dc343cf7ca84d5e8d9032a0d00cdf83b1aa0a52df14a292acf925c530b8fb32"
+      },
+      "exited": true,
+      "error": "ValueError(\"Batched/singleton feature calibration failed: {'batch_index': 0, 'relative_rmse': 0.010885757823975774, 'cosine': 0.9999416438570466, 'max_abs': 7.0, 'repeated_padded_batch_bitwise_equal': True}\")",
+      "finished_unix": 1792921207.1205232
+    },
+    {
+      "identity": {
+        "pid": 1404611,
+        "uid": 1036,
+        "start_time_ticks": 187693042,
+        "command_sha256": "0b6f9f121e6002dbbf8f1cf6284a7deb5eec37c00604129e71cc734340759ae5"
+      },
+      "exited": true,
+      "error": "RuntimeError('Study STOP file exists')",
+      "finished_unix": 1792921253.76379
+    },
+    {
+      "identity": {
+        "pid": 1405527,
+        "uid": 1036,
+        "start_time_ticks": 187694559,
+        "command_sha256": "97f04ad85ce56b8c9e311221125e8a8792d0d5ff34d0db256d3c832f40f3dc31"
+      },
+      "exited": true,
+      "error": "RuntimeError('Study STOP file exists')",
+      "finished_unix": 1792921251.254612
+    },
+    {
+      "identity": {
+        "pid": 1399568,
+        "uid": 1036,
+        "start_time_ticks": 187687824,
+        "command_sha256": "8760da980e6a8bc9cfceaeb417258e3ef6c99684aff18c727fe389ba29b7c86f"
+      },
+      "exited": true,
+      "error": "ValueError(\"Batched/singleton feature calibration failed: {'batch_index': 0, 'relative_rmse': 0.015038579503701844, 'cosine': 0.999888219879706, 'max_abs': 8.0, 'repeated_padded_batch_bitwise_equal': True}\")",
+      "finished_unix": 1792921208.3400176
+    },
+    {
+      "identity": {
+        "pid": 1397808,
+        "uid": 1036,
+        "start_time_ticks": 187686809,
+        "command_sha256": "8be15d675a40d7b477bc20fe7c31ae366f080692d232108c25233142f8230759"
+      },
+      "exited": true,
+      "error": "ValueError(\"Batched/singleton feature calibration failed: {'batch_index': 7, 'relative_rmse': 0.010220809308607253, 'cosine': 0.9999485225177326, 'max_abs': 8.0, 'repeated_padded_batch_bitwise_equal': True}\")",
+      "finished_unix": 1792921208.42011
+    },
+    {
+      "identity": {
+        "pid": 1400565,
+        "uid": 1036,
+        "start_time_ticks": 187688655,
+        "command_sha256": "b9a9229132f15c72932a91ab31a8ab804cccd78e6b4372f9acc73affbee72438"
+      },
+      "exited": true,
+      "error": "ValueError(\"Batched/singleton feature calibration failed: {'batch_index': 0, 'relative_rmse': 0.011966936422077882, 'cosine': 0.9999299386358103, 'max_abs': 6.0, 'repeated_padded_batch_bitwise_equal': True}\")",
+      "finished_unix": 1792921212.1621656
+    },
+    {
+      "identity": {
+        "pid": 1398752,
+        "uid": 1036,
+        "start_time_ticks": 187687252,
+        "command_sha256": "fb0648d2ab30e7a04fc0f649da52a822162790e3877fb282c038519471497e68"
+      },
+      "exited": true,
+      "error": "ValueError(\"Batched/singleton feature calibration failed: {'batch_index': 0, 'relative_rmse': 0.011805878790449593, 'cosine': 0.9999315496040627, 'max_abs': 4.0, 'repeated_padded_batch_bitwise_equal': True}\")",
+      "finished_unix": 1792921208.5334911
+    },
+    {
+      "identity": {
+        "pid": 1406765,
+        "uid": 1036,
+        "start_time_ticks": 187695698,
+        "command_sha256": "5c3c37a9ae73b685eb25581f3cf8b030825c3fb5c5ff38ae1272bf0f83d1a6f8"
+      },
+      "exited": true,
+      "error": "RuntimeError('Study STOP file exists')",
+      "finished_unix": 1792921259.1933715
+    },
+    {
+      "identity": {
+        "pid": 1404813,
+        "uid": 1036,
+        "start_time_ticks": 187693390,
+        "command_sha256": "9901b7a5c2be271b843d8ff5fec7219ad1e12d301d1d65dd0a0ab5620401cadd"
+      },
+      "exited": true,
+      "error": "RuntimeError('Study STOP file exists')",
+      "finished_unix": 1792921254.7565486
+    }
+  ],
+  "valid_feature_receipts": 0,
+  "test_features_present": false,
+  "cause": "BF16 batch-shape calibration exceeded predeclared tolerance before any accepted feature",
+  "replacement_output": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/qwen3guard_supervised_comparison_20261025_v2",
+  "audited_unix": 1792921374.694218
+}

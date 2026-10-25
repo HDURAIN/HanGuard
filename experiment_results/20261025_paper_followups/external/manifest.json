@@ -1,0 +1,27 @@
+{
+  "files": {
+    "README.md": "d32d631c5893c69ce4e840256760bb18329e8fbd9105531a1d6c3414be01d314",
+    "protocol.json": "25f0baedb547510d91ca7161bbef6a84fce8915a5e22530cb284f045583ea317",
+    "protocol_registration.json": "ec78a534b4ac9838e4051330676375124c2b74b68cfc1c3a240187a9288a0628",
+    "results.json": "bd09c49e6eb0960a9319b51b79da12658da64512b712e52063f3f8f299e84227",
+    "s42/history.json": "a6cc79d4ed63cd1af23cbfe82322eefc7696d029f1dcaf4245daddab07830523",
+    "s42/selection.json": "e3c841752a24649ae9d4c7ae0dcce9ee08c1dfee281e2fa6a0893b72add4a100",
+    "s42/test_complete.json": "160e63a0896eb65bac4d2c8e57b196e80dfff9a3cbc3dfc4dac322704faa1cb8",
+    "s42/test_predictions.parquet": "acba22451a32da6e9942fea393488257a3537f42d85014ad4aede71999257338",
+    "s42/test_results.json": "50c5f84215817da0bf7a6051fdde6658b596c8fef08592c6e71057a5b1933248",
+    "s43/history.json": "6c4a5049fd0da803e6667fdb699e69231288ea4dfc3c003bcadd76da99df26f6",
+    "s43/selection.json": "118409b6caabe80f51ca263df7b4f9f91af5b6dc20382d8478b8501a69cdb40a",
+    "s43/test_complete.json": "37dca076bde1b7f4d387d09217bfd2cc805415f405908194ee73d3556c4ba3e7",
+    "s43/test_predictions.parquet": "fc4469a057c9d904cf322120a57188ca243f924dc0fe011113e211afae3b4d1c",
+    "s43/test_results.json": "590cfb45c8c454868d4719bd92a3babe25668c49c829aeb88cc2882d0b81bb60",
+    "s44/history.json": "63072b5fe1b2ffce7ae08eeee67c5880822b20240a45d85550e070ed32d0facb",
+    "s44/selection.json": "656491b2905b205ed1edb2fc251829baf3e7514c02f16bce4a96931cfac8a155",
+    "s44/test_complete.json": "62ceb2083a6ec14f639d2e334180834b341adb739596dbe94b2db3410bed4a43",
+    "s44/test_predictions.parquet": "f99c132f72cecc3c56cc31516feb908979854ae5fa18d0b9108b504bd31a42a3",
+    "s44/test_results.json": "fb85248308c6e2ff460e7e19da64f47015f7c2ad358bcfb1c7787877180e9a1f",
+    "selection_lock.json": "be02b7b62aa0cbe489e9a897e263c1869f3f8ca990e0292d96cf0f856547c85c",
+    "source_snapshot/paper_external_classifier.py": "d5bc28a34121bf8a6651b238d5919b79d8294426b9cc51d7724072f6f82a7688"
+  },
+  "source": "/mnt/data1/zhouhanyu/projects/jailbreak-defense/hanguard/outputs/hanguard_paper_followups_20261025/external",
+  "schema": "hanguard_external_macbert_document_classifier_v1"
+}
